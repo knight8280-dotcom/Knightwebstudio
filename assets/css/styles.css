@@ -688,7 +688,7 @@ button[disabled] { opacity: .6; cursor: not-allowed; transform: none !important;
 
 /* ---------- Footer ---------- */
 .site-footer { background: var(--bg-alt); border-top: 1px solid var(--border); padding-top: 58px; }
-.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 34px; padding-bottom: 40px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 34px; padding-bottom: 40px; }
 .footer-brand p { color: var(--muted); font-size: .93rem; max-width: 30em; margin: 1rem 0 1.2rem; }
 .footer-brand .footer-loc { margin-top: -.6rem; font-size: .86rem; }
 .footer-col { display: grid; gap: .55rem; align-content: start; }
@@ -729,6 +729,7 @@ button[disabled] { opacity: .6; cursor: not-allowed; transform: none !important;
   .care-panel, .addons { grid-template-columns: 1fr; }
   .care-includes .care-list { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-brand { grid-column: 1 / -1; }
 
   /* Full-screen overlay menu */
   .nav {
@@ -1076,4 +1077,31 @@ button[disabled] { opacity: .6; cursor: not-allowed; transform: none !important;
 @media (max-width: 360px) {
   .lp-header .brand-name { font-size: .95rem; }
   .lp-header .btn-sm { padding: .5rem .8rem; }
+}
+
+/* ---------- Area pages (web-design-...) and About ---------- */
+.local-callout {
+  display: flex; gap: 18px; align-items: flex-start;
+  max-width: 68ch; margin: clamp(26px, 3.5vw, 38px) auto 0; padding: 22px 24px;
+  border: 1px solid var(--border); border-radius: var(--radius-lg); background: var(--surface);
+}
+.local-callout .card-icon { flex: none; margin: 0; }
+.local-callout h2 { margin-bottom: .3rem; }
+.local-callout p { margin: 0; color: var(--muted); font-size: .96rem; }
+.local-faq { max-width: 760px; margin-inline: auto; }
+.local-cta { max-width: 760px; margin: clamp(28px, 4vw, 44px) auto 0; text-align: center; }
+.local-cta p { color: var(--muted); }
+.local-cta .hero-cta { justify-content: center; margin-bottom: 0; }
+.about-wrap { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: clamp(28px, 5vw, 64px); align-items: start; max-width: 1040px; margin-inline: auto; }
+.about-wrap .prose { margin-inline: 0; max-width: none; }
+.about-body { max-width: 68ch; }
+.about-wrap .hero-cta { margin-top: 1.4rem; margin-bottom: 0; }
+.about-photo { aspect-ratio: 4 / 5; display: grid; place-items: center; border-radius: var(--radius-lg); font-weight: 700; }
+/* Visible placeholders for copy the owner still needs to supply. Delete with the placeholders. */
+.placeholder { border: 2px dashed var(--accent); color: var(--accent) !important; background: color-mix(in srgb, var(--accent) 8%, transparent); padding: .15em .45em; border-radius: 6px; }
+p.placeholder { padding: .7em .9em; }
+@media (max-width: 760px) {
+  .about-wrap { grid-template-columns: 1fr; }
+  .about-photo { max-width: 260px; }
+  .local-callout { flex-direction: column; }
 }
