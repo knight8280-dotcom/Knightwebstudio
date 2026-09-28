@@ -1092,16 +1092,10 @@ button[disabled] { opacity: .6; cursor: not-allowed; transform: none !important;
 .local-cta { max-width: 760px; margin: clamp(28px, 4vw, 44px) auto 0; text-align: center; }
 .local-cta p { color: var(--muted); }
 .local-cta .hero-cta { justify-content: center; margin-bottom: 0; }
-.about-wrap { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: clamp(28px, 5vw, 64px); align-items: start; max-width: 1040px; margin-inline: auto; }
-.about-wrap .prose { margin-inline: 0; max-width: none; }
-.about-body { max-width: 68ch; }
+/* Single centred column — the founder photo is intentionally left out for now,
+   so the page reads as one comfortable measure of text. */
+.about-wrap { max-width: 68ch; margin-inline: auto; }
 .about-wrap .hero-cta { margin-top: 1.4rem; margin-bottom: 0; }
-.about-photo { aspect-ratio: 4 / 5; display: grid; place-items: center; border-radius: var(--radius-lg); font-weight: 700; }
-/* Visible placeholders for copy the owner still needs to supply. Delete with the placeholders. */
-.placeholder { border: 2px dashed var(--accent); color: var(--accent) !important; background: color-mix(in srgb, var(--accent) 8%, transparent); padding: .15em .45em; border-radius: 6px; }
-p.placeholder { padding: .7em .9em; }
 @media (max-width: 760px) {
-  .about-wrap { grid-template-columns: 1fr; }
-  .about-photo { max-width: 260px; }
   .local-callout { flex-direction: column; }
 }

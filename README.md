@@ -21,7 +21,7 @@ the footer.
 | `/contact/` | Enquiry form, spam honeypot, saved drafts, "what happens next" |
 | `/privacy/` | Plain-English privacy notice — see [Privacy page](#7-privacy-page) |
 | `/start/` | Landing page for ads, emails and posts: every service with its price, pricing tiers, live work, the four steps, one call to action. No menu. See [Landing page](#8-landing-page-start) |
-| `/about/` | First-person About page for Christian Knight. **Has visible `[YOUR PHOTO]` and `[YOUR BACKGROUND …]` placeholders to fill in before launch** (styled with `.placeholder`) |
+| `/about/` | First-person About page for Christian Knight: background, how he works, live work and contact details. The founder photo is intentionally left out for now — add one later with an `<img>` at the top of `.about-wrap` if wanted |
 | `/web-design-baton-rouge/`, `/web-design-gonzales/`, `/web-design-prairieville/`, `/web-design-denham-springs/` | Local service-area pages: unique copy per city, Smilys Softwash as local work, published prices, a short city FAQ, contact + booking CTAs. Linked from the footer's "Areas we serve" column |
 
 Every page also carries the header, footer and (except `/contact/` and
