@@ -5,6 +5,47 @@ Checkout (Checkout Form SDK) integration. The site itself is static (GitHub
 Pages), so the Stripe API calls live in a small standalone server in
 [`server/`](server/) that is deployed separately.
 
+## Current status: LIVE
+
+- Checkout server: Render web service `knightwebstudio-checkout` (free plan,
+  Ohio) at <https://knightwebstudio-checkout.onrender.com>, auto-deploys from
+  `main` (root dir `server`). Health check: `/healthz`.
+- The server runs with the **live** Stripe key (Render env
+  `STRIPE_SECRET_KEY`, never committed) and the live plan map below in the
+  Render env `STRIPE_PLANS_JSON` (overrides the test IDs in `server/plans.json`).
+- `checkout/index.html` uses the live publishable key (`pk_live_...`).
+- Stripe Tax is **not** enabled yet (no head-office address on file);
+  `automatic_tax` stays `false`.
+- To go back to test mode: set Render `STRIPE_SECRET_KEY` to the sandbox test
+  key, delete `STRIPE_PLANS_JSON`, and put the sandbox `pk_test_...` back in
+  the page.
+
+### Live-mode Price IDs (in Render `STRIPE_PLANS_JSON`)
+
+| Plan key | Product | Price ID | Amount | Mode |
+| --- | --- | --- | --- | --- |
+| `starter-deposit` | Starter Website 50% Deposit | `price_1UKp1qLOmAZAVClwHMmJaqEG` | $1,000 | payment |
+| `business-deposit` | Business Website 50% Deposit | `price_1UKp1qLOmAZAVClwmYndCEOp` | $2,000 | payment |
+| `commerce-deposit` | Commerce Website 50% Deposit | `price_1UKp1uLOmAZAVClwWLaBxjnq` | $4,000 | payment |
+| `essential-care` | Essential Care Plan | `price_1UKp1pLOmAZAVClwygi70Z4T` | $300/mo | subscription |
+| `growth-care` | Growth Care Plan | `price_1UKp1pLOmAZAVClwt7Q7FRRm` | $600/mo | subscription |
+| `commerce-care` | Commerce Care Plan | `price_1UKp1pLOmAZAVClwfflhnSP5` | $1,000/mo | subscription |
+
+Other live prices (not sold on the checkout page): Starter final
+`price_1UKp1pLOmAZAVClw0tiD3try` / full `price_1UKp1pLOmAZAVClw2YtF9eoZ`;
+Business final `price_1UKp1pLOmAZAVClwc8YbQb0O` / full
+`price_1UKp1pLOmAZAVClwzFsXDUYB`; Commerce final
+`price_1UKp1uLOmAZAVClwkVRjc917` / full `price_1UKp1uLOmAZAVClwYDwM8fNX`.
+
+Live customer portal configuration: `bpc_1UKpY2LOmAZAVClwJdiPQXoi`.
+
+### Remaining before relying on it
+
+- Create a **live** webhook endpoint at
+  `https://knightwebstudio-checkout.onrender.com/api/webhook` and set its
+  signing secret as Render env `STRIPE_WEBHOOK_SECRET`.
+- Add fulfillment in the `checkout.session.completed` handler.
+
 ## Values to Replace
 
 The following values are placeholders and must be updated before going live.
@@ -25,7 +66,7 @@ The following values are placeholders and must be updated before going live.
 | `STRIPE_WEBHOOK_SECRET` (`server/.env`) | `whsec_...` | The signing secret for a webhook endpoint pointing at `<server URL>/api/webhook`, from <https://dashboard.stripe.com/workbench/webhooks>. Optional until you rely on webhooks for fulfillment. |
 | `DOMAIN` (`server/.env`) | `http://localhost:3000` | Optional: one extra origin allowed by CORS (e.g. a staging URL). CORS always allows `https://knightwebstudio.com` and `http://localhost`. |
 
-### Your current test-mode Price IDs
+### Test-mode Price IDs (sandbox, `server/plans.json`)
 
 Plug one of these into `line_items[].price` in `server/index.js`, and set `mode`
 to match the product type.
@@ -46,8 +87,8 @@ Care plans (monthly subscriptions) — use `mode: "subscription"`:
 | Growth Care Plan | `price_1UKorIQ9sEpFpWZBIPvo4IFN` | $600/mo |
 | Commerce Care Plan | `price_1UKorJQ9sEpFpWZBqDSZ65q2` | $1,000/mo |
 
-These are TEST-mode IDs. Live mode has its own separate Price IDs — recreate the
-catalog (or copy it) in live mode before launch.
+These are TEST-mode IDs. The live-mode IDs are listed under "Current status:
+LIVE" above.
 
 ## Configured Parameters
 

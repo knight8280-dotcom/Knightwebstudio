@@ -181,15 +181,16 @@
   // ==========================================================================
   // CONFIGURE ME — the only two values this page needs.
   //
-  // 1. Your Stripe publishable key (public by design; pk_test_... in test
-  //    mode). Get it at https://dashboard.stripe.com/test/apikeys
-  var STRIPE_PUBLISHABLE_KEY = 'pk_test_REPLACE_WITH_YOUR_PUBLISHABLE_KEY';
+  // 1. Your Stripe publishable key (public by design). LIVE mode
+  //    (pk_live_...), must match the server's live secret key. Get it at
+  //    https://dashboard.stripe.com/apikeys
+  var STRIPE_PUBLISHABLE_KEY = 'pk_live_51UKoiPLOmAZAVClwhPut7A8hdGrB4Ptn1EqfwB4CCHqp8KgGKHWNCgQzwEqRwWW7T9T4u5TcFqjjarZyCx9et97l00gK3LUYDK';
   //
   // 2. Base URL of the checkout server in /server, no trailing slash. The
   //    static site is on GitHub Pages, so the server is deployed separately
   //    (e.g. Render) and called cross-origin.
   //    Local dev:  'http://localhost:4242'
-  //    Production: the Render web service (TEST mode for now).
+  //    Production: the Render web service (LIVE mode).
   var CHECKOUT_SERVER_URL = 'https://knightwebstudio-checkout.onrender.com';
   // ==========================================================================
 
