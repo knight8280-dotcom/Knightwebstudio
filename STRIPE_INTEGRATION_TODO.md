@@ -151,10 +151,13 @@ More: <https://docs.stripe.com/testing>
   server maps it to a whitelisted Price ID and `mode` (see "Plans" below).
 - Add fulfillment in the `checkout.session.completed` webhook handler
   (send a receipt/kick-off email, record the order somewhere durable).
-- Consider a success/thank-you experience after payment, and order tracking if
-  volume grows.
-- Link `/checkout/` from the site (e.g. the pricing page buttons) once the
-  placeholders are filled in.
+- ~~Consider a success/thank-you experience after payment~~ Done: after a
+  successful confirm the page redirects to `/checkout/success/?plan=<key>`
+  (see `checkout/success/index.html`). Order tracking still TBD if volume
+  grows.
+- ~~Link `/checkout/` from the site (e.g. the pricing page buttons)~~ Done:
+  the pricing page package buttons, the care plan tiers, and the home page
+  pricing cards all link to `/checkout/?plan=<key>`.
 - Before launch: switch to live keys (`sk_live_...` on the server,
   `pk_live_...` on the page), recreate the products in live mode, and create a
   live webhook endpoint.

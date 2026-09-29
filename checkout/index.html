@@ -45,6 +45,16 @@
     background: #ffffff; border: 1px solid var(--border);
     border-radius: var(--radius-lg);
   }
+  /* Order summary above the form: which plan the visitor is paying for */
+  .checkout-plan {
+    max-width: 680px; margin: 0 auto 14px; padding: 14px 18px;
+    border: 1px solid var(--border); border-radius: var(--radius);
+    background: var(--surface);
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: .4rem 1rem; flex-wrap: wrap;
+  }
+  .checkout-plan-name { margin: 0; font-weight: 700; }
+  .checkout-plan-price { margin: 0; font-size: 1.15rem; font-weight: 800; letter-spacing: -.02em; color: var(--accent); white-space: nowrap; }
   .checkout-status { max-width: 680px; margin: 1rem auto 0; text-align: center; font-size: .92rem; color: var(--muted); }
   .checkout-status.error { color: var(--danger); }
   .checkout-fine { max-width: 680px; margin: 1.4rem auto 0; text-align: center; font-size: .82rem; color: var(--muted); }
@@ -113,6 +123,10 @@
 
   <section class="section section-alt" id="checkout">
     <div class="container">
+      <div class="checkout-plan" id="checkout-plan" hidden>
+        <p class="checkout-plan-name" id="checkout-plan-name"></p>
+        <p class="checkout-plan-price" id="checkout-plan-price"></p>
+      </div>
       <div class="checkout-panel reveal">
         <div id="checkout-form"></div>
       </div>
@@ -193,6 +207,19 @@
   var CHECKOUT_SERVER_URL = 'https://knightwebstudio-checkout.onrender.com';
   // ==========================================================================
 
+  // What each plan key is called and costs, for the order summary above the
+  // form. Display-only — the amount actually charged always comes from the
+  // server's whitelist (server/plans.json). Keep the two in sync, and keep
+  // this map in sync with the copy on /checkout/success/.
+  var PLAN_DETAILS = {
+    'starter-deposit':  { name: 'Starter website — 50% deposit',  price: '$1,000' },
+    'business-deposit': { name: 'Business website — 50% deposit', price: '$2,000' },
+    'commerce-deposit': { name: 'Commerce website — 50% deposit', price: '$4,000' },
+    'essential-care':   { name: 'Essential Care Plan',            price: '$300/month' },
+    'growth-care':      { name: 'Growth Care Plan',               price: '$600/month' },
+    'commerce-care':    { name: 'Commerce Care Plan',             price: '$1,000/month' }
+  };
+
   (function () {
     var statusEl = document.getElementById('checkout-status');
     function showError(message) {
@@ -232,6 +259,15 @@
       return;
     }
 
+    // Show which plan is being bought above the form (known keys only —
+    // unknown keys still go to the server, which is the real whitelist).
+    var planDetails = PLAN_DETAILS[plan];
+    if (planDetails) {
+      document.getElementById('checkout-plan-name').textContent = planDetails.name;
+      document.getElementById('checkout-plan-price').textContent = planDetails.price;
+      document.getElementById('checkout-plan').hidden = false;
+    }
+
     var clientSecret = fetch(CHECKOUT_SERVER_URL + '/api/create-checkout-session', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -254,6 +290,13 @@
         statusEl.hidden = true;
         form.on('confirm', function (event) {
           loadActionsResult.actions.confirm({ formConfirmEvent: event })
+            .then(function (result) {
+              // Declines and validation problems resolve as an error result,
+              // and the Stripe form already shows the message inline — stay
+              // on the page so the visitor can retry.
+              if (result && result.type === 'error') return;
+              window.location.assign('/checkout/success/?plan=' + encodeURIComponent(plan));
+            })
             .catch(function (error) { console.error('Payment confirmation error:', error); });
         });
       } else {
