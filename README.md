@@ -7,8 +7,8 @@ npm install**. Open `index.html` and it works.
 ## Pages
 
 A home page plus eight pages, each with its own title, description, canonical
-URL and Open Graph tags. The menu reaches the first six; privacy is linked from
-the footer.
+URL and Open Graph tags. The menu reaches the first six; privacy and terms are
+linked from the footer.
 
 | URL | Contents |
 | --- | --- |
@@ -20,12 +20,14 @@ the footer.
 | `/faq/` | Nine answers, with FAQPage schema |
 | `/contact/` | Enquiry form, spam honeypot, saved drafts, "what happens next" |
 | `/privacy/` | Plain-English privacy notice — see [Privacy page](#7-privacy-page) |
+| `/terms/` | Plain-English terms: 50/50 payments, the payment plan, 7-day invoices, card/ACH via Stripe or check, late interest, revision rounds per package, who writes the copy, care plan cancellation. The signed project agreement controls the details (cancellation fees are deliberately not listed here) |
+| `/checkout/`, `/checkout/success/` | Stripe embedded checkout for deposits and care plans, and the confirmation page it returns to. See `STRIPE_INTEGRATION_TODO.md` |
 | `/start/` | Landing page for ads, emails and posts: every service with its price, pricing tiers, live work, the four steps, one call to action. No menu. See [Landing page](#8-landing-page-start) |
 | `/about/` | First-person About page for Christian Knight: background, how he works, live work and contact details. The founder photo is intentionally left out for now — add one later with an `<img>` at the top of `.about-wrap` if wanted |
 | `/web-design-baton-rouge/`, `/web-design-gonzales/`, `/web-design-prairieville/`, `/web-design-denham-springs/` | Local service-area pages: unique copy per city, Smilys Softwash as local work, published prices, a short city FAQ, contact + booking CTAs. Linked from the footer's "Areas we serve" column |
 
-Every page also carries the header, footer and (except `/contact/` and
-`/privacy/`) the sticky mobile CTA — the header's "Get a quote" is hidden
+Every page also carries the header, footer and (except `/contact/`,
+`/privacy/` and `/terms/`) the sticky mobile CTA — the header's "Get a quote" is hidden
 below 980px.
 
 Also built in: dark/light theme toggle (remembers the visitor's choice, and is
@@ -40,7 +42,7 @@ Google.
 ```
 index.html              Landing page
 services/index.html     One directory per page, so URLs are /services/ etc.
-work/  process/  pricing/  faq/  contact/  privacy/
+work/  process/  pricing/  faq/  contact/  privacy/  terms/
 404.html                Not-found page
 site.webmanifest        Installable-app metadata and icons
 assets/css/styles.css   All styling (design tokens at the top)
@@ -311,7 +313,7 @@ $1,500 stays under the $2,000 Starter site; raise it to $2,000 once
 there are two or three branding projects to show. The price appears on the services page, the pricing
 page's add-ons, `/start/` and every page's JSON-LD `OfferCatalog`.
 
-**Keep delivery and support promises in step.** Delivery: 7–10 days for a
+**Keep delivery and support promises in step.** Delivery: as little as 7–10 days for a
 Starter site, 2–4 weeks for Business, 4–6 weeks for Commerce (FAQ, pricing
 cards, landing hero, home meta description). Free support after launch: 30
 days on Starter, 90 on Business, six months on Commerce (pricing cards,
@@ -385,7 +387,8 @@ Paste their reply in their words. Ask before shortening it.
 
 `/privacy/` is a plain-English notice written to match what the site actually
 does today: form data relayed by Web3Forms, hCaptcha on the contact page,
-theme and draft in local storage, GitHub Pages hosting, and **no analytics**.
+theme and draft in local storage, Plausible analytics, Calendly booking,
+Stripe payments with Resend confirmation emails, and GitHub Pages hosting.
 It is not legal advice. Read it once, and update it if you add analytics, a
 newsletter, or any other tool that touches visitor data — the analytics
 section promises the page will name the tool.

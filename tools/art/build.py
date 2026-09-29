@@ -18,16 +18,21 @@ sys.path.insert(0, str(pathlib.Path(__file__).parent))
 import emblems as e  # noqa: E402
 
 PAGES = ['index.html', '404.html'] + [f'{d}/index.html' for d in
-                                      ('services', 'work', 'process', 'pricing', 'faq', 'contact', 'privacy', 'start', 'about',
+                                      ('services', 'work', 'process', 'pricing', 'faq', 'contact', 'privacy', 'terms', 'start', 'about',
+                                       'checkout', 'checkout/success',
                                        'web-design-baton-rouge', 'web-design-gonzales',
                                        'web-design-prairieville', 'web-design-denham-springs')]
+
+# Accessible name for the crest on the pages. The business name is one word;
+# the lettering drawn inside the crest artwork itself is left as it is.
+CREST_LABEL = 'KnightWebstudio crest'
 
 ART = {
     'crest-header': lambda: e.charger('ch', 'crest brand-crest'),
     'crest-footer': lambda: e.charger('cf', 'crest footer-crest'),
-    'full-crest':   lambda: e.full_crest('fc', 'crest-full'),
+    'full-crest':   lambda: e.full_crest('fc', 'crest-full', label=CREST_LABEL),
     # landing-page hero: .play from the start, so it builds as the page opens
-    'hero-crest':   lambda: e.full_crest('hc', 'crest-full play'),
+    'hero-crest':   lambda: e.full_crest('hc', 'crest-full play', label=CREST_LABEL),
     'shards':       e.shards,
 }
 for name in ('rook', 'knight', 'pawn', 'king', 'bishop', 'queen'):

@@ -53,6 +53,7 @@
     display: flex; align-items: baseline; justify-content: space-between;
     gap: .4rem 1rem; flex-wrap: wrap;
   }
+  .checkout-plan[hidden] { display: none; }
   .checkout-plan-name { margin: 0; font-weight: 700; }
   .checkout-plan-price { margin: 0; font-size: 1.15rem; font-weight: 800; letter-spacing: -.02em; color: var(--accent); white-space: nowrap; }
   .checkout-status { max-width: 680px; margin: 1rem auto 0; text-align: center; font-size: .92rem; color: var(--muted); }
@@ -116,7 +117,7 @@
       <header class="page-head">
         <p class="eyebrow">Checkout</p>
         <h1>Secure checkout</h1>
-        <p class="section-sub">Pay your project deposit or start a care plan. Payments are processed securely by Stripe — we never see or store your card details. Sales tax, if any, is calculated at checkout.</p>
+        <p class="section-sub">Pay your project deposit or start a care plan. Payments are processed securely by Stripe — we never see or store your card or bank details.</p>
       </header>
     </div>
   </section>
@@ -180,13 +181,14 @@
     <nav class="footer-col" aria-label="Contact">
       <h3>Contact</h3>
       <a href="mailto:knightwebstudio1@gmail.com">knightwebstudio1@gmail.com</a>
+      <a href="tel:+12252550837">(225) 255-0837</a>
       <a href="/contact/">Start a project</a>
     </nav>
   </div>
 
   <div class="container footer-bottom">
     <p>&copy; <span id="year">2026</span> KnightWebstudio. All rights reserved.</p>
-    <p class="footer-links"><a href="/privacy/">Privacy</a><a href="#top">Back to top ↑</a></p>
+    <p class="footer-links"><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="#top">Back to top ↑</a></p>
   </div>
 </footer>
 <script src="/assets/js/main.js" defer></script>
@@ -269,6 +271,9 @@
       document.getElementById('checkout-plan').hidden = false;
     }
 
+    // The session ID goes to /checkout/success/, which asks the server to
+    // confirm the payment.
+    var sessionId = '';
     var clientSecret = fetch(CHECKOUT_SERVER_URL + '/api/create-checkout-session', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -279,7 +284,10 @@
         if (!response.ok) throw new Error('Checkout server responded with status ' + response.status);
         return response.json();
       })
-      .then(function (json) { return json.client_secret; });
+      .then(function (json) {
+        sessionId = json.session_id || '';
+        return json.client_secret;
+      });
 
     var checkout = stripe.initCheckoutFormSdk({ clientSecret: clientSecret, appearance: appearance });
 
@@ -296,7 +304,8 @@
               // and the Stripe form already shows the message inline — stay
               // on the page so the visitor can retry.
               if (result && result.type === 'error') return;
-              window.location.assign('/checkout/success/?plan=' + encodeURIComponent(plan));
+              window.location.assign('/checkout/success/?plan=' + encodeURIComponent(plan) +
+                (sessionId ? '&session_id=' + encodeURIComponent(sessionId) : ''));
             })
             .catch(function (error) { console.error('Payment confirmation error:', error); });
         });
