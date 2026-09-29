@@ -147,10 +147,8 @@ More: <https://docs.stripe.com/testing>
 ## Next steps
 
 - Replace every placeholder in the table above.
-- Decide what the page sells: today the server creates one hard-coded session.
-  To sell multiple packages (deposits vs. care plans), pass a product choice
-  from the page to the endpoint and map it to the right Price ID and `mode`
-  server-side (never trust a price from the client).
+- ~~Decide what the page sells~~ Done: the page passes `?plan=<key>` and the
+  server maps it to a whitelisted Price ID and `mode` (see "Plans" below).
 - Add fulfillment in the `checkout.session.completed` webhook handler
   (send a receipt/kick-off email, record the order somewhere durable).
 - Consider a success/thank-you experience after payment, and order tracking if
@@ -160,6 +158,26 @@ More: <https://docs.stripe.com/testing>
 - Before launch: switch to live keys (`sk_live_...` on the server,
   `pk_live_...` on the page), recreate the products in live mode, and create a
   live webhook endpoint.
+
+## Plans (which package the page sells)
+
+Link to `/checkout/?plan=<key>`. The page POSTs `{ "plan": "<key>" }` and the
+server looks the key up in its whitelist — arbitrary Price IDs from the browser
+are never accepted (unknown keys get a 400).
+
+| Plan key | Product | Mode |
+| --- | --- | --- |
+| `starter-deposit` | Starter Website 50% Deposit | payment |
+| `business-deposit` | Business Website 50% Deposit | payment |
+| `commerce-deposit` | Commerce Website 50% Deposit | payment |
+| `essential-care` | Essential Care Plan | subscription |
+| `growth-care` | Growth Care Plan | subscription |
+| `commerce-care` | Commerce Care Plan | subscription |
+
+The whitelist lives in [`server/plans.json`](server/plans.json) (TEST-mode IDs).
+To swap in live Price IDs without a code change, set the `STRIPE_PLANS_JSON`
+env var on the server to a JSON object of the same shape — it replaces
+`plans.json` entirely.
 
 ## Deploying the server (e.g. Render)
 

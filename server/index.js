@@ -75,10 +75,45 @@ app.post("/api/webhook", express.raw({ type: "application/json" }), (req, res) =
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+// Plan whitelist: the page sends a plan key (e.g. "starter-deposit") and the
+// server maps it to a Price ID and Checkout mode. Arbitrary Price IDs from the
+// client are never accepted. STRIPE_PLANS_JSON (env) overrides plans.json so
+// live-mode Price IDs can be swapped in without a code change.
+function loadPlans() {
+  let raw;
+  let source;
+  if (process.env.STRIPE_PLANS_JSON) {
+    raw = JSON.parse(process.env.STRIPE_PLANS_JSON);
+    source = "STRIPE_PLANS_JSON";
+  } else {
+    raw = require("./plans.json");
+    source = "plans.json";
+  }
+  const plans = {};
+  for (const [key, plan] of Object.entries(raw)) {
+    if (key.startsWith("_")) continue; // comments
+    if (!plan || typeof plan.price !== "string" || !plan.price.startsWith("price_")) {
+      throw new Error(`Plan "${key}" in ${source} needs a "price" starting with price_`);
+    }
+    if (plan.mode !== "payment" && plan.mode !== "subscription") {
+      throw new Error(`Plan "${key}" in ${source} needs "mode": "payment" or "subscription"`);
+    }
+    plans[key] = { price: plan.price, mode: plan.mode, label: plan.label || key };
+  }
+  console.log(`Loaded ${Object.keys(plans).length} checkout plans from ${source}:`, Object.keys(plans).join(", "));
+  return plans;
+}
+const PLANS = loadPlans();
+
+app.get("/healthz", (req, res) => res.json({ ok: true }));
+
 app.post("/api/create-checkout-session", async (req, res) => {
-  // TODO: Set mode to "subscription" for recurring products (care plans).
-  // See STRIPE_INTEGRATION_TODO.md.
-  const mode = "payment";
+  const planKey = String((req.body && req.body.plan) || req.query.plan || "");
+  const plan = Object.prototype.hasOwnProperty.call(PLANS, planKey) ? PLANS[planKey] : null;
+  if (!plan) {
+    return res.status(400).json({ error: "Unknown or missing plan.", plans: Object.keys(PLANS) });
+  }
+  const mode = plan.mode;
 
   const sessionParams = {
     // Configured in Checkout Studio — use exactly as specified.
@@ -86,23 +121,24 @@ app.post("/api/create-checkout-session", async (req, res) => {
     billing_address_collection: "auto",
     phone_number_collection: { enabled: false },
     automatic_tax: { enabled: false },
-    submit_type: "auto",
     integration_identifier: "custom_embedded_web_0001",
-    // Placeholders — replace with a real price ID from
-    // STRIPE_INTEGRATION_TODO.md before going live.
     mode,
-    line_items: [{ price: "price_...", quantity: 1 }],
+    line_items: [{ price: plan.price, quantity: 1 }],
+    metadata: { plan: planKey },
   };
-  if (mode === "subscription") {
+  if (mode === "payment") {
+    // submit_type only applies to payment-mode sessions.
+    sessionParams.submit_type = "auto";
+  } else {
     sessionParams.payment_method_collection = "always";
   }
 
   try {
     const session = await stripe.checkout.sessions.create(sessionParams);
-    res.json({ client_secret: session.client_secret });
+    res.json({ client_secret: session.client_secret, plan: planKey, label: plan.label, mode });
   } catch (err) {
-    console.error("Failed to create Checkout Session:", err.message);
-    res.status(500).json({ error: err.message });
+    console.error(`Failed to create Checkout Session for plan ${planKey}:`, err.message);
+    res.status(500).json({ error: "Could not start checkout." });
   }
 });
 
