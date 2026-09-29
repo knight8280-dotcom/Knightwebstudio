@@ -1,4 +1,4 @@
-# Knight Web Studio — business website
+# KnightWebstudio — business website
 
 A complete, production-ready marketing website for a web design & development
 business. Plain HTML, CSS and JavaScript — **no build step, no dependencies, no
@@ -83,7 +83,7 @@ Everything you need to change is marked `EDIT ME` in the source.
 
 ### 1. Business name, crest and artwork
 
-The wordmark reads **Knight Web Studio** in full, in the header and footer —
+The wordmark reads **KnightWebstudio** in full, in the header and footer —
 search for `brand-name` and edit both occurrences.
 
 The mark is the **Charger shield**: a chess knight's head cut into facets in
@@ -144,7 +144,7 @@ configure it:
 ```html
 <input type="hidden" name="access_key" value="…">
 <input type="hidden" name="subject"    value="New enquiry from knightwebstudio.com">
-<input type="hidden" name="from_name"  value="Knight Web Studio website">
+<input type="hidden" name="from_name"  value="KnightWebstudio website">
 ```
 
 The access key is **public by design** — it sits in the page source, which is

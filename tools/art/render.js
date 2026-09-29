@@ -79,10 +79,10 @@ function page(body, w, h, transparent) {
     <div style="position:absolute;inset:0;opacity:.9">${SHARDS.replace('class="shards"', 'class="shards" width="1200" height="630"')}</div>
     <div style="position:absolute;left:70px;top:95px;width:400px">${CREST.replace('<svg ', '<svg width="400" height="410" ')}</div>
     <div style="position:absolute;left:520px;top:128px;width:610px">
-      <div style="font:700 22px Manrope;letter-spacing:.14em;text-transform:uppercase;color:#a5b8ff">Knight Web Studio</div>
+      <div style="font:700 22px Manrope;letter-spacing:.14em;text-transform:uppercase;color:#a5b8ff">KnightWebstudio</div>
       <div style="margin-top:22px;font:700 66px/1.02 Bricolage;letter-spacing:-.04em;font-variation-settings:'wdth' 92">
         Websites that make your business <span style="color:#6d8bff">impossible to ignore</span></div>
-      <div style="margin-top:30px;font:500 26px/1.4 Manrope;color:#9aa8c7">Custom sites for small businesses, live in 2–4 weeks, quoted up front.</div>
+      <div style="margin-top:30px;font:500 26px/1.4 Manrope;color:#9aa8c7">Custom sites for small businesses, live in as little as 7–10 days, quoted up front.</div>
       <div style="margin-top:30px;font:700 24px Manrope;color:#46e0c0">knightwebstudio.com</div>
     </div></div>`;
   fs.writeFileSync(path.join(ROOT, 'assets/img/og-image.png'), await shot(og, 1200, 630));
