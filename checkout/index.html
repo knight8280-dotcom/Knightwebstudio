@@ -189,8 +189,8 @@
   //    static site is on GitHub Pages, so the server is deployed separately
   //    (e.g. Render) and called cross-origin.
   //    Local dev:  'http://localhost:4242'
-  //    Production: e.g. 'https://knightwebstudio-checkout.onrender.com'
-  var CHECKOUT_SERVER_URL = 'http://localhost:4242';
+  //    Production: the Render web service (TEST mode for now).
+  var CHECKOUT_SERVER_URL = 'https://knightwebstudio-checkout.onrender.com';
   // ==========================================================================
 
   (function () {
@@ -222,8 +222,23 @@
       }
     };
 
-    var clientSecret = fetch(CHECKOUT_SERVER_URL + '/api/create-checkout-session', { method: 'POST' })
+    // Which package to sell comes from the URL, e.g. /checkout/?plan=starter-deposit.
+    // The server maps the plan key to a whitelisted Stripe Price ID (see
+    // server/plans.json); the page never sends a price.
+    var plan = new URLSearchParams(window.location.search).get('plan') || '';
+    if (!/^[a-z0-9-]{1,64}$/.test(plan)) {
+      showError('Choose a package on the pricing page to start checkout.');
+      statusEl.insertAdjacentHTML('beforeend', ' <a href="/pricing/">See pricing</a>');
+      return;
+    }
+
+    var clientSecret = fetch(CHECKOUT_SERVER_URL + '/api/create-checkout-session', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ plan: plan })
+    })
       .then(function (response) {
+        if (response.status === 400) throw new Error('Unknown plan: ' + plan);
         if (!response.ok) throw new Error('Checkout server responded with status ' + response.status);
         return response.json();
       })
