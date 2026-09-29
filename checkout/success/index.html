@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Payment received — KnightWebstudio</title>
-<meta name="description" content="Thank you — your payment to KnightWebstudio was received.">
+<title>Payment confirmation — KnightWebstudio</title>
+<meta name="description" content="Confirmation of your payment to KnightWebstudio, and what happens next.">
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#080b14">
 <link rel="canonical" href="https://knightwebstudio.com/checkout/success/">
@@ -50,6 +50,13 @@
   .success-plan-name { margin: 0; font-weight: 700; }
   .success-plan-price { margin: 0; font-size: 1.1rem; font-weight: 800; letter-spacing: -.02em; color: var(--accent); white-space: nowrap; }
   .success-panel p { color: var(--muted); }
+  .success-panel .success-status { margin: 0 0 1rem; font-weight: 600; color: var(--text); }
+  .success-next-title { margin: 0 0 .7rem; font-size: 1.05rem; }
+  .success-steps { display: grid; gap: .6rem; max-width: 500px; margin: 0 auto; padding-left: 1.3rem; text-align: left; color: var(--muted); }
+  .success-steps strong { color: var(--text); }
+  /* The script shows one set of steps and buttons; keep the rest hidden even
+     where a display rule above (grid, flex, .btn) would override [hidden]. */
+  .success-panel [hidden] { display: none !important; }
   .success-actions { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 1.5rem; }
   .checkout-fine { max-width: 680px; margin: 1.4rem auto 0; text-align: center; font-size: .82rem; color: var(--muted); }
 </style>
@@ -109,8 +116,8 @@
     <div class="container">
       <header class="page-head">
         <p class="eyebrow">Checkout</p>
-        <h1>Thank you — payment received</h1>
-        <p class="section-sub">Your payment went through and a Stripe receipt is on its way to your inbox.</p>
+        <h1 id="success-title">Thank you</h1>
+        <p class="section-sub" id="success-sub">If your payment went through, Stripe will email your receipt within a few minutes.</p>
       </header>
     </div>
   </section>
@@ -118,18 +125,31 @@
   <section class="section section-alt" id="checkout-success">
     <div class="container">
       <div class="success-panel reveal">
+        <p class="success-status" id="success-status" role="status" hidden>Confirming your payment with Stripe…</p>
         <div class="success-plan" id="success-plan" hidden>
           <p class="success-plan-name" id="success-plan-name"></p>
           <p class="success-plan-price" id="success-plan-price"></p>
         </div>
-        <p id="success-next">We'll email you within one business day to get things moving. Nothing else is needed from you right now.</p>
+        <div id="success-next">
+          <h2 class="success-next-title">What happens next</h2>
+          <ol class="success-steps" id="success-steps-project">
+            <li><strong>Book your kickoff call.</strong> Pick a 30-minute slot to go through your goals, content and timeline.</li>
+            <li><strong>Watch your inbox.</strong> We'll email you within one business day to confirm the details and let you know what we need from you.</li>
+          </ol>
+          <ol class="success-steps" id="success-steps-care" hidden>
+            <li><strong>Watch your inbox.</strong> We'll email you within one business day to introduce ourselves and collect anything we need to start looking after your site.</li>
+            <li><strong>Want to talk first?</strong> Book a call any time.</li>
+          </ol>
+        </div>
         <div class="success-actions">
-          <a class="btn btn-primary" href="/">Back to the homepage</a>
-          <a class="btn btn-ghost" href="/contact/">Contact us</a>
+          <a class="btn btn-primary" id="success-book" href="https://calendly.com/knightwebstudio1" data-booking>Schedule your kickoff call</a>
+          <a class="btn btn-primary" id="success-retry" href="/pricing/" hidden>Return to checkout</a>
+          <a class="btn btn-ghost" href="/">Back to the homepage</a>
         </div>
       </div>
-      <p class="checkout-fine">Didn't mean to end up here, or have a question about your payment? Email
-        <a href="mailto:knightwebstudio1@gmail.com">knightwebstudio1@gmail.com</a> and we'll sort it out.</p>
+      <p class="checkout-fine">Questions about your payment? Email
+        <a href="mailto:knightwebstudio1@gmail.com">knightwebstudio1@gmail.com</a> or call
+        <a href="tel:+12252550837">(225) 255-0837</a> and we'll sort it out.</p>
     </div>
   </section>
 
@@ -176,18 +196,22 @@
     <nav class="footer-col" aria-label="Contact">
       <h3>Contact</h3>
       <a href="mailto:knightwebstudio1@gmail.com">knightwebstudio1@gmail.com</a>
+      <a href="tel:+12252550837">(225) 255-0837</a>
       <a href="/contact/">Start a project</a>
     </nav>
   </div>
 
   <div class="container footer-bottom">
     <p>&copy; <span id="year">2026</span> KnightWebstudio. All rights reserved.</p>
-    <p class="footer-links"><a href="/privacy/">Privacy</a><a href="#top">Back to top ↑</a></p>
+    <p class="footer-links"><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="#top">Back to top ↑</a></p>
   </div>
 </footer>
 <script src="/assets/js/main.js" defer></script>
 
 <script>
+  // Base URL of the checkout server — keep in step with /checkout/.
+  var CHECKOUT_SERVER_URL = 'https://knightwebstudio-checkout.onrender.com';
+
   // What each plan key is called and costs, purely for display. Keep in sync
   // with the map on /checkout/ and the server's whitelist (server/plans.json).
   var PLAN_DETAILS = {
@@ -199,20 +223,87 @@
     'commerce-care':    { name: 'Commerce Care Plan',             price: '$1,000/month' }
   };
 
+  // /checkout/ sends ?plan=…&session_id=…. The session ID is checked with the
+  // server, which asks Stripe whether the payment really went through. Without
+  // it (or if the server can't be reached) the page keeps its neutral wording.
   (function () {
-    var plan = new URLSearchParams(window.location.search).get('plan') || '';
-    var details = PLAN_DETAILS[plan];
-    if (details) {
-      document.getElementById('success-plan-name').textContent = details.name;
-      document.getElementById('success-plan-price').textContent = details.price;
-      document.getElementById('success-plan').hidden = false;
+    var params = new URLSearchParams(window.location.search);
+    var plan = params.get('plan') || '';
+    var sessionId = params.get('session_id') || '';
+    function el(id) { return document.getElementById(id); }
+
+    function showPlan(name, price) {
+      el('success-plan-name').textContent = name;
+      el('success-plan-price').textContent = price;
+      el('success-plan').hidden = false;
     }
-    // Care plans are subscriptions — the "what happens next" line reads a
-    // little differently than a one-off project deposit.
-    if (/-care$/.test(plan)) {
-      document.getElementById('success-next').textContent =
-        'Your care plan is now active. We\u2019ll email you within one business day to introduce ourselves properly and collect anything we need to start looking after your site.';
+    function setCopy(title, sub) {
+      el('success-title').textContent = title;
+      el('success-sub').textContent = sub;
     }
+    // Care plans are subscriptions — the next steps read differently.
+    function useCareSteps() {
+      el('success-steps-project').hidden = true;
+      el('success-steps-care').hidden = false;
+      el('success-book').textContent = 'Book a call';
+    }
+    function money(cents, currency) {
+      var whole = cents % 100 === 0;
+      return new Intl.NumberFormat('en-US', {
+        style: 'currency', currency: (currency || 'usd').toUpperCase(),
+        minimumFractionDigits: whole ? 0 : 2, maximumFractionDigits: whole ? 0 : 2
+      }).format(cents / 100);
+    }
+
+    if (PLAN_DETAILS[plan]) showPlan(PLAN_DETAILS[plan].name, PLAN_DETAILS[plan].price);
+    if (/-care$/.test(plan)) useCareSteps();
+
+    if (!/^cs_(test|live)_[A-Za-z0-9]{10,250}$/.test(sessionId)) return;
+
+    var statusEl = el('success-status');
+    statusEl.hidden = false;
+    // A sleeping free-tier server can take up to a minute to wake.
+    var controller = window.AbortController ? new AbortController() : null;
+    var timer = setTimeout(function () { if (controller) controller.abort(); }, 60000);
+
+    fetch(CHECKOUT_SERVER_URL + '/api/session-status?session_id=' + encodeURIComponent(sessionId),
+      controller ? { signal: controller.signal } : {})
+      .then(function (response) {
+        if (!response.ok) throw new Error('Status check responded ' + response.status);
+        return response.json();
+      })
+      .then(function (s) {
+        clearTimeout(timer);
+        statusEl.hidden = true;
+        var care = s.mode === 'subscription';
+        if (care) useCareSteps();
+        if (typeof s.amount_total === 'number') {
+          var details = PLAN_DETAILS[s.plan];
+          showPlan(details ? details.name : s.label, money(s.amount_total, s.currency) + (care ? '/month' : ''));
+        }
+
+        if (s.status === 'complete' && (s.payment_status === 'paid' || s.payment_status === 'no_payment_required')) {
+          setCopy('Payment confirmed — thank you',
+            (care ? 'Your care plan is active. ' : 'We\u2019ve received your payment. ') +
+            'Your Stripe receipt and a confirmation email from us are on their way to your inbox.');
+        } else if (s.status === 'complete') {
+          setCopy('Thank you — your bank payment is processing',
+            'Bank transfers (ACH) usually take a few business days to clear. We\u2019ll email you a confirmation as soon as it does; there\u2019s nothing else you need to do.');
+        } else {
+          setCopy('Your payment wasn\u2019t completed',
+            'No payment was taken. You can return to checkout and try again, or get in touch if something went wrong.');
+          el('success-next').hidden = true;
+          el('success-book').hidden = true;
+          if (/^[a-z0-9-]{1,64}$/.test(s.plan)) el('success-retry').href = '/checkout/?plan=' + encodeURIComponent(s.plan);
+          el('success-retry').hidden = false;
+        }
+      })
+      .catch(function (error) {
+        clearTimeout(timer);
+        console.error('Could not confirm the payment:', error);
+        statusEl.hidden = true;
+        el('success-sub').textContent = 'We couldn\u2019t confirm your payment automatically just now. If it went through, Stripe will email your receipt within a few minutes, and we\u2019ll be in touch within one business day.';
+      });
   })();
 </script>
 </body>

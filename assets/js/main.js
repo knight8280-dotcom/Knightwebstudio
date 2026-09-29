@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Knight Web Studio — site behaviour
+   KnightWebstudio — site behaviour
    No dependencies. Every block is independent, so removing one is safe.
    ========================================================================== */
 (function () {
