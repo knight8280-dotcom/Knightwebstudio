@@ -16,6 +16,12 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
   apiVersion: "2026-03-25.dahlia; custom_checkout_payment_form_preview=v1",
 });
 
+// Stripe Tax is active (Louisiana registration), so sessions calculate sales
+// tax automatically. Set AUTOMATIC_TAX=false in the environment to turn it
+// off; anything else (or unset) means enabled.
+const AUTOMATIC_TAX =
+  String(process.env.AUTOMATIC_TAX || "true").trim().toLowerCase() === "true";
+
 const app = express();
 
 // The static site calls this API cross-origin, so only these origins are
@@ -104,6 +110,7 @@ function loadPlans() {
   return plans;
 }
 const PLANS = loadPlans();
+console.log(`Automatic tax (Stripe Tax): ${AUTOMATIC_TAX ? "enabled" : "disabled"} (AUTOMATIC_TAX=${process.env.AUTOMATIC_TAX || "<unset, defaults to true>"})`);
 
 app.get("/healthz", (req, res) => res.json({ ok: true }));
 
@@ -118,9 +125,12 @@ app.post("/api/create-checkout-session", async (req, res) => {
   const sessionParams = {
     // Configured in Checkout Studio — use exactly as specified.
     ui_mode: "form",
+    // "auto" collects the billing address whenever Stripe needs it — and
+    // enabling automatic tax makes it needed, so the form collects the full
+    // US address Stripe Tax requires without forcing it when tax is off.
     billing_address_collection: "auto",
     phone_number_collection: { enabled: false },
-    automatic_tax: { enabled: false },
+    automatic_tax: { enabled: AUTOMATIC_TAX },
     integration_identifier: "custom_embedded_web_0001",
     mode,
     line_items: [{ price: plan.price, quantity: 1 }],
@@ -131,6 +141,14 @@ app.post("/api/create-checkout-session", async (req, res) => {
     sessionParams.submit_type = "auto";
   } else {
     sessionParams.payment_method_collection = "always";
+  }
+  // Stripe requires customer_update[address]=auto when automatic tax is on
+  // and an existing Customer is passed, so the address collected at checkout
+  // is saved to the customer for tax calculation. (customer_update is only
+  // accepted alongside a customer — today no route sets one, but this keeps
+  // any future customer-reuse code from silently breaking tax.)
+  if (AUTOMATIC_TAX && sessionParams.customer) {
+    sessionParams.customer_update = { address: "auto" };
   }
 
   try {

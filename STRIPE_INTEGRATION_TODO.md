@@ -24,6 +24,7 @@ The following values are placeholders and must be updated before going live.
 | `STRIPE_SECRET_KEY` (`server/.env`) | `sk_test_...` | Your secret key from <https://dashboard.stripe.com/test/apikeys>. Environment variable only — never put it in code or commit it. |
 | `STRIPE_WEBHOOK_SECRET` (`server/.env`) | `whsec_...` | The signing secret for a webhook endpoint pointing at `<server URL>/api/webhook`, from <https://dashboard.stripe.com/workbench/webhooks>. Optional until you rely on webhooks for fulfillment. |
 | `DOMAIN` (`server/.env`) | `http://localhost:3000` | Optional: one extra origin allowed by CORS (e.g. a staging URL). CORS always allows `https://knightwebstudio.com` and `http://localhost`. |
+| `AUTOMATIC_TAX` (`server/.env`) | unset (defaults to `true`) | Optional: Stripe Tax. `true` (default — a Louisiana registration is active) creates sessions with `automatic_tax: { enabled: true }`; set to `false` to turn tax calculation off. |
 
 ### Your current test-mode Price IDs
 
@@ -61,9 +62,9 @@ These parameters were configured in Checkout Studio and are already set correctl
 | Parameter | Value |
 | --- | --- |
 | `ui_mode` | `"form"` (the installed `stripe` SDK is >= 21.0.0) |
-| `billing_address_collection` | `"auto"` |
+| `billing_address_collection` | `"auto"` (collects the billing address whenever Stripe needs it — automatic tax makes it needed, so Stripe Tax gets the full US address) |
 | `phone_number_collection` | `{ "enabled": false }` |
-| `automatic_tax` | `{ "enabled": false }` |
+| `automatic_tax` | `{ "enabled": true }` by default — Stripe Tax is active with a Louisiana registration. Controlled by the `AUTOMATIC_TAX` env var (set `false` to disable). When automatic tax is on and a session ever passes an existing `customer`, the server also sends `customer_update: { "address": "auto" }` as Stripe requires. |
 | `payment_method_collection` | `"always"` (applied only when `mode` is `"subscription"`) |
 | `submit_type` | `"auto"` |
 | `integration_identifier` | `"custom_embedded_web_0001"` |
