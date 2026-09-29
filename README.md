@@ -21,6 +21,8 @@ the footer.
 | `/contact/` | Enquiry form, spam honeypot, saved drafts, "what happens next" |
 | `/privacy/` | Plain-English privacy notice — see [Privacy page](#7-privacy-page) |
 | `/start/` | Landing page for ads, emails and posts: every service with its price, pricing tiers, live work, the four steps, one call to action. No menu. See [Landing page](#8-landing-page-start) |
+| `/about/` | First-person About page for Christian Knight: background, how he works, live work and contact details. The founder photo is intentionally left out for now — add one later with an `<img>` at the top of `.about-wrap` if wanted |
+| `/web-design-baton-rouge/`, `/web-design-gonzales/`, `/web-design-prairieville/`, `/web-design-denham-springs/` | Local service-area pages: unique copy per city, Smilys Softwash as local work, published prices, a short city FAQ, contact + booking CTAs. Linked from the footer's "Areas we serve" column |
 
 Every page also carries the header, footer and (except `/contact/` and
 `/privacy/`) the sticky mobile CTA — the header's "Get a quote" is hidden
@@ -124,9 +126,9 @@ page's header menu, footer and JSON-LD, in `contact/index.html` (contact
 list), `privacy/index.html`, and in `assets/js/main.js` (the form's mailto
 fallback) — a project-wide search-and-replace is the safe way to change it.
 
-There is deliberately no phone number: the placeholder `555` one was removed
-rather than shipped. To add a real one, put it back in the contact list and
-footer, and add `"telephone"` to the JSON-LD block.
+The phone number is `(225) 255-0837`. It appears as a `tel:+12252550837` link
+in the homepage footer, the contact page's contact list and the About page,
+and as `"telephone": "+1-225-255-0837"` in every page's JSON-LD block.
 
 The footer previously held three social icons pointing at `href="#"`. Once the
 site became seven pages that was twenty-one dead links, so they were removed.
@@ -493,7 +495,7 @@ Validate changes with the [Rich Results Test](https://search.google.com/test/ric
 
 ## Before you launch — checklist
 
-- [ ] Add a phone number, or leave it off — the fake one was removed
+- [x] Add a phone number — `(225) 255-0837` is in the contact list, homepage footer, About page and JSON-LD
 - [ ] Form endpoint configured and a test enquiry received
 - [x] Domain wired through `CNAME`, `index.html`, `sitemap.xml`, `robots.txt`
 - [ ] GitHub Pages enabled and IONOS DNS records added

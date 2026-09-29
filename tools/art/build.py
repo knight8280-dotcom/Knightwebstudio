@@ -18,7 +18,9 @@ sys.path.insert(0, str(pathlib.Path(__file__).parent))
 import emblems as e  # noqa: E402
 
 PAGES = ['index.html', '404.html'] + [f'{d}/index.html' for d in
-                                      ('services', 'work', 'process', 'pricing', 'faq', 'contact', 'privacy', 'start')]
+                                      ('services', 'work', 'process', 'pricing', 'faq', 'contact', 'privacy', 'start', 'about',
+                                       'web-design-baton-rouge', 'web-design-gonzales',
+                                       'web-design-prairieville', 'web-design-denham-springs')]
 
 ART = {
     'crest-header': lambda: e.charger('ch', 'crest brand-crest'),
