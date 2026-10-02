@@ -55,6 +55,16 @@
     document.querySelectorAll('.booking-only').forEach(function (el) { el.hidden = false; });
   }
 
+  /* ---------- Wake the checkout server ----------
+     The payment server is on Render's free plan, which sleeps after 15 idle
+     minutes and takes up to a minute to wake. Pages with "Pay deposit" /
+     "Start plan" buttons ping it once on load, so it is usually awake by
+     the time a visitor clicks through to /checkout/. */
+  if (document.querySelector('a[href^="/checkout/?plan="]') && window.fetch) {
+    fetch('https://knightwebstudio-checkout.onrender.com/healthz', { mode: 'no-cors', cache: 'no-store' })
+      .catch(function () { /* best effort only */ });
+  }
+
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* ---------- Crest animations ----------
