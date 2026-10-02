@@ -231,6 +231,21 @@
     }
 
     // The beta flag is required for the Checkout Form SDK on the dahlia build.
+    // An ad or content blocker can stop Stripe.js from loading; say so
+    // instead of leaving the page on "Loading secure checkout…".
+    if (typeof Stripe === 'undefined') {
+      showError('Secure checkout could not load. If you use an ad or content blocker, allow js.stripe.com and refresh the page, or email knightwebstudio1@gmail.com.');
+      return;
+    }
+
+    // The checkout server sleeps when idle (free hosting) and can take up to
+    // a minute to wake, so tell the visitor rather than look stuck.
+    setTimeout(function () {
+      if (!statusEl.hidden && !statusEl.classList.contains('error')) {
+        statusEl.textContent = 'Waking up secure checkout. The first load can take up to a minute.';
+      }
+    }, 8000);
+
     var stripe = Stripe(STRIPE_PUBLISHABLE_KEY, { betas: ['custom_checkout_payment_form_1'] });
 
     // Appearance is fixed in Checkout Studio — keep in sync with

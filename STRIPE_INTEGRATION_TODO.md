@@ -178,7 +178,12 @@ The free Render service **sleeps after 15 minutes without traffic**. The
 next request wakes it, which takes about 30–60 seconds. In practice:
 
 - **Checkout page:** the first visitor after a quiet spell waits longer for
-  the form to appear ("Loading secure checkout…").
+  the form to appear. To soften this, the home and pricing pages ping
+  `/healthz` once on load (`assets/js/main.js`), so the server is usually
+  awake by the time someone clicks a "Pay deposit" or "Start plan" button.
+  If it is still waking after 8 seconds, the checkout page says "Waking up
+  secure checkout…". If an ad blocker stops Stripe.js, it says so and gives
+  the business email.
 - **Success page:** the server is usually awake straight after a payment. The
   page waits up to 60 seconds for it before falling back to neutral wording.
 - **Webhooks:** payment events arrive right after checkout, while the server
