@@ -519,6 +519,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   white-space: nowrap;
 }
 .tier-price small { font-size: .58em; font-weight: 500; color: var(--muted); letter-spacing: 0; }
+.tier-terms { grid-column: 1 / -1; font-size: .86rem; margin-top: .35rem; }
 .tier-cta { grid-column: 1 / -1; justify-self: start; margin-top: .55rem; }
 
 /* Shared inclusions sit below both columns */
