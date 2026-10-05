@@ -14,7 +14,7 @@ linked from the footer.
 | --- | --- |
 | `/` | Landing page: hero, three service cards, four projects, four process steps, three prices — each teasing the full page |
 | `/services/` | All six services |
-| `/work/` | Four live projects as full case-study rows, newest first |
+| `/work/` | Four projects as full case-study rows, newest first — three live, plus an in-progress GamersPulseHQ prototype |
 | `/process/` | Four-step "no surprises" explainer |
 | `/pricing/` | Three project tiers, add-ons (brand identity, automation), three care tiers |
 | `/faq/` | Nine answers, with FAQPage schema |
@@ -22,8 +22,8 @@ linked from the footer.
 | `/privacy/` | Plain-English privacy notice — see [Privacy page](#7-privacy-page) |
 | `/terms/` | Plain-English terms: 50/50 payments, the payment plan, 7-day invoices, card/ACH via Stripe or check, late interest, revision rounds per package, who writes the copy, care plan cancellation. The signed project agreement controls the details (cancellation fees are deliberately not listed here) |
 | `/checkout/`, `/checkout/success/` | Stripe embedded checkout for deposits and care plans, and the confirmation page it returns to. See `STRIPE_INTEGRATION_TODO.md` |
-| `/start/` | Landing page for ads, emails and posts: every service with its price, pricing tiers, live work, the four steps, one call to action. No menu. See [Landing page](#8-landing-page-start) |
-| `/about/` | First-person About page for Christian Knight: background, how he works, live work and contact details. The founder photo is intentionally left out for now — add one later with an `<img>` at the top of `.about-wrap` if wanted |
+| `/start/` | Landing page for ads, emails and posts: every service with its price, pricing tiers, selected work, the four steps, one call to action. No menu. See [Landing page](#8-landing-page-start) |
+| `/about/` | First-person About page for Christian Knight: background, how he works, selected work and contact details. The founder photo is intentionally left out for now — add one later with an `<img>` at the top of `.about-wrap` if wanted |
 | `/web-design-baton-rouge/`, `/web-design-gonzales/`, `/web-design-prairieville/`, `/web-design-denham-springs/` | Local service-area pages: unique copy per city, Smilys Softwash as local work, published prices, a short city FAQ, contact + booking CTAs. Linked from the footer's "Areas we serve" column |
 
 Every page also carries the header, footer and (except `/contact/`,
@@ -238,15 +238,18 @@ If you change the brand colour, re-check all three.
 
 ### 5. Your work
 
-The Work section holds four real, live projects, newest first, each with an
-image taken from the site itself, a `Live` badge and a link out:
+The Work section holds four projects, newest first, each with an
+image taken from the site itself and a link out. Risen Health, Corbel Books
+and Smilys Softwash are live; GamersPulseHQ is labelled as an in-progress
+prototype (Steam/Twitch data is not live, and it is not presented as a
+finished client site):
 
 | Project | What it is | Image source |
 | --- | --- | --- |
 | Risen Health | Online store for a family-owned peptide supplier (added September 2026) | its own Open Graph card |
 | Corbel Books | Fintech SaaS product site and app UI | its own Open Graph card |
-| Smilys Softwash | Local exterior-cleaning business | its own before/after roof photo |
-| GamersPulseHQ | Gaming data web app | its own Open Graph card |
+| Smilys Softwash | Local exterior-cleaning business (quotes live; card payments being set up) | its own before/after roof photo |
+| GamersPulseHQ | In-progress gaming-data concept demo | its own Open Graph card |
 
 Images live in `assets/img/work-*.jpg`, all 1200px wide and under 90 KB. To add
 a project, copy one `<article class="work-card">` block in `work/index.html`,
