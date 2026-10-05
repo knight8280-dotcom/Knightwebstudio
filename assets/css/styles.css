@@ -699,6 +699,7 @@ button[disabled] { opacity: .6; cursor: not-allowed; transform: none !important;
    without changing the typographic rhythm. */
 .footer-col a { font-size: .93rem; color: var(--muted); padding-block: .3rem; transition: color .18s var(--ease); }
 .footer-col a:hover { color: var(--text); }
+.footer-col .footer-place { font-size: .93rem; color: var(--muted); padding-block: .3rem; }
 
 .footer-bottom {
   display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px;
