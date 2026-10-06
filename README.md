@@ -271,27 +271,30 @@ no result line.
 own number. A package's price covers exactly what its card lists; anything
 beyond that is agreed in writing before work starts.
 
-Current prices, set against 2026 market research:
+Current published prices:
 
-| Item | Price | Market position |
-| --- | --- | --- |
-| Starter | $2,000 | Freelancers charge $300–$3,500 *per page* |
-| Business | $4,000 | Most professional builds land $3,000–$15,000 |
-| Commerce | $8,000 | Configured store builds run $3,000–$10,000 |
-| Automation add-ons | $750 each | Booking/CRM integration runs $500–$3,000 |
-| Brand identity | $1,500 | Small-business packages $800–$2,500; boutique studios $5,000–$20,000 |
-| Care — Essential | $300/mo | Quality care plans band at $199–$599/mo |
-| Care — Growth | $600/mo | |
-| Care — Commerce | $1,000/mo | Store care with priority response sits above the general band |
+| Item | Price |
+| --- | --- |
+| Starter | $2,000 |
+| Business | $4,000 |
+| Commerce | $8,000 |
+| Automation add-ons | $750 each |
+| Brand identity | $1,500 |
+| Care — Essential | $300/mo |
+| Care — Growth | $600/mo |
+| Care — Commerce | $1,000/mo |
+
+This README is served on GitHub Pages (the site uses `.nojekyll`, so files
+are copied as-is). Keep competitor price bands and market-research notes
+out of it.
 
 Starter is an **information website** (up to 5 pages: who the business is,
 what it offers, how to reach it), not a one-page site. It was raised from
-$1,500 because three pages for $1,500 undercut what
-freelancers charge for one. Each price appears in `pricing/index.html`, the
-three project tiers again on the landing page, the five headline prices in
-every page's JSON-LD `OfferCatalog`, and the $300 care figure in the FAQ answer
-about care plans and the services page. Search for the old figure before
-changing one.
+$1,500. Each price appears in `pricing/index.html`, the three project tiers
+again on the landing page, the project prices plus three care tiers
+(Essential, Growth, Commerce) in every page's JSON-LD `OfferCatalog`, and
+the $300 / $600 / $1,000 care figures in the FAQ answer about care plans
+and the services page. Search for the old figure before changing one.
 
 The service cards carry small price tags taken from the same tiers: design
 and build "$2,000 or $4,000", e-commerce $8,000, care "$300, $600 or $1,000/mo",
@@ -306,14 +309,9 @@ that package chosen. The option values are `starter`, `business`, `commerce`,
 `brand` and `care`.
 
 **Why $1,500 for brand identity** (set September 2026): logo, colours, fonts,
-a guidelines document and social templates sit in the mid-market band that
-small businesses pay, $800–$2,500. Freelance logo-only work runs $200–$2,000
-and boutique studios with strategy workshops charge $5,000–$20,000
-([Knapsack Creative](https://knapsackcreative.com/blog-industry/branding-pricing-guide));
-one small studio starts at $6,000 for discovery plus a logo
-([Jessica Jones Design](https://www.jessicajonesdesign.com/brand-identity-design/brand-identity-pricing/)).
-$1,500 stays under the $2,000 Starter site; raise it to $2,000 once
-there are two or three branding projects to show. The price appears on the services page, the pricing
+a guidelines document and social templates. $1,500 stays under the $2,000
+Starter site; raise it to $2,000 once there are two or three branding
+projects to show. The price appears on the services page, the pricing
 page's add-ons, `/start/` and every page's JSON-LD `OfferCatalog`.
 
 **Keep delivery and support promises in step.** Delivery: as little as 7–10 days for a
