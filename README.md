@@ -17,7 +17,7 @@ linked from the footer.
 | `/work/` | Four projects as full case-study rows, newest first — three live, plus an in-progress GamersPulseHQ prototype |
 | `/process/` | Four-step "no surprises" explainer |
 | `/pricing/` | Three project tiers, add-ons (brand identity, automation), three care tiers |
-| `/faq/` | Nine answers, with FAQPage schema |
+| `/faq/` | Ten answers, with FAQPage schema |
 | `/contact/` | Enquiry form, spam honeypot, saved drafts, "what happens next" |
 | `/privacy/` | Plain-English privacy notice — see [Privacy page](#7-privacy-page) |
 | `/terms/` | Plain-English terms: 50/50 payments, the payment plan, 7-day invoices, card/ACH via Stripe or check, late interest, revision rounds per package, who writes the copy, care plan cancellation. The signed project agreement controls the details (cancellation fees are deliberately not listed here) |
@@ -280,9 +280,9 @@ Current published prices:
 | Commerce | $8,000 |
 | Automation add-ons | $750 each |
 | Brand identity | $1,500 |
-| Care — Essential | $300/mo |
-| Care — Growth | $600/mo |
-| Care — Commerce | $1,000/mo |
+| Care — Essential | $300/month |
+| Care — Growth | $600/month |
+| Care — Commerce | $1,000/month |
 
 This README is served on GitHub Pages (the site uses `.nojekyll`, so files
 are copied as-is). Keep competitor price bands and market-research notes
@@ -293,8 +293,9 @@ what it offers, how to reach it), not a one-page site. It was raised from
 $1,500. Each price appears in `pricing/index.html`, the three project tiers
 again on the landing page, the project prices plus three care tiers
 (Essential, Growth, Commerce) in every page's JSON-LD `OfferCatalog`, and
-the $300 / $600 / $1,000 care figures in the FAQ answer about care plans
-and the services page. Search for the old figure before changing one.
+the Essential $300/month, Growth $600/month and Commerce $1,000/month care
+figures in the FAQ answer about care plans and the services page. Search
+for the old figure before changing one.
 
 The service cards carry small price tags taken from the same tiers: design
 and build "$2,000 or $4,000", e-commerce $8,000, care "$300, $600 or $1,000/mo",
@@ -485,7 +486,7 @@ Every page carries a JSON-LD `@graph` with two nodes:
 - **WebSite**
 
 Each sub-page adds a **BreadcrumbList**, and `faq/index.html` adds a
-**FAQPage** with all nine entries.
+**FAQPage** with all ten entries.
 
 > The FAQ markup mirrors the visible accordion **verbatim**. Google penalises
 > structured data that does not match on-page content, so if you edit an FAQ

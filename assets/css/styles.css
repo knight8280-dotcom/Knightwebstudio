@@ -499,6 +499,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .care-per { color: var(--muted); font-weight: 500; font-size: .62em; }
 .care-copy p { color: var(--muted); font-size: .97rem; margin-bottom: 1.4rem; }
 .care-list { margin-top: 0; font-size: .94rem; }
+.care-list a { color: var(--brand); text-decoration: underline; text-underline-offset: .15em; }
+.care-list a:hover { color: var(--text); }
 
 /* Three tiers — the clients who lean on you most should not pay the least */
 .care-tiers { display: grid; gap: 10px; }
