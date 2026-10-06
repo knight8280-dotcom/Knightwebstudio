@@ -346,7 +346,7 @@ function clientEmail(s) {
     ? [
         { text: "We'll email you within one business day to introduce ourselves and collect anything we need to start looking after your site." },
         { text: "Want to talk it through first? Book a call:", link: CALENDLY_URL },
-        { text: "You can cancel any time; cancelling takes effect at the end of the month you've paid for." },
+        { text: "To cancel or change, give us 10 days' written notice (email is fine). There's no fee. Your plan runs through the end of the month you've already paid for, with no partial refunds. If notice arrives less than 10 days before the next billing date, that next month is still billed and service runs through it." },
       ]
     : [
         { text: "Book your 30-minute kickoff call to go through your goals, content and timeline:", link: CALENDLY_URL },
