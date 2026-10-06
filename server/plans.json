@@ -3,7 +3,7 @@
   "starter-deposit":  { "price": "price_1UKor8Q9sEpFpWZByAOqu1u0", "mode": "payment",      "label": "Starter Website 50% Deposit" },
   "business-deposit": { "price": "price_1UKorBQ9sEpFpWZBexjRQEGQ", "mode": "payment",      "label": "Business Website 50% Deposit" },
   "commerce-deposit": { "price": "price_1UKorDQ9sEpFpWZBDfyRRZUm", "mode": "payment",      "label": "Commerce Website 50% Deposit" },
-  "essential-care":   { "price": "price_1UKorGQ9sEpFpWZBnni7q737", "mode": "subscription", "label": "Essential Care Plan" },
-  "growth-care":      { "price": "price_1UKorIQ9sEpFpWZBIPvo4IFN", "mode": "subscription", "label": "Growth Care Plan" },
-  "commerce-care":    { "price": "price_1UKorJQ9sEpFpWZBqDSZ65q2", "mode": "subscription", "label": "Commerce Care Plan" }
+  "essential-care":   { "price": "price_1UKorGQ9sEpFpWZBnni7q737", "mode": "subscription", "label": "Essential care plan" },
+  "growth-care":      { "price": "price_1UKorIQ9sEpFpWZBIPvo4IFN", "mode": "subscription", "label": "Growth care plan" },
+  "commerce-care":    { "price": "price_1UKorJQ9sEpFpWZBqDSZ65q2", "mode": "subscription", "label": "Commerce care plan" }
 }
