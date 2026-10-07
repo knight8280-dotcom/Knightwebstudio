@@ -282,7 +282,11 @@
      in the contact section during first paint. Uses hCaptcha's auto-render:
      the script renders every .h-captcha element it finds when it parses, which
      is one moving part instead of an explicit-render callback that silently
-     leaves no widget if anything in the chain fails. */
+     leaves no widget if anything in the chain fails.
+     recaptchacompat=off is required: without it hCaptcha also adds a
+     g-recaptcha-response field, and Web3Forms (free plan) rejects the
+     submission as a reCAPTCHA one, which sent visitors to the mailto
+     fallback. */
   var captchaSlot = document.getElementById('hcaptcha-slot');
   var captchaRequested = false;
 
@@ -290,7 +294,7 @@
     if (captchaRequested || !captchaSlot) return;
     captchaRequested = true;
     var sc = document.createElement('script');
-    sc.src = 'https://js.hcaptcha.com/1/api.js';
+    sc.src = 'https://js.hcaptcha.com/1/api.js?recaptchacompat=off';
     sc.async = true; sc.defer = true;
     document.head.appendChild(sc);
   }

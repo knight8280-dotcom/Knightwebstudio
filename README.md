@@ -172,6 +172,11 @@ how a static site receives mail without a server. It is not a credential.
    on first focus in the form), not with the page. A captcha iframe present at
    load can take focus and drag the scroll position down the page, and it also
    put a third-party request on the critical path for every visitor.
+   The script URL **must** keep `?recaptchacompat=off`. Without it hCaptcha
+   also adds a `g-recaptcha-response` field, Web3Forms' free plan rejects the
+   submission as reCAPTCHA (a paid feature), and every visitor lands on the
+   mailto fallback. Web3Forms' docs require this ("make sure reCaptchaCompat
+   is false").
 
 > **hCaptcha must also be switched on in the Web3Forms dashboard.** The widget
 > on the page stops casual bots, but only the dashboard setting makes the
