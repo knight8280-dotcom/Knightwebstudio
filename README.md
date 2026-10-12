@@ -12,9 +12,9 @@ linked from the footer.
 
 | URL | Contents |
 | --- | --- |
-| `/` | Landing page: hero, three service cards, four projects, four process steps, three prices — each teasing the full page |
+| `/` | Landing page: hero, three service cards, three projects, four process steps, three prices — each teasing the full page |
 | `/services/` | All six services |
-| `/work/` | Four projects as full case-study rows, newest first — three live, plus an in-progress GamersPulseHQ prototype |
+| `/work/` | Three live projects as full case-study rows, newest first |
 | `/process/` | Four-step "no surprises" explainer |
 | `/pricing/` | Three project tiers, add-ons (brand identity, automation), three care tiers |
 | `/faq/` | Ten answers, with FAQPage schema |
@@ -70,7 +70,7 @@ same markup works from any directory depth. That relies on the site living at
 the domain root, which it does.
 
 The landing page's teasers are copies of the first three service cards, the
-four projects, the four process steps (shortened) and the three price tiers.
+three projects, the four process steps (shortened) and the three price tiers.
 Update the full page and the landing page together.
 
 **Heading levels.** On the landing page, section titles are `h2` and card
@@ -243,18 +243,15 @@ If you change the brand colour, re-check all three.
 
 ### 5. Your work
 
-The Work section holds four projects, newest first, each with an
-image taken from the site itself and a link out. Risen Health, Corbel Books
-and Smilys Softwash are live; GamersPulseHQ is labelled as an in-progress
-prototype (Steam/Twitch data is not live, and it is not presented as a
-finished client site):
+The Work section holds three live projects, newest first, each with an
+image taken from the site itself and a link out. GamersPulseHQ, an
+in-progress prototype, was removed from the site in October 2026:
 
 | Project | What it is | Image source |
 | --- | --- | --- |
 | Risen Health | Online store for a family-owned peptide supplier (added September 2026) | its own Open Graph card |
 | Corbel Books | Fintech SaaS product site and app UI | its own Open Graph card |
 | Smilys Softwash | Local exterior-cleaning business (quotes live; card payments being set up) | its own before/after roof photo |
-| GamersPulseHQ | In-progress gaming-data concept demo | its own Open Graph card |
 
 Images live in `assets/img/work-*.jpg`, all 1200px wide and under 90 KB. To add
 a project, copy one `<article class="work-card">` block in `work/index.html`,
@@ -262,8 +259,9 @@ drop a matching image in `assets/img/`, and update the text. The first card is
 the one on screen at load, so it has no `reveal` class and its image uses
 `fetchpriority="high"`; every other card fades in and lazy-loads. The project
 also belongs in the home page's hero panel and projects grid and on `/start/`;
-those grids run four across on wide screens, so a fifth project should replace
-one there rather than be added.
+those grids run three across down to phone width (`.mini-work-grid` in
+`styles.css`); with a fourth project, set them to four across on desktop and
+two across under 980px.
 
 All descriptions are factual — taken from each site's own copy — with no
 invented metrics. Keep it that way: a result line you can't defend is worse than
