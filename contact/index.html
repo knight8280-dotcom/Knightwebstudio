@@ -136,6 +136,13 @@
         "itemListElement": [
           {
             "@type": "Offer",
+            "name": "One-page website",
+            "priceCurrency": "USD",
+            "price": "1000",
+            "description": "A single page: who you are, what you offer and how to reach you, with a contact form."
+          },
+          {
+            "@type": "Offer",
             "name": "Starter website",
             "priceCurrency": "USD",
             "price": "2000",
@@ -161,6 +168,19 @@
             "priceCurrency": "USD",
             "price": "1500",
             "description": "Logo and mark, colour palette, typography, brand guidelines and social templates."
+          },
+          {
+            "@type": "Offer",
+            "name": "Basic care plan",
+            "priceCurrency": "USD",
+            "price": "125",
+            "description": "One small change a month, made within 5 business days.",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "125",
+              "priceCurrency": "USD",
+              "unitCode": "MON"
+            }
           },
           {
             "@type": "Offer",
@@ -371,6 +391,7 @@
               <label for="package">Package</label>
               <select id="package" name="package">
                 <option value="">Not sure yet</option>
+                <option value="onepage">One-page website, $1,000</option>
                 <option value="starter">Starter information website, $2,000</option>
                 <option value="business">Business website, $4,000</option>
                 <option value="commerce">Commerce website, $8,000</option>
