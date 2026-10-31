@@ -278,11 +278,13 @@ Current published prices:
 
 | Item | Price |
 | --- | --- |
+| One-page | $1,000 |
 | Starter | $2,000 |
 | Business | $4,000 |
 | Commerce | $8,000 |
 | Automation add-ons | $750 each |
 | Brand identity | $1,500 |
+| Care — Basic | $125/month |
 | Care — Essential | $300/month |
 | Care — Growth | $600/month |
 | Care — Commerce | $1,000/month |
@@ -291,17 +293,33 @@ This README is served on GitHub Pages (the site uses `.nojekyll`, so files
 are copied as-is). Keep competitor price bands and market-research notes
 out of it.
 
+**One-page** ($1,000, added October 2026) is a single page with a contact
+form, 1 revision round, client-supplied text, 14 days of support, live in as
+little as 7 days. It exists so price-sensitive prospects have a yes; its
+button goes to `/contact/?package=onepage` because there is no Stripe deposit
+price for it yet. **Basic care** ($125/month, added October 2026) suits
+one-page and Starter sites: 1 small change a month within 5 business days,
+client keeps domain and hosting renewals current; its button goes to
+`/contact/?package=care` for the same reason. Add `onepage-deposit` and
+`basic-care` to Stripe, `STRIPE_PLANS_JSON` and `checkout/index.html`'s
+`PLAN_DETAILS` to sell them through checkout.
+
+Every project card also shows the payment plan from the terms: 50% down,
+then about a third of the rest each month for 3 months (Starter: $1,000
+down, then about $333/mo).
+
 Starter is an **information website** (up to 5 pages: who the business is,
-what it offers, how to reach it), not a one-page site. It was raised from
+what it offers, how to reach it). It was raised from
 $1,500. Each price appears in `pricing/index.html`, the three project tiers
 again on the landing page, the project prices plus three care tiers
 (Essential, Growth, Commerce) in every page's JSON-LD `OfferCatalog`, and
-the Essential $300/month, Growth $600/month and Commerce $1,000/month care
-figures in the FAQ answer about care plans and the services page. Search
+the Basic $125/month, Essential $300/month, Growth $600/month and Commerce
+$1,000/month care figures in the FAQ answer about care plans and the services
+page. The project tiers are also on `/start/` and the four city pages. Search
 for the old figure before changing one.
 
 The service cards carry small price tags taken from the same tiers: design
-and build "$2,000 or $4,000", e-commerce $8,000, care "$300, $600 or $1,000/mo",
+and build "$1,000, $2,000 or $4,000", e-commerce $8,000, care "$125, $300, $600 or $1,000/mo",
 brand identity $1,500, redesigns "priced as a new site" (a redesign is one of
 the same packages), and SEO "in every build", because every tier includes SEO
 basics.
@@ -309,8 +327,8 @@ basics.
 The contact form asks for a **package**, not a budget: its dropdown lists the
 fixed prices. Each tier's button on the pricing page links to
 `/contact/?package=starter` (or `business`, `commerce`) and the form opens with
-that package chosen. The option values are `starter`, `business`, `commerce`,
-`brand` and `care`.
+that package chosen. The option values are `onepage`, `starter`, `business`,
+`commerce`, `brand` and `care`.
 
 **Why $1,500 for brand identity** (set September 2026): logo, colours, fonts,
 a guidelines document and social templates. $1,500 stays under the $2,000
@@ -318,10 +336,10 @@ Starter site; raise it to $2,000 once there are two or three branding
 projects to show. The price appears on the services page, the pricing
 page's add-ons, `/start/` and every page's JSON-LD `OfferCatalog`.
 
-**Keep delivery and support promises in step.** Delivery: as little as 7–10 days for a
-Starter site, 2–4 weeks for Business, 4–6 weeks for Commerce (FAQ, pricing
-cards, landing hero, home meta description). Free support after launch: 30
-days on Starter, 90 on Business, six months on Commerce (pricing cards,
+**Keep delivery and support promises in step.** Delivery: as little as 7 days for a
+one-page site, 7–10 days for a Starter site, 2–4 weeks for Business, 4–6 weeks for Commerce (FAQ, pricing
+cards, landing hero, home meta description). Free support after launch: 14
+days on One-page, 30 days on Starter, 90 on Business, six months on Commerce (pricing cards,
 process page, landing process teaser). Buyers rank speed first, so a page
 that says something different costs trust.
 
