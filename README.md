@@ -1,7 +1,7 @@
 # KnightWebstudio — business website
 
-A complete, production-ready marketing website for a web design & development
-business. Plain HTML, CSS and JavaScript — **no build step, no dependencies, no
+A complete, production-ready marketing website for a web design, automation
+and small-business consulting studio. Plain HTML, CSS and JavaScript — **no build step, no dependencies, no
 npm install**. Open `index.html` and it works.
 
 ## Pages
@@ -13,11 +13,12 @@ linked from the footer.
 | URL | Contents |
 | --- | --- |
 | `/` | Landing page: hero, three service cards, three projects, four process steps, three prices — each teasing the full page |
-| `/services/` | All six services |
+| `/services/` | All nine services: the six website services plus growth consulting, Google profile & reviews, and automation & AI |
+| `/consulting/` | Consulting & automation: where the week goes (worked example table), how each automation works step by step, the revenue & time calculator, setup prices, Advisor/Partner monthly plans, the Launch bundle, four steps and four questions |
 | `/work/` | Three live projects as full case-study rows, newest first |
 | `/process/` | Four-step "no surprises" explainer |
 | `/pricing/` | Three project tiers, add-ons (brand identity, automation), three care tiers |
-| `/faq/` | Ten answers, with FAQPage schema |
+| `/faq/` | Fourteen answers, with FAQPage schema |
 | `/contact/` | Enquiry form, spam honeypot, saved drafts, "what happens next" |
 | `/privacy/` | Plain-English privacy notice — see [Privacy page](#7-privacy-page) |
 | `/terms/` | Plain-English terms: 50/50 payments, the payment plan, 7-day invoices, card/ACH via Stripe or check, late interest, revision rounds per package, who writes the copy, care plan cancellation. The signed project agreement controls the details (cancellation fees are deliberately not listed here) |
@@ -58,7 +59,7 @@ sitemap.xml             Sitemap for search engines
 
 There is still **no build step** — every page is plain HTML you can open and
 edit. The trade-off is that the header, footer and mobile CTA are duplicated in
-all eight files. If you change one of those, change it in all eight, or they
+every page. If you change one of those, change it on every page, or they
 will drift. A quick way to check they haven't:
 
 ```bash
@@ -267,6 +268,23 @@ All descriptions are factual — taken from each site's own copy — with no
 invented metrics. Keep it that way: a result line you can't defend is worse than
 no result line.
 
+### 5a. Consulting page and calculator
+
+`/consulting/` sells the work beyond the website: a free online check, the
+Growth Audit, setup projects and monthly plans. Two rules keep it honest:
+
+- **The time table is a worked example, labelled as one.** Every row shows its
+  arithmetic (e.g. "10 bookings × 8 minutes"), and the note under the table
+  says the numbers are not a measurement of the visitor's business. The two
+  survey figures quoted above it are named in the small print under the table.
+- **The calculator is the visitor's own numbers.** `assets/js/calculator.js`
+  runs only on that page, stores and sends nothing, and the HTML ships with
+  the default results already written in, so the page reads correctly without
+  JavaScript. If you change a default input value, recalculate and update the
+  result figures in the HTML to match. The disclaimer under the result, the
+  FAQ answer and the terms all say it is an estimate, not a guarantee. Never
+  turn it into a promised result anywhere on the site.
+
 ### 5b. Pricing
 
 **Every price is fixed. Never write a range, "from", "starting at" or
@@ -288,6 +306,16 @@ Current published prices:
 | Care — Essential | $300/month |
 | Care — Growth | $600/month |
 | Care — Commerce | $1,000/month |
+| Growth Audit & action plan | $350 (comes off a project booked within 30 days) |
+| Strategy session | $150 |
+| Google profile & reviews setup | $500 |
+| Missed-call text-back setup | $750 |
+| Online booking & reminders setup | $750 (same as the booking add-on) |
+| Lead follow-up system | $1,500 |
+| Custom automation or AI workflow | $1,500 each |
+| Advisor plan | $500/month |
+| Partner plan | $1,000/month |
+| Launch bundle (Starter + Google profile & reviews + text-back) | $3,000 ($1,500 down, then $500/mo for 3 months) |
 
 This README is served on GitHub Pages (the site uses `.nojekyll`, so files
 are copied as-is). Keep competitor price bands and market-research notes
@@ -323,6 +351,14 @@ and build "$1,000, $2,000 or $4,000", e-commerce $8,000, care "$125, $300, $600 
 brand identity $1,500, redesigns "priced as a new site" (a redesign is one of
 the same packages), and SEO "in every build", because every tier includes SEO
 basics.
+
+Consulting and automation prices appear on `/consulting/`, the pricing page's
+"Consulting & automation" panel, the services page cards, `/start/`, the four
+city pages, the FAQ, the About page, the terms and every page's JSON-LD
+`OfferCatalog`. Search for the old figure before changing one. None of them
+has a Stripe price yet, so their buttons go to `/contact/?package=…` with
+`check`, `audit`, `strategy`, `gbp`, `textback`, `booking`, `followup`,
+`automation`, `advisor`, `partner` or `bundle`.
 
 The contact form asks for a **package**, not a budget: its dropdown lists the
 fixed prices. Each tier's button on the pricing page links to
