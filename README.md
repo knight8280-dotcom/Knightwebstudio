@@ -13,7 +13,7 @@ linked from the footer.
 | URL | Contents |
 | --- | --- |
 | `/` | Landing page: hero, three service cards, three projects, four process steps, three prices — each teasing the full page |
-| `/services/` | All nine services: the six website services plus growth consulting, Google profile & reviews, and automation & AI |
+| `/services/` | All nine services: the six website services plus growth consulting, Google profile & reviews, and automation |
 | `/consulting/` | Consulting & automation: where the week goes (worked example table), how each automation works step by step, the revenue & time calculator, setup prices, Advisor/Partner monthly plans, the Launch bundle, four steps and four questions |
 | `/work/` | Three live projects as full case-study rows, newest first |
 | `/process/` | Four-step "no surprises" explainer |
@@ -312,7 +312,7 @@ Current published prices:
 | Missed-call text-back setup | $750 |
 | Online booking & reminders setup | $750 (same as the booking add-on) |
 | Lead follow-up system | $1,500 |
-| Custom automation or AI workflow | $1,500 each |
+| Custom automation workflow | $1,500 each |
 | Advisor plan | $500/month |
 | Partner plan | $1,000/month |
 | Launch bundle (Starter + Google profile & reviews + text-back) | $3,000 ($1,500 down, then $500/mo for 3 months) |
