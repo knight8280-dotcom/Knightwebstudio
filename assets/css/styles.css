@@ -774,7 +774,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
    matched `.chip span`, tinting the service chips an unreadable pale blue. */
 .field > label > span, .field > legend > span { color: var(--brand-soft); }
 
-input[type="text"], input[type="email"], select, textarea {
+input[type="text"], input[type="email"], input[type="number"], select, textarea {
   width: 100%; padding: .78rem .95rem;
   font: inherit; font-size: .95rem; color: var(--text);
   background: var(--bg-alt); border: 1px solid var(--border); border-radius: 11px;
@@ -866,6 +866,115 @@ button[disabled] { opacity: .6; cursor: not-allowed; transform: none !important;
 .footer-bottom a { display: inline-block; padding: .4rem .1rem; }
 .footer-bottom a:hover { color: var(--text); }
 .footer-links { display: flex; flex-wrap: wrap; gap: 0 1.4rem; }
+
+/* ---------- Consulting & automation ---------- */
+/* The menu has eight items since Consulting was added; between the phone
+   breakpoint and ~1180px they need tighter padding to fit on one row. */
+@media (min-width: 981px) and (max-width: 1180px) {
+  .nav-links a { padding-inline: .55rem; font-size: .9rem; }
+}
+.page-cta { justify-content: center; margin: 1.6rem 0 0; }
+.price-card h3 { font-size: 1.02rem; letter-spacing: -.01em; color: var(--muted); font-weight: 650; }
+.price-card.featured h3 { color: var(--brand-soft); }
+.price .price-per { font-size: .42em; font-weight: 600; letter-spacing: 0; color: var(--muted); margin-left: .15em; }
+.pricing-grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.pricing-grid-3 .ticks { align-content: start; }
+@media (min-width: 1240px) { .pricing-grid-3 { margin-inline: 0; } }
+
+/* Worked example: where the week goes */
+.time-table {
+  max-width: 980px; margin-inline: auto; padding: clamp(18px, 3vw, 30px);
+  border: 1px solid var(--border); border-radius: var(--radius-lg);
+  background: var(--surface-grad); box-shadow: var(--shadow-card);
+  overflow-x: auto;
+}
+.time-table table { width: 100%; border-collapse: collapse; font-size: .93rem; min-width: 640px; }
+.time-table caption { text-align: left; font-weight: 650; color: var(--brand-soft); padding-bottom: .9rem; font-size: .85rem; letter-spacing: .04em; text-transform: uppercase; }
+.time-table th, .time-table td { text-align: left; padding: .8rem .7rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+.time-table thead th { color: var(--muted); font-weight: 650; font-size: .8rem; letter-spacing: .03em; }
+.time-table tbody th { font-weight: 600; }
+.time-table td:nth-child(3) { white-space: nowrap; color: var(--accent); font-weight: 650; }
+.time-table td:last-child { color: var(--muted); }
+.time-table tfoot th, .time-table tfoot td { border-bottom: 0; font-weight: 700; color: var(--text); }
+.time-table tfoot td:last-child { color: var(--accent); }
+.time-note { margin: 1rem 0 0; color: var(--muted); font-size: .88rem; }
+.time-source { margin: .5rem 0 0; color: var(--muted); font-size: .78rem; opacity: .85; }
+
+/* How each automation works, step by step */
+.flow-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+.flow {
+  padding: 28px; border: 1px solid var(--border); border-radius: var(--radius-lg);
+  background: var(--surface-grad); box-shadow: var(--shadow-card);
+}
+.flow h3 { margin-bottom: 1.1rem; }
+.flow-steps { counter-reset: flow; display: grid; gap: .8rem; }
+.flow-steps li { counter-increment: flow; position: relative; padding-left: 2.3rem; color: var(--muted); font-size: .94rem; }
+.flow-steps li::before {
+  content: counter(flow); position: absolute; left: 0; top: -.05rem;
+  display: grid; place-items: center; width: 1.6rem; height: 1.6rem; border-radius: 50%;
+  font-size: .78rem; font-weight: 800; color: var(--brand-soft);
+  background: color-mix(in srgb, var(--brand) 16%, transparent);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--brand) 30%, transparent);
+}
+.flow-saves { margin: 1.2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--border); font-size: .9rem; color: var(--muted); }
+.flow-saves strong { color: var(--accent); }
+.flow-grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 980px) { .flow-grid-3 { grid-template-columns: 1fr; max-width: 620px; margin-inline: auto; } }
+.flow-own { text-align: center; color: var(--muted); margin: 28px auto 0; max-width: 60ch; font-size: .95rem; }
+
+/* Revenue & time calculator */
+.calc {
+  display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: clamp(20px, 3vw, 34px);
+  max-width: 1060px; margin-inline: auto;
+}
+.calc > *, .calc-inputs > *, .calc-group .field { min-width: 0; }
+.calc-inputs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.calc-group {
+  margin: 0; padding: 20px 20px 4px; min-width: 0;
+  border: 1px solid var(--border); border-radius: var(--radius-lg);
+  background: var(--surface-grad); box-shadow: var(--shadow-card);
+}
+.calc-group legend { padding: 0 .4rem; font-size: .78rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--brand-soft); }
+.calc-group .field label { font-weight: 550; color: var(--muted); font-size: .84rem; line-height: 1.35; }
+.calc-results {
+  align-self: start; position: sticky; top: 96px;
+  padding: clamp(22px, 3vw, 32px); border-radius: var(--radius-lg);
+  border: 1.5px solid transparent;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--brand) 7%, var(--surface-hi)), var(--surface)) padding-box,
+    linear-gradient(165deg, var(--brand-soft), var(--brand) 40%, color-mix(in srgb, var(--accent) 80%, var(--brand)) 100%) border-box;
+  box-shadow: 0 30px 70px -32px color-mix(in srgb, var(--brand) 70%, transparent), var(--shadow-card);
+}
+.calc-label { margin: 0; font-size: .8rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--brand-soft); }
+.calc-big {
+  margin: .4rem 0 .3rem; font-family: var(--font-display); font-variation-settings: "wdth" 92;
+  font-size: clamp(2.4rem, 4vw, 3.2rem); font-weight: 700; letter-spacing: -.045em; line-height: 1; color: var(--accent);
+}
+.calc-big small { font-size: .4em; color: var(--muted); font-weight: 600; letter-spacing: 0; margin-left: .15em; }
+.calc-sub { color: var(--muted); font-size: .93rem; margin-bottom: 1.1rem; }
+.calc-sub span { color: var(--text); font-weight: 650; }
+.calc-lines { display: grid; gap: .55rem; padding: 1rem 0; margin-bottom: 1rem; border-block: 1px solid var(--border); font-size: .92rem; }
+.calc-lines li { display: flex; justify-content: space-between; gap: 1rem; color: var(--muted); }
+.calc-lines strong { color: var(--text); white-space: nowrap; }
+.calc-payback { font-size: .92rem; font-weight: 600; color: var(--text); }
+.calc-results .btn { white-space: normal; text-align: center; padding-inline: 1rem; }
+.calc-disclaimer { margin: 1rem 0 0; font-size: .78rem; color: var(--muted); line-height: 1.5; }
+input[type="number"] { -moz-appearance: textfield; }
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button { opacity: .5; }
+
+@media (max-width: 980px) {
+  .calc { grid-template-columns: minmax(0, 1fr); }
+  .calc-results { position: static; }
+  .pricing-grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 760px) {
+  .flow-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 620px) {
+  .calc-inputs, .pricing-grid-3 { grid-template-columns: minmax(0, 1fr); }
+  .time-table { padding: 16px; }
+}
 
 /* ---------- Scroll reveal ---------- */
 /* Scoped to .js so the page is fully visible if scripting is unavailable */
