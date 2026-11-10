@@ -20,50 +20,56 @@
   [data-page="consulting"] .calc { grid-template-columns: minmax(0, 1fr) minmax(0, var(--maxw-card)); gap: var(--gap-lg); }
   [data-page="consulting"] .calc .receipt { position: sticky; top: calc(var(--header-h) + var(--s-5)); }
 }
-/* Without scripts the worksheet cannot recalculate: a note says so, and is gone when scripts run */
+
+/* Without scripts the worksheet cannot recalculate: a note says so */
 [data-page="consulting"] .calc-nojs { grid-column: 1 / -1; }
 .js [data-page="consulting"] .calc-nojs { display: none; }
-/* On a phone the worksheet is one line per number: the question on the left, the box on the right.
-   The outer panel is dropped there, so the receipt is the only box and nothing is nested in a narrow column. */
+/* Phone: one line per number, question left, box right. The panel is dropped, so the receipt is the only box */
 @media (max-width: 599.98px) {
   [data-page="consulting"] .calc.panel { --num: 8rem; padding: 0; border: 0; border-radius: 0; background: none; box-shadow: none; }
   [data-page="consulting"] .calc-group .field { grid-template-columns: minmax(0, 1fr) var(--num); align-items: center; gap: var(--s-3); }
   [data-page="consulting"] .calc-group input { padding-inline: var(--s-3); }
+  [data-page="consulting"] .field-unit input { padding-inline: var(--s-2); }
 }
-
-/* SHARED-CANDIDATE: a box with a unit takes its focus ring around the whole box, so the unit does not cut the ring */
+/* SHARED-CANDIDATE: the focus ring goes round the whole box, so the unit does not cut it */
 [data-page="consulting"] .field-unit:focus-within { outline: var(--focus-w) solid var(--focus); outline-offset: var(--s-0); border-radius: var(--r-sm); }
 [data-page="consulting"] .field-unit input:focus-visible { outline: none; }
-/* On a phone a box with a unit still holds six figures */
-@media (max-width: 599.98px) { [data-page="consulting"] .field-unit input { padding-inline: var(--s-2); } }
-/* From 600px each group is one ruled line of the worksheet: its two numbers side by side, their boxes level */
+/* From 600px each group is one ruled row: two numbers side by side, boxes level */
 @media (min-width: 600px) {
   [data-page="consulting"] .calc-inputs { grid-template-columns: minmax(0, 1fr); }
   [data-page="consulting"] .calc-group { --pair: 11rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(var(--pair), 1fr)); gap: var(--s-4) var(--gap); }
   [data-page="consulting"] .calc-group .field { grid-template-rows: 1fr auto; margin-bottom: 0; }
 }
+/* 980 to 1099px is too narrow for two columns here: the worksheet and the week stay stacked */
+@media (min-width: 980px) and (max-width: 1099.98px) {
+  [data-page="consulting"] :is(.calc, .week) { grid-template-columns: minmax(0, 1fr); }
+  [data-page="consulting"] .calc .receipt { position: static; }
+}
 
-/* ---------- The example week: the time sheet first; from 980px the figure stands on the left ---------- */
-@media (min-width: 980px) { [data-page="consulting"] .week > .bigfig { order: -1; } }
-/* The bars are drawn once, when the sheet is seen (on screen only: a printed sheet always has them) */
+/* ---------- The example week: from 1100px the figure stands left of the sheet ---------- */
+@media (min-width: 1100px) { [data-page="consulting"] .week > .bigfig { order: -1; } }
+/* SHARED-CANDIDATE: on a narrow phone the total wraps instead of running into "Total" */
+@media (max-width: 759.98px) {
+  [data-page="consulting"] .ledger tfoot tr { grid-template-columns: auto minmax(0, 1fr); }
+  [data-page="consulting"] .ledger tfoot .num { white-space: normal; text-align: right; }
+}
+/* The bars are drawn once, when the sheet is seen (a printed sheet always has them) */
 @media screen {
   .js [data-page="consulting"] .sheet .ledger-bar span { transform-origin: 0 50%; transition: transform var(--t-slow) var(--ease) var(--t); }
   .js [data-page="consulting"] .sheet:not(.visible) .ledger-bar span { transform: scaleX(0); }
 }
 
-/* ---------- What each automation does: name, price and what it saves | the mock | the numbered steps ---------- */
-[data-page="consulting"] .auto { --phone-w: 18rem; --mock: 20rem; --name: 9rem; display: grid; gap: var(--s-3) var(--gap-lg); }
+/* ---------- What each automation does: name and price | the mock | the numbered steps ---------- */
+[data-page="consulting"] .auto { --phone-w: 18rem; --mock: 20rem; --name: 9rem; --slip: 17rem; display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--s-3) var(--gap-lg); }
 [data-page="consulting"] .auto + .auto { margin-top: var(--s-5); padding-top: var(--s-4); border-top: var(--edge); }
-/* The price tag stays beside the name; a long name takes a second line */
 [data-page="consulting"] .auto-head { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-3) var(--s-4); }
 [data-page="consulting"] .auto-head h3 { flex: 1 1 var(--name); }
 [data-page="consulting"] .auto-head .tag { flex: none; }
 [data-page="consulting"] .auto-saves { max-width: var(--measure); margin: 0; font-size: var(--fs-sm); line-height: 1.5; }
-[data-page="consulting"] .auto-own p { max-width: var(--measure); margin: 0; font-size: var(--fs-lede); line-height: 1.52; }
 [data-page="consulting"] .auto .fig { gap: var(--s-4); }
 [data-page="consulting"] .auto :is(.cal, .leads) { width: min(100%, var(--mock)); }
-[data-page="consulting"] .notices { display: grid; gap: var(--s-2); justify-items: center; width: 100%; }
-/* SHARED-CANDIDATE: a figure marker on a thread note (the missed-call pill) pins to its corner, as it does on a bubble */
+[data-page="consulting"] .notices { display: grid; gap: var(--s-2); width: min(100%, var(--slip)); }
+/* SHARED-CANDIDATE: a marker on a thread note pins to its corner, as on a bubble */
 [data-page="consulting"] .thread-note { position: relative; }
 @media (min-width: 600px) { [data-page="consulting"] .auto-head h3 { flex: none; } }
 @media (min-width: 760px) {
@@ -81,20 +87,22 @@
 /* ---------- Four steps, each with its prices: a step list that holds price-list rows ---------- */
 [data-page="consulting"] .path > li > div { display: grid; gap: var(--s-3); justify-items: start; }
 [data-page="consulting"] .path > li > div > p { margin: 0; }
-/* A step's name is one size, with a price beside it or without */
 [data-page="consulting"] .path h3 { font-size: var(--fs-h3); }
 [data-page="consulting"] .path .pl-row, [data-page="consulting"] .path .pricelist { width: 100%; }
 [data-page="consulting"] .path :is(p, .ticks) { font-size: var(--fs-sm); line-height: 1.5; }
 [data-page="consulting"] .path .ticks { color: var(--ink); }
 [data-page="consulting"] .path-more { grid-column: 2; margin-top: var(--s-4); }
-/* A price with nothing under it: the automations are shown, step by step, further up the page */
-[data-page="consulting"] .setups > li:not(:first-child) { padding-block: var(--s-3); }
-/* On a phone the numeral shares a line with the step's name, and everything under it takes the full width */
+/* A list that ends a step leaves the line to the step divider */
+[data-page="consulting"] .path-more:last-child > li { border-bottom: 0; }
+/* A price with nothing under it: those automations are shown further up the page */
+[data-page="consulting"] .setups > li:nth-child(n+2):nth-last-child(n+2) { padding-block: var(--s-3); }
+/* Phone: the numeral shares a line with the step's name; everything under it takes the full width */
 @media (max-width: 599.98px) {
   [data-page="consulting"] .path > li { grid-template-columns: auto minmax(0, 1fr); gap: var(--s-3); }
   [data-page="consulting"] .path > li > div { display: contents; }
   [data-page="consulting"] .path > li > div > :not(:first-child), [data-page="consulting"] .path-more { grid-column: 1 / -1; margin-top: 0; }
   [data-page="consulting"] .path .ticks { gap: var(--s-2); }
+  [data-page="consulting"] .path .more-link { justify-self: start; }
 }
 /* The two monthly plans side by side where there is room, their lines level where the browser can */
 @media (min-width: 760px) {
@@ -104,11 +112,15 @@
   }
 }
 
-/* ---------- The bundle: the receipt stands in the middle of its half, level with the words ---------- */
+/* ---------- The bundle: words, receipt, then the button. From 980px the button sits under the words ---------- */
 [data-page="consulting"] #bundle { align-items: center; }
 [data-page="consulting"] #bundle .receipt { justify-self: center; }
-/* On a phone the button fills the line, and the tilted receipt keeps clear of the panel's edge */
-@media (max-width: 599.98px) {
-  [data-page="consulting"] #bundle .btn { justify-self: stretch; }
-  [data-page="consulting"] #bundle .receipt { margin-bottom: var(--s-3); }
+/* Phone: the tilted receipt keeps its corners inside the column */
+@media (max-width: 599.98px) { [data-page="consulting"] #bundle .receipt { width: calc(100% - var(--s-4)); } }
+@media (min-width: 600px) { [data-page="consulting"] #bundle > .btn { justify-self: center; } }
+@media (min-width: 980px) {
+  [data-page="consulting"] #bundle { row-gap: var(--s-5); }
+  [data-page="consulting"] #bundle .stack { align-self: end; }
+  [data-page="consulting"] #bundle .receipt { grid-area: 1 / 2 / 3 / 3; }
+  [data-page="consulting"] #bundle > .btn { align-self: start; justify-self: start; }
 }

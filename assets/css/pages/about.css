@@ -1,52 +1,61 @@
-/* About page only: a letter from the owner. The headline is the greeting, the business card says who it is from,
-   and the rest is type and rules. Every rule is scoped with [data-page="about"]. */
+/* About page only: a letter from the owner. The headline greets, the card says who it is from. */
+[data-page="about"] .lede,[data-page="about"] .terms p{text-wrap:pretty}
+
+/* Arriving: the name is underlined and the card is put down, once */
+[data-page="about"] .mark::after{transform-origin:0;animation:about-sign var(--t-slow) var(--ease) var(--t-slow) both}
+[data-page="about"] .bizcard{animation:about-card var(--t-slow) var(--ease) var(--t-fast) both}
+@keyframes about-sign{from{transform:scaleX(0)}}
+@keyframes about-card{from{opacity:0;transform:translateY(var(--s-4)) rotate(-4deg)}}
 
 /* The letter's opening paragraph, in the heading face */
-[data-page="about"] .opening { max-width: 24em; margin: 0; color: var(--ink); font-size: var(--fs-h3); font-weight: 420; line-height: 1.36; letter-spacing: -.01em; text-wrap: pretty; }
+[data-page="about"] .opening{max-width:24em;margin:0;color:var(--ink);font-size:var(--fs-h3);font-weight:420;line-height:1.36;letter-spacing:-.01em;text-wrap:pretty}
 /* SHARED-CANDIDATE: a heading that opens a .prose block has no gap above it */
-[data-page="about"] .prose > :first-child { margin-top: 0; }
+[data-page="about"] .prose>:first-child{margin-top:0}
+/* SHARED-CANDIDATE: the card's tagline stays on one line on a phone */
+[data-page="about"] .bizcard-top span{letter-spacing:.03em}
 
-/* Under the letter, below a rule: the work beside the towns */
-[data-page="about"] .notes { padding-top: var(--stack); border-top: var(--edge); }
-[data-page="about"] .notes p:last-child { margin-bottom: 0; }
+/* Under a rule: the work beside the towns */
+[data-page="about"] .notes{padding-top:var(--stack);border-top:var(--edge)}
+[data-page="about"] .notes p:last-child{margin-bottom:0}
 
-/* The three projects: a ruled list, one link a row. The name is underlined in blue because the row is pressable */
-[data-page="about"] .projects { list-style: none; margin-top: var(--s-4); border-top: var(--frame); }
-[data-page="about"] .projects a { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; gap: var(--s-1) var(--s-3); min-height: var(--btn-h); padding: var(--s-3) 0; border-bottom: var(--edge); color: var(--ink); text-decoration: none; }
-[data-page="about"] .project-name { text-decoration: underline; text-decoration-color: var(--blue); text-decoration-thickness: .08em; text-underline-offset: .25em; }
-[data-page="about"] .project-kind { grid-area: 2 / 1 / auto / -1; color: var(--ink-2); font-size: var(--fs-sm); line-height: 1.45; }
-[data-page="about"] .projects .ico { grid-area: 1 / 2; align-self: center; color: var(--blue); transition: var(--move); }
-[data-page="about"] .projects .dots { display: none; }
-[data-page="about"] .projects a:active .project-name { color: var(--blue-deep); }
+/* The three projects: one link a row. Blue underline = pressable */
+[data-page="about"] .projects{list-style:none;margin-top:var(--s-4);border-top:var(--frame)}
+[data-page="about"] .projects a{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:baseline;gap:var(--s-1) var(--s-3);min-height:var(--btn-h);padding:var(--s-3) 0;border-bottom:var(--edge);color:var(--ink);text-decoration:none}
+[data-page="about"] .project-name{text-decoration:underline;text-decoration-color:var(--blue);text-underline-offset:.25em}
+[data-page="about"] .project-kind{grid-area:2/1/auto/-1;color:var(--ink-2);font-size:var(--fs-sm);line-height:1.45}
+[data-page="about"] .projects .ico{grid-area:1/2;align-self:center;color:var(--blue);transition:var(--move)}
+[data-page="about"] .projects a:active .project-name{color:var(--blue-deep)}
 
-/* The towns: a plain two-column list. Four have a page of their own */
-[data-page="about"] .towns { list-style: none; display: grid; grid-template-rows: repeat(4, auto); grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); column-gap: var(--gap); margin-top: var(--s-4); border-top: var(--frame); }
-[data-page="about"] .towns li { display: flex; align-items: center; min-height: var(--tap); border-bottom: var(--seam); color: var(--ink); font-weight: 600; }
-[data-page="about"] .towns a { flex: 1; display: flex; align-items: center; min-height: var(--tap); }
+/* The towns: a plain two-column list */
+[data-page="about"] .towns{list-style:none;display:grid;grid-template-rows:repeat(4,auto);grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);align-content:start;column-gap:var(--gap);margin-top:var(--s-4);border-top:var(--frame)}
+[data-page="about"] .towns li{display:flex;align-items:center;min-height:var(--tap);border-bottom:var(--seam);color:var(--ink);font-weight:600}
+[data-page="about"] .towns a{flex:1;display:flex;align-items:center;min-height:var(--tap)}
 
-@media (min-width: 600px) and (max-width: 979.98px) {
-  /* The card keeps the page's left edge until it can sit beside the headline */
-  [data-page="about"] .page-head-aside { justify-self: start; }
+@media (min-width:600px) and (max-width:979.98px){
+/* Until it sits beside the headline, the card keeps the left edge */
+[data-page="about"] .page-head-aside{justify-self:start}
 }
-@media (min-width: 760px) {
-  [data-page="about"] .notes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  /* How I work: one ruled row a term, its name beside its terms */
-  [data-page="about"] .terms { max-width: none; }
-  [data-page="about"] .terms > li { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); align-items: baseline; gap: var(--gap-lg); padding-block: var(--s-5); }
-  [data-page="about"] .terms .pl-name { font-size: var(--fs-h3); }
-  [data-page="about"] .terms p { margin: 0; font-size: var(--fs-body); line-height: 1.6; }
+@media (min-width:760px){
+[data-page="about"] .notes{grid-template-columns:repeat(2,minmax(0,1fr))}
+/* How I work: one ruled row a term */
+[data-page="about"] .terms{max-width:none}
+[data-page="about"] .terms>li{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);align-items:baseline;gap:var(--gap-lg);padding-block:var(--s-5)}
+[data-page="about"] .terms .pl-name{font-size:var(--fs-h3)}
+[data-page="about"] .terms p{margin:0;font-size:var(--fs-body);line-height:1.6}
 }
-@media (min-width: 980px) {
-  /* Work is the wide column here, so this row is the split turned round */
-  [data-page="about"] .notes { grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); }
+@media (min-width:980px){
+/* One axis: letter, notes and terms all split in half */
+[data-page="about"] .terms>li{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
-/* Wide screens: each project is one line, with a leader */
-@media (min-width: 1280px) {
-  [data-page="about"] .projects a { grid-template-columns: auto minmax(var(--s-5), 1fr) auto auto; }
-  [data-page="about"] .projects .dots { display: block; }
-  [data-page="about"] .project-kind, [data-page="about"] .projects .ico { grid-area: auto; }
+/* Both lists start on one line */
+@supports (grid-template-rows:subgrid){
+@media (min-width:760px){
+[data-page="about"] .notes{row-gap:0}
+[data-page="about"] .notes>div{display:grid;grid-row:span 4;grid-template-rows:subgrid}
+[data-page="about"] .notes ul{margin-top:0}
 }
-@media (hover: hover) {
-  [data-page="about"] .projects a:hover .project-name { color: var(--blue); }
-  [data-page="about"] .projects a:hover .ico { transform: translate(var(--s-0), calc(-1 * var(--s-0))); }
+}
+@media (hover: hover){
+[data-page="about"] .projects a:hover .project-name{color:var(--blue)}
+[data-page="about"] .projects a:hover .ico{transform:translate(var(--s-0),calc(-1*var(--s-0)))}
 }

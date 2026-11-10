@@ -1,7 +1,5 @@
-/* Not-found page only. Every rule is scoped with [data-page="notfound"].
-   The block is the canonical one from DESIGN.md ("The 404 block"), plus a call link and a short list of pages.
-   Phone: one centred column, the scene small enough that the buttons are in the first screen.
-   From 760px: the scene on the left, the words beside it. */
+/* Not-found page only. The canonical 404 block from DESIGN.md, plus a call link and a short list of pages.
+   Phone: one centred column, the scene small so the buttons are in the first screen. From 760px: scene left, words right. */
 [data-page="notfound"] .nf { --scene: 11.5rem; display: grid; justify-items: center; gap: var(--s-4); padding-block: var(--stack); text-align: center; }
 [data-page="notfound"] .nf > * { margin: 0; }
 [data-page="notfound"] .nf-code { font-size: var(--fs-figure); line-height: .9; letter-spacing: -.04em; color: var(--brick); }
@@ -20,7 +18,7 @@
 }
 @media (min-width: 760px) {
   [data-page="notfound"] .nf { --scene: clamp(15rem, 30vw, 22rem); grid-template-columns: auto minmax(0, 38rem); justify-content: center; justify-items: start; column-gap: var(--gap-lg); padding-bottom: var(--sec); text-align: left; }
-  [data-page="notfound"] .nf .scene { grid-row: 1 / span 5; align-self: center; }
+  [data-page="notfound"] .nf .scene { grid-row: 1 / span 5; align-self: center; width: var(--scene); }
   [data-page="notfound"] .nf-code { margin-left: -.04em; }
   [data-page="notfound"] .nf .btn-row, [data-page="notfound"] .nf-more ul { justify-content: flex-start; }
 }

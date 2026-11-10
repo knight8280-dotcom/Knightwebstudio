@@ -5,23 +5,32 @@
 [data-page="work"] .case { row-gap: var(--s-5); padding-block: 0; border-top: 0; }
 [data-page="work"] .case-copy { text-wrap: pretty; }
 [data-page="work"] .case .eyebrow { text-wrap: balance; }
-[data-page="work"] .case .ticks { gap: var(--s-2); color: var(--ink); font-size: var(--fs-sm); }
-/* The link is already a 44px target; the row needs no padding of its own */
-[data-page="work"] .case-facts div:last-child { padding-block: 0; }
+/* "What we built": the label sits close to its list */
+[data-page="work"] .case .label { margin: var(--s-5) 0 0; }
+[data-page="work"] .case .ticks { gap: var(--s-2); margin-top: var(--s-3); color: var(--ink); font-size: var(--fs-sm); }
+[data-page="work"] .case .fine { margin: var(--s-3) 0 0; }
+/* One fact row: the status, then the link to the live site. The link is already a 44px target, so the row needs no padding */
+[data-page="work"] .case-facts div { padding-block: 0; }
+[data-page="work"] .case-facts a { gap: var(--s-2); font-weight: 700; overflow-wrap: anywhere; }
 
 /* SHARED-CANDIDATE: a browser frame that is a link to the live site (the print already is one).
    It keeps the paper well on a sand band, where the sand's darker well drops the address under AA (4.1:1) */
 [data-page="work"] a.browser { --well: var(--paper-2); display: block; color: var(--ink-3); text-decoration: none; transition: var(--move); }
 [data-page="work"] .browser-bar .ico { margin-left: auto; }
+/* With enlarged text the address wraps inside its pill and the arrow stays in the frame */
+[data-page="work"] .browser-bar span { overflow-wrap: anywhere; }
 
 /* Tablet: the write-up sits under the picture in two columns, the name beside what was built */
 @media (min-width: 760px) and (max-width: 979.98px) {
+  [data-page="work"] .case { row-gap: var(--s-6); }
   [data-page="work"] .case-copy { columns: 2; column-gap: var(--gap-lg); }
   [data-page="work"] .case-copy > * { break-inside: avoid; }
-  [data-page="work"] .case-copy .ticks { break-before: column; margin-top: 0; }
+  [data-page="work"] .case-copy .label { break-before: column; margin-top: 0; }
 }
-/* SHARED-CANDIDATE: a flipped row swaps its tracks too, so the picture is the same size in every row */
+/* The write-up starts on the frame's top edge.
+   SHARED-CANDIDATE: a flipped row swaps its tracks too, so the picture is the same size in every row */
 @media (min-width: 980px) {
+  [data-page="work"] .case { align-items: start; }
   [data-page="work"] .case-flip { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); }
 }
 @media (hover: hover) {
