@@ -1003,18 +1003,24 @@ input[type="number"]::-webkit-inner-spin-button { opacity: .5; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .footer-brand { grid-column: 1 / -1; }
 
-  /* Full-screen overlay menu */
+  /* Full-screen overlay menu. It starts below the 72px header row, so links never
+     slide under the logo and close button, and it scrolls when a short screen
+     can't fit every link plus the footer button. */
   .nav {
-    position: fixed; inset: 0; margin: 0; z-index: 90;
+    position: fixed; inset: 72px 0 0; margin: 0; z-index: 90;
     background: var(--bg);
+    overflow-y: auto; overscroll-behavior: contain;
     opacity: 0; visibility: hidden;
     transition: opacity .3s var(--ease), visibility .3s;
   }
   .nav.open { opacity: 1; visibility: visible; }
 
+  /* Top-aligned and min-height (not centered and fixed height): centered content
+     that overflows spills past the top edge, where it can't be scrolled to. */
   .nav-inner {
-    display: flex; flex-direction: column; justify-content: center;
-    height: 100%; padding: 96px 26px 34px; gap: 0;
+    display: flex; flex-direction: column; justify-content: flex-start;
+    min-height: 100%; gap: 0;
+    padding: 20px 26px calc(24px + env(safe-area-inset-bottom, 0px));
   }
   .nav-links { flex-direction: column; gap: 2px; }
   .nav-links li {
@@ -1023,11 +1029,18 @@ input[type="number"]::-webkit-inner-spin-button { opacity: .5; }
     transition: opacity .4s var(--ease), transform .4s var(--ease);
   }
   .nav.open .nav-links li { opacity: 1; transform: none; }
+  /* Sized to the screen's height as well as its width, so all eight links and the
+     footer button fit on a typical phone (about 250px goes to the header, padding
+     and footer, and each link takes about 13 of its own font-size heights).
+     44px min-height keeps every link a comfortable tap target. */
   .nav-links a {
     font-family: var(--font-display);
-    font-size: clamp(2rem, 11vw, 2.9rem); font-weight: 600;
+    font-size: clamp(1.5rem, min(10vw, calc((100vh - 250px) / 13)), 2.75rem);
+    font-size: clamp(1.5rem, min(10vw, calc((100dvh - 250px) / 13)), 2.75rem);
+    font-weight: 600; line-height: 1.15;
     letter-spacing: -.03em; color: var(--text);
-    padding: .28em 0; border-radius: 0;
+    display: flex; align-items: center; min-height: 44px;
+    padding: .22em 0; border-radius: 0;
   }
   .nav-indicator { display: none; }
 
