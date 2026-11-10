@@ -35,6 +35,7 @@
 <link rel="preload" href="/assets/fonts/fraunces-soft.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/figtree.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/styles.css">
+<link rel="stylesheet" href="/assets/css/pages/checkout-success.css">
 
 </head>
 
@@ -110,45 +111,66 @@
 
 <main id="main">
 
-  <section class="page-head-wrap">
-    <div class="hero-art"></div>
+  <section class="page-head">
     <div class="container">
-      <header class="page-head">
-        <p class="eyebrow">Checkout</p>
-        <h1 id="success-title">Thank you</h1>
-        <p class="section-sub" id="success-sub">If your payment went through, Stripe will email your receipt within a few minutes.</p>
-      </header>
+      <p class="eyebrow">Checkout</p>
+      <h1 id="success-title">Thank you</h1>
+      <p class="lede" id="success-sub">If your payment went through, Stripe will email your receipt within a few minutes.</p>
     </div>
   </section>
 
-  <section class="section section-alt" id="checkout-success">
-    <div class="container">
-      <div class="success-panel reveal">
-        <p class="success-status" id="success-status" role="status" hidden>Confirming your payment with Stripe…</p>
-        <div class="success-plan" id="success-plan" hidden>
-          <p class="success-plan-name" id="success-plan-name"></p>
-          <p class="success-plan-price" id="success-plan-price"></p>
-        </div>
+  <section class="section section-first" id="checkout-success">
+    <div class="container split till">
+
+      <!-- The order slip. The script below fills in the two ids and shows it. -->
+      <div class="receipt on-paper till-side" id="success-plan" hidden>
+        <p class="receipt-head"><span>Your order</span><span>KnightWebstudio</span></p>
+        <p class="receipt-total"><span id="success-plan-name"></span><b id="success-plan-price"></b></p>
+      </div>
+
+      <p class="status till-side" id="success-status" role="status" hidden>Confirming your payment with Stripe…</p>
+
+      <div class="till-next">
         <div id="success-next">
-          <h2 class="success-next-title">What happens next</h2>
-          <ol class="success-steps" id="success-steps-project">
-            <li><strong>Book your kickoff call.</strong> Pick a 30-minute slot to go through your goals, content and timeline.</li>
-            <li><strong>Watch your inbox.</strong> We'll email you within one business day to confirm the details and let you know what we need from you.</li>
+          <h2 class="eyebrow">What happens next</h2>
+          <!-- The numerals are drawn by the page stylesheet from the list's own order. -->
+          <ol class="steps" id="success-steps-project">
+            <li>
+              <span class="steps-no" aria-hidden="true"></span>
+              <div><h3>Book your kickoff call.</h3>
+              <p>Pick a 30-minute slot to go through your goals, content and timeline.</p></div>
+            </li>
+            <li>
+              <span class="steps-no" aria-hidden="true"></span>
+              <div><h3>Watch your inbox.</h3>
+              <p>We'll email you within one business day to confirm the details and let you know what we need from you.</p></div>
+            </li>
           </ol>
-          <ol class="success-steps" id="success-steps-care" hidden>
-            <li><strong>Watch your inbox.</strong> We'll email you within one business day to introduce ourselves and collect anything we need to start looking after your site.</li>
-            <li><strong>Want to talk first?</strong> Book a call any time.</li>
+          <ol class="steps" id="success-steps-care" hidden>
+            <li>
+              <span class="steps-no" aria-hidden="true"></span>
+              <div><h3>Watch your inbox.</h3>
+              <p>We'll email you within one business day to introduce ourselves and collect anything we need to start looking after your site.</p></div>
+            </li>
+            <li>
+              <span class="steps-no" aria-hidden="true"></span>
+              <div><h3>Want to talk first?</h3>
+              <p>Book a call any time.</p></div>
+            </li>
           </ol>
         </div>
-        <div class="success-actions">
-          <a class="btn btn-primary" id="success-book" href="https://calendly.com/knightwebstudio1" data-booking>Schedule your kickoff call</a>
-          <a class="btn btn-primary" id="success-retry" href="/pricing/" hidden>Return to checkout</a>
-          <a class="btn btn-ghost" href="/">Back to the homepage</a>
+        <div class="btn-row">
+          <a class="btn btn-primary btn-lg" id="success-book" href="https://calendly.com/knightwebstudio1" data-booking>Schedule your kickoff call</a>
+          <a class="btn btn-primary btn-lg" id="success-retry" href="/pricing/" hidden>Return to checkout</a>
+          <a class="btn btn-lg" href="/">Back to the homepage</a>
         </div>
       </div>
-      <p class="checkout-fine">Questions about your payment? Email
-        <a href="mailto:knightwebstudio1@gmail.com">knightwebstudio1@gmail.com</a> or call
-        <a href="tel:+12252550837">(225) 255-0837</a> and we'll sort it out.</p>
+
+      <aside class="stack till-side">
+        <h2 class="h4">Questions about your payment?</h2>
+        <p>Email <a href="mailto:knightwebstudio1@gmail.com">knightwebstudio1@gmail.com</a> or call <a href="tel:+12252550837">(225) 255-0837</a> and we'll sort it out.</p>
+      </aside>
+
     </div>
   </section>
 

@@ -45,6 +45,7 @@
 <link rel="preload" href="/assets/fonts/fraunces-soft.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/figtree.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/styles.css">
+<link rel="stylesheet" href="/assets/css/pages/process.css">
 
 <script type="application/ld+json">
 {
@@ -420,51 +421,102 @@
 
 <main id="main">
 
-  <section class="page-head-wrap">
-    <div class="hero-art"></div>
+  <!-- ===================== PAGE HEAD (commercial form; this page has no prices of its own, so no price strip) ===================== -->
+  <section class="page-head">
     <div class="container">
-      <header class="page-head">
-        <div class="page-art"></div>
-        <p class="eyebrow">How it works</p>
-        <h1>Four steps, no surprises</h1>
-        <p class="section-sub">You'll always know what's happening, what's next, and what it costs.</p>
-      </header>
+      <p class="eyebrow">How it works</p>
+      <h1><span class="l">Four steps,</span> <span class="l"><span class="mark">no surprises</span></span></h1>
+      <p class="lede">You'll always know what's happening, what's next, and <a href="/pricing/">what it costs</a>.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary btn-lg" href="/contact/" data-booking>Book a free 30-minute call</a>
+      </div>
     </div>
   </section>
 
-  <section class="section" id="process">
+  <!-- ===================== THE JOB TICKET: one job, four stations =====================
+       Each station is a row of the ticket: the step, what happens, and its terms as a short list.
+       Every term here is also on the pricing page: change both together.
+       The ticket and its stamp are the page's one prop. The stamp repeats words from step 04
+       and lands once, when the end of the ticket scrolls into view. -->
+  <section class="section section-first" id="process" aria-label="The four steps">
     <div class="container">
-
-      <ol class="steps">
-        <li class="step reveal">
-          <span class="step-num">01</span>
-          <h2 class="h3">Discovery call</h2>
-          <p>A free 30-minute call about your business, your customers and what the site needs to achieve. You leave with a plan whether or not you hire us.</p>
-        </li>
-        <li class="step reveal">
-          <span class="step-num">02</span>
-          <h2 class="h3">Proposal &amp; design</h2>
-          <p>A fixed quote and timeline, then design concepts for your key pages. We refine the design with you: one revision round on Starter, and up to three design rounds on Business and Commerce.</p>
-        </li>
-        <li class="step reveal">
-          <span class="step-num">03</span>
-          <h2 class="h3">Build &amp; review</h2>
-          <p>We build on a private staging link you can check any time, with weekly progress notes. On Business and Commerce, the finished site then gets a final round of tweaks before launch.</p>
-        </li>
-        <li class="step reveal">
-          <span class="step-num">04</span>
-          <h2 class="h3">Launch &amp; support</h2>
-          <p>We set up your domain (IONOS) and hosting (Netlify) in your name, plus analytics and redirects. After launch you get a walkthrough video and free support: 30 days on Starter, 90 days on Business, six months on Commerce.</p>
-        </li>
-      </ol>
+      <div class="ticket">
+        <p class="ticket-head" aria-hidden="true"><span>Job ticket</span><span>KnightWebstudio</span></p>
+        <ol class="steps">
+          <li>
+            <span class="steps-no" aria-hidden="true">01</span>
+            <div>
+              <h2 class="h3">Discovery call</h2>
+              <p>A call about your business, your customers and what the site needs to achieve. You leave with a plan whether or not you hire us.</p>
+              <dl class="terms">
+                <div><dt>Cost</dt><dd>Free</dd></div>
+                <div><dt>Length</dt><dd>30 minutes</dd></div>
+              </dl>
+            </div>
+          </li>
+          <li>
+            <span class="steps-no" aria-hidden="true">02</span>
+            <div>
+              <h2 class="h3">Proposal &amp; design</h2>
+              <p>A fixed quote and timeline, then design concepts for your key pages. We refine the design with you:</p>
+              <dl class="terms">
+                <div><dt>Starter</dt><dd>One revision round</dd></div>
+                <div><dt>Business</dt><dd>Up to three design rounds</dd></div>
+                <div><dt>Commerce</dt><dd>Up to three design rounds</dd></div>
+              </dl>
+            </div>
+          </li>
+          <li>
+            <span class="steps-no" aria-hidden="true">03</span>
+            <div>
+              <h2 class="h3">Build &amp; review</h2>
+              <p>We build on a private staging link you can check any time, with weekly progress notes. Then, before launch:</p>
+              <dl class="terms">
+                <div><dt>Business</dt><dd>A final round of tweaks</dd></div>
+                <div><dt>Commerce</dt><dd>A final round of tweaks</dd></div>
+              </dl>
+            </div>
+          </li>
+          <li>
+            <span class="steps-no" aria-hidden="true">04</span>
+            <div>
+              <h2 class="h3">Launch &amp; support</h2>
+              <p>We set up your domain (IONOS) and hosting (Netlify) in your name, plus analytics and redirects. After launch, a walkthrough video and free support:</p>
+              <dl class="terms">
+                <div><dt>Starter</dt><dd>30 days</dd></div>
+                <div><dt>Business</dt><dd>90 days</dd></div>
+                <div><dt>Commerce</dt><dd>Six months</dd></div>
+              </dl>
+            </div>
+          </li>
+        </ol>
+        <p class="stamp reveal" aria-hidden="true">In your name</p>
+      </div>
     </div>
   </section>
 
-  <section class="cta-band">
+  <!-- ===================== CLOSING CALL TO ACTION ===================== -->
+  <section class="cta-band on-blue">
     <div class="container cta-inner reveal">
-      <h2>Still deciding? Book the free call.</h2>
-      <p>Thirty minutes, no pitch. You'll get a clear view of what your site needs and what it should cost — even if you build it yourself.</p>
-      <a class="btn btn-light" href="/contact/" data-booking>Book a discovery call</a>
+      <div class="cta-copy">
+        <h2>Still deciding? Book the free call.</h2>
+        <p>Thirty minutes, no pitch. You'll get a clear view of what your website and your systems need, and what it should cost — even if you do it yourself.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary btn-lg" href="/contact/" data-booking>Book a discovery call</a>
+          <a class="btn btn-lg" href="/contact/">Send an enquiry</a>
+        </div>
+      </div>
+      <!-- Decorative: the same facts as the paragraph, drawn as an appointment card -->
+      <div class="appt on-paper" aria-hidden="true">
+        <p class="appt-head"><span>Appointment card</span><span>No. 01</span></p>
+        <p class="appt-title">Discovery call</p>
+        <dl class="appt-lines">
+          <div><dt>Cost</dt><dd>Free</dd></div>
+          <div><dt>Length</dt><dd>30 minutes</dd></div>
+          <div><dt>Sales pitch</dt><dd>None</dd></div>
+          <div><dt>Where</dt><dd>A call, or in person</dd></div>
+        </dl>
+      </div>
     </div>
   </section>
 

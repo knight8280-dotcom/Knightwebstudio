@@ -1,3 +1,72 @@
-/* Pricing page only. Every rule is scoped with [data-page="pricing"].
-   The page is built from shared parts; this is all it adds. */
-[data-page="pricing"] .page-head-aside { --seal: 10.5rem; rotate: 9deg; }
+/* Pricing page only: its layout, and the phone view of its own table. */
+
+/* Page head: the "On this page" list is the object beside the headline, the seal on its corner */
+[data-page="pricing"] .page-head-aside { position: relative; justify-items: stretch; justify-self: stretch; width: auto; }
+[data-page="pricing"] .toc.card { padding-bottom: var(--s-2); }
+[data-page="pricing"] .toc ol { border-top: 0; }
+[data-page="pricing"] .toc li:last-child a { border-bottom: 0; }
+[data-page="pricing"] .toc-seal { --seal: 7.5rem; position: absolute; right: calc(-1 * var(--s-5)); top: calc(-1 * var(--s-7)); rotate: 9deg; }
+[data-page="pricing"] #packages { max-width: none; }
+@media (min-width: 980px) {
+  /* In the narrow column each price sits under its name, as on a phone */
+  [data-page="pricing"] .toc .dots { display: none; }
+  [data-page="pricing"] .toc-price { width: 100%; }
+}
+
+/* SHARED-CANDIDATE: the spec table below 1100px. One tight card per package, each laid out the same:
+   name and price on one line, a plain sentence, then the labelled facts. */
+@media (max-width: 1099.98px) {
+  [data-page="pricing"] .spec tr { padding-bottom: var(--s-3); }
+  [data-page="pricing"] .spec .spec-name { grid-area: 1 / 1; align-self: start; justify-content: flex-start; padding-top: calc(var(--fs-price) * .44); }
+  [data-page="pricing"] .spec .spec-price { grid-area: 1 / 1; padding: 0 0 var(--s-3); text-align: right; }
+  [data-page="pricing"] .spec-price small { text-align: left; text-wrap: balance; }
+  [data-page="pricing"] .spec td { --lab: 5.75rem; padding-block: var(--s-1); border: 0; }
+  [data-page="pricing"] .spec td:nth-child(3) { padding: 0 0 var(--s-3); font-size: var(--fs-md); }
+  [data-page="pricing"] .spec td:nth-child(3) .cell-label { display: none; }
+  [data-page="pricing"] .spec td:nth-child(4) { padding-top: var(--s-3); border-top: var(--dash); }
+  [data-page="pricing"] .spec .spec-act { padding-top: var(--s-3); }
+}
+/* SHARED-CANDIDATE: "Most popular" is a tab on the top edge of its card or column */
+[data-page="pricing"] .spec tr { position: relative; }
+[data-page="pricing"] .spec .popular { position: absolute; left: var(--tab-x, var(--pad)); top: var(--tab-y, 0); translate: 0 -50%; }
+
+/* SHARED-CANDIDATE: the spec table from 1100px. Buttons line up on one line; Business is a raised sheet. */
+[data-page="pricing"] .spec .spec-act { align-content: start; }
+@media (min-width: 1100px) and (max-width: 1279.98px) {
+  [data-page="pricing"] .spec .spec-act { padding-inline: var(--s-2); }
+  [data-page="pricing"] .spec-act .btn { font-size: var(--fs-sm); }
+  [data-page="pricing"] .spec-act .btn-block { padding-inline: var(--s-2); }
+}
+@supports (grid-template-rows: subgrid) {
+  @media (min-width: 1100px) {
+    [data-page="pricing"] .spec .spec-act { padding-bottom: var(--s-3); }
+    [data-page="pricing"] .spec .is-popular { --tab-x: var(--s-4); --tab-y: calc(-1 * var(--s-4)); z-index: 0; border-left: 0; background: none; box-shadow: none; }
+    [data-page="pricing"] .spec .is-popular + tr { border-left: 0; }
+    [data-page="pricing"] .spec .is-popular::before { content: ""; position: absolute; inset: calc(-1 * var(--s-4)) 0; z-index: -1; border: var(--frame); border-radius: var(--r-md); background: var(--card); box-shadow: inset 0 var(--s-1) 0 var(--brick), var(--shadow-3); }
+  }
+}
+
+/* How you pay: on a phone only the plan is drawn */
+@media (max-width: 599.98px) { [data-page="pricing"] .payplan-std { display: none; } }
+[data-page="pricing"] .payplan.card { margin-top: var(--s-5); }
+/* SHARED-CANDIDATE: no space under a payment plan's last line */
+[data-page="pricing"] .payplan .fine { margin-bottom: 0; }
+
+/* Consulting: four groups in buying order; from 760px the two short lists share the top row */
+[data-page="pricing"] .price-groups { row-gap: var(--s-6); }
+@media (min-width: 760px) {
+  [data-page="pricing"] .price-groups { row-gap: var(--s-7); }
+  [data-page="pricing"] .price-groups > :nth-child(2) { grid-area: 2 / 1; }
+  [data-page="pricing"] .price-groups > :nth-child(3) { grid-area: 1 / 2; }
+}
+[data-page="pricing"] .section-head .btn-row { margin-top: var(--s-5); }
+/* SHARED-CANDIDATE: a more-link inside a sentence sits on the text line */
+[data-page="pricing"] .section-sub .more-link { display: inline; padding-block: 0; white-space: nowrap; }
+[data-page="pricing"] .bundle-ask { margin-top: var(--s-6); }
+
+/* Care plans: what every plan includes is the foot of the table */
+[data-page="pricing"] .card .ticks { justify-self: stretch; column-gap: var(--gap); }
+@media (min-width: 760px) { [data-page="pricing"] .card .ticks { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+/* SHARED-CANDIDATE: a table's button stays on one line; its column ends at the table's edge */
+[data-page="pricing"] .table td:last-child { padding-right: 0; }
+[data-page="pricing"] .table .btn { white-space: nowrap; }

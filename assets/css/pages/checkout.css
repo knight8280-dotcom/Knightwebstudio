@@ -1,0 +1,22 @@
+/* Checkout page only. Every rule is scoped with [data-page="checkout"].
+   The till: on a phone the order slip, the payment sheet, then help. From 980px the sheet
+   takes the wide column and the slip and help stand beside it. */
+[data-page="checkout"] .till { gap: var(--s-6) var(--gap-lg); }
+/* The script writes prices as long as "$1,000/month": one size that fits the slip at every width */
+[data-page="checkout"] .receipt-total b { font-size: calc(var(--fs-title) * 1.25); }
+/* The slip arrives once, when the script shows it */
+[data-page="checkout"] .receipt { margin-bottom: var(--s-2); animation: kws-slip var(--t-slow) var(--ease) both; }   /* the margin is its torn edge */
+@keyframes kws-slip { from { opacity: 0; transform: translateY(calc(-1 * var(--s-3))); } }
+
+[data-page="checkout"] .till-pay .label { margin-bottom: var(--s-4); }
+[data-page="checkout"] .till-pay .status { max-width: var(--measure); margin: 0; }
+[data-page="checkout"] .till-pay .status.error { padding-left: var(--s-4); border-left: var(--focus-w) solid var(--brick); font-size: var(--fs-body); font-weight: 600; line-height: 1.5; }
+/* With scripts off, the plain message in <noscript> stands in for "Loading" */
+@supports selector(:has(a)) { [data-page="checkout"] .till-pay:has(noscript > p) #checkout-status { display: none; } }
+[data-page="checkout"] .till-side .btn-row { justify-self: stretch; }
+
+@media (min-width: 980px) {
+  [data-page="checkout"] .till { grid-template: auto 1fr / minmax(0, 7fr) minmax(0, 5fr); }
+  [data-page="checkout"] .till-pay { grid-area: 1 / 1 / span 2; }
+  [data-page="checkout"] .till-side { grid-column: 2; }
+}

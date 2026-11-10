@@ -1,0 +1,22 @@
+/* Checkout success page only. Every rule is scoped with [data-page="checkout-success"].
+   Same till as /checkout/: the order slip first on a phone, beside the next steps from 980px. */
+/* The script writes titles as long as "Payment confirmed — thank you": one line on a desktop, two on a phone */
+[data-page="checkout-success"] .page-head h1 { max-width: none; }
+@media (max-width: 979.98px) { [data-page="checkout-success"] .page-head h1 { font-size: calc(var(--fs-h1) * .85); } }
+[data-page="checkout-success"] .till { gap: var(--s-6) var(--gap-lg); }
+[data-page="checkout-success"] .receipt-total b { font-size: calc(var(--fs-title) * 1.25); }
+[data-page="checkout-success"] .receipt { margin-bottom: var(--s-2); animation: kws-slip var(--t-slow) var(--ease) both; }   /* the margin is its torn edge */
+@keyframes kws-slip { from { opacity: 0; transform: translateY(calc(-1 * var(--s-3))); } }
+[data-page="checkout-success"] .status { margin: 0; }
+
+/* Step numerals come from the list's own order */
+[data-page="checkout-success"] .steps { counter-reset: step; }
+[data-page="checkout-success"] .steps-no::before { counter-increment: step; content: counter(step, decimal-leading-zero); }
+[data-page="checkout-success"] .till-next .eyebrow { margin: 0; }
+[data-page="checkout-success"] #success-next:not([hidden]) + .btn-row { margin-top: var(--s-5); }
+
+@media (min-width: 980px) {
+  [data-page="checkout-success"] .till { grid-template: auto auto 1fr / minmax(0, 7fr) minmax(0, 5fr); }
+  [data-page="checkout-success"] .till-next { grid-area: 1 / 1 / span 3; }
+  [data-page="checkout-success"] .till-side { grid-column: 2; }
+}

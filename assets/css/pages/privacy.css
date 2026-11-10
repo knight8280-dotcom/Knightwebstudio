@@ -1,0 +1,11 @@
+/* Privacy page only. Every rule is scoped with [data-page="privacy"]. The page is shared parts:
+   the reading head, the contents list beside the prose from 980px (.split-sticky).
+   SHARED-CANDIDATE: a contents list of names only is tighter and quieter than one with prices
+   (.toc-plain), and sets in two columns on a tablet. privacy.css and terms.css hold the same rules. */
+[data-page="privacy"] .toc a { min-height: var(--tap); padding-block: var(--s-2); font-size: var(--fs-sm); }
+@media (min-width: 600px) and (max-width: 979.98px) {
+  [data-page="privacy"] .toc ol { columns: 2; column-gap: var(--gap); }
+  [data-page="privacy"] .toc li { break-inside: avoid; }
+}
+/* The dateline sits on the first heading */
+[data-page="privacy"] .prose > .label + h2 { margin-top: var(--s-5); }

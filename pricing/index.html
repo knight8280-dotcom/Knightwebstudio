@@ -421,42 +421,38 @@
 
 <main id="main">
 
-  <!-- ===================== PAGE HEAD (split form: the seal sits beside it from 980px) ===================== -->
+  <!-- ===================== PAGE HEAD (split form). The object beside it is the page's own price list:
+       the "On this page" list, so every price on the page is on the first screen. ===================== -->
   <section class="page-head">
     <div class="container page-head-split">
       <div>
         <p class="eyebrow">Pricing</p>
         <h1><span class="l">Fixed prices,</span> <span class="l"><span class="mark">published</span> up front</span></h1>
-        <p class="lede">Every price here is fixed, for websites, consulting and automation alike. What you see is what you pay, confirmed in writing before any work begins.</p>
+        <p class="lede">Websites, consulting and automation: what you see is what you pay, confirmed in writing before any work begins.</p>
         <div class="btn-row">
           <a class="btn btn-primary btn-lg" href="/contact/" data-booking>Book a free 30-minute call</a>
-          <a class="btn btn-lg" href="/contact/">Send an enquiry</a>
         </div>
-        <a class="price-strip" href="#pricing">
-          <span class="price-strip-label">Websites</span>
-          <span class="price-strip-nums"><b>$1,000</b><b>$2,000</b><b>$4,000</b><b>$8,000</b></span>
-          <span class="price-strip-note">Four fixed packages</span>
-        </a>
       </div>
-      <div class="page-head-aside wide-only"><!-- art:seal --><svg class="seal" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><defs><path id="sl-arc" d="M60 60m-42 0a42 42 0 1 1 84 0a42 42 0 1 1-84 0"/></defs><circle cx="60" cy="60" r="58" fill="var(--card)"/><circle cx="60" cy="60" r="54.5" fill="none" stroke="var(--brick)" stroke-width="2"/><circle cx="60" cy="60" r="31" fill="none" stroke="var(--brick)" stroke-width="1"/><text font-size="7.6"><textPath href="#sl-arc" textLength="258" lengthAdjust="spacing">PUBLISHED UP FRONT · CONFIRMED IN WRITING ·</textPath></text><text class="seal-big" font-size="15.5" x="60" y="58" text-anchor="middle">Fixed</text><text class="seal-big" font-size="15.5" x="60" y="74" text-anchor="middle">prices</text></svg><!-- /art:seal --></div>
+      <div class="page-head-aside">
+        <nav class="toc card" aria-labelledby="toc-title">
+          <p class="label" id="toc-title">On this page</p>
+          <ol>
+            <li><a href="#packages"><span class="toc-name">Website packages</span><span class="dots" aria-hidden="true"></span><span class="toc-price">$1,000 · $2,000 · $4,000 · $8,000</span></a></li>
+            <li><a href="#payment"><span class="toc-name">How you pay</span><span class="dots" aria-hidden="true"></span><span class="toc-price">50% to start, 50% at launch</span></a></li>
+            <li><a href="#addons"><span class="toc-name">Add-ons</span><span class="dots" aria-hidden="true"></span><span class="toc-price">$750 or $1,500</span></a></li>
+            <li><a href="#consulting"><span class="toc-name">Consulting &amp; automation</span><span class="dots" aria-hidden="true"></span><span class="toc-price">$350 audit · $500 or $1,000 a month</span></a></li>
+            <li><a href="#care"><span class="toc-name">Care plans</span><span class="dots" aria-hidden="true"></span><span class="toc-price">$125, $300, $600 or $1,000 a month</span></a></li>
+          </ol>
+        </nav>
+        <div class="toc-seal wide-only"><!-- art:seal --><svg class="seal" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><defs><path id="sl-arc" d="M60 60m-42 0a42 42 0 1 1 84 0a42 42 0 1 1-84 0"/></defs><circle cx="60" cy="60" r="58" fill="var(--card)"/><circle cx="60" cy="60" r="54.5" fill="none" stroke="var(--brick)" stroke-width="2"/><circle cx="60" cy="60" r="31" fill="none" stroke="var(--brick)" stroke-width="1"/><text font-size="7.6"><textPath href="#sl-arc" textLength="258" lengthAdjust="spacing">PUBLISHED UP FRONT · CONFIRMED IN WRITING ·</textPath></text><text class="seal-big" font-size="15.5" x="60" y="58" text-anchor="middle">Fixed</text><text class="seal-big" font-size="15.5" x="60" y="74" text-anchor="middle">prices</text></svg><!-- /art:seal --></div>
+      </div>
     </div>
   </section>
 
-  <!-- ===================== WEBSITE PACKAGES ===================== -->
+  <!-- ===================== WEBSITE PACKAGES: the comparison, then how you pay and the add-ons ===================== -->
   <section class="section section-first" id="pricing">
     <div class="container">
-      <nav class="toc" aria-labelledby="toc-title">
-        <p class="label" id="toc-title">On this page</p>
-        <ol>
-          <li><a href="#packages"><span class="toc-name">Website packages</span><span class="dots" aria-hidden="true"></span><span class="toc-price">$1,000 · $2,000 · $4,000 · $8,000</span></a></li>
-          <li><a href="#payment"><span class="toc-name">How you pay</span><span class="dots" aria-hidden="true"></span><span class="toc-price">50% to start, 50% at launch</span></a></li>
-          <li><a href="#addons"><span class="toc-name">Add-ons</span><span class="dots" aria-hidden="true"></span><span class="toc-price">$750 or $1,500</span></a></li>
-          <li><a href="#consulting"><span class="toc-name">Consulting &amp; automation</span><span class="dots" aria-hidden="true"></span><span class="toc-price">$350 audit · $500 or $1,000 a month</span></a></li>
-          <li><a href="#care"><span class="toc-name">Care plans</span><span class="dots" aria-hidden="true"></span><span class="toc-price">$125, $300, $600 or $1,000 a month</span></a></li>
-        </ol>
-      </nav>
-
-      <header class="section-head space-above" id="packages">
+      <header class="section-head" id="packages">
         <p class="eyebrow">Websites</p>
         <h2>Four packages. Pick the one that fits.</h2>
       </header>
@@ -471,7 +467,7 @@
             <th role="columnheader" scope="col">Size</th>
             <th role="columnheader" scope="col">Design</th>
             <th role="columnheader" scope="col">Included</th>
-            <th role="columnheader" scope="col">After launch</th>
+            <th role="columnheader" scope="col">Support</th>
             <th role="columnheader" scope="col"><span class="sr-only">Start</span></th>
           </tr>
         </thead>
@@ -484,7 +480,7 @@
             <td role="cell"><span class="cell-label" aria-hidden="true">Size</span>1 page</td>
             <td role="cell"><span class="cell-label" aria-hidden="true">Design</span>Custom design, 1 revision round</td>
             <td role="cell"><span class="cell-label" aria-hidden="true">Included</span><ul><li>Copy editing and polish (you supply the text)</li><li>Contact form</li><li>Mobile &amp; SEO basics</li></ul></td>
-            <td role="cell"><span class="cell-label" aria-hidden="true">After launch</span>14 days support</td>
+            <td role="cell"><span class="cell-label" aria-hidden="true">Support</span>14 days support</td>
             <td role="cell" class="spec-act"><a class="btn btn-block" href="/contact/?package=onepage">Start a one-page site</a><a class="btn btn-quiet" href="/contact/" data-booking>Or book the free call first</a></td>
           </tr>
           <tr role="row">
@@ -495,8 +491,8 @@
             <td role="cell"><span class="cell-label" aria-hidden="true">Size</span>Up to 5 pages</td>
             <td role="cell"><span class="cell-label" aria-hidden="true">Design</span>Custom design, 1 revision round</td>
             <td role="cell"><span class="cell-label" aria-hidden="true">Included</span><ul><li>Copy editing and polish (you supply the text)</li><li>Contact form</li><li>Mobile &amp; SEO basics</li></ul></td>
-            <td role="cell"><span class="cell-label" aria-hidden="true">After launch</span>30 days support</td>
-            <td role="cell" class="spec-act"><a class="btn btn-block" href="/checkout/?plan=starter-deposit">Pay 50% deposit —&nbsp;$1,000</a><a class="btn btn-quiet" href="/contact/?package=starter">Questions first? Send an enquiry</a></td>
+            <td role="cell"><span class="cell-label" aria-hidden="true">Support</span>30 days support</td>
+            <td role="cell" class="spec-act"><a class="btn btn-block" href="/checkout/?plan=starter-deposit">Pay 50% deposit —&nbsp;$1,000</a><a class="btn btn-quiet" href="/contact/?package=starter">Or send an enquiry first</a></td>
           </tr>
           <tr role="row" class="is-popular">
             <th role="rowheader" scope="row" class="spec-name">Business <span class="popular">Most popular</span></th>
@@ -506,8 +502,8 @@
             <td role="cell"><span class="cell-label" aria-hidden="true">Size</span>Up to 10 pages</td>
             <td role="cell"><span class="cell-label" aria-hidden="true">Design</span>Up to 3 design rounds, plus a final tweaks round</td>
             <td role="cell"><span class="cell-label" aria-hidden="true">Included</span><ul><li>Copywriting: we draft, you edit</li><li>Blog or news section</li><li>Analytics &amp; tracking setup</li><li>Local SEO configuration</li></ul></td>
-            <td role="cell"><span class="cell-label" aria-hidden="true">After launch</span>90 days support</td>
-            <td role="cell" class="spec-act"><a class="btn btn-primary btn-block" href="/checkout/?plan=business-deposit">Pay 50% deposit —&nbsp;$2,000</a><a class="btn btn-quiet" href="/contact/?package=business">Questions first? Send an enquiry</a></td>
+            <td role="cell"><span class="cell-label" aria-hidden="true">Support</span>90 days support</td>
+            <td role="cell" class="spec-act"><a class="btn btn-primary btn-block" href="/checkout/?plan=business-deposit">Pay 50% deposit —&nbsp;$2,000</a><a class="btn btn-quiet" href="/contact/?package=business">Or send an enquiry first</a></td>
           </tr>
           <tr role="row">
             <th role="rowheader" scope="row" class="spec-name">Commerce</th>
@@ -517,59 +513,55 @@
             <td role="cell"><span class="cell-label" aria-hidden="true">Size</span>Full store build</td>
             <td role="cell"><span class="cell-label" aria-hidden="true">Design</span>Up to 3 design rounds, plus a final tweaks round</td>
             <td role="cell"><span class="cell-label" aria-hidden="true">Included</span><ul><li>Payments, shipping &amp; tax</li><li>Product import</li><li>Email &amp; abandoned cart flows</li><li>Team training session</li></ul></td>
-            <td role="cell"><span class="cell-label" aria-hidden="true">After launch</span>6 months support</td>
-            <td role="cell" class="spec-act"><a class="btn btn-block" href="/checkout/?plan=commerce-deposit">Pay 50% deposit —&nbsp;$4,000</a><a class="btn btn-quiet" href="/contact/?package=commerce">Questions first? Send an enquiry</a></td>
+            <td role="cell"><span class="cell-label" aria-hidden="true">Support</span>6 months support</td>
+            <td role="cell" class="spec-act"><a class="btn btn-block" href="/checkout/?plan=commerce-deposit">Pay 50% deposit —&nbsp;$4,000</a><a class="btn btn-quiet" href="/contact/?package=commerce">Or send an enquiry first</a></td>
           </tr>
         </tbody>
       </table>
+
+      <!-- Under the table, like the foot of a printed price list: the terms on the left, the extras on the right -->
+      <div class="split split-even space-above">
+        <div class="reveal" id="payment">
+          <p class="eyebrow">How you pay</p>
+          <h3>Half to start, half at launch. Or spread it out.</h3>
+          <ul class="ticks">
+            <li>Standard is 50% to start and 50% at launch.</li>
+            <li>Payment plans are available on all projects: 50% up front, then the rest in up to 3 equal monthly payments, the first due one month after the deposit (on Starter, $1,000 down, then about $333 a month for 3 months).</li>
+            <li>Pay by card or ACH bank transfer through Stripe, or by check on request. The details are in our <a href="/terms/">terms</a>.</li>
+          </ul>
+          <figure class="payplan card" role="img" aria-label="Two ways to pay for a Starter site: half to start and half at launch, or $1,000 down and then about $333 a month for 3 months">
+            <p class="label payplan-std" aria-hidden="true">Standard</p>
+            <div class="payplan-bar payplan-std" aria-hidden="true"><span class="payplan-seg payplan-dep" style="--w:50"><b>50%</b>to start</span><span class="payplan-seg" style="--w:50"><b>50%</b>at launch</span></div>
+            <p class="label" aria-hidden="true">Payment plan, shown on Starter</p>
+            <div class="payplan-bar" aria-hidden="true"><span class="payplan-seg payplan-dep" style="--w:50"><b>$1,000</b>down</span><span class="payplan-seg" style="--w:16.67"><b>$333</b>month 1</span><span class="payplan-seg" style="--w:16.67"><b>$333</b>month 2</span><span class="payplan-seg" style="--w:16.67"><b>$333</b>month 3</span></div>
+            <p class="fine" aria-hidden="true">Monthly amounts are rounded: about $333 a month.</p>
+          </figure>
+        </div>
+
+        <div class="reveal" id="addons">
+          <p class="eyebrow">Add to any project</p>
+          <h3>Add-ons</h3>
+          <p>A brand to build the site around, and the tools you already run, wired in.</p>
+          <ul class="pricelist">
+            <li>
+              <div class="pl-row"><h4 class="pl-name">Brand identity</h4><span class="dots" aria-hidden="true"></span><span class="pl-price">$1,500</span></div>
+              <p>Logo and mark, colours, fonts, a brand guidelines document and social templates.</p>
+            </li>
+            <li>
+              <div class="pl-row"><h4 class="pl-name">Booking &amp; scheduling setup</h4><span class="dots" aria-hidden="true"></span><span class="pl-price">$750</span></div>
+              <p>Branded booking, service config, calendars and automatic text and email reminders.</p>
+            </li>
+            <li>
+              <div class="pl-row"><h4 class="pl-name">CRM &amp; calendar sync</h4><span class="dots" aria-hidden="true"></span><span class="pl-price">$750</span></div>
+              <p>Enquiries land in your CRM automatically — no re-typing, nothing lost.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ===================== HOW YOU PAY ===================== -->
-  <section class="section section-sand" id="payment">
-    <div class="container split split-even">
-      <header class="section-head reveal">
-        <p class="eyebrow">How you pay</p>
-        <h2 class="h3">Half to start, half at launch. Or spread it out.</h2>
-        <p>Standard is 50% to start and 50% at launch. Payment plans are available on all projects: 50% up front, then the rest in up to 3 equal monthly payments, the first due one month after the deposit (on Starter, $1,000 down, then about $333 a month for 3 months). Pay by card or ACH bank transfer through Stripe, or by check on request. The details are in our <a href="/terms/">terms</a>.</p>
-      </header>
-      <figure class="payplan card reveal" role="img" aria-label="Two ways to pay for a Starter site: half to start and half at launch, or $1,000 down and then about $333 a month for 3 months">
-        <p class="label" aria-hidden="true">Standard</p>
-        <div class="payplan-bar" aria-hidden="true"><span class="payplan-seg payplan-dep" style="--w:50"><b>50%</b>to start</span><span class="payplan-seg" style="--w:50"><b>50%</b>at launch</span></div>
-        <p class="label" aria-hidden="true">Payment plan, shown on Starter</p>
-        <div class="payplan-bar" aria-hidden="true"><span class="payplan-seg payplan-dep" style="--w:50"><b>$1,000</b>down</span><span class="payplan-seg" style="--w:16.67"><b>$333</b>month 1</span><span class="payplan-seg" style="--w:16.67"><b>$333</b>month 2</span><span class="payplan-seg" style="--w:16.67"><b>$333</b>month 3</span></div>
-        <p class="fine" aria-hidden="true">Monthly amounts are rounded: about $333 a month.</p>
-      </figure>
-    </div>
-  </section>
-
-  <!-- ===================== ADD-ONS ===================== -->
-  <section class="section" id="addons">
-    <div class="container split">
-      <header class="section-head reveal">
-        <p class="eyebrow">Add to any project</p>
-        <h2>Add-ons</h2>
-        <p class="section-sub">A brand to build the site around, and the tools you already run wired in,
-           so enquiries, bookings and records stop being copied by hand.</p>
-      </header>
-      <ul class="pricelist reveal">
-        <li>
-          <div class="pl-row"><h3 class="pl-name">Brand identity</h3><span class="dots" aria-hidden="true"></span><span class="pl-price">$1,500</span></div>
-          <p>Logo and mark, colours, fonts, a brand guidelines document and social templates.</p>
-        </li>
-        <li>
-          <div class="pl-row"><h3 class="pl-name">Booking &amp; scheduling setup</h3><span class="dots" aria-hidden="true"></span><span class="pl-price">$750</span></div>
-          <p>Branded booking, service config, calendars and automatic text and email reminders.</p>
-        </li>
-        <li>
-          <div class="pl-row"><h3 class="pl-name">CRM &amp; calendar sync</h3><span class="dots" aria-hidden="true"></span><span class="pl-price">$750</span></div>
-          <p>Enquiries land in your CRM automatically — no re-typing, nothing lost.</p>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ===================== CONSULTING & AUTOMATION ===================== -->
+  <!-- ===================== CONSULTING & AUTOMATION: two columns of the price list, the bundle as its receipt ===================== -->
   <section class="section section-sand" id="consulting">
     <div class="container">
       <header class="section-head section-head-split reveal">
@@ -578,12 +570,15 @@
           <h2>Systems that win customers and save time</h2>
         </div>
         <div>
-          <p class="section-sub">Start with a free online check or a $350 Growth Audit, then set up only what your business needs. Software and texting services run on accounts in your name, with their fees paid to the provider.</p>
-          <p><a class="more-link" href="/consulting/">How each one works<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a></p>
+          <p class="section-sub">Start with a <a href="/contact/?package=check">free online check</a> or a $350 Growth Audit, then set up only what your business needs. Software and texting services run on accounts in your name, with their fees paid to the provider. <a class="more-link" href="/consulting/">How each one works<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a></p>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="/contact/?package=audit">Book a Growth Audit, $350</a>
+          </div>
         </div>
       </header>
 
-      <div class="grid grid-2">
+      <!-- Four groups. On a phone they run in buying order; from 760px the two short lists share the top row. -->
+      <div class="grid grid-2 price-groups">
         <div class="reveal">
           <h3 class="pl-group">Start here</h3>
           <ul class="pricelist">
@@ -596,20 +591,7 @@
               <p>60 minutes on one question, with written notes afterwards.</p>
             </li>
           </ul>
-
-          <h3 class="pl-group">By the month</h3>
-          <ul class="pricelist">
-            <li>
-              <div class="pl-row"><h4 class="pl-name">Advisor plan</h4><span class="dots" aria-hidden="true"></span><span class="pl-price">$500/mo</span></div>
-              <p>Monthly strategy call, Google profile managed, review replies and a monthly report.</p>
-            </li>
-            <li>
-              <div class="pl-row"><h4 class="pl-name">Partner plan</h4><span class="dots" aria-hidden="true"></span><span class="pl-price">$1,000/mo</span></div>
-              <p>Everything in Advisor, two calls a month and up to 5 hours of hands-on work a month.</p>
-            </li>
-          </ul>
         </div>
-
         <div class="reveal">
           <h3 class="pl-group">One-time setups</h3>
           <ul class="pricelist">
@@ -631,68 +613,56 @@
             </li>
           </ul>
         </div>
-      </div>
-
-      <div class="btn-row space-above reveal">
-        <a class="btn btn-primary" href="/contact/?package=audit">Book a Growth Audit, $350</a>
-        <a class="btn" href="/contact/?package=check">Ask for the free online check</a>
-      </div>
-
-      <!-- The page's one blue panel: the bundle as a receipt -->
-      <aside class="panel on-blue split split-even space-above reveal" aria-labelledby="bundle-title">
-        <div class="stack">
-          <p class="eyebrow">Bundle</p>
-          <h3 class="title" id="bundle-title">Launch bundle</h3>
-          <p>Starter website, Google profile &amp; reviews and missed-call text-back. $3,250 bought separately.</p>
-          <figure class="payplan" role="img" aria-label="The Launch bundle payment plan: $1,500 down, then $500 a month for 3 months">
-            <p class="label" aria-hidden="true">Payment plan</p>
-            <div class="payplan-bar" aria-hidden="true"><span class="payplan-seg payplan-dep" style="--w:50"><b>$1,500</b>down</span><span class="payplan-seg" style="--w:16.67"><b>$500</b>month 1</span><span class="payplan-seg" style="--w:16.67"><b>$500</b>month 2</span><span class="payplan-seg" style="--w:16.67"><b>$500</b>month 3</span></div>
-          </figure>
-          <a class="btn btn-primary" href="/contact/?package=bundle">Ask about the bundle</a>
-        </div>
-        <div class="receipt on-paper">
-          <p class="receipt-head"><span>Launch bundle</span><span>Receipt</span></p>
-          <ul class="receipt-lines">
-            <li><span>Starter website</span><span class="dots" aria-hidden="true"></span><b>$2,000</b></li>
-            <li><span>Google profile &amp; reviews</span><span class="dots" aria-hidden="true"></span><b>$500</b></li>
-            <li><span>Missed-call text-back</span><span class="dots" aria-hidden="true"></span><b>$750</b></li>
+        <div class="reveal">
+          <h3 class="pl-group">By the month</h3>
+          <ul class="pricelist">
+            <li>
+              <div class="pl-row"><h4 class="pl-name">Advisor plan</h4><span class="dots" aria-hidden="true"></span><span class="pl-price">$500/mo</span></div>
+              <p>Monthly strategy call, Google profile managed, review replies and a monthly report.</p>
+            </li>
+            <li>
+              <div class="pl-row"><h4 class="pl-name">Partner plan</h4><span class="dots" aria-hidden="true"></span><span class="pl-price">$1,000/mo</span></div>
+              <p>Everything in Advisor, two calls a month and up to 5 hours of hands-on work a month.</p>
+            </li>
           </ul>
-          <p class="receipt-sum"><span>Bought separately</span><s>$3,250</s></p>
-          <p class="receipt-total"><span>Launch bundle</span><b>$3,000</b></p>
-          <p class="receipt-note">$1,500 down, then $500/mo for 3 months.</p>
         </div>
-      </aside>
+        <div class="reveal">
+          <h3 class="pl-group">Bundle</h3>
+          <!-- The page's one tilted object. Every line is a published price and the receipt adds up. -->
+          <div class="receipt tilt on-paper">
+            <p class="receipt-head"><span>Launch bundle</span><span>Receipt</span></p>
+            <ul class="receipt-lines">
+              <li><span>Starter website</span><span class="dots" aria-hidden="true"></span><b>$2,000</b></li>
+              <li><span>Google profile &amp; reviews</span><span class="dots" aria-hidden="true"></span><b>$500</b></li>
+              <li><span>Missed-call text-back</span><span class="dots" aria-hidden="true"></span><b>$750</b></li>
+            </ul>
+            <p class="receipt-sum"><span>Bought separately</span><s>$3,250</s></p>
+            <p class="receipt-total"><span>Launch bundle</span><b>$3,000</b></p>
+          </div>
+          <div class="btn-row bundle-ask">
+            <a class="btn" href="/contact/?package=bundle">Ask about the bundle</a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- ===================== CARE PLANS ===================== -->
   <section class="section" id="care">
     <div class="container">
-      <div class="split">
-        <header class="section-head reveal">
+      <header class="section-head section-head-split reveal">
+        <div>
           <p class="eyebrow">After launch</p>
           <h2>Care plans</h2>
-          <p class="section-sub">
-            A site isn't finished at launch — it needs patching, monitoring and small
-            changes, or it quietly rots. We keep yours fast, current and online, and you
-            get a person who already knows your site when something needs doing.
-          </p>
-        </header>
-
-        <div class="card stack reveal">
-          <h3 class="label">Every plan includes</h3>
-          <ul class="ticks">
-            <li>Daily off-site backups, restored on request</li>
-            <li>24/7 uptime monitoring with alerts</li>
-            <li>Security patches and platform updates</li>
-            <li>Error monitoring, with fixes when something breaks</li>
-            <li>Changes you request, made for you</li>
-            <li>No long-term contract or minimum term. Cancel or change with <a href="/terms/">10 days' written notice</a>, no fee.</li>
-          </ul>
         </div>
-      </div>
+        <p class="section-sub">
+          A site isn't finished at launch — it needs patching, monitoring and small
+          changes, or it quietly rots. We keep yours fast, current and online, and you
+          get a person who already knows your site when something needs doing.
+        </p>
+      </header>
 
-      <table class="table table-stack space-above reveal" role="table">
+      <table class="table table-stack reveal" role="table">
         <caption>Care plans, by the month</caption>
         <thead role="rowgroup">
           <tr role="row"><th role="columnheader" scope="col">Plan</th><th role="columnheader" scope="col">Fits</th><th role="columnheader" scope="col">What you get</th><th role="columnheader" scope="col" class="num">Price</th><th role="columnheader" scope="col"><span class="sr-only">Start</span></th></tr>
@@ -728,7 +698,19 @@
           </tr>
         </tbody>
       </table>
-      <p class="space-above reveal"><a class="btn" href="/contact/">Ask about care plans</a></p>
+
+      <div class="card stack space-above reveal">
+        <h3 class="label">Every plan includes</h3>
+        <ul class="ticks">
+          <li>Daily off-site backups, restored on request</li>
+          <li>24/7 uptime monitoring with alerts</li>
+          <li>Security patches and platform updates</li>
+          <li>Error monitoring, with fixes when something breaks</li>
+          <li>Changes you request, made for you</li>
+          <li>No long-term contract or minimum term. Cancel or change with <a href="/terms/">10 days' written notice</a>, no fee.</li>
+        </ul>
+        <a class="btn" href="/contact/">Ask about care plans</a>
+      </div>
     </div>
   </section>
 
@@ -743,8 +725,8 @@
           <a class="btn btn-lg" href="/contact/">Send an enquiry</a>
         </div>
       </div>
-      <!-- Decorative: the same facts as the paragraph, drawn as an appointment card -->
-      <div class="appt on-paper" aria-hidden="true">
+      <!-- Decorative: the same facts as the paragraph, drawn as an appointment card. Beside the copy from 980px; left out below that to keep the phone page short. -->
+      <div class="appt on-paper wide-only" aria-hidden="true">
         <p class="appt-head"><span>Appointment card</span><span>No. 01</span></p>
         <p class="appt-title">Discovery call</p>
         <dl class="appt-lines">
