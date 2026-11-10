@@ -112,15 +112,17 @@
   }
 }
 
-/* ---------- The bundle: words, receipt, then the button. From 980px the button sits under the words ---------- */
+/* ---------- The bundle: words, receipt, then the plan and the button. From 980px the receipt stands beside them ---------- */
 [data-page="consulting"] #bundle { align-items: center; }
 [data-page="consulting"] #bundle .receipt { justify-self: center; }
-/* Phone: the tilted receipt keeps its corners inside the column */
-@media (max-width: 599.98px) { [data-page="consulting"] #bundle .receipt { width: calc(100% - var(--s-4)); } }
-@media (min-width: 600px) { [data-page="consulting"] #bundle > .btn { justify-self: center; } }
+/* Phone: the button fills the line; the tilted receipt keeps its corners inside the column */
+@media (max-width: 599.98px) {
+  [data-page="consulting"] #bundle .btn { justify-self: stretch; }
+  [data-page="consulting"] #bundle .receipt { width: calc(100% - var(--s-4)); }
+}
 @media (min-width: 980px) {
   [data-page="consulting"] #bundle { row-gap: var(--s-5); }
   [data-page="consulting"] #bundle .stack { align-self: end; }
+  [data-page="consulting"] #bundle .stack ~ .stack { align-self: start; }
   [data-page="consulting"] #bundle .receipt { grid-area: 1 / 2 / 3 / 3; }
-  [data-page="consulting"] #bundle > .btn { align-self: start; justify-self: start; }
 }

@@ -1,8 +1,8 @@
 /* Landing page only: shared parts and their layout here. Every rule is scoped with [data-page="start"]. */
 
-/* Head. Below 980px three facts stand beside the small shop front; from 980px the shop is the aside, the facts a shelf under both.
-   SHARED-CANDIDATE: three set headline lines at every width, a size down below 980px: the first phone screen holds
-   the prices, and nothing moves when the fonts arrive. */
+/* Head. Below 980px three facts stand beside the small shop front; from 980px the shop is the aside, the facts a shelf.
+   SHARED-CANDIDATE: three set headline lines, a size down below 980px: the first phone screen holds the prices
+   and nothing moves when the fonts arrive. */
 [data-page="start"] .page-head-split { --shop: calc(var(--s-9) + var(--s-7)); grid-template-columns: minmax(0, 1fr) var(--shop); column-gap: var(--s-4); align-items: end; }
 [data-page="start"] h1 .l { display: block; }
 @media (max-width: 979.98px) {
@@ -19,7 +19,7 @@
 }
 @media (min-width: 600px) {
   [data-page="start"] .page-head-split { --shop: calc(var(--s-9) * 2); column-gap: var(--gap-lg); }
-  /* Booking and call share a row with room to spare, whichever font is showing */
+  /* Booking and call share a row with room to spare in any font */
   [data-page="start"] .btn-lg { padding-inline: var(--s-5); }
 }
 @media (min-width: 600px) and (max-width: 979.98px) { [data-page="start"] .points li { padding-block: var(--s-5); } }
@@ -32,8 +32,7 @@
 [data-page="start"] .mark::after { transform-origin: 0 50%; animation: kws-start-brush var(--t-slow) var(--ease) var(--t) both; }
 @keyframes kws-start-brush { from { transform: scaleX(0); } }
 
-/* The menu: two price lists, side by side from 760px, name and price at one size.
-   SHARED-CANDIDATE: stacked, a split section head keeps its intro close under the title. */
+/* The menu: two price lists, side by side from 760px, name and price at one size */
 [data-page="start"] .section-head-split { row-gap: 0; }
 [data-page="start"] .menu { gap: var(--s-5) var(--gap-lg); }
 [data-page="start"] .pricelist > li { padding-block: var(--s-3); }
@@ -45,7 +44,7 @@
   [data-page="start"] .pl-long .pl-price { flex-basis: 100%; margin-left: 0; }
 }
 
-/* Work: three small rows on a phone, three prints across from 760px */
+/* Work: three small rows on a phone */
 @media (max-width: 759.98px) {
   [data-page="start"] .prints { --thumb: calc(var(--s-9) + var(--s-5)); gap: var(--s-3); }
   [data-page="start"] .print { display: grid; grid-template-columns: var(--thumb) minmax(0, 1fr); align-items: center; gap: var(--s-4); padding: var(--s-3); }
@@ -53,8 +52,8 @@
   [data-page="start"] .print h3 { font-size: var(--fs-h4); }
 }
 
-/* The board. SHARED-CANDIDATE: its extras are a price list (gold price, what it is), two across from 760px,
-   and its foot holds a sentence beside the button (as in city.css). */
+/* The board. SHARED-CANDIDATE: its extras are a price list with gold prices, two across from 760px;
+   its foot holds a sentence beside the button (as in city.css) */
 [data-page="start"] .board .pricelist { max-width: none; margin-top: var(--s-5); border-top: 0; }
 [data-page="start"] .board .pl-price { color: var(--gold); }
 [data-page="start"] .board-foot { display: grid; gap: var(--s-5) var(--gap-lg); }
@@ -64,25 +63,23 @@
 @media (min-width: 980px) { [data-page="start"] .board-foot { grid-template-columns: minmax(0, 1fr) auto; align-items: center; } }
 
 /* The job ticket as a strip: four short rows, two by two from 760px, four stubs across from 1100px */
-[data-page="start"] .steps { --no: var(--s-7); }
 [data-page="start"] .ticket { padding-bottom: var(--s-6); }
-[data-page="start"] .ticket .steps > li { grid-template-columns: var(--no) minmax(0, 1fr); padding-block: var(--s-3); }
+[data-page="start"] .ticket .steps > li { grid-template-columns: var(--s-7) minmax(0, 1fr); padding-block: var(--s-3); }
 [data-page="start"] .ticket .steps > li::after { content: none; }
-[data-page="start"] .steps-no { font-size: var(--fs-title); }
 [data-page="start"] .steps p { margin-top: var(--s-1); text-wrap: balance; }
 @media (min-width: 760px) {
   [data-page="start"] .steps { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--gap-lg); }
   [data-page="start"] .ticket .steps > li:nth-child(2) { border-top: 0; }
 }
+@media (max-width: 1099.98px) { [data-page="start"] .steps-no { font-size: var(--fs-title); } }
 @media (min-width: 1100px) {
   [data-page="start"] .steps { grid-template-columns: repeat(4, minmax(0, 1fr)); column-gap: 0; }
   [data-page="start"] .ticket .steps > li { grid-template-columns: minmax(0, 1fr); align-content: start; gap: var(--s-2); padding: var(--s-5) var(--s-5) var(--s-4); border-top: 0; border-left: var(--dash); }
   [data-page="start"] .ticket .steps > li:first-child { padding-left: 0; border-left: 0; }
-  [data-page="start"] .steps-no { font-size: var(--fs-h2); }
 }
 
 /* The closing band: the written route sits under the two buttons.
-   SHARED-CANDIDATE: a link in a sentence that is a way forward has a 44px hit area; its focus ring stays on the words. */
+   SHARED-CANDIDATE: a way-forward link in a sentence has a 44px hit area; its focus ring stays on the words */
 [data-page="start"] .write { margin: var(--s-5) 0 0; font-size: var(--fs-body); }
 [data-page="start"] .write a { font-weight: 700; }
 [data-page="start"] :is(.write, .board-foot p) a { position: relative; }
