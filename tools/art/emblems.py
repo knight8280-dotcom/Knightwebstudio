@@ -1,24 +1,32 @@
-"""Knight Web Studio artwork: the crest, the chess pieces and the hero shards.
+"""KnightWebstudio artwork: the crest, the round seal and the two drawings.
 
 Everything is hand-placed vector geometry, returned as SVG strings. The site
 has no build step, so tools/art/build.py writes these into the HTML between
 <!-- art:NAME --> markers; run it again after changing anything here.
 
-Colours are fixed (see PALETTE) rather than themed: the crest is an emblem and
-looks the same on the dark and light themes, like a printed badge would.
+The crest's colours are fixed (see PALETTE) rather than themed: it is an
+emblem and looks the same by day and at night, like a painted sign. Sign-
+painter's blue on a navy field with a gold-leaf line, to match the site.
+
+The drawings (street scene, workbench) are themed. Each carries SCENE_PALETTE
+as custom properties on its <svg>, one value for day and one for night, and
+the stylesheet's --L / --D switches pick between them.
 
 Every function takes a `uid` so two copies on one page never share an id
 (clip paths and gradients are looked up by id).
 """
+import re
+
+import scenes
 
 # ---------------------------------------------------------------- palette
 PALETTE = {
-    '--t1': '#c9d4ff', '--t2': '#a5b8ff', '--t3': '#6d8bff',   # lit facets
-    '--t4': '#4f6ef7', '--t5': '#3348b8',                      # shaded facets
-    '--ink': '#080b14', '--accent': '#46e0c0',
-    '--rim': '#3348b8', '--rim2': '#a5b8ff',
-    '--field1': '#17203a', '--field2': '#0b1020', '--ribbon': '#141c3f', '--ribbon2': '#0b1020',
-    '--steel1': '#dfe6fb', '--steel2': '#a9b6d6', '--steel3': '#7d8bb0',
+    '--t1': '#DCE3FF', '--t2': '#B9C7FF', '--t3': '#8FA5FF',   # lit facets
+    '--t4': '#5C77EC', '--t5': '#2C46C4',                      # shaded facets (sign-painter's blue)
+    '--ink': '#161B2C', '--accent': '#F0C369',                 # the eye; the gold-leaf line
+    '--rim': '#2C46C4', '--rim2': '#B9C7FF', '--glow': '#8FA5FF',
+    '--field1': '#24306A', '--field2': '#161B2C', '--ribbon': '#1B2C84', '--ribbon2': '#14205E',
+    '--steel1': '#FBF5E6', '--steel2': '#CFC7B4', '--steel3': '#8E8A80', '--letter': '#FFFBF2',
 }
 STYLE = ';'.join(f'{k}:{v}' for k, v in PALETTE.items())
 
@@ -73,7 +81,7 @@ def _defs(uid):
             f'<linearGradient id="{uid}-fld" x1="0" y1="0" x2="0" y2="1">'
             f'<stop offset="0" stop-color="var(--field1)"/><stop offset="1" stop-color="var(--field2)"/></linearGradient>'
             f'<radialGradient id="{uid}-glow" cx=".5" cy=".42" r=".5">'
-            f'<stop offset="0" stop-color="#6d8bff" stop-opacity=".35"/><stop offset="1" stop-color="#6d8bff" stop-opacity="0"/></radialGradient>'
+            f'<stop offset="0" stop-color="var(--glow)" stop-opacity=".35"/><stop offset="1" stop-color="var(--glow)" stop-opacity="0"/></radialGradient>'
             f'<linearGradient id="{uid}-gl" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/>'
             f'<stop offset=".5" stop-color="#fff" stop-opacity=".5"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>'
             f'<clipPath id="{uid}-in"><path d="{INNER}"/></clipPath>'
@@ -121,8 +129,8 @@ def _ribbon(uid, text):
             f'<path d="M22 118Q80 132 138 118V134Q80 148 22 134Z" fill="var(--ribbon)"/>'
             f'<path d="M22 118Q80 132 138 118M22 134Q80 148 138 134" fill="none" stroke="var(--accent)" stroke-width=".8"/>'
             f'<path id="{uid}-rbt" d="M28 130.5Q80 144 132 130.5" fill="none"/>'
-            f'<text font-family="Bricolage, Manrope, system-ui, sans-serif" font-weight="700" font-size="7.4" '
-            f'letter-spacing="1.2" fill="#eef2fb" text-anchor="middle">'
+            f'<text font-family="Fraunces, Georgia, serif" font-weight="700" font-size="7.4" '
+            f'letter-spacing="1.2" fill="var(--letter)" text-anchor="middle">'
             f'<textPath href="#{uid}-rbt" startOffset="50%">{text}</textPath></text>')
 
 
@@ -145,81 +153,60 @@ def favicon_mark():
             f'<path d="{INNER}" fill="none" stroke="var(--accent)" stroke-width="2.4"/></svg>')
 
 
-# ---------------------------------------------------------------- chess pieces
-# Symmetric about x=50 in a 100-unit box; sections run bottom to top so they
-# can stack up one after another. Left half lit, right half in shade.
-_BASE = ['M20 94H80V88C80 84 76 81 72 81H28C24 81 20 84 20 88Z',
-         'M28 81H72L67 74H33Z']
-PIECES = {
-    'pawn': _BASE + [
-        'M36 74C38 64 42 56 43 49H57C58 56 62 64 64 74Z',
-        'M37 49H63C63 45 59 43 50 43C41 43 37 45 37 49Z',
-        'M50 16C58 16 64 22 64 30C64 37 58 43 50 43C42 43 36 37 36 30C36 22 42 16 50 16Z'],
-    'rook': _BASE + [
-        'M34 74L37 40H63L66 74Z',
-        'M31 40H69L66 34H34Z',
-        'M30 34V16H38V22H45V16H55V22H62V16H70V34Z'],
-    'bishop': _BASE + [
-        'M35 74C38 64 42 56 43 50H57C58 56 62 64 65 74Z',
-        'M36 50H64C64 46 59 44 50 44C41 44 36 46 36 50Z',
-        'M50 12C58 20 64 29 64 36C64 41 58 44 50 44C42 44 36 41 36 36C36 29 42 20 50 12Z',
-        'M50 5C53 5 55 7 55 10C55 13 53 14 50 14C47 14 45 13 45 10C45 7 47 5 50 5Z'],
-    'queen': _BASE + [
-        'M34 74C37 63 41 54 42 46H58C59 54 63 63 66 74Z',
-        'M35 46H65C65 42 59 40 50 40C41 40 35 42 35 46Z',
-        'M33 40L28 18L39 30L44 12L50 28L56 12L61 30L72 18L67 40Z',
-        'M28 7.5a3.5 3.5 0 1 0 .01 0ZM44 1.5a3.5 3.5 0 1 0 .01 0ZM56 1.5a3.5 3.5 0 1 0 .01 0ZM72 7.5a3.5 3.5 0 1 0 .01 0Z'],
-    'king': _BASE + [
-        'M34 74C37 63 41 54 42 46H58C59 54 63 63 66 74Z',
-        'M35 46H65C65 42 59 40 50 40C41 40 35 42 35 46Z',
-        'M34 40C33 30 38 24 50 24C62 24 67 30 66 40Z'],
+# ---------------------------------------------------------------- the seal
+def seal(uid, cls='seal'):
+    """The round "Fixed prices" seal. Decorative: the same words are on the page. One a page."""
+    return (f'<svg class="{cls}" viewBox="0 0 120 120" aria-hidden="true" focusable="false">'
+            f'<defs><path id="{uid}-arc" d="M60 60m-42 0a42 42 0 1 1 84 0a42 42 0 1 1-84 0"/></defs>'
+            f'<circle cx="60" cy="60" r="58" fill="var(--card)"/>'
+            f'<circle cx="60" cy="60" r="54.5" fill="none" stroke="var(--brick)" stroke-width="2"/>'
+            f'<circle cx="60" cy="60" r="31" fill="none" stroke="var(--brick)" stroke-width="1"/>'
+            f'<text font-size="7.6"><textPath href="#{uid}-arc" textLength="258" lengthAdjust="spacing">'
+            f'PUBLISHED UP FRONT · CONFIRMED IN WRITING ·</textPath></text>'
+            f'<text class="seal-big" font-size="15.5" x="60" y="58" text-anchor="middle">Fixed</text>'
+            f'<text class="seal-big" font-size="15.5" x="60" y="74" text-anchor="middle">prices</text></svg>')
+
+
+# ---------------------------------------------------------------- the drawings
+# name: (day, night). Each drawing is given only the entries it uses.
+SCENE_PALETTE = {
+    '--il-sky-1': ('#D5E0F6', '#101632'), '--il-sky-2': ('#F5EEDD', '#27305A'), '--il-sun': ('#F6D88E', '#F3ECDD'),
+    '--il-cloud': ('#FFFDF6', '#2B355E'), '--il-star': ('transparent', '#F3ECDD'), '--il-far': ('#C5CCE0', '#2C3768'),
+    '--il-brick': ('#BC5B3E', '#7A3F30'), '--il-brick-2': ('#9C4630', '#5C2D22'), '--il-trim': ('#FBF5E6', '#C9C1AE'),
+    '--il-shutter': ('#33446F', '#1F2947'), '--il-glass': ('#BFD0EC', '#232D4E'), '--il-glass-2': ('#D6E1F4', '#F3C66B'),
+    '--il-awn-1': ('#2C46C4', '#4660DA'), '--il-awn-2': ('#FBF5E6', '#CFC7B4'), '--il-sign': ('#2C46C4', '#24389F'),
+    '--il-ink': ('#1A2238', '#080A12'), '--il-walk': ('#E3D8C2', '#2B3145'), '--il-walk-2': ('#CFC2A8', '#20263A'),
+    '--il-road': ('#BFB6A4', '#171B29'), '--il-hub': ('#D9CFBB', '#8E8A80'), '--il-van': ('#FBF5E6', '#C9C1AE'),
+    '--il-van-2': ('#E4DAC6', '#A8A190'), '--il-leaf': ('#5F8160', '#33503F'), '--il-leaf-2': ('#7C9B79', '#436650'),
+    '--il-gold': ('#E9B44C', '#F3C66B'), '--il-lamp': ('#FBF5E6', '#F7D98C'), '--il-wall': ('#E9DFCB', '#20273A'),
+    '--il-tool': ('#CDBFA4', '#2E3650'), '--il-wood': ('#C89A64', '#6B5138'), '--il-wood-2': ('#AE7F4C', '#55402C'),
+    '--il-screen': ('#FFFCF5', '#F7F2E6'), '--il-screen-ink': ('#1A2238', '#1A2238'), '--il-alert': ('#B8432B', '#C8553B'),
+    '--il-night': ('0', '1'),   # opacity of anything that is lit only after dark (class sc-night)
 }
-# Small details drawn on top of the finished piece
-_DETAIL = {
-    'rook': '<path d="M48.2 50H51.8V62H48.2Z" fill="var(--ink)" fill-opacity=".7"/>',
-    'bishop': '<path d="M53 22L45 33" stroke="var(--ink)" stroke-width="2.4" stroke-linecap="round"/>',
-    'king': '<path d="M47 2H53V8H59V14H53V24H47V14H41V8H47Z" fill="var(--accent)"/>',
-    'queen': '<circle cx="50" cy="35" r="2.2" fill="var(--accent)"/>',
-    'pawn': '',
-}
-_LIT, _SHADE = ['var(--t2)', 'var(--t3)'], ['var(--t4)', 'var(--t5)']
 
 
-def piece(name, uid, label=None):
-    a11y = f'role="img" aria-label="{label}"' if label else 'aria-hidden="true"'
-    out = [f'<svg class="piece piece-{name}" viewBox="0 0 100 100" {a11y} style="{STYLE}">',
-           f'<defs><clipPath id="{uid}-r"><rect x="50" y="0" width="50" height="100"/></clipPath></defs>']
-    if name == 'knight':
-        # the crest's horse, standing on the same plinth as the other pieces
-        sections = _BASE
-        for i, d in enumerate(sections):
-            out.append(f'<g class="sect" style="--i:{i}"><path d="{d}" fill="{_LIT[i % 2]}"/>'
-                       f'<path d="{d}" fill="{_SHADE[i % 2]}" clip-path="url(#{uid}-r)"/></g>')
-        out.append(f'<clipPath id="{uid}-neck"><rect x="0" y="0" width="100" height="75"/></clipPath>'
-                   f'<g class="sect" style="--i:2" clip-path="url(#{uid}-neck)">'
-                   f'<g transform="translate(19 8) scale(.66)" stroke-linejoin="round">{horse()}</g></g>')
-    else:
-        for i, d in enumerate(PIECES[name]):
-            out.append(f'<g class="sect" style="--i:{i}"><path d="{d}" fill="{_LIT[i % 2]}"/>'
-                       f'<path d="{d}" fill="{_SHADE[i % 2]}" clip-path="url(#{uid}-r)"/></g>')
-        n = len(PIECES[name])
-        out.append(f'<g class="sect" style="--i:{n}">{_DETAIL[name]}</g>')
-    out.append('</svg>')
-    return ''.join(out)
+def _scene_style(body):
+    used = set(re.findall(r'--il-[a-z0-9-]+', body)) | ({'--il-night'} if 'sc-night' in body else set())
+    return ';'.join(f'{k}:var(--L,{d}) var(--D,{n})' for k, (d, n) in SCENE_PALETTE.items() if k in used)
 
 
-# ---------------------------------------------------------------- hero shards
-# Loose facets drifting behind a hero: the crest's cut-gem language, spread out.
-_SHARDS = [   # small, and kept to the outer edges so they never sit behind text
-    ((3, 12), (8, 5), (10, 14), 'var(--t3)', .20, 0), ((88, 8), (95, 13), (90, 19), 'var(--t2)', .18, 1),
-    ((93, 52), (98, 60), (91, 62), 'var(--t4)', .20, 2), ((2, 74), (7, 70), (6, 80), 'var(--t2)', .16, 3),
-    ((80, 86), (86, 82), (85, 92), 'var(--t3)', .16, 4), ((96, 30), (99, 36), (94, 35), 'var(--accent)', .16, 5),
-    ((6, 40), (9, 46), (4, 47), 'var(--accent)', .14, 6), ((72, 4), (77, 8), (71, 10), 'var(--t4)', .16, 7),
-]
+STREET_TITLE = ('Drawing of a brick shop front with a striped awning on a Baton Rouge street. A work van is parked '
+                'outside, and the State Capitol tower and the river bridge sit on the horizon.')
 
 
-def shards():
-    polys = ''.join(f'<polygon class="shard" style="--i:{i}" fill="{c}" fill-opacity="{o}" points="{_pts([a, b, d])}"/>'
-                    for a, b, d, c, o, i in _SHARDS)
-    return (f'<svg class="shards" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" '
-            f'style="{STYLE}">{polys}</svg>')
+def street(uid, sign='YOUR BUSINESS', title=STREET_TITLE, cls='scene scene-street'):
+    """The shop front on a Baton Rouge street. Home page; small on /start/ and the 404 page."""
+    body = scenes.STREET.replace('{uid}', uid).replace('{sign}', sign)
+    return (f'<svg class="{cls}" viewBox="0 0 600 640" role="img" aria-labelledby="{uid}-title" '
+            f'style="{_scene_style(body)}"><title id="{uid}-title">{title}</title>{body}</svg>')
+
+
+BENCH_LABEL = ('Drawing of a phone ringing on a workbench beside a coffee cup and a tape measure, '
+               'with nobody there to answer it')
+
+
+def bench(uid, cls='scene scene-bench'):
+    """A missed call on the workbench. Home page story, step one."""
+    body = scenes.BENCH.replace('{uid}', uid)
+    return (f'<svg class="{cls}" viewBox="0 0 480 300" role="img" aria-label="{BENCH_LABEL}" '
+            f'style="{_scene_style(body)}">{body}</svg>')

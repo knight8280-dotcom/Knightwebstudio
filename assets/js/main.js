@@ -5,6 +5,11 @@
 (function () {
   'use strict';
 
+  // The head snippet shows every scroll-reveal block if this script has not
+  // started within a few seconds; say that it has, and take the page back.
+  window.kwsReady = true;
+  document.documentElement.classList.add('js');
+
   /* ---------- Site settings — EDIT ME ----------
      Both are off while empty, so nothing half-configured ever ships.
 
@@ -67,10 +72,9 @@
 
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ---------- Crest animations ----------
+  /* ---------- Crest animation ----------
      The header crest builds itself on a visit's first page (the inline head
-     script sets .crest-intro). After that, hovering a crest replays it, and
-     the full crest builds when it scrolls into view. */
+     script sets .crest-intro). After that, hovering the brand replays it. */
   function playCrest(svg) {
     if (!svg || reduceMotion) return;
     document.documentElement.classList.remove('crest-intro');
@@ -82,21 +86,6 @@
     var svg = link.querySelector('.crest');
     if (svg) link.addEventListener('mouseenter', function () { playCrest(svg); });
   });
-  // A crest that arrives with .play (the landing hero) builds on load; only
-  // one without it waits to scroll into view.
-  document.querySelectorAll('.crest-full.play').forEach(function (svg) {
-    svg.addEventListener('mouseenter', function () { playCrest(svg); });
-  });
-  var fullCrest = document.querySelector('.crest-full:not(.play)');
-  if (fullCrest && 'IntersectionObserver' in window && !reduceMotion) {
-    var crestObs = new IntersectionObserver(function (entries) {
-      if (entries[0].isIntersecting) { playCrest(fullCrest); crestObs.disconnect(); }
-    }, { threshold: 0.3 });
-    // Hidden until it builds, so it never shows finished and then blinks out
-    fullCrest.classList.add('crest-wait');
-    crestObs.observe(fullCrest);
-    fullCrest.addEventListener('mouseenter', function () { playCrest(fullCrest); });
-  }
 
   /* ---------- Theme toggle (remembers the choice) ---------- */
   var root = document.documentElement;
@@ -110,17 +99,22 @@
         theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'
       );
     }
+    // Browser chrome matches the paper (day) or the street after dark (night)
     var meta = document.querySelector('meta[name="theme-color"]');
-    if (meta) meta.setAttribute('content', theme === 'dark' ? '#080b14' : '#ffffff');
+    if (meta) meta.setAttribute('content', theme === 'dark' ? '#131722' : '#F6F0E4');
   }
 
+  // The site is light first. A saved choice wins; otherwise a device set to
+  // dark gets the night theme. The inline head script has already set
+  // data-theme before first paint; this keeps the button label and the
+  // browser chrome colour in step with it.
   var storedTheme = null;
   try { storedTheme = localStorage.getItem('theme'); } catch (e) { /* private mode */ }
 
-  if (storedTheme) {
+  if (storedTheme === 'dark' || storedTheme === 'light') {
     applyTheme(storedTheme);
-  } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
-    applyTheme('light');
+  } else {
+    applyTheme(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
   }
 
   if (themeToggle) {
@@ -131,22 +125,32 @@
     });
   }
 
-  /* ---------- Mobile navigation ---------- */
+  /* ---------- Phone menu ----------
+     Below 1100px the menu is a full sheet. While it is open the page behind
+     it cannot scroll and is inert, so Tab stays inside the header. The sheet
+     starts at the header's bottom edge (--nav-top), so its list scrolls under
+     nothing, and focus moves to the first link. */
   var navToggle = document.getElementById('nav-toggle');
   var nav = document.getElementById('nav');
-
-  var navItems = nav ? Array.prototype.slice.call(nav.querySelectorAll('.nav-links li')) : [];
+  var behindNav = Array.prototype.slice.call(document.querySelectorAll('.skip-link, .topbar, main, .site-footer, .mobile-cta'));
 
   function setNavOpen(open) {
-    if (!nav) return;
+    if (!nav || !navToggle) return;
+    var bar = navToggle.closest('.site-header');
+    var list = nav.querySelector('.nav-inner');
+    var atTop = window.scrollY < 4;
+    if (open && bar) nav.style.setProperty('--nav-top', Math.round(bar.getBoundingClientRect().bottom) + 'px');
     nav.classList.toggle('open', open);
     navToggle.setAttribute('aria-expanded', String(open));
     navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-    // Stop the page scrolling behind the overlay
     document.body.style.overflow = open ? 'hidden' : '';
-    navItems.forEach(function (li, i) {
-      li.style.transitionDelay = open ? (0.06 + i * 0.045) + 's' : '0s';
-    });
+    // At the top of the page the strip with the phone number stays in view above the sheet, and stays usable
+    behindNav.forEach(function (el) { el.inert = open && !(atTop && el.classList.contains('topbar')); });
+    if (open) {
+      if (list) list.scrollTop = 0;
+      var first = nav.querySelector('a');
+      if (first) first.focus({ preventScroll: true });
+    }
   }
   function closeNav() { setNavOpen(false); }
 
@@ -167,51 +171,25 @@
     });
 
     // Leaving the breakpoint with the sheet open would strand the scroll lock
-    window.matchMedia('(min-width: 981px)').addEventListener('change', function (e) {
-      if (e.matches) closeNav();
-    });
+    var desktop = window.matchMedia('(min-width: 1100px)');
+    var onDesktop = function (e) { if (e.matches) closeNav(); };
+    if (desktop.addEventListener) desktop.addEventListener('change', onDesktop);
+    else if (desktop.addListener) desktop.addListener(onDesktop);
   }
 
-  /* ---------- Header shadow on scroll + active nav link ---------- */
+  /* ---------- Header scroll state + reading line ---------- */
   var header = document.getElementById('site-header');
   var progress = document.getElementById('scroll-progress');
-  var indicator = document.querySelector('.nav-indicator');
-  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav-links a'));
   var ticking = false;
-
-  function currentNavLink() { return document.querySelector('.nav-links a[aria-current="page"]'); }
-
-  // Desktop only: glide the pill to whichever link is active
-  function moveIndicator(target) {
-    if (!indicator || window.innerWidth <= 980) return;
-    if (!target) { indicator.classList.remove('on'); return; }
-    indicator.style.width = target.offsetWidth + 'px';
-    indicator.style.transform = 'translateX(' + target.offsetLeft + 'px)';
-    indicator.classList.add('on');
-  }
 
   function onScroll() {
     if (header) header.classList.toggle('scrolled', window.scrollY > 8);
-
-
     if (progress) {
       var max = document.documentElement.scrollHeight - window.innerHeight;
       progress.style.transform = 'scaleX(' + (max > 0 ? Math.min(window.scrollY / max, 1) : 0) + ')';
     }
     ticking = false;
   }
-
-  // Hovering previews where the pill would go; leaving restores the active one
-  navLinks.forEach(function (link) {
-    link.addEventListener('mouseenter', function () { moveIndicator(link); });
-  });
-  var navInner = document.querySelector('.nav-inner');
-  if (navInner) navInner.addEventListener('mouseleave', function () {
-    moveIndicator(currentNavLink());
-  });
-  window.addEventListener('resize', function () {
-    moveIndicator(currentNavLink());
-  });
 
   window.addEventListener('scroll', function () {
     if (!ticking) {
@@ -220,7 +198,6 @@
     }
   }, { passive: true });
   onScroll();
-  moveIndicator(currentNavLink());
 
   /* ---------- Reveal on scroll ---------- */
   var revealables = document.querySelectorAll('.reveal');
@@ -231,13 +208,12 @@
     var revealObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry, i) {
         if (!entry.isIntersecting) return;
-        // Stagger siblings so grids cascade rather than pop, but cap the delay —
-        // a large batch (fast scroll, tall viewport) must not leave the last
-        // card hidden for over a second.
-        setTimeout(function () { entry.target.classList.add('visible'); }, Math.min(i, 5) * 70);
+        // A short stagger so a row of cards cascades, capped at 120ms so the
+        // last card is never still faded when the reader reaches it.
+        setTimeout(function () { entry.target.classList.add('visible'); }, Math.min(i, 3) * 40);
         revealObserver.unobserve(entry.target);
       });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0.08, rootMargin: '0px 0px -24px 0px' });
 
     revealables.forEach(function (el) { revealObserver.observe(el); });
   }
@@ -458,6 +434,7 @@
       if (captchaEl) captchaEl.textContent = '';
 
       submitBtn.disabled = true;
+      submitBtn.setAttribute('aria-busy', 'true');
       submitBtn.textContent = 'Sending…';
       setStatus('');
 
@@ -489,6 +466,7 @@
         })
         .finally(function () {
           submitBtn.disabled = false;
+          submitBtn.removeAttribute('aria-busy');
           submitBtn.textContent = 'Send enquiry';
           // Tokens are single-use — without this a second send always fails.
           if (window.hcaptcha) { try { window.hcaptcha.reset(); } catch (e) { /* not rendered */ } }

@@ -7,6 +7,10 @@
 // assets/img/icon-192.png, assets/img/icon-512.png and assets/img/og-image.png
 // (1200×630). The small icons use emblems.favicon_mark(): at 16px, rivets and
 // the glint are noise, so they are left out.
+//
+// Colours and fonts follow assets/css/styles.css: warm paper, ink, brick, with
+// Fraunces (soft) for the headline and Figtree for text. The link-preview image
+// says only what the site says: what we do, that prices are fixed, where we are.
 const path = require('path');
 const fs = require('fs');
 const os = require('os');
@@ -23,15 +27,20 @@ const py = (expr) => execFileSync('python3', ['-c',
 const FAVICON = py('e.favicon_mark()');
 const LOGO = fs.readFileSync(path.join(ROOT, 'assets/img/logo.svg'), 'utf8');
 const CREST = fs.readFileSync(path.join(ROOT, 'assets/img/crest.svg'), 'utf8');
-const SHARDS = py('e.shards()');
+const STREET = py('e.street("og")');
+const PAPER = '#F6F0E4', INK = '#1A2238', INK2 = '#454C61', BRICK = '#A83C26';
 const font = (f) => 'file://' + path.join(ROOT, 'assets/fonts', f);
 
 function page(body, w, h, transparent) {
   return `<!doctype html><html><head><meta charset="utf-8"><style>
-    @font-face { font-family: "Bricolage"; src: url("${font('bricolage-grotesque.woff2')}") format("woff2"); font-weight: 200 800; }
-    @font-face { font-family: "Manrope"; src: url("${font('manrope.woff2')}") format("woff2"); font-weight: 400 800; }
-    html, body { margin: 0; width: ${w}px; height: ${h}px; background: ${transparent ? 'transparent' : '#080b14'}; }
+    @font-face { font-family: "Fraunces"; src: url("${font('fraunces-soft.woff2')}") format("woff2"); font-weight: 100 900; }
+    @font-face { font-family: "Figtree"; src: url("${font('figtree.woff2')}") format("woff2"); font-weight: 300 900; }
+    :root { --L: initial; --D: ; }   /* the drawings' day palette (see the stylesheet's theme switches) */
+    html, body { margin: 0; width: ${w}px; height: ${h}px; background: ${transparent ? 'transparent' : PAPER}; }
     svg { display: block; }
+    .sc-sign { font-family: Fraunces, Georgia, serif; font-weight: 700; font-variation-settings: "SOFT" 100; letter-spacing: .16em; }
+    .sc-open { font-family: Figtree, Arial, sans-serif; font-weight: 800; }
+    .sc-night { opacity: 0; }
   </style></head><body>${body}</body></html>`;
 }
 
@@ -52,7 +61,7 @@ function page(body, w, h, transparent) {
   const sized = (svg, s) => svg.replace('<svg ', `<svg width="${s}" height="${s}" `);
   // Solid tiles keep the crest inside the central ~64%, safe for Android's circular crop
   const tile = (s) => `<div style="width:${s}px;height:${s}px;display:grid;place-items:center;
-      background:radial-gradient(70% 70% at 50% 42%, #17203a, #080b14)">${sized(LOGO, Math.round(s * .64))}</div>`;
+      background:${PAPER}">${sized(LOGO, Math.round(s * .64))}</div>`;
 
   fs.writeFileSync(path.join(ROOT, 'assets/img/apple-touch-icon.png'), await shot(tile(180), 180, 180));
   fs.writeFileSync(path.join(ROOT, 'assets/img/icon-192.png'), await shot(tile(192), 192, 192));
@@ -73,17 +82,19 @@ function page(body, w, h, transparent) {
   });
   fs.writeFileSync(path.join(ROOT, 'favicon.ico'), Buffer.concat([header, ...icos.map(([, p]) => p)]));
 
-  // Link preview: crest on the left, the promise on the right
-  const og = `<div style="position:relative;width:1200px;height:630px;overflow:hidden;
-      background:radial-gradient(60% 80% at 28% 45%, #17203a, #080b14 70%);font-family:Manrope,sans-serif;color:#eef2fb">
-    <div style="position:absolute;inset:0;opacity:.9">${SHARDS.replace('class="shards"', 'class="shards" width="1200" height="630"')}</div>
-    <div style="position:absolute;left:70px;top:95px;width:400px">${CREST.replace('<svg ', '<svg width="400" height="410" ')}</div>
-    <div style="position:absolute;left:520px;top:128px;width:610px">
-      <div style="font:700 22px Manrope;letter-spacing:.14em;text-transform:uppercase;color:#a5b8ff">KnightWebstudio</div>
-      <div style="margin-top:22px;font:700 66px/1.02 Bricolage;letter-spacing:-.04em;font-variation-settings:'wdth' 92">
-        Websites that make your business <span style="color:#6d8bff">impossible to ignore</span></div>
-      <div style="margin-top:30px;font:500 26px/1.4 Manrope;color:#9aa8c7">Custom sites for small businesses, live in as little as 7–10 days, quoted up front.</div>
-      <div style="margin-top:30px;font:700 24px Manrope;color:#46e0c0">knightwebstudio.com</div>
+  // Link preview: the promise on the left, the shop front on the right
+  const og = `<div style="position:relative;width:1200px;height:630px;overflow:hidden;background:${PAPER};font-family:Figtree,sans-serif;color:${INK2}">
+    <div style="position:absolute;left:0;right:0;top:0;height:14px;background:${INK}"></div>
+    <div style="position:absolute;right:64px;top:74px;width:470px">${STREET.replace('<svg ', '<svg width="470" height="501" ')}</div>
+    <div style="position:absolute;left:72px;top:78px;width:560px">
+      <div style="display:flex;align-items:center;gap:16px">${sized(LOGO, 64)}
+        <span style="font:700 34px/1 Fraunces;font-variation-settings:'SOFT' 100;letter-spacing:-.015em;color:${INK}">KnightWebstudio</span></div>
+      <div style="margin-top:44px;font:600 72px/1 Fraunces;font-variation-settings:'SOFT' 100;letter-spacing:-.022em;color:${INK}">
+        Websites that win you customers</div>
+      <div style="margin-top:28px;font:500 27px/1.42 Figtree">Websites, automation and consulting for local businesses. Fixed, published prices.</div>
+      <div style="display:flex;align-items:center;gap:14px;margin-top:34px;font:800 20px/1.3 Figtree;letter-spacing:.12em;text-transform:uppercase;color:${BRICK}">
+        <span style="width:30px;height:3px;border-radius:2px;background:${BRICK}"></span>Baton Rouge, Louisiana</div>
+      <div style="margin:8px 0 0 44px;font:700 24px/1.3 Figtree;color:${INK}">knightwebstudio.com</div>
     </div></div>`;
   fs.writeFileSync(path.join(ROOT, 'assets/img/og-image.png'), await shot(og, 1200, 630));
 

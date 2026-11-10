@@ -1,0 +1,22 @@
+/* Consulting page only. Every rule is scoped with [data-page="consulting"].
+   The calculator below is the canonical one from DESIGN.md ("Calculator"):
+   keep its markup and ids, and add the rest of the page's rules under it. */
+
+/* ---------- Calculator: number fields on the left, the estimate as a receipt on the right ---------- */
+[data-page="consulting"] .calc, [data-page="consulting"] .calc-inputs { display: grid; gap: var(--s-5) var(--gap); align-items: start; }
+[data-page="consulting"] .calc-group legend { width: 100%; margin: 0 0 var(--s-4); padding: var(--s-3) 0 0; border-top: var(--frame); }
+[data-page="consulting"] .calc-group .field { margin-bottom: var(--s-4); }
+[data-page="consulting"] .calc-group .field:last-child { margin-bottom: 0; }
+[data-page="consulting"] .calc .receipt { justify-self: center; width: 100%; }
+/* A number field with its unit: the span goes before the input ($) or after it (%) */
+[data-page="consulting"] .field-unit { display: flex; }
+[data-page="consulting"] .field-unit span { flex: none; display: grid; place-items: center; min-width: var(--tap); border: var(--rule) solid var(--ctl); background: var(--well); color: var(--ink); font-weight: 700; }
+[data-page="consulting"] .field-unit > :first-child { border-radius: var(--r-sm) 0 0 var(--r-sm); }
+[data-page="consulting"] .field-unit > :last-child { border-radius: 0 var(--r-sm) var(--r-sm) 0; }
+[data-page="consulting"] .field-unit span:first-child { border-right: 0; }
+[data-page="consulting"] .field-unit span:last-child { border-left: 0; }
+@media (min-width: 600px) { [data-page="consulting"] .calc-inputs { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 980px) {
+  [data-page="consulting"] .calc { grid-template-columns: minmax(0, 1fr) minmax(0, var(--maxw-card)); gap: var(--gap-lg); }
+  [data-page="consulting"] .calc .receipt { position: sticky; top: calc(var(--header-h) + var(--s-5)); }
+}

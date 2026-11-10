@@ -27,13 +27,17 @@ linked from the footer.
 | `/about/` | First-person About page for Christian Knight: background, how he works, selected work and contact details. The founder photo is intentionally left out for now — add one later with an `<img>` at the top of `.about-wrap` if wanted |
 | `/web-design-baton-rouge/`, `/web-design-gonzales/`, `/web-design-prairieville/`, `/web-design-denham-springs/` | Local service-area pages: unique copy per city, Smilys Softwash as local work, published prices, a short city FAQ, contact + booking CTAs. Linked from the footer's "Areas we serve" column |
 
-Every page also carries the header, footer and (except `/contact/`,
-`/privacy/` and `/terms/`) the sticky mobile CTA — the header's "Get a quote" is hidden
-below 980px.
+Every page also carries the top strip (city and tap-to-call number), the
+header, the footer and (except `/contact/`, `/privacy/`, `/terms/` and the
+checkout pages) the sticky phone bar with a Call button and the booking
+button. Below 1100px the menu is a full-screen sheet and the header's
+"Book a free call" button is hidden. On wide screens the phone number is in
+the top strip, and moves into the header once that strip has scrolled away.
 
-Also built in: dark/light theme toggle (remembers the visitor's choice, and is
-restored by an inline script before first paint so there is no flash), sticky
-header with a sliding active-page marker, mobile menu, scroll reveal
+Also built in: light/dark theme toggle (light is the default; a saved choice
+wins, otherwise a device set to dark gets the night theme; an inline script
+applies it before first paint so there is no flash), sticky
+header, mobile menu, scroll reveal
 animations, `prefers-reduced-motion` support, keyboard accessibility, skip
 link, Open Graph tags for link previews, and JSON-LD structured data for
 Google.
@@ -46,9 +50,14 @@ services/index.html     One directory per page, so URLs are /services/ etc.
 work/  process/  pricing/  faq/  contact/  privacy/  terms/
 404.html                Not-found page
 site.webmanifest        Installable-app metadata and icons
-assets/css/styles.css   All styling (design tokens at the top)
+assets/css/styles.css   The shared design system (tokens at the top, contents list in its header)
+assets/css/pages/       Page-only styles, one file per page, each rule scoped with [data-page="…"]
+assets/fonts/           Fraunces (soft) and Figtree, self-hosted variable WOFF2
 assets/js/main.js       Theme, nav, reveals, form handling
 assets/img/             Project screenshots (work-*.jpg), logo, PNG app icons
+tools/chrome/           The one true copy of the header, footer and phone bar (*.inc)
+tools/sync_chrome.py    Copies that chrome into every page; --check reports drift
+tools/art/              The crest, the seal and the drawings, as code
 favicon.ico             16/32/48px icon for browsers and Google results
 robots.txt              Search engine directives
 sitemap.xml             Sitemap for search engines
@@ -58,13 +67,17 @@ sitemap.xml             Sitemap for search engines
 ## Editing across pages
 
 There is still **no build step** — every page is plain HTML you can open and
-edit. The trade-off is that the header, footer and mobile CTA are duplicated in
-every page. If you change one of those, change it on every page, or they
-will drift. A quick way to check they haven't:
+edit. The trade-off is that the header, footer and phone bar are duplicated in
+every page. Never edit them in a page: edit the partial in `tools/chrome/`
+and copy it out, or the pages will drift.
 
 ```bash
-for f in index.html */index.html; do grep -c 'id="mobile-cta"' $f; done   # 1 each, 0 on contact/privacy
+python3 tools/sync_chrome.py            # write the chrome into every page
+python3 tools/sync_chrome.py --check    # change nothing; fail if any page has drifted
 ```
+
+`tools/sync_chrome.py` also lists which variant each page gets (the standard
+chrome, `/start/` with no menu, the bare 404) and each page's `data-page` name.
 
 Asset and link paths are **root-absolute** (`/assets/…`, `/pricing/`) so the
 same markup works from any directory depth. That relies on the site living at
@@ -90,36 +103,40 @@ The wordmark reads **KnightWebstudio** in full, in the header and footer —
 search for `brand-name` and edit both occurrences.
 
 The mark is the **Charger shield**: a chess knight's head cut into facets in
-five shades of the brand blue, inside a riveted shield with a teal inner
-border. The **full crest** adds crossed swords and a name ribbon for large
-spots. Around them, the site uses a chess-set theme: every sub-page opens with
-its own faceted piece, and loose facets ("shards") drift behind page headers.
+shades of the sign-painter's blue, inside a riveted blue shield with a navy
+field and a gold-leaf inner line. The **full crest** adds crossed swords and a
+name ribbon; it is used for `crest.svg` only.
 
 | Where | What |
 | --- | --- |
 | Header, every page | Charger shield; builds itself on a visit's first page, then again on hover |
-| Footer | Charger shield |
-| Home, closing call to action | Full crest; builds when it scrolls into view |
-| Services / Work / Process / Pricing / FAQ / Contact | Rook / Knight / Pawn / King / Bishop / Queen, stacked in on load; hover makes it hop (the knight makes a knight's move) |
-| Hero and page headers | Drifting shards |
-| 404 | The knight, toppled over |
+| Footer, business card | Charger shield |
+| Home hero | The street scene: a brick shop front signed YOUR BUSINESS, on a Baton Rouge street. It turns to night with the dark theme |
+| Home story | The workbench with a ringing phone |
+| Home hero, pricing head | The round "Fixed prices" seal |
+| Every footer | The Baton Rouge skyline (inline SVG in `tools/chrome/skyline.inc`); after dark its windows and bridge lamps are lit |
 | `assets/img/logo.svg`, `crest.svg` | Standalone copies (logo.svg is the JSON-LD logo) |
 | `favicon.ico`, `apple-touch-icon.png`, `icon-192/512.png`, `og-image.png` | Rendered from the same artwork |
 
-**All of it is drawn in code, in `tools/art/`.** The drawings live in
-`tools/art/emblems.py`. The pages carry them inline (so they can animate)
-between `<!-- art:NAME -->` markers, which are overwritten on every build —
-never edit between them. To change any artwork:
+The chess pieces and drifting "shards" of the earlier design were retired in
+the November 2026 redesign.
+
+**All of it is drawn in code, in `tools/art/`.** The crest and seal live in
+`tools/art/emblems.py`, the two drawings in `tools/art/scenes.py`. The pages
+carry them inline between `<!-- art:NAME -->` markers, which are overwritten
+on every build — never edit between them. To change any artwork:
 
 ```bash
-python3 tools/art/build.py   # rewrites the inline art in every page, logo.svg and crest.svg
-node tools/art/render.js     # re-renders favicon, app icons and the link-preview image (needs Playwright)
+python3 tools/art/build.py              # rewrites the inline art in every page, logo.svg and crest.svg
+python3 tools/art/build.py index.html   # or only the pages named
+node tools/art/render.js                # re-renders favicon, app icons and the link-preview image (needs Playwright)
 ```
 
 The crest keeps fixed colours (the `PALETTE` in `emblems.py`), so it looks the
-same on the dark and light themes, like a printed badge. The animations live at
-the end of `assets/css/styles.css` under "Artwork"; every drawing rests in its
-finished state, so a visitor with reduced motion, or a crawler, sees the
+same by day and at night, like a painted sign. The drawings are themed: each
+carries its own day and night palette (`SCENE_PALETTE`). The crest's build
+animation lives under "Motion" in `assets/css/styles.css`; every drawing rests
+in its finished state, so a visitor with reduced motion, or a crawler, sees the
 complete artwork.
 
 ### 2. Contact details
@@ -219,28 +236,27 @@ misconfiguration. Test from the live site instead.
 To switch providers, change the `action` URL and remove the three hidden
 inputs. Basin and Formspree work with the existing JavaScript unchanged.
 
-### 4. Colours
+### 4. Colours and type
 
-Open `assets/css/styles.css` and edit the four brand variables at the top:
+Everything is set by the tokens at the top of `assets/css/styles.css`. Each
+colour is one line holding both themes, day first and night second:
 
 ```css
---brand:        #6d8bff;   /* primary */
---brand-strong: #2c46c4;   /* button hover, deep accents */
---brand-soft:   #a5b8ff;   /* eyebrow text, icons */
---accent:       #46e0c0;   /* ticks, prices, result lines */
+--paper: var(--L, #F6F0E4) var(--D, #131722);   /* page */
+--ink:   var(--L, #1A2238) var(--D, #F3ECDD);   /* headings */
+--blue:  var(--L, #2C46C4) var(--D, #9DB0FF);   /* pressable: buttons, links */
+--brick: var(--L, #A83C26) var(--D, #F0907A);   /* notice this */
+--gold:  #F0C369;                               /* only on blue or on the footer */
 ```
 
-The light theme has its own overrides in the `[data-theme="light"]` block just
-below. Three tokens differ deliberately between themes and are easy to break:
+The colour rule: blue means pressable, brick means "notice this", gold only
+ever sits on blue or on the dark footer. Nothing inside an illustration is
+blue, so that nothing blue is ever unpressable. Light is the default theme; night is
+the same street after closing. Headings, prices and numerals are set in
+Fraunces (soft, weight 600); text is Figtree.
 
-- `--brand-soft` and `--accent` are *darker* in light theme — their dark-theme
-  values fail contrast on a light background.
-- `--on-brand` is the text colour used **on** brand-filled surfaces (buttons,
-  the logo mark, the "Most popular" flag). It is dark ink in dark theme,
-  because white on the dark theme's brand blue is only 3.1:1.
-- `--band` is the CTA band's background, deep enough to carry white in both.
-
-If you change the brand colour, re-check all three.
+If you change a colour, re-check contrast in both themes: text needs 4.5:1,
+large text and control outlines 3:1.
 
 ### 5. Your work
 
@@ -382,9 +398,10 @@ that says something different costs trust.
 ### 6. Social preview image
 
 `assets/img/og-image.png` (1200×630) is what appears when someone shares your
-link on LinkedIn, WhatsApp or Slack. It carries the logo, the headline and the
-domain. To regenerate it after a copy or brand change, rebuild it from the same
-markup used to produce it and re-export at 1200×630.
+link on LinkedIn, WhatsApp or Slack. It carries the crest, the name, one line
+about what we do, the city and the domain, beside the street scene. It is
+drawn by `tools/art/render.js`; edit the text there and run
+`node tools/art/render.js` to regenerate it.
 
 ### 6b. Booking link and analytics
 
@@ -569,6 +586,7 @@ Validate changes with the [Rich Results Test](https://search.google.com/test/ric
 
 ## Browser support
 
-Current Chrome, Edge, Firefox and Safari. Uses `color-mix()` and
-`backdrop-filter`; on older browsers the layout and content stay fully intact,
+Current Chrome, Edge, Firefox and Safari. The few newer features (`subgrid`
+for the package table, CSS masks for the brush underline) each have a plain
+fallback, so on older browsers the layout and content stay fully intact and
 only some visual polish falls away.
