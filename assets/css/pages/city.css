@@ -1,52 +1,47 @@
-/* The four local landing pages share this file. Every rule is scoped with [data-page="city"].
-   The pages are built from shared parts; this is what they add. */
+/* The four local landing pages share this file: built from shared parts, this is what they add. */
 
-/* The head: the town's name is the picture, set as wide as the column like a painted fascia.
-   --em (on the h1) is the measured width of that name in em. The gap under it is in em so it clears the brush. */
-[data-page="city"] .city-title { max-width: none; }
+/* Head: the town's name fills the column; --em (on the h1) is its measured width in em, with 3% air.
+   It wraps only if a reader widens the letter spacing. The brush sits behind the letters and paints in once. */
+[data-page="city"] .city-title { max-width: none; container-type: inline-size; }
 [data-page="city"] .city-title > span { display: block; font-size: var(--fs-title); line-height: 1.2; letter-spacing: -.015em; }
-[data-page="city"] .city-title > .city-name {
-  margin-bottom: .24em;
-  font-size: var(--fs-h1); font-size: min(var(--fs-figure), calc((100vw - 2 * var(--gutter)) / var(--em)), calc(var(--maxw) / var(--em)));
-  line-height: 1; letter-spacing: -.03em; white-space: nowrap;
-}
-/* The brush stroke is painted under the name once, as the page opens */
-[data-page="city"] .city-name .mark::after { transform-origin: 0 50%; animation: kws-city-brush var(--t-slow) var(--ease) var(--t) both; }
+[data-page="city"] .city-title > .city-name { margin-bottom: .24em; font-size: var(--fs-h1); line-height: 1; letter-spacing: -.03em; }
+@supports (width: 1cqi) { [data-page="city"] .city-title > .city-name { font-size: min(var(--fs-figure), calc(100cqi / var(--em))); } }
+[data-page="city"] .city-name .mark { display: inline-block; white-space: normal; overflow-wrap: anywhere; isolation: isolate; }
+[data-page="city"] .city-name .mark::after { bottom: -.22em; z-index: -1; transform-origin: 0; animation: kws-city-brush var(--t-slow) var(--ease) var(--t) both; }
 @keyframes kws-city-brush { from { transform: scaleX(0); } }
-/* On a phone the head has one button, so the prices stay on the first screen. The enquiry button is in the closing band. */
+/* A phone's head has one button, so the prices stay on the first screen (the enquiry button is in the closing band).
+   From 1280 the intro sits left and the action right, on the line the columns below share. */
 @media (max-width: 599.98px) { [data-page="city"] .page-head .btn + .btn { display: none; } }
+@media (min-width: 1280px) {
+  [data-page="city"] .page-head .container { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--gap-lg); align-items: start; }
+  [data-page="city"] .page-head .eyebrow, [data-page="city"] .city-title { grid-column: 1 / -1; }
+  [data-page="city"] .page-head .lede { grid-row: span 2; }
+  [data-page="city"] .page-head .btn-row { margin-top: 0; }
+}
 
-/* The in-person card. "You are here" in its list of towns; its stamp hangs off the bottom corner, as on the job ticket. */
-[data-page="city"] .pills [aria-current] { display: inline-flex; align-items: center; gap: var(--s-1); background: var(--ink); color: var(--paper); }
-[data-page="city"] .card { position: relative; padding-bottom: var(--s-7); }
-[data-page="city"] .card .stamp { position: absolute; right: var(--pad); bottom: calc(-1 * var(--s-5)); background: var(--card); }
-/* SHARED-CANDIDATE: .card does not re-point --well, so at night a pill, flag or flat label inside a card has no fill (paper-2 on card). */
-[data-page="city"] .card { --well: var(--paper-3); }
+/* The in-person card: a stamp on its corner, as on the job ticket, and a brick pin on this town.
+   SHARED-CANDIDATE: .card does not re-point --well (a flat label on a card has no fill at night);
+   .pills wraps greedily and strands its last label, so here the rows are balanced. */
+[data-page="city"] .city-meet { --well: var(--paper-3); position: relative; padding-bottom: calc(var(--fs-cap) * 4); }
+[data-page="city"] .city-meet .stamp { position: absolute; right: var(--pad); bottom: calc(-1 * var(--s-5)); background: var(--card); }
+[data-page="city"] .pills { display: block; margin-bottom: calc(-1 * var(--s-2)); text-wrap: balance; }
+[data-page="city"] .pills li { display: inline-flex; align-items: center; gap: var(--s-1); margin: 0 var(--s-2) var(--s-2) 0; vertical-align: top; }
+[data-page="city"] .pills .ico { color: var(--brick); }
 
-/* SHARED-CANDIDATE: a .steps row has no spacing for a .ticks list (the price list has).
-   On a phone the numeral sits beside the title and the text takes the full column. */
+/* SHARED-CANDIDATE: .steps has no spacing for a .ticks list. On a phone the numeral sits beside the title. */
 [data-page="city"] .steps .ticks { margin-top: var(--s-3); color: var(--ink); font-size: var(--fs-sm); }
 @media (max-width: 599.98px) {
   [data-page="city"] .steps > li > div { display: contents; }
-  [data-page="city"] .steps :is(p, .ticks) { grid-column: 1 / -1; }
+  [data-page="city"] .steps p, [data-page="city"] .steps .ticks { grid-column: 1 / -1; }
 }
 
-/* One project, so the case row needs no rule above it; its columns follow the split heading over it */
-[data-page="city"] .case { padding-block: 0; border-top: 0; }
-@media (min-width: 980px) { [data-page="city"] .case { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); } }
-
-/* The board: its claim is a sentence here, the care-plan line reads as one sentence on a phone,
-   and the foot holds the consulting prices beside the button */
-[data-page="city"] .board-head > p { max-width: 20em; }
-[data-page="city"] .board-foot { display: grid; gap: var(--s-5) var(--gap-lg); align-items: center; }
-[data-page="city"] .board-foot p { max-width: var(--measure); margin: 0; font-size: var(--fs-sm); line-height: 1.5; }
-@media (max-width: 979.98px) {
-  [data-page="city"] .board-extras div { display: block; }
-  [data-page="city"] .board-extras div::after { display: none; }
-  [data-page="city"] .board-extras :is(dt, dd) { display: inline; }
-}
-@media (min-width: 600px) { [data-page="city"] .board-foot { justify-items: start; } }
-@media (min-width: 980px) { [data-page="city"] .board-foot { grid-template-columns: minmax(0, 1fr) auto; } }
+/* The board: the care-plan line reads as one sentence */
+[data-page="city"] .board-extras div { display: block; }
+[data-page="city"] .board-extras div::after { display: none; }
+[data-page="city"] .board-extras div > * { display: inline; }
 
 /* The enquiry promise sits under the closing band's buttons */
 [data-page="city"] .cta-copy .fine { margin: var(--s-5) 0 0; font-size: var(--fs-sm); }
+
+/* Short lines never end on a single word */
+[data-page="city"] :is(.board-head p, .tier-plan, .board-extras div, .board-foot .btn, .faq-item summary, .cta-copy .fine) { text-wrap: balance; }

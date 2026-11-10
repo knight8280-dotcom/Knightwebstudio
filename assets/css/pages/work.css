@@ -1,16 +1,17 @@
 /* Work page only. Every rule is scoped with [data-page="work"].
-   Three case rows from the shared parts; this adds the pressable browser frame and the "what was built" list. */
+   Three case rows from the shared parts, one band each; this adds the pressable browser frame and the "what we built" list. */
 
-/* The first row sits straight under the page head and the last straight above the closing band: no rule, no doubled gap */
-[data-page="work"] .case:first-child { padding-top: 0; border-top: 0; }
-[data-page="work"] .case:last-child { padding-bottom: 0; }
+/* Each row has a band to itself: the band does the spacing, so the row needs no rule and no padding */
+[data-page="work"] .case { row-gap: var(--s-5); padding-block: 0; border-top: 0; }
+[data-page="work"] .case-copy { text-wrap: pretty; }
 [data-page="work"] .case .eyebrow { text-wrap: balance; }
 [data-page="work"] .case .ticks { gap: var(--s-2); color: var(--ink); font-size: var(--fs-sm); }
 /* The link is already a 44px target; the row needs no padding of its own */
 [data-page="work"] .case-facts div:last-child { padding-block: 0; }
 
-/* SHARED-CANDIDATE: a browser frame that is a link to the live site (the print already is one) */
-[data-page="work"] a.browser { display: block; color: var(--ink-3); text-decoration: none; transition: var(--move); }
+/* SHARED-CANDIDATE: a browser frame that is a link to the live site (the print already is one).
+   It keeps the paper well on a sand band, where the sand's darker well drops the address under AA (4.1:1) */
+[data-page="work"] a.browser { --well: var(--paper-2); display: block; color: var(--ink-3); text-decoration: none; transition: var(--move); }
 [data-page="work"] .browser-bar .ico { margin-left: auto; }
 
 /* Tablet: the write-up sits under the picture in two columns, the name beside what was built */
@@ -26,3 +27,4 @@
 @media (hover: hover) {
   [data-page="work"] a.browser:hover { color: var(--blue); transform: translateY(calc(-1 * var(--s-1))); box-shadow: var(--shadow-3); }
 }
+[data-page="work"] a.browser:active { transform: translateY(var(--hair)); box-shadow: var(--shadow-1); }

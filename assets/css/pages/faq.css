@@ -3,15 +3,16 @@
 
 /* A group: its heading, then its questions */
 [data-page="faq"] .faq { margin-top: var(--s-4); }
-/* An answer fades in once when its question is opened */
-[data-page="faq"] .faq-item[open] .faq-body { animation: kws-fade var(--t) var(--ease) both; }
+/* An answer fades in once when its question is opened (not the one that is open on arrival) */
+[data-page="faq"] .faq-group ~ .faq-group [open] .faq-body, [data-page="faq"] .faq-item ~ [open] .faq-body { animation: kws-fade var(--t) var(--ease) both; }
 
-/* SHARED-CANDIDATE: a short contents list. Below 980px the links wrap as a row or two
+/* SHARED-CANDIDATE: a short contents list. Below 980px the links sit two by two, then in one row,
    instead of one ruled row each, so the first questions are on a phone's first screen. */
 @media (max-width: 979.98px) {
-  [data-page="faq"] .toc ol { display: flex; flex-wrap: wrap; gap: 0 var(--s-5); padding-block: var(--s-1); border-bottom: var(--edge); }
+  [data-page="faq"] .toc ol { display: grid; grid-template-columns: auto auto; justify-content: start; gap: 0 var(--s-4); padding-block: var(--s-1); border-bottom: var(--edge); }
   [data-page="faq"] .toc a { min-height: var(--tap); padding-block: var(--s-2); border-bottom: 0; }
 }
+@media (min-width: 760px) and (max-width: 979.98px) { [data-page="faq"] .toc ol { display: flex; } }
 /* From 980px the list is a rail beside the questions, with a way to ask under it.
    The rail starts a little lower so its top rule lines up with the first group's. */
 @media (min-width: 980px) {

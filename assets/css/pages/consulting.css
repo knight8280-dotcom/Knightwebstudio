@@ -31,38 +31,84 @@
   [data-page="consulting"] .calc-group input { padding-inline: var(--s-3); }
 }
 
-/* ---------- What each setup does: name, price and what it saves | the mock | the numbered steps ---------- */
-[data-page="consulting"] .auto { --phone-w: 18rem; --mock: 20rem; display: grid; gap: var(--s-4) var(--gap-lg); }
-[data-page="consulting"] .auto + .auto, [data-page="consulting"] .auto-own { margin-top: var(--s-5); padding-top: var(--s-5); border-top: var(--edge); }
+/* SHARED-CANDIDATE: a box with a unit takes its focus ring around the whole box, so the unit does not cut the ring */
+[data-page="consulting"] .field-unit:focus-within { outline: var(--focus-w) solid var(--focus); outline-offset: var(--s-0); border-radius: var(--r-sm); }
+[data-page="consulting"] .field-unit input:focus-visible { outline: none; }
+/* On a phone a box with a unit still holds six figures */
+@media (max-width: 599.98px) { [data-page="consulting"] .field-unit input { padding-inline: var(--s-2); } }
+/* From 600px each group is one ruled line of the worksheet: its two numbers side by side, their boxes level */
+@media (min-width: 600px) {
+  [data-page="consulting"] .calc-inputs { grid-template-columns: minmax(0, 1fr); }
+  [data-page="consulting"] .calc-group { --pair: 11rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(var(--pair), 1fr)); gap: var(--s-4) var(--gap); }
+  [data-page="consulting"] .calc-group .field { grid-template-rows: 1fr auto; margin-bottom: 0; }
+}
+
+/* ---------- The example week: the time sheet first; from 980px the figure stands on the left ---------- */
+@media (min-width: 980px) { [data-page="consulting"] .week > .bigfig { order: -1; } }
+/* The bars are drawn once, when the sheet is seen (on screen only: a printed sheet always has them) */
+@media screen {
+  .js [data-page="consulting"] .sheet .ledger-bar span { transform-origin: 0 50%; transition: transform var(--t-slow) var(--ease) var(--t); }
+  .js [data-page="consulting"] .sheet:not(.visible) .ledger-bar span { transform: scaleX(0); }
+}
+
+/* ---------- What each automation does: name, price and what it saves | the mock | the numbered steps ---------- */
+[data-page="consulting"] .auto { --phone-w: 18rem; --mock: 20rem; --name: 9rem; display: grid; gap: var(--s-3) var(--gap-lg); }
+[data-page="consulting"] .auto + .auto { margin-top: var(--s-5); padding-top: var(--s-4); border-top: var(--edge); }
+/* The price tag stays beside the name; a long name takes a second line */
 [data-page="consulting"] .auto-head { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-3) var(--s-4); }
-[data-page="consulting"] .auto-saves, [data-page="consulting"] .auto-own p { max-width: var(--measure); margin: 0; font-size: var(--fs-sm); line-height: 1.5; }
+[data-page="consulting"] .auto-head h3 { flex: 1 1 var(--name); }
+[data-page="consulting"] .auto-head .tag { flex: none; }
+[data-page="consulting"] .auto-saves { max-width: var(--measure); margin: 0; font-size: var(--fs-sm); line-height: 1.5; }
+[data-page="consulting"] .auto-own p { max-width: var(--measure); margin: 0; font-size: var(--fs-lede); line-height: 1.52; }
+[data-page="consulting"] .auto .fig { gap: var(--s-4); }
 [data-page="consulting"] .auto :is(.cal, .leads) { width: min(100%, var(--mock)); }
 [data-page="consulting"] .notices { display: grid; gap: var(--s-2); justify-items: center; width: 100%; }
 /* SHARED-CANDIDATE: a figure marker on a thread note (the missed-call pill) pins to its corner, as it does on a bubble */
 [data-page="consulting"] .thread-note { position: relative; }
+@media (min-width: 600px) { [data-page="consulting"] .auto-head h3 { flex: none; } }
 @media (min-width: 760px) {
-  [data-page="consulting"] .auto + .auto, [data-page="consulting"] .auto-own { margin-top: var(--stack); padding-top: var(--stack); }
-  [data-page="consulting"] .auto .fig { grid-template-columns: var(--mock) minmax(0, 1fr); align-items: start; }
+  [data-page="consulting"] .auto { row-gap: var(--s-4); }
+  [data-page="consulting"] .auto + .auto { margin-top: var(--stack); padding-top: var(--stack); }
+  [data-page="consulting"] .auto .fig { grid-template-columns: var(--mock) minmax(0, 1fr); align-items: start; gap: var(--gap-lg); }
 }
 @media (min-width: 1100px) {
   [data-page="consulting"] .auto { grid-template-columns: minmax(0, 3fr) minmax(0, 8fr); grid-template-rows: auto 1fr; }
+  [data-page="consulting"] .auto-head { flex-direction: column; align-items: flex-start; }
   [data-page="consulting"] .auto .fig { grid-area: 1 / 2 / 3 / 3; }
+  [data-page="consulting"] .auto-own { grid-template-rows: auto; }
 }
 
 /* ---------- Four steps, each with its prices: a step list that holds price-list rows ---------- */
 [data-page="consulting"] .path > li > div { display: grid; gap: var(--s-3); justify-items: start; }
 [data-page="consulting"] .path > li > div > p { margin: 0; }
+/* A step's name is one size, with a price beside it or without */
+[data-page="consulting"] .path h3 { font-size: var(--fs-h3); }
 [data-page="consulting"] .path .pl-row, [data-page="consulting"] .path .pricelist { width: 100%; }
-[data-page="consulting"] .path .pl-row ~ p, [data-page="consulting"] .path .ticks { font-size: var(--fs-sm); line-height: 1.5; }
+[data-page="consulting"] .path :is(p, .ticks) { font-size: var(--fs-sm); line-height: 1.5; }
 [data-page="consulting"] .path .ticks { color: var(--ink); }
 [data-page="consulting"] .path-more { grid-column: 2; margin-top: var(--s-4); }
+/* A price with nothing under it: the automations are shown, step by step, further up the page */
+[data-page="consulting"] .setups > li:not(:first-child) { padding-block: var(--s-3); }
 /* On a phone the numeral shares a line with the step's name, and everything under it takes the full width */
 @media (max-width: 599.98px) {
   [data-page="consulting"] .path > li { grid-template-columns: auto minmax(0, 1fr); gap: var(--s-3); }
   [data-page="consulting"] .path > li > div { display: contents; }
   [data-page="consulting"] .path > li > div > :not(:first-child), [data-page="consulting"] .path-more { grid-column: 1 / -1; margin-top: 0; }
+  [data-page="consulting"] .path .ticks { gap: var(--s-2); }
 }
-/* The two monthly plans side by side */
+/* The two monthly plans side by side where there is room, their lines level where the browser can */
 @media (min-width: 760px) {
-  [data-page="consulting"] .plans { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--gap); }
+  [data-page="consulting"] .plans { --plan: 17rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(var(--plan), 1fr)); column-gap: var(--gap); }
+  @supports (grid-template-rows: subgrid) {
+    [data-page="consulting"] .plans > li { display: grid; grid-row: span 4; grid-template-rows: subgrid; justify-items: start; align-items: start; }
+  }
+}
+
+/* ---------- The bundle: the receipt stands in the middle of its half, level with the words ---------- */
+[data-page="consulting"] #bundle { align-items: center; }
+[data-page="consulting"] #bundle .receipt { justify-self: center; }
+/* On a phone the button fills the line, and the tilted receipt keeps clear of the panel's edge */
+@media (max-width: 599.98px) {
+  [data-page="consulting"] #bundle .btn { justify-self: stretch; }
+  [data-page="consulting"] #bundle .receipt { margin-bottom: var(--s-3); }
 }

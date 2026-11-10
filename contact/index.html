@@ -434,9 +434,9 @@
            booking URL is set in assets/js/main.js (SITE_CONFIG.bookingUrl). -->
       <div class="page-head-aside talk">
         <p class="label">Rather talk it through first?</p>
-        <a class="talk-tel display" href="tel:+12252550837"><span class="sr-only">Call </span>(225) 255-0837</a>
+        <a class="talk-tel display" href="tel:+12252550837"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg><span class="sr-only">Call </span>(225) 255-0837</a>
         <p class="fine">Mon–Fri, 9am–6pm Central Time</p>
-        <a class="btn booking-only" href="/contact/" data-booking hidden>Book a 30-minute call</a>
+        <a class="btn booking-only" href="/contact/" data-booking hidden>Book a free 30-minute call</a>
       </div>
     </div>
   </section>
@@ -454,8 +454,8 @@
         <input type="hidden" name="access_key" value="37657289-4131-45f2-8b25-94377be507be">
         <input type="hidden" name="subject" value="New enquiry from knightwebstudio.com">
         <input type="hidden" name="from_name" value="KnightWebstudio website">
-        <p class="ticket-head" aria-hidden="true"><span>Enquiry form</span><span>KnightWebstudio</span></p>
-        <p class="help form-key">We need the fields marked <span class="req">*</span> to reply.</p>
+        <!-- The ticket's printed head doubles as the key to the asterisk. Screen readers hear "required" on each field instead. -->
+        <p class="ticket-head" aria-hidden="true"><span>Enquiry form</span><span><span class="req">*</span> Needed to reply</span></p>
 
         <div class="field-row">
           <div class="field">
@@ -518,11 +518,10 @@
         </fieldset>
 
         <div class="field">
-          <label for="message">Project details <span class="req" aria-hidden="true">*</span></label>
-          <textarea id="message" name="message" rows="5" required
+          <label for="message">Project details <span class="req" aria-hidden="true">*</span> <span class="opt">A few lines is plenty</span></label>
+          <textarea id="message" name="message" rows="4" required
                     placeholder="What does your business do, and what do you want help with: a website, more reviews, fewer missed calls, less admin?"
-                    aria-describedby="message-help message-error"></textarea>
-          <p class="help" id="message-help">A few lines is plenty.</p>
+                    aria-describedby="message-error"></textarea>
           <p class="error" id="message-error" role="alert"></p>
         </div>
 
@@ -543,7 +542,8 @@
         <button class="btn btn-primary btn-lg btn-block" type="submit" id="submit-btn">Send enquiry</button>
         <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
         <p class="form-fine">We reply within one business day. Your details are never shared or sold.</p>
-        <p class="stamp" aria-hidden="true">No<br>obligation</p>
+        <!-- Decorative: the lede says the same. It lands once, when the foot of the ticket scrolls into view. -->
+        <p class="stamp reveal" aria-hidden="true">No<br>obligation</p>
       </form>
 
       <div class="contact-side">
@@ -563,7 +563,7 @@
           </li>
         </ol>
 
-        <h2 class="label">Contact details</h2>
+        <h2 class="sr-only">Contact details</h2>
         <dl class="case-facts">
           <div><dt>Email</dt><dd><a href="mailto:knightwebstudio1@gmail.com">knightwebstudio1@gmail.com</a></dd></div>
           <div><dt>Where</dt><dd>Based in Baton Rouge, Louisiana. Meet in person anywhere in Greater Baton Rouge, or work with us from anywhere.</dd></div>

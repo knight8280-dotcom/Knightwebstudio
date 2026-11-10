@@ -445,8 +445,8 @@
       <nav class="toc" aria-labelledby="toc-title">
         <p class="label" id="toc-title">On this page</p>
         <ol>
-          <li><a href="#how"><span class="toc-name">What each setup does</span><span class="dots" aria-hidden="true"></span><span class="toc-price">$500, $750 or $1,500</span></a></li>
-          <li><a href="#process"><span class="toc-name">Four steps, no surprises</span><span class="dots" aria-hidden="true"></span><span class="toc-price">Free check · $350 audit</span></a></li>
+          <li><a href="#how"><span class="toc-name">What each automation does</span><span class="dots" aria-hidden="true"></span><span class="toc-price">$750 or $1,500 per setup</span></a></li>
+          <li><a href="#process"><span class="toc-name">Four steps, with every price</span><span class="dots" aria-hidden="true"></span><span class="toc-price">Free check · $350 audit</span></a></li>
           <li><a href="#plans"><span class="toc-name">Monthly plans and the Launch bundle</span><span class="dots" aria-hidden="true"></span><span class="toc-price">$500 or $1,000 a month · $3,000</span></a></li>
         </ol>
       </nav>
@@ -456,17 +456,11 @@
           <p class="eyebrow">Why automate</p>
           <h2>The hours that disappear every week</h2>
         </div>
-        <div class="stack">
-          <p class="section-sub">Surveys of small business owners have found admin taking 11 to 16 hours of their week. Most of it is the same handful of small jobs. One at a time they seem small. Added up, they cost you a working week every couple of months.</p>
-          <p class="fine">Survey figures: Time etc and Censuswide, 251 US business owners (2023), about 36% of a 45.5-hour week spent on admin; American Express and Small Business Saturday UK, 1,000 owners, 11 hours a week.</p>
-        </div>
+        <p class="section-sub">Surveys of small business owners have found admin taking 11 to 16 hours of their week. Most of it is the same handful of small jobs. One at a time they seem small. Added up, they cost you a working week every couple of months.</p>
       </header>
 
-      <div class="split split-even">
-        <aside class="bigfig reveal">
-          <p class="bigfig-num">About <b>200</b> hours a year, in this example: five 40-hour weeks.</p>
-          <p class="note"><span class="flag">Example</span>These are example numbers to show the arithmetic, not a measurement of your business. You still answer the replies yourself; the automation does the chasing, copying and reminding. In a Growth Audit we work it out from your real numbers.</p>
-        </aside>
+      <!-- The time sheet first, then what it adds up to. From 980px the figure stands on the left. -->
+      <div class="split split-even week">
         <div class="sheet reveal">
           <table class="ledger" role="table">
             <caption>An example week for a small service business</caption>
@@ -485,22 +479,27 @@
             </tfoot>
           </table>
         </div>
+        <aside class="bigfig reveal">
+          <p class="bigfig-num">About <b>200</b> hours a year, in this example: five 40-hour weeks.</p>
+          <p class="note"><span class="flag">Example</span>These are example numbers to show the arithmetic, not a measurement of your business. You still answer the replies yourself; the automation does the chasing, copying and reminding. In a Growth Audit we work it out from your real numbers.</p>
+          <p class="fine">Survey figures: Time etc and Censuswide, 251 US business owners (2023), about 36% of a 45.5-hour week spent on admin; American Express and Small Business Saturday UK, 1,000 owners, 11 hours a week.</p>
+        </aside>
       </div>
     </div>
   </section>
 
   <!-- ===================== HOW EACH AUTOMATION WORKS: a mock with numbered steps ===================== -->
   <section class="section section-sand" id="how">
-    <div class="container" id="services">
+    <div class="container">
       <header class="section-head section-head-split reveal">
-        <h2>What each setup does, step by step</h2>
+        <h2>What each automation does, step by step</h2>
         <p class="section-sub">No new habits to learn. Each automation watches for one thing, like a missed call, a new enquiry or a finished job, and does the next step for you. It all runs on accounts in your name.</p>
       </header>
 
       <!-- 1. Missed-call text-back: a phone -->
       <article class="auto reveal">
         <header class="auto-head">
-          <h3>Missed-call text-back</h3>
+          <h3><span class="nowrap">Missed-call</span> <span class="nowrap">text-back</span></h3>
           <p class="tag">$750</p>
         </header>
         <figure class="fig">
@@ -574,7 +573,7 @@
       <!-- 3. Lead follow-up system: one list of enquiries -->
       <article class="auto reveal">
         <header class="auto-head">
-          <h3>Lead follow-up system</h3>
+          <h3>Lead <span class="nowrap">follow-up</span> system</h3>
           <p class="tag">$1,500</p>
         </header>
         <figure class="fig">
@@ -584,7 +583,7 @@
               <ul aria-hidden="true">
                 <li class="seq" style="--n:1"><b class="fig-n">1</b><span class="lead-src">Website form · Today</span><span class="lead-what">New roof estimate</span><span class="pill pill-new">New</span></li>
                 <li class="seq" style="--n:2"><b class="fig-n">2</b><span class="lead-src">Missed call · Monday</span><span class="lead-what">Leaking kitchen sink</span><span class="pill">Quote sent</span></li>
-                <li class="seq" style="--n:3"><b class="fig-n">3</b><span class="lead-src">Google · Last week</span><span class="lead-what">Fence repair quote</span><span class="pill pill-go">Follow-up sent · 2 days</span></li>
+                <li class="seq" style="--n:3"><b class="fig-n">3</b><span class="lead-src">Google · Last week</span><span class="lead-what">Fence repair</span><span class="pill pill-go">Follow-up sent · 2 days</span></li>
                 <li class="seq" style="--n:4"><b class="fig-n">4</b><span class="lead-src">Facebook · Last week</span><span class="lead-what">Gutter cleaning</span><span class="pill pill-go">Done · review requested</span></li>
               </ul>
             </div>
@@ -643,17 +642,9 @@
         <p class="auto-saves"><strong>Saves:</strong> the evenings spent at the desk on email and paperwork. Mapped, built and tested on your accounts, with a recorded walkthrough and 30 days of fixes.</p>
       </article>
 
-      <!-- 5. Google profile & reviews: no automation, so no mock -->
-      <article class="auto reveal">
-        <header class="auto-head">
-          <h3>Google profile &amp; reviews</h3>
-          <p class="tag">$500</p>
-        </header>
-        <p class="auto-saves">Your Google Business Profile filled out properly: categories, services, hours, photos and booking link. Listings made consistent on Apple Maps, Bing, Yelp and Facebook. A simple way to ask every happy customer for a review, with a review link, QR code and reply templates.</p>
-      </article>
-
-      <div class="auto-own reveal">
-        <p><strong>We run KnightWebstudio the same way:</strong> our own prospecting, follow-up emails and lead tracking run on the same kind of automation we set up for clients.</p>
+      <div class="auto auto-own reveal">
+        <h3>We run KnightWebstudio the same way</h3>
+        <p>Our own prospecting, follow-up emails and lead tracking run on the same kind of automation we set up for clients.</p>
       </div>
     </div>
   </section>
@@ -772,13 +763,23 @@
             </ul>
           </li>
 
-          <li class="reveal">
+          <li class="reveal" id="services">
             <span class="steps-no" aria-hidden="true">03</span>
             <div>
               <h3>Setup</h3>
               <p>Pick only the pieces your business needs. We build what you choose on your own accounts and test it with you. Most setups are live within 2 weeks.</p>
-              <p class="fine">Setup projects are 50% to start and 50% when they go live. Software and texting fees are paid straight to the provider. You keep it all if we stop working together. The details are in our <a href="/terms/">terms</a>.</p>
             </div>
+            <ul class="pricelist setups path-more">
+              <li>
+                <div class="pl-row"><h4 class="pl-name">Google profile &amp; reviews</h4><span class="dots" aria-hidden="true"></span><span class="pl-price">$500</span></div>
+                <p>Your Google Business Profile filled out properly: categories, services, hours, photos and booking link. Listings made consistent on Apple Maps, Bing, Yelp and Facebook. A simple way to ask every happy customer for a review, with a review link, QR code and reply templates.</p>
+              </li>
+              <li><div class="pl-row"><h4 class="pl-name">Missed-call text-back</h4><span class="dots" aria-hidden="true"></span><span class="pl-price">$750</span></div></li>
+              <li><div class="pl-row"><h4 class="pl-name">Online booking &amp; reminders</h4><span class="dots" aria-hidden="true"></span><span class="pl-price">$750</span></div></li>
+              <li><div class="pl-row"><h4 class="pl-name">Lead follow-up system</h4><span class="dots" aria-hidden="true"></span><span class="pl-price">$1,500</span></div></li>
+              <li><div class="pl-row"><h4 class="pl-name">Custom automation</h4><span class="dots" aria-hidden="true"></span><span class="pl-price">$1,500 per workflow</span></div></li>
+            </ul>
+            <p class="fine path-more">Setup projects are 50% to start and 50% when they go live. Software and texting fees are paid straight to the provider. You keep it all if we stop working together. The details are in our <a href="/terms/">terms</a>.</p>
           </li>
 
           <li class="reveal" id="plans">
@@ -813,7 +814,7 @@
                 <a class="more-link" href="/contact/?package=partner">Ask about Partner<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a>
               </li>
             </ul>
-            <p class="fine path-more">No long-term contract: cancel or change with 10 days' written notice, no fee.</p>
+            <p class="fine path-more">No long-term contract: cancel or change with 10 days' written notice, no&nbsp;fee.</p>
           </li>
         </ol>
       </div>

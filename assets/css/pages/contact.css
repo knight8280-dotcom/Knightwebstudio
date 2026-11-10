@@ -1,44 +1,49 @@
-/* Contact page only. Every rule is scoped with [data-page="contact"].
-   The form is a job ticket; the rest is shared parts. */
+/* Contact page only. The form is an enquiry ticket; the rest is shared parts. */
 
-/* The head's one object: the phone number, set like a painted sign */
-[data-page="contact"] .talk { justify-items: start; justify-self: start; gap: var(--s-2); }
-[data-page="contact"] .talk > * { margin: 0; }
-[data-page="contact"] .talk-tel { display: inline-flex; align-items: center; min-height: var(--tap); color: var(--ink); font-size: var(--fs-h2); line-height: 1; letter-spacing: -.02em; white-space: nowrap; text-decoration-color: var(--blue); text-decoration-thickness: var(--bold); text-underline-offset: .16em; }
-[data-page="contact"] .talk .btn { margin-top: var(--s-3); }
-/* main.js shows the booking button; its row is held open so nothing moves when it arrives */
-.js [data-page="contact"] .talk { grid-template-rows: auto auto auto calc(var(--btn-h) + var(--s-3)); }
+/* The head's one object: the phone number, set like a painted sign.
+   main.js shows the booking button; its row is held open so nothing moves. */
+[data-page="contact"] .talk { justify-items: stretch; justify-self: start; gap: var(--s-2); }
+[data-page="contact"] .talk > *, [data-page="contact"] .lede { margin: 0; }
+[data-page="contact"] .talk-tel { display: flex; align-items: center; gap: var(--s-3); min-height: var(--tap); color: var(--ink); font-size: var(--fs-h2); line-height: 1; letter-spacing: -.02em; white-space: nowrap; text-decoration: none; }
+[data-page="contact"] .talk-tel .ico { width: .72em; height: .72em; color: var(--brick); stroke-width: 2.2; }
+[data-page="contact"] .talk .btn { margin-top: var(--s-2); }
+.js [data-page="contact"] .talk { grid-template-rows: auto auto auto calc(var(--btn-h) + var(--s-2)); }
+[data-page="contact"] .talk-tel:active { color: var(--blue-deep); }
 @media (hover: hover) { [data-page="contact"] .talk-tel:hover { color: var(--blue); } }
 
-/* The enquiry ticket. Its foot leaves room for the stamp, so the stamp never sits on the small print. */
+/* The ticket. Its foot leaves room for the stamp, which lands once. */
 [data-page="contact"] .ticket { min-width: 0; padding-bottom: var(--s-7); }
-[data-page="contact"] .ticket-head { margin-bottom: var(--s-4); }
-[data-page="contact"] .form-key { margin-bottom: var(--s-5); }
+[data-page="contact"] .ticket-head { margin-bottom: var(--s-5); }
+[data-page="contact"] .field textarea { min-height: calc(var(--btn-h) * 2.5); }
 [data-page="contact"] .req { color: var(--brick); font-weight: 800; }
 [data-page="contact"] .opt { float: right; color: var(--ink-3); font-weight: 500; }
 [data-page="contact"] .field legend { width: 100%; }
 /* SHARED-CANDIDATE: a long option never runs under the arrow */
 [data-page="contact"] .field select { text-overflow: ellipsis; }
+.js [data-page="contact"] .stamp { transform: none; transition: none; }
+.js [data-page="contact"] .stamp.visible { animation: contact-stamp var(--t) var(--ease) var(--t) both; }
+@keyframes contact-stamp { from { opacity: 0; transform: scale(1.5); } }
 
-/* What main.js says back: it adds .ok or .error to the status line */
+/* SHARED-CANDIDATE: what main.js says back (.ok, .error), boxed */
 [data-page="contact"] .form-status { padding: var(--s-3) var(--s-4); border-left: var(--focus-w) solid var(--brick); border-radius: var(--r-xs); background: var(--brick-tint); animation: kws-fade var(--t-slow) var(--ease) both; }
 [data-page="contact"] .form-status.ok { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: var(--s-3); border-color: var(--ink); background: var(--paper-3); font-size: var(--fs-body); }
 [data-page="contact"] .form-status.ok::before { content: ""; width: var(--s-3); height: var(--s-5); margin: 0 var(--s-1) 0 var(--s-2); border: solid var(--ink); border-width: 0 var(--focus-w) var(--focus-w) 0; transform: rotate(40deg) scale(.7); }
 
-/* hCaptcha's box is a fixed 303px wide. The ticket's min-width: 0 stops it widening the page
-   on phones under 385px, and on the smallest it is scaled to sit inside the ticket. */
+/* SHARED-CANDIDATE: hCaptcha's 303px box, scaled to fit the smallest phones */
 @media (max-width: 379.98px) { [data-page="contact"] .h-captcha { transform: scale(.9); transform-origin: 0 0; } }
 
-/* Beside the ticket: what happens next, then the other details. Quieter numerals than a full step list. */
+/* Beside the ticket */
 [data-page="contact"] .steps { --no: var(--s-7); }
 [data-page="contact"] .steps-no { font-size: var(--fs-title); }
 [data-page="contact"] .steps > li { padding-block: var(--s-4); }
-[data-page="contact"] .contact-side .label { margin-top: var(--s-5); }
-[data-page="contact"] .case-facts { border-top: var(--frame); }
+[data-page="contact"] .case-facts { margin-top: var(--s-4); border-top: var(--frame); }
 [data-page="contact"] .case-facts div { grid-template-columns: 4em minmax(0, 1fr); align-items: baseline; border-top: 0; border-bottom: var(--edge); }
-@media (max-width: 979.98px) { [data-page="contact"] .contact-side { margin-top: var(--s-4); } }
+@media (max-width: 979.98px) { [data-page="contact"] .contact-side { margin-top: var(--s-2); } }
+@media (min-width: 600px) { [data-page="contact"] .talk { justify-items: start; } }
 @media (min-width: 980px) {
   [data-page="contact"] .talk { align-self: end; }
+  /* The number never outgrows the narrow column */
+  [data-page="contact"] .talk-tel { font-size: min(var(--fs-h2), 4.2vw); }
   [data-page="contact"] .split { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); }
   [data-page="contact"] .contact-side { position: sticky; top: calc(var(--header-h) + var(--s-6)); }
 }

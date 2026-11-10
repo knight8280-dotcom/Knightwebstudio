@@ -405,7 +405,7 @@
   <section class="page-head hero" id="top">
     <div class="container page-head-split hero-grid">
       <div class="hero-copy">
-        <p class="eyebrow">Web studio &amp; consulting · Baton Rouge, LA</p>
+        <p class="eyebrow"><span>Web studio &amp; consulting · <span class="nowrap">Baton Rouge, LA</span></span></p>
         <h1><span class="l">More customers,</span> <span class="l">fewer missed calls,</span> <span class="l"><span class="mark">hours back</span></span> <span class="l">every week</span></h1>
         <p class="lede">
           We build fast, modern websites, then set up the systems behind them: Google
@@ -434,10 +434,10 @@
               <span class="phone-who">[your business]<small>Text message</small></span>
             </div>
             <ul class="thread">
-              <li class="thread-note thread-missed"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/><path d="m15 4 5 5m0-5-5 5"/></svg>Missed call</li>
-              <li class="bubble bubble-biz">Sorry we missed your call, this is [your business]. What can we help with?</li>
-              <li class="thread-note">Sent on its own, within a minute</li>
-              <li class="bubble bubble-cust bubble-typing"><span class="sr-only">The caller is typing a reply</span><i></i><i></i><i></i></li>
+              <li class="thread-note thread-missed" style="--n:1"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/><path d="m15 4 5 5m0-5-5 5"/></svg>Missed call</li>
+              <li class="bubble bubble-biz" style="--n:2">Sorry we missed your call, this is [your business]. What can we help with?</li>
+              <li class="thread-note" style="--n:3">Sent on its own, within a minute</li>
+              <li class="bubble bubble-cust bubble-typing" style="--n:4"><span class="sr-only">The caller is typing a reply</span><i></i><i></i><i></i></li>
             </ul>
           </div>
         </div>
@@ -512,12 +512,11 @@
       <ol class="route">
         <li class="stop">
           <b class="stop-pin display" aria-hidden="true">1</b>
-          <div class="stop-copy reveal">
+          <div class="stop-head reveal">
             <p class="stop-tag">Missed-call text-back · $750 setup</p>
             <h3><span class="nowrap">You can't pick up.</span> <span class="nowrap">They get a text.</span></h3>
-            <p>Within a minute, the caller gets a text from your business number asking what they need. Their reply lands on your phone, so you call back knowing the job.</p>
           </div>
-          <div class="vig stop-art stop-text reveal">
+          <div class="vig stop-art stop-reply reveal">
             <span class="flag">Example</span>
             <ul class="thread">
               <li class="thread-note thread-missed"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/><path d="m15 4 5 5m0-5-5 5"/></svg>Missed call</li>
@@ -531,14 +530,14 @@
               <p class="notice-meta" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Number saved</p>
             </div>
           </div>
+          <p class="stop-body reveal">Within a minute, the caller gets a text from your business number asking what they need. Their reply lands on your phone, so you call back knowing the job.</p>
         </li>
 
         <li class="stop">
           <b class="stop-pin display" aria-hidden="true">2</b>
-          <div class="stop-copy reveal">
+          <div class="stop-head reveal">
             <p class="stop-tag">Online booking &amp; reminders · $750 setup</p>
             <h3><span class="nowrap">They pick a time.</span> <span class="nowrap">It's on your calendar.</span></h3>
-            <p>Customers pick a time on your site or Google profile. It lands on your calendar with no double bookings. Confirmations and reminders go out on their own.</p>
           </div>
           <div class="vig stop-art reveal">
             <span class="flag">Example</span>
@@ -557,14 +556,14 @@
               </ul>
             </div>
           </div>
+          <p class="stop-body reveal">Customers pick a time on your site or Google profile. It lands on your calendar with no double bookings. Confirmations and reminders go out on their own.</p>
         </li>
 
         <li class="stop">
           <b class="stop-pin display" aria-hidden="true">3</b>
-          <div class="stop-copy reveal">
+          <div class="stop-head reveal">
             <p class="stop-tag">Lead follow-up system · $1,500 setup</p>
             <h3><span class="nowrap">The quote went quiet?</span> <span class="nowrap">It follows up for you.</span></h3>
-            <p>Every enquiry is saved to one list automatically. Quiet quotes get a friendly follow-up after 2 days and a week. Finished jobs get a review request with your Google link.</p>
           </div>
           <div class="vig stop-art reveal">
             <span class="flag">Example</span>
@@ -578,6 +577,7 @@
               </ul>
             </div>
           </div>
+          <p class="stop-body reveal">Every enquiry is saved to one list automatically. Quiet quotes get a friendly follow-up after 2 days and a week. Finished jobs get a review request with your Google link.</p>
         </li>
 
         <!-- The example week, added up. The note stays right beside the figure. -->
@@ -768,7 +768,7 @@
   </section>
 
   <!-- ===================== WHO YOU WORK WITH ===================== -->
-  <section class="section section-tight" id="about">
+  <section class="section section-tight section-sand" id="about">
     <div class="container who">
       <div class="stack reveal">
         <p class="eyebrow">Who you work with</p>

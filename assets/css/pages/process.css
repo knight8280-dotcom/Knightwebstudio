@@ -1,40 +1,46 @@
-/* Process page only. Every rule is scoped with [data-page="process"].
-   The job ticket as a ruled sheet: each station is the step, what happens, and its terms as a short list. */
+/* Process page only: the job ticket as a ruled sheet. Each station is the step, what we do, and what you do with its terms. */
 
-/* The link in the intro is a full 44px target; nothing moves */
+/* The link in the intro is a full 44px target */
 [data-page="process"] .lede a { padding-block: var(--s-3); }
 
-/* Phone: numeral and title share a line; the copy and the terms run the full width of the ticket */
-[data-page="process"] .ticket .steps > li { padding-block: var(--pad); }
-[data-page="process"] .ticket .steps > li > div { display: contents; }
-[data-page="process"] .ticket .steps :is(p, dl) { grid-column: 1 / -1; }
-[data-page="process"] .ticket .steps p { text-wrap: pretty; }
+/* Phone: numeral and title share a line; "We" and "You" run the full width of the ticket */
+[data-page="process"] .steps > li { position: relative; padding-block: var(--pad); }
+[data-page="process"] .steps-no + div { display: contents; }
+[data-page="process"] .steps :is(p, .steps-you) { grid-column: 1 / -1; }
+[data-page="process"] .steps p { text-wrap: pretty; }
+/* Each station is a stub: the ticket is notched at both ends of the tear line */
+[data-page="process"] .steps > li + li::before {
+  --r: var(--s-2); --cut: var(--paper) calc(var(--r) - var(--hair)), var(--line-2) 0, var(--line-2) var(--r), transparent 0;
+  content: ""; position: absolute; inset: calc(-1 * var(--r)) calc(-1 * var(--pad) - var(--hair)) auto; height: calc(2 * var(--r));
+  background: radial-gradient(circle at 0, var(--cut)), radial-gradient(circle at 100%, var(--cut));
+}
 
-/* SHARED-CANDIDATE: a short list of terms with dotted leaders (the appointment card's lines, for any paper object) */
-[data-page="process"] .terms { max-width: var(--maxw-card); margin-top: var(--s-3); }
-[data-page="process"] .terms div { display: flex; align-items: baseline; gap: var(--s-2); padding-block: var(--s-1); font-size: var(--fs-sm); line-height: 1.4; }
-[data-page="process"] .terms div::after { content: ""; order: 1; flex: 1; min-width: var(--s-2); border-bottom: var(--bold) dotted var(--line-2); transform: translateY(-.3em); }
-[data-page="process"] .terms dt { font-weight: 600; }
-[data-page="process"] .terms dd { order: 2; color: var(--ink); font-weight: 700; text-align: right; }
+/* SHARED-CANDIDATE: the appointment card's leader lines (.appt-lines) as a terms list on any paper object */
+[data-page="process"] .steps dl { max-width: var(--maxw-card); margin-top: var(--s-3); }
+[data-page="process"] .steps dl div { padding-block: var(--s-1); line-height: 1.4; }
+[data-page="process"] .steps dl ::after { flex-basis: 0; min-width: 0; }
+[data-page="process"] .steps dl div dd { color: var(--ink); text-align: right; }
 
-/* Small phones: a little more room, so every term stays on one line */
+/* Small phones: more room, so every term stays on one line */
 @media (max-width: 379.98px) {
-  [data-page="process"] .ticket { padding-inline: var(--s-4); }
+  [data-page="process"] .ticket { --pad: var(--s-4); }
 }
 @media (min-width: 600px) {
-  [data-page="process"] .ticket .steps :is(p, dl) { grid-column: 2; }
+  [data-page="process"] .steps :is(p, .steps-you) { grid-column: 2; }
 }
-/* From 980px the terms stand beside the step, on the same baseline as its title */
+/* From 980px "You" stands beside the step, on the same baseline as its title */
 @media (min-width: 980px) {
-  [data-page="process"] .ticket .steps > li { grid-template-columns: var(--no) minmax(0, 7fr) minmax(0, 5fr); column-gap: var(--s-6); }
-  [data-page="process"] .ticket .steps > li::after { content: none; }
-  [data-page="process"] .ticket .steps dl { grid-area: 1 / 3 / span 2; margin-top: 0; }
+  [data-page="process"] .steps > li { grid-template: auto 1fr / var(--no) repeat(2, minmax(0, 1fr)); column-gap: var(--s-6); }
+  [data-page="process"] .steps > li::after { content: none; }
+  [data-page="process"] .steps .steps-you { grid-area: 1 / 3 / span 2; }
+  [data-page="process"] .steps-you p { margin-top: 0; }
+  [data-page="process"] .steps-you dl { max-width: none; }
 }
-/* Wide screens: one ruled row a station. Step, what happens and terms line up down the sheet */
+/* Wide screens: one ruled row a station; step, "We" and "You" line up */
 @media (min-width: 1280px) {
-  [data-page="process"] .ticket .steps > li { grid-template-columns: var(--no) minmax(0, 3fr) minmax(0, 5fr) minmax(0, 4fr); }
-  [data-page="process"] .ticket .steps p { grid-area: 1 / 3; margin-top: 0; }
-  [data-page="process"] .ticket .steps dl { grid-area: 1 / 4; }
+  [data-page="process"] .steps > li { grid-template: none / var(--no) minmax(0, 3fr) minmax(0, 4fr) minmax(0, 5fr); }
+  [data-page="process"] .ticket .steps h2 + p { grid-area: 1 / 3; margin-top: 0; }
+  [data-page="process"] .steps .steps-you { grid-area: 1 / 4; }
 }
 
 /* The stamp lands once, when the end of the ticket is reached */

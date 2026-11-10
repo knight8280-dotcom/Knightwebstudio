@@ -434,7 +434,7 @@
   </section>
 
   <!-- ===================== THE JOB TICKET: one job, four stations =====================
-       Each station is a row of the ticket: the step, what happens, and its terms as a short list.
+       Each station is a row of the ticket: the step, what we do, then what you do or get, with per-package terms as a short list.
        Every term here is also on the pricing page: change both together.
        The ticket and its stamp are the page's one prop. The stamp repeats words from step 04
        and lands once, when the end of the ticket scrolls into view. -->
@@ -447,19 +447,21 @@
             <span class="steps-no" aria-hidden="true">01</span>
             <div>
               <h2 class="h3">Discovery call</h2>
-              <p>A call about your business, your customers and what the site needs to achieve. You leave with a plan whether or not you hire us.</p>
-              <dl class="terms">
-                <div><dt>Cost</dt><dd>Free</dd></div>
-                <div><dt>Length</dt><dd>30 minutes</dd></div>
-              </dl>
+              <p><strong>We</strong> ask about your business, your customers and what the site needs to achieve. <strong>Free, 30&nbsp;minutes.</strong></p>
+            </div>
+            <div class="steps-you">
+              <p><strong>You</strong> leave with a plan, whether or not you hire us.</p>
             </div>
           </li>
           <li>
             <span class="steps-no" aria-hidden="true">02</span>
             <div>
               <h2 class="h3">Proposal &amp; design</h2>
-              <p>A fixed quote and timeline, then design concepts for your key pages. We refine the design with you:</p>
-              <dl class="terms">
+              <p><strong>We</strong> send a fixed quote and timeline, then design concepts for your key pages.</p>
+            </div>
+            <div class="steps-you">
+              <p><strong>You</strong> refine the design with us:</p>
+              <dl class="appt-lines">
                 <div><dt>Starter</dt><dd>One revision round</dd></div>
                 <div><dt>Business</dt><dd>Up to three design rounds</dd></div>
                 <div><dt>Commerce</dt><dd>Up to three design rounds</dd></div>
@@ -470,19 +472,21 @@
             <span class="steps-no" aria-hidden="true">03</span>
             <div>
               <h2 class="h3">Build &amp; review</h2>
-              <p>We build on a private staging link you can check any time, with weekly progress notes. Then, before launch:</p>
-              <dl class="terms">
-                <div><dt>Business</dt><dd>A final round of tweaks</dd></div>
-                <div><dt>Commerce</dt><dd>A final round of tweaks</dd></div>
-              </dl>
+              <p><strong>We</strong> build on a private staging link, with weekly progress notes.</p>
+            </div>
+            <div class="steps-you">
+              <p><strong>You</strong> can check the link any time. On Business and Commerce, the finished site then gets a final round of tweaks before launch.</p>
             </div>
           </li>
           <li>
             <span class="steps-no" aria-hidden="true">04</span>
             <div>
               <h2 class="h3">Launch &amp; support</h2>
-              <p>We set up your domain (IONOS) and hosting (Netlify) in your name, plus analytics and redirects. After launch, a walkthrough video and free support:</p>
-              <dl class="terms">
+              <p><strong>We</strong> set up your domain (IONOS) and hosting (Netlify) in your name, plus analytics and redirects.</p>
+            </div>
+            <div class="steps-you">
+              <p><strong>You</strong> get a walkthrough video and free support after launch:</p>
+              <dl class="appt-lines">
                 <div><dt>Starter</dt><dd>30 days</dd></div>
                 <div><dt>Business</dt><dd>90 days</dd></div>
                 <div><dt>Commerce</dt><dd>Six months</dd></div>
@@ -506,8 +510,8 @@
           <a class="btn btn-lg" href="/contact/">Send an enquiry</a>
         </div>
       </div>
-      <!-- Decorative: the same facts as the paragraph, drawn as an appointment card -->
-      <div class="appt on-paper" aria-hidden="true">
+      <!-- Decorative: the same facts as the paragraph, drawn as an appointment card. Beside the copy from 980px; left out below that to keep the phone page short. -->
+      <div class="appt on-paper wide-only" aria-hidden="true">
         <p class="appt-head"><span>Appointment card</span><span>No. 01</span></p>
         <p class="appt-title">Discovery call</p>
         <dl class="appt-lines">
