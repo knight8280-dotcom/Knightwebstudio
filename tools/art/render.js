@@ -1,6 +1,6 @@
 // Rasterise the crest into the site's icons and link-preview image.
 //
-//   python3 tools/art/build.py            (first: writes logo.svg and crest.svg)
+//   python3 tools/art/build.py            (first: writes logo.svg)
 //   node tools/art/render.js              (needs Playwright + a Chromium)
 //
 // Writes favicon.ico (16/32/48), assets/img/apple-touch-icon.png (180),
@@ -21,12 +21,11 @@ try { ({ chromium } = require('playwright')); }
 catch (e) { ({ chromium } = require(path.join(execSync('npm root -g').toString().trim(), 'playwright'))); }
 
 const ROOT = path.resolve(__dirname, '..', '..');
-const py = (expr) => execFileSync('python3', ['-c',
+const py = (expr) => execFileSync('python3', ['-B', '-c',
   `import sys; sys.path.insert(0, ${JSON.stringify(__dirname)}); import emblems as e; print(${expr})`]).toString();
 
 const FAVICON = py('e.favicon_mark()');
 const LOGO = fs.readFileSync(path.join(ROOT, 'assets/img/logo.svg'), 'utf8');
-const CREST = fs.readFileSync(path.join(ROOT, 'assets/img/crest.svg'), 'utf8');
 const STREET = py('e.street("og")');
 const PAPER = '#F6F0E4', INK = '#1A2238', INK2 = '#454C61', BRICK = '#A83C26';
 const font = (f) => 'file://' + path.join(ROOT, 'assets/fonts', f);

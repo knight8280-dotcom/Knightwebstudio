@@ -1,4 +1,4 @@
-"""KnightWebstudio artwork: the crest, the round seal and the two drawings.
+"""KnightWebstudio artwork: the crest, the round seal and the street scene.
 
 Everything is hand-placed vector geometry, returned as SVG strings. The site
 has no build step, so tools/art/build.py writes these into the HTML between
@@ -8,9 +8,9 @@ The crest's colours are fixed (see PALETTE) rather than themed: it is an
 emblem and looks the same by day and at night, like a painted sign. Sign-
 painter's blue on a navy field with a gold-leaf line, to match the site.
 
-The drawings (street scene, workbench) are themed. Each carries SCENE_PALETTE
-as custom properties on its <svg>, one value for day and one for night, and
-the stylesheet's --L / --D switches pick between them.
+The street scene is themed. It carries SCENE_PALETTE as custom properties on
+its <svg>, one value for day and one for night, and the stylesheet's --L / --D
+switches pick between them.
 
 Every function takes a `uid` so two copies on one page never share an id
 (clip paths and gradients are looked up by id).
@@ -135,7 +135,9 @@ def _ribbon(uid, text):
 
 
 def full_crest(uid, cls='crest-full', label='Knight Web Studio crest', text='KNIGHT WEB STUDIO'):
-    """The Charger shield with crossed swords and a name ribbon, for large spots."""
+    """The Charger shield with crossed swords and a name ribbon. No page uses it and build.py does not write
+    it to a file any more; it is kept as a drawing for print or a profile picture (the README says how
+    to write it out)."""
     a11y = f'role="img" aria-label="{label}"' if label else 'aria-hidden="true"'
     return (f'<svg class="{cls}" viewBox="0 0 160 164" {a11y} style="{STYLE}">{_defs(uid)}'
             f'<g transform="translate(80 84) rotate(-40)"><g class="a-sw a-sw-l">{_sword()}</g></g>'
@@ -199,14 +201,3 @@ def street(uid, sign='YOUR BUSINESS', title=STREET_TITLE, cls='scene scene-stree
     body = scenes.STREET.replace('{uid}', uid).replace('{sign}', sign)
     return (f'<svg class="{cls}" viewBox="0 0 600 640" role="img" aria-labelledby="{uid}-title" '
             f'style="{_scene_style(body)}"><title id="{uid}-title">{title}</title>{body}</svg>')
-
-
-BENCH_LABEL = ('Drawing of a phone ringing on a workbench beside a coffee cup and a tape measure, '
-               'with nobody there to answer it')
-
-
-def bench(uid, cls='scene scene-bench'):
-    """A missed call on the workbench. Home page story, step one."""
-    body = scenes.BENCH.replace('{uid}', uid)
-    return (f'<svg class="{cls}" viewBox="0 0 480 300" role="img" aria-label="{BENCH_LABEL}" '
-            f'style="{_scene_style(body)}">{body}</svg>')

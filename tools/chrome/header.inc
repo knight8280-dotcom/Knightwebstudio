@@ -10,7 +10,7 @@
 
     <nav class="nav" id="nav" aria-label="Main">
       <div class="nav-inner">
-        <ul class="nav-links">
+        <ul class="nav-links" role="list">
           <li><a href="/services/">Services</a></li>
           <li><a href="/consulting/">Consulting</a></li>
           <li><a href="/work/">Work</a></li>

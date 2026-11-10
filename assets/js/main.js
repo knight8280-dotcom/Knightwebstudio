@@ -139,6 +139,8 @@
     var bar = navToggle.closest('.site-header');
     var list = nav.querySelector('.nav-inner');
     var atTop = window.scrollY < 4;
+    // The sheet fades only once it has been opened: crossing the breakpoint must not flash it
+    if (open) nav.classList.add('nav-anim');
     if (open && bar) nav.style.setProperty('--nav-top', Math.round(bar.getBoundingClientRect().bottom) + 'px');
     nav.classList.toggle('open', open);
     navToggle.setAttribute('aria-expanded', String(open));
@@ -172,7 +174,7 @@
 
     // Leaving the breakpoint with the sheet open would strand the scroll lock
     var desktop = window.matchMedia('(min-width: 1100px)');
-    var onDesktop = function (e) { if (e.matches) closeNav(); };
+    var onDesktop = function (e) { if (e.matches) { closeNav(); nav.classList.remove('nav-anim'); } };
     if (desktop.addEventListener) desktop.addEventListener('change', onDesktop);
     else if (desktop.addListener) desktop.addListener(onDesktop);
   }
@@ -201,6 +203,9 @@
 
   /* ---------- Reveal on scroll ---------- */
   var revealables = document.querySelectorAll('.reveal');
+  // Where the sticky phone bar (69px) covers the foot of the screen, a block
+  // has to clear it before it counts as seen.
+  var revealFoot = document.getElementById('mobile-cta') && window.matchMedia('(max-width: 1099.98px)').matches ? 96 : 24;
 
   if (reduceMotion || !('IntersectionObserver' in window)) {
     revealables.forEach(function (el) { el.classList.add('visible'); });
@@ -213,21 +218,22 @@
         setTimeout(function () { entry.target.classList.add('visible'); }, Math.min(i, 3) * 40);
         revealObserver.unobserve(entry.target);
       });
-    }, { threshold: 0.08, rootMargin: '0px 0px -24px 0px' });
+    }, { threshold: 0.08, rootMargin: '0px 0px -' + revealFoot + 'px 0px' });
 
     revealables.forEach(function (el) { revealObserver.observe(el); });
   }
 
   /* ---------- Mobile sticky CTA ----------
      Appears once the hero is behind you, and gets out of the way over the
-     contact section and footer so it never covers the form it points at. */
+     contact section, the closing band (.cta-band, which has its own booking
+     button) and the footer, so it never covers what it points at. */
   var mobileCta = document.getElementById('mobile-cta');
   if (mobileCta) {
     mobileCta.hidden = false;
     // Sub-pages have no #contact section, only the footer — observe whichever
     // exists, and track each target separately so one leaving the viewport
     // doesn't cancel the other still being in it.
-    var avoid = [document.getElementById('contact'), document.querySelector('.site-footer')]
+    var avoid = [document.getElementById('contact'), document.querySelector('.cta-band'), document.querySelector('.site-footer')]
       .filter(Boolean);
     var inView = [];
     var nearForm = false;
@@ -269,6 +275,8 @@
   function loadCaptcha() {
     if (captchaRequested || !captchaSlot) return;
     captchaRequested = true;
+    // The widget is drawn for the theme in use when it loads
+    captchaSlot.setAttribute('data-theme', root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light');
     var sc = document.createElement('script');
     sc.src = 'https://js.hcaptcha.com/1/api.js?recaptchacompat=off';
     sc.async = true; sc.defer = true;
@@ -277,12 +285,14 @@
 
   if (captchaSlot) {
     if ('IntersectionObserver' in window) {
+      // No margin: the script is asked for when the slot itself comes into
+      // view, so a tall window does not fetch it with the page.
       var capObs = new IntersectionObserver(function (entries) {
         if (entries.some(function (e) { return e.isIntersecting; })) {
           loadCaptcha();
           capObs.disconnect();
         }
-      }, { rootMargin: '900px' });
+      }, { rootMargin: '0px' });
       capObs.observe(captchaSlot);
     } else {
       loadCaptcha();
@@ -301,6 +311,12 @@
     var statusEl = document.getElementById('form-status');
     var submitBtn = document.getElementById('submit-btn');
     var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+    var emptyMessage = {
+      name: 'Add your name.',
+      email: 'Add your email address so we can reply.',
+      message: 'Tell us a little about what you need.'
+    };
+    var fieldsFlagged = false;   // "Please fix the highlighted fields." is showing
 
     function setError(field, message) {
       var errEl = document.getElementById(field.id + '-error');
@@ -313,7 +329,7 @@
       var value = field.value.trim();
 
       if (!value) {
-        setError(field, 'This field is required.');
+        setError(field, emptyMessage[field.id] || 'This field is required.');
         return false;
       }
       if (field.type === 'email' && !emailPattern.test(value)) {
@@ -378,18 +394,22 @@
 
     var required = Array.prototype.slice.call(form.querySelectorAll('[required]'));
 
-    required.forEach(function (field) {
-      field.addEventListener('blur', function () { validateField(field); });
-      field.addEventListener('input', function () {
-        if (field.classList.contains('invalid')) validateField(field);
-      });
-    });
-
     function setStatus(message, kind) {
       if (!statusEl) return;
       statusEl.textContent = message;
       statusEl.className = 'form-status' + (kind ? ' ' + kind : '');
     }
+
+    // Once every flagged field is right, the line under the button goes too
+    function clearFlag() {
+      if (fieldsFlagged && !form.querySelector('.invalid')) { setStatus(''); fieldsFlagged = false; }
+    }
+    required.forEach(function (field) {
+      field.addEventListener('blur', function () { validateField(field); clearFlag(); });
+      field.addEventListener('input', function () {
+        if (field.classList.contains('invalid')) { validateField(field); clearFlag(); }
+      });
+    });
 
     // Used when the POST fails, so a broken endpoint never costs an enquiry.
     // `form.elements` — `form.name` would resolve to the form's own name attribute.
@@ -417,8 +437,10 @@
       if (firstInvalid) {
         firstInvalid.focus();
         setStatus('Please fix the highlighted fields.', 'error');
+        fieldsFlagged = true;
         return;
       }
+      fieldsFlagged = false;
 
       // hCaptcha injects h-captcha-response into the form once solved.
       var captchaEl = document.getElementById('captcha-error');
@@ -473,6 +495,18 @@
         });
     });
   }
+
+  /* ---------- Links into a closed row ----------
+     /services/#seo points inside a <details>. Current browsers open it on
+     their own; this does it for the ones that do not. */
+  function openTarget() {
+    var target = null;
+    try { target = location.hash.length > 1 && document.getElementById(decodeURIComponent(location.hash.slice(1))); } catch (e) { /* malformed hash */ }
+    var row = target && target.closest('details');
+    if (row && !row.open) { row.open = true; target.scrollIntoView(); }
+  }
+  openTarget();
+  window.addEventListener('hashchange', openTarget);
 
   /* ---------- Footer year ---------- */
   var yearEl = document.getElementById('year');

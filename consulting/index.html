@@ -45,7 +45,6 @@
 <link rel="preload" href="/assets/fonts/fraunces-soft.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/figtree.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/styles.css">
-<link rel="stylesheet" href="/assets/css/pages/consulting.css">
 
 <script type="application/ld+json">
 {
@@ -376,7 +375,7 @@
 
     <nav class="nav" id="nav" aria-label="Main">
       <div class="nav-inner">
-        <ul class="nav-links">
+        <ul class="nav-links" role="list">
           <li><a href="/services/">Services</a></li>
           <li><a href="/consulting/" aria-current="page">Consulting</a></li>
           <li><a href="/work/">Work</a></li>
@@ -433,7 +432,7 @@
       </div>
       <a class="price-strip" href="#services">
         <span class="price-strip-label">Setups</span>
-        <span class="price-strip-nums"><b>$500</b><b>$750</b><b>$1,500</b></span>
+        <span class="price-strip-nums"><b>$500</b> <b>$750</b> <b>$1,500</b></span>
         <span class="price-strip-note">Fixed, published prices</span>
       </a>
     </div>
@@ -444,11 +443,11 @@
     <div class="container">
       <nav class="toc" aria-labelledby="toc-title">
         <p class="label" id="toc-title">On this page</p>
-        <ol>
+        <ol role="list">
           <li><a href="#how"><span class="toc-name">What each automation does</span><span class="dots" aria-hidden="true"></span><span class="toc-price">$750 or $1,500 per setup</span></a></li>
           <li><a href="#calculator"><span class="toc-name">What it could be worth</span><span class="dots" aria-hidden="true"></span><span class="toc-price">Your numbers, an estimate</span></a></li>
           <li><a href="#process"><span class="toc-name">Four steps, no surprises</span><span class="dots" aria-hidden="true"></span><span class="toc-price">Free check · $350 audit</span></a></li>
-          <li><a href="#plans"><span class="toc-name">Monthly plans and the Launch bundle</span><span class="dots" aria-hidden="true"></span><span class="toc-price">$500 or $1,000 a month · $3,000</span></a></li>
+          <li><a href="#plans"><span class="toc-name">Monthly plans and the Launch bundle</span><span class="dots" aria-hidden="true"></span><span class="toc-price">$500 or <span class="nowrap">$1,000/mo</span> · $3,000</span></a></li>
         </ol>
       </nav>
 
@@ -512,7 +511,7 @@
                   <span class="phone-avatar" aria-hidden="true"></span>
                   <span class="phone-who">[your business]<small>Text message</small></span>
                 </div>
-                <ul class="thread">
+                <ul class="thread" role="list">
                   <li class="thread-note thread-missed seq" style="--n:1"><b class="fig-n">1</b><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/><path d="m15 4 5 5m0-5-5 5"/></svg>Missed call</li>
                   <li class="bubble bubble-biz seq" style="--n:2"><b class="fig-n">2</b>Sorry we missed your call, this is [your business]. What can we help with?</li>
                   <li class="thread-note seq" style="--n:2">Sent on its own, within a minute</li>
@@ -710,10 +709,10 @@
 
         <div class="receipt" aria-live="polite">
           <p class="receipt-head"><span>Your estimate</span><span>Your numbers</span></p>
-          <p class="receipt-total"><span>Estimated extra revenue</span><b><span id="r-month">$2,133</span><small>/month</small></b></p>
+          <p class="receipt-total"><span>Estimated extra revenue</span><b><span id="r-month">$2,133</span><small>/mo</small></b></p>
           <p class="note"><span class="flag">Estimate</span>An estimate from the numbers you enter, not a promise or a guarantee of results. Real results depend on your market, your prices and how quickly you answer the leads it brings in. Software and texting fees are paid to the provider and are extra.</p>
           <p class="receipt-note"><span id="r-year">$25,600</span> a year, from about <span id="r-jobs">5.3</span> extra jobs a month</p>
-          <ul class="receipt-lines">
+          <ul class="receipt-lines" role="list">
             <li><span>From missed calls won back</span><span class="dots" aria-hidden="true"></span><b id="r-calls">$1,733/mo</b></li>
             <li><span>From quotes followed up</span><span class="dots" aria-hidden="true"></span><b id="r-quotes">$400/mo</b></li>
             <li><span>Time back</span><span class="dots" aria-hidden="true"></span><b id="r-hours">11 hours/mo</b></li>
@@ -752,13 +751,13 @@
             <div>
               <div class="pl-row"><h3 class="pl-name">Growth Audit</h3><span class="dots" aria-hidden="true"></span><span class="pl-price">$350</span></div>
               <p>A 60-minute session, in person in Greater Baton Rouge or by video. We go through how customers find you, how calls and enquiries are handled and where your week goes, then send a written action plan within 3 business days, ranked by impact, with a fixed price on anything we'd do.</p>
-              <ul class="ticks">
+              <ul class="ticks" role="list">
                 <li>Time and revenue estimate from your numbers</li>
                 <li>The $350 comes off any project booked within 30 days</li>
               </ul>
               <a class="btn btn-primary" href="/contact/?package=audit">Book a Growth Audit, $350</a>
             </div>
-            <ul class="pricelist path-more">
+            <ul class="pricelist path-more" role="list">
               <li>
                 <div class="pl-row"><h4 class="pl-name">Strategy session</h4><span class="dots" aria-hidden="true"></span><span class="pl-price">$150</span></div>
                 <p>60 minutes on one question, like pricing, a new service or which tools to use, with written notes afterwards.</p>
@@ -772,7 +771,7 @@
               <h3>Setup</h3>
               <p>We build what you choose on your own accounts and test it with you. Most setups are live within 2 weeks.</p>
             </div>
-            <ul class="pricelist setups path-more">
+            <ul class="pricelist setups path-more" role="list">
               <li>
                 <div class="pl-row"><h4 class="pl-name">Google profile &amp; reviews</h4><span class="dots" aria-hidden="true"></span><span class="pl-price">$500</span></div>
                 <p>Your Google Business Profile filled out properly: categories, services, hours, photos and booking link. Listings made consistent on Apple Maps, Bing, Yelp and Facebook. A simple way to ask every happy customer for a review, with a review link, QR code and reply templates.</p>
@@ -794,11 +793,11 @@
               <h3>Run &amp; improve</h3>
               <p>A recorded walkthrough, 30 days of fixes, and a monthly plan if you want someone who already knows your business keeping it all working.</p>
             </div>
-            <ul class="pricelist plans path-more">
+            <ul class="pricelist plans path-more" role="list">
               <li>
                 <div class="pl-row"><h4 class="pl-name">Advisor plan</h4><span class="dots" aria-hidden="true"></span><span class="pl-price">$500/mo</span></div>
                 <p>For owners who want their Google presence handled and a monthly plan to follow.</p>
-                <ul class="ticks">
+                <ul class="ticks" role="list">
                   <li>One 60-minute strategy call a month</li>
                   <li>Google Business Profile managed: 2 posts a month and new photos</li>
                   <li>Replies to every review within 2 business days</li>
@@ -810,7 +809,7 @@
               <li>
                 <div class="pl-row"><h4 class="pl-name">Partner plan</h4><span class="dots" aria-hidden="true"></span><span class="pl-price">$1,000/mo</span></div>
                 <p>The most hands-on plan, for businesses ready to keep improving every month, with the work done for them.</p>
-                <ul class="ticks">
+                <ul class="ticks" role="list">
                   <li>Everything in Advisor</li>
                   <li>Two strategy calls a month</li>
                   <li>Up to 5 hours of hands-on work a month: new automations, website changes, email campaigns</li>
@@ -833,7 +832,7 @@
         </div>
         <div class="receipt on-paper tilt">
           <p class="receipt-head"><span>Launch bundle</span><span>Receipt</span></p>
-          <ul class="receipt-lines">
+          <ul class="receipt-lines" role="list">
             <li><span>Starter website, up to 5 pages</span><span class="dots" aria-hidden="true"></span><b>$2,000</b></li>
             <li><span>Google profile &amp; reviews</span><span class="dots" aria-hidden="true"></span><b>$500</b></li>
             <li><span>Missed-call text-back</span><span class="dots" aria-hidden="true"></span><b>$750</b></li>
@@ -885,12 +884,12 @@
 
   <!-- ===================== CLOSING CALL TO ACTION ===================== -->
   <section class="cta-band on-blue">
-    <div class="container cta-inner reveal">
+    <div class="container cta-inner">
       <div class="cta-copy">
         <h2>Find out where your time and customers are going.</h2>
         <p>Start with the free check, or book a free 30-minute call. No pitch: you'll leave knowing what would make the biggest difference and what it would cost.</p>
         <div class="btn-row">
-          <a class="btn btn-primary btn-lg" href="/contact/" data-booking>Book a discovery call</a>
+          <a class="btn btn-primary btn-lg" href="/contact/" data-booking>Book a free 30-minute call</a>
           <a class="btn btn-lg" href="/contact/?package=check">Ask for the free check</a>
         </div>
       </div>
@@ -983,7 +982,7 @@
 
     <nav class="footer-col" aria-label="Contact">
       <p class="footer-title">Contact</p>
-      <a href="mailto:knightwebstudio1@gmail.com">knightwebstudio1@gmail.com</a>
+      <a href="mailto:knightwebstudio1@gmail.com"><span>knightwebstudio1@<wbr>gmail.com</span></a>
       <a href="tel:+12252550837">(225) 255-0837</a>
       <a href="/contact/">Start a project</a>
     </nav>

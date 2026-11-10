@@ -43,7 +43,7 @@
 
     <nav class="footer-col" aria-label="Contact">
       <p class="footer-title">Contact</p>
-      <a href="mailto:knightwebstudio1@gmail.com">knightwebstudio1@gmail.com</a>
+      <a href="mailto:knightwebstudio1@gmail.com"><span>knightwebstudio1@<wbr>gmail.com</span></a>
       <a href="tel:+12252550837">(225) 255-0837</a>
       <a href="/contact/">Start a project</a>
     </nav>

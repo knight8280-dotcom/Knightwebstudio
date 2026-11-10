@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Write the shared header, footer and sticky phone bar into the pages.
+"""Write the shared header, footer, sticky phone bar and first-paint snippet into the pages.
 
     python3 tools/sync_chrome.py                      every page
     python3 tools/sync_chrome.py faq/index.html ...   only the pages named
@@ -18,13 +18,14 @@ in .inc so that nothing in there is published as a page):
     footer-bare.inc    404: the same, without the year
     skyline.inc        the Baton Rouge skyline that tops every footer
     phone-bar.inc      the sticky Call + booking bar for phones and tablets
-    head-script.inc    the first-paint theme snippet (written by the page build tool)
+    head-script.inc    the first-paint snippet in every page's <head>: theme, the .js class, the crest's one-time build
 
 {{topbar}} and {{skyline}} inside a partial are replaced by those files, so
 they too exist once. PAGES below says which page gets which variant, its
 data-page slug and whether it carries the phone bar. This script sets
 <body data-page>, keeps the right aria-current="page" in the menu, and refills
-the art markers it writes (tools/art/build.py does the drawing).
+the art markers it writes (tools/art/build.py does the drawing). It leaves the
+rest of each <head> (title, description, Open Graph, JSON-LD) and the <main> alone.
 """
 import pathlib, re, sys
 
@@ -64,6 +65,8 @@ HEAD_BLOCK = re.compile(r'(<body\b[^>]*>)(.*?)(<main\b)', re.S | re.I)
 FOOTER = re.compile(r'(?:<!-- =+ FOOTER =+ -->\s*)?<footer\b.*?</footer>', re.S | re.I)
 BAR = re.compile(r'(?:<!--(?:(?!-->).)*?-->\s*)?<div class="mobile-cta".*?</div>\s*</div>\n?', re.S)
 ART = re.compile(r'(<!-- art:([a-z0-9-]+) -->).*?(<!-- /art:\2 -->)', re.S)
+# The one inline script in the <head> that is not data: it reads the saved theme
+HEAD_SCRIPT = re.compile(r"<script>(?:(?!</script>).)*?localStorage\.getItem\('theme'\).*?</script>", re.S)
 
 
 def partial(name):
@@ -95,10 +98,18 @@ def phone_bar(page):
     return partial('phone-bar') if PAGES[page][3] else ''
 
 
+def head_script():
+    return '<script>\n' + (CHROME / 'head-script.inc').read_text().strip('\n') + '\n</script>'
+
+
 def apply(html, page):
     """Return html with the canonical chrome for this page (art markers left empty)."""
     if not HEAD_BLOCK.search(html) or not re.search(r'</main>', html, re.I):
         raise ValueError(f'{page}: needs <body>, <main> and </main>')
+    head, sep, body = html.partition('</head>')
+    if not sep or not HEAD_SCRIPT.search(head):
+        raise ValueError(f'{page}: no first-paint script in its <head> (the one that reads localStorage "theme")')
+    html = HEAD_SCRIPT.sub(lambda m: head_script(), head, count=1) + sep + body
     html = HEAD_BLOCK.sub(lambda m: f'<body data-page="{slug(page)}">\n{header(page)}\n\n{m.group(3)}', html, count=1)
     head, rest = re.split(r'(?<=</main>)', html, maxsplit=1, flags=re.I)
     rest = BAR.sub('', rest, count=1)
@@ -117,8 +128,10 @@ def _norm(html):
 
 def main():
     args = sys.argv[1:]
+    if any(a.startswith('-') and a != '--check' for a in args):   # --help, or a mistyped flag: explain and write nothing
+        sys.exit(__doc__)
     check = '--check' in args
-    only = [a.lstrip('./') for a in args if not a.startswith('--')]
+    only = [a.lstrip('./') for a in args if not a.startswith('-')]
     unknown = [p for p in only if p not in PAGES]
     if unknown:
         sys.exit(f'not a page of this site: {", ".join(unknown)}')

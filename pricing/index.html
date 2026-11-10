@@ -45,7 +45,6 @@
 <link rel="preload" href="/assets/fonts/fraunces-soft.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/figtree.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/styles.css">
-<link rel="stylesheet" href="/assets/css/pages/pricing.css">
 
 <script type="application/ld+json">
 {
@@ -376,7 +375,7 @@
 
     <nav class="nav" id="nav" aria-label="Main">
       <div class="nav-inner">
-        <ul class="nav-links">
+        <ul class="nav-links" role="list">
           <li><a href="/services/">Services</a></li>
           <li><a href="/consulting/">Consulting</a></li>
           <li><a href="/work/">Work</a></li>
@@ -436,12 +435,12 @@
       <div class="page-head-aside">
         <nav class="toc card" aria-labelledby="toc-title">
           <p class="label" id="toc-title">On this page</p>
-          <ol>
+          <ol role="list">
             <li><a href="#packages"><span class="toc-name">Website packages</span><span class="dots" aria-hidden="true"></span><span class="toc-price">$1,000 · $2,000 · $4,000 · $8,000</span></a></li>
             <li><a href="#payment"><span class="toc-name">How you pay</span><span class="dots" aria-hidden="true"></span><span class="toc-price">50% to start, 50% at launch</span></a></li>
             <li><a href="#addons"><span class="toc-name">Add-ons</span><span class="dots" aria-hidden="true"></span><span class="toc-price">$750 or $1,500</span></a></li>
-            <li><a href="#consulting"><span class="toc-name">Consulting &amp; automation</span><span class="dots" aria-hidden="true"></span><span class="toc-price">$350 audit · $500 or $1,000 a month</span></a></li>
-            <li><a href="#care"><span class="toc-name">Care plans</span><span class="dots" aria-hidden="true"></span><span class="toc-price">$125, $300, $600 or $1,000 a month</span></a></li>
+            <li><a href="#consulting"><span class="toc-name">Consulting &amp; automation</span><span class="dots" aria-hidden="true"></span><span class="toc-price">$350 audit · $500 or <span class="nowrap">$1,000/mo</span></span></a></li>
+            <li><a href="#care"><span class="toc-name">Care plans</span><span class="dots" aria-hidden="true"></span><span class="toc-price">$125, $300, $600 or <span class="nowrap">$1,000/mo</span></span></a></li>
           </ol>
         </nav>
         <div class="toc-seal wide-only"><!-- art:seal --><svg class="seal" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><defs><path id="sl-arc" d="M60 60m-42 0a42 42 0 1 1 84 0a42 42 0 1 1-84 0"/></defs><circle cx="60" cy="60" r="58" fill="var(--card)"/><circle cx="60" cy="60" r="54.5" fill="none" stroke="var(--brick)" stroke-width="2"/><circle cx="60" cy="60" r="31" fill="none" stroke="var(--brick)" stroke-width="1"/><text font-size="7.6"><textPath href="#sl-arc" textLength="258" lengthAdjust="spacing">PUBLISHED UP FRONT · CONFIRMED IN WRITING ·</textPath></text><text class="seal-big" font-size="15.5" x="60" y="58" text-anchor="middle">Fixed</text><text class="seal-big" font-size="15.5" x="60" y="74" text-anchor="middle">prices</text></svg><!-- /art:seal --></div>
@@ -479,7 +478,7 @@
             <td role="cell"><span class="cell-label" aria-hidden="true">Live in</span>As little as 7 days</td>
             <td role="cell"><span class="cell-label" aria-hidden="true">Size</span>1 page</td>
             <td role="cell"><span class="cell-label" aria-hidden="true">Design</span>Custom design, 1 revision round</td>
-            <td role="cell"><span class="cell-label" aria-hidden="true">Included</span><ul><li>Copy editing and polish (you supply the text)</li><li>Contact form</li><li>Mobile &amp; SEO basics</li></ul></td>
+            <td role="cell"><span class="cell-label" aria-hidden="true">Included</span><ul role="list"><li>Copy editing and polish (you supply the text)</li><li>Contact form</li><li>Mobile &amp; SEO basics</li></ul></td>
             <td role="cell"><span class="cell-label" aria-hidden="true">Support</span>14 days</td>
             <td role="cell" class="spec-act"><a class="btn btn-block" href="/contact/?package=onepage">Start a one-page site</a><a class="btn btn-quiet" href="/contact/" data-booking>Or book the free call first</a></td>
           </tr>
@@ -490,7 +489,7 @@
             <td role="cell"><span class="cell-label" aria-hidden="true">Live in</span>As little as <span class="nowrap">7–10 days</span></td>
             <td role="cell"><span class="cell-label" aria-hidden="true">Size</span>Up to 5 pages</td>
             <td role="cell"><span class="cell-label" aria-hidden="true">Design</span>Custom design, 1 revision round</td>
-            <td role="cell"><span class="cell-label" aria-hidden="true">Included</span><ul><li>Copy editing and polish (you supply the text)</li><li>Contact form</li><li>Mobile &amp; SEO basics</li></ul></td>
+            <td role="cell"><span class="cell-label" aria-hidden="true">Included</span><ul role="list"><li>Copy editing and polish (you supply the text)</li><li>Contact form</li><li>Mobile &amp; SEO basics</li></ul></td>
             <td role="cell"><span class="cell-label" aria-hidden="true">Support</span>30 days</td>
             <td role="cell" class="spec-act"><a class="btn btn-block" href="/checkout/?plan=starter-deposit">Pay 50% deposit —&nbsp;$1,000</a><a class="btn btn-quiet" href="/contact/?package=starter">Or send an enquiry first<span class="sr-only"> about the Starter package</span></a></td>
           </tr>
@@ -501,7 +500,7 @@
             <td role="cell"><span class="cell-label" aria-hidden="true">Live in</span>2–4 weeks</td>
             <td role="cell"><span class="cell-label" aria-hidden="true">Size</span>Up to 10 pages</td>
             <td role="cell"><span class="cell-label" aria-hidden="true">Design</span>Up to 3 design rounds, plus a final tweaks round</td>
-            <td role="cell"><span class="cell-label" aria-hidden="true">Included</span><ul><li>Copywriting: we draft, you edit</li><li>Blog or news section</li><li>Analytics &amp; tracking setup</li><li>Local SEO configuration</li></ul></td>
+            <td role="cell"><span class="cell-label" aria-hidden="true">Included</span><ul role="list"><li>Copywriting: we draft, you edit</li><li>Blog or news section</li><li>Analytics &amp; tracking setup</li><li>Local SEO configuration</li></ul></td>
             <td role="cell"><span class="cell-label" aria-hidden="true">Support</span>90 days</td>
             <td role="cell" class="spec-act"><a class="btn btn-primary btn-block" href="/checkout/?plan=business-deposit">Pay 50% deposit —&nbsp;$2,000</a><a class="btn btn-quiet" href="/contact/?package=business">Or send an enquiry first<span class="sr-only"> about the Business package</span></a></td>
           </tr>
@@ -512,7 +511,7 @@
             <td role="cell"><span class="cell-label" aria-hidden="true">Live in</span>4–6 weeks</td>
             <td role="cell"><span class="cell-label" aria-hidden="true">Size</span>Full store build</td>
             <td role="cell"><span class="cell-label" aria-hidden="true">Design</span>Up to 3 design rounds, plus a final tweaks round</td>
-            <td role="cell"><span class="cell-label" aria-hidden="true">Included</span><ul><li>Payments, shipping &amp; tax</li><li>Product import</li><li>Email &amp; abandoned cart flows</li><li>Team training session</li></ul></td>
+            <td role="cell"><span class="cell-label" aria-hidden="true">Included</span><ul role="list"><li>Payments, shipping &amp; tax</li><li>Product import</li><li>Email &amp; abandoned cart flows</li><li>Team training session</li></ul></td>
             <td role="cell"><span class="cell-label" aria-hidden="true">Support</span>6 months</td>
             <td role="cell" class="spec-act"><a class="btn btn-block" href="/checkout/?plan=commerce-deposit">Pay 50% deposit —&nbsp;$4,000</a><a class="btn btn-quiet" href="/contact/?package=commerce">Or send an enquiry first<span class="sr-only"> about the Commerce package</span></a></td>
           </tr>
@@ -524,7 +523,7 @@
         <div class="reveal" id="payment">
           <p class="eyebrow">How you pay</p>
           <h3>Half to start, half at launch. Or spread it out.</h3>
-          <ul class="ticks">
+          <ul class="ticks" role="list">
             <li>Standard is 50% to start and 50% at launch.</li>
             <li>Payment plans are available on all projects: 50% up front, then the rest in up to 3 equal monthly payments, the first due one month after the deposit (on Starter, $1,000 down, then about $333 a month for 3 months).</li>
             <li>Pay by card or ACH bank transfer through Stripe, or by check on request. The details are in our <a href="/terms/">terms</a>.</li>
@@ -542,7 +541,7 @@
           <p class="eyebrow">Add to any project</p>
           <h3>Add-ons</h3>
           <p>A brand to build the site around, and the tools you already run, wired in.</p>
-          <ul class="pricelist">
+          <ul class="pricelist" role="list">
             <li>
               <div class="pl-row"><h4 class="pl-name">Brand identity</h4><span class="dots" aria-hidden="true"></span><span class="pl-price">$1,500</span></div>
               <p>Logo and mark, colours, fonts, a brand guidelines document and social templates.</p>
@@ -582,7 +581,7 @@
       <div class="grid grid-2 price-groups">
         <div class="reveal">
           <h3 class="pl-group">Start here</h3>
-          <ul class="pricelist">
+          <ul class="pricelist" role="list">
             <li>
               <div class="pl-row"><h4 class="pl-name">Growth Audit &amp; action plan</h4><span class="dots" aria-hidden="true"></span><span class="pl-price">$350</span></div>
               <p>60-minute session and a written plan ranked by impact. The $350 comes off any project booked within 30 days.</p>
@@ -595,7 +594,7 @@
         </div>
         <div class="reveal">
           <h3 class="pl-group">One-time setups</h3>
-          <ul class="pricelist">
+          <ul class="pricelist" role="list">
             <li>
               <div class="pl-row"><h4 class="pl-name">Google profile &amp; reviews</h4><span class="dots" aria-hidden="true"></span><span class="pl-price">$500</span></div>
               <p>Profile completed, listings made consistent, review link, QR code and reply templates.</p>
@@ -616,7 +615,7 @@
         </div>
         <div class="reveal">
           <h3 class="pl-group">By the month</h3>
-          <ul class="pricelist">
+          <ul class="pricelist" role="list">
             <li>
               <div class="pl-row"><h4 class="pl-name">Advisor plan</h4><span class="dots" aria-hidden="true"></span><span class="pl-price">$500/mo</span></div>
               <p>Monthly strategy call, Google profile managed, review replies and a monthly report.</p>
@@ -633,7 +632,7 @@
           <div class="bundle">
             <div class="receipt tilt on-paper">
               <p class="receipt-head"><span>Launch bundle</span><span>Receipt</span></p>
-              <ul class="receipt-lines">
+              <ul class="receipt-lines" role="list">
                 <li><span>Starter website</span><span class="dots" aria-hidden="true"></span><b>$2,000</b></li>
                 <li><span>Google profile &amp; reviews</span><span class="dots" aria-hidden="true"></span><b>$500</b></li>
                 <li><span>Missed-call text-back</span><span class="dots" aria-hidden="true"></span><b>$750</b></li>
@@ -641,7 +640,7 @@
               <p class="receipt-sum"><span>Bought separately</span><s>$3,250</s></p>
               <p class="receipt-total"><span>Launch bundle</span><b>$3,000</b></p>
             </div>
-            <a class="btn" href="/contact/?package=bundle">Ask about the bundle</a>
+            <a class="btn" href="/contact/?package=bundle">Start the Launch bundle</a>
           </div>
         </div>
       </div>
@@ -672,28 +671,28 @@
           <tr role="row">
             <th role="rowheader" scope="row">Basic</th>
             <td role="cell"><span class="cell-label" aria-hidden="true">Fits</span>One-page and Starter sites</td>
-            <td role="cell"><span class="cell-label" aria-hidden="true">What you get</span><ul><li>1 small change a month, made within 5 business days</li><li>You keep your own domain and hosting renewals current</li></ul></td>
+            <td role="cell"><span class="cell-label" aria-hidden="true">What you get</span><ul role="list"><li>1 small change a month, made within 5 business days</li><li>You keep your own domain and hosting renewals current</li></ul></td>
             <td role="cell" class="num">$125<small>/mo</small></td>
             <td role="cell"><a class="btn btn-sm btn-block" href="/contact/?package=care" aria-label="Request plan: Basic care, $125 a month">Request plan</a></td>
           </tr>
           <tr role="row">
             <th role="rowheader" scope="row">Essential</th>
             <td role="cell"><span class="cell-label" aria-hidden="true">Fits</span>Brochure and marketing sites</td>
-            <td role="cell"><span class="cell-label" aria-hidden="true">What you get</span><ul><li>Changes made within 4 business days, up to 2 requests a month</li><li>You keep your own domain and hosting renewals current</li></ul></td>
+            <td role="cell"><span class="cell-label" aria-hidden="true">What you get</span><ul role="list"><li>Changes made within 4 business days, up to 2 requests a month</li><li>You keep your own domain and hosting renewals current</li></ul></td>
             <td role="cell" class="num">$300<small>/mo</small></td>
             <td role="cell"><a class="btn btn-sm btn-block" href="/checkout/?plan=essential-care" aria-label="Start plan: Essential care, $300 a month">Start plan</a></td>
           </tr>
           <tr role="row">
             <th role="rowheader" scope="row">Growth</th>
             <td role="cell"><span class="cell-label" aria-hidden="true">Fits</span>Sites with booking or lead flows</td>
-            <td role="cell"><span class="cell-label" aria-hidden="true">What you get</span><ul><li>Changes made within 2 business days, up to 5 requests a month</li><li>Your Netlify hosting, SSL and IONOS domain renewals looked after (domain and hosting costs billed at cost on top)</li></ul></td>
+            <td role="cell"><span class="cell-label" aria-hidden="true">What you get</span><ul role="list"><li>Changes made within 2 business days, up to 5 requests a month</li><li>Your Netlify hosting, SSL and IONOS domain renewals looked after (domain and hosting costs billed at cost on top)</li></ul></td>
             <td role="cell" class="num">$600<small>/mo</small></td>
             <td role="cell"><a class="btn btn-sm btn-block" href="/checkout/?plan=growth-care" aria-label="Start plan: Growth care, $600 a month">Start plan</a></td>
           </tr>
           <tr role="row">
             <th role="rowheader" scope="row">Commerce</th>
             <td role="cell"><span class="cell-label" aria-hidden="true">Fits</span>Stores and integrations</td>
-            <td role="cell"><span class="cell-label" aria-hidden="true">What you get</span><ul><li>Same-day response for urgent issues, unlimited small requests and a direct text line</li><li>Your Netlify hosting, SSL and IONOS domain renewals looked after (domain and hosting costs billed at cost on top)</li></ul></td>
+            <td role="cell"><span class="cell-label" aria-hidden="true">What you get</span><ul role="list"><li>Same-day response for urgent issues, unlimited small requests and a direct text line</li><li>Your Netlify hosting, SSL and IONOS domain renewals looked after (domain and hosting costs billed at cost on top)</li></ul></td>
             <td role="cell" class="num">$1,000<small>/mo</small></td>
             <td role="cell"><a class="btn btn-sm btn-block" href="/checkout/?plan=commerce-care" aria-label="Start plan: Commerce care, $1,000 a month">Start plan</a></td>
           </tr>
@@ -702,7 +701,7 @@
 
       <div class="card stack space-above reveal">
         <h3 class="label">Every plan includes</h3>
-        <ul class="ticks">
+        <ul class="ticks" role="list">
           <li>Daily off-site backups, restored on request</li>
           <li>24/7 uptime monitoring with alerts</li>
           <li>Security patches and platform updates</li>
@@ -719,12 +718,12 @@
 
   <!-- ===================== CLOSING CALL TO ACTION ===================== -->
   <section class="cta-band on-blue">
-    <div class="container cta-inner reveal">
+    <div class="container cta-inner">
       <div class="cta-copy">
         <h2>Still deciding? Book the free call.</h2>
         <p>Thirty minutes, no pitch. You'll get a clear view of what your website and your systems need, and what it should cost — even if you do it yourself.</p>
         <div class="btn-row">
-          <a class="btn btn-primary btn-lg" href="/contact/" data-booking>Book a discovery call</a>
+          <a class="btn btn-primary btn-lg" href="/contact/" data-booking>Book a free 30-minute call</a>
           <a class="btn btn-lg" href="/contact/">Send an enquiry</a>
         </div>
       </div>
@@ -817,7 +816,7 @@
 
     <nav class="footer-col" aria-label="Contact">
       <p class="footer-title">Contact</p>
-      <a href="mailto:knightwebstudio1@gmail.com">knightwebstudio1@gmail.com</a>
+      <a href="mailto:knightwebstudio1@gmail.com"><span>knightwebstudio1@<wbr>gmail.com</span></a>
       <a href="tel:+12252550837">(225) 255-0837</a>
       <a href="/contact/">Start a project</a>
     </nav>
