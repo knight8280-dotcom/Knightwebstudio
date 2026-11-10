@@ -454,11 +454,13 @@
   <!-- ===================== THE LETTER =====================
        First row: who is writing (set large, in the heading face) beside what the studio does beyond websites.
        Second row, under a rule: the three real projects as a ruled list, beside the towns.
-       Only these three projects. Say what was built; claim no result. -->
+       The two columns are built alike: a head (title and one sentence), then a body (list and one closing line).
+       The four blocks are in reading order; from 980px the grid sets them two by two, so both lists start on one line.
+       Only these three projects. Say what was built; claim no result. Describe each in the same plain words as /work/. -->
   <section class="section section-first" id="about">
     <div class="container">
       <div class="split split-even">
-        <p class="opening display">I'm a self-taught software developer with a bachelor's degree in business management. I started KnightWebstudio to help my local community thrive by giving Baton Rouge small businesses the kind of professional online presence that helps them grow.</p>
+        <p class="opening h3">I'm a self-taught software developer with a bachelor's degree in business management. I started KnightWebstudio to help my local community thrive by giving Baton Rouge small businesses the kind of professional online presence that helps them grow.</p>
         <div class="prose">
           <h2>More than websites</h2>
           <p>A good website gets you found, but plenty of customers still slip away after that: the call nobody could answer, the quote nobody followed up, the review nobody asked for.</p>
@@ -467,11 +469,13 @@
         </div>
       </div>
 
-      <div class="split notes space-above">
-        <div class="reveal">
+      <div class="notes space-above">
+        <div class="stack reveal">
           <h2 class="h3">Work I've built</h2>
           <p>Work you can visit and judge for yourself.</p>
-          <ul class="projects">
+        </div>
+        <div class="stack reveal">
+          <ul class="projects" role="list">
             <li><a href="https://smilyssoftwash.com" target="_blank" rel="noopener">
               <span class="project-name h4">Smilys Softwash</span>
               <span class="project-kind">Exterior cleaning in Greater Baton Rouge&nbsp;· Local service &amp; SEO</span>
@@ -486,17 +490,19 @@
             </a></li>
             <li><a href="https://corbelbooks.com" target="_blank" rel="noopener">
               <span class="project-name h4">Corbel Books</span>
-              <span class="project-kind">Fintech SaaS&nbsp;· Product site &amp; app UI</span>
+              <span class="project-kind">Bookkeeping software&nbsp;· Product site &amp; app screens</span>
               <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
               <span class="sr-only">(opens in a new tab)</span>
             </a></li>
           </ul>
           <p><a class="more-link" href="/work/">See the work in detail<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a></p>
         </div>
-        <div class="reveal">
+        <div class="stack reveal">
           <h2 class="h3">Local first, and anywhere after that</h2>
-          <p>I meet clients in person anywhere in Greater Baton Rouge. If you're farther away, that's fine too: I work with clients anywhere.</p>
-          <ul class="towns" aria-label="Towns where I meet clients in person">
+          <p>I meet clients in person anywhere in Greater Baton Rouge.</p>
+        </div>
+        <div class="stack reveal">
+          <ul class="towns" role="list" aria-label="Towns where I meet clients in person">
             <li><a href="/web-design-baton-rouge/">Baton Rouge</a></li>
             <li><a href="/web-design-gonzales/">Gonzales</a></li>
             <li><a href="/web-design-prairieville/">Prairieville</a></li>
@@ -505,6 +511,7 @@
             <li>Central</li>
             <li>Baker</li>
           </ul>
+          <p>If you're farther away, that's fine too: I work with clients anywhere.</p>
         </div>
       </div>
     </div>
@@ -513,12 +520,12 @@
   <!-- ===================== HOW I WORK =====================
        Five terms as one ruled sheet. Every price here is fixed and is also on /pricing/ or /consulting/:
        change one there and change it here. -->
-  <section class="section section-sand">
+  <section class="section section-tight section-sand">
     <div class="container">
       <header class="section-head">
         <h2>How I work</h2>
       </header>
-      <ul class="pricelist terms reveal">
+      <ul class="pricelist terms reveal" role="list">
         <li>
           <h3 class="pl-name">Fixed, published prices</h3>
           <p>A one-page site is <strong>$1,000</strong>, Starter is <strong>$2,000</strong>, Business is <strong>$4,000</strong> and Commerce is <strong>$8,000</strong>. What you see on the <a href="/pricing/">pricing page</a> is what you pay, confirmed in writing before any work begins.</p>

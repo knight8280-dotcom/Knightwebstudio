@@ -1,42 +1,50 @@
-/* About page only: a letter from the owner. The headline greets, the card says who it is from. */
-[data-page="about"] .lede,[data-page="about"] .terms p{text-wrap:pretty}
+/* About: a letter from the owner. The card says who it is from. */
+/* SHARED-CANDIDATE: a 15-letter word fits a 320px phone (--fs-h1 stops at 38px) */
+[data-page="about"] h1{font-size:min(var(--fs-h1),10.4vw);overflow-wrap:anywhere}
 
-/* Arriving: the name is underlined and the card is put down, once */
-[data-page="about"] .mark::after{transform-origin:0;animation:about-sign var(--t-slow) var(--ease) var(--t-slow) both}
+/* Arriving, once: the name is underlined and the card is put down.
+   SHARED-CANDIDATE: a brush mark on a first line is lifted clear of the next */
+[data-page="about"] .mark::after{bottom:.01em;right:.05em;height:.2em;transform-origin:0;animation:about-sign var(--t-slow) var(--ease) var(--t-slow) both}
 [data-page="about"] .bizcard{animation:about-card var(--t-slow) var(--ease) var(--t-fast) both}
 @keyframes about-sign{from{transform:scaleX(0)}}
 @keyframes about-card{from{opacity:0;transform:translateY(var(--s-4)) rotate(-4deg)}}
+/* SHARED-CANDIDATE: a narrow card tightens its top row; the tagline stays on one line */
+[data-page="about"] .page-head-aside{container-type:inline-size}
+@container (max-width:25rem){
+[data-page="about"] .bizcard{--crest:2rem}
+[data-page="about"] .bizcard-top{gap:var(--s-2)}
+[data-page="about"] .bizcard-top span{letter-spacing:0;word-spacing:-.1em}
+}
 
-/* The letter's opening paragraph, in the heading face */
-[data-page="about"] .opening{max-width:24em;margin:0;color:var(--ink);font-size:var(--fs-h3);font-weight:420;line-height:1.36;letter-spacing:-.01em;text-wrap:pretty}
+/* The letter's opening: the heading face, lighter */
+[data-page="about"] .opening{max-width:calc(var(--measure)*.7);font-weight:400;line-height:1.36}
+[data-page="about"] :is(.lede,.opening){text-wrap:pretty}
 /* SHARED-CANDIDATE: a heading that opens a .prose block has no gap above it */
 [data-page="about"] .prose>:first-child{margin-top:0}
-/* SHARED-CANDIDATE: the card's tagline stays on one line on a phone */
-[data-page="about"] .bizcard-top span{letter-spacing:.03em}
 
-/* Under a rule: the work beside the towns */
-[data-page="about"] .notes{padding-top:var(--stack);border-top:var(--edge)}
-[data-page="about"] .notes p:last-child{margin-bottom:0}
+/* Under a rule: work, then towns: head, body, head, body */
+[data-page="about"] .notes{display:grid;gap:var(--s-4) var(--gap-lg);padding-top:var(--stack);border-top:var(--edge)}
+[data-page="about"] .notes>*{justify-items:stretch}
+[data-page="about"] .notes>:nth-child(2){padding-bottom:var(--s-4)}
+[data-page="about"] .notes ul{list-style:none;border-top:var(--frame)}
 
-/* The three projects: one link a row. Blue underline = pressable */
-[data-page="about"] .projects{list-style:none;margin-top:var(--s-4);border-top:var(--frame)}
+/* The three projects: one link a row */
 [data-page="about"] .projects a{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:baseline;gap:var(--s-1) var(--s-3);min-height:var(--btn-h);padding:var(--s-3) 0;border-bottom:var(--edge);color:var(--ink);text-decoration:none}
 [data-page="about"] .project-name{text-decoration:underline;text-decoration-color:var(--blue);text-underline-offset:.25em}
 [data-page="about"] .project-kind{grid-area:2/1/auto/-1;color:var(--ink-2);font-size:var(--fs-sm);line-height:1.45}
 [data-page="about"] .projects .ico{grid-area:1/2;align-self:center;color:var(--blue);transition:var(--move)}
 [data-page="about"] .projects a:active .project-name{color:var(--blue-deep)}
 
-/* The towns: a plain two-column list */
-[data-page="about"] .towns{list-style:none;display:grid;grid-template-rows:repeat(4,auto);grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);align-content:start;column-gap:var(--gap);margin-top:var(--s-4);border-top:var(--frame)}
-[data-page="about"] .towns li{display:flex;align-items:center;min-height:var(--tap);border-bottom:var(--seam);color:var(--ink);font-weight:600}
-[data-page="about"] .towns a{flex:1;display:flex;align-items:center;min-height:var(--tap)}
+/* The towns: two plain columns, a 44px row each */
+[data-page="about"] .towns{columns:2;column-gap:var(--gap)}
+[data-page="about"] .towns li{break-inside:avoid;border-bottom:var(--seam);color:var(--ink);font-weight:600;line-height:var(--tap)}
+[data-page="about"] .towns a{display:block}
 
 @media (min-width:600px) and (max-width:979.98px){
-/* Until it sits beside the headline, the card keeps the left edge */
+/* Left edge until the card sits beside the headline */
 [data-page="about"] .page-head-aside{justify-self:start}
 }
 @media (min-width:760px){
-[data-page="about"] .notes{grid-template-columns:repeat(2,minmax(0,1fr))}
 /* How I work: one ruled row a term */
 [data-page="about"] .terms{max-width:none}
 [data-page="about"] .terms>li{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);align-items:baseline;gap:var(--gap-lg);padding-block:var(--s-5)}
@@ -44,16 +52,10 @@
 [data-page="about"] .terms p{margin:0;font-size:var(--fs-body);line-height:1.6}
 }
 @media (min-width:980px){
-/* One axis: letter, notes and terms all split in half */
+/* One axis: letter, notes and terms split in half; both lists start level */
+[data-page="about"] .opening{max-width:calc(var(--measure)*.6);font-size:var(--fs-title);line-height:1.3}
+[data-page="about"] .notes{grid-template:auto auto/repeat(2,minmax(0,1fr));grid-auto-flow:column}
 [data-page="about"] .terms>li{grid-template-columns:repeat(2,minmax(0,1fr))}
-}
-/* Both lists start on one line */
-@supports (grid-template-rows:subgrid){
-@media (min-width:760px){
-[data-page="about"] .notes{row-gap:0}
-[data-page="about"] .notes>div{display:grid;grid-row:span 4;grid-template-rows:subgrid}
-[data-page="about"] .notes ul{margin-top:0}
-}
 }
 @media (hover: hover){
 [data-page="about"] .projects a:hover .project-name{color:var(--blue)}
