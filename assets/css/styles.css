@@ -1082,7 +1082,7 @@ input[type="number"]::-webkit-inner-spin-button { opacity: .5; }
 
 /* ---------- Print ---------- */
 @media print {
-  .site-header, .cta-band, .contact-form, .mobile-cta, .skip-link, .section-more { display: none !important; }
+  .site-header, .cta-band, .contact-form, .mobile-cta, .skip-link, .section-more, .shader-canvas { display: none !important; }
   body { background: #fff; color: #000; }
   .js .reveal { opacity: 1; transform: none; }
   .faq-item { break-inside: avoid; }
@@ -1267,6 +1267,18 @@ input[type="number"]::-webkit-inner-spin-button { opacity: .5; }
    repainting; moving each shard separately cost ~0.7s of style work. */
 .shards { animation: kws-drift 18s ease-in-out infinite alternate; will-change: transform; }
 [data-theme="light"] .shard { opacity: .6; }
+
+/* --- Animated grain gradient behind sections marked data-shader ---
+   Drawn by assets/js/shader.js. The canvas fades in over the CSS glow once
+   its first frame is ready; without WebGL (or with Save-Data on) the glow
+   simply stays. */
+.shader-canvas {
+  position: absolute; inset: 0; z-index: -1; width: 100%; height: 100%;
+  display: block; pointer-events: none; opacity: 0; transition: opacity 1.4s ease;
+}
+.shader-canvas.is-on { opacity: 1; }
+.hero-glow { transition: opacity 1.4s ease; }
+.shader-on > .hero-glow { opacity: 0; }
 
 /* --- Full crest over the landing page's closing call to action --- */
 .cta-crest { width: clamp(140px, 18vw, 190px); margin: 0 auto 18px; filter: drop-shadow(0 14px 26px rgba(4, 8, 30, .45)); }

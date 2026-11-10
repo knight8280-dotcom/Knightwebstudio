@@ -34,7 +34,8 @@ below 980px.
 Also built in: dark/light theme toggle (remembers the visitor's choice, and is
 restored by an inline script before first paint so there is no flash), sticky
 header with a sliding active-page marker, mobile menu, scroll reveal
-animations, `prefers-reduced-motion` support, keyboard accessibility, skip
+animations, an animated grain-gradient behind the landing hero (see
+[Hero background](#4a-hero-background)), `prefers-reduced-motion` support, keyboard accessibility, skip
 link, Open Graph tags for link previews, and JSON-LD structured data for
 Google.
 
@@ -48,6 +49,7 @@ work/  process/  pricing/  faq/  contact/  privacy/  terms/
 site.webmanifest        Installable-app metadata and icons
 assets/css/styles.css   All styling (design tokens at the top)
 assets/js/main.js       Theme, nav, reveals, form handling
+assets/js/shader.js     Animated hero background (WebGL), landing page only
 assets/img/             Project screenshots (work-*.jpg), logo, PNG app icons
 favicon.ico             16/32/48px icon for browsers and Google results
 robots.txt              Search engine directives
@@ -241,6 +243,36 @@ below. Three tokens differ deliberately between themes and are easy to break:
 - `--band` is the CTA band's background, deep enough to carry white in both.
 
 If you change the brand colour, re-check all three.
+
+### 4a. Hero background
+
+The landing hero has a slow, drifting grain gradient drawn with WebGL by
+`assets/js/shader.js`. It's hand-written: no library and no licence to buy.
+The section opts in with an attribute, and the page loads the script:
+
+```html
+<section class="hero" id="top" data-shader>
+…
+<script src="/assets/js/shader.js" defer></script>
+```
+
+- **Colours** come from `--brand`, `--accent` and `--brand-soft`, so it follows
+  the theme toggle and any brand change. To pin colours, add
+  `data-shader-colors="#a5b8ff,#46e0c0,#c9d4ff"`. Its strength is
+  `data-shader-strength="0.32,0.14"`: peak opacity on the dark and light theme.
+- **Text stays readable.** Every pixel's opacity is capped so the section's
+  text colours (`--text`, `--muted`, `--brand-soft`, `--accent`) keep at least
+  4.6:1 against the background it makes, whatever colours you choose.
+- **Easy on phones.** It starts only after the page has loaded, draws at most
+  30 frames a second, stops when scrolled out of view or in a background tab,
+  and shows one still frame for visitors who turn on reduced motion. With no
+  WebGL, or with Save-Data on, the CSS glow (`.hero-glow`) shows instead.
+- **To turn it off**, remove `data-shader` from the hero (or the script tag).
+- **Other sections** can use it too: any section that is `position: relative`
+  and `isolation: isolate`. Add `data-shader` and load the script on that page.
+- **Client sites** can reuse the file as-is. In a React build, load it once
+  and call `window.KWSShader.mount(element, { strength: [0.32, 0.14] })` in an
+  effect. It returns a function that removes it, for the effect's cleanup.
 
 ### 5. Your work
 
@@ -571,4 +603,5 @@ Validate changes with the [Rich Results Test](https://search.google.com/test/ric
 
 Current Chrome, Edge, Firefox and Safari. Uses `color-mix()` and
 `backdrop-filter`; on older browsers the layout and content stay fully intact,
-only some visual polish falls away.
+only some visual polish falls away. The hero background needs WebGL; without
+it the static CSS glow shows.
