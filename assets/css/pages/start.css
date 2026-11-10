@@ -1,10 +1,10 @@
-/* Landing page only: shared parts and their layout here. Every rule is scoped with [data-page="start"]. */
+/* Landing page only. Every rule is scoped with [data-page="start"]. */
 
 /* Head. Below 980px three facts stand beside the small shop front; from 980px the shop is the aside, the facts a shelf.
-   SHARED-CANDIDATE: three set headline lines, a size down below 980px: the first phone screen holds the prices
-   and nothing moves when the fonts arrive. */
+   SHARED-CANDIDATE: nothing re-wraps when the fonts arrive. Headline and lede are set lines (the headline a size down
+   below 980px, so a phone's first screen holds the prices), the buttons have room, the price note keeps its own row. */
 [data-page="start"] .page-head-split { --shop: calc(var(--s-9) + var(--s-7)); grid-template-columns: minmax(0, 1fr) var(--shop); column-gap: var(--s-4); align-items: end; }
-[data-page="start"] h1 .l { display: block; }
+[data-page="start"] .l { display: block; }
 @media (max-width: 979.98px) {
   [data-page="start"] h1 { font-size: calc(var(--fs-h1) * .887); }
   [data-page="start"] .head-copy { grid-column: 1 / -1; }
@@ -15,17 +15,17 @@
 }
 @media (max-width: 379.98px) {
   [data-page="start"] .page-head-split { --shop: calc(var(--s-9) + var(--s-6)); }
+  [data-page="start"] .lede { font-size: var(--fs-body); }
   [data-page="start"] .board .dots { display: none; }
 }
 @media (min-width: 600px) {
   [data-page="start"] .page-head-split { --shop: calc(var(--s-9) * 2); column-gap: var(--gap-lg); }
-  /* Booking and call share a row with room to spare in any font */
   [data-page="start"] .btn-lg { padding-inline: var(--s-5); }
 }
 @media (min-width: 600px) and (max-width: 979.98px) { [data-page="start"] .points li { padding-block: var(--s-5); } }
 @media (min-width: 980px) {
   [data-page="start"] .page-head-split { --shop: calc(var(--s-9) * 2 + var(--s-8)); align-items: center; }
-  [data-page="start"] .points { grid-column: 1 / -1; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  [data-page="start"] .points { grid-column: 1 / -1; grid-template-columns: repeat(3, auto); }
 }
 @media (min-width: 1100px) { [data-page="start"] .page-head-split { --shop: min(37%, var(--maxw-card)); } }
 /* The brush stroke is painted once, as the page opens */
@@ -41,7 +41,8 @@
 /* SHARED-CANDIDATE: a price that is a phrase sits under its name, with no leader left pointing at nothing */
 @media (max-width: 1279.98px) {
   [data-page="start"] .pl-long .dots { display: none; }
-  [data-page="start"] .pl-long .pl-price { flex-basis: 100%; margin-left: 0; }
+  [data-page="start"] .pl-long .pl-price { flex-basis: 100%; }
+  [data-page="start"] .price-strip-note { flex-basis: 100%; }
 }
 
 /* Work: three small rows on a phone */
@@ -62,7 +63,7 @@
 @media (min-width: 760px) { [data-page="start"] .board .pricelist { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--s-7); } }
 @media (min-width: 980px) { [data-page="start"] .board-foot { grid-template-columns: minmax(0, 1fr) auto; align-items: center; } }
 
-/* The job ticket as a strip: four short rows, two by two from 760px, four stubs across from 1100px */
+/* The job ticket as a strip: rows, two by two from 760px, four stubs across from 1100px */
 [data-page="start"] .ticket { padding-bottom: var(--s-6); }
 [data-page="start"] .ticket .steps > li { grid-template-columns: var(--s-7) minmax(0, 1fr); padding-block: var(--s-3); }
 [data-page="start"] .ticket .steps > li::after { content: none; }

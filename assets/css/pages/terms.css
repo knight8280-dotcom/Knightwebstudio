@@ -1,11 +1,14 @@
-/* Terms page only. Every rule is scoped with [data-page="terms"]. The page is shared parts:
-   the reading head, the contents list beside the prose from 980px (.split-sticky).
-   SHARED-CANDIDATE: a contents list of names only is tighter and quieter than one with prices
-   (.toc-plain), and sets in two columns on a tablet. privacy.css and terms.css hold the same rules. */
+/* Terms page only: shared parts, with the contents list beside the prose from 980px (.split-sticky).
+   SHARED-CANDIDATE, the same in privacy.css and terms.css: a names-only contents list (.toc-plain) in
+   tighter rows, two columns on a tablet; a pinned column lets go in a window too short to show it all;
+   a .split column may shrink under a long word. */
 [data-page="terms"] .toc a { min-height: var(--tap); padding-block: var(--s-2); font-size: var(--fs-sm); }
 @media (min-width: 600px) and (max-width: 979.98px) {
   [data-page="terms"] .toc ol { columns: 2; column-gap: var(--gap); }
   [data-page="terms"] .toc li { break-inside: avoid; }
 }
-/* SHARED-CANDIDATE: a figure set in the display face inside a sentence must not push its line apart */
+@media (min-width: 980px) and (max-height: 620px) { [data-page="terms"] .toc { position: static; } }
+[data-page="terms"] .split > * { min-width: 0; }
+[data-page="terms"] .prose { overflow-wrap: break-word; }
+/* SHARED-CANDIDATE: a display-face figure in a sentence keeps the line spacing */
 [data-page="terms"] .prose .display { line-height: 1; }
