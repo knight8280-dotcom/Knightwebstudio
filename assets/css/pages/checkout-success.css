@@ -2,7 +2,6 @@
 /* Script-written titles: one line on a desktop, two below it */
 [data-page="checkout-success"] .page-head h1{max-width:none}
 @media (max-width:979.98px){[data-page="checkout-success"] .page-head h1{font-size:calc(var(--fs-h1)*.85)}}
-@media (min-width:600px) and (max-width:979.98px){[data-page="checkout-success"]:not(:has(#success-retry:not([hidden]))) .page-head h1{text-wrap:pretty}}
 [data-page="checkout-success"] .till{gap:var(--s-6) var(--gap-lg)}
 [data-page="checkout-success"] .till>*{min-width:0}
 [data-page="checkout-success"] .till-side p{overflow-wrap:anywhere}
@@ -10,8 +9,11 @@
 [data-page="checkout-success"] .receipt-total{container-type:inline-size}
 [data-page="checkout-success"] .receipt-total b{max-width:100%;font-size:calc(var(--fs-title)*1.25);font-size:min(calc(var(--fs-title)*1.25),12cqi);text-align:right;overflow-wrap:anywhere}
 @keyframes kws-slip{from{opacity:0;transform:translateY(calc(-1*var(--s-3)))}}
+@supports selector(:has(a)){
 /* No receipt under "No payment was taken" */
-@supports selector(:has(a)){[data-page="checkout-success"] .till:has(#success-retry:not([hidden])) .receipt{display:none}}
+[data-page="checkout-success"] .till:has(#success-retry:not([hidden])) .receipt{display:none}
+@media (min-width:600px) and (max-width:979.98px){[data-page="checkout-success"]:not(:has(#success-retry:not([hidden]))) .page-head h1{text-wrap:pretty}}
+}
 [data-page="checkout-success"] :is(.status,h2.eyebrow){margin:0}
 [data-page="checkout-success"] .steps{counter-reset:step}
 [data-page="checkout-success"] .steps-no::before{counter-increment:step;content:counter(step,decimal-leading-zero)}
