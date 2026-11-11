@@ -1,0 +1,42 @@
+[
+ {
+  "p": "/pricing/",
+  "w": 390,
+  "h1": "2>3",
+  "h1h": "83>124",
+  "firstMove": 41,
+  "doc": 94,
+  "headsDiff": 2,
+  "nHeads": 7
+ },
+ {
+  "p": "/pricing/",
+  "w": 1280,
+  "h1": "4>4",
+  "h1h": "133>133",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 7
+ },
+ {
+  "p": "/terms/",
+  "w": 390,
+  "h1": "2>2",
+  "h1h": "83>83",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 11
+ },
+ {
+  "p": "/terms/",
+  "w": 1280,
+  "h1": "1>2",
+  "h1h": "67>133",
+  "firstMove": 66,
+  "doc": 66,
+  "headsDiff": 1,
+  "nHeads": 11
+ }
+]

@@ -81,7 +81,7 @@ const first = await agent(CONTEXT + `
 YOUR JOB: FIX THE BLOCKERS AND MAJORS. Read ${FILE} and take every finding whose severity is "blocker" or "major" (leave the minors for the next engineer, unless a minor is in the very same rule or element you are already changing). For each: reproduce it first (the reviewers were re-checked, but look yourself); fix the cause, in the shared layer when the cause is shared; then look at every page that uses what you changed, on a phone and a desktop, in both themes. A fix that helps one page and hurts another is not a fix. Where a finding conflicts with a hard rule, the hard rule wins: say so under notFixed. Where the right answer is the owner's to give (a wording choice that changes meaning, adding information the site does not have), put the safest truthful default in place and list it under ownerDecisions.
 ${BATTERY}
 Report every blocker and major id as fixed or not fixed with the reason.
-`, { label: 'fix: blockers and majors', phase: 'Fix', schema: REPORT })
+`, { model: 'opus', effort: 'xhigh', label: 'fix: blockers and majors', phase: 'Fix', schema: REPORT })
 
 const second = await agent(CONTEXT + `
 YOUR JOB: FIX THE MINORS. A colleague has just fixed the blockers and majors from ${FILE}; their report is below. Take every finding whose severity is "minor". For each: reproduce it; fix it unless the fix costs more than it buys or risks something that works (say which and why under notFixed); look at every page that uses what you changed. Do not undo your colleague's fixes; if one of them looks wrong, say so in openIssues. Group related minors (the same component, the same page) and fix them together.
@@ -89,7 +89,7 @@ THE FIRST ENGINEER REPORTED
 ${JSON.stringify(first, null, 1)}
 ${BATTERY}
 Report every minor id as fixed or not fixed with the reason.
-`, { label: 'fix: minors', phase: 'Fix', schema: REPORT })
+`, { model: 'opus', effort: 'xhigh', label: 'fix: minors', phase: 'Fix', schema: REPORT })
 
 phase('Verify')
 const review = await agent(CONTEXT + `
@@ -98,7 +98,7 @@ FIRST ENGINEER (blockers and majors)
 ${JSON.stringify(first, null, 1)}
 SECOND ENGINEER (minors)
 ${JSON.stringify(second, null, 1)}
-`, { label: 'verify fixes', phase: 'Verify', schema: VERDICTS })
+`, { model: 'opus', effort: 'xhigh', label: 'verify fixes', phase: 'Verify', schema: VERDICTS })
 
 phase('Finish')
 let last = null
@@ -113,6 +113,6 @@ ${JSON.stringify(open, null, 1)}
 REGRESSIONS
 ${JSON.stringify(regs, null, 1)}
 ${BATTERY}
-`, { label: 'final fixes', phase: 'Finish', schema: REPORT })
+`, { model: 'opus', effort: 'xhigh', label: 'final fixes', phase: 'Finish', schema: REPORT })
 }
 return { first, second, review, last }

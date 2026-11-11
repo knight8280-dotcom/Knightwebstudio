@@ -37,7 +37,7 @@ const ROOTS = '.kws-close, .kws-appt, .kws-foot';
       return out;
     }, ROOTS);
     await p.addStyleTag({ content: `:is(${ROOTS}) :not([aria-hidden="true"], [aria-hidden="true"] *) { color: transparent !important; -webkit-text-fill-color: transparent !important; text-decoration-color: transparent !important; }
-      .kws-close-kicker::before, .kws-close-kicker::after, .kws-close-mark::after { visibility: hidden !important; } .kws-motion svg { visibility: hidden !important; }` });
+      .kws-close-kicker::before, .kws-close-kicker::after, .kws-close-mark > span::after { visibility: hidden !important; } .kws-motion svg { visibility: hidden !important; }` });
     const worst = new Map();
     const frames = live ? FRAMES : 1;
     for (let f = 0; f < frames; f++) {

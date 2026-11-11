@@ -200,26 +200,29 @@ main { padding-bottom: 0; }
   <div class="kws-skyline" aria-hidden="true">
     <div class="kws-skyline-sky"></div>
     <!-- Baton Rouge on the horizon: the Capitol tower, downtown and the river bridge, with the windows and bridge lamps lit (.kws-skyline-lit).
-         On a phone the far end of downtown (.kws-skyline-far) steps out and the bridge (.kws-skyline-span) moves up beside the rest. -->
-    <svg class="kws-skyline-art" viewBox="0 0 1440 120" preserveAspectRatio="xMidYMax slice" focusable="false">
-      <path d="M0 120V102Q26 88 58 99Q92 84 128 100Q150 93 176 104V120Z"/>
-      <path d="M180 120V86h38v34ZM222 120V72h34v48ZM268 120V84h124v36ZM296 86V68h68v18ZM314 70V24h32v46ZM319 26V13h22v13ZM324 15V6h12v9ZM327 7l3-7 3 7Z"/>
-      <path d="M420 120V66h48v54ZM474 120V48h44v72ZM522 120V78h56v42ZM582 120V58h38v62Z"/>
-      <path class="kws-skyline-lit" d="M190 96h4v5h-4ZM230 80h4v5h-4ZM242 94h4v5h-4ZM282 94h4v5h-4ZM306 75h4v5h-4ZM350 75h4v5h-4ZM372 98h4v5h-4ZM326 34h4v5h-4ZM334 34h4v5h-4ZM326 47h4v5h-4ZM334 59h4v5h-4ZM430 76h4v5h-4ZM448 92h4v5h-4ZM484 58h4v5h-4ZM500 58h4v5h-4ZM484 76h4v5h-4ZM500 94h4v5h-4ZM536 88h4v5h-4ZM560 102h4v5h-4ZM592 68h4v5h-4ZM604 86h4v5h-4Z"/>
-      <g class="kws-skyline-far">
-        <path d="M624 120V88h60v32ZM690 120V70h46v50ZM740 120V94h70v26ZM818 120V108Q836 98 852 107V120Z"/>
-        <path class="kws-skyline-lit" d="M640 98h4v5h-4ZM664 98h4v5h-4ZM700 80h4v5h-4ZM720 96h4v5h-4ZM760 102h4v5h-4ZM790 102h4v5h-4Z"/>
-      </g>
-      <g class="kws-skyline-span">
-        <g fill="none" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
-          <path d="M880 93L960 78L1040 38L1090 72L1140 80L1190 72L1240 38L1320 78L1400 93"/>
-          <path d="M960 78V93M1040 38V93M1090 72V93M1140 80V93M1190 72V93M1240 38V93M1320 78V93"/>
-          <path d="M960 93L1040 38L1090 93L1140 80L1190 93L1240 38L1320 93M1000 58V93M1280 58V93"/>
+         On a phone the far end of downtown (.kws-skyline-far) steps out, the bridge (.kws-skyline-span) moves up beside the rest,
+         and the whole drawing (the one <g>) shifts left so the Capitol and a bridge tower are both in the frame. -->
+    <svg class="kws-skyline-art" viewBox="0 0 1440 120" preserveAspectRatio="xMinYMax slice" focusable="false">
+      <g>
+        <path d="M0 120V102Q26 88 58 99Q92 84 128 100Q150 93 176 104V120Z"/>
+        <path d="M180 120V86h38v34ZM222 120V72h34v48ZM268 120V84h124v36ZM296 86V68h68v18ZM314 70V24h32v46ZM319 26V13h22v13ZM324 15V6h12v9ZM327 7l3-7 3 7Z"/>
+        <path d="M420 120V66h48v54ZM474 120V48h44v72ZM522 120V78h56v42ZM582 120V58h38v62Z"/>
+        <path class="kws-skyline-lit" d="M190 96h4v5h-4ZM230 80h4v5h-4ZM242 94h4v5h-4ZM282 94h4v5h-4ZM306 75h4v5h-4ZM350 75h4v5h-4ZM372 98h4v5h-4ZM326 34h4v5h-4ZM334 34h4v5h-4ZM326 47h4v5h-4ZM334 59h4v5h-4ZM430 76h4v5h-4ZM448 92h4v5h-4ZM484 58h4v5h-4ZM500 58h4v5h-4ZM484 76h4v5h-4ZM500 94h4v5h-4ZM536 88h4v5h-4ZM560 102h4v5h-4ZM592 68h4v5h-4ZM604 86h4v5h-4Z"/>
+        <g class="kws-skyline-far">
+          <path d="M624 120V88h60v32ZM690 120V70h46v50ZM740 120V94h70v26ZM818 120V108Q836 98 852 107V120Z"/>
+          <path class="kws-skyline-lit" d="M640 98h4v5h-4ZM664 98h4v5h-4ZM700 80h4v5h-4ZM720 96h4v5h-4ZM760 102h4v5h-4ZM790 102h4v5h-4Z"/>
         </g>
-        <path d="M856 91h568v5H856ZM1033 94h14v26h-14ZM1233 94h14v26h-14ZM956 94h8v26h-8ZM1316 94h8v26h-8ZM1396 120V104Q1414 92 1440 100V120Z"/>
-        <path class="kws-skyline-lit" d="M1038 31h5v5h-5ZM1238 31h5v5h-5ZM959 73h3v3h-3ZM1089 67h3v3h-3ZM1139 75h3v3h-3ZM1189 67h3v3h-3ZM1319 73h3v3h-3Z"/>
+        <g class="kws-skyline-span">
+          <g fill="none" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+            <path d="M880 93L960 78L1040 38L1090 72L1140 80L1190 72L1240 38L1320 78L1400 93"/>
+            <path d="M960 78V93M1040 38V93M1090 72V93M1140 80V93M1190 72V93M1240 38V93M1320 78V93"/>
+            <path d="M960 93L1040 38L1090 93L1140 80L1190 93L1240 38L1320 93M1000 58V93M1280 58V93"/>
+          </g>
+          <path d="M856 91h568v5H856ZM1033 94h14v26h-14ZM1233 94h14v26h-14ZM956 94h8v26h-8ZM1316 94h8v26h-8ZM1396 120V104Q1414 92 1440 100V120Z"/>
+          <path class="kws-skyline-lit" d="M1038 31h5v5h-5ZM1238 31h5v5h-5ZM959 73h3v3h-3ZM1089 67h3v3h-3ZM1139 75h3v3h-3ZM1189 67h3v3h-3ZM1319 73h3v3h-3Z"/>
+        </g>
+        <path d="M0 114h1440v6H0Z"/>
       </g>
-      <path d="M0 114h1440v6H0Z"/>
     </svg>
   </div>
 </div>
@@ -238,26 +241,29 @@ main { padding-bottom: 0; }
   <div class="kws-skyline" aria-hidden="true">
     <div class="kws-skyline-sky"></div>
     <!-- Baton Rouge on the horizon: the Capitol tower, downtown and the river bridge, with the windows and bridge lamps lit (.kws-skyline-lit).
-         On a phone the far end of downtown (.kws-skyline-far) steps out and the bridge (.kws-skyline-span) moves up beside the rest. -->
-    <svg class="kws-skyline-art" viewBox="0 0 1440 120" preserveAspectRatio="xMidYMax slice" focusable="false">
-      <path d="M0 120V102Q26 88 58 99Q92 84 128 100Q150 93 176 104V120Z"/>
-      <path d="M180 120V86h38v34ZM222 120V72h34v48ZM268 120V84h124v36ZM296 86V68h68v18ZM314 70V24h32v46ZM319 26V13h22v13ZM324 15V6h12v9ZM327 7l3-7 3 7Z"/>
-      <path d="M420 120V66h48v54ZM474 120V48h44v72ZM522 120V78h56v42ZM582 120V58h38v62Z"/>
-      <path class="kws-skyline-lit" d="M190 96h4v5h-4ZM230 80h4v5h-4ZM242 94h4v5h-4ZM282 94h4v5h-4ZM306 75h4v5h-4ZM350 75h4v5h-4ZM372 98h4v5h-4ZM326 34h4v5h-4ZM334 34h4v5h-4ZM326 47h4v5h-4ZM334 59h4v5h-4ZM430 76h4v5h-4ZM448 92h4v5h-4ZM484 58h4v5h-4ZM500 58h4v5h-4ZM484 76h4v5h-4ZM500 94h4v5h-4ZM536 88h4v5h-4ZM560 102h4v5h-4ZM592 68h4v5h-4ZM604 86h4v5h-4Z"/>
-      <g class="kws-skyline-far">
-        <path d="M624 120V88h60v32ZM690 120V70h46v50ZM740 120V94h70v26ZM818 120V108Q836 98 852 107V120Z"/>
-        <path class="kws-skyline-lit" d="M640 98h4v5h-4ZM664 98h4v5h-4ZM700 80h4v5h-4ZM720 96h4v5h-4ZM760 102h4v5h-4ZM790 102h4v5h-4Z"/>
-      </g>
-      <g class="kws-skyline-span">
-        <g fill="none" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
-          <path d="M880 93L960 78L1040 38L1090 72L1140 80L1190 72L1240 38L1320 78L1400 93"/>
-          <path d="M960 78V93M1040 38V93M1090 72V93M1140 80V93M1190 72V93M1240 38V93M1320 78V93"/>
-          <path d="M960 93L1040 38L1090 93L1140 80L1190 93L1240 38L1320 93M1000 58V93M1280 58V93"/>
+         On a phone the far end of downtown (.kws-skyline-far) steps out, the bridge (.kws-skyline-span) moves up beside the rest,
+         and the whole drawing (the one <g>) shifts left so the Capitol and a bridge tower are both in the frame. -->
+    <svg class="kws-skyline-art" viewBox="0 0 1440 120" preserveAspectRatio="xMinYMax slice" focusable="false">
+      <g>
+        <path d="M0 120V102Q26 88 58 99Q92 84 128 100Q150 93 176 104V120Z"/>
+        <path d="M180 120V86h38v34ZM222 120V72h34v48ZM268 120V84h124v36ZM296 86V68h68v18ZM314 70V24h32v46ZM319 26V13h22v13ZM324 15V6h12v9ZM327 7l3-7 3 7Z"/>
+        <path d="M420 120V66h48v54ZM474 120V48h44v72ZM522 120V78h56v42ZM582 120V58h38v62Z"/>
+        <path class="kws-skyline-lit" d="M190 96h4v5h-4ZM230 80h4v5h-4ZM242 94h4v5h-4ZM282 94h4v5h-4ZM306 75h4v5h-4ZM350 75h4v5h-4ZM372 98h4v5h-4ZM326 34h4v5h-4ZM334 34h4v5h-4ZM326 47h4v5h-4ZM334 59h4v5h-4ZM430 76h4v5h-4ZM448 92h4v5h-4ZM484 58h4v5h-4ZM500 58h4v5h-4ZM484 76h4v5h-4ZM500 94h4v5h-4ZM536 88h4v5h-4ZM560 102h4v5h-4ZM592 68h4v5h-4ZM604 86h4v5h-4Z"/>
+        <g class="kws-skyline-far">
+          <path d="M624 120V88h60v32ZM690 120V70h46v50ZM740 120V94h70v26ZM818 120V108Q836 98 852 107V120Z"/>
+          <path class="kws-skyline-lit" d="M640 98h4v5h-4ZM664 98h4v5h-4ZM700 80h4v5h-4ZM720 96h4v5h-4ZM760 102h4v5h-4ZM790 102h4v5h-4Z"/>
         </g>
-        <path d="M856 91h568v5H856ZM1033 94h14v26h-14ZM1233 94h14v26h-14ZM956 94h8v26h-8ZM1316 94h8v26h-8ZM1396 120V104Q1414 92 1440 100V120Z"/>
-        <path class="kws-skyline-lit" d="M1038 31h5v5h-5ZM1238 31h5v5h-5ZM959 73h3v3h-3ZM1089 67h3v3h-3ZM1139 75h3v3h-3ZM1189 67h3v3h-3ZM1319 73h3v3h-3Z"/>
+        <g class="kws-skyline-span">
+          <g fill="none" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+            <path d="M880 93L960 78L1040 38L1090 72L1140 80L1190 72L1240 38L1320 78L1400 93"/>
+            <path d="M960 78V93M1040 38V93M1090 72V93M1140 80V93M1190 72V93M1240 38V93M1320 78V93"/>
+            <path d="M960 93L1040 38L1090 93L1140 80L1190 93L1240 38L1320 93M1000 58V93M1280 58V93"/>
+          </g>
+          <path d="M856 91h568v5H856ZM1033 94h14v26h-14ZM1233 94h14v26h-14ZM956 94h8v26h-8ZM1316 94h8v26h-8ZM1396 120V104Q1414 92 1440 100V120Z"/>
+          <path class="kws-skyline-lit" d="M1038 31h5v5h-5ZM1238 31h5v5h-5ZM959 73h3v3h-3ZM1089 67h3v3h-3ZM1139 75h3v3h-3ZM1189 67h3v3h-3ZM1319 73h3v3h-3Z"/>
+        </g>
+        <path d="M0 114h1440v6H0Z"/>
       </g>
-      <path d="M0 114h1440v6H0Z"/>
     </svg>
   </div>
 </div>
@@ -358,26 +364,29 @@ main { padding-bottom: 0; }
     <div class="kws-skyline-sky"></div>
     <p class="kws-skyline-name">KnightWebstudio</p>
     <!-- Baton Rouge on the horizon: the Capitol tower, downtown and the river bridge, with the windows and bridge lamps lit (.kws-skyline-lit).
-         On a phone the far end of downtown (.kws-skyline-far) steps out and the bridge (.kws-skyline-span) moves up beside the rest. -->
-    <svg class="kws-skyline-art" viewBox="0 0 1440 120" preserveAspectRatio="xMidYMax slice" focusable="false">
-      <path d="M0 120V102Q26 88 58 99Q92 84 128 100Q150 93 176 104V120Z"/>
-      <path d="M180 120V86h38v34ZM222 120V72h34v48ZM268 120V84h124v36ZM296 86V68h68v18ZM314 70V24h32v46ZM319 26V13h22v13ZM324 15V6h12v9ZM327 7l3-7 3 7Z"/>
-      <path d="M420 120V66h48v54ZM474 120V48h44v72ZM522 120V78h56v42ZM582 120V58h38v62Z"/>
-      <path class="kws-skyline-lit" d="M190 96h4v5h-4ZM230 80h4v5h-4ZM242 94h4v5h-4ZM282 94h4v5h-4ZM306 75h4v5h-4ZM350 75h4v5h-4ZM372 98h4v5h-4ZM326 34h4v5h-4ZM334 34h4v5h-4ZM326 47h4v5h-4ZM334 59h4v5h-4ZM430 76h4v5h-4ZM448 92h4v5h-4ZM484 58h4v5h-4ZM500 58h4v5h-4ZM484 76h4v5h-4ZM500 94h4v5h-4ZM536 88h4v5h-4ZM560 102h4v5h-4ZM592 68h4v5h-4ZM604 86h4v5h-4Z"/>
-      <g class="kws-skyline-far">
-        <path d="M624 120V88h60v32ZM690 120V70h46v50ZM740 120V94h70v26ZM818 120V108Q836 98 852 107V120Z"/>
-        <path class="kws-skyline-lit" d="M640 98h4v5h-4ZM664 98h4v5h-4ZM700 80h4v5h-4ZM720 96h4v5h-4ZM760 102h4v5h-4ZM790 102h4v5h-4Z"/>
-      </g>
-      <g class="kws-skyline-span">
-        <g fill="none" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
-          <path d="M880 93L960 78L1040 38L1090 72L1140 80L1190 72L1240 38L1320 78L1400 93"/>
-          <path d="M960 78V93M1040 38V93M1090 72V93M1140 80V93M1190 72V93M1240 38V93M1320 78V93"/>
-          <path d="M960 93L1040 38L1090 93L1140 80L1190 93L1240 38L1320 93M1000 58V93M1280 58V93"/>
+         On a phone the far end of downtown (.kws-skyline-far) steps out, the bridge (.kws-skyline-span) moves up beside the rest,
+         and the whole drawing (the one <g>) shifts left so the Capitol and a bridge tower are both in the frame. -->
+    <svg class="kws-skyline-art" viewBox="0 0 1440 120" preserveAspectRatio="xMinYMax slice" focusable="false">
+      <g>
+        <path d="M0 120V102Q26 88 58 99Q92 84 128 100Q150 93 176 104V120Z"/>
+        <path d="M180 120V86h38v34ZM222 120V72h34v48ZM268 120V84h124v36ZM296 86V68h68v18ZM314 70V24h32v46ZM319 26V13h22v13ZM324 15V6h12v9ZM327 7l3-7 3 7Z"/>
+        <path d="M420 120V66h48v54ZM474 120V48h44v72ZM522 120V78h56v42ZM582 120V58h38v62Z"/>
+        <path class="kws-skyline-lit" d="M190 96h4v5h-4ZM230 80h4v5h-4ZM242 94h4v5h-4ZM282 94h4v5h-4ZM306 75h4v5h-4ZM350 75h4v5h-4ZM372 98h4v5h-4ZM326 34h4v5h-4ZM334 34h4v5h-4ZM326 47h4v5h-4ZM334 59h4v5h-4ZM430 76h4v5h-4ZM448 92h4v5h-4ZM484 58h4v5h-4ZM500 58h4v5h-4ZM484 76h4v5h-4ZM500 94h4v5h-4ZM536 88h4v5h-4ZM560 102h4v5h-4ZM592 68h4v5h-4ZM604 86h4v5h-4Z"/>
+        <g class="kws-skyline-far">
+          <path d="M624 120V88h60v32ZM690 120V70h46v50ZM740 120V94h70v26ZM818 120V108Q836 98 852 107V120Z"/>
+          <path class="kws-skyline-lit" d="M640 98h4v5h-4ZM664 98h4v5h-4ZM700 80h4v5h-4ZM720 96h4v5h-4ZM760 102h4v5h-4ZM790 102h4v5h-4Z"/>
         </g>
-        <path d="M856 91h568v5H856ZM1033 94h14v26h-14ZM1233 94h14v26h-14ZM956 94h8v26h-8ZM1316 94h8v26h-8ZM1396 120V104Q1414 92 1440 100V120Z"/>
-        <path class="kws-skyline-lit" d="M1038 31h5v5h-5ZM1238 31h5v5h-5ZM959 73h3v3h-3ZM1089 67h3v3h-3ZM1139 75h3v3h-3ZM1189 67h3v3h-3ZM1319 73h3v3h-3Z"/>
+        <g class="kws-skyline-span">
+          <g fill="none" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+            <path d="M880 93L960 78L1040 38L1090 72L1140 80L1190 72L1240 38L1320 78L1400 93"/>
+            <path d="M960 78V93M1040 38V93M1090 72V93M1140 80V93M1190 72V93M1240 38V93M1320 78V93"/>
+            <path d="M960 93L1040 38L1090 93L1140 80L1190 93L1240 38L1320 93M1000 58V93M1280 58V93"/>
+          </g>
+          <path d="M856 91h568v5H856ZM1033 94h14v26h-14ZM1233 94h14v26h-14ZM956 94h8v26h-8ZM1316 94h8v26h-8ZM1396 120V104Q1414 92 1440 100V120Z"/>
+          <path class="kws-skyline-lit" d="M1038 31h5v5h-5ZM1238 31h5v5h-5ZM959 73h3v3h-3ZM1089 67h3v3h-3ZM1139 75h3v3h-3ZM1189 67h3v3h-3ZM1319 73h3v3h-3Z"/>
+        </g>
+        <path d="M0 114h1440v6H0Z"/>
       </g>
-      <path d="M0 114h1440v6H0Z"/>
     </svg>
   </div>
 </div>
@@ -490,26 +499,29 @@ main { padding-bottom: 0; }
     <div class="kws-skyline-sky"></div>
     <p class="kws-skyline-name">KnightWebstudio</p>
     <!-- Baton Rouge on the horizon: the Capitol tower, downtown and the river bridge, with the windows and bridge lamps lit (.kws-skyline-lit).
-         On a phone the far end of downtown (.kws-skyline-far) steps out and the bridge (.kws-skyline-span) moves up beside the rest. -->
-    <svg class="kws-skyline-art" viewBox="0 0 1440 120" preserveAspectRatio="xMidYMax slice" focusable="false">
-      <path d="M0 120V102Q26 88 58 99Q92 84 128 100Q150 93 176 104V120Z"/>
-      <path d="M180 120V86h38v34ZM222 120V72h34v48ZM268 120V84h124v36ZM296 86V68h68v18ZM314 70V24h32v46ZM319 26V13h22v13ZM324 15V6h12v9ZM327 7l3-7 3 7Z"/>
-      <path d="M420 120V66h48v54ZM474 120V48h44v72ZM522 120V78h56v42ZM582 120V58h38v62Z"/>
-      <path class="kws-skyline-lit" d="M190 96h4v5h-4ZM230 80h4v5h-4ZM242 94h4v5h-4ZM282 94h4v5h-4ZM306 75h4v5h-4ZM350 75h4v5h-4ZM372 98h4v5h-4ZM326 34h4v5h-4ZM334 34h4v5h-4ZM326 47h4v5h-4ZM334 59h4v5h-4ZM430 76h4v5h-4ZM448 92h4v5h-4ZM484 58h4v5h-4ZM500 58h4v5h-4ZM484 76h4v5h-4ZM500 94h4v5h-4ZM536 88h4v5h-4ZM560 102h4v5h-4ZM592 68h4v5h-4ZM604 86h4v5h-4Z"/>
-      <g class="kws-skyline-far">
-        <path d="M624 120V88h60v32ZM690 120V70h46v50ZM740 120V94h70v26ZM818 120V108Q836 98 852 107V120Z"/>
-        <path class="kws-skyline-lit" d="M640 98h4v5h-4ZM664 98h4v5h-4ZM700 80h4v5h-4ZM720 96h4v5h-4ZM760 102h4v5h-4ZM790 102h4v5h-4Z"/>
-      </g>
-      <g class="kws-skyline-span">
-        <g fill="none" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
-          <path d="M880 93L960 78L1040 38L1090 72L1140 80L1190 72L1240 38L1320 78L1400 93"/>
-          <path d="M960 78V93M1040 38V93M1090 72V93M1140 80V93M1190 72V93M1240 38V93M1320 78V93"/>
-          <path d="M960 93L1040 38L1090 93L1140 80L1190 93L1240 38L1320 93M1000 58V93M1280 58V93"/>
+         On a phone the far end of downtown (.kws-skyline-far) steps out, the bridge (.kws-skyline-span) moves up beside the rest,
+         and the whole drawing (the one <g>) shifts left so the Capitol and a bridge tower are both in the frame. -->
+    <svg class="kws-skyline-art" viewBox="0 0 1440 120" preserveAspectRatio="xMinYMax slice" focusable="false">
+      <g>
+        <path d="M0 120V102Q26 88 58 99Q92 84 128 100Q150 93 176 104V120Z"/>
+        <path d="M180 120V86h38v34ZM222 120V72h34v48ZM268 120V84h124v36ZM296 86V68h68v18ZM314 70V24h32v46ZM319 26V13h22v13ZM324 15V6h12v9ZM327 7l3-7 3 7Z"/>
+        <path d="M420 120V66h48v54ZM474 120V48h44v72ZM522 120V78h56v42ZM582 120V58h38v62Z"/>
+        <path class="kws-skyline-lit" d="M190 96h4v5h-4ZM230 80h4v5h-4ZM242 94h4v5h-4ZM282 94h4v5h-4ZM306 75h4v5h-4ZM350 75h4v5h-4ZM372 98h4v5h-4ZM326 34h4v5h-4ZM334 34h4v5h-4ZM326 47h4v5h-4ZM334 59h4v5h-4ZM430 76h4v5h-4ZM448 92h4v5h-4ZM484 58h4v5h-4ZM500 58h4v5h-4ZM484 76h4v5h-4ZM500 94h4v5h-4ZM536 88h4v5h-4ZM560 102h4v5h-4ZM592 68h4v5h-4ZM604 86h4v5h-4Z"/>
+        <g class="kws-skyline-far">
+          <path d="M624 120V88h60v32ZM690 120V70h46v50ZM740 120V94h70v26ZM818 120V108Q836 98 852 107V120Z"/>
+          <path class="kws-skyline-lit" d="M640 98h4v5h-4ZM664 98h4v5h-4ZM700 80h4v5h-4ZM720 96h4v5h-4ZM760 102h4v5h-4ZM790 102h4v5h-4Z"/>
         </g>
-        <path d="M856 91h568v5H856ZM1033 94h14v26h-14ZM1233 94h14v26h-14ZM956 94h8v26h-8ZM1316 94h8v26h-8ZM1396 120V104Q1414 92 1440 100V120Z"/>
-        <path class="kws-skyline-lit" d="M1038 31h5v5h-5ZM1238 31h5v5h-5ZM959 73h3v3h-3ZM1089 67h3v3h-3ZM1139 75h3v3h-3ZM1189 67h3v3h-3ZM1319 73h3v3h-3Z"/>
+        <g class="kws-skyline-span">
+          <g fill="none" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+            <path d="M880 93L960 78L1040 38L1090 72L1140 80L1190 72L1240 38L1320 78L1400 93"/>
+            <path d="M960 78V93M1040 38V93M1090 72V93M1140 80V93M1190 72V93M1240 38V93M1320 78V93"/>
+            <path d="M960 93L1040 38L1090 93L1140 80L1190 93L1240 38L1320 93M1000 58V93M1280 58V93"/>
+          </g>
+          <path d="M856 91h568v5H856ZM1033 94h14v26h-14ZM1233 94h14v26h-14ZM956 94h8v26h-8ZM1316 94h8v26h-8ZM1396 120V104Q1414 92 1440 100V120Z"/>
+          <path class="kws-skyline-lit" d="M1038 31h5v5h-5ZM1238 31h5v5h-5ZM959 73h3v3h-3ZM1089 67h3v3h-3ZM1139 75h3v3h-3ZM1189 67h3v3h-3ZM1319 73h3v3h-3Z"/>
+        </g>
+        <path d="M0 114h1440v6H0Z"/>
       </g>
-      <path d="M0 114h1440v6H0Z"/>
     </svg>
   </div>
 </footer>

@@ -1,0 +1,42 @@
+[
+ {
+  "p": "/about/",
+  "w": 375,
+  "h1": "5>3",
+  "h1h": "195>117",
+  "firstMove": -78,
+  "doc": -135,
+  "headsDiff": 1,
+  "nHeads": 11
+ },
+ {
+  "p": "/about/",
+  "w": 390,
+  "h1": "5>3",
+  "h1h": "203>122",
+  "firstMove": -81,
+  "doc": -110,
+  "headsDiff": 1,
+  "nHeads": 11
+ },
+ {
+  "p": "/",
+  "w": 375,
+  "h1": "5>4",
+  "h1h": "199>159",
+  "firstMove": -39,
+  "doc": -72,
+  "headsDiff": 2,
+  "nHeads": 21
+ },
+ {
+  "p": "/",
+  "w": 390,
+  "h1": "4>4",
+  "h1h": "165>165",
+  "firstMove": 0,
+  "doc": -90,
+  "headsDiff": 1,
+  "nHeads": 21
+ }
+]

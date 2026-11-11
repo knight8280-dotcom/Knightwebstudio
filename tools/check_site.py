@@ -269,7 +269,7 @@ for p in check:
     if ('/assets/js/main.js' in bt) != ('/assets/js/main.js' in nt): fail(p, 'main.js include changed')
     if ('/assets/js/calculator.js' in bt) != ('/assets/js/calculator.js' in nt): fail(p, 'calculator.js include changed')
     for at in tags(nt, 'link'):
-        if at.get('rel') == 'stylesheet' and at.get('href') != '/assets/css/styles.css': warn(p, f'extra stylesheet linked: {at.get("href")} (allowed only while pages are being built; the finished site has one stylesheet)')
+        if at.get('rel') == 'stylesheet' and (at.get('href') or '').split('?')[0] != '/assets/css/styles.css': warn(p, f'extra stylesheet linked: {at.get("href")} (allowed only while pages are being built; the finished site has one stylesheet)')
     opens = re.findall(r'<!-- art:([a-z0-9-]+) -->', nt); closes = re.findall(r'<!-- /art:([a-z0-9-]+) -->', nt)
     if opens != closes: fail(p, 'art markers are unbalanced (every <!-- art:x --> needs <!-- /art:x -->)')
 

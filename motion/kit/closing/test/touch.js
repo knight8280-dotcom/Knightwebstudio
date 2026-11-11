@@ -20,16 +20,18 @@ const url = 'http://localhost:8730/kit/closing/test/pricing-with-kit.html';
     await p.waitForTimeout(200);
     const box = await p.locator(sel).first().boundingBox(), x = box.x + Math.min(box.width / 2, 120), y = box.y + box.height / 2;
     const y0 = await p.evaluate(() => scrollY);
-    await swipe(x, y, x + 6, y - 260);
+    // at the very end of the page there is nothing left to scroll to: swipe the other way there
+    const room = await p.evaluate(() => document.documentElement.scrollHeight - innerHeight - scrollY), dir = room < 300 ? 1 : -1;
+    await swipe(x, y, x + 6, y + dir * 260);
     await p.waitForTimeout(700);
-    const dy = (await p.evaluate(() => scrollY)) - y0;
+    const dy = Math.abs((await p.evaluate(() => scrollY)) - y0);
     const b2 = await p.locator(sel).first().boundingBox();
     if (b2 && b2.y > 60 && b2.y < 780) await swipe(b2.x + Math.min(b2.width / 2, 120) + 60, b2.y + b2.height / 2, b2.x + Math.min(b2.width / 2, 120) - 110, b2.y + b2.height / 2 + 6);
     await p.waitForTimeout(500);
     const sx = await p.evaluate(() => scrollX), href = await p.evaluate(() => location.pathname);
     const ok = dy > 180 && sx === 0 && /pricing-with-kit/.test(href);
     if (!ok) fails++;
-    console.log(`${ok ? 'PASS' : 'FAIL'}  swipe up from the ${name}: page scrolled ${Math.round(dy)}px of 260; sideways swipe moved the page ${sx}px; still on the page`);
+    console.log(`${ok ? 'PASS' : 'FAIL'}  swipe ${dir < 0 ? 'up' : 'down'} from the ${name}: page scrolled ${Math.round(dy)}px of 260; sideways swipe moved the page ${sx}px; still on the page`);
   }
   // the scene at the very end: swipe down from it scrolls back up
   await p.evaluate(() => scrollTo(0, document.documentElement.scrollHeight)); await p.waitForTimeout(200);

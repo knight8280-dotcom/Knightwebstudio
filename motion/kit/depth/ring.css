@@ -1,38 +1,27 @@
-/* KWS kit: carousel ring. With ring.js, a rotary card file of its lists' lines; the lists alone without it. Theme, markup: NOTES.md */
-.kws-ring{--_i:var(--kit-ink,var(--ink));--_l:var(--kit-line,var(--line-2));--_s:var(--kit-surface,var(--card));--_b:var(--kit-bg,var(--paper));--_n:var(--kit-notice,var(--brick));--_f:var(--kit-font-display,var(--font-display));--_r:min(var(--kit-radius,4px),.3rem);--_e:1px solid var(--_l);display:grid;gap:var(--gap,1.5rem);align-items:start;color:var(--kit-muted,var(--ink-2));font-family:var(--kit-font-body,var(--font-text))}
-.kws-ring-lists{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2.5rem .75rem;padding-top:1.75rem}
+/* KWS kit: carousel ring. NOTES.md. In the stage 1em is the ring's radius (ring.js sets it) */
+.kws-ring{--_i:var(--kit-ink,var(--ink));--_l:var(--kit-line,var(--line-2));--_s:var(--kit-surface,var(--card));--_b:var(--kit-bg,var(--paper));--_n:var(--kit-notice,var(--brick));--_f:var(--kit-font-display,var(--font-display));--_r:min(var(--kit-radius,4px),.3rem);--_e:1px solid var(--_l);--_d:var(--kit-shadow,var(--shadow-3));display:grid;gap:var(--gap,1.5rem);color:var(--kit-muted,var(--ink-2))}
+.kws-ring-lists{display:grid;grid-template-columns:repeat(var(--_c,2),minmax(0,1fr));gap:2.5rem .75rem;padding-top:1.75rem}
 .kws-ring-group{position:relative;padding:0 .75rem .75rem;border:var(--_e);border-radius:var(--_r);background:var(--_s);box-shadow:var(--kit-shadow,var(--shadow-1))}
-.kws-ring-name,.kws-ring-read b{position:absolute;bottom:100%;left:.6rem;margin:0 0 -1px;padding:.3rem .8rem .1rem;border:var(--_e);border-bottom:0;border-radius:var(--_r) var(--_r) 0 0;background:var(--_p,var(--_s));color:var(--_i);font:600 1.0625rem/1.3 var(--_f)}
+.kws-ring-name,.kws-ring-read b{position:absolute;bottom:100%;left:.6rem;margin:0 0 -1px;padding:.3rem .8rem .1rem;border:var(--_e);border-bottom:0;border-radius:var(--_r) var(--_r) 0 0;background:var(--_s);color:var(--_i);font:600 1.0625rem/1.3 var(--_f)}
 .kws-ring-price{margin:0;padding:.6rem 0 .35rem;border-bottom:2px solid var(--_n);color:var(--_i);font:600 1.625rem/1 var(--_f)}
 .kws-ring-group ul{margin:0;padding:0;list-style:none}
-.kws-ring-group li{padding:.45rem 0;border-bottom:1px solid var(--kit-line,var(--line));font-size:.9375rem;line-height:1.35;overflow-wrap:anywhere}
-/* The script sets the stage's font-size to the ring's radius: in here 1em is one radius */
-.kws-ring-stage{--x:50%;display:none;position:relative;z-index:0;aspect-ratio:5/4;max-height:24rem;margin:0 calc(var(--kws-bleed,max(var(--gutter,1.25rem),50vw - var(--maxw,77.5rem)/2))*-1);overflow:hidden;touch-action:pan-y pinch-zoom;cursor:grab;-webkit-user-select:none}
+.kws-ring-group li{padding:.45rem 0;border-bottom:var(--_e);font-size:.9375rem;line-height:1.35;overflow-wrap:anywhere}
+.kws-ring-stage{display:none;position:relative;z-index:0;height:min(80vw,26rem);margin:0 calc(var(--kws-bleed,max(var(--gutter,1.25rem),50vw - var(--maxw,77.5rem)/2))*-1);overflow:hidden;touch-action:pan-y pinch-zoom;-webkit-user-select:none}
 @media (min-width:380px){:is(.kws-hold,.is-live) .kws-ring-stage{display:block}}
-.kws-ring-hub,.kws-ring-read,.kws-ring-stage::before{position:absolute;left:var(--x);top:46%}
-.is-live .kws-ring-stage::before{content:"";z-index:-1;width:2.1em;height:2.1em;margin:-1.05em;border:2px solid var(--_l);border-radius:50%;background:radial-gradient(closest-side,var(--_i) 3.5%,var(--_s) 0 5%,var(--_l) 0 5.6%,transparent 0 20%,var(--_l) 260%) var(--_b);box-shadow:var(--kit-shadow,var(--shadow-3));transform:perspective(2.8em) translateZ(-1em) rotateX(58deg)}
-.kws-ring-hub{z-index:0}
-.kws-ring-card,.kws-ring-read{--_u:linear-gradient(var(--_n),var(--_n)) 0 10%/100% var(--_w,2px) no-repeat,linear-gradient(var(--_l) calc(var(--_w,2px)/2),transparent 0) 0 12.84%/100% 15.1%}
-.kws-ring-card{--_p:linear-gradient(90deg,transparent 40%,var(--_l) 190%) var(--_s);position:absolute;bottom:0;left:-.18em;width:.36em;height:.26em;transform-origin:bottom}
-.kws-ring-card::before,.kws-ring-card::after,.kws-ring-read::before{content:"";position:absolute;inset:14% 0 0;border:var(--_e);border-radius:var(--_r);background:var(--_u),var(--_p)}
-.kws-ring-card::after{inset:0 auto 85% calc(8% + var(--k)*24%);width:24%;border-bottom:0;border-radius:var(--_r) var(--_r) 0 0;background:var(--_p)}
+.kws-ring-hub,.kws-ring-stage::before{position:absolute;left:var(--x,50%);top:46%}
+.is-live .kws-ring-stage::before{content:"";z-index:-1;width:2.1em;height:2.1em;margin:-1.05em;border-radius:50%;background:radial-gradient(closest-side,transparent 20%,var(--_l) 260%) var(--_b);box-shadow:var(--_d);transform:perspective(2.8em) translateZ(-1em) rotateX(58deg)}
+.kws-ring-hub>*{--_u:linear-gradient(var(--_n),var(--_n)) 0 10%/100% var(--_w,2px) no-repeat,linear-gradient(var(--_l) calc(var(--_w,2px)/2),transparent 0) 0 12.84%/100% 15.1%;position:absolute;bottom:0;transform-origin:bottom}
+.kws-ring-card{left:-.18em;width:.36em;height:.26em}
+.kws-ring-hub>::before,.kws-ring-card::after{content:"";position:absolute;inset:14% 0 0;border:var(--_e);border-radius:var(--_r);background:var(--_u),var(--_p,var(--_s))}
+.kws-ring-card::after{inset:0 auto 85% calc(8% + var(--k)*22%);width:24%;border-bottom:0;background:var(--_p,var(--_s))}
 .kws-ring-hub .is-back{--_p:linear-gradient(transparent -60%,var(--_l) 200%) var(--_b);--_u:none}
-.kws-ring-stage .is-tab{--_p:var(--_l);--_u:none}
-.kws-ring-card.is-tab{height:.3em}
-.kws-ring-read{--v:min(.86em,19rem);--_p:var(--_s);--_e:2px solid var(--_l);--_w:5px;width:calc(var(--v)*2);height:calc(var(--v)*1.44);margin:calc(var(--v)*-1.44) 0 0 calc(var(--v)*-1);padding:calc(var(--v)*.36) 7% 0;transform-origin:bottom;opacity:0;overflow-wrap:anywhere}
-.kws-ring-read::before{z-index:-1;box-shadow:var(--kit-shadow,var(--shadow-3))}
-.kws-ring-read b{bottom:86%;left:7%;margin:0 0 -2px;padding:.15em .7em 0;font-size:max(1.5rem,calc(var(--v)*.09))}
-.kws-ring-read span{display:block;max-height:3.75em;overflow:hidden;opacity:0;color:var(--_i);font:600 calc(var(--v)*.15)/1.25 var(--_f);transition:opacity .15s}
-.kws-ring-read.is-open span{opacity:1}
-.kws-ring-read.is-tab span{font-size:calc(var(--v)*.22)}
-@media (min-width:760px){
-.kws-ring-lists{grid-template-columns:repeat(4,minmax(0,1fr))}
-.kws-ring-stage{aspect-ratio:16/9}
-}
+.kws-ring-read{--_e:2px solid var(--_l);--_w:5px;z-index:99;left:-6.67em;width:13.33em;height:9.6em;padding:2.4em .93em 0;opacity:0;color:var(--_i);font:600 min(.129em,2.85rem)/1.25 var(--_f)}
+.kws-ring-read::before{z-index:-1;box-shadow:var(--_d)}
+.kws-ring-read b{bottom:86%;left:7%;padding:.15em .7em 0;font-size:max(1.5rem,.6em)}
+.kws-ring-read div{max-height:3.75em;overflow:hidden;transition:opacity .15s}
+@media (min-width:760px){.kws-ring-lists{--_c:4}}
 @media (min-width:980px){
-.kws-hold .kws-ring,.kws-ring.is-live{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr)}
-:is(.kws-hold,.is-live) .kws-ring-lists{grid-template-columns:repeat(2,minmax(0,1fr))}
-.kws-ring-stage{--x:min(50%,100% - .92em);--_h:min(34rem,100vh - 9rem);position:sticky;top:max(var(--kws-top,5.5rem),50vh - var(--_h)/2);height:var(--_h);max-height:none;aspect-ratio:auto;margin-right:0}
+.kws-ring{grid-auto-flow:column;grid-auto-columns:minmax(0,6fr) minmax(0,5fr)}
+:is(.kws-hold,.is-live) .kws-ring-lists{--_c:2}
+.kws-ring-stage{--x:min(50%,100% - .92em);--_h:min(34rem,100vh - 9rem);position:sticky;top:max(var(--kws-top,5.5rem),50vh - var(--_h)/2);height:var(--_h);margin-right:0}
 }
-@media (prefers-reduced-motion:reduce){.kws-ring-read span{transition:none}.kws-ring-stage{cursor:auto}}
-[data-motion=off] .kws-ring-stage{cursor:auto}

@@ -54,7 +54,8 @@ BAND = '''<section class="kws-close kws-close--card on-blue kws-shader-host" ari
     </div>
   </section>'''
 
-MAIN = '<script src="/assets/js/main.js" defer></script>'
+# the page's own script tag, with or without a cache-busting query (the pages gained ?v=2 while this was being written)
+MAIN = re.compile(r'<script src="/assets/js/main\.js(?:\?[^"]*)?" defer></script>')
 
 def patch_main():
     """A copy of the repository's main.js with the phone bar taught about the new band: the one change integration needs."""
@@ -76,9 +77,10 @@ def build(src, dest, footer, band=None, shader=True):
         t, n = re.subn(r'<section class="cta-band.*?</section>', lambda m: BAND % band, t, flags=re.S)
         assert n == 1, (src, 'band', n)
     t = t.replace('</head>', LINKS, 1)
-    if shader and MAIN in t:
+    if shader:
         # the page runs the real main.js with the one-line change NOTES.md section 6 asks for (see patch_main below)
-        t = t.replace(MAIN, '<script src="/kit/closing/test/main.patched.js" defer></script>\n<script src="/kit/light/motion.js" defer></script>\n<script src="/kit/light/shader.js" defer></script>')
+        t, n = MAIN.subn('<script src="/kit/closing/test/main.patched.js" defer></script>\n<script src="/kit/light/motion.js" defer></script>\n<script src="/kit/light/shader.js" defer></script>', t)
+        assert n == 1, (src, 'main.js script tag', n)
     (OUT / dest).write_text(t)
     print('built test/' + dest, len(t.encode()), 'bytes')
 

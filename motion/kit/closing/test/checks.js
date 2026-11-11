@@ -383,18 +383,18 @@ const say = (ok, name, detail) => { if (!ok) fails++; console.log(`${ok ? 'PASS'
       const p = await open('test/pricing-with-kit.html', { ctx: { viewport: { width: w, height: 844 } } });
       await end(p); await p.waitForTimeout(300);
       out.push(await p.evaluate(w => {
-        const scene = document.querySelector('footer .kws-skyline'), f = scene.getBoundingClientRect(), svg = scene.querySelector('.kws-skyline-art'), m = svg.getScreenCTM(), ms = svg.querySelector('.kws-skyline-span').getScreenCTM();
+        const scene = document.querySelector('footer .kws-skyline'), f = scene.getBoundingClientRect(), svg = scene.querySelector('.kws-skyline-art'), m = svg.querySelector('g').getScreenCTM(), ms = svg.querySelector('.kws-skyline-span').getScreenCTM(), sr = svg.getBoundingClientRect();
         const cap = [314 * m.a + m.e, 346 * m.a + m.e], towers = [1040, 1240].map(x => x * ms.a + ms.e);
         const name = scene.querySelector('.kws-skyline-name'), probe = document.createElement('span'); probe.style.cssText = 'display:inline-block;width:0;height:0'; name.append(probe);
         const base = probe.getBoundingClientRect().bottom; probe.remove();
         const cs = getComputedStyle(name), cv = document.createElement('canvas').getContext('2d'); cv.font = `600 ${cs.fontSize} ${cs.fontFamily}`; const capH = cv.measureText('K').actualBoundingBoxAscent;
         const roof = y => y * m.d + m.f, clear = y => Math.min(1, (roof(y) - (base - capH)) / capH);   // user y of a roof line in the drawing
-        return { w, h: Math.round(f.height), capL: Math.round(cap[0] - f.left), capR: Math.round(f.right - cap[1]), towers: towers.map(x => Math.round(f.right - x)), font: Math.round(parseFloat(cs.fontSize)), typical: +clear(62).toFixed(2), tallest: +clear(48).toFixed(2) };
+        return { w, artOver: Math.round(sr.right - f.right), h: Math.round(f.height), capL: Math.round(cap[0] - f.left), capR: Math.round(f.right - cap[1]), towers: towers.map(x => Math.round(f.right - x)), font: Math.round(parseFloat(cs.fontSize)), typical: +clear(62).toFixed(2), tallest: +clear(48).toFixed(2) };
       }, w));
       await p.context().close();
     }
     const phones = out.filter(o => o.w < 600);
-    say(phones.every(o => o.capL >= 16 && o.towers.some(t => t >= 16) && o.typical >= .66), 'scene on a phone', phones.map(o => `${o.w}px: ${o.h}px tall, Capitol tower ${o.capL}px in from the left, bridge towers ${o.towers.join(' and ')}px in from the right, ${Math.round(o.typical * 100)}% of the letters' height clear of the usual roofline (${Math.round(o.tallest * 100)}% at the tallest building)`).join('; '));
+    say(out.every(o => o.artOver <= 0) && phones.every(o => o.capL >= 16 && o.towers.some(t => t >= 16) && o.typical >= .66), 'scene on a phone', phones.map(o => `${o.w}px: ${o.h}px tall, Capitol tower ${o.capL}px in from the left, bridge towers ${o.towers.join(' and ')}px in from the right, ${Math.round(o.typical * 100)}% of the letters' height clear of the usual roofline (${Math.round(o.tallest * 100)}% at the tallest building)`).join('; '));
     const d = out.find(o => o.w === 1440);
     say(d.h <= 215 && d.capL > 16 && d.towers.every(t => t > 16), 'scene at 1440', `${d.h}px tall, name at ${d.font}px, ${Math.round(d.typical * 100)}% of the letters' height clear of the usual roofline`);
   }
@@ -414,6 +414,20 @@ const say = (ok, name, detail) => { if (!ok) fails++; console.log(`${ok ? 'PASS'
     const s = await open('portable.html'); await end(s); await s.waitForTimeout(600); const port = await st(s); await s.context().close();
     say(run.state === 'running' && run.x !== run2.x && held.state === 'paused' && held.x === held2.x && label === 'Play motion' && again.state === 'running' && bare.n === 0 && !bare.btn && red.n === 0 && port.n === 0, "the sky's glow",
       `with the pause button showing it drifts (${run.x.toFixed(1)}px, then ${run2.x.toFixed(1)}px); pressed, it holds (${held.x.toFixed(1)}px twice, button says "${label}"); pressed again it runs; not-found page (no button): ${bare.n} animations; reduced motion: ${red.n}; bare client page (no button): ${port.n}`);
+  }
+
+  /* 22. No base layer assumed: the bare page with its small reset taken out measures the same */
+  {
+    const H = async (strip, w) => {
+      const ctx = await b.newContext({ viewport: { width: w, height: 900 } }); const p = await ctx.newPage();
+      if (strip) await p.route('**/portable.html', async r => { const res = await r.fetch(); let s = await res.text(); s = s.replace('*, *::before, *::after { box-sizing: border-box; }', '').replace('h1, h2, p, ul, dl, dd { margin: 0; }', ''); await r.fulfill({ response: res, body: s }); });
+      await p.goto(B + 'portable.html', { waitUntil: 'load' }); await p.evaluate(() => document.fonts.ready);
+      const r = await p.evaluate(() => ({ h: ['.kws-close--card', '.kws-close--strip', '.kws-appt', '.kws-foot'].map(s => Math.round(document.querySelector(s).getBoundingClientRect().height)).join('/'), over: document.documentElement.scrollWidth - innerWidth, box: getComputedStyle(document.querySelector('.kws-close-in')).boxSizing }));
+      await ctx.close(); return r;
+    };
+    const out = [];
+    for (const w of [390, 1440]) { const a = await H(false, w), c = await H(true, w); out.push({ w, same: a.h === c.h && c.over <= 0 && c.box === 'content-box', a: a.h, c: c.h }); }
+    say(out.every(o => o.same), 'no reset needed: card band, strip, card and footer measure the same without the page\'s box-sizing and margin reset', out.map(o => `${o.w}px: ${o.a} with, ${o.c} without`).join('; '));
   }
 
   await b.close();

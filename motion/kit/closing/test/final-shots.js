@@ -48,7 +48,18 @@ const B = 'http://localhost:8730/kit/closing/', OUT = __dirname + '/../shots/';
     await end(`pricing-end-390-${theme}`, 'test/pricing-with-kit.html', 390, theme, 900);
   }
   await end('pricing-end-1920-light', 'test/pricing-with-kit.html', 1920, 'light', 640);
-  await end('pricing-end-820-dark', 'test/pricing-with-kit.html', 820, 'dark', 760);
+  await end('pricing-end-820-dark', 'test/pricing-with-kit.html', 820, 'dark', 560);
+  await end('pricing-end-700-light', 'test/pricing-with-kit.html', 700, 'light', 800, { dpr: 1 });
+  await end('pricing-end-1100-light', 'test/pricing-with-kit.html', 1100, 'light', 620);
+  // what a visitor sees at the very end of the page: one screen
+  for (const [w, h, theme] of [[1440, 900, 'light'], [1440, 900, 'dark'], [1280, 720, 'light'], [390, 844, 'light'], [390, 844, 'dark']]) {
+    const name = `screen-end-${w}x${h}-${theme}`;
+    if (!(RESUME && fs.existsSync(OUT + name + '.png'))) {
+      const p = await open('test/pricing-with-kit.html', w, theme, { h });
+      await p.evaluate(() => scrollTo(0, document.documentElement.scrollHeight)); await p.waitForTimeout(1600);
+      await p.screenshot({ path: OUT + name + '.png' }); await p.context().close();
+    }
+  }
   await end('pricing-end-360-light', 'test/pricing-with-kit.html', 360, 'light', 880, { dpr: 1 });
   await end('start-end-390-dark', 'test/start-with-kit.html', 390, 'dark', 900);
   await end('start-end-1440-light', 'test/start-with-kit.html', 1440, 'light', 600);
@@ -75,12 +86,20 @@ const B = 'http://localhost:8730/kit/closing/', OUT = __dirname + '/../shots/';
     await end(`portable-end-${w}`, 'portable.html', w, 'light', w < 700 ? 760 : 560);
   }
 
-  // 4. The scene: still against live, and three moments of the name rising on a phone
-  for (const [n, o] of [['still', { noshader: true }], ['live', {}]]) {
-    const p = await open('test/pricing-with-kit.html', 1440, 'dark', o);
-    await p.evaluate(() => scrollTo(0, document.documentElement.scrollHeight)); await p.waitForTimeout(o.noshader ? 400 : 2200);
-    const box = await p.locator('.kws-skyline').boundingBox();
-    await p.screenshot({ path: OUT + `scene-${n}-1440-dark.png`, clip: { x: 0, y: box.y - 30, width: 1440, height: box.height + 30 } });
+  // 4. The scene: both themes, the glow at rest and at its far point, the phone composition, and three moments of the name rising
+  for (const theme of ['light', 'dark']) {
+    const p = await open('test/pricing-with-kit.html', 1440, theme, { noshader: true });
+    await p.evaluate(() => scrollTo(0, document.documentElement.scrollHeight)); await p.waitForTimeout(500);
+    const box = await p.locator('.kws-skyline').boundingBox(), clip = { x: 0, y: box.y - 30, width: 1440, height: box.height + 30 };
+    const glow = t => p.evaluate(t => { for (const a of document.querySelector('footer .kws-skyline-sky').getAnimations({ subtree: true })) { a.pause(); a.currentTime = t; } }, t);
+    await glow(0); await p.waitForTimeout(150); await p.screenshot({ path: OUT + `scene-1440-${theme}.png`, clip });
+    if (theme === 'dark') { await glow(8000); await p.waitForTimeout(150); await p.screenshot({ path: OUT + 'scene-1440-dark-glow-far.png', clip }); }
+    await p.context().close();
+  }
+  for (const w of [360, 390, 430]) {
+    const p = await open('test/pricing-with-kit.html', w, 'dark', { noshader: true, dpr: 2, h: 700 });
+    await p.evaluate(() => scrollTo(0, document.documentElement.scrollHeight)); await p.waitForTimeout(400);
+    await p.screenshot({ path: OUT + `scene-phone-${w}.png`, clip: { x: 0, y: 700 - 130, width: w, height: 130 } });
     await p.context().close();
   }
   {
@@ -94,6 +113,11 @@ const B = 'http://localhost:8730/kit/closing/', OUT = __dirname + '/../shots/';
     }
     await p.context().close();
   }
+
+  // 4b. The card band on a tablet and between 600 and 759px; the statement's kicker and brush up close
+  await part('band-card-820-light-still', 'test/pricing-with-kit.html', '.kws-close', 0, 820, 'light', { noshader: true });
+  await part('band-card-700-light-still', 'test/pricing-with-kit.html', '.kws-close', 0, 700, 'light', { noshader: true, dpr: 1 });
+  await part('band-statement-360-light-still', 'demo.html', '.kws-close', 3, 360, 'light', { noshader: true });
 
   // 5. Focus rings
   {

@@ -11,7 +11,7 @@
 .kws-close-title{font-size:var(--_t);text-wrap:balance}
 .kws-close-mark{display:inline-block;max-width:100%}
 .kws-close-mark>span{position:relative;isolation:isolate}
-.kws-close-mark>span::after{--_m:var(--kws-mark,var(--brush,radial-gradient(50% 32%,black 97%,transparent))) 0 0/100% 100%;content:"";position:absolute;inset:auto 0 -.14em;z-index:-1;height:.26em;background:var(--_au);-webkit-mask:var(--_m);mask:var(--_m)}
+.kws-close-mark>span::after{--_m:var(--kws-mark,var(--brush,radial-gradient(50% 32%,black 97%,transparent))) 0 0/100% 100%;content:"";position:absolute;inset:auto 0 -.05em;z-index:-1;height:.22em;background:var(--_au);-webkit-mask:var(--_m);mask:var(--_m)}
 .kws-close-text{display:inline-block;max-width:34em;margin-top:20px;font-size:var(--fs-lede,1.2rem);line-height:1.5}
 .kws-close-acts{display:grid;gap:12px}
 .kws-close-tel a:any-link{display:inline-flex;align-items:center;min-height:44px;text-decoration:underline;text-decoration-color:var(--_au);text-decoration-thickness:2px;text-underline-offset:.2em}
@@ -32,3 +32,4 @@
 .kws-close--strip .kws-close-acts{align-self:end}
 }
 @media (hover:hover){.kws-close-tel a:hover{text-underline-offset:.34em}}
+@media print{.kws-close{display:none}}

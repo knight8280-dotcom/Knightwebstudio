@@ -292,15 +292,15 @@ log('Page groups in this run: ' + keys.join(', '))
 
 const results = await pipeline(
   keys,
-  key => agent(buildPrompt(key, GROUPS[key]), { label: 'build: ' + key, phase: 'Build', schema: BUILD_SCHEMA }),
+  key => agent(buildPrompt(key, GROUPS[key]), { model: 'opus', effort: 'xhigh', label: 'build: ' + key, phase: 'Build', schema: BUILD_SCHEMA }),
   async (built, key) => {
     if (!built) return null
     const g = GROUPS[key]
     const reviews = ONE_CRITIC
-      ? [await agent(designCritic(key, g, built) + '\n\n=== WHEN THAT REVIEW IS DONE, PUT ON A SECOND HAT AND DO THIS ONE AS FULLY; REPORT THE ISSUES OF BOTH IN ONE LIST ===\n' + engCritic(key, g, built), { label: 'critic: ' + key, phase: 'Critique', schema: ISSUES_SCHEMA })].filter(Boolean)
+      ? [await agent(designCritic(key, g, built) + '\n\n=== WHEN THAT REVIEW IS DONE, PUT ON A SECOND HAT AND DO THIS ONE AS FULLY; REPORT THE ISSUES OF BOTH IN ONE LIST ===\n' + engCritic(key, g, built), { model: 'opus', effort: 'xhigh', label: 'critic: ' + key, phase: 'Critique', schema: ISSUES_SCHEMA })].filter(Boolean)
       : (await parallel([
-        () => agent(designCritic(key, g, built), { label: 'design critic: ' + key, phase: 'Critique', schema: ISSUES_SCHEMA }),
-        () => agent(engCritic(key, g, built), { label: 'engineering critic: ' + key, phase: 'Critique', schema: ISSUES_SCHEMA }),
+        () => agent(designCritic(key, g, built), { model: 'opus', effort: 'xhigh', label: 'design critic: ' + key, phase: 'Critique', schema: ISSUES_SCHEMA }),
+        () => agent(engCritic(key, g, built), { model: 'opus', effort: 'xhigh', label: 'engineering critic: ' + key, phase: 'Critique', schema: ISSUES_SCHEMA }),
       ])).filter(Boolean)
     return { built, reviews }
   },
@@ -311,7 +311,7 @@ const results = await pipeline(
     const shared = [...new Set(prev.reviews.flatMap(r => r.sharedIssues || []).concat(prev.built.sharedIssues || []))]
     log(key + ': ' + issues.length + ' issues (' + issues.filter(i => i.severity === 'blocker').length + ' blockers, ' + issues.filter(i => i.severity === 'major').length + ' major); scores ' + prev.reviews.map(r => r.score).join('/'))
     let fixed = null
-    if (issues.length) fixed = await agent(fixPrompt(key, g, prev.built, issues, shared), { label: 'fix: ' + key, phase: 'Fix', schema: BUILD_SCHEMA })
+    if (issues.length) fixed = await agent(fixPrompt(key, g, prev.built, issues, shared), { model: 'opus', effort: 'xhigh', label: 'fix: ' + key, phase: 'Fix', schema: BUILD_SCHEMA })
     return { key, built: prev.built, reviews: prev.reviews, fixed, shared }
   }
 )

@@ -23,7 +23,7 @@ STORY = [
             </div>''',
      "You're on a job, up a ladder or with a customer. The phone rings out."),
     ("Missed-call text-back", "Same setup as step 1", "Within a minute, they get a text.",
-     '''<ul class="thread">
+     '''<ul class="thread" role="list">
               <li class="bubble bubble-biz">Sorry we missed your call, this is [your business]. What can we help with?</li>
               <li class="thread-note">Sent on its own, within a minute</li>
               <li class="bubble bubble-cust">The kitchen sink is leaking under the cabinet.</li>
@@ -74,7 +74,7 @@ GROUPS = [
 
 def cylinder(indent, label, h='h3', loop=False):
     pad = ' ' * indent
-    out = [f'{pad}<section class="kws-cyl" data-kws="cylinder" data-noun="step"{"" if loop else chr(32) + chr(100) + "ata-loop=" + chr(34) + "false" + chr(34)} aria-label="{label}">', f'{pad}  <ol class="kws-cyl-track">']
+    out = [f'{pad}<section class="kws-cyl" data-kws="cylinder" data-noun="step"{"" if loop else chr(32) + chr(100) + "ata-loop=" + chr(34) + "false" + chr(34)} aria-label="{label}">', f'{pad}  <ol class="kws-cyl-track" role="list">']
     for i, (service, fee, title, art, text) in enumerate(STORY, 1):
         out += [f'{pad}    <li class="kws-cyl-card">',
                 f'{pad}      <p class="kws-cyl-tag"><b aria-hidden="true">{i}</b><span>{service} <strong>{fee}</strong></span></p>',
@@ -93,7 +93,7 @@ def ring(indent, h='h3'):
     pad = ' ' * indent
     out = [f'{pad}<div class="kws-ring" data-kws="ring">', f'{pad}  <div class="kws-ring-stage" aria-hidden="true"></div>', f'{pad}  <div class="kws-ring-lists">']
     for name, price, items in GROUPS:
-        out += [f'{pad}    <div class="kws-ring-group">', f'{pad}      <{h} class="kws-ring-name">{name}</{h}>', f'{pad}      <p class="kws-ring-price">{price}</p>', f'{pad}      <ul>']
+        out += [f'{pad}    <div class="kws-ring-group">', f'{pad}      <{h} class="kws-ring-name">{name}</{h}>', f'{pad}      <p class="kws-ring-price">{price}</p>', f'{pad}      <ul role="list">']
         for it in items:
             out.append(f'{pad}        <li data-short="{it[1]}">{it[0]}</li>' if isinstance(it, tuple) else f'{pad}        <li>{it}</li>')
         out += [f'{pad}      </ul>', f'{pad}    </div>']

@@ -1,165 +1,146 @@
-run on: 2026-11-10T18:12Z; machine load: load average: 2.82, 3.19, 3.59 (frame times below move with it)
+run on: 2026-11-11T01:20Z; machine load: load average: 1.10, 2.28, 2.69 (frame times below move with it)
 
-== sizes (bytes) ==
- 3491 cylinder.css
- 7816 cylinder.js
- 3495 ring.css
- 7424 ring.js
-22226 total
+== sizes (bytes; budgets: css 3,500, js 8,000) ==
+ 3485 cylinder.css
+ 7995 cylinder.js
+ 3493 ring.css
+ 7991 ring.js
+22964 total
 
-== rules: hex colours, !important, widths in media queries ==
-cylinder.css:0
-ring.css:0
-cylinder.css:0
-ring.css:0
-      1 cylinder.css:@media (hover:hover)
-      1 ring.css:@media (min-width:380px)
-      1 ring.css:@media (min-width:760px)
-      1 ring.css:@media (min-width:980px)
-      1 ring.css:@media (prefers-reduced-motion:reduce)
+== rules: hex colours, !important, the banned words, class names not starting kws-, widths in media queries ==
+hex colours: 0; !important: 0; banned words in the four files, demo and notes: 0
+classes in the two stylesheets that are not kws- or a state (is-*): .js .md 
+      1 @media (hover:hover)
+      1 @media (min-width:380px)
+      1 @media (min-width:760px)
+      1 @media (min-width:980px)
 
-== contract (keyboard, script off, reduced motion, motion paused, touch, mount API, small screens, no 3D, layout shift) ==
+== cylinder slider: the contract ==
 PASS  no console errors on load
 PASS  two cylinders and two rings start themselves
 PASS  one global namespace (window.KWS)  [cylinder,ring]
-PASS  cylinder: a labelled region with a list, described as a carousel  [SECTION "One missed call, followed through to the review" OL]
-PASS  cylinder: each item is a slide labelled "n of 5"
-PASS  cylinder: previous, next and five dots are real buttons with names  [Step 1 of 5: You can't pick up. / Step 5 of 5: Job done. The review request sends itself.]
-PASS  cylinder: polite live region, silent until the visitor moves it; one dot is current
-PASS  ring: the stage is aria-hidden and holds nothing focusable
-PASS  ring: 30 cards, one per list item, same words on every card that faces you; the backs are blank  [17 face forward; tabs: One-page,Starter,Commerce]
-PASS  next button moves one step
-PASS  live region names the step in focus  [Step 2 of 5: Within a minute, they get a text.]
-PASS  the centre card carries no transform at rest (flat-on, sharp)
-PASS  previous from step 1 goes round to step 5 (loop)
-PASS  a dot goes straight to its step  [now 2]
-PASS  arrow keys, Home and End work when focus is inside  [3,1,4,0]
+PASS  a labelled region with a list, described as a carousel  [SECTION "One missed call, followed through to the review" OL]
+PASS  each of the 5 items is a slide labelled "n of 5"
+PASS  the drum has two ends here: four blank cards beyond them, empty and hidden from assistive technology  [4 blank]
+PASS  previous, next and five dots are real buttons with names  [Step 1 of 5: You can't pick up. / Step 5 of 5: Job done. The review request sends itself.]
+PASS  polite live region, silent until the visitor moves it; one dot is current
+PASS  at the first step the previous arrow is marked aria-disabled
+PASS  Next moves one step and says so  [Step 2 of 5: Within a minute, they get a text.]
+PASS  the card in the middle carries no transform at rest; will-change is off again  [none / auto]
+PASS  a dot goes straight to its step  [step 4]
+PASS  at the last step Next is marked aria-disabled and goes no further
+PASS  the dimmed arrow takes no pointer: no hand cursor, no hover, no press  [none 0.4]
+PASS  the current dot stays filled in the accent colour while the pointer rests on it  [rgb(44, 70, 196) vs rgb(44, 70, 196) vs rgba(0, 0, 0, 0)]
+PASS  landed: only the card in the middle is at full light  [0.4,0.4,0.4,0.4,1,0.4,0.4,0.4,0.4]
+PASS  arrow keys, Home and End work when focus is inside  [1,2,1,4,0]
 PASS  up and down arrows are left to the page
-PASS  Tab walks previous, five dots, next, then leaves  [7 presses]
-PASS  focused control shows a 3px ring  [solid 3px]
-PASS  bare page (no site stylesheet, no site script, no html.js): both mount, no errors
-PASS  focusing a link on a side card brings that card to the middle  [offset 0px]
-PASS  Tab to the next card's link turns the drum to it
-PASS  click on a side card's link brings the card round and does not follow the link
-PASS  a drag that starts on a link turns the drum and does not follow the link  [now 3]
-PASS  a plain click on the centre card's link follows it  [#step-4]
-PASS  reduced motion: next lands at once, no animation  [{"on":1,"moving":false,"t":"none"}]
-PASS  reduced motion: a swipe steps one card at once, nothing follows the finger
-PASS  reduced motion: the ring is still through scrolling and dragging
-PASS  reduced motion: the ring is complete, with one card stood up  [front card 0]
-PASS  reduced motion: no animation frames asked for  [0 frames in the whole run]
-PASS  motion paused: next lands at once, no animation  [{"on":1,"moving":false,"t":"none"}]
-PASS  motion paused: a swipe steps one card at once, nothing follows the finger
-PASS  motion paused: the ring is still through scrolling and dragging
-PASS  motion paused: the ring is complete, with one card stood up  [front card 0]
-PASS  motion paused: no animation frames asked for  [0 frames in the whole run]
-PASS  motion resumed: the ring carries on from where it stood (no catching up, no jump)  [0 to -2 degrees for a 20px scroll]
-PASS  motion resumed: the ring turns with the scroll again
-PASS  touch: a vertical swipe on the cylinder scrolls the page  [scrolled 302px]
-PASS  touch: a sideways swipe turns the cylinder and the page stays put  [step 2, page moved 0px]
-PASS  touch: swipe back returns
-PASS  touch: a short flick settles on a card (soft snap)  [step 1]
-PASS  touch: a vertical swipe on the ring scrolls the page  [scrolled 185px]
-PASS  touch: a sideways swipe turns the ring and the page stays put  [front card 7 to 13; scroll turned it 5 to 7]
-PASS  controls are at least 44px at 390px wide  [44x44 44x44 44x44 44x44 44x44 44x44 44x44]
-PASS  no sideways page scroll at 390px
-PASS  after a touch drag, Enter on the centre card's link still follows it  [#step-2]
-PASS  idle with the ring on screen: no animation frames asked for in 2s  [0]
-PASS  after a scroll the ring settles and stops asking for frames
-PASS  scrolling with the ring off screen asks for no frames
-PASS  no wheel listener anywhere in the scripts
-PASS  the ring never calls preventDefault
-PASS  mounting twice on one element returns the same remover
-PASS  the remover takes away everything the script added
-PASS  it mounts again after removal, with options (start: 2, loop: false; speed, tilt)
-PASS  loop: false stops at the last card and marks next as disabled
-PASS  ring: mounts on a plain list after load, makes its own stage, and removes it again
-PASS  no errors through the mount tests
-PASS  under 380px the cylinder is a flat sliding row
-PASS  under 380px the ring gives way to its lists
-PASS  controls are at least 44px at 360px wide  [44x44 44x44 44x44 44x44 44x44 44x44 44x44]
-PASS  no 3D transforms in the browser: the cylinder is a flat sliding row
-PASS  no 3D transforms in the browser: the ring does not start (its lists stay)
-PASS  script off: every card and every list item is on the page, in view width, nothing dead  [{"cards":true,"items":true,"stage":"none","ctl":0,"wide":0}]
-PASS  390px: the space is reserved before the scripts run (heights equal, layout shift 0.0000)  [held 670.3 1107.8 670.3 1107.8 / live 670.3 1107.8 670.3 1107.8]
-PASS  820px: the space is reserved before the scripts run (heights equal, layout shift 0.0000)  [held 646.3 887.6 646.3 887.6 / live 646.3 887.6 646.3 887.6]
-PASS  1440px: the space is reserved before the scripts run (heights equal, layout shift 0.0000)  [held 646.3 737 646.3 737 / live 646.3 737 646.3 737]
+PASS  focus is never trapped: Tab walks out past the dots and Next  [7 presses]
+PASS  tabbing to a link on a side card brings that card to the middle  [offset 0px]
+PASS  390px: an arrow key pressed on a link in a card moves focus to the dot of the card that came round, in view  ["Step 2 of 5: Within a minute, they get a text." 44 of 44px visible; live region ""]
+PASS  1280px: an arrow key pressed on a link in a card moves focus to the dot of the card that came round, in view  ["Step 2 of 5: Within a minute, they get a text." 44 of 44px visible; live region "Step 3 of 5: They pick a time. It's on your calendar."]
+PASS  mouse: a click on a side card brings it round and does not follow its link
+PASS  mouse: the same click on the card in the middle follows the link
+PASS  a drag that starts on a link turns the drum and follows nothing  [step 3]
+PASS  touch 820px: a tap on a side card's link brings it round and follows nothing  [step 2, hash ""]
+PASS  touch 390px: a tap on a side card brings it round and follows nothing  [step 2, hash ""]
+PASS  after a touch drag, Enter on a focused link still follows it
+PASS  while dragging the drum follows the pointer (is-held, is-moving)
+PASS  a drag of half a card lands on the next card, flat-on
+PASS  a small drag snaps back
+PASS  a quick quarter-card drag held still for a second, then let go, snaps back: no fling from the old speed  [step 2]
+PASS  dragged past its first card the drum gives a little and comes back
+PASS  the mouse wheel over the drum scrolls the page and turns nothing  [page moved 240px]
+PASS  mouse: Next, then a plain press on the drum 120ms later: it finishes its turn  [{"on":1,"moving":false,"held":false,"tOn":"none","wc":"auto","said":"Step 2 of 5: Within a minute, they get a text.","dot":1}]
+PASS  touch: swipe the drum, then 100ms later scroll the page with a finger on it: the page scrolls and the drum finishes its turn  [page 235px; {"on":1,"moving":false,"held":false,"tOn":"none","wc":"auto","said":"Step 2 of 5: Within a minute, they get a text.","dot":1}]
+PASS  touch: a second finger landing in mid-drag leaves nothing held and nothing part-turned  [{"on":1,"moving":false,"held":false,"tOn":"none","wc":"auto","said":"Step 2 of 5: Within a minute, they get a text.","dot":1}]
+PASS  twelve arrow presses 35ms apart leave it settled on one card with its dot  [{"on":4,"moving":false,"held":false,"tOn":"none","wc":"auto","said":"Step 5 of 5: Job done. The review request sends itself.","dot":4}]
+PASS  a vertical swipe on the drum scrolls the page  [311px]
+PASS  a sideways swipe turns the drum and the page does not move
+PASS  touch-action leaves vertical scrolling and pinch-zoom to the browser  [pan-y pinch-zoom]
+PASS  reduced motion: arrows, keys and a swipe land at once; nothing follows the finger; no animation frames asked for  [0 frames]
+PASS  reduced motion: the light on the cards changes without a transition  [0s]
+PASS  motion paused: arrows, keys and a swipe land at once; nothing follows the finger; no animation frames asked for  [0 frames]
+PASS  motion paused: the light on the cards changes without a transition  [0s]
+PASS  no animation frames while it rests
+PASS  1920px: all five cards are in view and every card in view is at full strength (nothing is faded)  [1,1,1,1,1,0,0,0,0]
+PASS  390x664 with a 64px header and a 69px phone bar: the card and its controls fit on screen  [card 444px tall, 281px wide; controls end at 576px of 595px; 8px under the card; longest text 5 lines]
+PASS  the next card shows at the edge, turned on the drum  [40px of it]
+PASS  5 cards at 360px: every control is 44px, on screen, none overlapping  [1 row]
+PASS  5 cards at 320px: every control is 44px, on screen, none overlapping  [1 row]
+PASS  6 cards at 360px: every control is 44px, on screen, none overlapping  [1 row]
+PASS  7 cards at 390px: every control is 44px, on screen, none overlapping  [2 rows]
+PASS  7 cards at 360px: every control is 44px, on screen, none overlapping  [2 rows]
+PASS  12 cards at 390px: every control is 44px, on screen, none overlapping  [2 rows]
+PASS  mounting the same element twice returns the same remover
+PASS  the remover takes away everything it added: buttons, live region, blank cards, classes, attributes and inline styles  [{"cls":"kws-cyl","role":null,"kids":"kws-cyl-track","cards":5,"attrs":"class,class,class,class,class"}]
+PASS  options from code: start, loop and noun  [{"on":2,"cards":5,"name":"Previous stage","dis":null}]
+PASS  an element removed from the page raises no errors
+PASS  under 380px the drum is a flat sliding row with the same controls  [translateX(-264.18px) | none | translateX(264.18px)]
+PASS  html[data-kws3d="off"]: the drum is flat and the ring gives way to its lists  [translateX(364.64px) | translateX(729.28px)]
+PASS  script off: a grid of all five cards, three across at 1280px, nothing hidden and no dead buttons  [{"n":5,"vis":true,"cols":3,"ctl":0,"bg":"1"}]
+PASS  bare page (no site stylesheet, no site script): both start with no errors
+PASS  a looping drum: Previous at the first card goes round to the last; no blank cards, no dimmed arrow  [{"on":4,"blank":0,"dis":null}]
+PASS  bare page 360px: a 50-letter word in the label, the title and the text stays inside the card  [-17,-17,-17]
+PASS  demo 390px: a 50-letter word in the label, the title and the text stays inside the card  [-17,-17,-17]
 
-all passed
+66 passed, 0 failed
+
+== carousel ring: the contract ==
+PASS  the stage is aria-hidden and holds nothing that can take focus
+PASS  thirty lines, thirty cards; the cards round the ring carry no words at all (nothing to overlap, clip or mirror)
+FAIL  the lists are untouched: four packages, their fixed prices and every line  [One-page $1,000 7 | Starter $2,000 7 | Business $4,000 8 | Commerce $8,000 8]
+PASS  each list's cards share one of four tab places, so a package reads as a section of the file
+PASS  one card stands up to be read: a line from the lists, with its package on the tab  ["Starter: Up to 5 pages"]
+PASS  at rest the standing card is flat-on: no rotation and no depth left in its transform  [translateZ(0px) rotateX(0deg) rotateY(0deg) translateZ(0px) rotateY(0deg) translateY(242.5px) scale(0.5)]
+PASS  it rests on a card, and the standing card is dead centre on the ring  [angle -84, offset 0px]
+PASS  1280px: the ring is large, runs off the left edge of the window and stops short of the lists  [radius 485px (about 757px across), stage 676x544 from x=0, standing card 304x219]
+PASS  beside the lists the stage sticks in the middle of the window while they scroll past  [0px and, 110px further on, 0px off centre]
+PASS  scrolling 300px turns it about 30 degrees (0.1 degree a pixel)  [-36.0 degrees]
+PASS  when the scrolling stops it eases to the nearest card (at most half a step)  [-75.15 in flight, -84 at rest]
+PASS  no animation frames while it rests
+PASS  off screen it asks for no frames and its cards are not kept as layers
+PASS  coming back on screen it is already on a card: no catching up to watch  [angle -84]
+PASS  the mouse wheel over the ring scrolls the page
+PASS  a sideways drag turns it, it coasts a little and settles on a card  [-84 > -92.8 > -96]
+PASS  a quick drag held still for well over a second, then let go, only settles on the nearest card: no fling from the old speed  [moved 1.50 degrees after release]
+PASS  once the card at the front is up, a pointer held still on the ring asks for no frames  [0 frames in 0.6s]
+PASS  a plain click on it changes nothing
+PASS  through a slow scroll past a dozen cards, sampled every frame: never two cards with words showing at once  [91 frames, at most 2 cards lifted]
+PASS  at rest exactly one card is up, with its words; the other is fully away  [0/0 1/1]
+PASS  390px: the stage runs edge to edge and the ring is wider than the screen, so the front arc is large  [radius 279px, stage 390x312]
+PASS  390px: the standing card is at least 60% of the width, its words 17px or more, its tab 12px or more (as drawn, after scaling)  [240px wide, words 18px, tab 12px]
+PASS  a sideways swipe turns the ring and the page does not move  [-72 degrees; page moved 0px; at rest on -144]
+PASS  a vertical swipe on the ring scrolls the page  [215px]
+PASS  touch-action leaves vertical scrolling and pinch-zoom to the browser  [pan-y pinch-zoom]
+PASS  reduced motion: a still ring with one card stood up to read; scrolling and dragging change nothing and no frames are asked for  ["1 page"]
+PASS  motion paused: a still ring with one card stood up to read; scrolling and dragging change nothing and no frames are asked for  ["1 page"]
+PASS  motion switched back on: it carries on from where it stood, with no jump  [0 then 0.00]
+PASS  motion paused in mid-turn: it stops where it is and asks for no more frames  [0 frames in 0.9s]
+PASS  a resize while the stage is stuck does not turn it  [-108 then -108]
+PASS  resized step by step across the breakpoints: no errors, no sideways scroll
+PASS  mounting twice returns the same remover; it takes away its cards, the class and the inline style, and it can be mounted again  [{"cls":"kws-ring","kids":0,"attrs":"class+aria-hidden"}]
+PASS  a ring with fewer than three lines never starts and keeps no empty space for one  [{"live":false,"shown":"none","h":0,"after":null}]
+PASS  markup with no stage stays a plain list, untouched; one plain list with a stage is enough for a ring (its cards have blank tabs)
+PASS  no errors through all of that
+PASS  under 380px the ring gives way to its lists, and asks for no frames  [{"d":"none","lists":320,"cols":2}]
+PASS  script off: the four lists side by side across the full width, no stage and no gap  [{"d":"none","cols":4,"w":1184,"li":true}]
+PASS  bare page (no site stylesheet): the ring runs, with one card up  ["Starter: Up to 5 pages"]
+PASS  a 50-letter word wraps inside its list; a line too long for the card is cut at the card, not spilled  [[[-8,-37,false],[-18,-118,false]]]
+
+39 passed, 1 failed
 
 == sideways scroll, 360 to 1920 in 20px steps, scripts on and off ==
-PASS  demo.html (script on): no sideways scroll and nothing unclipped past the edge, 360 to 1920 in 20px steps (up to 156 parts of the drum and ring run past the edge inside their own clip)
+PASS  demo.html (script on): no sideways scroll and nothing unclipped past the edge, 360 to 1920 in 20px steps (up to 188 parts of the drum and ring run past the edge inside their own clip)
 PASS  demo.html (script off): no sideways scroll and nothing unclipped past the edge, 360 to 1920 in 20px steps (up to 0 parts of the drum and ring run past the edge inside their own clip)
-PASS  bare.html (script on): no sideways scroll and nothing unclipped past the edge, 360 to 1920 in 20px steps (up to 36 parts of the drum and ring run past the edge inside their own clip)
+PASS  bare.html (script on): no sideways scroll and nothing unclipped past the edge, 360 to 1920 in 20px steps (up to 55 parts of the drum and ring run past the edge inside their own clip)
 PASS  bare.html (script off): no sideways scroll and nothing unclipped past the edge, 360 to 1920 in 20px steps (up to 0 parts of the drum and ring run past the edge inside their own clip)
 
-== layout shift with the scripts arriving late ==
-PASS  390px: layout shift 0.0000 with the scripts arriving 1.2s late (4 mounted)
-PASS  820px: layout shift 0.0000 with the scripts arriving 1.2s late (4 mounted)
-PASS  1440px: layout shift 0.0000 with the scripts arriving 1.2s late (4 mounted)
-
-== held space and the 4s fallback (kit scripts blocked) ==
-chromium 390px  held: {"h":670,"shown":1,"tops":"16","ring":233,"js":true}  after 4s without the script: {"h":2746,"shown":5,"tops":"16,476,1047,1621,2172","ring":233,"js":true}
-chromium 1440px  held: {"h":646,"shown":1,"tops":"16","ring":371,"js":true}  after 4s without the script: {"h":2701,"shown":5,"tops":"16,492,1038,1605,2147","ring":371,"js":true}
-firefox 390px  held: {"h":670,"shown":1,"tops":"16","ring":233,"js":true}  after 4s without the script: {"h":2746,"shown":5,"tops":"16,476,1047,1621,2172","ring":233,"js":true}
-firefox 1440px  held: {"h":646,"shown":1,"tops":"16","ring":371,"js":true}  after 4s without the script: {"h":2701,"shown":5,"tops":"16,492,1038,1605,2147","ring":371,"js":true}
-
-== text sizes and targets at 390px ==
-
-no text under 12px and no target under 44px
-
-== contrast, both themes, 1440 and 390 ==
-light /kit/depth/demo.html 1440 all text passes AA
-light /kit/depth/demo.html 390 all text passes AA
-dark /kit/depth/demo.html 1440 all text passes AA
-dark /kit/depth/demo.html 390 all text passes AA
-
-== leaks ==
-PASS  40 components made and removed: 0 still alive after garbage collection
-PASS  scroll listeners on the window: 3 before, 3 after
-PASS  no errors
-
-== other browsers ==
-PASS  firefox 155.0 at 390px: 4 mounted; cylinder next ok, drag ok, arrow key ok, centre card transform none; ring front card 3 > 6 by scroll, > 11 by drag; page wider by 0px
-PASS  firefox 155.0 at 1280px: 4 mounted; cylinder next ok, drag ok, arrow key ok, centre card transform none; ring front card 3 > 6 by scroll, > 9 by drag; page wider by 0px
-SKIP  webkit: cannot launch here (Error: browserType.launch: )
-
-== frame times, 390x844 (demo page: two cylinders and two rings mounted, the site script running) ==
-1x  cylinder  next button:    44 frames, mean 16.7ms, median 16.7ms, 95th 16.7ms, worst 16.8ms, over 33ms: 0; script per frame: mean 0.07ms, worst 0.40ms
-1x  cylinder  drag + settle:  117 frames, mean 16.7ms, median 16.7ms, 95th 16.8ms, worst 16.8ms, over 33ms: 0; script per frame: mean 0.05ms, worst 0.20ms
-1x  ring      scroll past:    303 frames, mean 17.3ms, median 16.7ms, 95th 16.8ms, worst 66.6ms, over 33ms: 3; script per frame: mean 0.09ms, worst 6.30ms
-1x  ring      drag + coast:   154 frames, mean 16.7ms, median 16.7ms, 95th 16.7ms, worst 16.8ms, over 33ms: 0; script per frame: mean 0.18ms, worst 4.40ms
-1x  will-change while idle: cylinder card "auto", ring card "auto"; layers the ring keeps while it is on screen: 30 small cards (none while it is off screen)
-4x  cylinder  next button:    44 frames, mean 16.7ms, median 16.7ms, 95th 16.8ms, worst 16.8ms, over 33ms: 0; script per frame: mean 0.31ms, worst 4.30ms
-4x  cylinder  drag + settle:  118 frames, mean 16.7ms, median 16.7ms, 95th 16.7ms, worst 16.8ms, over 33ms: 0; script per frame: mean 0.37ms, worst 6.90ms
-4x  ring      scroll past:    274 frames, mean 21.0ms, median 16.7ms, 95th 33.4ms, worst 66.6ms, over 33ms: 11; script per frame: mean 0.44ms, worst 7.20ms
-4x  ring      drag + coast:   166 frames, mean 18.7ms, median 16.7ms, 95th 33.4ms, worst 66.7ms, over 33ms: 5; script per frame: mean 0.49ms, worst 3.50ms
-4x  will-change while idle: cylinder card "auto", ring card "auto"; layers the ring keeps while it is on screen: 30 small cards (none while it is off screen)
-
-== ring: touch scroll past it, 4x CPU throttle, three rounds each ==
-one ring on a page with the site stylesheet (test/one-ring.html):
-4x   99 frames, mean 21.4ms, median 16.7, 95th 33.4, worst 83.3, over 33ms: 10
-4x  116 frames, mean 18.4ms, median 16.7, 95th 33.3, worst 50.0, over 33ms: 5
-4x  111 frames, mean 19.7ms, median 16.7, 95th 33.4, worst 116.6, over 33ms: 6
-bare client page, one cylinder and one ring (test/bare.html):
-4x  119 frames, mean 17.8ms, median 16.7, 95th 33.3, worst 50.0, over 33ms: 2
-4x  110 frames, mean 19.2ms, median 16.7, 95th 33.4, worst 66.6, over 33ms: 6
-4x  116 frames, mean 18.1ms, median 16.7, 95th 33.3, worst 33.4, over 33ms: 3
-demo page:
-4x  105 frames, mean 20.2ms, median 16.7, 95th 33.4, worst 66.7, over 33ms: 7
-4x  114 frames, mean 18.6ms, median 16.7, 95th 33.3, worst 50.0, over 33ms: 2
-4x  116 frames, mean 18.2ms, median 16.7, 95th 33.3, worst 33.4, over 33ms: 2
-
-== where the main thread's time goes while the ring turns (demo page, 4x) ==
-main thread: busy 2241ms of 5352ms (42%), 255 commits, 8.8ms of main-thread work per committed frame; longest task 35.7ms
-  long task 35.7ms: UpdateLayoutTree 19.8, Layerize 5.6, Paint 2.8, Paint 2.2, Commit 2.1, EventDispatch 1.3
-  long task 30.3ms: Layerize 24.4, UpdateLayoutTree 3.6, Commit 1.0
-  long task 27.9ms: Layout 10.1, Commit 6.0, IntersectionObserverController::computeIntersections 4.1, FireAnimationFrame 3.4, UpdateLayoutTree 2.3, Layerize 1.6
-  long task 27.0ms: MajorGC 26.9, V8.GC_MARK_COMPACTOR 26.9, V8.GC_MC_CLEAR 5.3, V8.GC_MC_MARK 5.3, V8.GC_MC_MARK_FULL_CLOSURE_SERIAL 5.2, V8.GC_MC_MARK_WEAK_CLOSURE_EPHEMERON_MARKING 5.2
-  long task 24.8ms: EventDispatch 8.1, FunctionCall 7.4, UpdateLayoutTree 7.3, UpdateLayoutTree 5.3, Layerize 2.3, Commit 2.1
-  long task 24.5ms: UpdateLayoutTree 12.8, Commit 5.4, PrePaint 1.9, FireAnimationFrame 1.1, FunctionCall 1.1
-  tasks over 10ms: 70, over 16ms: 23
-ring on
-  RunTask                              2241ms total   1713 times  1.31ms each
-  Commit                                519ms total    255 times  2.03ms each
-  Layerize                              516ms total    255 times  2.03ms each
+== layout shift with the scripts arriving late, and heights held against live ==
+PASS  demo 390px: layout shift 0.0000; heights held 512/312/512/312 doc 5360, live 512/312/512/312 doc 5360; cards shown while held: 1,1
+PASS  demo 820px: layout shift 0.0000; heights held 532/416/532/416 doc 4829, live 532/416/532/416 doc 4829; cards shown while held: 1,1
+PASS  demo 1440px: layout shift 0.0000; heights held 532/544/532/544 doc 4976, live 532/544/532/544 doc 4976; cards shown while held: 1,1
+PASS  demo 390px, reduced motion: layout shift 0.0000; heights held 512/312/512/312 doc 5360, live 512/312/512/312 doc 5360; cards shown while held: 1,1
+PASS  demo 820px, reduced motion: layout shift 0.0000; heights held 532/416/532/416 doc 4829, live 532/416/532/416 doc 4829; cards shown while held: 1,1
+PASS  demo 1440px, reduced motion: layout shift 0.0000; heights held 532/544/532/544 doc 4976, live 532/544/532/544 doc 4976; cards shown while held: 1,1
+PASS  bare page 390px: layout shift 0.0000; heights held 526/312 doc 2111, live 526/312 doc 2111; cards shown while held: 1
+PASS  bare page 820px: layout shift 0.0000; heights held 490/416 doc 1757, live 490/416 doc 1757; cards shown while held: 1

@@ -1,0 +1,59 @@
+PASS  no console errors or failed requests: demo.html
+PASS  no console errors or failed requests: portable.html
+PASS  no console errors or failed requests: test/pricing-with-kit.html
+PASS  no console errors or failed requests: test/start-with-kit.html
+PASS  no console errors or failed requests: test/notfound-with-kit.html
+PASS  script off: demo.html: 5 booking link(s) go to /contact/, 0 dead button(s) showing, nothing hidden, skyline 54px
+PASS  script off: test/pricing-with-kit.html: 1 booking link(s) go to /contact/, 0 dead button(s) showing, nothing hidden, skyline 54px
+PASS  script off: test/start-with-kit.html: 1 booking link(s) go to /contact/, 0 dead button(s) showing, nothing hidden, skyline 54px
+PASS  name rises with the scroll only, 390px: entering: 26.8px down and unchanged after 1.2s; at the page end: 0.00px, progress 1.000
+PASS  motion paused (data-motion="off"), 390px: 0 animation(s), name at 0px
+PASS  reduced motion, 390px: 0 animation(s), name at 0px, html data-motion="off" (set by the kit's motion.js)
+PASS  name rises with the scroll only, 1440px: entering: 73.0px down and unchanged after 1.2s; at the page end: 0.18px, progress 0.998
+PASS  motion paused (data-motion="off"), 1440px: 0 animation(s), name at 0px
+PASS  reduced motion, 1440px: 0 animation(s), name at 0px, html data-motion="off" (set by the kit's motion.js)
+PASS  keyboard walk, pricing page: 25 stops in reading order, each with a 3px outline and scrolled into view: Book a free 30-minute call > Send an enquiry > (225) 255-0837 > KnightWebstudio home > (225) 255-0837 > knightwebstudio1@gmail.com > Start a project → > Website design > Consulting & automation > E-commerce > SEO > Care plans > About > Our work > Process > Pricing > FAQ > Baton Rouge > Gonzales > Prairieville > Denham Springs > Privacy > Terms > Back to top ↑ > Pause motion
+PASS  the skyline scene holds nothing focusable and is aria-hidden: true
+PASS  structure: band is a section named by its h2 ("Still deciding? Book the free call."); footer has no headings and four labelled navs: Contact (4), Services (5), Company (5), Areas we serve (7); 21 links; the crest link is named "KnightWebstudio home"; canvases hidden from assistive tech; card is a 4-row description list; tel links tel:+12252550837,tel:+12252550837
+PASS  main.js still fills #year: 2026
+PASS  footer blocks are laid out in source order (390, 820, 1440): who, contact, services, company, areas, sign-off
+PASS  booking button on the card is wired by main.js: https://calendly.com/knightwebstudio1/30min _blank noopener
+PASS  phone bar shows mid-page, hides while the band is on screen and over the footer: mid-page true; band 15%, 50%, 100% up the screen false, false, false; at the footer false
+PASS  theme button re-colours band and footer: rgb(36, 56, 159) / rgb(22, 27, 44)  ->  rgb(27, 42, 120) / rgb(12, 15, 24)
+PASS  open phone menu still takes the footer out of reach (main.js finds .site-footer): true
+PASS  360px: targets and type, demo.html: every link and button at least 44x44, smallest text 12px, page 0px wider than the screen
+PASS  360px: targets and type, portable.html: every link and button at least 44x44, smallest text 12px, page 0px wider than the screen
+PASS  360px: targets and type, test/start-with-kit.html: every link and button at least 44x44, smallest text 12px, page 0px wider than the screen
+PASS  no layout shift from the kit: demo.html at 390px: kit elements shifted 0 time(s); whole page score 0.0000
+PASS  no layout shift from the kit: demo.html at 1440px: kit elements shifted 0 time(s); whole page score 0.0000
+PASS  no layout shift from the kit: test/pricing-with-kit.html at 390px: kit elements shifted 0 time(s); whole page score 0.0000
+PASS  no layout shift from the kit: test/pricing-with-kit.html at 1440px: kit elements shifted 0 time(s); whole page score 0.0000
+PASS  bands and footers removed from the page: 4 canvases before; after removal 0 animation frames asked for in 2s, 0 errors (this folder's files hold no script, listeners or observers)
+PASS  inserted after load, twice on a page: three copies, heights 266, 266, 266px
+PASS  pause button, round: the icon is within 1px of the button centre: header dx -0.5 dy 0
+PASS  pause button in the footers: labelled, icon and words centred as one, last in the row: "Pause motion" 44px tall, icon dy 0, 12.5px before the icon and 17px after the words, last in a row that starts with "© 2026"; "Pause motion" 44px tall, icon dy 0, 12.5px before the icon and 17px after the words, last in a row that starts with "Privacy"; "Pause motion" 44px tall, icon dy 0, 12.5px before the icon and 17px after the words, last in a row that starts with "Privacy"
+PASS  button states on a bare page: band main: hover -2px and a deeper fill, pressed 1px, focus ring solid 3px; band second: hover -2px, pressed 1px, focus ring solid 3px; card: hover -2px and a deeper fill, pressed 1px, focus ring solid 3px; footer: hover -2px, pressed 1px, focus ring solid 3px; the band's number: underline moves 4.48px to 7.616px on hover, focus ring solid 3px
+PASS  reduced motion on a bare page: no button animates: 7 buttons, transition-duration 0s
+PASS  320px: the bare page as delivered: 0px wider than the screen
+PASS  360px: the bare page as delivered: 0px wider than the screen
+PASS  390px: the bare page as delivered: 0px wider than the screen
+PASS  long words and long marked phrases at 320, 360 and 390px: 27 cases, none wider than the screen
+PASS  the full stop stays with the marked words, and the brush is drawn (320 to 620px, a short and a long phrase): 62 widths, none orphaned, none wider than the screen
+PASS  a logo that is only a name is set on one line (390, 1440): 185x28px, 1 line; 185x28px, 1 line
+PASS  forced colours: card and buttons have a border to draw: kws-appt 1px solid; kws-btn (card) 1px solid; kws-btn 1px solid; kws-btn (footer) 1px solid
+PASS  text at 200%: no kit element runs off the screen: pricing-with-kit.html 390px: none; pricing-with-kit.html 760px: none; pricing-with-kit.html 1280px: none; start-with-kit.html 390px: none; portable.html 390px: none; portable.html 760px: none; the bare page does not scroll sideways
+PASS  footer fits one screen at 1440x900: 701px, with 828px under the sticky header; 678px at 1280x720 (648px under the header)
+PASS  footer on a phone is no taller than 1,150px: 1099px at 390, 1096px at 360
+PASS  card band on a phone: 772px at 390, 798px at 360; whole pricing page 10608px at 390
+PASS  card band on a tablet: card beside the copy: 503px at 820, 2 columns, 0px of empty block right of the card
+PASS  card band, 600 to 979: no empty block right of the card: 600: 0px, 680: 0px, 759: 0px, 760: 0px, 900: 0px, 979: 0px
+PASS  Services and Company rows line up (360, 390, 820): largest difference between row centres 360: 0.5px, 390: 0.5px, 820: 0.5px
+PASS  strip at 1440: buttons and number are centred against the copy as one block: centres 1129.3 and 1129.3
+PASS  gold details: the line under the band's number and the hairline at the band's foot: underline 2px rgb(240, 195, 105); hairline 2px rgb(240, 195, 105); kickers in the card layout: 0
+PASS  slim footer leads with the name and place; the number is body size: "KnightWebstudio · Based in Baton Rouge, Louisiana" in Fraunces; number at 17px; "© 2026"
+PASS  scene on a phone: 360px: 90px tall, Capitol tower 69px in from the left, bridge towers 50 and -40px in from the right, 95% of the letters' height clear of the usual roofline (74% at the tallest building); 390px: 90px tall, Capitol tower 69px in from the left, bridge towers 80 and -10px in from the right, 95% of the letters' height clear of the usual roofline (76% at the tallest building); 430px: 90px tall, Capitol tower 69px in from the left, bridge towers 120 and 30px in from the right, 95% of the letters' height clear of the usual roofline (78% at the tallest building)
+PASS  scene at 1440: 203px tall, name at 173px, 87% of the letters' height clear of the usual roofline
+PASS  the sky's glow: with the pause button showing it drifts (12.3px, then 31.6px); pressed, it holds (33.5px twice, button says "Play motion"); pressed again it runs; not-found page (no button): 0 animations; reduced motion: 0; bare client page (no button): 0
+PASS  no reset needed: card band, strip, card and footer measure the same without the page's box-sizing and margin reset: 390px: 713/371/317/944 with, 713/371/317/944 without; 1440px: 575/266/317/734 with, 575/266/317/734 without
+
+all checks passed

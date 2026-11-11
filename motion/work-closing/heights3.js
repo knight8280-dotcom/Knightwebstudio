@@ -15,6 +15,7 @@ const { chromium } = require('playwright');
     out[w] = Object.assign(d, q, t);
     await ctx.close();
   }
-  console.log(JSON.stringify(out, null, 1));
+  require('fs').writeFileSync(__dirname + '/heights.json', JSON.stringify(out, null, 1));
+  console.log(JSON.stringify(out));
   await b.close();
 })();

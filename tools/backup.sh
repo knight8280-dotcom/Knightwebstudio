@@ -27,7 +27,8 @@ git add -A
 if git diff --cached --quiet; then echo "site: nothing new to commit"; else
   git commit -q -m "$MSG" -m "Checkpoint, not ready to merge." -m "$TRAILER" && echo "site: committed $(git rev-parse --short HEAD)"
 fi
-if [ -n "$(git log origin/claude/site-refresh..HEAD --oneline 2>/dev/null)" ]; then push claude/site-refresh; else echo "site: already pushed"; fi
+BR=$(git rev-parse --abbrev-ref HEAD)
+if [ "$BR" = "main" ]; then echo "site: on main, not pushing"; elif [ -n "$(git log origin/$BR..HEAD --oneline 2>/dev/null)" ] || ! git rev-parse -q --verify origin/$BR >/dev/null; then push "$BR"; else echo "site: already pushed"; fi
 
 # 2. the working files
 STAGE="$R/.backup-stage"

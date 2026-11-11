@@ -145,7 +145,7 @@ log('Review ' + STAGE + ' dimensions: ' + keys.join(', '))
 
 const results = await pipeline(
   keys,
-  key => agent(CONTEXT + DIMS[key] + HOW_TO_REPORT, { label: 'find: ' + key, phase: 'Find', schema: FINDINGS_SCHEMA }),
+  key => agent(CONTEXT + DIMS[key] + HOW_TO_REPORT, { model: 'opus', effort: 'xhigh', label: 'find: ' + key, phase: 'Find', schema: FINDINGS_SCHEMA }),
   async (found, key) => {
     if (!found) return { key, found: null, verdicts: null, confirmed: [] }
     const list = found.findings || []
@@ -156,7 +156,7 @@ THE REVIEWER'S BRIEF WAS:
 ${DIMS[key]}
 THE FINDINGS:
 ${JSON.stringify(list, null, 1)}
-`, { label: 'verify: ' + key, phase: 'Verify', schema: VERDICT_SCHEMA })
+`, { model: 'opus', effort: 'xhigh', label: 'verify: ' + key, phase: 'Verify', schema: VERDICT_SCHEMA })
     const byId = {}
     for (const x of ((v && v.verdicts) || [])) byId[x.id] = x
     const confirmed = list.filter(f => byId[f.id] && byId[f.id].holds).map(f => ({ ...f, severity: byId[f.id].severity || f.severity, verifierNote: byId[f.id].note, dimension: key }))

@@ -179,7 +179,7 @@ Report: the fold comparison, what you fixed, the battery's results, the file siz
 `
 
 phase('Assemble')
-const asm = await agent(ASSEMBLE_PROMPT, { label: 'assemble kit + placement plan', phase: 'Assemble', schema: ASSEMBLE_SCHEMA })
+const asm = await agent(ASSEMBLE_PROMPT, { model: 'opus', effort: 'xhigh', label: 'assemble kit + placement plan', phase: 'Assemble', schema: ASSEMBLE_SCHEMA })
 if (!asm) return { error: 'the kit assembly did not finish' }
 const groups = (asm.placement || []).filter(g => g && g.pages && g.pages.length)
 log('Kit assembled: ' + (asm.sizes || '').slice(0, 200))
@@ -188,13 +188,13 @@ log('Placement groups: ' + groups.map(g => g.key + ' (' + g.pages.length + ')').
 if (args && args.stopAfter === 'assemble') return { asm, stopped: 'after assemble' }
 
 phase('Install')
-const inst = await agent(INSTALL_PROMPT(asm), { label: 'install kit, footer, bands', phase: 'Install', schema: REPORT_SCHEMA })
+const inst = await agent(INSTALL_PROMPT(asm), { model: 'opus', effort: 'xhigh', label: 'install kit, footer, bands', phase: 'Install', schema: REPORT_SCHEMA })
 if (!inst) return { error: 'the install did not finish', asm }
 
 phase('Place')
-const placed = (await parallel(groups.map(g => () => agent(placePrompt(g, asm, inst), { label: 'place: ' + g.key, phase: 'Place', schema: REPORT_SCHEMA }).then(r => r ? { key: g.key, pages: g.pages, ...r } : null)))).filter(Boolean)
+const placed = (await parallel(groups.map(g => () => agent(placePrompt(g, asm, inst), { model: 'opus', effort: 'xhigh', label: 'place: ' + g.key, phase: 'Place', schema: REPORT_SCHEMA }).then(r => r ? { key: g.key, pages: g.pages, ...r } : null)))).filter(Boolean)
 log('Placed on ' + placed.length + ' of ' + groups.length + ' groups')
 
 phase('Finish')
-const fin = await agent(FINISH_PROMPT(asm, inst, placed), { label: 'fold and verify', phase: 'Finish', schema: REPORT_SCHEMA })
+const fin = await agent(FINISH_PROMPT(asm, inst, placed), { model: 'opus', effort: 'xhigh', label: 'fold and verify', phase: 'Finish', schema: REPORT_SCHEMA })
 return { asm, inst, placed, fin }

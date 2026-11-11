@@ -190,28 +190,28 @@ Your final report: what you fixed, what you skipped and why, the CSS size, the l
 
 phase('Fold')
 const [triage, fold] = await parallel([
-  () => agent(TRIAGE_PROMPT, { label: 'triage reported issues', phase: 'Fold', schema: { type: 'object', properties: { worklistPath: { type: 'string' }, counts: { type: 'string' }, summary: { type: 'string' } }, required: ['worklistPath', 'summary'] } }),
-  () => agent(FOLD_PROMPT, { label: 'fold page styles', phase: 'Fold', schema: INT_SCHEMA }),
+  () => agent(TRIAGE_PROMPT, { model: 'opus', effort: 'xhigh', label: 'triage reported issues', phase: 'Fold', schema: { type: 'object', properties: { worklistPath: { type: 'string' }, counts: { type: 'string' }, summary: { type: 'string' } }, required: ['worklistPath', 'summary'] } }),
+  () => agent(FOLD_PROMPT, { model: 'opus', effort: 'xhigh', label: 'fold page styles', phase: 'Fold', schema: INT_SCHEMA }),
 ])
 if (!fold) return { error: 'the fold did not finish', triage }
 log('Fold: ' + (fold.foldComparison || fold.summary || '').slice(0, 240))
 log('Triage: ' + ((triage && (triage.counts || triage.summary)) || 'no result').slice(0, 240))
 
 phase('Shared fixes')
-const shared = await agent(SHARED_PROMPT(fold), { label: 'shared layer fixes', phase: 'Shared fixes', schema: INT_SCHEMA })
+const shared = await agent(SHARED_PROMPT(fold), { model: 'opus', effort: 'xhigh', label: 'shared layer fixes', phase: 'Shared fixes', schema: INT_SCHEMA })
 if (!shared) return { error: 'the shared-layer pass did not finish', triage, fold }
 
 phase('One site')
-const first = await agent(ONE_PROMPT(fold, shared), { label: 'consistency, assets, README', phase: 'One site', schema: INT_SCHEMA })
+const first = await agent(ONE_PROMPT(fold, shared), { model: 'opus', effort: 'xhigh', label: 'consistency, assets, README', phase: 'One site', schema: INT_SCHEMA })
 if (!first) return { error: 'the consistency pass did not finish', triage, fold, shared }
 log('Consistency pass done: ' + (first.summary || '').slice(0, 300))
 
 phase('Verify')
-const review = await agent(VERIFY_PROMPT({ fold, shared, consistency: first }), { label: 'verify integration', phase: 'Verify', schema: ISSUES_SCHEMA })
+const review = await agent(VERIFY_PROMPT({ fold, shared, consistency: first }), { model: 'opus', effort: 'xhigh', label: 'verify integration', phase: 'Verify', schema: ISSUES_SCHEMA })
 const issues = (review && review.issues) || []
 log('Verification: ' + (review ? review.verdict : 'no result') + ', ' + issues.length + ' issues (' + issues.filter(i => i.severity === 'blocker').length + ' blockers, ' + issues.filter(i => i.severity === 'major').length + ' major)')
 
 phase('Fix')
 let second = null
-if (issues.length) second = await agent(FIX_PROMPT({ shared, consistency: first }, issues), { label: 'integrator second pass', phase: 'Fix', schema: INT_SCHEMA })
+if (issues.length) second = await agent(FIX_PROMPT({ shared, consistency: first }, issues), { model: 'opus', effort: 'xhigh', label: 'integrator second pass', phase: 'Fix', schema: INT_SCHEMA })
 return { triage, fold, shared, first, review, second }
