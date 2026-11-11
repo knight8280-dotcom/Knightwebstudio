@@ -29,9 +29,9 @@ page are reached by link only.
 
 | URL | Contents |
 | --- | --- |
-| `/` | Home: the hero (shop front, an example text-back, the four prices), three services with their prices, one missed call followed through three automations, three projects, the four-step job ticket, the price board, who you work with |
+| `/` | Home: the hero (shop front, an example text-back, the four prices), three services with their prices and one line each, one missed call and the automations that follow it (short), three projects, the four steps in brief (job ticket), the price board, who you work with |
 | `/services/` | All nine services, each with its price: a service menu, then the six website services plus growth consulting, Google profile & reviews, and automation. Three are set out in full and six are rows that open |
-| `/consulting/` | Consulting & automation: where the week goes (worked example table), how each automation works step by step, the revenue & time calculator, setup prices, Advisor/Partner monthly plans, the Launch bundle, four steps and four questions |
+| `/consulting/` | Consulting & automation: where the week goes (worked example table), the four automations (one line and a picture each) and the Launch bundle, the revenue & time calculator, the four steps in brief with setup prices, Advisor/Partner monthly plans |
 | `/work/` | Three live projects as full case rows, the local one first |
 | `/process/` | Four-step "no surprises" explainer |
 | `/pricing/` | Four website packages as one comparison table, how you pay (the payment plan drawn to scale), add-ons, consulting and automation prices with the Launch bundle, four care plans |
@@ -43,6 +43,11 @@ page are reached by link only.
 | `/start/` | Landing page for ads, emails and posts: every service with its price, pricing tiers, selected work, the four steps, one call to action. No menu. See [Landing page](#8-landing-page-start) |
 | `/about/` | First-person About page for Christian Knight: background, how he works, selected work and contact details. The founder photo is intentionally left out for now — add one later beside the business card in the page head if wanted |
 | `/web-design-baton-rouge/`, `/web-design-gonzales/`, `/web-design-prairieville/`, `/web-design-denham-springs/` | Local service-area pages: unique copy per city, Smilys Softwash as local work, published prices, a short city FAQ, contact + booking CTAs. Linked from the footer's "Areas we serve" column |
+
+**Keep the copy short.** The pages were trimmed on purpose (November 2026): each
+page says what you get and what it costs, and leaves the how-exactly for the
+free call or the Growth Audit. Every price stays on its page. Before adding a
+paragraph, check whether it gives a visitor less reason to get in touch.
 
 Every page also carries the top strip (city and tap-to-call number), a
 header, a footer and (except `/contact/`, `/privacy/`, `/terms/`, the
