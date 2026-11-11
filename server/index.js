@@ -54,6 +54,8 @@ const app = express();
 // The static site calls this API cross-origin, so only these origins are
 // allowed. DOMAIN (optional, from .env) adds one extra origin, e.g. staging.
 const ALLOWED_ORIGINS = ["https://knightwebstudio.com", process.env.DOMAIN].filter(Boolean);
+// The site the customer returns to after paying (SITE_URL in .env overrides it, e.g. for staging).
+const SITE_URL = (process.env.SITE_URL || "https://knightwebstudio.com").replace(/\/$/, "");
 const LOCALHOST_ORIGIN = /^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/;
 
 app.use(
@@ -172,6 +174,9 @@ app.post("/api/create-checkout-session", async (req, res) => {
     phone_number_collection: { enabled: false },
     automatic_tax: { enabled: AUTOMATIC_TAX },
     integration_identifier: "custom_embedded_web_0001",
+    // Where Stripe sends the customer once the payment is done (and after a bank
+    // or wallet redirect). The embedded form cannot finish a payment without it.
+    return_url: `${SITE_URL}/checkout/success/?plan=${encodeURIComponent(planKey)}&session_id={CHECKOUT_SESSION_ID}`,
     mode,
     line_items: [{ price: plan.price, quantity: 1 }],
     metadata: { plan: planKey },

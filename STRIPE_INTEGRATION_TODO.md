@@ -34,6 +34,17 @@ static (GitHub Pages), so every Stripe call goes through a small server in
   key, delete `STRIPE_PLANS_JSON`, put the sandbox `pk_test_...` back in the
   page, and use a test-mode webhook secret.
 
+- **Fixed 11 November 2026: payments could not complete.** Every Checkout
+  Session was created without a `return_url`, which the embedded form needs
+  to finish a payment, so pressing Pay did nothing (the error was swallowed).
+  The server now sets `return_url` to `/checkout/success/?plan=<key>&session_id=…`
+  (override the site with `SITE_URL`), the page loads the current Stripe.js
+  build (`/endive/stripe.js`, no preview flag), and a failed confirmation now
+  shows a message beside the form instead of nothing.
+- **$1 test payment.** `/checkout/?plan=test-payment` (linked from nowhere)
+  charges $1 in live mode; refund it in the Dashboard afterwards. It comes
+  from `server/plans.live-extra.json`.
+
 ## What happens when someone pays
 
 1. The pricing page links to `/checkout/?plan=<key>`. The page POSTs the plan
