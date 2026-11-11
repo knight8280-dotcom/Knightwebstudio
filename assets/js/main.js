@@ -125,6 +125,15 @@
     });
   }
 
+  // A page restored from the back/forward cache keeps the theme it had when
+  // the visitor left; bring it in step with a choice made since.
+  window.addEventListener('pageshow', function (e) {
+    if (!e.persisted) return;
+    var t = null;
+    try { t = localStorage.getItem('theme'); } catch (err) { /* private mode */ }
+    if (t === 'dark' || t === 'light') applyTheme(t);
+  });
+
   /* ---------- Phone menu ----------
      Below 1100px the menu is a full sheet. While it is open the page behind
      it cannot scroll and is inert, so Tab stays inside the header. The sheet
@@ -168,7 +177,7 @@
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && nav.classList.contains('open')) {
         closeNav();
-        navToggle.focus();
+        navToggle.focus({ preventScroll: true });
       }
     });
 
@@ -203,9 +212,11 @@
 
   /* ---------- Reveal on scroll ---------- */
   var revealables = document.querySelectorAll('.reveal');
-  // Where the sticky phone bar (69px) covers the foot of the screen, a block
-  // has to clear it before it counts as seen.
-  var revealFoot = document.getElementById('mobile-cta') && window.matchMedia('(max-width: 1099.98px)').matches ? 96 : 24;
+  // A block shows as soon as any of it is above the foot of the screen. The
+  // foot is a share of the window, never a share of the block, so a block
+  // taller than a short (zoomed) window still shows. Where the sticky phone
+  // bar (69px) covers the foot, the foot is 12%: about 100px on a phone.
+  var revealFoot = document.getElementById('mobile-cta') && window.matchMedia('(max-width: 1099.98px)').matches ? 12 : 3;
 
   if (reduceMotion || !('IntersectionObserver' in window)) {
     revealables.forEach(function (el) { el.classList.add('visible'); });
@@ -218,7 +229,7 @@
         setTimeout(function () { entry.target.classList.add('visible'); }, Math.min(i, 3) * 40);
         revealObserver.unobserve(entry.target);
       });
-    }, { threshold: 0.08, rootMargin: '0px 0px -' + revealFoot + 'px 0px' });
+    }, { threshold: 0, rootMargin: '0px 0px -' + revealFoot + '% 0px' });
 
     revealables.forEach(function (el) { revealObserver.observe(el); });
   }
@@ -415,12 +426,14 @@
     // `form.elements` — `form.name` would resolve to the form's own name attribute.
     function mailtoFallback() {
       var f = form.elements;
+      var needs = Array.prototype.slice.call(form.querySelectorAll('input[name="services"]:checked')).map(function (c) { return c.value; }).join(', ');
       var subject = encodeURIComponent('Website enquiry from ' + f.name.value.trim());
       var body = encodeURIComponent(
         'Name: ' + f.name.value.trim() + '\n' +
         'Email: ' + f.email.value.trim() + '\n' +
         'Business: ' + f.company.value.trim() + '\n' +
-        'Package: ' + (f['package'].selectedOptions[0] || {}).text + '\n\n' +
+        'Package: ' + (f['package'].selectedOptions[0] || {}).text + '\n' +
+        (needs ? 'Needs: ' + needs + '\n' : '') + '\n' +
         f.message.value.trim()
       );
       return 'mailto:knightwebstudio1@gmail.com?subject=' + subject + '&body=' + body;

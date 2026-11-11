@@ -37,9 +37,12 @@
       if (t !== 'dark' && t !== 'light') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       d.setAttribute('data-theme', t);
     } catch (e) { /* private mode: the stylesheet follows the device instead */ }
-    // Scroll reveals hide blocks until main.js shows them. If that script has
-    // not started after four seconds (or the page has none), show everything.
-    setTimeout(function () { if (!window.kwsReady) d.classList.remove('js'); }, 4000);
+    // Scroll reveals hide blocks until main.js shows them. A deferred script has
+    // run, or failed, by DOMContentLoaded: if main.js has not started by then
+    // (or the page has none), the page is a no-script page. If it is still on
+    // its way after four seconds, show every block and leave the header alone.
+    document.addEventListener('DOMContentLoaded', function () { if (!window.kwsReady) d.classList.remove('js'); });
+    setTimeout(function () { if (!window.kwsReady) d.classList.add('show-all'); }, 4000);
   })();
 </script>
 <link rel="preload" href="/assets/fonts/fraunces-soft.woff2" as="font" type="font/woff2" crossorigin>
@@ -521,7 +524,7 @@
                 <li>Brand guidelines document</li>
                 <li>Social &amp; print assets</li>
               </ul>
-              <a class="more-link" href="/contact/?package=brand">Ask about a brand identity<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a>
+              <a class="more-link" href="/contact/?package=brand#contact-form">Ask about a brand identity<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a>
             </div>
           </details>
           <details class="faq-item">
@@ -614,7 +617,7 @@
               <li>Growth Audit &amp; action plan, $350</li>
               <li>Advisor and Partner monthly plans</li>
             </ul>
-            <a class="more-link" href="/contact/?package=audit">Book a Growth Audit, $350<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a>
+            <a class="more-link" href="/contact/?package=audit#contact-form">Book a Growth Audit, $350<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a>
           </div>
         </details>
         <details class="faq-item">
@@ -626,7 +629,7 @@
               <li>Apple Maps, Bing, Yelp and Facebook listings</li>
               <li>Review link, QR code and reply templates</li>
             </ul>
-            <a class="more-link" href="/contact/?package=gbp">Ask about Google profile &amp; reviews<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a>
+            <a class="more-link" href="/contact/?package=gbp#contact-form">Ask about Google profile &amp; reviews<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a>
           </div>
         </details>
       </div>

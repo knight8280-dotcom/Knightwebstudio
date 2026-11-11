@@ -37,9 +37,12 @@
       if (t !== 'dark' && t !== 'light') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       d.setAttribute('data-theme', t);
     } catch (e) { /* private mode: the stylesheet follows the device instead */ }
-    // Scroll reveals hide blocks until main.js shows them. If that script has
-    // not started after four seconds (or the page has none), show everything.
-    setTimeout(function () { if (!window.kwsReady) d.classList.remove('js'); }, 4000);
+    // Scroll reveals hide blocks until main.js shows them. A deferred script has
+    // run, or failed, by DOMContentLoaded: if main.js has not started by then
+    // (or the page has none), the page is a no-script page. If it is still on
+    // its way after four seconds, show every block and leave the header alone.
+    document.addEventListener('DOMContentLoaded', function () { if (!window.kwsReady) d.classList.remove('js'); });
+    setTimeout(function () { if (!window.kwsReady) d.classList.add('show-all'); }, 4000);
   })();
 </script>
 <link rel="preload" href="/assets/fonts/fraunces-soft.woff2" as="font" type="font/woff2" crossorigin>
@@ -468,7 +471,7 @@
   <!-- ===================== PAGE HEAD (commercial form): the town's name is the picture ===================== -->
   <section class="page-head">
     <div class="container">
-      <p class="eyebrow"><span><span class="nowrap">Areas we serve</span> <span class="nowrap">· Gonzales, LA</span></span></p>
+      <p class="eyebrow"><span><span class="nowrap">Areas we serve</span><span class="sep"> · </span><span class="nowrap">Gonzales, LA</span></span></p>
       <h1 class="city-title" style="--em:4.3"><span>Web design for</span> <span class="city-name"><span class="mark">Gonzales</span></span> <span>businesses</span></h1>
       <p class="lede">Custom websites for Ascension Parish businesses — fixed prices, launched in as little as <span class="nowrap">7–10 days</span>, from a studio just up <span class="nowrap">I-10</span> in Baton Rouge.</p>
       <div class="btn-row">

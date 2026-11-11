@@ -17,7 +17,8 @@
   }
   function pct(id) { return Math.min(num(id), 100) / 100; }
   function money(v) { return '$' + Math.round(v).toLocaleString('en-US'); }
-  function set(id, text) { var el = document.getElementById(id); if (el) el.textContent = text; }
+  // Only a changed figure is written, so the live estimate line is read out only when it changes
+  function set(id, text) { var el = document.getElementById(id); if (el && el.textContent !== text) el.textContent = text; }
 
   function update() {
     var job = num('c-job');

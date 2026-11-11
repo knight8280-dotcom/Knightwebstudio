@@ -19,8 +19,11 @@
 /* == 01 Fonts == */
 @font-face { font-family: "Fraunces"; src: url("/assets/fonts/fraunces-soft.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
 @font-face { font-family: "Figtree"; src: url("/assets/fonts/figtree.woff2") format("woff2"); font-weight: 300 900; font-display: swap; }
-/* Metric-matched fallbacks: the font swap does not move the page */
-@font-face { font-family: "Fraunces Fallback"; src: local("Georgia"), local("Noto Serif"); size-adjust: 101%; ascent-override: 97%; descent-override: 25%; }
+/* Metric-matched fallbacks: the font swap does not move the page.
+   Headings: Georgia Bold, named as a face so every engine picks the same file (Safari would take the bold for a 600
+   heading anyway), then Noto Serif for Android, each scaled to Fraunces' width */
+@font-face { font-family: "Fraunces Fallback"; src: local("Georgia Bold"), local("Georgia-Bold"); font-weight: 100 900; size-adjust: 94%; ascent-override: 104%; descent-override: 27%; }
+@font-face { font-family: "Fraunces Fallback Noto"; src: local("Noto Serif"); size-adjust: 101%; ascent-override: 97%; descent-override: 25%; }
 @font-face { font-family: "Figtree Fallback"; src: local("Arial"), local("Roboto"); size-adjust: 101%; ascent-override: 94%; descent-override: 25%; }
 
 /* == 02 Tokens == */
@@ -61,7 +64,7 @@
   --gold: #F0C369;
   --cream: #FFFBF2;
 
-  --font-display: "Fraunces", "Fraunces Fallback", Georgia, serif;
+  --font-display: "Fraunces", "Fraunces Fallback", "Fraunces Fallback Noto", Georgia, serif;
   --font-text: "Figtree", "Figtree Fallback", system-ui, Arial, sans-serif;
   --fs-figure: clamp(5rem, 2rem + 13vw, 8.75rem);
   --fs-price: clamp(2.5rem, 2rem + 2vw, 3.5rem);
@@ -244,6 +247,9 @@ a.price-strip .price-strip-note { color: var(--blue); text-decoration: underline
 .topbar-inner { display: flex; align-items: center; justify-content: space-between; gap: var(--s-3); min-height: var(--tap); }
 .topbar-place, .topbar-tel { display: inline-flex; align-items: center; gap: var(--s-2); margin: 0; color: var(--ink); }
 .topbar-tel, .header-tel { align-items: center; gap: var(--s-2); min-height: var(--tap); color: var(--ink); font-weight: 700; text-decoration: none; white-space: nowrap; }
+/* The strip is the link's height, so its focus ring is drawn inside it; side padding gives the ring room without moving the number */
+.topbar-tel { padding-inline: var(--s-2); margin-inline: calc(-1 * var(--s-2)); }
+.topbar-tel:focus-visible { outline-offset: calc(-1 * var(--focus-w)); }
 .topbar-more, .topbar-long { display: none; }
 
 .site-header { position: sticky; top: 0; z-index: var(--z-header); }
@@ -290,7 +296,7 @@ a.price-strip .price-strip-note { color: var(--blue); text-decoration: underline
   .nav-links li { border-bottom: var(--seam); }
   .nav-links a { display: flex; align-items: center; justify-content: space-between; min-height: var(--btn-h); padding: var(--s-1) var(--s-0); font: 600 var(--fs-h3)/1.2 var(--font-display); font-variation-settings: "SOFT" 100; letter-spacing: -.015em; }
   .nav-links a::after { content: ""; width: var(--s-2); height: var(--s-2); margin-right: var(--s-2); border: solid; border-width: var(--bold) var(--bold) 0 0; opacity: .45; transform: rotate(45deg); }
-  .nav-links [aria-current="page"] { color: var(--brick); }
+  .nav-links [aria-current="page"] { color: var(--brick); text-decoration: underline; text-decoration-thickness: var(--bold); text-underline-offset: .25em; }   /* not by colour alone */
   .nav-foot { display: grid; gap: var(--s-3); margin-top: auto; padding-top: var(--s-5); }
   .nav-mail { display: flex; align-items: center; justify-content: center; min-height: var(--tap); font-weight: 600; color: var(--ink-2); }
 }
@@ -385,7 +391,7 @@ a.price-strip .price-strip-note { color: var(--blue); text-decoration: underline
 .pills li { display: inline-flex; align-items: center; gap: var(--s-1); margin: 0 var(--s-2) var(--s-2) 0; padding: var(--s-1) var(--s-3); border-radius: var(--r-xs); background: var(--well); color: var(--ink); font-size: var(--fs-sm); font-weight: 600; vertical-align: top; }
 
 .note { max-width: var(--measure); margin: 0; padding-left: var(--s-4); border-left: var(--focus-w) solid var(--brick); font-size: var(--fs-sm); line-height: 1.5; color: var(--ink-2); }
-.note .flag { margin-right: var(--s-2); background: var(--brick-tint); color: var(--brick); }
+.note .flag { margin-right: var(--s-1); background: var(--brick-tint); color: var(--brick); }
 
 .stamp { display: inline-block; margin: 0; padding: var(--s-2) var(--s-4); border: var(--bold) solid; border-radius: var(--r-sm); outline: var(--hair) solid; outline-offset: var(--s-0); color: var(--brick); font-size: var(--fs-cap); letter-spacing: .14em; text-align: center; rotate: -6deg; }
 .seal { width: var(--seal, 8.25rem); height: var(--seal, 8.25rem); overflow: visible; }
@@ -456,6 +462,8 @@ a.price-strip .price-strip-note { color: var(--blue); text-decoration: underline
   .board-tiers li:first-child .tier { padding-left: var(--s-1); }
   .tier-amt { margin-block: var(--s-3); }
 }
+/* Four across, the payment line runs to three lines in some columns until 1280px: give it three in all, so the row stays level */
+@media (min-width: 1100px) and (max-width: 1279.98px) { .tier-plan { min-height: 4.5em; } }
 @media (hover: hover) { .tier:hover { background: var(--card); color: inherit; } }
 
 .pricelist { list-style: none; max-width: var(--maxw-text); border-top: var(--frame); }
@@ -639,7 +647,7 @@ a.price-strip .price-strip-note { color: var(--blue); text-decoration: underline
 .sheet::before { content: ""; position: absolute; inset: 0 0 auto; height: var(--s-3); border-radius: var(--r-xs) var(--r-xs) 0 0; background: repeating-linear-gradient(90deg, var(--brick) 0 var(--s-3), transparent 0 var(--s-5)); opacity: .85; }
 
 .appt { width: min(100%, 21rem); padding: var(--s-5); border-radius: var(--r-md); background: var(--cream); box-shadow: var(--shadow-3); }
-.appt-title { padding-block: var(--s-4) var(--s-3); font-size: var(--fs-title); line-height: 1.05; letter-spacing: -.015em; color: var(--ink); }
+.appt-title { padding-block: var(--s-4) var(--s-3); white-space: nowrap; font-size: var(--fs-title); line-height: 1.05; letter-spacing: -.015em; color: var(--ink); }
 .appt-lines div { display: flex; align-items: baseline; gap: var(--s-2); padding: var(--s-2) 0; font-size: var(--fs-sm); }
 .appt-lines dt { font-weight: 600; }
 .appt-lines dd { order: 2; color: var(--ink); font-weight: 700; }
@@ -779,6 +787,8 @@ a.price-strip .price-strip-note { color: var(--blue); text-decoration: underline
 .faq-body > :last-child { margin-bottom: 0; }
 
 .field { display: grid; align-content: start; gap: var(--s-2); margin-bottom: var(--s-5); }
+/* A fieldset is never a grid: Safari 16.4 to 18.1 sets a full-width legend in a grid fieldset one letter a line */
+fieldset.field { display: block; }
 .field-row { display: grid; gap: 0 var(--s-4); }
 .field :is(label, legend) { padding: 0; color: var(--ink); font-size: var(--fs-sm); font-weight: 700; }
 .field legend { margin-bottom: var(--s-2); }
@@ -798,6 +808,8 @@ a.price-strip .price-strip-note { color: var(--blue); text-decoration: underline
 .chip input { position: absolute; inset: 0; width: 100%; height: 100%; min-height: 0; margin: 0; opacity: 0; cursor: pointer; }
 .chip span { display: inline-flex; align-items: center; gap: var(--s-2); min-height: var(--tap); padding: var(--s-2) var(--s-4); border: var(--rule) solid var(--ctl); border-radius: var(--r-pill); background: var(--card); color: var(--ink); font-size: var(--fs-sm); font-weight: 600; }
 .chip :checked + span { border-color: var(--blue); background: var(--blue); color: var(--on-blue); }
+/* The tick takes its room from the padding, so a ticked chip keeps its width and nothing moves */
+.chip :checked + span { gap: var(--s-1); padding-inline: var(--s-1) calc(var(--s-4) - .3em); }
 .chip :checked + span::before { content: ""; width: .3em; height: .6em; margin: 0 var(--s-1) var(--s-0); border: solid; border-width: 0 var(--bold) var(--bold) 0; transform: rotate(40deg); }
 .chip :focus-visible + span { outline: var(--focus-w) solid var(--focus); outline-offset: var(--focus-off); }
 .hp { position: absolute; left: -200vw; }   .captcha-wrap { margin-bottom: var(--s-4); }
@@ -860,6 +872,14 @@ a.price-strip .price-strip-note { color: var(--blue); text-decoration: underline
   .mobile-cta .btn-primary span { white-space: pre; font-weight: 600; }
 }
 @media (max-width: 379.98px) { .mobile-cta .btn-primary span { display: none; } }
+/* A window under 300px tall (a laptop zoomed to 400%): the header and phone bar let go, so the reader keeps the whole
+   window. The header stays positioned (relative), so the phone menu still opens above the page. Phones held sideways
+   are taller than this and keep both. */
+@media (max-height: 300px) {
+  .site-header { position: relative; }
+  .mobile-cta, .mobile-cta.show { display: none; }
+  html { scroll-padding: var(--s-5) 0; }
+}
 
 .on-blue { background: var(--board); }
 .on-ink { background: var(--footer); }
@@ -877,6 +897,8 @@ a.price-strip .price-strip-note { color: var(--blue); text-decoration: underline
 
 .js .reveal .seq { opacity: 0; transform: translateY(var(--s-2)); transition: opacity var(--t) var(--ease), transform var(--t) var(--ease); transition-delay: calc(var(--n, 1) * var(--t-step)); }
 .js .reveal.visible .seq { opacity: 1; transform: none; }
+/* Set by the head script when main.js has not started after four seconds: show every block, leave the header alone */
+.show-all .reveal, .show-all .reveal .seq { opacity: 1; transform: none; }
 .js .reveal:not(.visible) .bubble-typing i { animation: none; }
 
 /* The crest builds once a visit, and on hover */
@@ -919,7 +941,13 @@ html:not(.js) :is(#theme-toggle, .nav-toggle, .nav-foot) { display: none; }
 }
 
 @media print {
-  .topbar, .site-header, .mobile-cta, .skip-link, .cta-band, .footer-skyline { display: none; }
+  .topbar, .mobile-cta, .skip-link, .cta-band, .footer-skyline { display: none; }
+  /* The header heads page one: crest, name and phone number, no menu or buttons */
+  .site-header { position: static; box-shadow: none; }
+  html .site-header .nav, .site-header .header-actions > :not(.header-tel) { display: none; }
+  .header-tel { display: inline-flex; opacity: 1; visibility: visible; }
+  /* Light text on a dark fill prints pale once the fill is dropped */
+  .btn-primary, .popular, .payplan-dep, .bubble-biz, .fig-n, .fig-legend li::before, .cal-day .new, .chip :checked + span { background: none; color: #000; border: 1px solid #000; box-shadow: none; }
   body, .on-blue, .on-ink { --ink: #000; --ink-2: #000; --ink-3: #333; --brick: #000; --blue: #000; --gold: #000; --card: #fff; --board: #fff; --footer: #fff; background: #fff; }
   .js .reveal, .js .reveal .seq { opacity: 1; transform: none; }
 }
@@ -1121,6 +1149,7 @@ html:not(.js) :is(#theme-toggle, .nav-toggle, .nav-foot) { display: none; }
 /* A lead service: its paragraphs keep to the reading measure (its 50px title needs the column); closer set on a phone */
 [data-page="services"] .svc-lead > p { max-width: var(--measure); }
 @media (max-width: 759.98px) { [data-page="services"] .svc-lead { --stack-gap: var(--s-3); } }
+@media (max-width: 599.98px) { [data-page="services"] .svc-lead > .btn { width: 100%; } }
 [data-page="services"] #care .grid { row-gap: var(--s-4); margin-top: var(--s-5); }
 [data-page="services"] #care p { max-width: var(--measure); margin: 0; }
 [data-page="services"] #care .more-link { justify-self: start; }
@@ -1187,11 +1216,11 @@ html:not(.js) :is(#theme-toggle, .nav-toggle, .nav-foot) { display: none; }
 /* The focus ring goes round the box and its unit */
 [data-page="consulting"] .field-unit:focus-within { outline: var(--focus-w) solid var(--focus); outline-offset: var(--s-0); border-radius: var(--r-sm); }
 [data-page="consulting"] .field-unit input:focus-visible { outline: none; }
-/* From 600px: one ruled row per group, boxes level */
+/* From 600px: one ruled row per group, boxes level. The group is a fieldset, so it wraps as flex, never grid (see fieldset.field) */
 @media (min-width: 600px) {
   [data-page="consulting"] .calc-inputs { grid-template-columns: minmax(0, 1fr); }
-  [data-page="consulting"] .calc-group { --pair: 11rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(var(--pair), 1fr)); gap: var(--s-4) var(--gap); }
-  [data-page="consulting"] .calc-group .field { grid-template-rows: 1fr auto; margin-bottom: 0; }
+  [data-page="consulting"] .calc-group { --pair: 11rem; display: flex; flex-wrap: wrap; gap: var(--s-4) var(--gap); }
+  [data-page="consulting"] .calc-group .field { flex: 1 1 var(--pair); grid-template-rows: 1fr auto; margin-bottom: 0; }
 }
 /* 980 to 1099px: too narrow for two columns */
 @media (min-width: 980px) and (max-width: 1099.98px) {
@@ -1267,6 +1296,9 @@ html:not(.js) :is(#theme-toggle, .nav-toggle, .nav-foot) { display: none; }
   [data-page="consulting"] #bundle .stack ~ .stack { align-self: start; }
   [data-page="consulting"] #bundle .receipt { grid-area: 1 / 2 / 3 / 3; }
 }
+
+/* The booking mock's tick line takes the numbered markers' width, so its three lines share a left edge */
+[data-page="consulting"] .cal-log .ico { flex: 0 0 var(--s-5); }
 
 /* == 22 Work: [data-page="work"], /work/ == */
 /* Work page only. Every rule is scoped with [data-page="work"].
@@ -1377,7 +1409,7 @@ html:not(.js) :is(#theme-toggle, .nav-toggle, .nav-foot) { display: none; }
 [data-page="pricing"] .payplan{margin-top:var(--s-5)}
 
 /* Consulting: four ruled groups */
-[data-page="pricing"] #consulting .section-head-split{align-items:start}
+[data-page="pricing"] :is(#consulting, #care) .section-head-split{align-items:start}
 [data-page="pricing"] .section-head .btn-row{margin-top:var(--s-5)}
 [data-page="pricing"] .price-groups{row-gap:var(--stack)}
 [data-page="pricing"] .bundle{display:grid;justify-items:center;gap:var(--s-6);padding-top:var(--s-6);border-top:var(--frame)}
@@ -1489,7 +1521,11 @@ html:not(.js) :is(#theme-toggle, .nav-toggle, .nav-foot) { display: none; }
 [data-page="city"] .city-name .mark::after { bottom: -.22em; animation: kws-brush var(--t-slow) var(--ease) var(--t) both; }
 /* A phone's head has one button, so the prices stay on the first screen (the enquiry button is in the closing band).
    From 1280 the intro sits left and the action right, on the line the columns below share. */
-@media (max-width: 599.98px) { [data-page="city"] .page-head .btn + .btn { display: none; } }
+/* Below 600px the eyebrow's two halves stack, without the dot, as on the home page */
+@media (max-width: 599.98px) {
+  [data-page="city"] .page-head .btn + .btn, [data-page="city"] .page-head .eyebrow .sep { display: none; }
+  [data-page="city"] .page-head .eyebrow .sep + span { display: block; }
+}
 @media (min-width: 1280px) {
   [data-page="city"] .page-head .container { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--gap-lg); align-items: start; }
   [data-page="city"] .page-head .eyebrow, [data-page="city"] .city-title { grid-column: 1 / -1; }
@@ -1546,7 +1582,7 @@ html:not(.js) :is(#theme-toggle, .nav-toggle, .nav-foot) { display: none; }
 
 /* hCaptcha's 303x78px box: room held, scaled on the smallest phones */
 .js [data-page="contact"] .h-captcha{min-height:calc(var(--btn-h)*1.5);line-height:0}
-@media (max-width:379.98px){[data-page="contact"] .h-captcha{transform:scale(.9);transform-origin:0 0}}
+@media (max-width:379.98px){[data-page="contact"] .h-captcha{transform:scale(.78);transform-origin:0 0}}
 
 /* Beside the ticket */
 [data-page="contact"] .steps{--no:var(--s-7)}
@@ -1592,6 +1628,9 @@ html:not(.js) :is(#theme-toggle, .nav-toggle, .nav-foot) { display: none; }
 [data-page="checkout"] .till-pay .status { max-width: var(--measure); margin: 0; }
 /* An error that is the page's main message is larger than a form field's error */
 [data-page="checkout"] .till-pay .status.error { padding-left: var(--s-4); border-left: var(--focus-w) solid var(--brick); font-size: var(--fs-body); font-weight: 600; line-height: 1.5; }
+/* Once loading has failed, Stripe's placeholder goes (nothing can bring the form back); while it loads, the line stands clear of it */
+[data-page="checkout"] #checkout-status.error:not([hidden]) ~ #checkout-form { display: none; }
+[data-page="checkout"] .till-pay .status:not([hidden], .error) { margin-bottom: var(--s-4); }
 [data-page="checkout"] .till-side .btn-row { justify-self: stretch; }
 
 /* With scripts off, the plain message in <noscript> stands in for "Loading" */
@@ -1617,7 +1656,9 @@ html:not(.js) :is(#theme-toggle, .nav-toggle, .nav-foot) { display: none; }
 @supports selector(:has(a)){
 /* No receipt under "No payment was taken" */
 [data-page="checkout-success"] .till:has(#success-retry:not([hidden])) .receipt{display:none}
-@media (min-width:600px) and (max-width:979.98px){[data-page="checkout-success"]:not(:has(#success-retry:not([hidden]))) .page-head h1{text-wrap:pretty}}
+/* The dash never starts a line: plain wrapping where pretty is missing, and a phone size small enough for "Payment confirmed —" */
+@media (max-width:979.98px){[data-page="checkout-success"]:not(:has(#success-retry:not([hidden]))) .page-head h1{text-wrap:wrap;text-wrap:pretty}}
+@media (max-width:599.98px){[data-page="checkout-success"]:not(:has(#success-retry:not([hidden]))) .page-head h1{font-size:calc(var(--fs-h1)*.76)}}
 }
 [data-page="checkout-success"] :is(.status,h2.eyebrow){margin:0}
 [data-page="checkout-success"] .steps{counter-reset:step}
@@ -1710,6 +1751,9 @@ html:not(.js) :is(#theme-toggle, .nav-toggle, .nav-foot) { display: none; }
 [data-page="start"] .write a { font-weight: 700; }
 [data-page="start"] :is(.write, .board-foot p) a { position: relative; }
 [data-page="start"] :is(.write, .board-foot p) a::after { content: ""; position: absolute; inset: calc(-1 * var(--s-4)) 0; }
+
+/* The stamp under the job ticket keeps clear of the closing band's scallops, as on /process/ */
+[data-page="start"] #process .ticket { margin-bottom: var(--s-5); }
 
 /* == 34 Not found: [data-page="notfound"], /404.html == */
 /* The 404 block, a call link and a short list of pages. Phone: one centred column. From 760px: scene left, words right. */

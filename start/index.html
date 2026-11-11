@@ -37,9 +37,12 @@
       if (t !== 'dark' && t !== 'light') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       d.setAttribute('data-theme', t);
     } catch (e) { /* private mode: the stylesheet follows the device instead */ }
-    // Scroll reveals hide blocks until main.js shows them. If that script has
-    // not started after four seconds (or the page has none), show everything.
-    setTimeout(function () { if (!window.kwsReady) d.classList.remove('js'); }, 4000);
+    // Scroll reveals hide blocks until main.js shows them. A deferred script has
+    // run, or failed, by DOMContentLoaded: if main.js has not started by then
+    // (or the page has none), the page is a no-script page. If it is still on
+    // its way after four seconds, show every block and leave the header alone.
+    document.addEventListener('DOMContentLoaded', function () { if (!window.kwsReady) d.classList.remove('js'); });
+    setTimeout(function () { if (!window.kwsReady) d.classList.add('show-all'); }, 4000);
   })();
 </script>
 <link rel="preload" href="/assets/fonts/fraunces-soft.woff2" as="font" type="font/woff2" crossorigin>
@@ -392,7 +395,7 @@
       <div class="head-copy">
         <p class="eyebrow">Christian Knight, Baton Rouge</p>
         <h1><span class="l">A website and</span> <span class="l">the systems that</span> <span class="l">bring in <span class="mark">customers</span></span></h1>
-        <p class="lede"><span class="l">Websites live in as little as <span class="nowrap">7–10 days</span>.</span> <span class="l">Fixed prices, and you own everything.</span></p>
+        <p class="lede"><span class="l">Websites live in as little as <span class="nowrap">7–10 days</span>, plus <span class="nowrap">missed-call text-back</span>, online booking and Google reviews.</span> <span class="l">Fixed prices, and you own everything.</span></p>
         <div class="btn-row">
           <a class="btn btn-primary btn-lg" href="/contact/" data-booking>Book a free 30-minute call</a>
           <a class="btn btn-lg" href="tel:+12252550837"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>Call (225) 255-0837</a>
@@ -542,13 +545,13 @@
             <span class="tier-name">Commerce</span>
             <span class="tier-amt">$8,000</span>
             <span class="tier-plan">Or $4,000 down, then about <span class="nowrap">$1,333/mo</span> <span class="nowrap">for 3 months</span></span>
-            <span class="tier-note">A full online store with payments and shipping, live in <span class="nowrap">4–6 weeks</span>, 6 months of support.</span>
+            <span class="tier-note">A full online store with payments and shipping, live in <span class="nowrap">4–6 weeks</span>, <span class="nowrap">6 months</span> of support.</span>
           </a></li>
         </ul>
         <ul class="pricelist" role="list">
           <li>
             <div class="pl-row"><h3 class="pl-name">Website add-ons</h3><span class="dots" aria-hidden="true"></span><span class="pl-price">$750 each</span></div>
-            <p>Booking and scheduling setup, and CRM or calendar sync.</p>
+            <p>Booking and scheduling setup, and sync with your CRM (your customer list) or calendar.</p>
           </li>
           <li>
             <div class="pl-row"><h3 class="pl-name">Launch bundle</h3><span class="dots" aria-hidden="true"></span><span class="pl-price">$3,000</span></div>

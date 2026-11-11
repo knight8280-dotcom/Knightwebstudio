@@ -39,9 +39,12 @@
       if (t !== 'dark' && t !== 'light') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       d.setAttribute('data-theme', t);
     } catch (e) { /* private mode: the stylesheet follows the device instead */ }
-    // Scroll reveals hide blocks until main.js shows them. If that script has
-    // not started after four seconds (or the page has none), show everything.
-    setTimeout(function () { if (!window.kwsReady) d.classList.remove('js'); }, 4000);
+    // Scroll reveals hide blocks until main.js shows them. A deferred script has
+    // run, or failed, by DOMContentLoaded: if main.js has not started by then
+    // (or the page has none), the page is a no-script page. If it is still on
+    // its way after four seconds, show every block and leave the header alone.
+    document.addEventListener('DOMContentLoaded', function () { if (!window.kwsReady) d.classList.remove('js'); });
+    setTimeout(function () { if (!window.kwsReady) d.classList.add('show-all'); }, 4000);
   })();
 </script>
 <link rel="preload" href="/assets/fonts/fraunces-soft.woff2" as="font" type="font/woff2" crossorigin>
@@ -427,7 +430,7 @@
       <div>
         <p class="eyebrow">Get in touch</p>
         <h1><span class="l">Tell us about</span> <span class="l">your project</span></h1>
-        <p class="lede">We'll come back within one business day with honest advice and a fixed price. No obligation, no sales sequence.</p>
+        <p class="lede">We'll come back within one business day with honest advice and a fixed price. No obligation, no pitch.</p>
       </div>
       <!-- Calling is as welcome as writing. The booking button shows only once a
            booking URL is set in assets/js/main.js (SITE_CONFIG.bookingUrl). -->

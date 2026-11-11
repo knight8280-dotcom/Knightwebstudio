@@ -37,9 +37,12 @@
       if (t !== 'dark' && t !== 'light') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       d.setAttribute('data-theme', t);
     } catch (e) { /* private mode: the stylesheet follows the device instead */ }
-    // Scroll reveals hide blocks until main.js shows them. If that script has
-    // not started after four seconds (or the page has none), show everything.
-    setTimeout(function () { if (!window.kwsReady) d.classList.remove('js'); }, 4000);
+    // Scroll reveals hide blocks until main.js shows them. A deferred script has
+    // run, or failed, by DOMContentLoaded: if main.js has not started by then
+    // (or the page has none), the page is a no-script page. If it is still on
+    // its way after four seconds, show every block and leave the header alone.
+    document.addEventListener('DOMContentLoaded', function () { if (!window.kwsReady) d.classList.remove('js'); });
+    setTimeout(function () { if (!window.kwsReady) d.classList.add('show-all'); }, 4000);
   })();
 </script>
 <link rel="preload" href="/assets/fonts/fraunces-soft.woff2" as="font" type="font/woff2" crossorigin>
@@ -406,7 +409,7 @@
       <div class="hero-copy">
         <p class="eyebrow"><span>Web studio &amp; consulting<span class="sep"> · </span><span class="nowrap">Baton Rouge, LA</span></span></p>
         <h1><span class="l">More customers,</span> <span class="l">fewer missed calls,</span> <span class="l"><span class="mark">hours back</span></span><span class="l"> every week</span></h1>
-        <p class="lede">We build your website and set up Google reviews, <span class="nowrap">missed-call text-back</span>, online booking and automatic <span class="nowrap">follow-up</span>.</p>
+        <p class="lede">We build your website and set up Google reviews, <span class="nowrap">missed-call text-back</span>, online booking and automatic <span class="nowrap">follow-up</span>. One local person in <span class="nowrap">Baton Rouge</span>. Fixed prices, and you own everything.</p>
         <div class="btn-row">
           <a class="btn btn-primary btn-lg" href="/contact/" data-booking>Book a free 30-minute call</a>
           <a class="btn btn-lg" href="#automation">See how it works</a>
@@ -583,7 +586,7 @@
         <span class="stop-pin" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span>
         <p class="bigfig-num display"><span class="label">About</span> <b>4</b> <span>hours a week, back</span></p>
         <p>Returning missed calls, booking by phone, chasing quotes, copying enquiries and asking for reviews add up to about 4 hours a week in a typical example, around 200 hours a year.</p>
-        <p class="note"><span class="flag">Example</span>These are example numbers to show the arithmetic, not a measurement of your business. An estimate, not a guarantee.</p>
+        <p class="note"><span class="flag">Example</span> These are example numbers to show the arithmetic, not a measurement of your business. An estimate, not a guarantee.</p>
         <p class="stop-links">
           <a class="more-link" href="/consulting/#calculator">Estimate what it's worth to you<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a>
           <a class="more-link" href="/consulting/#how">How each automation works<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a>
@@ -691,12 +694,12 @@
           <li>
             <span class="steps-no" aria-hidden="true">03</span>
             <div><h3>Build &amp; review</h3>
-            <p>Built on a private staging link you can check any time, with weekly progress notes.</p></div>
+            <p>Built on a private link you can check any time, with weekly progress notes.</p></div>
           </li>
           <li>
             <span class="steps-no" aria-hidden="true">04</span>
             <div><h3>Launch &amp; support</h3>
-            <p>Your domain (IONOS) and hosting (Netlify) set up in your name, plus analytics and redirects, then free support for 30 days to six months, by plan.</p></div>
+            <p>Your domain (IONOS) and hosting (Netlify) set up in your name, plus visitor stats and your old links pointed at the new pages, then free support for 30 days to six months, by plan.</p></div>
           </li>
         </ol>
         <p class="stamp" aria-hidden="true">You own<br>everything</p>
@@ -718,7 +721,7 @@
 
         <ul class="board-tiers" role="list">
           <li>
-            <a class="tier" href="/contact/?package=onepage">
+            <a class="tier" href="/pricing/#packages">
               <span class="tier-name">One-page</span>
               <span class="tier-amt">$1,000</span>
               <span class="tier-plan">Or $500 down, then about <span class="nowrap">$167/mo</span> for 3 months</span>
@@ -726,7 +729,7 @@
             </a>
           </li>
           <li>
-            <a class="tier" href="/checkout/?plan=starter-deposit">
+            <a class="tier" href="/pricing/#packages">
               <span class="tier-name">Starter</span>
               <span class="tier-amt">$2,000</span>
               <span class="tier-plan">Or $1,000 down, then about <span class="nowrap">$333/mo</span> for 3 months</span>
@@ -734,7 +737,7 @@
             </a>
           </li>
           <li>
-            <a class="tier" href="/checkout/?plan=business-deposit">
+            <a class="tier" href="/pricing/#packages">
               <span class="tier-name">Business</span>
               <span class="tier-amt">$4,000</span>
               <span class="tier-plan">Or $2,000 down, then about <span class="nowrap">$667/mo</span> for 3 months</span>
@@ -742,7 +745,7 @@
             </a>
           </li>
           <li>
-            <a class="tier" href="/checkout/?plan=commerce-deposit">
+            <a class="tier" href="/pricing/#packages">
               <span class="tier-name">Commerce</span>
               <span class="tier-amt">$8,000</span>
               <span class="tier-plan">Or $4,000 down, then about <span class="nowrap">$1,333/mo</span> for 3 months</span>
@@ -752,7 +755,7 @@
         </ul>
 
         <dl class="board-extras">
-          <div><dt>Care plans, to keep a site running</dt><dd>$125, $300, $600 or <span class="nowrap">$1,000/mo</span></dd></div>
+          <div><dt>Care plans, if you want one</dt><dd>$125, $300, $600 or <span class="nowrap">$1,000/mo</span></dd></div>
           <div><dt>Automation setups</dt><dd>$750 or $1,500</dd></div>
           <div><dt>A Growth Audit</dt><dd>$350</dd></div>
         </dl>
