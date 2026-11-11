@@ -21,7 +21,8 @@ const apply = (v, keep) => {
 	const was = off();
 	v = !!v;
 	v ? html.setAttribute('data-motion', 'off') : html.removeAttribute('data-motion');
-	if (keep) try { localStorage.setItem(KEY, v ? 'off' : 'on'); } catch (e) {}
+	// a choice that matches the device's own setting is forgotten, so turning Reduce Motion on later still wins
+	if (keep) try { v === reduce.matches ? localStorage.removeItem(KEY) : localStorage.setItem(KEY, v ? 'off' : 'on'); } catch (e) {}
 	(btns = btns.filter(b => b.isConnected)).forEach(label);
 	if (was !== v) doc.dispatchEvent(new CustomEvent('kws:motion', { detail: { off: v } }));
 };

@@ -37,6 +37,8 @@
       if (t !== 'dark' && t !== 'light') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       d.setAttribute('data-theme', t);
     } catch (e) { /* private mode: the stylesheet follows the device instead */ }
+    // A visitor who paused the motion gets a still page from the first frame, also where shader.js is not loaded
+    try { if (localStorage.getItem('kws-motion') === 'off') d.setAttribute('data-motion', 'off'); } catch (e) {}
     // Scroll reveals hide blocks until main.js shows them. A deferred script has
     // run, or failed, by DOMContentLoaded: if main.js has not started by then
     // (or the page has none), the page is a no-script page. If it is still on
@@ -436,7 +438,7 @@
         <p class="section-sub">Take one, or hand us the whole thing.</p>
       </header>
 
-      <section class="kws-arc" data-kws="arc" data-noun="service" aria-labelledby="offer-title">
+      <section class="kws-arc" data-kws="arc" data-from="760" data-noun="service" aria-labelledby="offer-title">
         <ul class="kws-arc-list">
           <li class="kws-arc-item">
             <div class="kws-arc-tile" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="15" rx="2"/><path d="M3 9h18M6.5 13h6M6.5 16h4"/></svg>Websites</div>
@@ -647,9 +649,9 @@
         <p class="kws-close-text">Thirty minutes, no pitch. You leave with a plan and a fixed price, whether or not <span class="nowrap">you hire us.</span><br><strong>You work with Christian Knight, the founder, <span class="nowrap">based in Baton Rouge.</span></strong></p>
       </div>
       <div class="kws-appt on-paper">
-        <p class="kws-appt-head"><span>Appointment card</span><span>No. 01</span></p>
-        <p class="kws-appt-title">Discovery call</p>
-        <dl>
+        <p class="kws-appt-head" aria-hidden="true"><span>Appointment card</span><span>No. 01</span></p>
+        <p class="kws-appt-title" aria-hidden="true">Discovery call</p>
+        <dl aria-hidden="true">
           <div><dt>Cost</dt><dd>Free</dd></div>
           <div><dt>Length</dt><dd>30 minutes</dd></div>
           <div><dt>Sales pitch</dt><dd>None</dd></div>

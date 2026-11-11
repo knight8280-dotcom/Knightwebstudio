@@ -41,7 +41,13 @@ const still = () => calm.matches || H.dataset.motion === 'off',
 			return end;
 		};
 		KWS[name] = { mount };
-		boots.push(() => D.querySelectorAll(`[data-kws="${name}"]`).forEach(el => mount(el)));
+		// data-from="760": only from that window width up; below it the plain list stays, and it follows the window
+		boots.push(() => D.querySelectorAll(`[data-kws="${name}"]`).forEach(el => {
+			const q = el.dataset.from && matchMedia(`(min-width: ${el.dataset.from}px)`);
+			if (!q) return mount(el);
+			const go = () => q.matches ? mount(el) : (live.get(el) || none)();
+			q.addEventListener('change', go); go();
+		}));
 	};
 
 // == Arc focus carousel (signs on the top of a wheel) and spotlight carousel (framed cards, the middle one lit).
@@ -177,7 +183,7 @@ const flat = (name, P, part) => kit(name, (el, opt) => {
 		const i = arts.indexOf(e.target.closest('.' + c(part))), a = i > -1 && caps[i].querySelector('a');
 		if (moved) { moved = 0; e.preventDefault(); e.stopPropagation(); }
 		else if (i !== cur) i > -1 && to(i);
-		else if (a) e.ctrlKey || e.metaKey ? open(a.href) : a.click();
+		else if (a) e.ctrlKey || e.metaKey ? open(a.href, '_blank', 'noopener') : a.click();
 	}, 2);
 	on(list, 'focusin', e => {
 		const i = items.indexOf(e.target.closest('li'));
@@ -548,6 +554,6 @@ const each = what => () => D.querySelectorAll('.kws-folders--stack').forEach(el 
 addEventListener('hashchange', each('hash'));
 phone.addEventListener('change', each('sync'));
 
-const start = () => boots.forEach(f => f());
+const start = () => boots.forEach(f => { try { f(); } catch (e) { setTimeout(() => { throw e; }); } });
 D.readyState === 'loading' ? D.addEventListener('DOMContentLoaded', start) : start();
 })();
