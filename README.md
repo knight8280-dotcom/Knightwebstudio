@@ -38,7 +38,7 @@ page are reached by link only.
 | `/faq/` | Fourteen answers, with FAQPage schema |
 | `/contact/` | Enquiry form, spam honeypot, saved drafts, "what happens next" |
 | `/privacy/` | Plain-English privacy notice — see [Privacy page](#7-privacy-page) |
-| `/terms/` | Plain-English terms: 50/50 payments, the payment plan, 7-day invoices, card/ACH via Stripe or check, late interest, revision rounds per package, who writes the copy, care plan cancellation. The signed project agreement controls the details (cancellation fees are deliberately not listed here) |
+| `/terms/` | Plain-English terms: the three payment options (in full, 50/50, or the payment plan), 7-day invoices, card only via Stripe, late interest, revision rounds per package, who writes the copy, care plan cancellation. The signed project agreement controls the details (cancellation fees are deliberately not listed here) |
 | `/pay/` | Pay online, for clients who have agreed a project: the three deposits and four care plans, each with its checkout (or request) button. Not in the menu or the sitemap (noindex, like checkout); linked from the footer and the contact page |
 | `/checkout/`, `/checkout/success/` | Stripe embedded checkout for deposits and care plans, and the confirmation page it returns to. See `STRIPE_INTEGRATION_TODO.md` |
 | `/start/` | Landing page for ads, emails and posts: every service with its price, pricing tiers, selected work, the four steps, one call to action. No menu. See [Landing page](#8-landing-page-start) |
@@ -715,14 +715,21 @@ out of it.
 
 **One-page** ($1,000, added October 2026) is a single page with a contact
 form, 1 revision round, client-supplied text, 14 days of support, live in as
-little as 7 days. It exists so price-sensitive prospects have a yes; its
-button goes to `/contact/?package=onepage` because there is no Stripe deposit
-price for it yet. **Basic care** ($125/month, added October 2026) suits
-one-page and Starter sites: 1 small change a month within 5 business days,
-client keeps domain and hosting renewals current; its button goes to
-`/contact/?package=care` for the same reason. Add `onepage-deposit` and
-`basic-care` to Stripe, `STRIPE_PLANS_JSON` and `checkout/index.html`'s
-`PLAN_DETAILS` to sell them through checkout.
+little as 7 days. It exists so price-sensitive prospects have a yes.
+**Basic care** ($125/month, added October 2026) suits one-page and Starter
+sites: 1 small change a month within 5 business days, client keeps domain and
+hosting renewals current. Since 11 November 2026 both sell through checkout
+(`onepage-deposit`, `onepage-full`, `onepage-final`, `basic-care`, from
+`server/plans.live-extra.json`).
+
+**Three ways to pay** (11 November 2026): every package can be paid in full
+up front (`<package>-full`), 50% to start and 50% at launch
+(`<package>-deposit`, then `<package>-final`), or on the payment plan (the
+deposit, then up to 3 monthly payments, each emailed to the client as its own
+Stripe card link). `/pay/` lists every option; `/pricing/` shows the deposit
+and pay-in-full buttons. The site says card only; which methods Stripe's form
+shows is set in the Stripe Dashboard (Settings → Payment methods), where
+everything except Cards, Apple Pay and Google Pay should be switched off.
 
 Every package also shows the payment plan from the terms: 50% down,
 then about a third of the rest each month for 3 months (Starter: $1,000

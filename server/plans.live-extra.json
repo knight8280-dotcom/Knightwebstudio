@@ -1,4 +1,14 @@
 {
-  "_comment": "Extra LIVE-mode plans, added on top of STRIPE_PLANS_JSON (the live list kept in Render). Read only when STRIPE_PLANS_JSON is set, so test mode never sees these live Price IDs, and never replaces a key that list already has. Price IDs are not secret. test-payment: a $1 private test of the checkout (Stripe product prod_VbmWv8R1lnHTSR), linked from nowhere on the site; open /checkout/?plan=test-payment, pay, then refund it in the Stripe Dashboard. Delete the entry to switch it off.",
-  "test-payment": { "price": "price_1UaYxsLOmAZAVClwqvuBLKul", "mode": "payment", "label": "Test payment" }
+  "_comment": "Extra LIVE-mode plans, added on top of STRIPE_PLANS_JSON (the live list kept in Render). Read only when STRIPE_PLANS_JSON is set, so test mode never sees these live Price IDs, and never replaces a key that list already has. Price IDs are not secret. Every package can be paid three ways: <package>-full (the whole price up front), <package>-deposit (50% to start; also the first payment of a payment plan) and <package>-final (the other 50% at launch). Payment plan monthly payments are not sold here: each one is emailed to the client as its own Stripe card link. test-payment: a $1 private test of the checkout (Stripe product prod_VbmWv8R1lnHTSR), linked from nowhere on the site; open /checkout/?plan=test-payment, pay, then refund it in the Stripe Dashboard. Delete the entry to switch it off.",
+  "onepage-full":     { "price": "price_1UaeItLOmAZAVClwCL3mWznO", "mode": "payment",      "label": "One-page Website, paid in full" },
+  "onepage-deposit":  { "price": "price_1UaeJ5LOmAZAVClw4hw7EYlB", "mode": "payment",      "label": "One-page Website 50% Deposit" },
+  "onepage-final":    { "price": "price_1UaeJ8LOmAZAVClwRPmpo0ek", "mode": "payment",      "label": "One-page Website final 50% at launch" },
+  "starter-full":     { "price": "price_1UKp1pLOmAZAVClw2YtF9eoZ", "mode": "payment",      "label": "Starter Website, paid in full" },
+  "starter-final":    { "price": "price_1UKp1pLOmAZAVClw0tiD3try", "mode": "payment",      "label": "Starter Website final 50% at launch" },
+  "business-full":    { "price": "price_1UKp1pLOmAZAVClwzFsXDUYB", "mode": "payment",      "label": "Business Website, paid in full" },
+  "business-final":   { "price": "price_1UKp1pLOmAZAVClwc8YbQb0O", "mode": "payment",      "label": "Business Website final 50% at launch" },
+  "commerce-full":    { "price": "price_1UKp1uLOmAZAVClwYDwM8fNX", "mode": "payment",      "label": "Commerce Website, paid in full" },
+  "commerce-final":   { "price": "price_1UKp1uLOmAZAVClwkVRjc917", "mode": "payment",      "label": "Commerce Website final 50% at launch" },
+  "basic-care":       { "price": "price_1UaeJCLOmAZAVClwczUJAD95", "mode": "subscription", "label": "Basic care plan" },
+  "test-payment":     { "price": "price_1UaYxsLOmAZAVClwqvuBLKul", "mode": "payment",      "label": "Test payment" }
 }

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Pay online — KnightWebstudio</title>
-<meta name="description" content="Pay your KnightWebstudio project deposit or start your care plan online, through Stripe's secure checkout.">
+<meta name="description" content="Pay for your KnightWebstudio project in full, by 50% deposit or at launch, or start your care plan, by card through Stripe's secure checkout.">
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#F6F0E4">
 <link rel="canonical" href="https://knightwebstudio.com/pay/">
@@ -127,8 +127,8 @@
   <section class="page-head">
     <div class="container">
       <p class="eyebrow">Pay online</p>
-      <h1>Pay your deposit or start your care plan</h1>
-      <p class="lede">For clients who have agreed a project with us. Payments are processed securely by Stripe — we never see or store your card or bank details.</p>
+      <h1>Pay for your project or start your care plan</h1>
+      <p class="lede">For clients who have agreed a project with us. We take card payments only (credit or debit; Apple Pay and Google Pay work too), processed securely by Stripe — we never see or store your card details.</p>
     </div>
   </section>
 
@@ -136,29 +136,79 @@
     <div class="container">
       <div class="grid grid-2 pay-groups">
 
-        <div class="stack" id="deposits">
-          <h2 class="h3">Project deposits</h2>
-          <p>50% up front starts the build.</p>
-          <ul class="pricelist" role="list">
+        <div class="stack">
+          <div class="stack" id="deposits">
+            <h2 class="h3">Start your project</h2>
+            <p>Pay the way your agreement says: the full price up front, or a 50% deposit to start. The deposit is also the first payment of a payment plan.</p>
+            <ul class="pricelist" role="list">
+            <li>
+              <div class="pl-row"><h3 class="pl-name">One-page website</h3><span class="dots" aria-hidden="true"></span><span class="pl-price">$1,000</span></div>
+              <div class="btn-row pay-choice">
+                <a class="btn btn-primary" href="/checkout/?plan=onepage-deposit" aria-label="Pay 50% deposit: One-page website, $500">Pay 50% deposit —&nbsp;$500</a>
+                <a class="btn" href="/checkout/?plan=onepage-full" aria-label="Pay in full: One-page website, $1,000">Pay in full —&nbsp;$1,000</a>
+              </div>
+            </li>
             <li>
               <div class="pl-row"><h3 class="pl-name">Starter website</h3><span class="dots" aria-hidden="true"></span><span class="pl-price">$2,000</span></div>
-              <a class="btn btn-primary btn-block" href="/checkout/?plan=starter-deposit">Pay 50% deposit —&nbsp;$1,000</a>
+              <div class="btn-row pay-choice">
+                <a class="btn btn-primary" href="/checkout/?plan=starter-deposit" aria-label="Pay 50% deposit: Starter website, $1,000">Pay 50% deposit —&nbsp;$1,000</a>
+                <a class="btn" href="/checkout/?plan=starter-full" aria-label="Pay in full: Starter website, $2,000">Pay in full —&nbsp;$2,000</a>
+              </div>
             </li>
             <li>
               <div class="pl-row"><h3 class="pl-name">Business website</h3><span class="dots" aria-hidden="true"></span><span class="pl-price">$4,000</span></div>
-              <a class="btn btn-primary btn-block" href="/checkout/?plan=business-deposit">Pay 50% deposit —&nbsp;$2,000</a>
+              <div class="btn-row pay-choice">
+                <a class="btn btn-primary" href="/checkout/?plan=business-deposit" aria-label="Pay 50% deposit: Business website, $2,000">Pay 50% deposit —&nbsp;$2,000</a>
+                <a class="btn" href="/checkout/?plan=business-full" aria-label="Pay in full: Business website, $4,000">Pay in full —&nbsp;$4,000</a>
+              </div>
             </li>
             <li>
               <div class="pl-row"><h3 class="pl-name">Commerce website</h3><span class="dots" aria-hidden="true"></span><span class="pl-price">$8,000</span></div>
-              <a class="btn btn-primary btn-block" href="/checkout/?plan=commerce-deposit">Pay 50% deposit —&nbsp;$4,000</a>
+              <div class="btn-row pay-choice">
+                <a class="btn btn-primary" href="/checkout/?plan=commerce-deposit" aria-label="Pay 50% deposit: Commerce website, $4,000">Pay 50% deposit —&nbsp;$4,000</a>
+                <a class="btn" href="/checkout/?plan=commerce-full" aria-label="Pay in full: Commerce website, $8,000">Pay in full —&nbsp;$8,000</a>
+              </div>
             </li>
-          </ul>
+            </ul>
+          </div>
+
+          <div class="stack" id="final">
+            <h2 class="h3">Final payment at launch</h2>
+            <p>Paid a 50% deposit and not on a payment plan? The other 50% is due when your site is finished.</p>
+            <ul class="pricelist" role="list">
+            <li>
+              <div class="pl-row"><h3 class="pl-name">One-page website</h3><span class="dots" aria-hidden="true"></span><span class="pl-price">$500</span></div>
+              <a class="btn btn-block" href="/checkout/?plan=onepage-final" aria-label="Pay final 50%: One-page website, $500">Pay final 50% —&nbsp;$500</a>
+            </li>
+            <li>
+              <div class="pl-row"><h3 class="pl-name">Starter website</h3><span class="dots" aria-hidden="true"></span><span class="pl-price">$1,000</span></div>
+              <a class="btn btn-block" href="/checkout/?plan=starter-final" aria-label="Pay final 50%: Starter website, $1,000">Pay final 50% —&nbsp;$1,000</a>
+            </li>
+            <li>
+              <div class="pl-row"><h3 class="pl-name">Business website</h3><span class="dots" aria-hidden="true"></span><span class="pl-price">$2,000</span></div>
+              <a class="btn btn-block" href="/checkout/?plan=business-final" aria-label="Pay final 50%: Business website, $2,000">Pay final 50% —&nbsp;$2,000</a>
+            </li>
+            <li>
+              <div class="pl-row"><h3 class="pl-name">Commerce website</h3><span class="dots" aria-hidden="true"></span><span class="pl-price">$4,000</span></div>
+              <a class="btn btn-block" href="/checkout/?plan=commerce-final" aria-label="Pay final 50%: Commerce website, $4,000">Pay final 50% —&nbsp;$4,000</a>
+            </li>
+            </ul>
+          </div>
+
+          <div class="stack" id="plan">
+            <h2 class="h3">Payment plan</h2>
+            <p>Start with the 50% deposit above. The rest comes in up to 3 equal monthly payments, the first one month after your deposit. We email you a secure card link for each one, so there's nothing to pay on this page.</p>
+          </div>
         </div>
 
         <div class="stack" id="care">
           <h2 class="h3">Care plans</h2>
-          <p>Monthly, no long-term contract: cancel or change with 10 days' written notice, no&nbsp;fee.</p>
+          <p>Monthly, billed to your card, with no long-term contract: cancel or change with 10 days' written notice, no&nbsp;fee.</p>
           <ul class="pricelist" role="list">
+            <li>
+              <div class="pl-row"><h3 class="pl-name">Basic care</h3><span class="dots" aria-hidden="true"></span><span class="pl-price">$125/mo</span></div>
+              <a class="btn btn-block" href="/checkout/?plan=basic-care" aria-label="Start plan: Basic care, $125 a month">Start plan</a>
+            </li>
             <li>
               <div class="pl-row"><h3 class="pl-name">Essential care</h3><span class="dots" aria-hidden="true"></span><span class="pl-price">$300/mo</span></div>
               <a class="btn btn-block" href="/checkout/?plan=essential-care" aria-label="Start plan: Essential care, $300 a month">Start plan</a>
@@ -171,15 +221,11 @@
               <div class="pl-row"><h3 class="pl-name">Commerce care</h3><span class="dots" aria-hidden="true"></span><span class="pl-price">$1,000/mo</span></div>
               <a class="btn btn-block" href="/checkout/?plan=commerce-care" aria-label="Start plan: Commerce care, $1,000 a month">Start plan</a>
             </li>
-            <li>
-              <div class="pl-row"><h3 class="pl-name">Basic care</h3><span class="dots" aria-hidden="true"></span><span class="pl-price">$125/mo</span></div>
-              <a class="btn btn-block" href="/contact/?package=care#contact-form" aria-label="Request plan: Basic care, $125 a month">Request plan</a>
-            </li>
           </ul>
         </div>
 
       </div>
-      <p class="fine space-above">Paying for something not listed here, or by check? <a href="/contact/">Get in touch</a> or call <a href="tel:+12252550837">(225)&nbsp;255-0837</a>. Not sure which package is yours? <a href="/pricing/">See the full prices</a>.</p>
+      <p class="fine space-above">Paying for something not listed here? <a href="/contact/">Get in touch</a> or call <a href="tel:+12252550837">(225)&nbsp;255-0837</a>. Not sure which package is yours? <a href="/pricing/">See the full prices</a> or the <a href="/terms/">payment terms</a>.</p>
     </div>
   </section>
 
