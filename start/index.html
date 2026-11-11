@@ -43,11 +43,17 @@
     // its way after four seconds, show every block and leave the header alone.
     document.addEventListener('DOMContentLoaded', function () { if (!window.kwsReady) d.classList.remove('js'); });
     setTimeout(function () { if (!window.kwsReady) d.classList.add('show-all'); }, 4000);
+    // The motion kit: hold each carousel's place until motion.js upgrades it, and give the plain lists back if it
+    // never comes (a page without motion.js drops the classes at load and after four seconds)
+    d.classList.add('kws-js', 'kws-hold');
+    addEventListener('load', function () { if (!(window.KWS && KWS.folders)) d.classList.remove('kws-js'); });
+    setTimeout(function () { if (!(window.KWS && KWS.folders)) d.classList.remove('kws-js'); d.classList.remove('kws-hold'); }, 4000);
   })();
 </script>
 <link rel="preload" href="/assets/fonts/fraunces-soft.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/figtree.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/styles.css?v=3">
+<link rel="stylesheet" href="/assets/css/styles.css?v=4">
+<link rel="stylesheet" href="/assets/css/motion.css?v=4">
 
 <script type="application/ld+json">
 {
@@ -361,6 +367,8 @@
       <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
       <span><span class="topbar-more">Based in </span>Baton Rouge<span class="topbar-state">, Louisiana</span><span class="topbar-long"> · We meet in person anywhere in Greater Baton Rouge</span></span>
     </p>
+    <!-- The motion pause control: shader.js shows it (a pill from 1100px, a round button below it) -->
+    <button class="kws-motion" data-kws="motion" type="button" hidden><svg class="kws-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg><svg class="kws-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg><span class="kws-motion-label"></span></button>
     <a class="topbar-tel" href="tel:+12252550837">
       <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
       <span class="sr-only">Call </span>(225) 255-0837
@@ -390,7 +398,8 @@
 <main id="main">
 
   <!-- ===================== HEAD: who this is, what it costs, one thumb to call ===================== -->
-  <section class="page-head">
+  <section class="page-head kws-shader-host">
+    <div class="kws-shader" data-kws="shader" data-shader="wash" aria-hidden="true"></div>
     <div class="container page-head-split">
       <div class="head-copy">
         <p class="eyebrow">Christian Knight, Baton Rouge</p>
@@ -417,63 +426,92 @@
     </div>
   </section>
 
-  <!-- ===================== THE MENU: nine services, each with its price ===================== -->
+  <!-- ===================== THE MENU: nine services on the service wheel (the kit's arc carousel) =====================
+       Nine enamel signs; the one at the top is lit, its name, price and line beneath. Script off: the nine as a list,
+       every price showing. No links in the captions: this page has no menu on purpose. Same words as /services/. -->
   <section class="section section-first" id="offer">
     <div class="container">
       <header class="section-head section-head-split">
-        <h2>Nine services, one studio</h2>
+        <h2 id="offer-title">Nine services, one studio</h2>
         <p class="section-sub">Take one, or hand us the whole thing.</p>
       </header>
 
-      <div class="grid grid-2 menu">
-        <div>
-          <h3 class="pl-group">Your website</h3>
-          <ul class="pricelist" role="list">
-            <li>
-              <div class="pl-row pl-long"><h4 class="pl-name">Website design &amp; build</h4><span class="dots" aria-hidden="true"></span><span class="pl-price">$1,000, $2,000 or $4,000</span></div>
-              <p>A custom site, built to bring in enquiries.</p>
-            </li>
-            <li>
-              <div class="pl-row"><h4 class="pl-name">E-commerce stores</h4><span class="dots" aria-hidden="true"></span><span class="pl-price">$8,000</span></div>
-              <p>Sell online, with payments and shipping set up.</p>
-            </li>
-            <li>
-              <div class="pl-row pl-long"><h4 class="pl-name">SEO &amp; performance</h4><span class="dots" aria-hidden="true"></span><span class="pl-price">in every build</span></div>
-              <p>Found on Google, and fast on phones.</p>
-            </li>
-            <li>
-              <div class="pl-row pl-long"><h4 class="pl-name">Care &amp; maintenance</h4><span class="dots" aria-hidden="true"></span><span class="pl-price">$125, $300, $600 or $1,000/mo</span></div>
-              <p>Backups, updates and the changes you ask for.</p>
-            </li>
-            <li>
-              <div class="pl-row pl-long"><h4 class="pl-name">Redesigns &amp; rescues</h4><span class="dots" aria-hidden="true"></span><span class="pl-price">priced as a new site</span></div>
-              <p>A dated site rebuilt, your rankings kept.</p>
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <h3 class="pl-group">Beyond your website</h3>
-          <ul class="pricelist" role="list">
-            <li>
-              <div class="pl-row"><h4 class="pl-name">Brand &amp; identity</h4><span class="dots" aria-hidden="true"></span><span class="pl-price">$1,500</span></div>
-              <p>A logo, colours and type that match.</p>
-            </li>
-            <li>
-              <div class="pl-row pl-long"><h4 class="pl-name">Growth consulting</h4><span class="dots" aria-hidden="true"></span><span class="pl-price">$350 audit · $500 or $1,000/mo</span></div>
-              <p>A written plan, then monthly help.</p>
-            </li>
-            <li>
-              <div class="pl-row"><h4 class="pl-name">Google profile &amp; reviews</h4><span class="dots" aria-hidden="true"></span><span class="pl-price">$500</span></div>
-              <p>Your profile done right, reviews made easy.</p>
-            </li>
-            <li>
-              <div class="pl-row pl-long"><h4 class="pl-name">Automation</h4><span class="dots" aria-hidden="true"></span><span class="pl-price">$750 or $1,500 per setup</span></div>
-              <p>Missed calls texted back, booking, follow-up.</p>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <section class="kws-arc" data-kws="arc" data-noun="service" aria-labelledby="offer-title">
+        <ul class="kws-arc-list">
+          <li class="kws-arc-item">
+            <div class="kws-arc-tile" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="15" rx="2"/><path d="M3 9h18M6.5 13h6M6.5 16h4"/></svg>Websites</div>
+            <div class="kws-arc-cap">
+              <h3 class="kws-arc-name">Website design &amp; build</h3>
+              <p class="kws-arc-price">$1,000, $2,000 or $4,000</p>
+              <p class="kws-arc-line">A custom site, built to bring in enquiries.</p>
+            </div>
+          </li>
+          <li class="kws-arc-item">
+            <div class="kws-arc-tile" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5.5 8.5h13l-1 11h-11l-1-11Z"/><path d="M9 11.5v-4a3 3 0 0 1 6 0v4"/></svg>Stores</div>
+            <div class="kws-arc-cap">
+              <h3 class="kws-arc-name">E-commerce stores</h3>
+              <p class="kws-arc-price">$8,000</p>
+              <p class="kws-arc-line">Sell online, with payments and shipping set up.</p>
+            </div>
+          </li>
+          <li class="kws-arc-item">
+            <div class="kws-arc-tile" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6"/><path d="m15 15 5.5 5.5"/></svg>SEO</div>
+            <div class="kws-arc-cap">
+              <h3 class="kws-arc-name">SEO &amp; performance</h3>
+              <p class="kws-arc-price">in every build</p>
+              <p class="kws-arc-line">Found on Google, and fast on phones.</p>
+            </div>
+          </li>
+          <li class="kws-arc-item">
+            <div class="kws-arc-tile" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3.5 5 6v5.5c0 4.2 2.9 7.4 7 9 4.1-1.6 7-4.8 7-9V6l-7-2.5Z"/><path d="m9 12 2.2 2.2L15.2 10"/></svg>Care</div>
+            <div class="kws-arc-cap">
+              <h3 class="kws-arc-name">Care &amp; maintenance</h3>
+              <p class="kws-arc-price">$125, $300, $600 or $1,000/mo</p>
+              <p class="kws-arc-line">Backups, updates and the changes you ask for.</p>
+            </div>
+          </li>
+          <li class="kws-arc-item">
+            <div class="kws-arc-tile" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 13.7-5.7L20 8.5M20 12a8 8 0 0 1-13.7 5.7L4 15.5"/><path d="M20 4v4.5h-4.5M4 20v-4.5h4.5"/></svg>Rescues</div>
+            <div class="kws-arc-cap">
+              <h3 class="kws-arc-name">Redesigns &amp; rescues</h3>
+              <p class="kws-arc-price">priced as a new site</p>
+              <p class="kws-arc-line">A dated site rebuilt, your rankings kept.</p>
+            </div>
+          </li>
+          <li class="kws-arc-item">
+            <div class="kws-arc-tile" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m4 20 1.2-4.8L16.5 4 20 7.5 8.8 18.8 4 20Z"/><path d="m14 6.5 3.5 3.5"/></svg>Brand</div>
+            <div class="kws-arc-cap">
+              <h3 class="kws-arc-name">Brand &amp; identity</h3>
+              <p class="kws-arc-price">$1,500</p>
+              <p class="kws-arc-line">A logo, colours and type that match.</p>
+            </div>
+          </li>
+          <li class="kws-arc-item">
+            <div class="kws-arc-tile" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="m15.5 8.5-2 5-5 2 2-5 5-2Z"/></svg>Growth</div>
+            <div class="kws-arc-cap">
+              <h3 class="kws-arc-name">Growth consulting</h3>
+              <p class="kws-arc-price">$350 audit · $500 or $1,000/mo</p>
+              <p class="kws-arc-line">A written plan, then monthly help.</p>
+            </div>
+          </li>
+          <li class="kws-arc-item">
+            <div class="kws-arc-tile" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Google</div>
+            <div class="kws-arc-cap">
+              <h3 class="kws-arc-name">Google profile &amp; reviews</h3>
+              <p class="kws-arc-price">$500</p>
+              <p class="kws-arc-line">Your profile done right, reviews made easy.</p>
+            </div>
+          </li>
+          <li class="kws-arc-item">
+            <div class="kws-arc-tile" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4.5 5.5h15v10h-9l-4 3.5v-3.5h-2v-10Z"/><path d="M8.5 9.5h7M8.5 12.5h4"/></svg>Automation</div>
+            <div class="kws-arc-cap">
+              <h3 class="kws-arc-name">Automation</h3>
+              <p class="kws-arc-price">$750 or $1,500 per setup</p>
+              <p class="kws-arc-line">Missed calls texted back, booking, follow-up.</p>
+            </div>
+          </li>
+        </ul>
+      </section>
     </div>
   </section>
 
@@ -596,33 +634,33 @@
             <p>Domain and hosting set up in <span class="nowrap">your name.</span></p></div>
           </li>
         </ol>
-        <p class="stamp" aria-hidden="true">No<br>surprises</p>
       </div>
     </div>
   </section>
 
   <!-- ===================== THE NEXT STEP: call, book, or write ===================== -->
-  <section class="cta-band on-blue" id="contact">
-    <div class="container cta-inner">
-      <div class="cta-copy">
-        <h2>Tell us about your business.</h2>
-        <p>Thirty minutes, no pitch. You leave with a plan and a fixed price, whether or not <span class="nowrap">you hire us.</span><br><strong>You work with Christian Knight, the founder, <span class="nowrap">based in Baton Rouge.</span></strong></p>
-        <div class="btn-row">
-          <a class="btn btn-primary btn-lg" href="/contact/" data-booking>Book a free 30-minute call</a>
-          <a class="btn btn-lg" href="tel:+12252550837"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>Call (225) 255-0837</a>
-        </div>
-        <p class="write">Rather write? <a href="/contact/">Send an enquiry</a>.</p>
+  <section class="kws-close kws-close--card on-blue kws-shader-host" id="contact" aria-labelledby="close-title">
+    <div class="kws-shader" data-kws="shader" data-shader="band" aria-hidden="true"></div>
+    <div class="kws-close-in">
+      <div class="kws-close-copy">
+        <h2 class="kws-close-title" id="close-title">Tell us about your business.</h2>
+        <p class="kws-close-text">Thirty minutes, no pitch. You leave with a plan and a fixed price, whether or not <span class="nowrap">you hire us.</span><br><strong>You work with Christian Knight, the founder, <span class="nowrap">based in Baton Rouge.</span></strong></p>
       </div>
-      <div class="appt on-paper wide-only" aria-hidden="true">
-        <p class="appt-head"><span>Appointment card</span><span>No. 01</span></p>
-        <p class="appt-title">Discovery call</p>
-        <dl class="appt-lines">
-          <div><dt>Cost</dt> <dd>Free</dd></div>
-          <div><dt>Length</dt> <dd>30 minutes</dd></div>
-          <div><dt>Sales pitch</dt> <dd>None</dd></div>
-          <div><dt>Where</dt> <dd>A call, or in person</dd></div>
+      <div class="kws-appt on-paper">
+        <p class="kws-appt-head"><span>Appointment card</span><span>No. 01</span></p>
+        <p class="kws-appt-title">Discovery call</p>
+        <dl>
+          <div><dt>Cost</dt><dd>Free</dd></div>
+          <div><dt>Length</dt><dd>30 minutes</dd></div>
+          <div><dt>Sales pitch</dt><dd>None</dd></div>
+          <div><dt>Where</dt><dd>A call, or in person</dd></div>
         </dl>
+        <a class="kws-btn kws-btn--main" href="/contact/" data-booking>Book a free 30-minute call</a>
       </div>
+      <div class="kws-close-acts">
+        <a class="kws-btn" href="tel:+12252550837"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>Call (225) 255-0837</a>
+      </div>
+      <p class="write">Rather write? <a href="/contact/">Send an enquiry</a>.</p>
     </div>
   </section>
 
@@ -642,30 +680,45 @@
 </div>
 
 <!-- ===================== FOOTER ===================== -->
-<footer class="site-footer on-ink">
-  <!-- Baton Rouge on the horizon: the Capitol tower, downtown and the river bridge. After dark the windows and bridge lamps are lit (.sky-lit). -->
-  <svg class="footer-skyline" viewBox="0 0 1440 120" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
-    <path d="M0 120V102Q26 88 58 99Q92 84 128 100Q150 93 176 104V120Z"/>
-    <path d="M180 120V86h38v34ZM222 120V72h34v48ZM268 120V84h124v36ZM296 86V68h68v18ZM314 70V24h32v46ZM319 26V13h22v13ZM324 15V6h12v9ZM327 7l3-7 3 7Z"/>
-    <path d="M420 120V66h48v54ZM474 120V48h44v72ZM522 120V78h56v42ZM582 120V58h38v62ZM624 120V88h60v32ZM690 120V70h46v50ZM740 120V94h70v26Z"/>
-    <path d="M818 120V108Q836 98 852 107V120Z"/>
-    <g fill="none" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
-      <path d="M880 93L960 78L1040 38L1090 72L1140 80L1190 72L1240 38L1320 78L1400 93"/>
-      <path d="M960 78V93M1040 38V93M1090 72V93M1140 80V93M1190 72V93M1240 38V93M1320 78V93"/>
-      <path d="M960 93L1040 38L1090 93L1140 80L1190 93L1240 38L1320 93M1000 58V93M1280 58V93"/>
-    </g>
-    <path d="M856 91h568v5H856ZM1033 94h14v26h-14ZM1233 94h14v26h-14ZM956 94h8v26h-8ZM1316 94h8v26h-8Z"/>
-    <path d="M1396 120V104Q1414 92 1440 100V120Z"/>
-    <path d="M0 114h1440v6H0Z"/>
-    <path class="sky-lit" d="M190 96h4v5h-4ZM230 80h4v5h-4ZM242 94h4v5h-4ZM282 94h4v5h-4ZM306 75h4v5h-4ZM350 75h4v5h-4ZM372 98h4v5h-4ZM326 34h4v5h-4ZM334 34h4v5h-4ZM326 47h4v5h-4ZM334 59h4v5h-4ZM430 76h4v5h-4ZM448 92h4v5h-4ZM484 58h4v5h-4ZM500 58h4v5h-4ZM484 76h4v5h-4ZM500 94h4v5h-4ZM536 88h4v5h-4ZM560 102h4v5h-4ZM592 68h4v5h-4ZM604 86h4v5h-4ZM640 98h4v5h-4ZM664 98h4v5h-4ZM700 80h4v5h-4ZM720 96h4v5h-4ZM760 102h4v5h-4ZM790 102h4v5h-4ZM1038 31h5v5h-5ZM1238 31h5v5h-5ZM959 73h3v3h-3ZM1089 67h3v3h-3ZM1139 75h3v3h-3ZM1189 67h3v3h-3ZM1319 73h3v3h-3Z"/>
-  </svg>
+<footer class="site-footer on-ink kws-foot kws-foot--slim">
+  <!-- The slim footer of the landing page: no site map, on purpose. -->
+  <div class="kws-foot-in kws-foot-end">
+    <p class="kws-foot-bye">KnightWebstudio<span> · </span><span>Based in Baton Rouge, Louisiana</span></p>
+    <p class="kws-foot-links"><a class="kws-foot-mail" href="tel:+12252550837">(225) 255-0837</a><a class="kws-foot-mail" href="mailto:knightwebstudio1@gmail.com"><span>knightwebstudio1@<wbr>gmail.com</span></a></p>
+    <p class="kws-foot-links"><span>&copy;&nbsp;<span id="year">2026</span></span><a href="/">Full website</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><button class="kws-motion" data-kws="motion" type="button" hidden><svg class="kws-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg><svg class="kws-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg><span class="kws-motion-label"></span></button></p>
+  </div>
 
-  <div class="container footer-bottom">
-    <p>&copy; <span id="year">2026</span> KnightWebstudio · Based in Baton Rouge, Louisiana</p>
-    <p class="footer-links"><a href="mailto:knightwebstudio1@gmail.com"><span>knightwebstudio1@<wbr>gmail.com</span></a><a href="tel:+12252550837">(225) 255-0837</a></p>
-    <p class="footer-links"><a href="/">Full website</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></p>
+  <div class="kws-skyline" aria-hidden="true">
+    <div class="kws-skyline-sky"></div>
+    <!-- Baton Rouge on the horizon: the Capitol tower, downtown and the river bridge, with the windows and bridge lamps lit (.kws-skyline-lit).
+         On a phone the far end of downtown (.kws-skyline-far) steps out, the bridge (.kws-skyline-span) moves up beside the rest,
+         and the whole drawing (the one <g>) shifts left so the Capitol and a bridge tower are both in the frame. -->
+    <svg class="kws-skyline-art" viewBox="0 0 1440 120" preserveAspectRatio="xMinYMax slice" focusable="false">
+      <g>
+        <path d="M0 120V102Q26 88 58 99Q92 84 128 100Q150 93 176 104V120Z"/>
+        <path d="M180 120V86h38v34ZM222 120V72h34v48ZM268 120V84h124v36ZM296 86V68h68v18ZM314 70V24h32v46ZM319 26V13h22v13ZM324 15V6h12v9ZM327 7l3-7 3 7Z"/>
+        <path d="M420 120V66h48v54ZM474 120V48h44v72ZM522 120V78h56v42ZM582 120V58h38v62Z"/>
+        <path class="kws-skyline-lit" d="M190 96h4v5h-4ZM230 80h4v5h-4ZM242 94h4v5h-4ZM282 94h4v5h-4ZM306 75h4v5h-4ZM350 75h4v5h-4ZM372 98h4v5h-4ZM326 34h4v5h-4ZM334 34h4v5h-4ZM326 47h4v5h-4ZM334 59h4v5h-4ZM430 76h4v5h-4ZM448 92h4v5h-4ZM484 58h4v5h-4ZM500 58h4v5h-4ZM484 76h4v5h-4ZM500 94h4v5h-4ZM536 88h4v5h-4ZM560 102h4v5h-4ZM592 68h4v5h-4ZM604 86h4v5h-4Z"/>
+        <g class="kws-skyline-far">
+          <path d="M624 120V88h60v32ZM690 120V70h46v50ZM740 120V94h70v26ZM818 120V108Q836 98 852 107V120Z"/>
+          <path class="kws-skyline-lit" d="M640 98h4v5h-4ZM664 98h4v5h-4ZM700 80h4v5h-4ZM720 96h4v5h-4ZM760 102h4v5h-4ZM790 102h4v5h-4Z"/>
+        </g>
+        <g class="kws-skyline-span">
+          <g fill="none" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+            <path d="M880 93L960 78L1040 38L1090 72L1140 80L1190 72L1240 38L1320 78L1400 93"/>
+            <path d="M960 78V93M1040 38V93M1090 72V93M1140 80V93M1190 72V93M1240 38V93M1320 78V93"/>
+            <path d="M960 93L1040 38L1090 93L1140 80L1190 93L1240 38L1320 93M1000 58V93M1280 58V93"/>
+          </g>
+          <path d="M856 91h568v5H856ZM1033 94h14v26h-14ZM1233 94h14v26h-14ZM956 94h8v26h-8ZM1316 94h8v26h-8ZM1396 120V104Q1414 92 1440 100V120Z"/>
+          <path class="kws-skyline-lit" d="M1038 31h5v5h-5ZM1238 31h5v5h-5ZM959 73h3v3h-3ZM1089 67h3v3h-3ZM1139 75h3v3h-3ZM1189 67h3v3h-3ZM1319 73h3v3h-3Z"/>
+        </g>
+        <path d="M0 114h1440v6H0Z"/>
+      </g>
+    </svg>
   </div>
 </footer>
-<script src="/assets/js/main.js?v=3" defer></script>
+<script src="/assets/js/main.js?v=4" defer></script>
+<script src="/assets/js/shader.js?v=4" defer></script>
+<script src="/assets/js/motion.js?v=4" defer></script>
 </body>
 </html>

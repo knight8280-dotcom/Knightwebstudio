@@ -50,13 +50,16 @@ free call or the Growth Audit. Every price stays on its page. Before adding a
 paragraph, check whether it gives a visitor less reason to get in touch.
 
 Every page also carries the top strip (city and tap-to-call number), a
-header, a footer and (except `/contact/`, `/privacy/`, `/terms/`, the
+header, a footer (ending in the town at night) and (except `/contact/`, `/privacy/`, `/terms/`, the
 checkout pages and `404.html`) the sticky phone bar with a Call button and the
 booking button. Below 1100px the menu is a full-screen sheet and the standard
 header's "Book a free call" button is hidden; `/start/`, which has no menu,
 keeps that button in its header from 600px, and the not-found page's header
 is the brand alone. The phone number is always in the top strip; from 1280px
-the standard header shows it too, once that strip has scrolled away.
+the standard header shows it too, once that strip has scrolled away. Where
+something moves by itself, a "Pause motion" control sits in the top strip
+(a pill from 1100px, a round button below it), in the phone menu and in the
+footer (see [Motion kit](#motion-kit)).
 
 Also built in: light/dark theme toggle (light is the default; a saved choice
 wins, otherwise a device set to dark gets the night theme; an inline script
@@ -76,14 +79,18 @@ privacy/  terms/  checkout/  checkout/success/
 web-design-baton-rouge/  web-design-gonzales/  web-design-prairieville/  web-design-denham-springs/
 404.html                Not-found page
 site.webmanifest        Installable-app metadata and icons
-assets/css/styles.css   The one stylesheet: the shared design system (tokens at the top, contents list in its header),
+assets/css/styles.css   The main stylesheet: the shared design system (tokens at the top, contents list in its header),
                         then the page-only rules, one block per page, each rule scoped with [data-page="…"]
+assets/css/motion.css   The motion kit's cards and carousels; linked only on the pages that place one
+assets/js/shader.js     The motion kit's animated backgrounds and the pause control (every page with motion)
+assets/js/motion.js     The motion kit's carousels and folder stack (only the pages that place one)
 assets/fonts/           Fraunces (soft) and Figtree, self-hosted variable WOFF2
 assets/js/main.js       Settings, theme, menu, scroll reveals, phone bar, booking buttons, the contact form, analytics
 assets/js/calculator.js The consulting page's calculator (loaded on that page only)
 assets/img/             Project images (work-*.jpg), logo.svg, PNG app icons, the link-preview image
 tools/chrome/           The one true copy of the header, footer, phone bar and first-paint snippet (*.inc)
 tools/sync_chrome.py    Copies that chrome into every page; --check reports drift
+tools/check_pricing.py  Checks that /pricing/'s package table and its phone folders say the same
 tools/art/              The crest, the seal and the street scene, as code
 server/                 The small Stripe checkout server (hosted on Render, not on GitHub Pages)
 STRIPE_INTEGRATION_TODO.md  How payments are set up, and what is done by hand
@@ -118,14 +125,14 @@ page's title, description, Open Graph tags, JSON-LD or `<main>`.
 
 | Partial | What it is |
 | --- | --- |
-| `topbar.inc` | Skip link and the top strip: the city and the tap-to-call number |
-| `header.inc` | The standard header: crest and name, the menu, the theme button, "Book a free call" |
+| `topbar.inc` | Skip link and the top strip: the city, the pause control (shown by `shader.js`) and the tap-to-call number |
+| `header.inc` | The standard header: crest and name, the menu (its foot holds the pause control), the theme button, "Book a free call" |
 | `header-start.inc` | `/start/`: no menu on purpose, one booking button |
 | `header-bare.inc` | `404.html`: the brand only (that page loads no script) |
-| `footer.inc`, `footer-start.inc`, `footer-bare.inc` | The full footer, and the slim one on `/start/` and the 404 page |
-| `skyline.inc` | The Baton Rouge skyline that tops every footer |
+| `footer.inc`, `footer-start.inc`, `footer-bare.inc` | The motion kit's footer, and the slim one on `/start/` and the 404 page (the 404 one has no year and no pause control: that page loads no script) |
+| `skyline.inc` | The Baton Rouge skyline that ends every footer: the town at night, with the name rising behind it |
 | `phone-bar.inc` | The sticky "Call" and "Free 30-min call" bar for phones and tablets |
-| `head-script.inc` | The first-paint snippet: sets the theme before anything is drawn and marks the page as script-enabled |
+| `head-script.inc` | The first-paint snippet: sets the theme before anything is drawn, marks the page as script-enabled, and holds the motion kit's carousels in place |
 
 `PAGES` at the top of `tools/sync_chrome.py` says which header and footer each
 page gets, its `data-page` name, and whether it carries the phone bar (the
@@ -156,23 +163,33 @@ pattern, or Lighthouse will flag skipped heading levels.
     <section class="page-head">  <div class="container"> eyebrow, h1, lede, buttons, price strip </div> </section>
     <section class="section section-first" id="…"> <div class="container"> … </div> </section>
     <section class="section section-sand" id="…">  <div class="container"> … </div> </section>
-    <section class="cta-band on-blue"> … </section>
+    <section class="kws-close on-blue kws-shader-host"> … </section>   <!-- the closing band -->
   </main>
   … phone bar and footer (from tools/chrome/) …
-  <script src="/assets/js/main.js?v=3" defer></script>
+  <script src="/assets/js/main.js?v=4" defer></script>
+  <script src="/assets/js/shader.js?v=4" defer></script>   <!-- pages with motion -->
+  <script src="/assets/js/motion.js?v=4" defer></script>   <!-- pages with a carousel or the folder stack -->
 </body>
 ```
 
-- **Asset versions.** Every page links the stylesheet as
-  `/assets/css/styles.css?v=3` and the script as `/assets/js/main.js?v=3`
-  (the 404 page has no script). GitHub Pages lets browsers keep both files for
-  ten minutes, so a visitor who had the old files would otherwise get new HTML
-  with an old stylesheet or script. Whenever you change `styles.css` or
-  `main.js`, raise the number by one in all 19 pages in the same commit
-  (for example `grep -rl 'styles.css?v=3' --include=*.html .` lists them),
-  and keep every page on the same number. `calculator.js` (used only by
-  /consulting/) carries the same number; raise it with the others. Fonts and
-  images are not versioned: give a changed one a new file name instead.
+- **Asset versions.** Every link to a stylesheet or script carries the same
+  version number, now `?v=4`: `styles.css` (all 19 pages), `main.js` (all but
+  404, which loads no script), `calculator.js` (/consulting/), `shader.js`
+  (the 14 pages with motion), `motion.js` (home, /start/, /consulting/,
+  /pricing/), and the kit's stylesheet `motion.css` (those four and /process/).
+  GitHub Pages lets browsers keep a file for ten minutes, so a visitor who had
+  the old files would otherwise get new HTML with an old stylesheet or script.
+  Whenever you change any of them, raise the number by one on every link in
+  every page in the same commit (`grep -rl '?v=4' --include=*.html .` lists the
+  pages), and keep every link on the same number. Fonts and images are not
+  versioned: give a changed one a new file name instead.
+- **Scripts.** Every script is a file loaded with `defer` at the end of the
+  `<body>`, in this order: `main.js`, then `shader.js` on every page with
+  motion (all but privacy, terms, both checkout pages and 404), then
+  `motion.js` only where a carousel or the folder stack is placed, then
+  `calculator.js` on `/consulting/`. Nothing blocks the first paint. A page
+  that places a kit card or carousel also links `motion.css` straight after
+  `styles.css`. See [Motion kit](#motion-kit).
 
 - **`data-page`** names the page for the stylesheet: `home`, `services`,
   `consulting`, `work`, `process`, `pricing`, `faq`, `contact`, `about`,
@@ -181,7 +198,8 @@ pattern, or Lighthouse will flag skipped heading levels.
 - **Bands.** Every band is a `.section` holding one `.container`. Plain paper
   and `.section-sand` alternate; `.section-tight` is a shorter band and
   `.section-first` the one under the page head. A page ends in the blue closing
-  band (`.cta-band`), or on plain paper (legal, checkout, contact, 404).
+  band (`.kws-close`, in one of three layouts: see [Motion kit](#motion-kit)),
+  or on plain paper (legal, checkout, contact, 404).
 - **Page head.** Three forms: commercial (eyebrow, `h1`, lede, one button row,
   the price strip), reading (eyebrow, `h1`, lede: FAQ, legal, checkout) and
   split (`.page-head-split` with one object beside the head from 980px:
@@ -193,7 +211,7 @@ pattern, or Lighthouse will flag skipped heading levels.
   (`.spec`), the care-plan table (`.table.table-stack`), the time sheet and
   ledger (`.sheet`, `.ledger`, `.bigfig`), the receipt and the payment plan
   drawn to scale (`.receipt`, `.payplan`), numbered steps and the job ticket
-  (`.steps`, `.ticket`), the appointment and business cards (`.appt`,
+  (`.steps`, `.ticket`), the appointment and business cards (`.kws-appt`,
   `.bizcard`), the phone, calendar, enquiry list and notification mocks
   (`.fig`, `.phone`, `.cal`, `.leads`, `.notice`, `.vig`), project prints and
   case rows (`.print`, `.case`, `.browser`), the FAQ list (`.faq`), form
@@ -217,9 +235,10 @@ pattern, or Lighthouse will flag skipped heading levels.
 - **Motion.** Add `reveal` to a block that should rise in as it scrolls into
   view (never to anything on the first screen, and never to a wrapper that
   holds a whole section). It only applies when scripts run; without them, and
-  with reduced motion, everything is simply there. A reveal owns `transform`,
+  with reduced motion or with motion paused, everything is simply there. A reveal owns `transform`,
   so a revealed thing that also moves under the pointer uses the `translate`
-  property. Nothing loops for ever.
+  property. Nothing loops for ever, except the motion kit's slow backgrounds
+  and the footer's sky, which the pause control stops.
 - **Scripts off.** Every page reads in full without JavaScript: the menu shows
   as plain links, FAQ answers are `<details>`, the calculator shows its default
   results, booking buttons fall back to `/contact/`.
@@ -248,8 +267,135 @@ To **add** a page:
    360px and 1440px wide in both themes.
 
 No inline `style=""` attributes, except a custom property that carries data
-(`style="--w:50"` for a bar's share). No second stylesheet, no web-font or
-script CDN, no framework.
+(`style="--w:50"` for a bar's share). No stylesheet besides `styles.css` and
+the motion kit's `motion.css`, no web-font or script CDN, no framework.
+
+## Motion kit
+
+The moving parts of the site (slow animated backgrounds, cards, carousels, the
+closing band, the footer and the pause control) are one small kit, written for
+this site and for client sites built after it. Every line of it was written
+here; nothing is copied from a component library, a template site or a paid
+collection, so there is no licence to pass on. No library, no CDN, no build step.
+
+| File | What it holds | Where it loads |
+| --- | --- | --- |
+| `assets/js/shader.js` | The three animated backgrounds (wash, band, ribbon) and the pause control | Every page with something that moves: all but privacy, terms, both checkout pages and 404 |
+| `assets/js/motion.js` | The arc and spotlight carousels, the cylinder slider, the folder stack (and the ring, not used here) | Only pages that place one: home, `/start/`, `/consulting/`, `/pricing/` |
+| `assets/css/motion.css` | What a page places: folder and bookmark cards, the ribbon art, the folder stack, the appointment card, the arc, the spotlight, the cylinder | Only pages that place one: home, `/start/`, `/consulting/`, `/process/`, `/pricing/` |
+| `styles.css` sections 15 to 17 | The kit's base layer: the closing band, the footer and the town at night, the pause control, the backgrounds' still picture. The kit's `.kws-btn` is the site's `.btn` (section 07) | Every page |
+
+The kit's own copy, with its handbook (every component's markup, options,
+keyboard and screen-reader behaviour, and a demo page), lives with the
+project's working files, not in this repository: `base.css`, `motion.css`,
+`ring.css`, `shader.js`, `motion.js` and `README.md`. `motion.css`, `shader.js`
+and `motion.js` here are byte for byte the kit's files; `styles.css` carries
+`base.css` with the kit's colour variables resolved to this site's tokens.
+
+**How a page loads it.** In the `<head>`, `motion.css?v=4` directly after
+`styles.css?v=4`, only on a page that places a card or a carousel. At the end
+of the `<body>`, after `main.js`, with `defer`, nothing render-blocking:
+
+```html
+<script src="/assets/js/main.js?v=4" defer></script>
+<script src="/assets/js/shader.js?v=4" defer></script>   <!-- any page with motion -->
+<script src="/assets/js/motion.js?v=4" defer></script>   <!-- only with a carousel or the folder stack -->
+```
+
+The first-paint snippet (`tools/chrome/head-script.inc`) carries the kit's
+one line: it holds each carousel's place until `motion.js` upgrades it, so
+nothing jumps, and gives the plain lists back if the script never comes.
+
+**The components on this site.**
+
+| Component | Script | Where |
+| --- | --- | --- |
+| Wash: slow light behind a page head | `shader.js` | Home, `/start/`, `/about/`, the four city pages |
+| Band: slow folds and gold glints in a closing band | `shader.js` | Every closing band |
+| Ribbon: silk art inside a card | `shader.js` | Bookmark cards (home), one folder (`/process/`) |
+| Closing band, three layouts: statement, strip, card | none | The end of every page that had one |
+| Footer, slim footer, the town at night | none | Every page (slim on `/start/` and 404) |
+| Pause control | `shader.js` | Top strip (a pill from 1100px, a round button below it), phone menu, footer |
+| Bookmark cards, spotlight carousel | `motion.js` for the spotlight | Home |
+| Arc carousel | `motion.js` | `/start/` |
+| Cylinder slider | `motion.js` | `/consulting/` |
+| Folder cards, folder stack | `motion.js` for the stack | `/process/`, `/pricing/` (phones) |
+
+The carousel ring is in the kit for client sites but not on this one: its list
+of inclusions would repeat the pricing table.
+
+**Placing a component.** Copy its markup from the kit's handbook (the closing
+band's is in the design handbook and below), fill it with words already on the
+page, and link `motion.css` and `motion.js` on that page if it needs them. A
+component replaces or upgrades a section; it never adds words or makes a page
+longer on a phone. An element marked `data-kws="..."` starts by itself when the
+page loads.
+
+```html
+<section class="kws-close kws-close--strip on-blue kws-shader-host" aria-labelledby="close-title">
+  <div class="kws-shader" data-kws="shader" data-shader="band" aria-hidden="true"></div>
+  <div class="kws-close-in">
+    <div class="kws-close-copy">
+      <h2 class="kws-close-title" id="close-title">Still deciding? Book the free call.</h2>
+      <p class="kws-close-text">Thirty minutes, no pitch. …</p>
+    </div>
+    <div class="kws-close-acts">
+      <a class="kws-btn kws-btn--main" href="/contact/" data-booking>Book a free 30-minute call</a>
+      <a class="kws-btn" href="/contact/">Send an enquiry</a>
+    </div>
+    <p class="kws-close-tel">Or call <a href="tel:+12252550837">(225) 255-0837</a></p>
+  </div>
+</section>
+```
+
+Leave out `kws-close--strip` for the centred statement (home, `/work/`), or use
+`kws-close--card` with the appointment card carrying the booking button
+(`/pricing/`, `/start/`; it needs `motion.css`, and on a phone the card gives
+way to its button). `main.js` hides the sticky phone bar over `.kws-close`.
+
+**The pause control.** One switch stops everything that moves by itself, on
+every page, and is remembered (`localStorage`, key `kws-motion`; it sets
+`html[data-motion="off"]`). It starts paused when the device asks for reduced
+motion. Paused, the page is as still as with reduced motion: the backgrounds
+hold a frame, carousels move at once, and reveals and one-time flourishes do not
+play (`styles.css` section 18). It is in the top strip at every width, the phone
+menu and the footer's last row, and carries `hidden` until `shader.js` shows it,
+so pages without the script, and visitors without JavaScript, never see a dead
+button.
+
+**The rules every component keeps** (the kit's guardrails):
+
+- Phone first: on a phone at least as easy as a plain list. Nothing turns by
+  itself, the page always scrolls, the mouse wheel is never taken.
+- The content is ordinary HTML that reads in full with JavaScript off; scripts
+  only enhance, with no layout shift.
+- Reduced motion and the pause control give a still, complete page.
+- Pointer, touch and keyboard all work; focus is visible and never trapped;
+  screen readers get labelled lists, never a canvas. Targets are 44px.
+- A moving background keeps text at 4.5:1 or better (the script checks every
+  pixel behind the words), draws at a capped size and rate, stops off screen
+  and in a background tab, and is a still CSS picture without WebGL or with
+  Save-Data. One live layer in view at a time: where several are on screen,
+  `shader.js` moves only the one most in view and the others hold a frame.
+- Honest content only: words and facts already on the site, no statistics,
+  no "from", drawings marked "Example", nothing blue inside a mock.
+- One showpiece per screen, at most two interactive ones a page; none on the
+  contact, FAQ, legal, checkout or 404 pages.
+
+**Re-skinning it for a client site.** The kit's styles read thirteen
+variables, each falling back to this site's tokens: `--kit-bg`,
+`--kit-surface`, `--kit-ink`, `--kit-muted`, `--kit-line`, `--kit-accent`,
+`--kit-accent-ink`, `--kit-notice`, `--kit-gilt`, `--kit-radius`,
+`--kit-font-display`, `--kit-font-body`, `--kit-shadow` (and `--kit-shader-1`
+to `-3` for the wash). On a client site, copy the kit's `base.css`,
+`motion.css`, `shader.js` and `motion.js` (and `ring.css` if the ring is
+used), set those variables once on `:root`, and again on each colour block
+(the closing band, the footer) and on a paper card that sits on one. Draw the
+client's town for the footer or leave the drawing out. Check contrast, then
+open the page at 360px, with script off, with reduced motion and with the
+pause control pressed: each should be complete and still. In a React app,
+import the files once and call `window.KWS.<name>.mount(element)` in an
+effect; it returns its own clean-up.
 
 ## Make it yours
 
@@ -259,9 +405,11 @@ testimonials block in `index.html`.
 
 ### 1. Business name, crest and artwork
 
-The wordmark reads **KnightWebstudio** in full, in the header and footer —
-search for `brand-name` in `tools/chrome/`, edit every partial that has it,
-and run `python3 tools/sync_chrome.py`.
+The wordmark reads **KnightWebstudio** in full: in the header (`brand-name`),
+across the footer's skyline (`kws-skyline-name`; `--kws-fit` in its rule is
+the name's measured width in em) and in the slim footers (`kws-foot-bye`).
+Edit every partial in `tools/chrome/` that has it, and run
+`python3 tools/sync_chrome.py`.
 
 The mark is the **Charger shield**: a chess knight's head cut into facets in
 shades of the sign-painter's blue, inside a riveted blue shield with a navy
@@ -274,7 +422,7 @@ field and a gold-leaf inner line.
 | Home hero | The street scene: a brick shop front signed YOUR BUSINESS, on a Baton Rouge street. It turns to night with the dark theme |
 | `/start/` head, 404 page | The same street scene, small; on the 404 page its sign reads PAGE NOT FOUND |
 | Pricing head | The round "Fixed prices" seal |
-| Every footer | The Baton Rouge skyline (inline SVG in `tools/chrome/skyline.inc`); after dark its windows and bridge lamps are lit |
+| Every footer | The town at night: the Baton Rouge skyline (inline SVG in `tools/chrome/skyline.inc`) with its windows and bridge lamps lit, stars, and the name rising behind it as the page ends |
 | `assets/img/logo.svg` | The standalone mark: the SVG favicon, the JSON-LD logo and the app-icon source |
 | `favicon.ico`, `apple-touch-icon.png`, `icon-192/512.png`, `og-image.png` | Rendered from the same artwork |
 
@@ -589,6 +737,12 @@ $1,000/month care figures in the FAQ answer about care plans and the services
 page. The project tiers are also on `/start/` and the four city pages. Search
 for the old figure before changing one.
 
+`pricing/index.html` holds the four packages twice: the package table, and
+just above it the folder stack that phones see instead (the motion kit's; only
+one of the two is ever shown). A change to a package's price, payment line,
+size, design, inclusions, support or buttons goes in both.
+`python3 tools/check_pricing.py` compares them and says what differs.
+
 The services page puts a price beside each service, in its menu and again on the
 service itself, taken from the same tiers: design
 and build "$1,000, $2,000 or $4,000", e-commerce $8,000, care "$125, $300, $600 or $1,000/mo",
@@ -855,7 +1009,7 @@ Validate changes with the [Rich Results Test](https://search.google.com/test/ric
 - [x] Domain wired through `CNAME`, `index.html`, `sitemap.xml`, `robots.txt`
 - [ ] GitHub Pages enabled and IONOS DNS records added
 - [x] Social preview image added
-- [ ] Checked on a real phone
+- [ ] Checked on a real phone: an iPhone (Safari, with Reduce Motion on and off, and VoiceOver) and an Android phone, including the moving backgrounds, a swipe on each carousel against a page scroll, and the pause button
 - [ ] Google Search Console set up and sitemap submitted
 - [ ] Analytics added (Plausible or Fathom if you'd rather skip a cookie banner) — then update `/privacy/`
 - [ ] Read `/privacy/` once and confirm it describes what you actually do
@@ -869,5 +1023,8 @@ underline), container queries for the town headline, the About card, the
 checkout slip, the project captions and the price-list leaders (a leader too
 short to read is then still drawn), `:has()` on the checkout pages, the
 `translate` and `rotate` properties (a hover lift, the one tilted card, the stamp) and
-`text-wrap: balance` / `pretty`. On older browsers the layout and content stay
+`text-wrap: balance` / `pretty`. The motion kit's backgrounds need WebGL on an
+offscreen canvas (Chrome 69, Firefox 105, Safari 17) and keep a still picture
+elsewhere; the footer name's rise needs scroll-linked animation (it simply
+stands in place without it). On older browsers the layout and content stay
 fully intact and only some visual polish falls away.

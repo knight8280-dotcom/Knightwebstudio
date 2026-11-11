@@ -16,4 +16,9 @@
     // its way after four seconds, show every block and leave the header alone.
     document.addEventListener('DOMContentLoaded', function () { if (!window.kwsReady) d.classList.remove('js'); });
     setTimeout(function () { if (!window.kwsReady) d.classList.add('show-all'); }, 4000);
+    // The motion kit: hold each carousel's place until motion.js upgrades it, and give the plain lists back if it
+    // never comes (a page without motion.js drops the classes at load and after four seconds)
+    d.classList.add('kws-js', 'kws-hold');
+    addEventListener('load', function () { if (!(window.KWS && KWS.folders)) d.classList.remove('kws-js'); });
+    setTimeout(function () { if (!(window.KWS && KWS.folders)) d.classList.remove('kws-js'); d.classList.remove('kws-hold'); }, 4000);
   })();

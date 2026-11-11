@@ -9,16 +9,17 @@ The site has no include system, so the chrome is copied into every page and
 has to stay identical. The one true copy lives in tools/chrome/ (the files end
 in .inc so that nothing in there is published as a page):
 
-    topbar.inc         skip link and the top strip (city, tap-to-call number)
+    topbar.inc         skip link and the top strip (city, the motion pause control, tap-to-call number)
     header.inc         the standard header with the menu
     header-start.inc   /start/: no menu on purpose, one booking button
     header-bare.inc    404: brand only (that page loads no script)
     footer.inc         the standard footer
     footer-start.inc   /start/: one line of contact details and three links
     footer-bare.inc    404: the same, without the year
-    skyline.inc        the Baton Rouge skyline that tops every footer
+    skyline.inc        the Baton Rouge skyline that ends every footer (the town at night)
     phone-bar.inc      the sticky Call + booking bar for phones and tablets
-    head-script.inc    the first-paint snippet in every page's <head>: theme, the .js class, the crest's one-time build
+    head-script.inc    the first-paint snippet in every page's <head>: theme, the .js class, the crest's one-time build,
+                       the motion kit's place-holding classes
 
 {{topbar}} and {{skyline}} inside a partial are replaced by those files, so
 they too exist once. PAGES below says which page gets which variant, its
