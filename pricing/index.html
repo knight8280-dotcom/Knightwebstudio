@@ -37,14 +37,17 @@
       if (t !== 'dark' && t !== 'light') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       d.setAttribute('data-theme', t);
     } catch (e) { /* private mode: the stylesheet follows the device instead */ }
-    // Scroll reveals hide blocks until main.js shows them. If that script has
-    // not started after four seconds (or the page has none), show everything.
-    setTimeout(function () { if (!window.kwsReady) d.classList.remove('js'); }, 4000);
+    // Scroll reveals hide blocks until main.js shows them. A deferred script has
+    // run, or failed, by DOMContentLoaded: if main.js has not started by then
+    // (or the page has none), the page is a no-script page. If it is still on
+    // its way after four seconds, show every block and leave the header alone.
+    document.addEventListener('DOMContentLoaded', function () { if (!window.kwsReady) d.classList.remove('js'); });
+    setTimeout(function () { if (!window.kwsReady) d.classList.add('show-all'); }, 4000);
   })();
 </script>
 <link rel="preload" href="/assets/fonts/fraunces-soft.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/figtree.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/styles.css?v=2">
+<link rel="stylesheet" href="/assets/css/styles.css?v=3">
 
 <script type="application/ld+json">
 {
@@ -480,7 +483,7 @@
             <td role="cell"><span class="cell-label" aria-hidden="true">Design</span>Custom design, 1 revision round</td>
             <td role="cell"><span class="cell-label" aria-hidden="true">Included</span><ul role="list"><li>Copy editing and polish (you supply the text)</li><li>Contact form</li><li>Mobile &amp; SEO basics</li></ul></td>
             <td role="cell"><span class="cell-label" aria-hidden="true">Support</span>14 days</td>
-            <td role="cell" class="spec-act"><a class="btn btn-block" href="/contact/?package=onepage">Start a one-page site</a><a class="btn btn-quiet" href="/contact/" data-booking>Or book the free call first</a></td>
+            <td role="cell" class="spec-act"><a class="btn btn-block" href="/contact/?package=onepage#contact-form">Ask about a one-page site</a><a class="btn btn-quiet" href="/contact/" data-booking>Or book the free call first</a></td>
           </tr>
           <tr role="row">
             <th role="rowheader" scope="row" class="spec-name">Starter</th>
@@ -491,7 +494,7 @@
             <td role="cell"><span class="cell-label" aria-hidden="true">Design</span>Custom design, 1 revision round</td>
             <td role="cell"><span class="cell-label" aria-hidden="true">Included</span><ul role="list"><li>Copy editing and polish (you supply the text)</li><li>Contact form</li><li>Mobile &amp; SEO basics</li></ul></td>
             <td role="cell"><span class="cell-label" aria-hidden="true">Support</span>30 days</td>
-            <td role="cell" class="spec-act"><a class="btn btn-block" href="/checkout/?plan=starter-deposit">Pay 50% deposit —&nbsp;$1,000</a><a class="btn btn-quiet" href="/contact/?package=starter">Or send an enquiry first<span class="sr-only"> about the Starter package</span></a></td>
+            <td role="cell" class="spec-act"><a class="btn btn-block" href="/checkout/?plan=starter-deposit">Pay 50% deposit —&nbsp;$1,000</a><a class="btn btn-quiet" href="/contact/?package=starter#contact-form">Or send an enquiry first<span class="sr-only"> about the Starter package</span></a></td>
           </tr>
           <tr role="row" class="is-popular">
             <th role="rowheader" scope="row" class="spec-name">Business <span class="popular">Most popular</span></th>
@@ -502,7 +505,7 @@
             <td role="cell"><span class="cell-label" aria-hidden="true">Design</span>Up to 3 design rounds, plus a final tweaks round</td>
             <td role="cell"><span class="cell-label" aria-hidden="true">Included</span><ul role="list"><li>Copywriting: we draft, you edit</li><li>Blog or news section</li><li>Analytics &amp; tracking setup</li><li>Local SEO configuration</li></ul></td>
             <td role="cell"><span class="cell-label" aria-hidden="true">Support</span>90 days</td>
-            <td role="cell" class="spec-act"><a class="btn btn-primary btn-block" href="/checkout/?plan=business-deposit">Pay 50% deposit —&nbsp;$2,000</a><a class="btn btn-quiet" href="/contact/?package=business">Or send an enquiry first<span class="sr-only"> about the Business package</span></a></td>
+            <td role="cell" class="spec-act"><a class="btn btn-primary btn-block" href="/checkout/?plan=business-deposit">Pay 50% deposit —&nbsp;$2,000</a><a class="btn btn-quiet" href="/contact/?package=business#contact-form">Or send an enquiry first<span class="sr-only"> about the Business package</span></a></td>
           </tr>
           <tr role="row">
             <th role="rowheader" scope="row" class="spec-name">Commerce</th>
@@ -513,7 +516,7 @@
             <td role="cell"><span class="cell-label" aria-hidden="true">Design</span>Up to 3 design rounds, plus a final tweaks round</td>
             <td role="cell"><span class="cell-label" aria-hidden="true">Included</span><ul role="list"><li>Payments, shipping &amp; tax</li><li>Product import</li><li>Email &amp; abandoned cart flows</li><li>Team training session</li></ul></td>
             <td role="cell"><span class="cell-label" aria-hidden="true">Support</span>6 months</td>
-            <td role="cell" class="spec-act"><a class="btn btn-block" href="/checkout/?plan=commerce-deposit">Pay 50% deposit —&nbsp;$4,000</a><a class="btn btn-quiet" href="/contact/?package=commerce">Or send an enquiry first<span class="sr-only"> about the Commerce package</span></a></td>
+            <td role="cell" class="spec-act"><a class="btn btn-block" href="/checkout/?plan=commerce-deposit">Pay 50% deposit —&nbsp;$4,000</a><a class="btn btn-quiet" href="/contact/?package=commerce#contact-form">Or send an enquiry first<span class="sr-only"> about the Commerce package</span></a></td>
           </tr>
         </tbody>
       </table>
@@ -548,11 +551,11 @@
             </li>
             <li>
               <div class="pl-row"><h4 class="pl-name">Booking &amp; scheduling setup</h4><span class="dots" aria-hidden="true"></span><span class="pl-price">$750</span></div>
-              <p>Branded booking, service config, calendars and automatic text and email reminders.</p>
+              <p>Branded booking with your services set up, calendars and automatic text and email reminders.</p>
             </li>
             <li>
               <div class="pl-row"><h4 class="pl-name">CRM &amp; calendar sync</h4><span class="dots" aria-hidden="true"></span><span class="pl-price">$750</span></div>
-              <p>Enquiries land in your CRM automatically — no re-typing, nothing lost.</p>
+              <p>Enquiries land in your CRM (your customer list) automatically — no re-typing, <span class="nowrap">nothing lost.</span></p>
             </li>
           </ul>
         </div>
@@ -569,9 +572,9 @@
           <h2>Systems that win customers and save time</h2>
         </div>
         <div>
-          <p class="section-sub">Start with a <a href="/contact/?package=check">free online check</a> or a $350 Growth Audit, then set up only what your business needs. Software and texting services run on accounts in your name, with their fees paid to the provider.</p>
+          <p class="section-sub">Start with a <a href="/contact/?package=check#contact-form">free online check</a> or a $350 Growth Audit, then set up only what your business needs. Software and texting services run on accounts in your name, with their fees paid to the provider.</p>
           <div class="btn-row">
-            <a class="btn btn-primary" href="/contact/?package=audit">Book a Growth Audit, $350</a>
+            <a class="btn btn-primary" href="/contact/?package=audit#contact-form">Book a Growth Audit, $350</a>
             <a class="btn btn-quiet" href="/consulting/">How each setup works</a>
           </div>
         </div>
@@ -622,7 +625,7 @@
             </li>
             <li>
               <div class="pl-row"><h4 class="pl-name">Partner plan</h4><span class="dots" aria-hidden="true"></span><span class="pl-price">$1,000/mo</span></div>
-              <p>Everything in Advisor, two calls a month and up to 5 hours of hands-on work a month.</p>
+              <p>Everything in Advisor, two calls a month and up to 5 hours of <span class="nowrap">hands-on</span> work a month.</p>
             </li>
           </ul>
         </div>
@@ -640,7 +643,7 @@
               <p class="receipt-sum"><span>Bought separately</span><s>$3,250</s></p>
               <p class="receipt-total"><span>Launch bundle</span><b>$3,000</b></p>
             </div>
-            <a class="btn" href="/contact/?package=bundle">Start the Launch bundle</a>
+            <a class="btn" href="/contact/?package=bundle#contact-form">Ask about the Launch bundle</a>
           </div>
         </div>
       </div>
@@ -656,9 +659,11 @@
           <h2>Care plans</h2>
         </div>
         <p class="section-sub">
-          A site isn't finished at launch — it needs patching, monitoring and small
-          changes, or it quietly rots. We keep yours fast, current and online, and you
-          get a person who already knows your site when something needs doing.
+          <strong>Optional.</strong> The site, the domain and the hosting account are yours
+          with or without a plan, and there is no <span class="nowrap">long-term</span> contract. A site isn't finished
+          at launch — it needs patching, monitoring and small changes, or it quietly rots.
+          We keep yours fast, current and online, and you get a person who already knows
+          your site when something needs doing.
         </p>
       </header>
 
@@ -673,7 +678,7 @@
             <td role="cell"><span class="cell-label" aria-hidden="true">Fits</span>One-page and Starter sites</td>
             <td role="cell"><span class="cell-label" aria-hidden="true">What you get</span><ul role="list"><li>1 small change a month, made within 5 business days</li><li>You keep your own domain and hosting renewals current</li></ul></td>
             <td role="cell" class="num">$125<small>/mo</small></td>
-            <td role="cell"><a class="btn btn-sm btn-block" href="/contact/?package=care" aria-label="Request plan: Basic care, $125 a month">Request plan</a></td>
+            <td role="cell"><a class="btn btn-sm btn-block" href="/contact/?package=care#contact-form" aria-label="Request plan: Basic care, $125 a month">Request plan</a></td>
           </tr>
           <tr role="row">
             <th role="rowheader" scope="row">Essential</th>
@@ -707,7 +712,7 @@
           <li>Security patches and platform updates</li>
           <li>Error monitoring, with fixes when something breaks</li>
           <li>Changes you request, made for you</li>
-          <li>No long-term contract or minimum term. Cancel or change with <a href="/terms/">10 days' written notice</a>, no fee.</li>
+          <li>No long-term contract or minimum term. Cancel or change with <a href="/terms/"><span class="nowrap">10 days'</span> written notice</a>, no fee.</li>
         </ul>
         <div class="btn-row">
           <a class="btn" href="/contact/">Ask about care plans</a>
@@ -827,6 +832,6 @@
     <p class="footer-links"><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="#top">Back to top ↑</a></p>
   </div>
 </footer>
-<script src="/assets/js/main.js?v=2" defer></script>
+<script src="/assets/js/main.js?v=3" defer></script>
 </body>
 </html>

@@ -37,14 +37,17 @@
       if (t !== 'dark' && t !== 'light') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       d.setAttribute('data-theme', t);
     } catch (e) { /* private mode: the stylesheet follows the device instead */ }
-    // Scroll reveals hide blocks until main.js shows them. If that script has
-    // not started after four seconds (or the page has none), show everything.
-    setTimeout(function () { if (!window.kwsReady) d.classList.remove('js'); }, 4000);
+    // Scroll reveals hide blocks until main.js shows them. A deferred script has
+    // run, or failed, by DOMContentLoaded: if main.js has not started by then
+    // (or the page has none), the page is a no-script page. If it is still on
+    // its way after four seconds, show every block and leave the header alone.
+    document.addEventListener('DOMContentLoaded', function () { if (!window.kwsReady) d.classList.remove('js'); });
+    setTimeout(function () { if (!window.kwsReady) d.classList.add('show-all'); }, 4000);
   })();
 </script>
 <link rel="preload" href="/assets/fonts/fraunces-soft.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/figtree.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/styles.css?v=2">
+<link rel="stylesheet" href="/assets/css/styles.css?v=3">
 
 <script type="application/ld+json">
 {
@@ -425,9 +428,9 @@
     <div class="container">
       <p class="eyebrow">Consulting &amp; automation</p>
       <h1><span class="l">More customers,</span> <span class="l"><span class="mark">less busywork</span></span></h1>
-      <p class="lede">A website is one piece. We also set up the systems behind it: Google reviews, missed-call text-back, online booking and automatic follow-up. Fixed prices, and the first check is free.</p>
+      <p class="lede">A website is one piece. We also set up the systems behind it: Google reviews, missed-call text-back, online booking and automatic <span class="nowrap">follow-up</span>. Fixed prices, and <a href="/contact/?package=check#contact-form">the first check is free</a>.</p>
       <div class="btn-row">
-        <a class="btn btn-primary btn-lg" href="/contact/?package=audit">Book a Growth Audit, $350</a>
+        <a class="btn btn-primary btn-lg" href="/contact/?package=audit#contact-form">Book a Growth Audit, $350</a>
         <a class="btn btn-lg" href="#calculator">Estimate what it's worth</a>
       </div>
       <a class="price-strip" href="#services">
@@ -465,14 +468,14 @@
           <table class="ledger" role="table">
             <caption>An example week for a small service business</caption>
             <thead role="rowgroup">
-              <tr role="row"><th role="columnheader" scope="col">Done by hand</th><th role="columnheader" scope="col">Example</th><th role="columnheader" scope="col"><span class="sr-only">Share of the week</span></th><th role="columnheader" scope="col" class="num">Time a week</th></tr>
+              <tr role="row"><th role="columnheader" scope="col">Done by hand</th><th role="columnheader" scope="col">Example</th><th role="columnheader" scope="col" aria-hidden="true"><span class="sr-only">Share of the week</span></th><th role="columnheader" scope="col" class="num">Time a week</th></tr>
             </thead>
             <tbody role="rowgroup">
-              <tr role="row"><th role="rowheader" scope="row">Returning missed calls and voicemails</th><td role="cell">5&nbsp;calls&nbsp;×&nbsp;6&nbsp;minutes</td><td role="cell" class="ledger-bar"><span aria-hidden="true" style="--v:.375"></span></td><td role="cell" class="num">30 min</td></tr>
-              <tr role="row"><th role="rowheader" scope="row">Booking appointments by phone and text</th><td role="cell">10&nbsp;bookings&nbsp;×&nbsp;8&nbsp;minutes</td><td role="cell" class="ledger-bar"><span aria-hidden="true" style="--v:1"></span></td><td role="cell" class="num">80 min</td></tr>
-              <tr role="row"><th role="rowheader" scope="row">Chasing quotes that went quiet</th><td role="cell">8&nbsp;quotes&nbsp;×&nbsp;7&nbsp;minutes</td><td role="cell" class="ledger-bar"><span aria-hidden="true" style="--v:.7"></span></td><td role="cell" class="num">56 min</td></tr>
-              <tr role="row"><th role="rowheader" scope="row">Copying enquiries into a list or notebook</th><td role="cell">15&nbsp;enquiries&nbsp;×&nbsp;3&nbsp;minutes</td><td role="cell" class="ledger-bar"><span aria-hidden="true" style="--v:.5625"></span></td><td role="cell" class="num">45 min</td></tr>
-              <tr role="row"><th role="rowheader" scope="row">Asking for reviews</th><td role="cell">6&nbsp;jobs&nbsp;×&nbsp;4&nbsp;minutes</td><td role="cell" class="ledger-bar"><span aria-hidden="true" style="--v:.3"></span></td><td role="cell" class="num">24 min</td></tr>
+              <tr role="row"><th role="rowheader" scope="row">Returning missed calls and voicemails</th><td role="cell">5&nbsp;calls&nbsp;×&nbsp;6&nbsp;minutes</td><td role="cell" class="ledger-bar" aria-hidden="true"><span aria-hidden="true" style="--v:.375"></span></td><td role="cell" class="num">30 min</td></tr>
+              <tr role="row"><th role="rowheader" scope="row">Booking appointments by phone and text</th><td role="cell">10&nbsp;bookings&nbsp;×&nbsp;8&nbsp;minutes</td><td role="cell" class="ledger-bar" aria-hidden="true"><span aria-hidden="true" style="--v:1"></span></td><td role="cell" class="num">80 min</td></tr>
+              <tr role="row"><th role="rowheader" scope="row">Chasing quotes that went quiet</th><td role="cell">8&nbsp;quotes&nbsp;×&nbsp;7&nbsp;minutes</td><td role="cell" class="ledger-bar" aria-hidden="true"><span aria-hidden="true" style="--v:.7"></span></td><td role="cell" class="num">56 min</td></tr>
+              <tr role="row"><th role="rowheader" scope="row">Copying enquiries into a list or notebook</th><td role="cell">15&nbsp;enquiries&nbsp;×&nbsp;3&nbsp;minutes</td><td role="cell" class="ledger-bar" aria-hidden="true"><span aria-hidden="true" style="--v:.5625"></span></td><td role="cell" class="num">45 min</td></tr>
+              <tr role="row"><th role="rowheader" scope="row">Asking for reviews</th><td role="cell">6&nbsp;jobs&nbsp;×&nbsp;4&nbsp;minutes</td><td role="cell" class="ledger-bar" aria-hidden="true"><span aria-hidden="true" style="--v:.3"></span></td><td role="cell" class="num">24 min</td></tr>
             </tbody>
             <tfoot role="rowgroup">
               <tr role="row"><th role="rowheader" scope="row">Total</th><td role="cell" colspan="3" class="num">235 min, about 4 hours</td></tr>
@@ -481,7 +484,7 @@
         </div>
         <div class="bigfig reveal">
           <p class="bigfig-num">About <b>200</b> hours a year, in this example: five <span class="nowrap">40-hour weeks</span>.</p>
-          <p class="note"><span class="flag">Example</span>These are example numbers to show the arithmetic, not a measurement of your business. You still answer the replies yourself; the automation does the chasing, copying and reminding. In a Growth Audit we work it out from your real numbers.</p>
+          <p class="note"><span class="flag">Example</span> These are example numbers to show the arithmetic, not a measurement of your business. You still answer the replies yourself; the automation does the chasing, copying and reminding. In a Growth Audit we work it out from your real numbers.</p>
           <p class="fine">Survey figures: Time etc and Censuswide, 251 US business owners (2023), about 36% of a 45.5-hour week spent on admin; American Express and Small Business Saturday UK, 1,000 owners, 11 hours a week.</p>
         </div>
       </div>
@@ -659,7 +662,7 @@
 
       <form class="calc panel" id="growth-calc" novalidate onsubmit="return false">
         <!-- Shown only when scripts are off: the worksheet cannot recalculate without them -->
-        <p class="note calc-nojs"><span class="flag">Example</span>Your browser has scripts turned off, so the estimate stays on the example numbers shown here. Turn scripts on to use your own.</p>
+        <p class="note calc-nojs"><span class="flag">Example</span> Your browser has scripts turned off, so the estimate stays on the example numbers shown here. Turn scripts on to use your own.</p>
         <div class="calc-inputs">
           <fieldset class="calc-group">
             <legend class="label">Your business</legend>
@@ -707,10 +710,10 @@
           </fieldset>
         </div>
 
-        <div class="receipt" aria-live="polite">
+        <div class="receipt">
           <p class="receipt-head"><span>Your estimate</span><span>Your numbers</span></p>
-          <p class="receipt-total"><span>Estimated extra revenue</span><b><span id="r-month">$2,133</span><small>/mo</small></b></p>
-          <p class="note"><span class="flag">Estimate</span>An estimate from the numbers you enter, not a promise or a guarantee of results. Real results depend on your market, your prices and how quickly you answer the leads it brings in. Software and texting fees are paid to the provider and are extra.</p>
+          <p class="receipt-total" aria-live="polite" aria-atomic="true"><span>Estimated extra revenue</span><b><span id="r-month">$2,133</span><small>/mo</small></b></p>
+          <p class="note"><span class="flag">Estimate</span> An estimate from the numbers you enter, not a promise or a guarantee of results. Real results depend on your market, your prices and how quickly you answer the leads it brings in. Software and texting fees are paid to the provider and are extra.</p>
           <p class="receipt-note"><span id="r-year">$25,600</span> a year, from about <span id="r-jobs">5.3</span> extra jobs a month</p>
           <ul class="receipt-lines" role="list">
             <li><span>From missed calls won back</span><span class="dots" aria-hidden="true"></span><b id="r-calls">$1,733/mo</b></li>
@@ -719,7 +722,7 @@
             <li><span>Value of that time</span><span class="dots" aria-hidden="true"></span><b id="r-timeval">$6,500/yr</b></li>
           </ul>
           <p class="receipt-note" id="r-payback">At these numbers, the $750 missed-call setup would pay for itself in about 2 weeks.</p>
-          <a class="btn btn-primary btn-block" href="/contact/?package=audit">Check my real numbers in a Growth&nbsp;Audit</a>
+          <a class="btn btn-primary btn-block" href="/contact/?package=audit#contact-form">Check my real numbers in a Growth&nbsp;Audit</a>
         </div>
       </form>
     </div>
@@ -742,7 +745,7 @@
             <div>
               <div class="pl-row"><h3 class="pl-name">Free online check</h3><span class="dots" aria-hidden="true"></span><span class="pl-price">Free</span></div>
               <p>Send us your business name. We look at your website, Google profile, reviews, listings and how easy you are to reach, then email you the top three fixes, in plain English, within 2 business days.</p>
-              <a class="more-link" href="/contact/?package=check">Ask for the free check<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a>
+              <a class="more-link" href="/contact/?package=check#contact-form">Ask for the free check<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a>
             </div>
           </li>
 
@@ -755,7 +758,7 @@
                 <li>Time and revenue estimate from your numbers</li>
                 <li>The $350 comes off any project booked within 30 days</li>
               </ul>
-              <a class="btn btn-primary" href="/contact/?package=audit">Book a Growth Audit, $350</a>
+              <a class="btn btn-primary" href="/contact/?package=audit#contact-form">Book a Growth Audit, $350</a>
             </div>
             <ul class="pricelist path-more" role="list">
               <li>
@@ -804,7 +807,7 @@
                   <li>Monthly report: calls, enquiries, reviews and Google views</li>
                   <li>Email support, replies within 1 business day</li>
                 </ul>
-                <a class="more-link" href="/contact/?package=advisor">Ask about Advisor<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a>
+                <a class="more-link" href="/contact/?package=advisor#contact-form">Ask about Advisor<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a>
               </li>
               <li>
                 <div class="pl-row"><h4 class="pl-name">Partner plan</h4><span class="dots" aria-hidden="true"></span><span class="pl-price">$1,000/mo</span></div>
@@ -816,7 +819,7 @@
                   <li>Your automations monitored and fixed when something breaks</li>
                   <li>A written growth plan every quarter</li>
                 </ul>
-                <a class="more-link" href="/contact/?package=partner">Ask about Partner<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a>
+                <a class="more-link" href="/contact/?package=partner#contact-form">Ask about Partner<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a>
               </li>
             </ul>
             <p class="fine path-more">No long-term contract: cancel or change with 10 days' written notice, no&nbsp;fee.</p>
@@ -833,7 +836,7 @@
         <div class="receipt on-paper tilt">
           <p class="receipt-head"><span>Launch bundle</span><span>Receipt</span></p>
           <ul class="receipt-lines" role="list">
-            <li><span>Starter website, up to 5 pages</span><span class="dots" aria-hidden="true"></span><b>$2,000</b></li>
+            <li><span>Starter website, up to <span class="nowrap">5 pages</span></span><span class="dots" aria-hidden="true"></span><b>$2,000</b></li>
             <li><span>Google profile &amp; reviews</span><span class="dots" aria-hidden="true"></span><b>$500</b></li>
             <li><span>Missed-call text-back</span><span class="dots" aria-hidden="true"></span><b>$750</b></li>
             <li><span>30 days support</span><span class="dots" aria-hidden="true"></span><b>Included</b></li>
@@ -848,7 +851,7 @@
             <p class="label" aria-hidden="true">Payment plan</p>
             <div class="payplan-bar" aria-hidden="true"><span class="payplan-seg payplan-dep" style="--w:50"><b>$1,500</b>down</span><span class="payplan-seg" style="--w:16.67"><b>$500</b>month 1</span><span class="payplan-seg" style="--w:16.67"><b>$500</b>month 2</span><span class="payplan-seg" style="--w:16.67"><b>$500</b>month 3</span></div>
           </figure>
-          <a class="btn btn-primary" href="/contact/?package=bundle">Start the Launch bundle</a>
+          <a class="btn btn-primary" href="/contact/?package=bundle#contact-form">Ask about the Launch bundle</a>
         </div>
       </aside>
     </div>
@@ -890,7 +893,7 @@
         <p>Start with the free check, or book a free 30-minute call. No pitch: you'll leave knowing what would make the biggest difference and what it would cost.</p>
         <div class="btn-row">
           <a class="btn btn-primary btn-lg" href="/contact/" data-booking>Book a free 30-minute call</a>
-          <a class="btn btn-lg" href="/contact/?package=check">Ask for the free check</a>
+          <a class="btn btn-lg" href="/contact/?package=check#contact-form">Ask for the free check</a>
         </div>
       </div>
       <!-- Decorative: the same facts as the paragraph, drawn as an appointment card -->
@@ -993,7 +996,7 @@
     <p class="footer-links"><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="#top">Back to top ↑</a></p>
   </div>
 </footer>
-<script src="/assets/js/main.js?v=2" defer></script>
-<script src="/assets/js/calculator.js?v=2" defer></script>
+<script src="/assets/js/main.js?v=3" defer></script>
+<script src="/assets/js/calculator.js?v=3" defer></script>
 </body>
 </html>
