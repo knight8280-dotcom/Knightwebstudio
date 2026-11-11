@@ -39,6 +39,7 @@ page are reached by link only.
 | `/contact/` | Enquiry form, spam honeypot, saved drafts, "what happens next" |
 | `/privacy/` | Plain-English privacy notice — see [Privacy page](#7-privacy-page) |
 | `/terms/` | Plain-English terms: 50/50 payments, the payment plan, 7-day invoices, card/ACH via Stripe or check, late interest, revision rounds per package, who writes the copy, care plan cancellation. The signed project agreement controls the details (cancellation fees are deliberately not listed here) |
+| `/pay/` | Pay online, for clients who have agreed a project: the three deposits and four care plans, each with its checkout (or request) button. Not in the menu or the sitemap (noindex, like checkout); linked from the footer and the contact page |
 | `/checkout/`, `/checkout/success/` | Stripe embedded checkout for deposits and care plans, and the confirmation page it returns to. See `STRIPE_INTEGRATION_TODO.md` |
 | `/start/` | Landing page for ads, emails and posts: every service with its price, pricing tiers, selected work, the four steps, one call to action. No menu. See [Landing page](#8-landing-page-start) |
 | `/about/` | First-person About page for Christian Knight: background, how he works, selected work and contact details. The founder photo is intentionally left out for now — add one later beside the business card in the page head if wanted |
@@ -166,21 +167,21 @@ pattern, or Lighthouse will flag skipped heading levels.
     <section class="kws-close on-blue kws-shader-host"> … </section>   <!-- the closing band -->
   </main>
   … phone bar and footer (from tools/chrome/) …
-  <script src="/assets/js/main.js?v=4" defer></script>
-  <script src="/assets/js/shader.js?v=4" defer></script>   <!-- pages with motion -->
-  <script src="/assets/js/motion.js?v=4" defer></script>   <!-- pages with a carousel or the folder stack -->
+  <script src="/assets/js/main.js?v=5" defer></script>
+  <script src="/assets/js/shader.js?v=5" defer></script>   <!-- pages with motion -->
+  <script src="/assets/js/motion.js?v=5" defer></script>   <!-- pages with a carousel or the folder stack -->
 </body>
 ```
 
 - **Asset versions.** Every link to a stylesheet or script carries the same
-  version number, now `?v=4`: `styles.css` (all 19 pages), `main.js` (all but
+  version number, now `?v=5`: `styles.css` (all 20 pages), `main.js` (all but
   404, which loads no script), `calculator.js` (/consulting/), `shader.js`
   (the 14 pages with motion), `motion.js` (home, /start/, /consulting/,
   /pricing/), and the kit's stylesheet `motion.css` (those four and /process/).
   GitHub Pages lets browsers keep a file for ten minutes, so a visitor who had
   the old files would otherwise get new HTML with an old stylesheet or script.
   Whenever you change any of them, raise the number by one on every link in
-  every page in the same commit (`grep -rl '?v=4' --include=*.html .` lists the
+  every page in the same commit (`grep -rl '?v=5' --include=*.html .` lists the
   pages), and keep every link on the same number. Fonts and images are not
   versioned: give a changed one a new file name instead.
 - **Scripts.** Every script is a file loaded with `defer` at the end of the
@@ -292,14 +293,14 @@ project's working files, not in this repository: `base.css`, `motion.css`,
 and `motion.js` here are byte for byte the kit's files; `styles.css` carries
 `base.css` with the kit's colour variables resolved to this site's tokens.
 
-**How a page loads it.** In the `<head>`, `motion.css?v=4` directly after
-`styles.css?v=4`, only on a page that places a card or a carousel. At the end
+**How a page loads it.** In the `<head>`, `motion.css?v=5` directly after
+`styles.css?v=5`, only on a page that places a card or a carousel. At the end
 of the `<body>`, after `main.js`, with `defer`, nothing render-blocking:
 
 ```html
-<script src="/assets/js/main.js?v=4" defer></script>
-<script src="/assets/js/shader.js?v=4" defer></script>   <!-- any page with motion -->
-<script src="/assets/js/motion.js?v=4" defer></script>   <!-- only with a carousel or the folder stack -->
+<script src="/assets/js/main.js?v=5" defer></script>
+<script src="/assets/js/shader.js?v=5" defer></script>   <!-- any page with motion -->
+<script src="/assets/js/motion.js?v=5" defer></script>   <!-- only with a carousel or the folder stack -->
 ```
 
 The first-paint snippet (`tools/chrome/head-script.inc`) carries the kit's

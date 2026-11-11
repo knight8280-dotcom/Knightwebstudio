@@ -1,0 +1,4 @@
+{
+  "_comment": "Extra LIVE-mode plans, added on top of STRIPE_PLANS_JSON (the live list kept in Render). Read only when STRIPE_PLANS_JSON is set, so test mode never sees these live Price IDs, and never replaces a key that list already has. Price IDs are not secret. test-payment: a $1 private test of the checkout (Stripe product prod_VbmWv8R1lnHTSR), linked from nowhere on the site; open /checkout/?plan=test-payment, pay, then refund it in the Stripe Dashboard. Delete the entry to switch it off.",
+  "test-payment": { "price": "price_1UaYxsLOmAZAVClwqvuBLKul", "mode": "payment", "label": "Test payment" }
+}
