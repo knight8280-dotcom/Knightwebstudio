@@ -1,39 +1,62 @@
 # KnightWebstudio — business website
 
-A complete, production-ready marketing website for a web design, automation
-and small-business consulting studio. Plain HTML, CSS and JavaScript — **no build step, no dependencies, no
-npm install**. Open `index.html` and it works.
+The marketing website of KnightWebstudio, a one-person web design, automation
+and small-business consulting studio in Baton Rouge, Louisiana. Plain HTML, CSS
+and JavaScript — **no build step, no dependencies, no npm install**. Serve the
+folder and it works (see [Run it locally](#run-it-locally)).
+
+## The design in two sentences
+
+**The well-run shop.** Every page is built from things you would find in a good
+local business — the painted sign, the price board, the job ticket, the receipt,
+the appointment card, the business card — drawn on warm paper in ink,
+sign-painter's blue and Red Stick brick, so that a roofer on a phone reads it as
+local, plain-spoken and carefully made. Light is "open for business"; the dark
+theme is the same street after closing.
+
+Most visitors are owners of local service businesses on a phone, so the phone
+view is the design and the desktop view is the same thing with more room.
 
 ## Pages
 
-A home page plus eight pages, each with its own title, description, canonical
-URL and Open Graph tags. The menu reaches the first six; privacy and terms are
-linked from the footer.
+Nineteen pages, each with its own title. Sixteen of them also carry a
+description, a canonical URL and Open Graph tags. The other three are kept out
+of search results (`noindex`): the two checkout pages have a description and a
+canonical URL but no Open Graph tags, and the not-found page has a title only.
+The menu reaches eight pages; privacy, terms and the four city pages are
+linked from the footer; `/start/`, the two checkout pages and the not-found
+page are reached by link only.
 
 | URL | Contents |
 | --- | --- |
-| `/` | Landing page: hero, three service cards, three projects, four process steps, three prices — each teasing the full page |
-| `/services/` | All nine services: the six website services plus growth consulting, Google profile & reviews, and automation |
+| `/` | Home: the hero (shop front, an example text-back, the four prices), three services with their prices, one missed call followed through three automations, three projects, the four-step job ticket, the price board, who you work with |
+| `/services/` | All nine services, each with its price: a service menu, then the six website services plus growth consulting, Google profile & reviews, and automation. Three are set out in full and six are rows that open |
 | `/consulting/` | Consulting & automation: where the week goes (worked example table), how each automation works step by step, the revenue & time calculator, setup prices, Advisor/Partner monthly plans, the Launch bundle, four steps and four questions |
-| `/work/` | Three live projects as full case-study rows, newest first |
+| `/work/` | Three live projects as full case rows, the local one first |
 | `/process/` | Four-step "no surprises" explainer |
-| `/pricing/` | Three project tiers, add-ons (brand identity, automation), three care tiers |
+| `/pricing/` | Four website packages as one comparison table, how you pay (the payment plan drawn to scale), add-ons, consulting and automation prices with the Launch bundle, four care plans |
 | `/faq/` | Fourteen answers, with FAQPage schema |
 | `/contact/` | Enquiry form, spam honeypot, saved drafts, "what happens next" |
 | `/privacy/` | Plain-English privacy notice — see [Privacy page](#7-privacy-page) |
 | `/terms/` | Plain-English terms: 50/50 payments, the payment plan, 7-day invoices, card/ACH via Stripe or check, late interest, revision rounds per package, who writes the copy, care plan cancellation. The signed project agreement controls the details (cancellation fees are deliberately not listed here) |
 | `/checkout/`, `/checkout/success/` | Stripe embedded checkout for deposits and care plans, and the confirmation page it returns to. See `STRIPE_INTEGRATION_TODO.md` |
 | `/start/` | Landing page for ads, emails and posts: every service with its price, pricing tiers, selected work, the four steps, one call to action. No menu. See [Landing page](#8-landing-page-start) |
-| `/about/` | First-person About page for Christian Knight: background, how he works, selected work and contact details. The founder photo is intentionally left out for now — add one later with an `<img>` at the top of `.about-wrap` if wanted |
+| `/about/` | First-person About page for Christian Knight: background, how he works, selected work and contact details. The founder photo is intentionally left out for now — add one later beside the business card in the page head if wanted |
 | `/web-design-baton-rouge/`, `/web-design-gonzales/`, `/web-design-prairieville/`, `/web-design-denham-springs/` | Local service-area pages: unique copy per city, Smilys Softwash as local work, published prices, a short city FAQ, contact + booking CTAs. Linked from the footer's "Areas we serve" column |
 
-Every page also carries the header, footer and (except `/contact/`,
-`/privacy/` and `/terms/`) the sticky mobile CTA — the header's "Get a quote" is hidden
-below 980px.
+Every page also carries the top strip (city and tap-to-call number), a
+header, a footer and (except `/contact/`, `/privacy/`, `/terms/`, the
+checkout pages and `404.html`) the sticky phone bar with a Call button and the
+booking button. Below 1100px the menu is a full-screen sheet and the standard
+header's "Book a free call" button is hidden; `/start/`, which has no menu,
+keeps that button in its header from 600px, and the not-found page's header
+is the brand alone. The phone number is always in the top strip; from 1280px
+the standard header shows it too, once that strip has scrolled away.
 
-Also built in: dark/light theme toggle (remembers the visitor's choice, and is
-restored by an inline script before first paint so there is no flash), sticky
-header with a sliding active-page marker, mobile menu, scroll reveal
+Also built in: light/dark theme toggle (light is the default; a saved choice
+wins, otherwise a device set to dark gets the night theme; an inline script
+applies it before first paint so there is no flash), sticky
+header, mobile menu, scroll reveal
 animations, `prefers-reduced-motion` support, keyboard accessibility, skip
 link, Open Graph tags for link previews, and JSON-LD structured data for
 Google.
@@ -41,97 +64,258 @@ Google.
 ## File layout
 
 ```
-index.html              Landing page
+index.html              Home
 services/index.html     One directory per page, so URLs are /services/ etc.
-work/  process/  pricing/  faq/  contact/  privacy/  terms/
+consulting/  work/  process/  pricing/  faq/  contact/  about/  start/
+privacy/  terms/  checkout/  checkout/success/
+web-design-baton-rouge/  web-design-gonzales/  web-design-prairieville/  web-design-denham-springs/
 404.html                Not-found page
 site.webmanifest        Installable-app metadata and icons
-assets/css/styles.css   All styling (design tokens at the top)
-assets/js/main.js       Theme, nav, reveals, form handling
-assets/img/             Project screenshots (work-*.jpg), logo, PNG app icons
+assets/css/styles.css   The one stylesheet: the shared design system (tokens at the top, contents list in its header),
+                        then the page-only rules, one block per page, each rule scoped with [data-page="…"]
+assets/fonts/           Fraunces (soft) and Figtree, self-hosted variable WOFF2
+assets/js/main.js       Settings, theme, menu, scroll reveals, phone bar, booking buttons, the contact form, analytics
+assets/js/calculator.js The consulting page's calculator (loaded on that page only)
+assets/img/             Project images (work-*.jpg), logo.svg, PNG app icons, the link-preview image
+tools/chrome/           The one true copy of the header, footer, phone bar and first-paint snippet (*.inc)
+tools/sync_chrome.py    Copies that chrome into every page; --check reports drift
+tools/art/              The crest, the seal and the street scene, as code
+server/                 The small Stripe checkout server (hosted on Render, not on GitHub Pages)
+STRIPE_INTEGRATION_TODO.md  How payments are set up, and what is done by hand
 favicon.ico             16/32/48px icon for browsers and Google results
 robots.txt              Search engine directives
 sitemap.xml             Sitemap for search engines
+CNAME                   The custom domain, read by GitHub Pages
 .nojekyll               Tells GitHub Pages to serve the files as-is
 ```
 
+GitHub Pages publishes the whole folder, `tools/` and this README included.
+Nothing in there is secret; keep it that way.
+
 ## Editing across pages
 
-There is still **no build step** — every page is plain HTML you can open and
-edit. The trade-off is that the header, footer and mobile CTA are duplicated in
-every page. If you change one of those, change it on every page, or they
-will drift. A quick way to check they haven't:
+There is **no build step**: every page is plain HTML that you can open and
+edit. The trade-off is that the header, footer, phone bar and the small
+first-paint script are duplicated in every page. Never edit them in a page:
+edit the partial in `tools/chrome/` and copy it out, or the pages will drift.
 
 ```bash
-for f in index.html */index.html; do grep -c 'id="mobile-cta"' $f; done   # 1 each, 0 on contact/privacy
+python3 tools/sync_chrome.py                  # write the chrome into every page
+python3 tools/sync_chrome.py faq/index.html   # or only the pages named
+python3 tools/sync_chrome.py --check          # change nothing; exit 1 if any page has drifted
 ```
+
+Run it after you change anything in `tools/chrome/`, after you add a page, and
+with `--check` before you publish. It touches only what it owns: the
+first-paint `<script>` in the `<head>`, `<body data-page="…">`, everything
+between `<body>` and `<main>`, the phone bar and the footer. It never touches a
+page's title, description, Open Graph tags, JSON-LD or `<main>`.
+
+| Partial | What it is |
+| --- | --- |
+| `topbar.inc` | Skip link and the top strip: the city and the tap-to-call number |
+| `header.inc` | The standard header: crest and name, the menu, the theme button, "Book a free call" |
+| `header-start.inc` | `/start/`: no menu on purpose, one booking button |
+| `header-bare.inc` | `404.html`: the brand only (that page loads no script) |
+| `footer.inc`, `footer-start.inc`, `footer-bare.inc` | The full footer, and the slim one on `/start/` and the 404 page |
+| `skyline.inc` | The Baton Rouge skyline that tops every footer |
+| `phone-bar.inc` | The sticky "Call" and "Free 30-min call" bar for phones and tablets |
+| `head-script.inc` | The first-paint snippet: sets the theme before anything is drawn and marks the page as script-enabled |
+
+`PAGES` at the top of `tools/sync_chrome.py` says which header and footer each
+page gets, its `data-page` name, and whether it carries the phone bar (the
+contact, legal and checkout pages do not: the form or the text is the point).
+The script also keeps `aria-current="page"` on the right menu link.
 
 Asset and link paths are **root-absolute** (`/assets/…`, `/pricing/`) so the
 same markup works from any directory depth. That relies on the site living at
 the domain root, which it does.
 
-The landing page's teasers are copies of the first three service cards, the
-three projects, the four process steps (shortened) and the three price tiers.
-Update the full page and the landing page together.
+The home page repeats, in short form, three services with their prices, the
+three projects, the four process steps and the four package prices (the price
+board). `/start/` and the four city pages repeat prices and projects too.
+Update the full page and its copies together.
 
-**Heading levels.** On the landing page, section titles are `h2` and card
-titles `h3`. On the sub-pages the page title is the `h1` and card titles sit
-directly under it, so they are `<h2 class="h3">` — an `h2` for the document
-outline, sized like an `h3`. Keep that pattern when adding cards, or Lighthouse
-will flag skipped heading levels.
+**Heading levels.** One `<h1>` a page. On the home page, section titles are
+`h2` and the titles inside them `h3`. Where a small title sits directly under
+the `h1`, it is `<h2 class="h3">` — an `h2` for the document outline, sized like
+an `h3` (the classes `h2`, `h3`, `h4` and `title` only set a size). Keep that
+pattern, or Lighthouse will flag skipped heading levels.
+
+## How a page is put together
+
+```html
+<body data-page="pricing">
+  … top strip and header (from tools/chrome/) …
+  <main id="main">
+    <section class="page-head">  <div class="container"> eyebrow, h1, lede, buttons, price strip </div> </section>
+    <section class="section section-first" id="…"> <div class="container"> … </div> </section>
+    <section class="section section-sand" id="…">  <div class="container"> … </div> </section>
+    <section class="cta-band on-blue"> … </section>
+  </main>
+  … phone bar and footer (from tools/chrome/) …
+  <script src="/assets/js/main.js" defer></script>
+</body>
+```
+
+- **`data-page`** names the page for the stylesheet: `home`, `services`,
+  `consulting`, `work`, `process`, `pricing`, `faq`, `contact`, `about`,
+  `start`, `city` (all four city pages), `privacy`, `terms`, `checkout`,
+  `checkout-success`, `notfound`.
+- **Bands.** Every band is a `.section` holding one `.container`. Plain paper
+  and `.section-sand` alternate; `.section-tight` is a shorter band and
+  `.section-first` the one under the page head. A page ends in the blue closing
+  band (`.cta-band`), or on plain paper (legal, checkout, contact, 404).
+- **Page head.** Three forms: commercial (eyebrow, `h1`, lede, one button row,
+  the price strip), reading (eyebrow, `h1`, lede: FAQ, legal, checkout) and
+  split (`.page-head-split` with one object beside the head from 980px:
+  pricing, contact, about, `/start/`). The home hero is its own.
+- **Shared parts** are written once in sections 01 to 18 of `styles.css` and
+  used by class name: buttons (`.btn`, `.btn-primary`, `.btn-lg`, `.btn-quiet`,
+  `.btn-row`), the price strip, the "On this page" list (`.toc`), the price
+  board (`.board`), dot-leader price lists (`.pricelist`), the package table
+  (`.spec`), the care-plan table (`.table.table-stack`), the time sheet and
+  ledger (`.sheet`, `.ledger`, `.bigfig`), the receipt and the payment plan
+  drawn to scale (`.receipt`, `.payplan`), numbered steps and the job ticket
+  (`.steps`, `.ticket`), the appointment and business cards (`.appt`,
+  `.bizcard`), the phone, calendar, enquiry list and notification mocks
+  (`.fig`, `.phone`, `.cal`, `.leads`, `.notice`, `.vig`), project prints and
+  case rows (`.print`, `.case`, `.browser`), the FAQ list (`.faq`), form
+  fields, tick lists, flat town labels (`.pills`), notes (`.note`), the stamp
+  and the seal. To see how one is written, copy it from a page that uses it,
+  and check that page's block of the stylesheet for a rule that touches it:
+  every page adds a few rules of its own. `/pricing/` shows the most shared
+  parts in one place; its block (section 24) adds the head's contents card,
+  the price groups and the bundle.
+- **Page blocks.** Rules that only one page needs live in that page's block of
+  `styles.css` (sections 19 to 34, in the order of `PAGES`). Every selector
+  there is scoped with `[data-page="<name>"]`, so a page rule cannot reach
+  another page: the selector starts with it, or with `.js ` or
+  `html:not(.js) ` in front of it where the rule depends on scripts running.
+  The two checkout pages share a few rules through `[data-page^="checkout"]`.
+  Reuse a shared part before writing a page rule.
+- **Tone scopes.** `.on-blue` (the price board, the bundle, the closing band)
+  and `.on-ink` (top strip, footer) re-point the colour tokens for everything
+  inside them, so the same classes work there. A paper object that sits on blue
+  (a receipt, the appointment card) carries `.on-paper` and stays cream.
+- **Motion.** Add `reveal` to a block that should rise in as it scrolls into
+  view (never to anything on the first screen, and never to a wrapper that
+  holds a whole section). It only applies when scripts run; without them, and
+  with reduced motion, everything is simply there. A reveal owns `transform`,
+  so a revealed thing that also moves under the pointer uses the `translate`
+  property. Nothing loops for ever.
+- **Scripts off.** Every page reads in full without JavaScript: the menu shows
+  as plain links, FAQ answers are `<details>`, the calculator shows its default
+  results, booking buttons fall back to `/contact/`.
+
+### Adding or editing a page
+
+To **edit** a page, open its `index.html` and change what is inside `<main>`.
+Leave the `<head>` alone unless the page's title or description really is
+changing (and then change the Open Graph tags and JSON-LD with it), and never
+edit between `<!-- art:NAME -->` markers or in the header and footer.
+
+To **add** a page:
+
+1. Copy the folder of the page most like it (`faq/` for a reading page,
+   `services/` for a commercial one) and rename it. The folder name is the URL.
+2. In the copy's `<head>`, set the title, description, canonical URL, Open
+   Graph tags and the JSON-LD breadcrumb.
+3. Replace what is inside `<main>`, building from the shared parts above.
+4. Add the page to `PAGES` in `tools/sync_chrome.py` (its `data-page` name,
+   which header and footer, phone bar or not) and to `PAGES` in
+   `tools/art/build.py`, then run `python3 tools/sync_chrome.py`.
+5. If it needs rules of its own, add a block at the end of `styles.css` with
+   every selector scoped `[data-page="<name>"]`: tokens only (no colour codes),
+   the six breakpoints only, hover rules inside `@media (hover: hover)`.
+6. Add the URL to `sitemap.xml`, link to it from somewhere, and check it at
+   360px and 1440px wide in both themes.
+
+No inline `style=""` attributes, except a custom property that carries data
+(`style="--w:50"` for a bar's share). No second stylesheet, no web-font or
+script CDN, no framework.
 
 ## Make it yours
 
-Everything you need to change is marked `EDIT ME` in the source.
+The notes below say where each thing lives. Two blocks are marked `EDIT ME` in
+the source: the site settings at the top of `assets/js/main.js` and the
+testimonials block in `index.html`.
 
 ### 1. Business name, crest and artwork
 
 The wordmark reads **KnightWebstudio** in full, in the header and footer —
-search for `brand-name` and edit both occurrences.
+search for `brand-name` in `tools/chrome/`, edit every partial that has it,
+and run `python3 tools/sync_chrome.py`.
 
 The mark is the **Charger shield**: a chess knight's head cut into facets in
-five shades of the brand blue, inside a riveted shield with a teal inner
-border. The **full crest** adds crossed swords and a name ribbon for large
-spots. Around them, the site uses a chess-set theme: every sub-page opens with
-its own faceted piece, and loose facets ("shards") drift behind page headers.
+shades of the sign-painter's blue, inside a riveted blue shield with a navy
+field and a gold-leaf inner line.
 
 | Where | What |
 | --- | --- |
 | Header, every page | Charger shield; builds itself on a visit's first page, then again on hover |
-| Footer | Charger shield |
-| Home, closing call to action | Full crest; builds when it scrolls into view |
-| Services / Work / Process / Pricing / FAQ / Contact | Rook / Knight / Pawn / King / Bishop / Queen, stacked in on load; hover makes it hop (the knight makes a knight's move) |
-| Hero and page headers | Drifting shards |
-| 404 | The knight, toppled over |
-| `assets/img/logo.svg`, `crest.svg` | Standalone copies (logo.svg is the JSON-LD logo) |
+| Footer, business card (home, About) | Charger shield |
+| Home hero | The street scene: a brick shop front signed YOUR BUSINESS, on a Baton Rouge street. It turns to night with the dark theme |
+| `/start/` head, 404 page | The same street scene, small; on the 404 page its sign reads PAGE NOT FOUND |
+| Pricing head | The round "Fixed prices" seal |
+| Every footer | The Baton Rouge skyline (inline SVG in `tools/chrome/skyline.inc`); after dark its windows and bridge lamps are lit |
+| `assets/img/logo.svg` | The standalone mark: the SVG favicon, the JSON-LD logo and the app-icon source |
 | `favicon.ico`, `apple-touch-icon.png`, `icon-192/512.png`, `og-image.png` | Rendered from the same artwork |
 
-**All of it is drawn in code, in `tools/art/`.** The drawings live in
-`tools/art/emblems.py`. The pages carry them inline (so they can animate)
-between `<!-- art:NAME -->` markers, which are overwritten on every build —
-never edit between them. To change any artwork:
+The chess pieces and drifting "shards" of the earlier design were retired in
+the November 2026 redesign, and so was the workbench drawing.
+
+`assets/img/crest.svg` (the full crest: the shield with crossed swords and a
+name ribbon) is kept at its old address on purpose. No page uses it, but an
+email signature or a profile outside the site may link to it, so do not
+delete it. `build.py` no longer rewrites it; it is still drawn by
+`full_crest()` in `tools/art/emblems.py` if it ever needs redrawing.
+
+**All of it is drawn in code, in `tools/art/`.**
+
+| File | What it does |
+| --- | --- |
+| `emblems.py` | Draws the crest (`charger`), the small favicon mark, the seal and the street scene's frame, and holds both palettes |
+| `scenes.py` | The street scene's shapes (long, so kept apart). Its fills come from `SCENE_PALETTE` in `emblems.py`, except two that are the same by day and at night and are written in place: the street lamp's glow (`#F3C66B`) and the glare on the shop window (`#fff`) |
+| `build.py` | Writes the drawings into the pages between `<!-- art:NAME -->` markers, and writes `assets/img/logo.svg` |
+| `render.js` | Renders `favicon.ico`, the three PNG app icons and `assets/img/og-image.png` from the same drawings |
+
+The pages carry the art inline between `<!-- art:NAME -->` markers (`crest-header`,
+`crest-footer`, `crest-card`, `seal`, `scene-street`, `scene-notfound`), which
+are overwritten on every build — never edit between them. To change any artwork,
+edit `emblems.py` or `scenes.py`, then:
 
 ```bash
-python3 tools/art/build.py   # rewrites the inline art in every page, logo.svg and crest.svg
-node tools/art/render.js     # re-renders favicon, app icons and the link-preview image (needs Playwright)
+python3 tools/art/build.py              # rewrites the inline art in every page, and logo.svg
+python3 tools/art/build.py index.html   # or only the pages named (logo.svg is then left alone)
+node tools/art/render.js                # re-renders favicon, app icons and the link-preview image (needs Playwright)
 ```
 
+Run `render.js` only when the crest, its palette or the street scene changed:
+the icons and the link-preview image are pictures of them. If nothing changed,
+`build.py` reports "0 page(s) updated" and leaves every file as it was.
+
 The crest keeps fixed colours (the `PALETTE` in `emblems.py`), so it looks the
-same on the dark and light themes, like a printed badge. The animations live at
-the end of `assets/css/styles.css` under "Artwork"; every drawing rests in its
-finished state, so a visitor with reduced motion, or a crawler, sees the
+same by day and at night, like a painted sign. The street scene is themed: it
+carries its own day and night palette (`SCENE_PALETTE`). The crest's build
+animation lives under "Motion" in `assets/css/styles.css`; every drawing rests
+in its finished state, so a visitor with reduced motion, or a crawler, sees the
 complete artwork.
 
 ### 2. Contact details
 
 The contact address is `knightwebstudio1@gmail.com`. It appears in every
-page's header menu, footer and JSON-LD, in `contact/index.html` (contact
-list), `privacy/index.html`, and in `assets/js/main.js` (the form's mailto
+page's phone menu, footer and JSON-LD (the first two come from
+`tools/chrome/`; in every footer the address sits in a `<span>` with a
+`<wbr>` after the `@`, so it breaks there when it has to), on the business card, in `contact/index.html`, `privacy/index.html`
+and the checkout pages, and in `assets/js/main.js` (the form's mailto
 fallback) — a project-wide search-and-replace is the safe way to change it.
 
 The phone number is `(225) 255-0837`. It appears as a `tel:+12252550837` link
-in the homepage footer, the contact page's contact list and the About page,
-and as `"telephone": "+1-225-255-0837"` in every page's JSON-LD block.
+in every page's top strip, header, phone menu, sticky phone bar and footer
+(all in `tools/chrome/`), on the business card, the contact page, the About
+page, `/start/`, the checkout pages and the 404 page, and as
+`"telephone": "+1-225-255-0837"` in every page's JSON-LD block.
 
 The footer previously held three social icons pointing at `href="#"`. Once the
 site became seven pages that was twenty-one dead links, so they were removed.
@@ -169,8 +353,9 @@ how a static site receives mail without a server. It is not a credential.
 2. Web3Forms' own server-side spam checks, on by default.
 3. **hCaptcha**, using Web3Forms' shared zero-config sitekey
    (`50b2fe65-b00b-4b9e-ad62-3ba471098be2`) — no account or keys needed.
-   It is loaded **on demand** (when the contact section nears the viewport, or
-   on first focus in the form), not with the page. A captcha iframe present at
+   It is loaded **after the page**, not with it: when the captcha's place in
+   the form comes into view, on first focus in the form, or four seconds after
+   `main.js` starts, whichever comes first. A captcha iframe present at
    load can take focus and drag the scroll position down the page, and it also
    put a third-party request on the critical path for every visitor.
    The script URL **must** keep `?recaptchacompat=off`. Without it hCaptcha
@@ -201,8 +386,8 @@ When a send fails, the status line now names the server's reason, e.g.
 "Couldn't send that (Captcha verification failed)", so the cause is visible
 without opening devtools.
 
-**Drafts are saved as you type.** Name, email, business, budget, selected
-services and the message go to `localStorage` (debounced, ~400ms) so a half-
+**Drafts are saved as you type.** Name, email, business, the chosen package,
+selected services and the message go to `localStorage` (debounced, ~400ms) so a half-
 written enquiry survives a tab switch or an accidental back button. Cleared on
 a successful send. Nothing is transmitted; every read and write is wrapped in
 try/catch so private mode or a full quota can never break the form.
@@ -219,50 +404,86 @@ misconfiguration. Test from the live site instead.
 To switch providers, change the `action` URL and remove the three hidden
 inputs. Basin and Formspree work with the existing JavaScript unchanged.
 
-### 4. Colours
+### 4. Colours, type and breakpoints
 
-Open `assets/css/styles.css` and edit the four brand variables at the top:
+**Tokens.** Every colour, type size, space, radius, shadow and duration is a
+custom property at the top of `assets/css/styles.css` (section 02), and the
+rest of the stylesheet uses those and nothing else. Each colour is one line
+holding both themes, day first and night second:
 
 ```css
---brand:        #6d8bff;   /* primary */
---brand-strong: #2c46c4;   /* button hover, deep accents */
---brand-soft:   #a5b8ff;   /* eyebrow text, icons */
---accent:       #46e0c0;   /* ticks, prices, result lines */
+--paper: var(--L, #F6F0E4) var(--D, #131722);   /* the page */
+--ink:   var(--L, #1A2238) var(--D, #F3ECDD);   /* headings */
+--blue:  var(--L, #2C46C4) var(--D, #9DB0FF);   /* pressable: buttons, links */
+--brick: var(--L, #A83C26) var(--D, #F0907A);   /* notice this */
+--gold:  #F0C369;                               /* only on blue or on the footer */
 ```
 
-The light theme has its own overrides in the `[data-theme="light"]` block just
-below. Three tokens differ deliberately between themes and are easy to break:
+| Tokens | What they are |
+| --- | --- |
+| `--paper`, `--paper-2`, `--paper-3`, `--card` | The page, sand bands, wells and raised paper (cards, tickets, fields) |
+| `--ink`, `--ink-2`, `--ink-3` | Headings, body copy, captions |
+| `--line`, `--line-2`, `--ctl` | Hairlines, stronger rules and dashes, form-field outlines |
+| `--blue`, `--blue-deep`, `--blue-tint`, `--on-blue` | Pressable things, their hover, the tick's circle, text on a blue button |
+| `--brick`, `--brick-tint` | "Notice this": eyebrows, numerals, bars, the stamp, errors |
+| `--board`, `--footer`, `--gold`, `--cream` | The painted-sign blue, the footer's ink, gold leaf and cream text on both |
+| `--fs-h1` … `--fs-cap`, `--measure` | The type scale (17px body, nothing under 12px) and the reading width, about 65 characters |
+| `--s-0` … `--s-9`, `--gutter`, `--gap`, `--pad`, `--stack`, `--sec` | The 4px spacing scale and the fluid layout spaces |
+| `--r-xs` … `--r-pill`, `--shadow-1` … `--shadow-3` | Corner radii and shadows |
+| `--t-fast`, `--t`, `--t-slow`, `--ease` | Durations and the one easing curve |
 
-- `--brand-soft` and `--accent` are *darker* in light theme — their dark-theme
-  values fail contrast on a light background.
-- `--on-brand` is the text colour used **on** brand-filled surfaces (buttons,
-  the logo mark, the "Most popular" flag). It is dark ink in dark theme,
-  because white on the dark theme's brand blue is only 3.1:1.
-- `--band` is the CTA band's background, deep enough to carry white in both.
+The colour rule: **blue means pressable**, **brick means "notice this"**, and
+**gold only ever sits on blue or on the dark footer**. Nothing inside an
+illustration is blue, so that nothing blue is ever unpressable. Light is the
+default theme; night is the same street after closing, and each is a finished
+design. `site.webmanifest` and each page's `theme-color` carry the day paper,
+`#F6F0E4`; `tools/art/render.js` repeats four day colours for the icons.
 
-If you change the brand colour, re-check all three.
+If you change a colour, re-check contrast in both themes: text needs 4.5:1,
+large text and control outlines 3:1.
+
+**Two typefaces, two files.** Headings, every price and numerals are set in
+**Fraunces** (soft, weight 600; `assets/fonts/fraunces-soft.woff2`); text and
+labels in **Figtree** (`assets/fonts/figtree.woff2`). Both are open-licensed
+(SIL OFL), self-hosted variable fonts, preloaded in each page's `<head>`. No
+italic is loaded, so emphasis is `<strong>`, never `<em>`.
+
+**Six breakpoints**, and only six, written phone first:
+
+| Width | What changes |
+| --- | --- |
+| 380px | Below it is a small phone: the top strip reads "Baton Rouge", the brand shrinks, the phone bar's label shortens |
+| 600px | Button rows sit side by side; headline lines break where they are meant to; leaders appear in the contents list |
+| 760px | Two and three columns; stacked tables become tables; the footer is four columns |
+| 980px | Split layouts and the page head's aside sit side by side; the headline steps up |
+| 1100px | The desktop menu; the package table becomes one table; the price board is four across. Below it: the full-sheet menu and the sticky phone bar |
+| 1280px | The phone number shows in the header once the top strip has scrolled away |
 
 ### 5. Your work
 
-The Work section holds three live projects, newest first, each with an
+The Work page holds three live projects, the local one first, each with an
 image taken from the site itself and a link out. GamersPulseHQ, an
 in-progress prototype, was removed from the site in October 2026:
 
 | Project | What it is | Image source |
 | --- | --- | --- |
 | Risen Health | Online store for a family-owned peptide supplier (added September 2026) | its own Open Graph card |
-| Corbel Books | Fintech SaaS product site and app UI | its own Open Graph card |
+| Corbel Books | Bookkeeping software: product site and app screens | its own Open Graph card |
 | Smilys Softwash | Local exterior-cleaning business (quotes live; card payments being set up) | its own before/after roof photo |
 
 Images live in `assets/img/work-*.jpg`, all 1200px wide and under 90 KB. To add
-a project, copy one `<article class="work-card">` block in `work/index.html`,
-drop a matching image in `assets/img/`, and update the text. The first card is
-the one on screen at load, so it has no `reveal` class and its image uses
-`fetchpriority="high"`; every other card fades in and lazy-loads. The project
-also belongs in the home page's hero panel and projects grid and on `/start/`;
-those grids run three across down to phone width (`.mini-work-grid` in
-`styles.css`); with a fourth project, set them to four across on desktop and
-two across under 980px.
+a project, copy one `<section>` holding an `<article class="case">` in
+`work/index.html` (every second one takes `case-flip`, and the bands alternate
+paper and `section-sand`), drop a matching image in `assets/img/`, and update
+the text. The first row is the one on screen at load, so nothing in it has a
+`reveal` class and its image uses `fetchpriority="high"`; in every other row
+the write-up fades in and the image lazy-loads. The project also belongs in
+the home page's projects row and on `/start/` (three `.print` links in a
+`.grid.grid-3`, which is three across from 760px) and in the About page's
+list; with a fourth project, give those rows `.grid-4` instead. In those
+rows the caption under a name is written in two halves, the kind and what was
+built, around `<span class="sep"> · </span>`: where the print is too narrow for
+the longest caption on one line, the halves stand on two lines.
 
 All descriptions are factual — taken from each site's own copy — with no
 invented metrics. Keep it that way: a result line you can't defend is worse than
@@ -289,8 +510,14 @@ Growth Audit, setup projects and monthly plans. Two rules keep it honest:
 
 **Every price is fixed. Never write a range, "from", "starting at" or
 "ballpark"** anywhere on the site: a range invites the buyer to pick their
-own number. A package's price covers exactly what its card lists; anything
-beyond that is agreed in writing before work starts.
+own number. A package's price covers exactly what its column in the package
+table lists; anything beyond that is agreed in writing before work starts.
+
+**One way to write a price.** Always with the dollar sign and a comma
+(`$1,000`, never `$1000`). In a price list, a table or any other compact price
+line a monthly amount is `/mo` (`$500 or $1,000/mo`); in a sentence it is
+"a month" ("Care plans are $125, $300, $600 or $1,000 a month"). FAQ answers
+keep their own wording, because they must match the structured data.
 
 Current published prices:
 
@@ -332,28 +559,29 @@ client keeps domain and hosting renewals current; its button goes to
 `basic-care` to Stripe, `STRIPE_PLANS_JSON` and `checkout/index.html`'s
 `PLAN_DETAILS` to sell them through checkout.
 
-Every project card also shows the payment plan from the terms: 50% down,
+Every package also shows the payment plan from the terms: 50% down,
 then about a third of the rest each month for 3 months (Starter: $1,000
-down, then about $333/mo).
+down, then about $333/mo). The pricing page draws it to scale.
 
 Starter is an **information website** (up to 5 pages: who the business is,
 what it offers, how to reach it). It was raised from
-$1,500. Each price appears in `pricing/index.html`, the three project tiers
-again on the landing page, the project prices plus three care tiers
+$1,500. Each price appears in `pricing/index.html`, the four project prices
+again on the home page's price board, the project prices plus three care tiers
 (Essential, Growth, Commerce) in every page's JSON-LD `OfferCatalog`, and
 the Basic $125/month, Essential $300/month, Growth $600/month and Commerce
 $1,000/month care figures in the FAQ answer about care plans and the services
 page. The project tiers are also on `/start/` and the four city pages. Search
 for the old figure before changing one.
 
-The service cards carry small price tags taken from the same tiers: design
+The services page puts a price beside each service, in its menu and again on the
+service itself, taken from the same tiers: design
 and build "$1,000, $2,000 or $4,000", e-commerce $8,000, care "$125, $300, $600 or $1,000/mo",
 brand identity $1,500, redesigns "priced as a new site" (a redesign is one of
 the same packages), and SEO "in every build", because every tier includes SEO
 basics.
 
 Consulting and automation prices appear on `/consulting/`, the pricing page's
-"Consulting & automation" panel, the services page cards, `/start/`, the four
+"Consulting & automation" section, the services page, the home page, `/start/`, the four
 city pages, the FAQ, the About page, the terms and every page's JSON-LD
 `OfferCatalog`. Search for the old figure before changing one. None of them
 has a Stripe price yet, so their buttons go to `/contact/?package=…` with
@@ -361,10 +589,11 @@ has a Stripe price yet, so their buttons go to `/contact/?package=…` with
 `automation`, `advisor`, `partner` or `bundle`.
 
 The contact form asks for a **package**, not a budget: its dropdown lists the
-fixed prices. Each tier's button on the pricing page links to
-`/contact/?package=starter` (or `business`, `commerce`) and the form opens with
-that package chosen. The option values are `onepage`, `starter`, `business`,
-`commerce`, `brand` and `care`.
+fixed prices. A link to `/contact/?package=starter` (or any other option
+value) opens the form with that package chosen; the "send an enquiry first"
+links under the pricing page's deposit buttons work this way. The website
+option values are `onepage`, `starter`, `business`, `commerce`, `brand` and
+`care`; the consulting ones are listed above.
 
 **Why $1,500 for brand identity** (set September 2026): logo, colours, fonts,
 a guidelines document and social templates. $1,500 stays under the $2,000
@@ -373,18 +602,19 @@ projects to show. The price appears on the services page, the pricing
 page's add-ons, `/start/` and every page's JSON-LD `OfferCatalog`.
 
 **Keep delivery and support promises in step.** Delivery: as little as 7 days for a
-one-page site, 7–10 days for a Starter site, 2–4 weeks for Business, 4–6 weeks for Commerce (FAQ, pricing
-cards, landing hero, home meta description). Free support after launch: 14
-days on One-page, 30 days on Starter, 90 on Business, six months on Commerce (pricing cards,
-process page, landing process teaser). Buyers rank speed first, so a page
+one-page site, 7–10 days for a Starter site, 2–4 weeks for Business, 4–6 weeks for Commerce (FAQ, the pricing
+table, the price boards, `/start/`, the About page, home meta description). Free support after launch: 14
+days on One-page, 30 days on Starter, 90 on Business, six months on Commerce (the pricing table,
+process page, `/start/`). Buyers rank speed first, so a page
 that says something different costs trust.
 
 ### 6. Social preview image
 
 `assets/img/og-image.png` (1200×630) is what appears when someone shares your
-link on LinkedIn, WhatsApp or Slack. It carries the logo, the headline and the
-domain. To regenerate it after a copy or brand change, rebuild it from the same
-markup used to produce it and re-export at 1200×630.
+link on LinkedIn, WhatsApp or Slack. It carries the crest, the name, one line
+about what we do, the city and the domain, beside the street scene. It is
+drawn by `tools/art/render.js`; edit the text there and run
+`node tools/art/render.js` to regenerate it.
 
 ### 6b. Booking link and analytics
 
@@ -398,10 +628,13 @@ var SITE_CONFIG = {
 };
 ```
 
-- **bookingUrl** — every "Book a discovery call" button (they carry
-  `data-booking`) opens this link in a new tab, and the contact page reveals a
-  "Book a 30-minute call" box beside the form. Empty, the buttons go to
-  `/contact/` and the box stays hidden.
+- **bookingUrl** — every booking button (they carry `data-booking`: "Book a
+  free 30-minute call" in page heads and closing bands, "Book a free call" in
+  the header, the sticky phone bar's button) opens this link in a new tab, and
+  the contact page shows its own booking button under the phone number. Empty,
+  the buttons go to `/contact/` and that one stays hidden. (The comment above
+  the setting in `main.js` still calls them "Book a discovery call" buttons,
+  the label they had before November 2026.)
 - **analyticsScript** — the script URL from Plausible's install snippet
   (Site settings → Site installation). `main.js` runs that snippet for you on
   every page, so there is nothing to paste into the HTML. It counts visits
@@ -456,9 +689,10 @@ section promises the page will name the tool.
 
 `/start/` is the page to send people to from outside the site: Facebook
 posts, cold emails, ads, your email signature. It gives the whole offer on
-one page, every service with its starting price, and has one next step:
-book the free call. It deliberately has **no menu**, so visitors aren't
-pulled away from that step; a "Full website" link sits in its footer.
+one page, every service with its fixed price, and has one main next step:
+book the free call (a tap-to-call button and an enquiry link sit beside it).
+It deliberately has **no menu**, so visitors aren't pulled away from that
+step; a "Full website" link sits in its footer.
 
 Tag each link so Plausible shows which channel sends enquiries:
 
@@ -470,10 +704,53 @@ https://knightwebstudio.com/start/?utm_source=email&utm_campaign=softwash
 Its service list and prices are copies of the Services and Pricing pages.
 Change a price there and change it here too.
 
+## The rules that protect the business
+
+These matter more than any design detail. A change that breaks one of them
+should not be published.
+
+1. **Fixed prices, written in full.** Never a range, "from", "starting at",
+   "as low as" or "ballpark". Every price on the site is in the table under
+   [Pricing](#5b-pricing); change one there and everywhere it is repeated.
+2. **No invented proof.** No made-up testimonials, reviews, star ratings,
+   client logos, client counts, awards or results. The work shown is the three
+   real projects (Smilys Softwash, Risen Health, Corbel Books), described by
+   what was built, with no result claimed. The testimonials block on the home
+   page stays commented out until there are real quotes.
+3. **Illustrations read as illustrations.** A mock of a phone, a calendar or an
+   enquiry list always says "[your business]" or "Your Business", never a
+   made-up company, person or review, and carries an "Example" flag or a
+   caption ending "An illustration, not a real conversation." The only numbers
+   in them are the example week and the calculator's defaults.
+4. **Estimates are labelled as estimates.** The time table is "an example
+   week", the calculator's result is "an estimate, not a guarantee", and that
+   label sits right beside the number, never in a footnote. Do not turn either
+   into a promised result anywhere.
+5. **Words the site never uses.** Automation is described by what it does ("a
+   text goes out on its own", "the quote follows up for you"), never by naming
+   the technology. The buzzwords for software that "thinks" or "learns" — the
+   two-letter abbreviation and its spelled-out form, the word for an automated
+   chat assistant, the three-letter name of the best-known one, and the phrase
+   about machines that learn — stay off the site entirely: copy, alt text,
+   class names, comments and file names. The owner's customers react badly to
+   them, which is also why they are not spelled out here.
+6. **The props rule.** The shop objects are the point of the design, and too
+   many turn it cute. A page has at most one tilted object (`.tilt`) and one
+   stamp (the round seal counts). The street scene belongs to the home page,
+   small on `/start/` and the 404 page, and nowhere else. The FAQ, legal and
+   checkout pages get no props at all. Nothing decorative may look pressable.
+7. **Facts stay in step.** Timelines (7 days, 7–10 days, 2–4 weeks, 4–6
+   weeks), support periods (14, 30 and 90 days, six months), payment terms,
+   the phone number, the email address and "Based in Baton Rouge, Louisiana"
+   are repeated on several pages and in the JSON-LD. Search before changing one.
+8. **FAQ answers mirror the structured data word for word**, and the privacy
+   and terms pages say what the site and the business actually do. Edit them
+   only when the facts change.
+
 ## Run it locally
 
-Just open `index.html` in a browser. If you'd rather use a local server (which
-matches production more closely):
+The pages use root-absolute paths (`/assets/…`), so opening `index.html`
+straight from the disk shows it unstyled. Serve the folder instead:
 
 ```bash
 python3 -m http.server 8000
@@ -543,7 +820,7 @@ Every page carries a JSON-LD `@graph` with two nodes:
 - **WebSite**
 
 Each sub-page adds a **BreadcrumbList**, and `faq/index.html` adds a
-**FAQPage** with all ten entries.
+**FAQPage** with all fourteen entries.
 
 > The FAQ markup mirrors the visible accordion **verbatim**. Google penalises
 > structured data that does not match on-page content, so if you edit an FAQ
@@ -557,7 +834,7 @@ Validate changes with the [Rich Results Test](https://search.google.com/test/ric
 
 ## Before you launch — checklist
 
-- [x] Add a phone number — `(225) 255-0837` is in the contact list, homepage footer, About page and JSON-LD
+- [x] Add a phone number — `(225) 255-0837` is in every page's top strip, header and footer, the contact and About pages, and JSON-LD
 - [ ] Form endpoint configured and a test enquiry received
 - [x] Domain wired through `CNAME`, `index.html`, `sitemap.xml`, `robots.txt`
 - [ ] GitHub Pages enabled and IONOS DNS records added
@@ -569,6 +846,12 @@ Validate changes with the [Rich Results Test](https://search.google.com/test/ric
 
 ## Browser support
 
-Current Chrome, Edge, Firefox and Safari. Uses `color-mix()` and
-`backdrop-filter`; on older browsers the layout and content stay fully intact,
-only some visual polish falls away.
+Current Chrome, Edge, Firefox and Safari. The newer features each have a plain
+fallback or simply do nothing where they are missing: `subgrid` for the
+package table (cards instead), CSS masks for the brush underline (a plain
+underline), container queries for the town headline, the About card, the
+checkout slip, the project captions and the price-list leaders (a leader too
+short to read is then still drawn), `:has()` on the checkout pages, the
+`translate` and `rotate` properties (a hover lift, the one tilted card, the stamp) and
+`text-wrap: balance` / `pretty`. On older browsers the layout and content stay
+fully intact and only some visual polish falls away.

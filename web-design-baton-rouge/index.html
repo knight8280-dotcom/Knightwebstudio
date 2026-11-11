@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="auto">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Baton Rouge Website Design at Fixed Prices | KnightWebstudio</title>
 <meta name="description" content="Custom websites for Baton Rouge businesses, from Mid City to Siegen Lane. Starter $2,000, Business $4,000, Commerce $8,000. We meet in person, locally.">
-<meta name="theme-color" content="#080b14">
+<meta name="theme-color" content="#F6F0E4">
 <link rel="canonical" href="https://knightwebstudio.com/web-design-baton-rouge/">
 
 <meta property="og:type" content="website">
@@ -25,22 +25,26 @@
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 <script>
-  // Restore the saved theme before first paint, so a light-theme visitor
-  // never sees a dark flash. main.js still owns the toggle itself.
+  // Set the theme before first paint, so nobody sees a flash of the wrong
+  // one. Light is the default: a saved choice wins, otherwise a device set
+  // to dark gets the night theme. main.js still owns the toggle itself.
   (function () {
     var d = document.documentElement; d.classList.add('js');
     // The header crest builds itself on the first page of a visit only
     try { if (!sessionStorage.getItem('kws-crest')) { d.classList.add('crest-intro'); sessionStorage.setItem('kws-crest', '1'); } } catch (e) {}
     try {
       var t = localStorage.getItem('theme');
-      if (!t && matchMedia('(prefers-color-scheme: light)').matches) t = 'light';
-      if (t) d.setAttribute('data-theme', t);
-    } catch (e) { /* private mode */ }
+      if (t !== 'dark' && t !== 'light') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      d.setAttribute('data-theme', t);
+    } catch (e) { /* private mode: the stylesheet follows the device instead */ }
+    // Scroll reveals hide blocks until main.js shows them. If that script has
+    // not started after four seconds (or the page has none), show everything.
+    setTimeout(function () { if (!window.kwsReady) d.classList.remove('js'); }, 4000);
   })();
 </script>
-<link rel="preload" href="/assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/assets/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/styles.css">
+<link rel="preload" href="/assets/fonts/fraunces-soft.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/figtree.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/styles.css?v=2">
 
 <script type="application/ld+json">
 {
@@ -389,20 +393,34 @@
 </script>
 </head>
 
-<body>
+<body data-page="city">
 <a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ===================== TOP STRIP ===================== -->
+<div class="topbar on-ink">
+  <div class="container topbar-inner">
+    <p class="topbar-place">
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+      <span><span class="topbar-more">Based in </span>Baton Rouge<span class="topbar-state">, Louisiana</span><span class="topbar-long"> · We meet in person anywhere in Greater Baton Rouge</span></span>
+    </p>
+    <a class="topbar-tel" href="tel:+12252550837">
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
+      <span class="sr-only">Call </span>(225) 255-0837
+    </a>
+  </div>
+</div>
 <!-- ===================== HEADER ===================== -->
 <header class="site-header" id="site-header">
   <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
   <div class="container header-inner">
     <a class="brand" href="/" aria-label="KnightWebstudio home">
-      <!-- art:crest-header --><svg class="crest brand-crest" viewBox="0 0 120 120" aria-hidden="true" style="--t1:#c9d4ff;--t2:#a5b8ff;--t3:#6d8bff;--t4:#4f6ef7;--t5:#3348b8;--ink:#080b14;--accent:#46e0c0;--rim:#3348b8;--rim2:#a5b8ff;--field1:#17203a;--field2:#0b1020;--ribbon:#141c3f;--ribbon2:#0b1020;--steel1:#dfe6fb;--steel2:#a9b6d6;--steel3:#7d8bb0"><defs><linearGradient id="ch-fld" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--field1)"/><stop offset="1" stop-color="var(--field2)"/></linearGradient><radialGradient id="ch-glow" cx=".5" cy=".42" r=".5"><stop offset="0" stop-color="#6d8bff" stop-opacity=".35"/><stop offset="1" stop-color="#6d8bff" stop-opacity="0"/></radialGradient><linearGradient id="ch-gl" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".5"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="ch-in"><path d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z"/></clipPath><clipPath id="ch-out"><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z"/></clipPath></defs><g class="a-rim"><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z" fill="var(--rim)"/><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z" fill="none" stroke="var(--rim2)" stroke-opacity=".55" stroke-width="1.2"/><path class="a-field" d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z" fill="url(#ch-fld)"/></g><g clip-path="url(#ch-in)"><circle class="a-field" cx="60" cy="50" r="42" fill="url(#ch-glow)"/><g transform="translate(22 22) scale(.86)" stroke-linejoin="round"><polygon class="facet" style="--i:0;--dx:-8.0px;--dy:-6.4px" fill="var(--t2)" points="54,4 61,15 46,12"/><polygon class="facet" style="--i:1;--dx:-1.6px;--dy:6.4px" fill="var(--t1)" points="54,4 46,12 50,9"/><polygon class="facet" style="--i:2;--dx:4.8px;--dy:4.8px" fill="var(--t3)" points="37,15 46,12 61,15 63,24 35,29"/><polygon class="facet" style="--i:3;--dx:-6.4px;--dy:3.2px" fill="var(--t1)" points="37,15 24,27 35,29"/><polygon class="facet" style="--i:4;--dx:0.0px;--dy:1.6px" fill="var(--t2)" points="24,27 13,41 24,46 35,29"/><polygon class="facet" style="--i:5;--dx:6.4px;--dy:0.0px" fill="var(--t1)" points="13,41 8,49 12,56 23,58 24,46"/><polygon class="facet" style="--i:6;--dx:-4.8px;--dy:-1.6px" fill="var(--t3)" points="35,29 24,46 50,37"/><polygon class="facet" style="--i:7;--dx:1.6px;--dy:-3.2px" fill="var(--t4)" points="35,29 50,37 63,24"/><polygon class="facet" style="--i:8;--dx:8.0px;--dy:-4.8px" fill="var(--t4)" points="24,46 23,58 42,54 50,37"/><polygon class="facet" style="--i:9;--dx:-3.2px;--dy:-6.4px" fill="var(--t3)" points="50,37 42,54 38,63 63,63 65,43"/><polygon class="facet" style="--i:10;--dx:3.2px;--dy:6.4px" fill="var(--t4)" points="50,37 65,43 63,24"/><polygon class="facet" style="--i:11;--dx:-8.0px;--dy:4.8px" fill="var(--t3)" points="38,63 31,80 26,112 53,112 63,63"/><polygon class="facet" style="--i:12;--dx:-1.6px;--dy:3.2px" fill="var(--t4)" points="63,63 53,112 78,112 72,80"/><polygon class="facet" style="--i:13;--dx:4.8px;--dy:1.6px" fill="var(--t5)" points="61,15 67,16 72,22 69,26 77,32 73,36 79,44 74,48 79,57 73,61 76,70 72,80 63,63 65,43 63,24"/><path class="eye" d="M30 27Q35 24 40 27Q35 30 30 27Z" fill="var(--ink)"/><path d="M12 46L16 45" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round"/></g></g><path class="a-line" pathLength="1" d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z" fill="none" stroke="var(--accent)" stroke-opacity=".9" stroke-width="1"/><circle class="rivet" style="--i:0" cx="24" cy="20" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:1" cx="42" cy="15.5" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:2" cx="60" cy="11" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:3" cx="78" cy="15.5" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:4" cx="96" cy="20" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:5" cx="100" cy="44" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:6" cx="20" cy="44" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:7" cx="94" cy="76" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:8" cx="26" cy="76" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:9" cx="79" cy="97" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:10" cx="41" cy="97" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><g clip-path="url(#ch-out)"><g transform="rotate(20 60 60)"><rect class="a-glint" x="-60" y="-30" width="16" height="180" fill="url(#ch-gl)"/></g></g></svg><!-- /art:crest-header -->
+      <!-- art:crest-header --><svg class="crest" viewBox="0 0 120 120" aria-hidden="true" style="--t1:#DCE3FF;--t2:#B9C7FF;--t3:#8FA5FF;--t4:#5C77EC;--t5:#2C46C4;--ink:#161B2C;--accent:#F0C369;--rim:#2C46C4;--rim2:#B9C7FF;--glow:#8FA5FF;--field1:#24306A;--field2:#161B2C;--ribbon:#1B2C84;--ribbon2:#14205E;--steel1:#FBF5E6;--steel2:#CFC7B4;--steel3:#8E8A80;--letter:#FFFBF2"><defs><linearGradient id="ch-fld" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--field1)"/><stop offset="1" stop-color="var(--field2)"/></linearGradient><radialGradient id="ch-glow" cx=".5" cy=".42" r=".5"><stop offset="0" stop-color="var(--glow)" stop-opacity=".35"/><stop offset="1" stop-color="var(--glow)" stop-opacity="0"/></radialGradient><linearGradient id="ch-gl" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".5"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="ch-in"><path d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z"/></clipPath><clipPath id="ch-out"><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z"/></clipPath></defs><g class="a-rim"><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z" fill="var(--rim)"/><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z" fill="none" stroke="var(--rim2)" stroke-opacity=".55" stroke-width="1.2"/><path class="a-field" d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z" fill="url(#ch-fld)"/></g><g clip-path="url(#ch-in)"><circle class="a-field" cx="60" cy="50" r="42" fill="url(#ch-glow)"/><g transform="translate(22 22) scale(.86)" stroke-linejoin="round"><polygon class="facet" style="--i:0;--dx:-8.0px;--dy:-6.4px" fill="var(--t2)" points="54,4 61,15 46,12"/><polygon class="facet" style="--i:1;--dx:-1.6px;--dy:6.4px" fill="var(--t1)" points="54,4 46,12 50,9"/><polygon class="facet" style="--i:2;--dx:4.8px;--dy:4.8px" fill="var(--t3)" points="37,15 46,12 61,15 63,24 35,29"/><polygon class="facet" style="--i:3;--dx:-6.4px;--dy:3.2px" fill="var(--t1)" points="37,15 24,27 35,29"/><polygon class="facet" style="--i:4;--dx:0.0px;--dy:1.6px" fill="var(--t2)" points="24,27 13,41 24,46 35,29"/><polygon class="facet" style="--i:5;--dx:6.4px;--dy:0.0px" fill="var(--t1)" points="13,41 8,49 12,56 23,58 24,46"/><polygon class="facet" style="--i:6;--dx:-4.8px;--dy:-1.6px" fill="var(--t3)" points="35,29 24,46 50,37"/><polygon class="facet" style="--i:7;--dx:1.6px;--dy:-3.2px" fill="var(--t4)" points="35,29 50,37 63,24"/><polygon class="facet" style="--i:8;--dx:8.0px;--dy:-4.8px" fill="var(--t4)" points="24,46 23,58 42,54 50,37"/><polygon class="facet" style="--i:9;--dx:-3.2px;--dy:-6.4px" fill="var(--t3)" points="50,37 42,54 38,63 63,63 65,43"/><polygon class="facet" style="--i:10;--dx:3.2px;--dy:6.4px" fill="var(--t4)" points="50,37 65,43 63,24"/><polygon class="facet" style="--i:11;--dx:-8.0px;--dy:4.8px" fill="var(--t3)" points="38,63 31,80 26,112 53,112 63,63"/><polygon class="facet" style="--i:12;--dx:-1.6px;--dy:3.2px" fill="var(--t4)" points="63,63 53,112 78,112 72,80"/><polygon class="facet" style="--i:13;--dx:4.8px;--dy:1.6px" fill="var(--t5)" points="61,15 67,16 72,22 69,26 77,32 73,36 79,44 74,48 79,57 73,61 76,70 72,80 63,63 65,43 63,24"/><path class="eye" d="M30 27Q35 24 40 27Q35 30 30 27Z" fill="var(--ink)"/><path d="M12 46L16 45" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round"/></g></g><path class="a-line" pathLength="1" d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z" fill="none" stroke="var(--accent)" stroke-opacity=".9" stroke-width="1"/><circle class="rivet" style="--i:0" cx="24" cy="20" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:1" cx="42" cy="15.5" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:2" cx="60" cy="11" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:3" cx="78" cy="15.5" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:4" cx="96" cy="20" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:5" cx="100" cy="44" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:6" cx="20" cy="44" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:7" cx="94" cy="76" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:8" cx="26" cy="76" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:9" cx="79" cy="97" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:10" cx="41" cy="97" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><g clip-path="url(#ch-out)"><g transform="rotate(20 60 60)"><rect class="a-glint" x="-60" y="-30" width="16" height="180" fill="url(#ch-gl)"/></g></g></svg><!-- /art:crest-header -->
       <span class="brand-name">KnightWebstudio</span>
     </a>
 
     <nav class="nav" id="nav" aria-label="Main">
       <div class="nav-inner">
-        <ul class="nav-links">
+        <ul class="nav-links" role="list">
           <li><a href="/services/">Services</a></li>
           <li><a href="/consulting/">Consulting</a></li>
           <li><a href="/work/">Work</a></li>
@@ -412,23 +430,31 @@
           <li><a href="/about/">About</a></li>
           <li><a href="/contact/">Contact</a></li>
         </ul>
-        <span class="nav-indicator" aria-hidden="true"></span>
 
-        <!-- Overlay-only footer: on desktop this is hidden -->
+        <!-- Phone menu only: hidden on desktop -->
         <div class="nav-foot">
           <a class="btn btn-primary btn-block" href="/contact/">Start your project</a>
+          <a class="btn btn-block" href="tel:+12252550837">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
+            Call (225) 255-0837
+          </a>
           <a class="nav-mail" href="mailto:knightwebstudio1@gmail.com">knightwebstudio1@gmail.com</a>
         </div>
       </div>
     </nav>
 
     <div class="header-actions">
+      <!-- From 1280px, and only once the top strip (which has the number) has scrolled away -->
+      <a class="header-tel" href="tel:+12252550837">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
+        <span class="sr-only">Call </span>(225) 255-0837
+      </a>
       <button class="icon-btn" id="theme-toggle" type="button"
-              aria-label="Switch to light theme" title="Toggle theme">
+              aria-label="Switch to dark theme" title="Toggle theme">
         <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
         <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>
       </button>
-      <a class="btn btn-primary btn-sm header-cta" href="/contact/">Get a quote</a>
+      <a class="btn btn-primary btn-sm header-cta" href="/contact/" data-booking>Book a free call</a>
       <button class="icon-btn nav-toggle" id="nav-toggle" type="button"
               aria-expanded="false" aria-controls="nav" aria-label="Open menu">
         <span class="burger" aria-hidden="true"></span>
@@ -439,217 +465,256 @@
 
 <main id="main">
 
-  <section class="page-head-wrap">
-    <div class="hero-art"><!-- art:shards --><svg class="shards" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" style="--t1:#c9d4ff;--t2:#a5b8ff;--t3:#6d8bff;--t4:#4f6ef7;--t5:#3348b8;--ink:#080b14;--accent:#46e0c0;--rim:#3348b8;--rim2:#a5b8ff;--field1:#17203a;--field2:#0b1020;--ribbon:#141c3f;--ribbon2:#0b1020;--steel1:#dfe6fb;--steel2:#a9b6d6;--steel3:#7d8bb0"><polygon class="shard" style="--i:0" fill="var(--t3)" fill-opacity="0.2" points="3,12 8,5 10,14"/><polygon class="shard" style="--i:1" fill="var(--t2)" fill-opacity="0.18" points="88,8 95,13 90,19"/><polygon class="shard" style="--i:2" fill="var(--t4)" fill-opacity="0.2" points="93,52 98,60 91,62"/><polygon class="shard" style="--i:3" fill="var(--t2)" fill-opacity="0.16" points="2,74 7,70 6,80"/><polygon class="shard" style="--i:4" fill="var(--t3)" fill-opacity="0.16" points="80,86 86,82 85,92"/><polygon class="shard" style="--i:5" fill="var(--accent)" fill-opacity="0.16" points="96,30 99,36 94,35"/><polygon class="shard" style="--i:6" fill="var(--accent)" fill-opacity="0.14" points="6,40 9,46 4,47"/><polygon class="shard" style="--i:7" fill="var(--t4)" fill-opacity="0.16" points="72,4 77,8 71,10"/></svg><!-- /art:shards --></div>
+  <!-- ===================== PAGE HEAD (commercial form): the town's name is the picture ===================== -->
+  <section class="page-head">
     <div class="container">
-      <header class="page-head">
-        <p class="eyebrow">Areas we serve · Baton Rouge, LA</p>
-        <h1>Website design for Baton Rouge businesses</h1>
-        <p class="section-sub">Baton Rouge is home. Fast, custom sites at fixed, published prices — and when you'd rather talk face to face, we'll meet you in person.</p>
-      </header>
+      <p class="eyebrow"><span><span class="nowrap">Areas we serve</span> <span class="nowrap">· Baton Rouge, LA</span></span></p>
+      <h1 class="city-title" style="--em:6.05"><span>Website design for</span> <span class="city-name"><span class="mark">Baton Rouge</span></span> <span>businesses</span></h1>
+      <p class="lede">Baton Rouge is home. Fast, custom sites at fixed, published prices — and when you'd rather talk face to face, we'll meet you in person.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary btn-lg" href="/contact/" data-booking>Book a free 30-minute call</a>
+        <a class="btn btn-lg" href="/contact/">Send an enquiry</a>
+      </div>
+      <a class="price-strip" href="#pricing">
+        <span class="price-strip-label">Websites</span>
+        <span class="price-strip-nums"><b>$1,000</b> <b>$2,000</b> <b>$4,000</b> <b>$8,000</b></span>
+        <span class="price-strip-note">Fixed, published prices</span>
+      </a>
     </div>
   </section>
 
-  <section class="section" id="intro">
-    <div class="container">
-      <div class="prose reveal">
+  <!-- ===================== WHY LOCAL, AND MEETING IN PERSON ===================== -->
+  <section class="section section-first" id="intro">
+    <div class="container split split-even">
+      <div class="prose">
         <p>Baton Rouge is our home base, and that matters more than it sounds. When someone here searches for a plumber, a caterer or an accountant “near me”, Google weighs who is actually local, how complete their profile is and how quickly their site loads on a phone. We build for exactly that.</p>
         <p>Whether your customers find you in Mid City, Downtown, along Highland Road or out past Siegen Lane, the job is the same: a site that shows up in local search, loads fast and makes it obvious how to get in touch. Sites launch in 7 days to 6 weeks depending on the package, at a price you know before we start.</p>
       </div>
-      <aside class="local-callout reveal" aria-label="Meeting in person">
-        <div class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.3 7-11a7 7 0 1 0-14 0c0 5.7 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg></div>
-        <div>
-          <h2 class="h3">Meet in person anywhere in Greater Baton Rouge</h2>
-          <p>We're happy to sit down at your business, or somewhere convenient, for the discovery call, the design review or both. Prefer a call? That works too.</p>
-        </div>
+      <aside class="card stack city-meet" aria-label="Meeting in person">
+        <h2 class="h3">Meet in person anywhere in Greater Baton&nbsp;Rouge</h2>
+        <p>We're happy to sit down at your business, or somewhere convenient, for the discovery call, the design review or both. Prefer a call? That works too.</p>
+        <ul class="pills" aria-label="Towns where we meet in person" role="list"><li aria-current="location"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Baton Rouge</li><li>Gonzales</li><li>Prairieville</li><li>Denham Springs</li><li>Zachary</li><li>Central</li><li>Baker</li></ul>
+        <p class="stamp" aria-hidden="true">Home<br>base</p>
       </aside>
     </div>
   </section>
 
-  <section class="section section-alt" id="what-we-build">
+  <!-- ===================== FIXED PRICES, UP FRONT: the price board ===================== -->
+  <section class="section section-sand" id="pricing">
     <div class="container">
-      <header class="section-head reveal">
-        <p class="eyebrow">What we build</p>
-        <h2>What a Baton Rouge site needs to do</h2>
-      </header>
-      <div class="grid grid-3">
-        <article class="card reveal">
-          <div class="card-icon">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></svg>
+      <div class="board on-blue">
+        <header class="board-head">
+          <div>
+            <h2>Fixed prices, published up front</h2>
+            <p class="section-sub">The same prices for a Baton&nbsp;Rouge shop as for anyone else: what you see is what you pay.</p>
           </div>
-          <h3>Win the “near me” search</h3>
-          <p>Google Business Profile setup, local SEO configuration and fast, clean pages, so you compete across the whole city, not just your own neighborhood.</p>
-          <ul class="ticks">
-            <li>Google Business Profile setup</li>
-            <li>Local SEO configuration</li>
-            <li>Core Web Vitals tuning</li>
-          </ul>
-        </article>
-        <article class="card reveal">
-          <div class="card-icon">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5A2.5 2.5 0 0 1 5.5 3h13A2.5 2.5 0 0 1 21 5.5v9a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 14.5Z"/><path d="M8 21h8M12 17v4"/></svg>
-          </div>
-          <h3>Turn visits into enquiries</h3>
-          <p>Clear services, obvious contact buttons and a form that lands in your inbox. Built mobile-first, because that is where local customers look you up.</p>
-          <ul class="ticks">
-            <li>Custom design, built for you</li>
-            <li>Copywriting support on Business and Commerce</li>
-            <li>Built mobile-first</li>
-          </ul>
-        </article>
-        <article class="card reveal">
-          <div class="card-icon">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v5.5c0 4.6 3 8.3 7 9.5 4-1.2 7-4.9 7-9.5V6Z"/><path d="m9 12 2 2 4-4"/></svg>
-          </div>
-          <h3>Keep running after launch</h3>
-          <p>Care plans cover backups, security updates, monitoring and the changes you ask for, with someone in town who already knows your site.</p>
-          <ul class="ticks">
-            <li>$125, $300, $600 or $1,000 a month</li>
-            <li>Cancel with 10 days' written notice, no fee</li>
-          </ul>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="local-work">
-    <div class="container">
-      <header class="section-head reveal">
-        <p class="eyebrow">Local work</p>
-        <h2>Built for a Baton Rouge service business</h2>
-        <p class="section-sub">Smilys Softwash cleans roofs and houses across Greater Baton Rouge. Here is what we built for them.</p>
-      </header>
-      <div class="grid grid-3 work-grid">
-        <article class="work-card reveal">
-          <span class="work-flag">Live</span>
-          <div class="work-media">
-            <img class="work-thumb" src="/assets/img/work-smilyssoftwash.jpg"
-               alt="Smilys Softwash — before and after of a soft-washed roof and house exterior"
-               width="1200" height="600" loading="lazy" decoding="async">
-          </div>
-          <div class="work-body">
-            <p class="work-tag">Exterior cleaning · Local service &amp; SEO</p>
-            <h3>Smilys Softwash</h3>
-            <p>
-              “Don't replace it. Renew it.” Roof and house soft washing across Greater
-              Baton Rouge — a service page per treatment, a before-and-after gallery,
-              and online quote requests. Card payments are being set up.
-            </p>
-            <p class="work-result">Live site · Online quotes</p>
-            <a class="work-link" href="https://smilyssoftwash.com" target="_blank" rel="noopener">
-              Visit smilyssoftwash.com
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
-            </a>
-          </div>
-        </article>
-      </div>
-      <p class="section-more reveal"><a class="more-link" href="/work/">See the work in detail<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a></p>
-    </div>
-  </section>
-
-  <section class="section section-alt" id="pricing">
-    <div class="container">
-      <header class="section-head reveal">
-        <p class="eyebrow">Pricing</p>
-        <h2>Fixed prices, published up front</h2>
-        <p class="section-sub">The same prices for a Baton Rouge shop as for anyone else: what you see is what you pay. Care plans keep it running afterwards for $125, $300, $600 or $1,000 a month.</p>
-      </header>
-
-      <div class="mini-price-grid">
-        <a class="mini-price reveal" href="/pricing/">
-          <span class="mini-price-name">One-page</span>
-          <span class="mini-price-amt">$1,000</span>
-          <span class="mini-price-plan">Or $500 down, then about $167/mo for 3 months</span>
-          <span class="mini-price-note">One polished page: who you are, what you offer and how to reach you. Live in as little as 7 days.</span>
-        </a>
-        <a class="mini-price reveal" href="/pricing/">
-          <span class="mini-price-name">Starter</span>
-          <span class="mini-price-amt">$2,000</span>
-          <span class="mini-price-plan">Or $1,000 down, then about $333/mo for 3 months</span>
-          <span class="mini-price-note">An information website: who you are, what you offer and how to reach you. Up to 5 pages, live in as little as 7–10 days.</span>
-        </a>
-        <a class="mini-price reveal" href="/pricing/">
-          <span class="mini-price-name">Business</span>
-          <span class="mini-price-amt">$4,000</span>
-          <span class="mini-price-plan">Or $2,000 down, then about $667/mo for 3 months</span>
-          <span class="mini-price-note">The full marketing site: up to 10 pages, blog, analytics and local SEO configuration. Live in 2–4 weeks.</span>
-        </a>
-        <a class="mini-price reveal" href="/pricing/">
-          <span class="mini-price-name">Commerce</span>
-          <span class="mini-price-amt">$8,000</span>
-          <span class="mini-price-plan">Or $4,000 down, then about $1,333/mo for 3 months</span>
-          <span class="mini-price-note">Sell online, with payments, shipping and tax set up properly. Live in 4–6 weeks.</span>
-        </a>
-      </div>
-      <p class="pricing-foot reveal">Beyond the website, we help Baton Rouge businesses stop losing customers and save hours every week: missed-call text-back and online booking setups are $750 each, Google profile and reviews setup is $500, and a Growth Audit with a written action plan is $350. <a href="/consulting/">See how consulting and automation work</a>.</p>
-      <p class="section-more reveal"><a class="more-link" href="/pricing/">Full pricing, consulting and care plans<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a></p>
-    </div>
-  </section>
-
-  <section class="section" id="questions">
-    <div class="container">
-      <header class="section-head reveal">
-        <p class="eyebrow">Questions</p>
-        <h2>Baton Rouge questions, answered</h2>
-      </header>
-      <div class="faq-list local-faq">
-        <details class="faq-item reveal">
-          <summary>Do you only work with Baton Rouge businesses?</summary>
-          <div class="faq-body"><p>No, we work with clients anywhere. But Baton Rouge is home, so local clients can meet us in person, and we know the area your customers are searching from.</p></div>
-        </details>
-        <details class="faq-item reveal">
-          <summary>How much does a website cost?</summary>
-          <div class="faq-body"><p>Our prices are fixed and published: One-page $1,000, Starter $2,000, Business $4,000, Commerce $8,000. Care plans are $125, $300, $600 or $1,000 a month. You pay 50% to book and 50% at launch as standard, or take a payment plan: 50% up front, then the rest in up to 3 equal monthly payments.</p></div>
-        </details>
-        <details class="faq-item reveal">
-          <summary>I already have a website. Can you rebuild it?</summary>
-          <div class="faq-body"><p>Yes, we rebuild existing sites all the time. Content gets migrated, old URLs are redirected to the new ones so you keep your search rankings, and the switch-over happens with no downtime.</p></div>
-        </details>
-      </div>
-      <div class="local-cta reveal">
-        <p>Tell us about your business and we'll reply within one business day with honest advice and a fixed price.</p>
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="/contact/">Send an enquiry</a>
-          <a class="btn btn-ghost" href="/contact/" data-booking>Book a free 30-minute call</a>
+        </header>
+        <ul class="board-tiers" role="list">
+          <li><a class="tier" href="/pricing/">
+            <span class="tier-name">One-page</span>
+            <span class="tier-amt">$1,000</span>
+            <span class="tier-plan">Or $500 down, then about <span class="nowrap">$167/mo</span> for 3 months</span>
+            <span class="tier-note">One polished page: who you are, what you offer and how to reach you. Live in as little as 7 days.</span>
+          </a></li>
+          <li><a class="tier" href="/pricing/">
+            <span class="tier-name">Starter</span>
+            <span class="tier-amt">$2,000</span>
+            <span class="tier-plan">Or $1,000 down, then about <span class="nowrap">$333/mo</span> for 3 months</span>
+            <span class="tier-note">An information website: who you are, what you offer and how to reach you. Up to 5 pages, live in as little as <span class="nowrap">7–10 days</span>.</span>
+          </a></li>
+          <li><a class="tier" href="/pricing/">
+            <span class="tier-name">Business</span>
+            <span class="tier-amt">$4,000</span>
+            <span class="tier-plan">Or $2,000 down, then about <span class="nowrap">$667/mo</span> for 3 months</span>
+            <span class="tier-note">The full marketing site: up to 10 pages, blog, analytics and local SEO configuration. Live in <span class="nowrap">2–4 weeks</span>.</span>
+          </a></li>
+          <li><a class="tier" href="/pricing/">
+            <span class="tier-name">Commerce</span>
+            <span class="tier-amt">$8,000</span>
+            <span class="tier-plan">Or $4,000 down, then about <span class="nowrap">$1,333/mo</span> for 3 months</span>
+            <span class="tier-note">Sell online, with payments, shipping and tax set up properly. Live in <span class="nowrap">4–6 weeks</span>.</span>
+          </a></li>
+        </ul>
+        <dl class="board-extras">
+          <div><dt>Care plans keep it running afterwards for</dt> <dd>$125, $300, $600 or $1,000 a month.</dd></div>
+        </dl>
+        <div class="board-foot split split-even">
+          <div class="prose"><p class="fine">Beyond the website, we help Baton Rouge businesses stop losing customers and save hours every week: missed-call text-back and online booking setups are $750 each, Google profile and reviews setup is $500, and a Growth Audit with a written action plan is $350. <a href="/consulting/">See how consulting and automation work</a>.</p></div>
+          <div><a class="btn btn-primary" href="/pricing/">Full pricing, consulting and care plans</a></div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="cta-band">
-    <div class="container cta-inner reveal">
-      <h2>Baton Rouge business? Let's talk.</h2>
-      <p>Thirty minutes, no pitch — on a call, or in person anywhere in Greater Baton Rouge. You'll leave knowing what your site needs and what it should cost.</p>
-      <a class="btn btn-light" href="/contact/" data-booking>Book a discovery call</a>
+  <!-- ===================== THREE THINGS A LOCAL SITE NEEDS TO DO: a ruled, numbered list ===================== -->
+  <section class="section" id="what-we-build">
+    <div class="container split split-even split-sticky">
+      <header class="section-head">
+        <p class="eyebrow">What we build</p>
+        <h2>What a Baton&nbsp;Rouge site needs to do</h2>
+      </header>
+      <ol class="steps" role="list">
+        <li class="reveal">
+          <span class="steps-no" aria-hidden="true">01</span>
+          <div>
+            <h3>Win the “near me” search</h3>
+            <p>Google Business Profile setup, local SEO configuration and fast, clean pages, so you compete across the whole city, not just your own neighborhood.</p>
+            <ul class="ticks" role="list">
+              <li>Google Business Profile setup</li>
+              <li>Local SEO configuration</li>
+              <li>Core Web Vitals tuning</li>
+            </ul>
+          </div>
+        </li>
+        <li class="reveal">
+          <span class="steps-no" aria-hidden="true">02</span>
+          <div>
+            <h3>Turn visits into enquiries</h3>
+            <p>Clear services, obvious contact buttons and a form that lands in your inbox. Built mobile-first, because that is where local customers look you up.</p>
+            <ul class="ticks" role="list">
+              <li>Custom design, built for you</li>
+              <li>Copywriting support on Business and Commerce</li>
+              <li>Built mobile-first</li>
+            </ul>
+          </div>
+        </li>
+        <li class="reveal">
+          <span class="steps-no" aria-hidden="true">03</span>
+          <div>
+            <h3>Keep running after launch</h3>
+            <p>Care plans cover backups, security updates, monitoring and the changes you ask for, with someone in town who already knows your site.</p>
+            <ul class="ticks" role="list">
+              <li>$125, $300, $600 or $1,000 a month</li>
+              <li>Cancel with 10 days' written notice, no fee</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===================== LOCAL WORK: the one local project, as a print beside its write-up ===================== -->
+  <section class="section section-sand" id="local-work">
+    <div class="container">
+      <header class="section-head">
+        <p class="eyebrow">Local work</p>
+        <h2>Built for a Baton&nbsp;Rouge service business</h2>
+        <p class="section-sub">Smilys Softwash cleans roofs and houses across Greater Baton Rouge. Here is what we built for them.</p>
+      </header>
+      <article class="split split-even">
+        <a class="print reveal" href="https://smilyssoftwash.com" target="_blank" rel="noopener">
+          <div class="print-img"><img src="/assets/img/work-smilyssoftwash.jpg" alt="Smilys Softwash — before and after of a soft-washed roof and house exterior" width="1200" height="600" loading="lazy" decoding="async"></div>
+          <div class="print-cap">
+            <div class="print-name"><h3>Smilys Softwash</h3><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></div>
+            <p class="print-kind">Exterior cleaning · Local service &amp; SEO<span class="sr-only"> (opens in a new tab)</span></p>
+          </div>
+        </a>
+        <div class="case-copy reveal">
+          <p>“Don't replace it. Renew it.” Roof and house soft washing across Greater Baton Rouge — a service page per treatment, a before-and-after gallery, and online quote requests. Card payments are being set up.</p>
+          <dl class="case-facts">
+            <div><dt>Status</dt><dd>Live site · Online quotes</dd></div>
+            <div><dt>Visit</dt><dd><a href="https://smilyssoftwash.com" target="_blank" rel="noopener">smilyssoftwash.com<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg><span class="sr-only"> (opens in a new tab)</span></a></dd></div>
+          </dl>
+          <p><a class="more-link" href="/work/">See the work in detail<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a></p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===================== LOCAL QUESTIONS: a short band; its title is set at the title size, its list on the line the columns above share ===================== -->
+  <section class="section section-tight" id="questions">
+    <div class="container split split-even">
+      <header class="section-head">
+        <h2 class="title">Baton&nbsp;Rouge questions,&nbsp;answered</h2>
+      </header>
+      <div class="faq">
+        <details class="faq-item">
+          <summary>Do you only work with Baton&nbsp;Rouge businesses?</summary>
+          <div class="faq-body"><p>No, we work with clients anywhere. But Baton Rouge is home, so local clients can meet us in person, and we know the area your customers are searching from.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>How much does a website cost?</summary>
+          <div class="faq-body"><p>Our prices are fixed and published: One-page $1,000, Starter $2,000, Business $4,000, Commerce $8,000. Care plans are $125, $300, $600 or $1,000 a month. You pay 50% to book and 50% at launch as standard, or take a payment plan: 50% up front, then the rest in up to 3 equal monthly payments.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>I already have a website. Can you rebuild it?</summary>
+          <div class="faq-body"><p>Yes, we rebuild existing sites all the time. Content gets migrated, old URLs are redirected to the new ones so you keep your search rankings, and the switch-over happens with no downtime.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CLOSING BAND ===================== -->
+  <section class="cta-band on-blue">
+    <div class="container cta-inner">
+      <div class="cta-copy">
+        <h2>Baton&nbsp;Rouge business? Let's talk.</h2>
+        <p>Thirty minutes, no pitch — on a call, or in person anywhere in Greater Baton Rouge. You'll leave knowing what your site needs and what it should cost.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary btn-lg" href="/contact/" data-booking>Book a free 30-minute call</a>
+          <a class="btn btn-lg" href="/contact/">Send an enquiry</a>
+        </div>
+        <p class="fine">Tell us about your business and we'll reply within one business day with honest advice and a fixed price.</p>
+      </div>
+      <div class="appt on-paper wide-only" aria-hidden="true">
+        <p class="appt-head"><span>Appointment card</span><span>No. 01</span></p>
+        <p class="appt-title">Discovery call</p>
+        <dl class="appt-lines">
+          <div><dt>Cost</dt><dd>Free</dd></div>
+          <div><dt>Length</dt><dd>30 minutes</dd></div>
+          <div><dt>Sales pitch</dt><dd>None</dd></div>
+          <div><dt>Where</dt><dd>A call, or in person</dd></div>
+        </dl>
+      </div>
     </div>
   </section>
 
 </main>
 
-<!-- Mobile-only sticky CTA: the header's "Get a quote" is hidden below 980px,
-     so without this there is no persistent way to convert on a phone. -->
+<!-- Phones and tablets: the header button is hidden there, so this bar keeps
+     a call and a booking one thumb-tap away. main.js shows it after the first
+     screen and hides it over the footer. -->
 <div class="mobile-cta" id="mobile-cta" hidden>
   <div class="mobile-cta-inner">
-    <span class="mobile-cta-text">Free 30-min call<span> · no pitch</span></span>
-    <a class="btn btn-primary btn-sm" href="/contact/">Get a quote</a>
+    <a class="btn" href="tel:+12252550837" aria-label="Call (225) 255-0837">
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
+      Call
+    </a>
+    <a class="btn btn-primary" href="/contact/" data-booking>Free 30-min call<span> · no pitch</span></a>
   </div>
 </div>
 
 <!-- ===================== FOOTER ===================== -->
-<footer class="site-footer">
+<footer class="site-footer on-ink">
+  <!-- Baton Rouge on the horizon: the Capitol tower, downtown and the river bridge. After dark the windows and bridge lamps are lit (.sky-lit). -->
+  <svg class="footer-skyline" viewBox="0 0 1440 120" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+    <path d="M0 120V102Q26 88 58 99Q92 84 128 100Q150 93 176 104V120Z"/>
+    <path d="M180 120V86h38v34ZM222 120V72h34v48ZM268 120V84h124v36ZM296 86V68h68v18ZM314 70V24h32v46ZM319 26V13h22v13ZM324 15V6h12v9ZM327 7l3-7 3 7Z"/>
+    <path d="M420 120V66h48v54ZM474 120V48h44v72ZM522 120V78h56v42ZM582 120V58h38v62ZM624 120V88h60v32ZM690 120V70h46v50ZM740 120V94h70v26Z"/>
+    <path d="M818 120V108Q836 98 852 107V120Z"/>
+    <g fill="none" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M880 93L960 78L1040 38L1090 72L1140 80L1190 72L1240 38L1320 78L1400 93"/>
+      <path d="M960 78V93M1040 38V93M1090 72V93M1140 80V93M1190 72V93M1240 38V93M1320 78V93"/>
+      <path d="M960 93L1040 38L1090 93L1140 80L1190 93L1240 38L1320 93M1000 58V93M1280 58V93"/>
+    </g>
+    <path d="M856 91h568v5H856ZM1033 94h14v26h-14ZM1233 94h14v26h-14ZM956 94h8v26h-8ZM1316 94h8v26h-8Z"/>
+    <path d="M1396 120V104Q1414 92 1440 100V120Z"/>
+    <path d="M0 114h1440v6H0Z"/>
+    <path class="sky-lit" d="M190 96h4v5h-4ZM230 80h4v5h-4ZM242 94h4v5h-4ZM282 94h4v5h-4ZM306 75h4v5h-4ZM350 75h4v5h-4ZM372 98h4v5h-4ZM326 34h4v5h-4ZM334 34h4v5h-4ZM326 47h4v5h-4ZM334 59h4v5h-4ZM430 76h4v5h-4ZM448 92h4v5h-4ZM484 58h4v5h-4ZM500 58h4v5h-4ZM484 76h4v5h-4ZM500 94h4v5h-4ZM536 88h4v5h-4ZM560 102h4v5h-4ZM592 68h4v5h-4ZM604 86h4v5h-4ZM640 98h4v5h-4ZM664 98h4v5h-4ZM700 80h4v5h-4ZM720 96h4v5h-4ZM760 102h4v5h-4ZM790 102h4v5h-4ZM1038 31h5v5h-5ZM1238 31h5v5h-5ZM959 73h3v3h-3ZM1089 67h3v3h-3ZM1139 75h3v3h-3ZM1189 67h3v3h-3ZM1319 73h3v3h-3Z"/>
+  </svg>
+
   <div class="container footer-grid">
     <div class="footer-brand">
       <a class="brand" href="/">
-        <!-- art:crest-footer --><svg class="crest footer-crest" viewBox="0 0 120 120" aria-hidden="true" style="--t1:#c9d4ff;--t2:#a5b8ff;--t3:#6d8bff;--t4:#4f6ef7;--t5:#3348b8;--ink:#080b14;--accent:#46e0c0;--rim:#3348b8;--rim2:#a5b8ff;--field1:#17203a;--field2:#0b1020;--ribbon:#141c3f;--ribbon2:#0b1020;--steel1:#dfe6fb;--steel2:#a9b6d6;--steel3:#7d8bb0"><defs><linearGradient id="cf-fld" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--field1)"/><stop offset="1" stop-color="var(--field2)"/></linearGradient><radialGradient id="cf-glow" cx=".5" cy=".42" r=".5"><stop offset="0" stop-color="#6d8bff" stop-opacity=".35"/><stop offset="1" stop-color="#6d8bff" stop-opacity="0"/></radialGradient><linearGradient id="cf-gl" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".5"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="cf-in"><path d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z"/></clipPath><clipPath id="cf-out"><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z"/></clipPath></defs><g class="a-rim"><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z" fill="var(--rim)"/><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z" fill="none" stroke="var(--rim2)" stroke-opacity=".55" stroke-width="1.2"/><path class="a-field" d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z" fill="url(#cf-fld)"/></g><g clip-path="url(#cf-in)"><circle class="a-field" cx="60" cy="50" r="42" fill="url(#cf-glow)"/><g transform="translate(22 22) scale(.86)" stroke-linejoin="round"><polygon class="facet" style="--i:0;--dx:-8.0px;--dy:-6.4px" fill="var(--t2)" points="54,4 61,15 46,12"/><polygon class="facet" style="--i:1;--dx:-1.6px;--dy:6.4px" fill="var(--t1)" points="54,4 46,12 50,9"/><polygon class="facet" style="--i:2;--dx:4.8px;--dy:4.8px" fill="var(--t3)" points="37,15 46,12 61,15 63,24 35,29"/><polygon class="facet" style="--i:3;--dx:-6.4px;--dy:3.2px" fill="var(--t1)" points="37,15 24,27 35,29"/><polygon class="facet" style="--i:4;--dx:0.0px;--dy:1.6px" fill="var(--t2)" points="24,27 13,41 24,46 35,29"/><polygon class="facet" style="--i:5;--dx:6.4px;--dy:0.0px" fill="var(--t1)" points="13,41 8,49 12,56 23,58 24,46"/><polygon class="facet" style="--i:6;--dx:-4.8px;--dy:-1.6px" fill="var(--t3)" points="35,29 24,46 50,37"/><polygon class="facet" style="--i:7;--dx:1.6px;--dy:-3.2px" fill="var(--t4)" points="35,29 50,37 63,24"/><polygon class="facet" style="--i:8;--dx:8.0px;--dy:-4.8px" fill="var(--t4)" points="24,46 23,58 42,54 50,37"/><polygon class="facet" style="--i:9;--dx:-3.2px;--dy:-6.4px" fill="var(--t3)" points="50,37 42,54 38,63 63,63 65,43"/><polygon class="facet" style="--i:10;--dx:3.2px;--dy:6.4px" fill="var(--t4)" points="50,37 65,43 63,24"/><polygon class="facet" style="--i:11;--dx:-8.0px;--dy:4.8px" fill="var(--t3)" points="38,63 31,80 26,112 53,112 63,63"/><polygon class="facet" style="--i:12;--dx:-1.6px;--dy:3.2px" fill="var(--t4)" points="63,63 53,112 78,112 72,80"/><polygon class="facet" style="--i:13;--dx:4.8px;--dy:1.6px" fill="var(--t5)" points="61,15 67,16 72,22 69,26 77,32 73,36 79,44 74,48 79,57 73,61 76,70 72,80 63,63 65,43 63,24"/><path class="eye" d="M30 27Q35 24 40 27Q35 30 30 27Z" fill="var(--ink)"/><path d="M12 46L16 45" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round"/></g></g><path class="a-line" pathLength="1" d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z" fill="none" stroke="var(--accent)" stroke-opacity=".9" stroke-width="1"/><circle class="rivet" style="--i:0" cx="24" cy="20" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:1" cx="42" cy="15.5" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:2" cx="60" cy="11" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:3" cx="78" cy="15.5" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:4" cx="96" cy="20" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:5" cx="100" cy="44" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:6" cx="20" cy="44" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:7" cx="94" cy="76" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:8" cx="26" cy="76" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:9" cx="79" cy="97" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:10" cx="41" cy="97" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><g clip-path="url(#cf-out)"><g transform="rotate(20 60 60)"><rect class="a-glint" x="-60" y="-30" width="16" height="180" fill="url(#cf-gl)"/></g></g></svg><!-- /art:crest-footer -->
+        <!-- art:crest-footer --><svg class="crest" viewBox="0 0 120 120" aria-hidden="true" style="--t1:#DCE3FF;--t2:#B9C7FF;--t3:#8FA5FF;--t4:#5C77EC;--t5:#2C46C4;--ink:#161B2C;--accent:#F0C369;--rim:#2C46C4;--rim2:#B9C7FF;--glow:#8FA5FF;--field1:#24306A;--field2:#161B2C;--ribbon:#1B2C84;--ribbon2:#14205E;--steel1:#FBF5E6;--steel2:#CFC7B4;--steel3:#8E8A80;--letter:#FFFBF2"><defs><linearGradient id="cf-fld" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--field1)"/><stop offset="1" stop-color="var(--field2)"/></linearGradient><radialGradient id="cf-glow" cx=".5" cy=".42" r=".5"><stop offset="0" stop-color="var(--glow)" stop-opacity=".35"/><stop offset="1" stop-color="var(--glow)" stop-opacity="0"/></radialGradient><linearGradient id="cf-gl" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".5"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="cf-in"><path d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z"/></clipPath><clipPath id="cf-out"><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z"/></clipPath></defs><g class="a-rim"><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z" fill="var(--rim)"/><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z" fill="none" stroke="var(--rim2)" stroke-opacity=".55" stroke-width="1.2"/><path class="a-field" d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z" fill="url(#cf-fld)"/></g><g clip-path="url(#cf-in)"><circle class="a-field" cx="60" cy="50" r="42" fill="url(#cf-glow)"/><g transform="translate(22 22) scale(.86)" stroke-linejoin="round"><polygon class="facet" style="--i:0;--dx:-8.0px;--dy:-6.4px" fill="var(--t2)" points="54,4 61,15 46,12"/><polygon class="facet" style="--i:1;--dx:-1.6px;--dy:6.4px" fill="var(--t1)" points="54,4 46,12 50,9"/><polygon class="facet" style="--i:2;--dx:4.8px;--dy:4.8px" fill="var(--t3)" points="37,15 46,12 61,15 63,24 35,29"/><polygon class="facet" style="--i:3;--dx:-6.4px;--dy:3.2px" fill="var(--t1)" points="37,15 24,27 35,29"/><polygon class="facet" style="--i:4;--dx:0.0px;--dy:1.6px" fill="var(--t2)" points="24,27 13,41 24,46 35,29"/><polygon class="facet" style="--i:5;--dx:6.4px;--dy:0.0px" fill="var(--t1)" points="13,41 8,49 12,56 23,58 24,46"/><polygon class="facet" style="--i:6;--dx:-4.8px;--dy:-1.6px" fill="var(--t3)" points="35,29 24,46 50,37"/><polygon class="facet" style="--i:7;--dx:1.6px;--dy:-3.2px" fill="var(--t4)" points="35,29 50,37 63,24"/><polygon class="facet" style="--i:8;--dx:8.0px;--dy:-4.8px" fill="var(--t4)" points="24,46 23,58 42,54 50,37"/><polygon class="facet" style="--i:9;--dx:-3.2px;--dy:-6.4px" fill="var(--t3)" points="50,37 42,54 38,63 63,63 65,43"/><polygon class="facet" style="--i:10;--dx:3.2px;--dy:6.4px" fill="var(--t4)" points="50,37 65,43 63,24"/><polygon class="facet" style="--i:11;--dx:-8.0px;--dy:4.8px" fill="var(--t3)" points="38,63 31,80 26,112 53,112 63,63"/><polygon class="facet" style="--i:12;--dx:-1.6px;--dy:3.2px" fill="var(--t4)" points="63,63 53,112 78,112 72,80"/><polygon class="facet" style="--i:13;--dx:4.8px;--dy:1.6px" fill="var(--t5)" points="61,15 67,16 72,22 69,26 77,32 73,36 79,44 74,48 79,57 73,61 76,70 72,80 63,63 65,43 63,24"/><path class="eye" d="M30 27Q35 24 40 27Q35 30 30 27Z" fill="var(--ink)"/><path d="M12 46L16 45" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round"/></g></g><path class="a-line" pathLength="1" d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z" fill="none" stroke="var(--accent)" stroke-opacity=".9" stroke-width="1"/><circle class="rivet" style="--i:0" cx="24" cy="20" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:1" cx="42" cy="15.5" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:2" cx="60" cy="11" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:3" cx="78" cy="15.5" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:4" cx="96" cy="20" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:5" cx="100" cy="44" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:6" cx="20" cy="44" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:7" cx="94" cy="76" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:8" cx="26" cy="76" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:9" cx="79" cy="97" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:10" cx="41" cy="97" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><g clip-path="url(#cf-out)"><g transform="rotate(20 60 60)"><rect class="a-glint" x="-60" y="-30" width="16" height="180" fill="url(#cf-gl)"/></g></g></svg><!-- /art:crest-footer -->
         <span class="brand-name">KnightWebstudio</span>
       </a>
       <p>Websites, automation and consulting for local businesses that need to be found, trusted and chosen.</p>
-      <!-- EDIT ME: location. Also in the JSON-LD address and on the contact page. -->
       <p class="footer-loc">Based in Baton Rouge, Louisiana. Working with clients anywhere.</p>
     </div>
 
     <nav class="footer-col" aria-label="Services">
-      <h3>Services</h3>
+      <p class="footer-title">Services</p>
       <a href="/services/">Website design</a>
       <a href="/consulting/">Consulting &amp; automation</a>
       <a href="/services/">E-commerce</a>
@@ -658,7 +723,7 @@
     </nav>
 
     <nav class="footer-col" aria-label="Company">
-      <h3>Company</h3>
+      <p class="footer-title">Company</p>
       <a href="/about/">About</a>
       <a href="/work/">Our work</a>
       <a href="/process/">Process</a>
@@ -667,7 +732,7 @@
     </nav>
 
     <nav class="footer-col" aria-label="Areas we serve">
-      <h3>Areas we serve</h3>
+      <p class="footer-title">Areas we serve</p>
       <a href="/web-design-baton-rouge/">Baton Rouge</a>
       <a href="/web-design-gonzales/">Gonzales</a>
       <a href="/web-design-prairieville/">Prairieville</a>
@@ -678,8 +743,8 @@
     </nav>
 
     <nav class="footer-col" aria-label="Contact">
-      <h3>Contact</h3>
-      <a href="mailto:knightwebstudio1@gmail.com">knightwebstudio1@gmail.com</a>
+      <p class="footer-title">Contact</p>
+      <a href="mailto:knightwebstudio1@gmail.com"><span>knightwebstudio1@<wbr>gmail.com</span></a>
       <a href="tel:+12252550837">(225) 255-0837</a>
       <a href="/contact/">Start a project</a>
     </nav>
@@ -690,6 +755,6 @@
     <p class="footer-links"><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="#top">Back to top ↑</a></p>
   </div>
 </footer>
-<script src="/assets/js/main.js" defer></script>
+<script src="/assets/js/main.js?v=2" defer></script>
 </body>
 </html>

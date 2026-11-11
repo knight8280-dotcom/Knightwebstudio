@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="auto">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Web Design, Automation &amp; Consulting in Baton Rouge, LA | KnightWebstudio</title>
 <meta name="description" content="Baton Rouge, LA websites, automation and consulting for local businesses: custom sites live in as little as 7–10 days, missed-call text-back, online booking and Google reviews, all at fixed, published prices.">
-<meta name="theme-color" content="#080b14">
+<meta name="theme-color" content="#F6F0E4">
 <link rel="canonical" href="https://knightwebstudio.com/">
 
 <meta property="og:type" content="website">
@@ -25,22 +25,26 @@
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 <script>
-  // Restore the saved theme before first paint, so a light-theme visitor
-  // never sees a dark flash. main.js still owns the toggle itself.
+  // Set the theme before first paint, so nobody sees a flash of the wrong
+  // one. Light is the default: a saved choice wins, otherwise a device set
+  // to dark gets the night theme. main.js still owns the toggle itself.
   (function () {
     var d = document.documentElement; d.classList.add('js');
     // The header crest builds itself on the first page of a visit only
     try { if (!sessionStorage.getItem('kws-crest')) { d.classList.add('crest-intro'); sessionStorage.setItem('kws-crest', '1'); } } catch (e) {}
     try {
       var t = localStorage.getItem('theme');
-      if (!t && matchMedia('(prefers-color-scheme: light)').matches) t = 'light';
-      if (t) d.setAttribute('data-theme', t);
-    } catch (e) { /* private mode */ }
+      if (t !== 'dark' && t !== 'light') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      d.setAttribute('data-theme', t);
+    } catch (e) { /* private mode: the stylesheet follows the device instead */ }
+    // Scroll reveals hide blocks until main.js shows them. If that script has
+    // not started after four seconds (or the page has none), show everything.
+    setTimeout(function () { if (!window.kwsReady) d.classList.remove('js'); }, 4000);
   })();
 </script>
-<link rel="preload" href="/assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/assets/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/styles.css">
+<link rel="preload" href="/assets/fonts/fraunces-soft.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/figtree.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/styles.css?v=2">
 
 <script type="application/ld+json">
 {
@@ -324,20 +328,34 @@
 </script>
 </head>
 
-<body>
+<body data-page="home">
 <a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ===================== TOP STRIP ===================== -->
+<div class="topbar on-ink">
+  <div class="container topbar-inner">
+    <p class="topbar-place">
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+      <span><span class="topbar-more">Based in </span>Baton Rouge<span class="topbar-state">, Louisiana</span><span class="topbar-long"> · We meet in person anywhere in Greater Baton Rouge</span></span>
+    </p>
+    <a class="topbar-tel" href="tel:+12252550837">
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
+      <span class="sr-only">Call </span>(225) 255-0837
+    </a>
+  </div>
+</div>
 <!-- ===================== HEADER ===================== -->
 <header class="site-header" id="site-header">
   <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
   <div class="container header-inner">
     <a class="brand" href="/" aria-label="KnightWebstudio home">
-      <!-- art:crest-header --><svg class="crest brand-crest" viewBox="0 0 120 120" aria-hidden="true" style="--t1:#c9d4ff;--t2:#a5b8ff;--t3:#6d8bff;--t4:#4f6ef7;--t5:#3348b8;--ink:#080b14;--accent:#46e0c0;--rim:#3348b8;--rim2:#a5b8ff;--field1:#17203a;--field2:#0b1020;--ribbon:#141c3f;--ribbon2:#0b1020;--steel1:#dfe6fb;--steel2:#a9b6d6;--steel3:#7d8bb0"><defs><linearGradient id="ch-fld" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--field1)"/><stop offset="1" stop-color="var(--field2)"/></linearGradient><radialGradient id="ch-glow" cx=".5" cy=".42" r=".5"><stop offset="0" stop-color="#6d8bff" stop-opacity=".35"/><stop offset="1" stop-color="#6d8bff" stop-opacity="0"/></radialGradient><linearGradient id="ch-gl" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".5"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="ch-in"><path d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z"/></clipPath><clipPath id="ch-out"><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z"/></clipPath></defs><g class="a-rim"><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z" fill="var(--rim)"/><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z" fill="none" stroke="var(--rim2)" stroke-opacity=".55" stroke-width="1.2"/><path class="a-field" d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z" fill="url(#ch-fld)"/></g><g clip-path="url(#ch-in)"><circle class="a-field" cx="60" cy="50" r="42" fill="url(#ch-glow)"/><g transform="translate(22 22) scale(.86)" stroke-linejoin="round"><polygon class="facet" style="--i:0;--dx:-8.0px;--dy:-6.4px" fill="var(--t2)" points="54,4 61,15 46,12"/><polygon class="facet" style="--i:1;--dx:-1.6px;--dy:6.4px" fill="var(--t1)" points="54,4 46,12 50,9"/><polygon class="facet" style="--i:2;--dx:4.8px;--dy:4.8px" fill="var(--t3)" points="37,15 46,12 61,15 63,24 35,29"/><polygon class="facet" style="--i:3;--dx:-6.4px;--dy:3.2px" fill="var(--t1)" points="37,15 24,27 35,29"/><polygon class="facet" style="--i:4;--dx:0.0px;--dy:1.6px" fill="var(--t2)" points="24,27 13,41 24,46 35,29"/><polygon class="facet" style="--i:5;--dx:6.4px;--dy:0.0px" fill="var(--t1)" points="13,41 8,49 12,56 23,58 24,46"/><polygon class="facet" style="--i:6;--dx:-4.8px;--dy:-1.6px" fill="var(--t3)" points="35,29 24,46 50,37"/><polygon class="facet" style="--i:7;--dx:1.6px;--dy:-3.2px" fill="var(--t4)" points="35,29 50,37 63,24"/><polygon class="facet" style="--i:8;--dx:8.0px;--dy:-4.8px" fill="var(--t4)" points="24,46 23,58 42,54 50,37"/><polygon class="facet" style="--i:9;--dx:-3.2px;--dy:-6.4px" fill="var(--t3)" points="50,37 42,54 38,63 63,63 65,43"/><polygon class="facet" style="--i:10;--dx:3.2px;--dy:6.4px" fill="var(--t4)" points="50,37 65,43 63,24"/><polygon class="facet" style="--i:11;--dx:-8.0px;--dy:4.8px" fill="var(--t3)" points="38,63 31,80 26,112 53,112 63,63"/><polygon class="facet" style="--i:12;--dx:-1.6px;--dy:3.2px" fill="var(--t4)" points="63,63 53,112 78,112 72,80"/><polygon class="facet" style="--i:13;--dx:4.8px;--dy:1.6px" fill="var(--t5)" points="61,15 67,16 72,22 69,26 77,32 73,36 79,44 74,48 79,57 73,61 76,70 72,80 63,63 65,43 63,24"/><path class="eye" d="M30 27Q35 24 40 27Q35 30 30 27Z" fill="var(--ink)"/><path d="M12 46L16 45" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round"/></g></g><path class="a-line" pathLength="1" d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z" fill="none" stroke="var(--accent)" stroke-opacity=".9" stroke-width="1"/><circle class="rivet" style="--i:0" cx="24" cy="20" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:1" cx="42" cy="15.5" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:2" cx="60" cy="11" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:3" cx="78" cy="15.5" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:4" cx="96" cy="20" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:5" cx="100" cy="44" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:6" cx="20" cy="44" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:7" cx="94" cy="76" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:8" cx="26" cy="76" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:9" cx="79" cy="97" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:10" cx="41" cy="97" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><g clip-path="url(#ch-out)"><g transform="rotate(20 60 60)"><rect class="a-glint" x="-60" y="-30" width="16" height="180" fill="url(#ch-gl)"/></g></g></svg><!-- /art:crest-header -->
+      <!-- art:crest-header --><svg class="crest" viewBox="0 0 120 120" aria-hidden="true" style="--t1:#DCE3FF;--t2:#B9C7FF;--t3:#8FA5FF;--t4:#5C77EC;--t5:#2C46C4;--ink:#161B2C;--accent:#F0C369;--rim:#2C46C4;--rim2:#B9C7FF;--glow:#8FA5FF;--field1:#24306A;--field2:#161B2C;--ribbon:#1B2C84;--ribbon2:#14205E;--steel1:#FBF5E6;--steel2:#CFC7B4;--steel3:#8E8A80;--letter:#FFFBF2"><defs><linearGradient id="ch-fld" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--field1)"/><stop offset="1" stop-color="var(--field2)"/></linearGradient><radialGradient id="ch-glow" cx=".5" cy=".42" r=".5"><stop offset="0" stop-color="var(--glow)" stop-opacity=".35"/><stop offset="1" stop-color="var(--glow)" stop-opacity="0"/></radialGradient><linearGradient id="ch-gl" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".5"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="ch-in"><path d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z"/></clipPath><clipPath id="ch-out"><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z"/></clipPath></defs><g class="a-rim"><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z" fill="var(--rim)"/><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z" fill="none" stroke="var(--rim2)" stroke-opacity=".55" stroke-width="1.2"/><path class="a-field" d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z" fill="url(#ch-fld)"/></g><g clip-path="url(#ch-in)"><circle class="a-field" cx="60" cy="50" r="42" fill="url(#ch-glow)"/><g transform="translate(22 22) scale(.86)" stroke-linejoin="round"><polygon class="facet" style="--i:0;--dx:-8.0px;--dy:-6.4px" fill="var(--t2)" points="54,4 61,15 46,12"/><polygon class="facet" style="--i:1;--dx:-1.6px;--dy:6.4px" fill="var(--t1)" points="54,4 46,12 50,9"/><polygon class="facet" style="--i:2;--dx:4.8px;--dy:4.8px" fill="var(--t3)" points="37,15 46,12 61,15 63,24 35,29"/><polygon class="facet" style="--i:3;--dx:-6.4px;--dy:3.2px" fill="var(--t1)" points="37,15 24,27 35,29"/><polygon class="facet" style="--i:4;--dx:0.0px;--dy:1.6px" fill="var(--t2)" points="24,27 13,41 24,46 35,29"/><polygon class="facet" style="--i:5;--dx:6.4px;--dy:0.0px" fill="var(--t1)" points="13,41 8,49 12,56 23,58 24,46"/><polygon class="facet" style="--i:6;--dx:-4.8px;--dy:-1.6px" fill="var(--t3)" points="35,29 24,46 50,37"/><polygon class="facet" style="--i:7;--dx:1.6px;--dy:-3.2px" fill="var(--t4)" points="35,29 50,37 63,24"/><polygon class="facet" style="--i:8;--dx:8.0px;--dy:-4.8px" fill="var(--t4)" points="24,46 23,58 42,54 50,37"/><polygon class="facet" style="--i:9;--dx:-3.2px;--dy:-6.4px" fill="var(--t3)" points="50,37 42,54 38,63 63,63 65,43"/><polygon class="facet" style="--i:10;--dx:3.2px;--dy:6.4px" fill="var(--t4)" points="50,37 65,43 63,24"/><polygon class="facet" style="--i:11;--dx:-8.0px;--dy:4.8px" fill="var(--t3)" points="38,63 31,80 26,112 53,112 63,63"/><polygon class="facet" style="--i:12;--dx:-1.6px;--dy:3.2px" fill="var(--t4)" points="63,63 53,112 78,112 72,80"/><polygon class="facet" style="--i:13;--dx:4.8px;--dy:1.6px" fill="var(--t5)" points="61,15 67,16 72,22 69,26 77,32 73,36 79,44 74,48 79,57 73,61 76,70 72,80 63,63 65,43 63,24"/><path class="eye" d="M30 27Q35 24 40 27Q35 30 30 27Z" fill="var(--ink)"/><path d="M12 46L16 45" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round"/></g></g><path class="a-line" pathLength="1" d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z" fill="none" stroke="var(--accent)" stroke-opacity=".9" stroke-width="1"/><circle class="rivet" style="--i:0" cx="24" cy="20" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:1" cx="42" cy="15.5" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:2" cx="60" cy="11" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:3" cx="78" cy="15.5" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:4" cx="96" cy="20" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:5" cx="100" cy="44" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:6" cx="20" cy="44" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:7" cx="94" cy="76" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:8" cx="26" cy="76" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:9" cx="79" cy="97" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:10" cx="41" cy="97" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><g clip-path="url(#ch-out)"><g transform="rotate(20 60 60)"><rect class="a-glint" x="-60" y="-30" width="16" height="180" fill="url(#ch-gl)"/></g></g></svg><!-- /art:crest-header -->
       <span class="brand-name">KnightWebstudio</span>
     </a>
 
     <nav class="nav" id="nav" aria-label="Main">
       <div class="nav-inner">
-        <ul class="nav-links">
+        <ul class="nav-links" role="list">
           <li><a href="/services/">Services</a></li>
           <li><a href="/consulting/">Consulting</a></li>
           <li><a href="/work/">Work</a></li>
@@ -347,23 +365,31 @@
           <li><a href="/about/">About</a></li>
           <li><a href="/contact/">Contact</a></li>
         </ul>
-        <span class="nav-indicator" aria-hidden="true"></span>
 
-        <!-- Overlay-only footer: on desktop this is hidden -->
+        <!-- Phone menu only: hidden on desktop -->
         <div class="nav-foot">
           <a class="btn btn-primary btn-block" href="/contact/">Start your project</a>
+          <a class="btn btn-block" href="tel:+12252550837">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
+            Call (225) 255-0837
+          </a>
           <a class="nav-mail" href="mailto:knightwebstudio1@gmail.com">knightwebstudio1@gmail.com</a>
         </div>
       </div>
     </nav>
 
     <div class="header-actions">
+      <!-- From 1280px, and only once the top strip (which has the number) has scrolled away -->
+      <a class="header-tel" href="tel:+12252550837">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
+        <span class="sr-only">Call </span>(225) 255-0837
+      </a>
       <button class="icon-btn" id="theme-toggle" type="button"
-              aria-label="Switch to light theme" title="Toggle theme">
+              aria-label="Switch to dark theme" title="Toggle theme">
         <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
         <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>
       </button>
-      <a class="btn btn-primary btn-sm header-cta" href="/contact/">Get a quote</a>
+      <a class="btn btn-primary btn-sm header-cta" href="/contact/" data-booking>Book a free call</a>
       <button class="icon-btn nav-toggle" id="nav-toggle" type="button"
               aria-expanded="false" aria-controls="nav" aria-label="Open menu">
         <span class="burger" aria-hidden="true"></span>
@@ -374,172 +400,234 @@
 
 <main id="main">
 
-  <section class="hero" id="top">
-    <div class="hero-glow" aria-hidden="true"></div>
-    <div class="hero-art"><!-- art:shards --><svg class="shards" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" style="--t1:#c9d4ff;--t2:#a5b8ff;--t3:#6d8bff;--t4:#4f6ef7;--t5:#3348b8;--ink:#080b14;--accent:#46e0c0;--rim:#3348b8;--rim2:#a5b8ff;--field1:#17203a;--field2:#0b1020;--ribbon:#141c3f;--ribbon2:#0b1020;--steel1:#dfe6fb;--steel2:#a9b6d6;--steel3:#7d8bb0"><polygon class="shard" style="--i:0" fill="var(--t3)" fill-opacity="0.2" points="3,12 8,5 10,14"/><polygon class="shard" style="--i:1" fill="var(--t2)" fill-opacity="0.18" points="88,8 95,13 90,19"/><polygon class="shard" style="--i:2" fill="var(--t4)" fill-opacity="0.2" points="93,52 98,60 91,62"/><polygon class="shard" style="--i:3" fill="var(--t2)" fill-opacity="0.16" points="2,74 7,70 6,80"/><polygon class="shard" style="--i:4" fill="var(--t3)" fill-opacity="0.16" points="80,86 86,82 85,92"/><polygon class="shard" style="--i:5" fill="var(--accent)" fill-opacity="0.16" points="96,30 99,36 94,35"/><polygon class="shard" style="--i:6" fill="var(--accent)" fill-opacity="0.14" points="6,40 9,46 4,47"/><polygon class="shard" style="--i:7" fill="var(--t4)" fill-opacity="0.16" points="72,4 77,8 71,10"/></svg><!-- /art:shards --></div>
-    <div class="container hero-inner">
+  <!-- ===================== HERO: THE SHOP THAT ANSWERS EVERY CALL ===================== -->
+  <section class="page-head hero" id="top">
+    <div class="container page-head-split hero-grid">
       <div class="hero-copy">
-        <p class="eyebrow">Web studio &amp; consulting · Baton Rouge, LA</p>
-        <h1>More customers, fewer missed calls, <em>hours back every week</em></h1>
-        <p class="lede">
-          We build fast, modern websites, then set up the systems behind them: Google
-          reviews, missed-call text-back, online booking and automatic follow-up. One local
-          partner for getting found, getting chosen and getting your evenings back.
-        </p>
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="/contact/">Start your project</a>
-          <a class="btn btn-ghost" href="/consulting/">See how automation works</a>
+        <p class="eyebrow"><span>Web studio &amp; consulting<span class="sep"> · </span><span class="nowrap">Baton Rouge, LA</span></span></p>
+        <h1><span class="l">More customers,</span> <span class="l">fewer missed calls,</span> <span class="l"><span class="mark">hours back</span></span><span class="l"> every week</span></h1>
+        <p class="lede">We build your website and set up Google reviews, <span class="nowrap">missed-call text-back</span>, online booking and automatic <span class="nowrap">follow-up</span>.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary btn-lg" href="/contact/" data-booking>Book a free 30-minute call</a>
+          <a class="btn btn-lg" href="#automation">See how it works</a>
         </div>
-        <ul class="hero-points">
-          <li>Websites live in as little as 7–10 days</li>
-          <li>Automations that run while you work</li>
-          <li>Fixed, published prices</li>
-          <li>You own everything</li>
-          <li>Meet in person anywhere in Greater Baton Rouge</li>
-        </ul>
+        <a class="price-strip" href="#pricing">
+          <span class="price-strip-label">Websites</span>
+          <span class="price-strip-nums"><b>$1,000</b> <b>$2,000</b> <b>$4,000</b> <b>$8,000</b></span>
+          <span class="price-strip-note">Four fixed packages</span>
+        </a>
       </div>
 
-      <!-- Real work, not a wireframe: the strongest thing we can show is the work -->
-      <aside class="hero-proof" aria-label="Recent live projects">
-        <p class="proof-label">Recent work</p>
-        <ul class="proof-list">
-          <li>
-            <a href="https://risenhealthco.com" target="_blank" rel="noopener">
-              <img src="/assets/img/work-risenhealthco.jpg" alt="" width="1200" height="630" loading="lazy" decoding="async">
-              <span class="proof-text"><strong>Risen Health</strong><span>Online store</span></span>
-              <svg class="proof-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
-            </a>
-          </li>
-          <li>
-            <a href="https://corbelbooks.com" target="_blank" rel="noopener">
-              <img src="/assets/img/work-corbelbooks.jpg" alt="" width="1200" height="630" loading="lazy" decoding="async">
-              <span class="proof-text"><strong>Corbel Books</strong><span>Fintech SaaS</span></span>
-              <svg class="proof-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
-            </a>
-          </li>
-          <li>
-            <a href="https://smilyssoftwash.com" target="_blank" rel="noopener">
-              <img src="/assets/img/work-smilyssoftwash.jpg" alt="" width="1200" height="600" loading="lazy" decoding="async">
-              <span class="proof-text"><strong>Smilys Softwash</strong><span>Exterior cleaning</span></span>
-              <svg class="proof-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
-            </a>
-          </li>
-        </ul>
-      </aside>
+      <figure class="hero-art">
+        <div class="hero-scene">
+          <!-- art:scene-street --><svg class="scene scene-street" viewBox="0 0 600 640" role="img" aria-labelledby="st-title" style="--il-sky-1:var(--L,#D5E0F6) var(--D,#101632);--il-sky-2:var(--L,#F5EEDD) var(--D,#27305A);--il-sun:var(--L,#F6D88E) var(--D,#F3ECDD);--il-cloud:var(--L,#FFFDF6) var(--D,#2B355E);--il-star:var(--L,transparent) var(--D,#F3ECDD);--il-far:var(--L,#C5CCE0) var(--D,#2C3768);--il-brick:var(--L,#BC5B3E) var(--D,#7A3F30);--il-brick-2:var(--L,#9C4630) var(--D,#5C2D22);--il-trim:var(--L,#FBF5E6) var(--D,#C9C1AE);--il-shutter:var(--L,#33446F) var(--D,#1F2947);--il-glass:var(--L,#BFD0EC) var(--D,#232D4E);--il-glass-2:var(--L,#D6E1F4) var(--D,#F3C66B);--il-awn-1:var(--L,#2C46C4) var(--D,#4660DA);--il-awn-2:var(--L,#FBF5E6) var(--D,#CFC7B4);--il-sign:var(--L,#2C46C4) var(--D,#24389F);--il-ink:var(--L,#1A2238) var(--D,#080A12);--il-walk:var(--L,#E3D8C2) var(--D,#2B3145);--il-walk-2:var(--L,#CFC2A8) var(--D,#20263A);--il-road:var(--L,#BFB6A4) var(--D,#171B29);--il-hub:var(--L,#D9CFBB) var(--D,#8E8A80);--il-van:var(--L,#FBF5E6) var(--D,#C9C1AE);--il-van-2:var(--L,#E4DAC6) var(--D,#A8A190);--il-leaf:var(--L,#5F8160) var(--D,#33503F);--il-leaf-2:var(--L,#7C9B79) var(--D,#436650);--il-gold:var(--L,#E9B44C) var(--D,#F3C66B);--il-lamp:var(--L,#FBF5E6) var(--D,#F7D98C);--il-night:var(--L,0) var(--D,1)"><title id="st-title">Drawing of a brick shop front with a striped awning on a Baton Rouge street. A work van is parked outside, and the State Capitol tower and the river bridge sit on the horizon.</title><defs><clipPath id="st-arch"><path d="M0 300A300 300 0 0 1 600 300V612A28 28 0 0 1 572 640H28A28 28 0 0 1 0 612Z"/></clipPath><linearGradient id="st-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--il-sky-1)"/><stop offset=".72" stop-color="var(--il-sky-2)"/></linearGradient><pattern id="st-bricks" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M0 .5H28M0 14.5H28M7 .5V14.5M21 14.5V28" fill="none" stroke="var(--il-brick-2)" stroke-width="1"/></pattern><pattern id="st-rail" width="9" height="28" patternUnits="userSpaceOnUse"><path d="M4.5 0V28" stroke="var(--il-ink)" stroke-width="1.6"/></pattern><radialGradient id="st-glow"><stop offset="0" stop-color="#F3C66B" stop-opacity=".5"/><stop offset="1" stop-color="#F3C66B" stop-opacity="0"/></radialGradient><clipPath id="st-awn"><path d="M146 378H454L474 416H126Z"/></clipPath></defs><g clip-path="url(#st-arch)"><rect width="600" height="640" fill="url(#st-sky)"/><g fill="var(--il-star)"><circle cx="150" cy="120" r="2"/><circle cx="236" cy="66" r="1.6"/><circle cx="330" cy="104" r="1.8"/><circle cx="528" cy="226" r="1.6"/><circle cx="88" cy="204" r="1.6"/><circle cx="384" cy="46" r="1.4"/><circle cx="270" cy="150" r="1.3"/></g><circle cx="452" cy="138" r="36" fill="var(--il-sun)"/><g fill="var(--il-cloud)"><path d="M118 158a17 17 0 0 1 2-34 26 26 0 0 1 49-8 20 20 0 0 1 33 10 16 16 0 0 1 2 32Z"/><path transform="translate(306 48) scale(.62)" d="M118 158a17 17 0 0 1 2-34 26 26 0 0 1 49-8 20 20 0 0 1 33 10 16 16 0 0 1 2 32Z"/></g><g fill="var(--il-far)"><path d="M20 508V392h112v116ZM50 394V372h52v22ZM62 374V262h28v112ZM66 264V246h20v18ZM70 248V234h12v14ZM73 236l3-12 3 12Z"/><path d="M478 508V456h42v52ZM540 508V440h60v68ZM440 398h160v5H440ZM536 402h9v106h-9Z"/></g><g fill="none" stroke="var(--il-far)" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"><path d="M440 398L486 372L540 322L594 372L640 398"/><path d="M486 372V398M540 322V398M594 372V398M513 347V398M567 347V398M486 398L540 322L594 398"/></g><rect y="508" width="600" height="26" fill="var(--il-walk)"/><path d="M60 508v24M180 508v24M300 508v24M420 508v24M540 508v24" stroke="var(--il-walk-2)" stroke-width="1.5"/><rect y="532" width="600" height="5" fill="var(--il-walk-2)"/><rect y="537" width="600" height="103" fill="var(--il-road)"/><path d="M40 606h56M150 606h56M260 606h56M370 606h56M480 606h56" stroke="var(--il-awn-2)" stroke-width="4" stroke-linecap="round" opacity=".5"/><circle class="sc-night" cx="566" cy="286" r="74" fill="url(#st-glow)"/><rect x="563.5" y="302" width="5" height="206" fill="var(--il-ink)"/><rect x="559" y="496" width="14" height="12" rx="2" fill="var(--il-ink)"/><path d="M552 274h28l-5-10h-18Z" fill="var(--il-ink)"/><rect x="556" y="274" width="20" height="26" rx="4" fill="var(--il-lamp)" stroke="var(--il-ink)" stroke-width="2.5"/><rect x="562" y="300" width="8" height="5" fill="var(--il-ink)"/><circle cx="566" cy="260" r="3" fill="var(--il-ink)"/><path d="M544 322h20M546 322v38l8-6 8 6v-38" fill="var(--il-awn-1)" stroke="var(--il-ink)" stroke-width="0"/><path d="M543 321h22" stroke="var(--il-ink)" stroke-width="2.5" stroke-linecap="round"/><rect x="130" y="202" width="340" height="306" fill="var(--il-brick)"/><rect x="130" y="202" width="340" height="306" fill="url(#st-bricks)" opacity=".55"/><rect x="122" y="186" width="356" height="16" rx="2" fill="var(--il-trim)"/><rect x="130" y="202" width="340" height="5" fill="var(--il-ink)" opacity=".18"/><g><path d="M154 220h11v92h-11ZM227 220h11v92h-11ZM258 220h11v92h-11ZM331 220h11v92h-11ZM362 220h11v92h-11ZM435 220h11v92h-11Z" fill="var(--il-shutter)"/><path d="M164 216h64v100h-64ZM268 216h64v100h-64ZM372 216h64v100h-64Z" fill="var(--il-trim)"/><rect x="168" y="222" width="56" height="88" fill="var(--il-glass)"/><rect x="272" y="222" width="56" height="88" fill="var(--il-glass-2)"/><rect x="376" y="222" width="56" height="88" fill="var(--il-glass)"/><path d="M196 222v88M168 258h56M300 222v88M272 258h56M404 222v88M376 258h56" stroke="var(--il-trim)" stroke-width="3"/></g><rect x="124" y="294" width="352" height="28" fill="url(#st-rail)"/><rect x="122" y="290" width="356" height="4" rx="2" fill="var(--il-ink)"/><rect x="122" y="306" width="356" height="2" fill="var(--il-ink)"/><rect x="118" y="322" width="364" height="7" rx="1.5" fill="var(--il-ink)"/><path d="M142 329v13l-11-13ZM458 329v13l11-13Z" fill="var(--il-ink)"/><g><path d="M136 329v12M464 329v12" stroke="var(--il-ink)" stroke-width="1.5"/><ellipse cx="136" cy="351" rx="15" ry="10" fill="var(--il-leaf)"/><path d="M124 353q-4 9-1 17M131 358q-1 8 2 14M141 358q2 8-1 14M148 353q5 8 3 17" stroke="var(--il-leaf)" stroke-width="5" stroke-linecap="round" fill="none"/><ellipse cx="464" cy="351" rx="15" ry="10" fill="var(--il-leaf)"/><path d="M452 353q-4 9-1 17M459 358q-1 8 2 14M469 358q2 8-1 14M476 353q5 8 3 17" stroke="var(--il-leaf)" stroke-width="5" stroke-linecap="round" fill="none"/></g><rect x="158" y="339" width="284" height="34" rx="3" fill="var(--il-trim)" stroke="var(--il-ink)" stroke-width="1.5"/><text class="sc-sign" x="300" y="363" text-anchor="middle" font-size="19" fill="var(--il-sign)">YOUR BUSINESS</text><rect x="146" y="416" width="308" height="92" fill="var(--il-shutter)"/><rect x="158" y="430" width="172" height="62" rx="2" fill="var(--il-glass-2)" stroke="var(--il-trim)" stroke-width="3"/><path d="M176 491l40-60h20l-40 60ZM226 491l40-60h8l-40 60Z" fill="#fff" opacity=".2"/><path d="M282 491v-13h22v13Z" fill="var(--il-brick-2)"/><ellipse cx="293" cy="468" rx="12" ry="13" fill="var(--il-leaf)"/><rect x="350" y="424" width="88" height="84" fill="var(--il-trim)"/><rect x="356" y="430" width="76" height="78" fill="var(--il-awn-1)"/><rect x="366" y="440" width="56" height="42" rx="2" fill="var(--il-glass-2)"/><rect x="361" y="486" width="4" height="14" rx="2" fill="var(--il-gold)"/><path d="M386 440l8 11 8-11" fill="none" stroke="var(--il-ink)" stroke-width="1" opacity=".5"/><rect x="377" y="451" width="34" height="15" rx="2" fill="var(--il-trim)"/><text class="sc-open" x="394" y="462.3" text-anchor="middle" font-size="9.5" letter-spacing="1.2" fill="var(--il-brick-2)">OPEN</text><rect x="130" y="416" width="340" height="12" fill="var(--il-ink)" opacity=".2"/><g clip-path="url(#st-awn)"><rect x="126" y="378" width="348" height="38" fill="var(--il-awn-2)"/><path d="M126 378h29v38h-29ZM184 378h29v38h-29ZM242 378h29v38h-29ZM300 378h29v38h-29ZM358 378h29v38h-29ZM416 378h29v38h-29Z" fill="var(--il-awn-1)"/></g><path d="M126 416a14.5 10 0 0 0 29 0ZM184 416a14.5 10 0 0 0 29 0ZM242 416a14.5 10 0 0 0 29 0ZM300 416a14.5 10 0 0 0 29 0ZM358 416a14.5 10 0 0 0 29 0ZM416 416a14.5 10 0 0 0 29 0Z" fill="var(--il-awn-1)"/><path d="M155 416a14.5 10 0 0 0 29 0ZM213 416a14.5 10 0 0 0 29 0ZM271 416a14.5 10 0 0 0 29 0ZM329 416a14.5 10 0 0 0 29 0ZM387 416a14.5 10 0 0 0 29 0ZM445 416a14.5 10 0 0 0 29 0Z" fill="var(--il-awn-2)"/><path d="M146 378H454" stroke="var(--il-ink)" stroke-width="3" stroke-linecap="round"/><path d="M124 508l3-17h22l3 17Z" fill="var(--il-brick-2)"/><ellipse cx="138" cy="478" rx="14" ry="16" fill="var(--il-leaf)"/><ellipse cx="132" cy="474" rx="5" ry="6" fill="var(--il-leaf-2)"/><ellipse cx="516" cy="567" rx="94" ry="6" fill="var(--il-ink)" opacity=".16"/><g transform="translate(606 470) scale(-.84 .84)"><path d="M34 13v6M126 13v6" stroke="var(--il-ink)" stroke-width="3"/><rect x="14" y="1" width="132" height="4" rx="2" fill="var(--il-gold)"/><rect x="14" y="9" width="132" height="4" rx="2" fill="var(--il-gold)"/><path d="M30 2v10M50 2v10M70 2v10M90 2v10M110 2v10M130 2v10" stroke="var(--il-gold)" stroke-width="3"/><path d="M8 18H166Q180 18 187 30L202 56Q214 60 214 72V90Q214 96 208 96H6Q0 96 0 90V26Q0 18 8 18Z" fill="var(--il-van)"/><path d="M0 80h214v10q0 6-6 6H6q-6 0-6-6Z" fill="var(--il-van-2)"/><rect x="0" y="66" width="212" height="7" fill="var(--il-awn-1)"/><path d="M162 27h6q8 0 12 7l10 18h-28Z" fill="var(--il-glass)"/><path d="M152 24V92" stroke="var(--il-ink)" stroke-opacity=".2" stroke-width="1.5"/><rect x="138" y="58" width="9" height="3" rx="1.5" fill="var(--il-ink)" opacity=".45"/><rect x="207" y="76" width="6" height="10" rx="3" fill="var(--il-gold)"/><rect x="204" y="89" width="14" height="6" rx="3" fill="var(--il-ink)"/><path d="M26 96a22 22 0 0 1 44 0ZM144 96a22 22 0 0 1 44 0Z" fill="var(--il-ink)" opacity=".3"/><circle cx="48" cy="97" r="18" fill="var(--il-ink)"/><circle cx="48" cy="97" r="7.5" fill="var(--il-hub)"/><circle cx="166" cy="97" r="18" fill="var(--il-ink)"/><circle cx="166" cy="97" r="7.5" fill="var(--il-hub)"/></g><text class="sc-sign" x="534" y="513" text-anchor="middle" font-size="9" letter-spacing="1.2" fill="var(--il-sign)">YOUR BUSINESS</text></g></svg><!-- /art:scene-street -->
+        </div>
+        <!-- One picture for a screen reader: the same conversation is read out, part by part, in the story below -->
+        <div class="phone hero-phone reveal" role="img" aria-label="Example of what a caller sees after a missed call: a text from [your business] that reads, Sorry we missed your call. What can we help with?">
+          <div class="phone-frame" aria-hidden="true">
+            <div class="phone-bar">
+              <span class="phone-avatar" aria-hidden="true"></span>
+              <span class="phone-who">[your business]<small>Text message</small></span>
+            </div>
+            <ul class="thread" role="list">
+              <li class="thread-note thread-missed seq" style="--n:1"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/><path d="m15 4 5 5m0-5-5 5"/></svg>Missed call</li>
+              <li class="bubble bubble-biz seq" style="--n:2">Sorry we missed your call, this is [your business]. What can we help with?</li>
+              <li class="thread-note seq" style="--n:3">Sent on its own, within a minute</li>
+              <li class="bubble bubble-cust bubble-typing seq" style="--n:4"><span class="sr-only">The caller is typing a reply</span><i></i><i></i><i></i></li>
+            </ul>
+          </div>
+        </div>
+        <figcaption class="hero-cap"><span class="flag">Example</span><span class="phone-label">What your caller sees</span></figcaption>
+      </figure>
+    </div>
+
+    <div class="container">
+      <ul class="points" role="list">
+        <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg><span>Websites live in as little as <span class="nowrap">7–10 days</span></span></li>
+        <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 0 1 13.7-5.7L20 8.5M20 12a8 8 0 0 1-13.7 5.7L4 15.5"/><path d="M20 4v4.5h-4.5M4 20v-4.5h4.5"/></svg><span>Automations that run while you work</span></li>
+        <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5V5a1.5 1.5 0 0 1 1.5-1.5h7.5L21 12l-8.5 8.5Z"/><circle cx="8" cy="8" r="1.5"/></svg><span>Fixed, published prices</span></li>
+        <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4.5"/><path d="m11.2 11.8 8.3-8.3M16 7l2.5 2.5M13.5 9.5 15 11"/></svg><span>You own everything</span></li>
+        <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Meet in person anywhere in Greater Baton Rouge</span></li>
+      </ul>
     </div>
   </section>
 
+  <!-- ===================== SERVICES: THE MENU ===================== -->
   <section class="section" id="services">
     <div class="container">
-      <header class="section-head reveal">
-        <p class="eyebrow">What we do</p>
-        <h2>Your website, and the systems behind it</h2>
+      <header class="section-head section-head-split reveal">
+        <div>
+          <p class="eyebrow">What we do</p>
+          <h2>Your website, and the systems behind it</h2>
+        </div>
         <p class="section-sub">Pick a single service or hand us the whole thing. Some clients start with a new site, others with a Growth Audit and the one automation that saves them the most time.</p>
       </header>
 
-      <div class="grid grid-3">
-        <article class="card reveal">
-          <div class="card-icon">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5A2.5 2.5 0 0 1 5.5 3h13A2.5 2.5 0 0 1 21 5.5v9a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 14.5Z"/><path d="M8 21h8M12 17v4"/></svg>
-          </div>
-          <h3>Website design &amp; build <span class="card-price">$1,000, $2,000 or $4,000</span></h3>
-          <p>A custom-designed marketing site built from scratch — brochure sites, service businesses, portfolios and landing pages that actually convert.</p>
-          <ul class="ticks">
+      <ul class="pricelist offer" role="list">
+        <li class="reveal">
+          <div class="pl-row"><h3 class="pl-name">Website design &amp; build</h3><span class="pl-price">$1,000, $2,000 or $4,000</span></div>
+          <p>A custom-designed site built from scratch: brochure sites, service businesses, portfolios, and landing pages made to bring in calls and enquiries.</p>
+          <ul class="ticks" role="list">
             <li>Custom design, built for you</li>
             <li>Copywriting support on Business and Commerce</li>
-            <li>Built mobile-first</li>
+            <li>Built for phones first</li>
           </ul>
-        </article>
-        <article class="card reveal">
-          <div class="card-icon">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
-          </div>
-          <h3>Automation <span class="card-price">$750 or $1,500 per setup</span></h3>
+        </li>
+        <li class="reveal">
+          <div class="pl-row"><h3 class="pl-name">Automation</h3><span class="pl-price">$750 or $1,500 per setup</span></div>
           <p>Missed calls get a text back, customers book themselves, quotes follow up on their own and every finished job asks for a review. Hours of busywork a week, handled.</p>
-          <ul class="ticks">
+          <ul class="ticks" role="list">
             <li>Missed-call text-back</li>
             <li>Online booking &amp; reminders</li>
-            <li>Lead follow-up and custom workflows</li>
+            <li>Lead follow-up and custom automations</li>
           </ul>
-        </article>
-        <article class="card reveal">
-          <div class="card-icon">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V9M10 19V5M16 19v-6M22 19H2"/></svg>
-          </div>
-          <h3>Growth consulting <span class="card-price">$350 audit · $500 or $1,000/mo</span></h3>
+        </li>
+        <li class="reveal">
+          <div class="pl-row"><h3 class="pl-name">Growth consulting</h3><span class="pl-price">$350 audit · $500 or $1,000/mo</span></div>
           <p>A clear plan for getting more customers online: your Google profile, reviews, how calls and enquiries are handled, and where your week goes. Then a partner to keep it working.</p>
-          <ul class="ticks">
+          <ul class="ticks" role="list">
             <li>Free online check to start</li>
             <li>Google profile &amp; reviews, $500</li>
             <li>Monthly Advisor and Partner plans</li>
           </ul>
-        </article>
-      </div>
+        </li>
+      </ul>
       <p class="section-more reveal"><a class="more-link" href="/services/">All services<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a></p>
     </div>
   </section>
 
-  <section class="section section-alt" id="automation">
+  <!-- ===================== THE STORY: ONE MISSED CALL, FOLLOWED THROUGH ===================== -->
+  <section class="section section-sand" id="automation">
     <div class="container">
       <header class="section-head reveal">
-        <p class="eyebrow">Automation</p>
-        <h2>About 4 hours a week, back</h2>
-        <p class="section-sub">Returning missed calls, booking by phone, chasing quotes, copying enquiries and asking for reviews add up to about 4 hours a week in a typical example, around 200 hours a year. Here's how each one runs on its own.</p>
+        <p class="eyebrow">How automation works</p>
+        <h2>What happens when a customer calls and you can't pick up</h2>
+        <p class="section-sub">Follow one call from the missed ring to the review. Each step runs on its own, on accounts in your name.</p>
       </header>
-      <div class="flow-grid flow-grid-3">
-        <article class="flow reveal">
-          <h3>Missed-call text-back</h3>
-          <ol class="flow-steps">
-            <li>You can't pick up.</li>
-            <li>Within a minute, the caller gets a text from your business number asking what they need.</li>
-            <li>Their reply lands on your phone, so you call back knowing the job.</li>
-          </ol>
-        </article>
-        <article class="flow reveal">
-          <h3>Online booking</h3>
-          <ol class="flow-steps">
-            <li>Customers pick a time on your site or Google profile.</li>
-            <li>It lands on your calendar with no double bookings.</li>
-            <li>Confirmations and reminders go out on their own.</li>
-          </ol>
-        </article>
-        <article class="flow reveal">
-          <h3>Lead follow-up</h3>
-          <ol class="flow-steps">
-            <li>Every enquiry is saved to one list automatically.</li>
-            <li>Quiet quotes get a friendly follow-up after 2 days and a week.</li>
-            <li>Finished jobs get a review request with your Google link.</li>
-          </ol>
-        </article>
+
+      <ol class="route" role="list">
+        <li class="stop">
+          <b class="stop-pin display" aria-hidden="true">1</b>
+          <div class="stop-head reveal">
+            <p class="stop-tag">Missed-call text-back · $750 setup</p>
+            <h3><span>You can't pick up.</span> <span>They get a text.</span></h3>
+          </div>
+          <div class="vig stop-art stop-reply reveal">
+            <span class="flag">Example</span>
+            <ul class="thread" role="list">
+              <li class="thread-note thread-missed"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/><path d="m15 4 5 5m0-5-5 5"/></svg>Missed call</li>
+              <li class="bubble bubble-biz seq" style="--n:1">Sorry we missed your call, this is [your business]. What can we help with?</li>
+              <li class="thread-note seq" style="--n:2">Sent on its own, within a minute</li>
+            </ul>
+            <div class="notice seq" style="--n:3" role="img" aria-label="Example notification on your phone: a new reply from a missed caller, with their number saved">
+              <p class="notice-top" aria-hidden="true">Your phone<span class="notice-when">now</span></p>
+              <p class="notice-title" aria-hidden="true">New reply from a missed caller</p>
+              <p class="notice-body" aria-hidden="true">“The kitchen sink is leaking under the cabinet…”</p>
+              <p class="notice-meta" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Number saved</p>
+            </div>
+          </div>
+          <p class="stop-body reveal">Within a minute, the caller gets a text from your business number asking what they need. Their reply lands on your phone, so you call back knowing the job.</p>
+        </li>
+
+        <li class="stop">
+          <b class="stop-pin display" aria-hidden="true">2</b>
+          <div class="stop-head reveal">
+            <p class="stop-tag">Online booking &amp; reminders · $750 setup</p>
+            <h3><span>They pick a time.</span> <span>It's on your calendar.</span></h3>
+          </div>
+          <div class="vig stop-art reveal">
+            <span class="flag">Example</span>
+            <div class="cal" role="img" aria-label="Example week on a calendar: a new online booking drops into a free slot on Thursday">
+              <p class="cal-head"><b>Your calendar</b><span>This week</span></p>
+              <div class="cal-grid" aria-hidden="true">
+                <div class="cal-day"><span>Mon</span><i class="busy"></i><i class="busy"></i><i></i></div>
+                <div class="cal-day"><span>Tue</span><i class="busy"></i><i></i><i class="busy"></i></div>
+                <div class="cal-day"><span>Wed</span><i></i><i class="busy"></i><i class="busy"></i></div>
+                <div class="cal-day cal-today"><span>Thu</span><i class="busy"></i><i class="new seq" style="--n:1">Booked online</i><i></i></div>
+                <div class="cal-day"><span>Fri</span><i class="busy"></i><i class="busy"></i><i></i></div>
+              </div>
+              <ul class="cal-log" aria-hidden="true">
+                <li class="seq" style="--n:2"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Confirmation sent</li>
+                <li class="seq" style="--n:3"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Reminder set for the day before</li>
+              </ul>
+            </div>
+          </div>
+          <p class="stop-body reveal">Customers pick a time on your site or Google profile. It lands on your calendar with no double bookings. Confirmations and reminders go out on their own.</p>
+        </li>
+
+        <li class="stop">
+          <b class="stop-pin display" aria-hidden="true">3</b>
+          <div class="stop-head reveal">
+            <p class="stop-tag">Lead follow-up system · $1,500 setup</p>
+            <h3><span>The quote went quiet?</span> <span>It follows up for you.</span></h3>
+          </div>
+          <div class="vig stop-art reveal">
+            <span class="flag">Example</span>
+            <div class="leads" role="img" aria-label="Example list of enquiries from a website form, Google, Facebook and a missed call. Each shows where it stands: new, followed up after 2 days, followed up after a week, or job done and a review request sent">
+              <p class="cal-head"><b>Enquiries</b><span>One list</span></p>
+              <ul aria-hidden="true">
+                <li class="seq" style="--n:1"><span class="lead-src">Website form</span><span class="lead-what">New roof estimate</span><span class="pill pill-new">New</span></li>
+                <li class="seq" style="--n:2"><span class="lead-src">Google</span><span class="lead-what">Fence repair</span><span class="pill pill-go">Follow-up sent · 2 days</span></li>
+                <li class="seq" style="--n:3"><span class="lead-src">Facebook</span><span class="lead-what">AC tune-up</span><span class="pill pill-go">Follow-up sent · 1 week</span></li>
+                <li class="seq" style="--n:4"><span class="lead-src">Missed call · job done</span><span class="lead-what">Leaking sink</span><span class="pill">Review request sent</span></li>
+              </ul>
+            </div>
+          </div>
+          <p class="stop-body reveal">Every enquiry is saved to one list automatically. Quiet quotes get a friendly follow-up after 2 days and a week. Finished jobs get a review request with your Google link.</p>
+        </li>
+
+      </ol>
+
+      <!-- The example week, added up. Not a fourth step, so it stands outside the list; the note stays right beside the figure. -->
+      <div class="stop stop-sum bigfig reveal">
+        <span class="stop-pin" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span>
+        <p class="bigfig-num display"><span class="label">About</span> <b>4</b> <span>hours a week, back</span></p>
+        <p>Returning missed calls, booking by phone, chasing quotes, copying enquiries and asking for reviews add up to about 4 hours a week in a typical example, around 200 hours a year.</p>
+        <p class="note"><span class="flag">Example</span>These are example numbers to show the arithmetic, not a measurement of your business. An estimate, not a guarantee.</p>
+        <p class="stop-links">
+          <a class="more-link" href="/consulting/#calculator">Estimate what it's worth to you<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a>
+          <a class="more-link" href="/consulting/#how">How each automation works<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a>
+        </p>
       </div>
-      <p class="section-more reveal"><a class="more-link" href="/consulting/#calculator">Estimate what it's worth to your business<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a></p>
     </div>
   </section>
 
-  <section class="section" id="work">
+  <!-- ===================== WORK ===================== -->
+  <section class="section section-tight" id="work">
     <div class="container">
-      <header class="section-head reveal">
-        <p class="eyebrow">Selected work</p>
-        <h2>Recent projects</h2>
+      <header class="section-head section-head-split reveal">
+        <div>
+          <p class="eyebrow">Selected work</p>
+          <h2>Recent projects</h2>
+        </div>
         <p class="section-sub">Three live sites. Visit them and judge for yourself.</p>
       </header>
 
-      <div class="mini-work-grid">
-        <a class="mini-work reveal" href="https://risenhealthco.com" target="_blank" rel="noopener">
-          <span class="mini-media"><img class="work-thumb" src="/assets/img/work-risenhealthco.jpg" alt="Risen Health — a vial of BPC-157 beside the tagline &quot;Rise into divine health&quot;" width="1200" height="630" loading="lazy" decoding="async"></span>
-          <span class="mini-body"><strong>Risen Health</strong><span>Health &amp; wellness · Online store</span></span>
-        </a>
-        <a class="mini-work reveal" href="https://corbelbooks.com" target="_blank" rel="noopener">
-          <span class="mini-media"><img class="work-thumb" src="/assets/img/work-corbelbooks.jpg"
-               alt="Corbel Books homepage — bookkeeping and invoicing for small businesses"
-               width="1200" height="630" loading="lazy" decoding="async"></span>
-          <span class="mini-body"><strong>Corbel Books</strong><span>Fintech SaaS · Product site &amp; app UI</span></span>
-        </a>
-        <a class="mini-work reveal" href="https://smilyssoftwash.com" target="_blank" rel="noopener">
-          <span class="mini-media"><img class="work-thumb" src="/assets/img/work-smilyssoftwash.jpg"
+      <div class="grid grid-3">
+        <a class="print reveal" href="https://smilyssoftwash.com" target="_blank" rel="noopener">
+          <div class="print-img"><img src="/assets/img/work-smilyssoftwash.jpg"
                alt="Smilys Softwash — before and after of a soft-washed roof and house exterior"
-               width="1200" height="600" loading="lazy" decoding="async"></span>
-          <span class="mini-body"><strong>Smilys Softwash</strong><span>Exterior cleaning · Local service &amp; SEO</span></span>
+               width="1200" height="600" loading="lazy" decoding="async"></div>
+          <div class="print-cap">
+            <div class="print-name"><h3>Smilys Softwash</h3><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></div>
+            <p class="print-kind">Exterior cleaning<span class="sep"> · </span><span>Local service &amp; SEO</span><span class="sr-only"> (opens in a new tab)</span></p>
+          </div>
+        </a>
+        <a class="print reveal" href="https://risenhealthco.com" target="_blank" rel="noopener">
+          <div class="print-img"><img src="/assets/img/work-risenhealthco.jpg" alt="Risen Health — a vial of BPC-157 beside the tagline &quot;Rise into divine health&quot;" width="1200" height="630" loading="lazy" decoding="async"></div>
+          <div class="print-cap">
+            <div class="print-name"><h3>Risen Health</h3><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></div>
+            <p class="print-kind">Health &amp; wellness<span class="sep"> · </span><span>Online store</span><span class="sr-only"> (opens in a new tab)</span></p>
+          </div>
+        </a>
+        <a class="print reveal" href="https://corbelbooks.com" target="_blank" rel="noopener">
+          <div class="print-img"><img src="/assets/img/work-corbelbooks.jpg"
+               alt="Corbel Books homepage — bookkeeping and invoicing for small businesses"
+               width="1200" height="630" loading="lazy" decoding="async"></div>
+          <div class="print-cap">
+            <div class="print-name"><h3>Corbel Books</h3><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></div>
+            <p class="print-kind">Bookkeeping software<span class="sep"> · </span><span>Product site &amp; app screens</span><span class="sr-only"> (opens in a new tab)</span></p>
+          </div>
         </a>
       </div>
       <p class="section-more reveal"><a class="more-link" href="/work/">See the work in detail<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a></p>
@@ -577,113 +665,206 @@
   </section>
   TESTIMONIALS-END -->
 
-  <section class="section section-alt" id="process">
-    <div class="container">
+  <!-- ===================== PROCESS: THE JOB TICKET ===================== -->
+  <section class="section section-sand" id="process">
+    <div class="container split split-sticky">
       <header class="section-head reveal">
-        <p class="eyebrow">How it works</p>
+        <p class="eyebrow">The process</p>
         <h2>Four steps, no surprises</h2>
         <p class="section-sub">You'll always know what's happening, what's next, and what it costs.</p>
+        <p><a class="more-link" href="/process/">How a project runs, step by step<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a></p>
       </header>
 
-      <ol class="steps">
-        <li class="step reveal">
-          <span class="step-num">01</span>
-          <h3>Discovery call</h3>
-          <p>A free 30-minute call about your business and what the site needs to achieve.</p>
-        </li>
-        <li class="step reveal">
-          <span class="step-num">02</span>
-          <h3>Proposal &amp; design</h3>
-          <p>A fixed quote and timeline, then design concepts you sign off before any build starts.</p>
-        </li>
-        <li class="step reveal">
-          <span class="step-num">03</span>
-          <h3>Build &amp; review</h3>
-          <p>Built on a private staging link you can check any time, with weekly progress notes.</p>
-        </li>
-        <li class="step reveal">
-          <span class="step-num">04</span>
-          <h3>Launch &amp; support</h3>
-          <p>Your domain (IONOS) and hosting (Netlify) set up in your name, plus analytics and redirects, then free support for 30 days to six months, by plan.</p>
-        </li>
-      </ol>
-      <p class="section-more reveal"><a class="more-link" href="/process/">How a project runs, step by step<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a></p>
+      <div class="ticket">
+        <p class="ticket-head" aria-hidden="true"><span>Job ticket</span><span>KnightWebstudio</span></p>
+        <ol class="steps" role="list">
+          <li>
+            <span class="steps-no" aria-hidden="true">01</span>
+            <div><h3>Discovery call</h3>
+            <p>A free 30-minute call about your business and what the site needs to achieve.</p></div>
+          </li>
+          <li>
+            <span class="steps-no" aria-hidden="true">02</span>
+            <div><h3>Proposal &amp; design</h3>
+            <p>A fixed quote and timeline, then design concepts you sign off before any build starts.</p></div>
+          </li>
+          <li>
+            <span class="steps-no" aria-hidden="true">03</span>
+            <div><h3>Build &amp; review</h3>
+            <p>Built on a private staging link you can check any time, with weekly progress notes.</p></div>
+          </li>
+          <li>
+            <span class="steps-no" aria-hidden="true">04</span>
+            <div><h3>Launch &amp; support</h3>
+            <p>Your domain (IONOS) and hosting (Netlify) set up in your name, plus analytics and redirects, then free support for 30 days to six months, by plan.</p></div>
+          </li>
+        </ol>
+        <p class="stamp" aria-hidden="true">You own<br>everything</p>
+      </div>
     </div>
   </section>
 
+  <!-- ===================== PRICING: THE PRICE BOARD ===================== -->
   <section class="section" id="pricing">
     <div class="container">
-      <header class="section-head reveal">
-        <p class="eyebrow">Pricing</p>
-        <h2>Fixed prices, published up front</h2>
-        <p class="section-sub">What you see is what you pay. Care plans keep a site running for $125, $300, $600 or $1,000 a month, and automation setups are $750 or $1,500. A Growth Audit is $350.</p>
-      </header>
+      <div class="board on-blue">
+        <header class="board-head">
+          <div>
+            <p class="eyebrow">Pricing</p>
+            <h2>Fixed prices, published up front</h2>
+          </div>
+          <p>What you see is what you pay.</p>
+        </header>
 
-      <div class="mini-price-grid">
-        <a class="mini-price reveal" href="/contact/?package=onepage">
-          <span class="mini-price-name">One-page</span>
-          <span class="mini-price-amt">$1,000</span>
-          <span class="mini-price-plan">Or $500 down, then about $167/mo for 3 months</span>
-          <span class="mini-price-note">One polished page: who you are, what you offer and how to reach you. Live in as little as 7 days.</span>
-        </a>
-        <a class="mini-price reveal" href="/checkout/?plan=starter-deposit">
-          <span class="mini-price-name">Starter</span>
-          <span class="mini-price-amt">$2,000</span>
-          <span class="mini-price-plan">Or $1,000 down, then about $333/mo for 3 months</span>
-          <span class="mini-price-note">An information website: who you are, what you offer and how to reach you. Live in as little as 7–10 days.</span>
-        </a>
-        <a class="mini-price reveal" href="/checkout/?plan=business-deposit">
-          <span class="mini-price-name">Business</span>
-          <span class="mini-price-amt">$4,000</span>
-          <span class="mini-price-plan">Or $2,000 down, then about $667/mo for 3 months</span>
-          <span class="mini-price-note">The full marketing site most growing businesses need. Live in 2–4 weeks.</span>
-        </a>
-        <a class="mini-price reveal" href="/checkout/?plan=commerce-deposit">
-          <span class="mini-price-name">Commerce</span>
-          <span class="mini-price-amt">$8,000</span>
-          <span class="mini-price-plan">Or $4,000 down, then about $1,333/mo for 3 months</span>
-          <span class="mini-price-note">Sell online, with the operations side set up properly. Live in 4–6 weeks.</span>
-        </a>
+        <ul class="board-tiers" role="list">
+          <li>
+            <a class="tier" href="/contact/?package=onepage">
+              <span class="tier-name">One-page</span>
+              <span class="tier-amt">$1,000</span>
+              <span class="tier-plan">Or $500 down, then about <span class="nowrap">$167/mo</span> for 3 months</span>
+              <span class="tier-note">One polished page: who you are, what you offer and how to reach you. Live in as little as <span class="nowrap">7 days</span>.</span>
+            </a>
+          </li>
+          <li>
+            <a class="tier" href="/checkout/?plan=starter-deposit">
+              <span class="tier-name">Starter</span>
+              <span class="tier-amt">$2,000</span>
+              <span class="tier-plan">Or $1,000 down, then about <span class="nowrap">$333/mo</span> for 3 months</span>
+              <span class="tier-note">An information website: who you are, what you offer and how to reach you. Live in as little as <span class="nowrap">7–10 days</span>.</span>
+            </a>
+          </li>
+          <li>
+            <a class="tier" href="/checkout/?plan=business-deposit">
+              <span class="tier-name">Business</span>
+              <span class="tier-amt">$4,000</span>
+              <span class="tier-plan">Or $2,000 down, then about <span class="nowrap">$667/mo</span> for 3 months</span>
+              <span class="tier-note">The full marketing site most growing businesses need. Live in <span class="nowrap">2–4 weeks</span>.</span>
+            </a>
+          </li>
+          <li>
+            <a class="tier" href="/checkout/?plan=commerce-deposit">
+              <span class="tier-name">Commerce</span>
+              <span class="tier-amt">$8,000</span>
+              <span class="tier-plan">Or $4,000 down, then about <span class="nowrap">$1,333/mo</span> for 3 months</span>
+              <span class="tier-note">Sell online, with the operations side set up properly. Live in <span class="nowrap">4–6 weeks</span>.</span>
+            </a>
+          </li>
+        </ul>
+
+        <dl class="board-extras">
+          <div><dt>Care plans, to keep a site running</dt><dd>$125, $300, $600 or <span class="nowrap">$1,000/mo</span></dd></div>
+          <div><dt>Automation setups</dt><dd>$750 or $1,500</dd></div>
+          <div><dt>A Growth Audit</dt><dd>$350</dd></div>
+        </dl>
+
+        <p class="board-foot"><a class="btn btn-primary" href="/pricing/">Full pricing, consulting and care plans</a></p>
       </div>
-      <p class="section-more reveal"><a class="more-link" href="/pricing/">Full pricing, consulting and care plans<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a></p>
     </div>
   </section>
 
-  <section class="cta-band">
-    <div class="container cta-inner reveal">
-      <div class="cta-crest"><!-- art:full-crest --><svg class="crest-full" viewBox="0 0 160 164" role="img" aria-label="KnightWebstudio crest" style="--t1:#c9d4ff;--t2:#a5b8ff;--t3:#6d8bff;--t4:#4f6ef7;--t5:#3348b8;--ink:#080b14;--accent:#46e0c0;--rim:#3348b8;--rim2:#a5b8ff;--field1:#17203a;--field2:#0b1020;--ribbon:#141c3f;--ribbon2:#0b1020;--steel1:#dfe6fb;--steel2:#a9b6d6;--steel3:#7d8bb0"><defs><linearGradient id="fc-fld" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--field1)"/><stop offset="1" stop-color="var(--field2)"/></linearGradient><radialGradient id="fc-glow" cx=".5" cy=".42" r=".5"><stop offset="0" stop-color="#6d8bff" stop-opacity=".35"/><stop offset="1" stop-color="#6d8bff" stop-opacity="0"/></radialGradient><linearGradient id="fc-gl" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".5"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="fc-in"><path d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z"/></clipPath><clipPath id="fc-out"><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z"/></clipPath></defs><g transform="translate(80 84) rotate(-40)"><g class="a-sw a-sw-l"><path d="M-3 40V-92L0-100L3-92V40Z" fill="var(--steel1)" stroke="var(--steel3)" stroke-width=".6"/><path d="M0-100L3-92V40H0Z" fill="var(--steel2)"/><path d="M0-90V34" stroke="var(--steel3)" stroke-width=".8"/><rect x="-13" y="40" width="26" height="4.2" rx="2.1" fill="var(--rim)"/><rect x="-2.2" y="44.2" width="4.4" height="10" fill="var(--t5)"/><circle cy="57.5" r="3.6" fill="var(--rim)"/><circle cy="57.5" r="1.4" fill="var(--accent)"/></g></g><g transform="translate(80 84) rotate(40)"><g class="a-sw a-sw-r"><path d="M-3 40V-92L0-100L3-92V40Z" fill="var(--steel1)" stroke="var(--steel3)" stroke-width=".6"/><path d="M0-100L3-92V40H0Z" fill="var(--steel2)"/><path d="M0-90V34" stroke="var(--steel3)" stroke-width=".8"/><rect x="-13" y="40" width="26" height="4.2" rx="2.1" fill="var(--rim)"/><rect x="-2.2" y="44.2" width="4.4" height="10" fill="var(--t5)"/><circle cy="57.5" r="3.6" fill="var(--rim)"/><circle cy="57.5" r="1.4" fill="var(--accent)"/></g></g><g transform="translate(20 6)"><g class="a-drop"><g class="a-rim"><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z" fill="var(--rim)"/><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z" fill="none" stroke="var(--rim2)" stroke-opacity=".55" stroke-width="1.2"/><path class="a-field" d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z" fill="url(#fc-fld)"/></g><g clip-path="url(#fc-in)"><circle class="a-field" cx="60" cy="50" r="42" fill="url(#fc-glow)"/><g transform="translate(22 22) scale(.86)" stroke-linejoin="round"><polygon class="facet" style="--i:0;--dx:-8.0px;--dy:-6.4px" fill="var(--t2)" points="54,4 61,15 46,12"/><polygon class="facet" style="--i:1;--dx:-1.6px;--dy:6.4px" fill="var(--t1)" points="54,4 46,12 50,9"/><polygon class="facet" style="--i:2;--dx:4.8px;--dy:4.8px" fill="var(--t3)" points="37,15 46,12 61,15 63,24 35,29"/><polygon class="facet" style="--i:3;--dx:-6.4px;--dy:3.2px" fill="var(--t1)" points="37,15 24,27 35,29"/><polygon class="facet" style="--i:4;--dx:0.0px;--dy:1.6px" fill="var(--t2)" points="24,27 13,41 24,46 35,29"/><polygon class="facet" style="--i:5;--dx:6.4px;--dy:0.0px" fill="var(--t1)" points="13,41 8,49 12,56 23,58 24,46"/><polygon class="facet" style="--i:6;--dx:-4.8px;--dy:-1.6px" fill="var(--t3)" points="35,29 24,46 50,37"/><polygon class="facet" style="--i:7;--dx:1.6px;--dy:-3.2px" fill="var(--t4)" points="35,29 50,37 63,24"/><polygon class="facet" style="--i:8;--dx:8.0px;--dy:-4.8px" fill="var(--t4)" points="24,46 23,58 42,54 50,37"/><polygon class="facet" style="--i:9;--dx:-3.2px;--dy:-6.4px" fill="var(--t3)" points="50,37 42,54 38,63 63,63 65,43"/><polygon class="facet" style="--i:10;--dx:3.2px;--dy:6.4px" fill="var(--t4)" points="50,37 65,43 63,24"/><polygon class="facet" style="--i:11;--dx:-8.0px;--dy:4.8px" fill="var(--t3)" points="38,63 31,80 26,112 53,112 63,63"/><polygon class="facet" style="--i:12;--dx:-1.6px;--dy:3.2px" fill="var(--t4)" points="63,63 53,112 78,112 72,80"/><polygon class="facet" style="--i:13;--dx:4.8px;--dy:1.6px" fill="var(--t5)" points="61,15 67,16 72,22 69,26 77,32 73,36 79,44 74,48 79,57 73,61 76,70 72,80 63,63 65,43 63,24"/><path class="eye" d="M30 27Q35 24 40 27Q35 30 30 27Z" fill="var(--ink)"/><path d="M12 46L16 45" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round"/></g></g><path class="a-line" pathLength="1" d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z" fill="none" stroke="var(--accent)" stroke-opacity=".9" stroke-width="1"/><circle class="rivet" style="--i:0" cx="24" cy="20" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:1" cx="42" cy="15.5" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:2" cx="60" cy="11" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:3" cx="78" cy="15.5" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:4" cx="96" cy="20" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:5" cx="100" cy="44" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:6" cx="20" cy="44" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:7" cx="94" cy="76" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:8" cx="26" cy="76" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:9" cx="79" cy="97" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:10" cx="41" cy="97" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><g clip-path="url(#fc-out)"><g transform="rotate(20 60 60)"><rect class="a-glint" x="-60" y="-30" width="16" height="180" fill="url(#fc-gl)"/></g></g></g></g><g transform="translate(0 16)"><g class="a-ribbon"><path d="M14 128L24 120L22 136Z" fill="var(--ribbon2)"/><path d="M146 128L136 120L138 136Z" fill="var(--ribbon2)"/><path d="M4 124H26L22 132L26 140H4L10 132Z" fill="var(--ribbon)"/><path d="M156 124H134L138 132L134 140H156L150 132Z" fill="var(--ribbon)"/><path d="M22 118Q80 132 138 118V134Q80 148 22 134Z" fill="var(--ribbon)"/><path d="M22 118Q80 132 138 118M22 134Q80 148 138 134" fill="none" stroke="var(--accent)" stroke-width=".8"/><path id="fc-rbt" d="M28 130.5Q80 144 132 130.5" fill="none"/><text font-family="Bricolage, Manrope, system-ui, sans-serif" font-weight="700" font-size="7.4" letter-spacing="1.2" fill="#eef2fb" text-anchor="middle"><textPath href="#fc-rbt" startOffset="50%">KNIGHT WEB STUDIO</textPath></text></g></g></svg><!-- /art:full-crest --></div>
-      <h2>Still deciding? Book the free call.</h2>
-      <p>Thirty minutes, no pitch. You'll get a clear view of what your website and your systems need, and what it should cost — even if you do it yourself.</p>
-      <a class="btn btn-light" href="/contact/" data-booking>Book a discovery call</a>
+  <!-- ===================== WHO YOU WORK WITH ===================== -->
+  <section class="section section-tight section-sand" id="about">
+    <div class="container who">
+      <div class="stack reveal">
+        <p class="eyebrow">Who you work with</p>
+        <h2>One local person, start to finish</h2>
+        <blockquote class="who-note">
+          <p>I'm Christian Knight, the founder of KnightWebstudio, and I'm based in Baton Rouge, Louisiana. When you work with the studio, you work with me.</p>
+          <p>I meet clients in person anywhere in Greater Baton Rouge. If you're farther away, that's fine too: I work with clients anywhere.</p>
+        </blockquote>
+        <ul class="pills" aria-label="Towns where we meet in person" role="list">
+          <li>Baton Rouge</li><li>Gonzales</li><li>Prairieville</li><li>Denham Springs</li><li>Zachary</li><li>Central</li><li>Baker</li>
+        </ul>
+        <p><a class="more-link" href="/about/">More about Christian<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a></p>
+      </div>
+
+      <!-- The page's one tilted object -->
+      <div class="bizcard tilt on-paper reveal">
+        <div class="bizcard-top">
+          <!-- art:crest-card --><svg class="crest" viewBox="0 0 120 120" aria-hidden="true" style="--t1:#DCE3FF;--t2:#B9C7FF;--t3:#8FA5FF;--t4:#5C77EC;--t5:#2C46C4;--ink:#161B2C;--accent:#F0C369;--rim:#2C46C4;--rim2:#B9C7FF;--glow:#8FA5FF;--field1:#24306A;--field2:#161B2C;--ribbon:#1B2C84;--ribbon2:#14205E;--steel1:#FBF5E6;--steel2:#CFC7B4;--steel3:#8E8A80;--letter:#FFFBF2"><defs><linearGradient id="cc-fld" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--field1)"/><stop offset="1" stop-color="var(--field2)"/></linearGradient><radialGradient id="cc-glow" cx=".5" cy=".42" r=".5"><stop offset="0" stop-color="var(--glow)" stop-opacity=".35"/><stop offset="1" stop-color="var(--glow)" stop-opacity="0"/></radialGradient><linearGradient id="cc-gl" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".5"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="cc-in"><path d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z"/></clipPath><clipPath id="cc-out"><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z"/></clipPath></defs><g class="a-rim"><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z" fill="var(--rim)"/><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z" fill="none" stroke="var(--rim2)" stroke-opacity=".55" stroke-width="1.2"/><path class="a-field" d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z" fill="url(#cc-fld)"/></g><g clip-path="url(#cc-in)"><circle class="a-field" cx="60" cy="50" r="42" fill="url(#cc-glow)"/><g transform="translate(22 22) scale(.86)" stroke-linejoin="round"><polygon class="facet" style="--i:0;--dx:-8.0px;--dy:-6.4px" fill="var(--t2)" points="54,4 61,15 46,12"/><polygon class="facet" style="--i:1;--dx:-1.6px;--dy:6.4px" fill="var(--t1)" points="54,4 46,12 50,9"/><polygon class="facet" style="--i:2;--dx:4.8px;--dy:4.8px" fill="var(--t3)" points="37,15 46,12 61,15 63,24 35,29"/><polygon class="facet" style="--i:3;--dx:-6.4px;--dy:3.2px" fill="var(--t1)" points="37,15 24,27 35,29"/><polygon class="facet" style="--i:4;--dx:0.0px;--dy:1.6px" fill="var(--t2)" points="24,27 13,41 24,46 35,29"/><polygon class="facet" style="--i:5;--dx:6.4px;--dy:0.0px" fill="var(--t1)" points="13,41 8,49 12,56 23,58 24,46"/><polygon class="facet" style="--i:6;--dx:-4.8px;--dy:-1.6px" fill="var(--t3)" points="35,29 24,46 50,37"/><polygon class="facet" style="--i:7;--dx:1.6px;--dy:-3.2px" fill="var(--t4)" points="35,29 50,37 63,24"/><polygon class="facet" style="--i:8;--dx:8.0px;--dy:-4.8px" fill="var(--t4)" points="24,46 23,58 42,54 50,37"/><polygon class="facet" style="--i:9;--dx:-3.2px;--dy:-6.4px" fill="var(--t3)" points="50,37 42,54 38,63 63,63 65,43"/><polygon class="facet" style="--i:10;--dx:3.2px;--dy:6.4px" fill="var(--t4)" points="50,37 65,43 63,24"/><polygon class="facet" style="--i:11;--dx:-8.0px;--dy:4.8px" fill="var(--t3)" points="38,63 31,80 26,112 53,112 63,63"/><polygon class="facet" style="--i:12;--dx:-1.6px;--dy:3.2px" fill="var(--t4)" points="63,63 53,112 78,112 72,80"/><polygon class="facet" style="--i:13;--dx:4.8px;--dy:1.6px" fill="var(--t5)" points="61,15 67,16 72,22 69,26 77,32 73,36 79,44 74,48 79,57 73,61 76,70 72,80 63,63 65,43 63,24"/><path class="eye" d="M30 27Q35 24 40 27Q35 30 30 27Z" fill="var(--ink)"/><path d="M12 46L16 45" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round"/></g></g><path class="a-line" pathLength="1" d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z" fill="none" stroke="var(--accent)" stroke-opacity=".9" stroke-width="1"/><circle class="rivet" style="--i:0" cx="24" cy="20" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:1" cx="42" cy="15.5" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:2" cx="60" cy="11" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:3" cx="78" cy="15.5" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:4" cx="96" cy="20" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:5" cx="100" cy="44" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:6" cx="20" cy="44" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:7" cx="94" cy="76" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:8" cx="26" cy="76" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:9" cx="79" cy="97" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:10" cx="41" cy="97" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><g clip-path="url(#cc-out)"><g transform="rotate(20 60 60)"><rect class="a-glint" x="-60" y="-30" width="16" height="180" fill="url(#cc-gl)"/></g></g></svg><!-- /art:crest-card -->
+          <p><b>KnightWebstudio</b><span>Websites · Automation · Consulting</span></p>
+        </div>
+        <p class="bizcard-name">Christian Knight<span>Founder</span></p>
+        <ul class="bizcard-lines" role="list">
+          <li><a href="tel:+12252550837"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>(225) 255-0837</a></li>
+          <li><a href="mailto:knightwebstudio1@gmail.com"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>knightwebstudio1@gmail.com</a></li>
+          <li><span><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Baton Rouge, Louisiana</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CLOSING CALL TO ACTION ===================== -->
+  <section class="cta-band on-blue">
+    <div class="container cta-inner">
+      <div class="cta-copy">
+        <h2>Still deciding? Book the free call.</h2>
+        <p>Thirty minutes, no pitch. You'll get a clear view of what your website and your systems need, and what it should cost — even if you do it yourself.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary btn-lg" href="/contact/" data-booking>Book a free 30-minute call</a>
+          <a class="btn btn-lg" href="/contact/">Send an enquiry</a>
+        </div>
+      </div>
+      <!-- Decorative, from 980px: the same facts as the paragraph, drawn as an appointment card -->
+      <div class="appt on-paper wide-only" aria-hidden="true">
+        <p class="appt-head"><span>Appointment card</span><span>No. 01</span></p>
+        <p class="appt-title">Discovery call</p>
+        <dl class="appt-lines">
+          <div><dt>Cost</dt><dd>Free</dd></div>
+          <div><dt>Length</dt><dd>30 minutes</dd></div>
+          <div><dt>Sales pitch</dt><dd>None</dd></div>
+          <div><dt>Where</dt><dd>A call, or in person</dd></div>
+        </dl>
+      </div>
     </div>
   </section>
 
 </main>
 
-<!-- Mobile-only sticky CTA: the header's "Get a quote" is hidden below 980px,
-     so without this there is no persistent way to convert on a phone. -->
+<!-- Phones and tablets: the header button is hidden there, so this bar keeps
+     a call and a booking one thumb-tap away. main.js shows it after the first
+     screen and hides it over the footer. -->
 <div class="mobile-cta" id="mobile-cta" hidden>
   <div class="mobile-cta-inner">
-    <span class="mobile-cta-text">Free 30-min call<span> · no pitch</span></span>
-    <a class="btn btn-primary btn-sm" href="/contact/">Get a quote</a>
+    <a class="btn" href="tel:+12252550837" aria-label="Call (225) 255-0837">
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
+      Call
+    </a>
+    <a class="btn btn-primary" href="/contact/" data-booking>Free 30-min call<span> · no pitch</span></a>
   </div>
 </div>
 
 <!-- ===================== FOOTER ===================== -->
-<footer class="site-footer">
+<footer class="site-footer on-ink">
+  <!-- Baton Rouge on the horizon: the Capitol tower, downtown and the river bridge. After dark the windows and bridge lamps are lit (.sky-lit). -->
+  <svg class="footer-skyline" viewBox="0 0 1440 120" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+    <path d="M0 120V102Q26 88 58 99Q92 84 128 100Q150 93 176 104V120Z"/>
+    <path d="M180 120V86h38v34ZM222 120V72h34v48ZM268 120V84h124v36ZM296 86V68h68v18ZM314 70V24h32v46ZM319 26V13h22v13ZM324 15V6h12v9ZM327 7l3-7 3 7Z"/>
+    <path d="M420 120V66h48v54ZM474 120V48h44v72ZM522 120V78h56v42ZM582 120V58h38v62ZM624 120V88h60v32ZM690 120V70h46v50ZM740 120V94h70v26Z"/>
+    <path d="M818 120V108Q836 98 852 107V120Z"/>
+    <g fill="none" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M880 93L960 78L1040 38L1090 72L1140 80L1190 72L1240 38L1320 78L1400 93"/>
+      <path d="M960 78V93M1040 38V93M1090 72V93M1140 80V93M1190 72V93M1240 38V93M1320 78V93"/>
+      <path d="M960 93L1040 38L1090 93L1140 80L1190 93L1240 38L1320 93M1000 58V93M1280 58V93"/>
+    </g>
+    <path d="M856 91h568v5H856ZM1033 94h14v26h-14ZM1233 94h14v26h-14ZM956 94h8v26h-8ZM1316 94h8v26h-8Z"/>
+    <path d="M1396 120V104Q1414 92 1440 100V120Z"/>
+    <path d="M0 114h1440v6H0Z"/>
+    <path class="sky-lit" d="M190 96h4v5h-4ZM230 80h4v5h-4ZM242 94h4v5h-4ZM282 94h4v5h-4ZM306 75h4v5h-4ZM350 75h4v5h-4ZM372 98h4v5h-4ZM326 34h4v5h-4ZM334 34h4v5h-4ZM326 47h4v5h-4ZM334 59h4v5h-4ZM430 76h4v5h-4ZM448 92h4v5h-4ZM484 58h4v5h-4ZM500 58h4v5h-4ZM484 76h4v5h-4ZM500 94h4v5h-4ZM536 88h4v5h-4ZM560 102h4v5h-4ZM592 68h4v5h-4ZM604 86h4v5h-4ZM640 98h4v5h-4ZM664 98h4v5h-4ZM700 80h4v5h-4ZM720 96h4v5h-4ZM760 102h4v5h-4ZM790 102h4v5h-4ZM1038 31h5v5h-5ZM1238 31h5v5h-5ZM959 73h3v3h-3ZM1089 67h3v3h-3ZM1139 75h3v3h-3ZM1189 67h3v3h-3ZM1319 73h3v3h-3Z"/>
+  </svg>
+
   <div class="container footer-grid">
     <div class="footer-brand">
       <a class="brand" href="/">
-        <!-- art:crest-footer --><svg class="crest footer-crest" viewBox="0 0 120 120" aria-hidden="true" style="--t1:#c9d4ff;--t2:#a5b8ff;--t3:#6d8bff;--t4:#4f6ef7;--t5:#3348b8;--ink:#080b14;--accent:#46e0c0;--rim:#3348b8;--rim2:#a5b8ff;--field1:#17203a;--field2:#0b1020;--ribbon:#141c3f;--ribbon2:#0b1020;--steel1:#dfe6fb;--steel2:#a9b6d6;--steel3:#7d8bb0"><defs><linearGradient id="cf-fld" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--field1)"/><stop offset="1" stop-color="var(--field2)"/></linearGradient><radialGradient id="cf-glow" cx=".5" cy=".42" r=".5"><stop offset="0" stop-color="#6d8bff" stop-opacity=".35"/><stop offset="1" stop-color="#6d8bff" stop-opacity="0"/></radialGradient><linearGradient id="cf-gl" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".5"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="cf-in"><path d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z"/></clipPath><clipPath id="cf-out"><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z"/></clipPath></defs><g class="a-rim"><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z" fill="var(--rim)"/><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z" fill="none" stroke="var(--rim2)" stroke-opacity=".55" stroke-width="1.2"/><path class="a-field" d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z" fill="url(#cf-fld)"/></g><g clip-path="url(#cf-in)"><circle class="a-field" cx="60" cy="50" r="42" fill="url(#cf-glow)"/><g transform="translate(22 22) scale(.86)" stroke-linejoin="round"><polygon class="facet" style="--i:0;--dx:-8.0px;--dy:-6.4px" fill="var(--t2)" points="54,4 61,15 46,12"/><polygon class="facet" style="--i:1;--dx:-1.6px;--dy:6.4px" fill="var(--t1)" points="54,4 46,12 50,9"/><polygon class="facet" style="--i:2;--dx:4.8px;--dy:4.8px" fill="var(--t3)" points="37,15 46,12 61,15 63,24 35,29"/><polygon class="facet" style="--i:3;--dx:-6.4px;--dy:3.2px" fill="var(--t1)" points="37,15 24,27 35,29"/><polygon class="facet" style="--i:4;--dx:0.0px;--dy:1.6px" fill="var(--t2)" points="24,27 13,41 24,46 35,29"/><polygon class="facet" style="--i:5;--dx:6.4px;--dy:0.0px" fill="var(--t1)" points="13,41 8,49 12,56 23,58 24,46"/><polygon class="facet" style="--i:6;--dx:-4.8px;--dy:-1.6px" fill="var(--t3)" points="35,29 24,46 50,37"/><polygon class="facet" style="--i:7;--dx:1.6px;--dy:-3.2px" fill="var(--t4)" points="35,29 50,37 63,24"/><polygon class="facet" style="--i:8;--dx:8.0px;--dy:-4.8px" fill="var(--t4)" points="24,46 23,58 42,54 50,37"/><polygon class="facet" style="--i:9;--dx:-3.2px;--dy:-6.4px" fill="var(--t3)" points="50,37 42,54 38,63 63,63 65,43"/><polygon class="facet" style="--i:10;--dx:3.2px;--dy:6.4px" fill="var(--t4)" points="50,37 65,43 63,24"/><polygon class="facet" style="--i:11;--dx:-8.0px;--dy:4.8px" fill="var(--t3)" points="38,63 31,80 26,112 53,112 63,63"/><polygon class="facet" style="--i:12;--dx:-1.6px;--dy:3.2px" fill="var(--t4)" points="63,63 53,112 78,112 72,80"/><polygon class="facet" style="--i:13;--dx:4.8px;--dy:1.6px" fill="var(--t5)" points="61,15 67,16 72,22 69,26 77,32 73,36 79,44 74,48 79,57 73,61 76,70 72,80 63,63 65,43 63,24"/><path class="eye" d="M30 27Q35 24 40 27Q35 30 30 27Z" fill="var(--ink)"/><path d="M12 46L16 45" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round"/></g></g><path class="a-line" pathLength="1" d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z" fill="none" stroke="var(--accent)" stroke-opacity=".9" stroke-width="1"/><circle class="rivet" style="--i:0" cx="24" cy="20" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:1" cx="42" cy="15.5" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:2" cx="60" cy="11" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:3" cx="78" cy="15.5" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:4" cx="96" cy="20" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:5" cx="100" cy="44" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:6" cx="20" cy="44" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:7" cx="94" cy="76" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:8" cx="26" cy="76" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:9" cx="79" cy="97" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:10" cx="41" cy="97" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><g clip-path="url(#cf-out)"><g transform="rotate(20 60 60)"><rect class="a-glint" x="-60" y="-30" width="16" height="180" fill="url(#cf-gl)"/></g></g></svg><!-- /art:crest-footer -->
+        <!-- art:crest-footer --><svg class="crest" viewBox="0 0 120 120" aria-hidden="true" style="--t1:#DCE3FF;--t2:#B9C7FF;--t3:#8FA5FF;--t4:#5C77EC;--t5:#2C46C4;--ink:#161B2C;--accent:#F0C369;--rim:#2C46C4;--rim2:#B9C7FF;--glow:#8FA5FF;--field1:#24306A;--field2:#161B2C;--ribbon:#1B2C84;--ribbon2:#14205E;--steel1:#FBF5E6;--steel2:#CFC7B4;--steel3:#8E8A80;--letter:#FFFBF2"><defs><linearGradient id="cf-fld" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--field1)"/><stop offset="1" stop-color="var(--field2)"/></linearGradient><radialGradient id="cf-glow" cx=".5" cy=".42" r=".5"><stop offset="0" stop-color="var(--glow)" stop-opacity=".35"/><stop offset="1" stop-color="var(--glow)" stop-opacity="0"/></radialGradient><linearGradient id="cf-gl" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".5"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="cf-in"><path d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z"/></clipPath><clipPath id="cf-out"><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z"/></clipPath></defs><g class="a-rim"><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z" fill="var(--rim)"/><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z" fill="none" stroke="var(--rim2)" stroke-opacity=".55" stroke-width="1.2"/><path class="a-field" d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z" fill="url(#cf-fld)"/></g><g clip-path="url(#cf-in)"><circle class="a-field" cx="60" cy="50" r="42" fill="url(#cf-glow)"/><g transform="translate(22 22) scale(.86)" stroke-linejoin="round"><polygon class="facet" style="--i:0;--dx:-8.0px;--dy:-6.4px" fill="var(--t2)" points="54,4 61,15 46,12"/><polygon class="facet" style="--i:1;--dx:-1.6px;--dy:6.4px" fill="var(--t1)" points="54,4 46,12 50,9"/><polygon class="facet" style="--i:2;--dx:4.8px;--dy:4.8px" fill="var(--t3)" points="37,15 46,12 61,15 63,24 35,29"/><polygon class="facet" style="--i:3;--dx:-6.4px;--dy:3.2px" fill="var(--t1)" points="37,15 24,27 35,29"/><polygon class="facet" style="--i:4;--dx:0.0px;--dy:1.6px" fill="var(--t2)" points="24,27 13,41 24,46 35,29"/><polygon class="facet" style="--i:5;--dx:6.4px;--dy:0.0px" fill="var(--t1)" points="13,41 8,49 12,56 23,58 24,46"/><polygon class="facet" style="--i:6;--dx:-4.8px;--dy:-1.6px" fill="var(--t3)" points="35,29 24,46 50,37"/><polygon class="facet" style="--i:7;--dx:1.6px;--dy:-3.2px" fill="var(--t4)" points="35,29 50,37 63,24"/><polygon class="facet" style="--i:8;--dx:8.0px;--dy:-4.8px" fill="var(--t4)" points="24,46 23,58 42,54 50,37"/><polygon class="facet" style="--i:9;--dx:-3.2px;--dy:-6.4px" fill="var(--t3)" points="50,37 42,54 38,63 63,63 65,43"/><polygon class="facet" style="--i:10;--dx:3.2px;--dy:6.4px" fill="var(--t4)" points="50,37 65,43 63,24"/><polygon class="facet" style="--i:11;--dx:-8.0px;--dy:4.8px" fill="var(--t3)" points="38,63 31,80 26,112 53,112 63,63"/><polygon class="facet" style="--i:12;--dx:-1.6px;--dy:3.2px" fill="var(--t4)" points="63,63 53,112 78,112 72,80"/><polygon class="facet" style="--i:13;--dx:4.8px;--dy:1.6px" fill="var(--t5)" points="61,15 67,16 72,22 69,26 77,32 73,36 79,44 74,48 79,57 73,61 76,70 72,80 63,63 65,43 63,24"/><path class="eye" d="M30 27Q35 24 40 27Q35 30 30 27Z" fill="var(--ink)"/><path d="M12 46L16 45" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round"/></g></g><path class="a-line" pathLength="1" d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z" fill="none" stroke="var(--accent)" stroke-opacity=".9" stroke-width="1"/><circle class="rivet" style="--i:0" cx="24" cy="20" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:1" cx="42" cy="15.5" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:2" cx="60" cy="11" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:3" cx="78" cy="15.5" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:4" cx="96" cy="20" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:5" cx="100" cy="44" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:6" cx="20" cy="44" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:7" cx="94" cy="76" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:8" cx="26" cy="76" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:9" cx="79" cy="97" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:10" cx="41" cy="97" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><g clip-path="url(#cf-out)"><g transform="rotate(20 60 60)"><rect class="a-glint" x="-60" y="-30" width="16" height="180" fill="url(#cf-gl)"/></g></g></svg><!-- /art:crest-footer -->
         <span class="brand-name">KnightWebstudio</span>
       </a>
       <p>Websites, automation and consulting for local businesses that need to be found, trusted and chosen.</p>
-      <!-- EDIT ME: location. Also in the JSON-LD address and on the contact page. -->
       <p class="footer-loc">Based in Baton Rouge, Louisiana. Working with clients anywhere.</p>
     </div>
 
     <nav class="footer-col" aria-label="Services">
-      <h3>Services</h3>
+      <p class="footer-title">Services</p>
       <a href="/services/">Website design</a>
       <a href="/consulting/">Consulting &amp; automation</a>
       <a href="/services/">E-commerce</a>
@@ -692,7 +873,7 @@
     </nav>
 
     <nav class="footer-col" aria-label="Company">
-      <h3>Company</h3>
+      <p class="footer-title">Company</p>
       <a href="/about/">About</a>
       <a href="/work/">Our work</a>
       <a href="/process/">Process</a>
@@ -701,7 +882,7 @@
     </nav>
 
     <nav class="footer-col" aria-label="Areas we serve">
-      <h3>Areas we serve</h3>
+      <p class="footer-title">Areas we serve</p>
       <a href="/web-design-baton-rouge/">Baton Rouge</a>
       <a href="/web-design-gonzales/">Gonzales</a>
       <a href="/web-design-prairieville/">Prairieville</a>
@@ -712,8 +893,8 @@
     </nav>
 
     <nav class="footer-col" aria-label="Contact">
-      <h3>Contact</h3>
-      <a href="mailto:knightwebstudio1@gmail.com">knightwebstudio1@gmail.com</a>
+      <p class="footer-title">Contact</p>
+      <a href="mailto:knightwebstudio1@gmail.com"><span>knightwebstudio1@<wbr>gmail.com</span></a>
       <a href="tel:+12252550837">(225) 255-0837</a>
       <a href="/contact/">Start a project</a>
     </nav>
@@ -724,6 +905,6 @@
     <p class="footer-links"><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="#top">Back to top ↑</a></p>
   </div>
 </footer>
-<script src="/assets/js/main.js" defer></script>
+<script src="/assets/js/main.js?v=2" defer></script>
 </body>
 </html>

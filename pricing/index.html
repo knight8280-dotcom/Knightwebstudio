@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="auto">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Pricing — KnightWebstudio</title>
 <meta name="description" content="Fixed prices: websites $1,000, $2,000 or $4,000, stores $8,000, branding $1,500, automation setups $750 or $1,500, a $350 Growth Audit, consulting plans $500 or $1,000 a month and care plans $125, $300, $600 or $1,000 a month.">
-<meta name="theme-color" content="#080b14">
+<meta name="theme-color" content="#F6F0E4">
 <link rel="canonical" href="https://knightwebstudio.com/pricing/">
 
 <meta property="og:type" content="website">
@@ -25,22 +25,26 @@
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 <script>
-  // Restore the saved theme before first paint, so a light-theme visitor
-  // never sees a dark flash. main.js still owns the toggle itself.
+  // Set the theme before first paint, so nobody sees a flash of the wrong
+  // one. Light is the default: a saved choice wins, otherwise a device set
+  // to dark gets the night theme. main.js still owns the toggle itself.
   (function () {
     var d = document.documentElement; d.classList.add('js');
     // The header crest builds itself on the first page of a visit only
     try { if (!sessionStorage.getItem('kws-crest')) { d.classList.add('crest-intro'); sessionStorage.setItem('kws-crest', '1'); } } catch (e) {}
     try {
       var t = localStorage.getItem('theme');
-      if (!t && matchMedia('(prefers-color-scheme: light)').matches) t = 'light';
-      if (t) d.setAttribute('data-theme', t);
-    } catch (e) { /* private mode */ }
+      if (t !== 'dark' && t !== 'light') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      d.setAttribute('data-theme', t);
+    } catch (e) { /* private mode: the stylesheet follows the device instead */ }
+    // Scroll reveals hide blocks until main.js shows them. If that script has
+    // not started after four seconds (or the page has none), show everything.
+    setTimeout(function () { if (!window.kwsReady) d.classList.remove('js'); }, 4000);
   })();
 </script>
-<link rel="preload" href="/assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/assets/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/styles.css">
+<link rel="preload" href="/assets/fonts/fraunces-soft.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/figtree.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/styles.css?v=2">
 
 <script type="application/ld+json">
 {
@@ -344,20 +348,34 @@
 </script>
 </head>
 
-<body>
+<body data-page="pricing">
 <a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ===================== TOP STRIP ===================== -->
+<div class="topbar on-ink">
+  <div class="container topbar-inner">
+    <p class="topbar-place">
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+      <span><span class="topbar-more">Based in </span>Baton Rouge<span class="topbar-state">, Louisiana</span><span class="topbar-long"> · We meet in person anywhere in Greater Baton Rouge</span></span>
+    </p>
+    <a class="topbar-tel" href="tel:+12252550837">
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
+      <span class="sr-only">Call </span>(225) 255-0837
+    </a>
+  </div>
+</div>
 <!-- ===================== HEADER ===================== -->
 <header class="site-header" id="site-header">
   <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
   <div class="container header-inner">
     <a class="brand" href="/" aria-label="KnightWebstudio home">
-      <!-- art:crest-header --><svg class="crest brand-crest" viewBox="0 0 120 120" aria-hidden="true" style="--t1:#c9d4ff;--t2:#a5b8ff;--t3:#6d8bff;--t4:#4f6ef7;--t5:#3348b8;--ink:#080b14;--accent:#46e0c0;--rim:#3348b8;--rim2:#a5b8ff;--field1:#17203a;--field2:#0b1020;--ribbon:#141c3f;--ribbon2:#0b1020;--steel1:#dfe6fb;--steel2:#a9b6d6;--steel3:#7d8bb0"><defs><linearGradient id="ch-fld" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--field1)"/><stop offset="1" stop-color="var(--field2)"/></linearGradient><radialGradient id="ch-glow" cx=".5" cy=".42" r=".5"><stop offset="0" stop-color="#6d8bff" stop-opacity=".35"/><stop offset="1" stop-color="#6d8bff" stop-opacity="0"/></radialGradient><linearGradient id="ch-gl" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".5"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="ch-in"><path d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z"/></clipPath><clipPath id="ch-out"><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z"/></clipPath></defs><g class="a-rim"><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z" fill="var(--rim)"/><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z" fill="none" stroke="var(--rim2)" stroke-opacity=".55" stroke-width="1.2"/><path class="a-field" d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z" fill="url(#ch-fld)"/></g><g clip-path="url(#ch-in)"><circle class="a-field" cx="60" cy="50" r="42" fill="url(#ch-glow)"/><g transform="translate(22 22) scale(.86)" stroke-linejoin="round"><polygon class="facet" style="--i:0;--dx:-8.0px;--dy:-6.4px" fill="var(--t2)" points="54,4 61,15 46,12"/><polygon class="facet" style="--i:1;--dx:-1.6px;--dy:6.4px" fill="var(--t1)" points="54,4 46,12 50,9"/><polygon class="facet" style="--i:2;--dx:4.8px;--dy:4.8px" fill="var(--t3)" points="37,15 46,12 61,15 63,24 35,29"/><polygon class="facet" style="--i:3;--dx:-6.4px;--dy:3.2px" fill="var(--t1)" points="37,15 24,27 35,29"/><polygon class="facet" style="--i:4;--dx:0.0px;--dy:1.6px" fill="var(--t2)" points="24,27 13,41 24,46 35,29"/><polygon class="facet" style="--i:5;--dx:6.4px;--dy:0.0px" fill="var(--t1)" points="13,41 8,49 12,56 23,58 24,46"/><polygon class="facet" style="--i:6;--dx:-4.8px;--dy:-1.6px" fill="var(--t3)" points="35,29 24,46 50,37"/><polygon class="facet" style="--i:7;--dx:1.6px;--dy:-3.2px" fill="var(--t4)" points="35,29 50,37 63,24"/><polygon class="facet" style="--i:8;--dx:8.0px;--dy:-4.8px" fill="var(--t4)" points="24,46 23,58 42,54 50,37"/><polygon class="facet" style="--i:9;--dx:-3.2px;--dy:-6.4px" fill="var(--t3)" points="50,37 42,54 38,63 63,63 65,43"/><polygon class="facet" style="--i:10;--dx:3.2px;--dy:6.4px" fill="var(--t4)" points="50,37 65,43 63,24"/><polygon class="facet" style="--i:11;--dx:-8.0px;--dy:4.8px" fill="var(--t3)" points="38,63 31,80 26,112 53,112 63,63"/><polygon class="facet" style="--i:12;--dx:-1.6px;--dy:3.2px" fill="var(--t4)" points="63,63 53,112 78,112 72,80"/><polygon class="facet" style="--i:13;--dx:4.8px;--dy:1.6px" fill="var(--t5)" points="61,15 67,16 72,22 69,26 77,32 73,36 79,44 74,48 79,57 73,61 76,70 72,80 63,63 65,43 63,24"/><path class="eye" d="M30 27Q35 24 40 27Q35 30 30 27Z" fill="var(--ink)"/><path d="M12 46L16 45" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round"/></g></g><path class="a-line" pathLength="1" d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z" fill="none" stroke="var(--accent)" stroke-opacity=".9" stroke-width="1"/><circle class="rivet" style="--i:0" cx="24" cy="20" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:1" cx="42" cy="15.5" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:2" cx="60" cy="11" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:3" cx="78" cy="15.5" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:4" cx="96" cy="20" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:5" cx="100" cy="44" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:6" cx="20" cy="44" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:7" cx="94" cy="76" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:8" cx="26" cy="76" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:9" cx="79" cy="97" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:10" cx="41" cy="97" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><g clip-path="url(#ch-out)"><g transform="rotate(20 60 60)"><rect class="a-glint" x="-60" y="-30" width="16" height="180" fill="url(#ch-gl)"/></g></g></svg><!-- /art:crest-header -->
+      <!-- art:crest-header --><svg class="crest" viewBox="0 0 120 120" aria-hidden="true" style="--t1:#DCE3FF;--t2:#B9C7FF;--t3:#8FA5FF;--t4:#5C77EC;--t5:#2C46C4;--ink:#161B2C;--accent:#F0C369;--rim:#2C46C4;--rim2:#B9C7FF;--glow:#8FA5FF;--field1:#24306A;--field2:#161B2C;--ribbon:#1B2C84;--ribbon2:#14205E;--steel1:#FBF5E6;--steel2:#CFC7B4;--steel3:#8E8A80;--letter:#FFFBF2"><defs><linearGradient id="ch-fld" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--field1)"/><stop offset="1" stop-color="var(--field2)"/></linearGradient><radialGradient id="ch-glow" cx=".5" cy=".42" r=".5"><stop offset="0" stop-color="var(--glow)" stop-opacity=".35"/><stop offset="1" stop-color="var(--glow)" stop-opacity="0"/></radialGradient><linearGradient id="ch-gl" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".5"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="ch-in"><path d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z"/></clipPath><clipPath id="ch-out"><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z"/></clipPath></defs><g class="a-rim"><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z" fill="var(--rim)"/><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z" fill="none" stroke="var(--rim2)" stroke-opacity=".55" stroke-width="1.2"/><path class="a-field" d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z" fill="url(#ch-fld)"/></g><g clip-path="url(#ch-in)"><circle class="a-field" cx="60" cy="50" r="42" fill="url(#ch-glow)"/><g transform="translate(22 22) scale(.86)" stroke-linejoin="round"><polygon class="facet" style="--i:0;--dx:-8.0px;--dy:-6.4px" fill="var(--t2)" points="54,4 61,15 46,12"/><polygon class="facet" style="--i:1;--dx:-1.6px;--dy:6.4px" fill="var(--t1)" points="54,4 46,12 50,9"/><polygon class="facet" style="--i:2;--dx:4.8px;--dy:4.8px" fill="var(--t3)" points="37,15 46,12 61,15 63,24 35,29"/><polygon class="facet" style="--i:3;--dx:-6.4px;--dy:3.2px" fill="var(--t1)" points="37,15 24,27 35,29"/><polygon class="facet" style="--i:4;--dx:0.0px;--dy:1.6px" fill="var(--t2)" points="24,27 13,41 24,46 35,29"/><polygon class="facet" style="--i:5;--dx:6.4px;--dy:0.0px" fill="var(--t1)" points="13,41 8,49 12,56 23,58 24,46"/><polygon class="facet" style="--i:6;--dx:-4.8px;--dy:-1.6px" fill="var(--t3)" points="35,29 24,46 50,37"/><polygon class="facet" style="--i:7;--dx:1.6px;--dy:-3.2px" fill="var(--t4)" points="35,29 50,37 63,24"/><polygon class="facet" style="--i:8;--dx:8.0px;--dy:-4.8px" fill="var(--t4)" points="24,46 23,58 42,54 50,37"/><polygon class="facet" style="--i:9;--dx:-3.2px;--dy:-6.4px" fill="var(--t3)" points="50,37 42,54 38,63 63,63 65,43"/><polygon class="facet" style="--i:10;--dx:3.2px;--dy:6.4px" fill="var(--t4)" points="50,37 65,43 63,24"/><polygon class="facet" style="--i:11;--dx:-8.0px;--dy:4.8px" fill="var(--t3)" points="38,63 31,80 26,112 53,112 63,63"/><polygon class="facet" style="--i:12;--dx:-1.6px;--dy:3.2px" fill="var(--t4)" points="63,63 53,112 78,112 72,80"/><polygon class="facet" style="--i:13;--dx:4.8px;--dy:1.6px" fill="var(--t5)" points="61,15 67,16 72,22 69,26 77,32 73,36 79,44 74,48 79,57 73,61 76,70 72,80 63,63 65,43 63,24"/><path class="eye" d="M30 27Q35 24 40 27Q35 30 30 27Z" fill="var(--ink)"/><path d="M12 46L16 45" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round"/></g></g><path class="a-line" pathLength="1" d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z" fill="none" stroke="var(--accent)" stroke-opacity=".9" stroke-width="1"/><circle class="rivet" style="--i:0" cx="24" cy="20" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:1" cx="42" cy="15.5" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:2" cx="60" cy="11" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:3" cx="78" cy="15.5" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:4" cx="96" cy="20" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:5" cx="100" cy="44" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:6" cx="20" cy="44" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:7" cx="94" cy="76" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:8" cx="26" cy="76" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:9" cx="79" cy="97" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:10" cx="41" cy="97" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><g clip-path="url(#ch-out)"><g transform="rotate(20 60 60)"><rect class="a-glint" x="-60" y="-30" width="16" height="180" fill="url(#ch-gl)"/></g></g></svg><!-- /art:crest-header -->
       <span class="brand-name">KnightWebstudio</span>
     </a>
 
     <nav class="nav" id="nav" aria-label="Main">
       <div class="nav-inner">
-        <ul class="nav-links">
+        <ul class="nav-links" role="list">
           <li><a href="/services/">Services</a></li>
           <li><a href="/consulting/">Consulting</a></li>
           <li><a href="/work/">Work</a></li>
@@ -367,23 +385,31 @@
           <li><a href="/about/">About</a></li>
           <li><a href="/contact/">Contact</a></li>
         </ul>
-        <span class="nav-indicator" aria-hidden="true"></span>
 
-        <!-- Overlay-only footer: on desktop this is hidden -->
+        <!-- Phone menu only: hidden on desktop -->
         <div class="nav-foot">
           <a class="btn btn-primary btn-block" href="/contact/">Start your project</a>
+          <a class="btn btn-block" href="tel:+12252550837">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
+            Call (225) 255-0837
+          </a>
           <a class="nav-mail" href="mailto:knightwebstudio1@gmail.com">knightwebstudio1@gmail.com</a>
         </div>
       </div>
     </nav>
 
     <div class="header-actions">
+      <!-- From 1280px, and only once the top strip (which has the number) has scrolled away -->
+      <a class="header-tel" href="tel:+12252550837">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
+        <span class="sr-only">Call </span>(225) 255-0837
+      </a>
       <button class="icon-btn" id="theme-toggle" type="button"
-              aria-label="Switch to light theme" title="Toggle theme">
+              aria-label="Switch to dark theme" title="Toggle theme">
         <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
         <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>
       </button>
-      <a class="btn btn-primary btn-sm header-cta" href="/contact/">Get a quote</a>
+      <a class="btn btn-primary btn-sm header-cta" href="/contact/" data-booking>Book a free call</a>
       <button class="icon-btn nav-toggle" id="nav-toggle" type="button"
               aria-expanded="false" aria-controls="nav" aria-label="Open menu">
         <span class="burger" aria-hidden="true"></span>
@@ -394,275 +420,373 @@
 
 <main id="main">
 
-  <section class="page-head-wrap">
-    <div class="hero-art"><!-- art:shards --><svg class="shards" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" style="--t1:#c9d4ff;--t2:#a5b8ff;--t3:#6d8bff;--t4:#4f6ef7;--t5:#3348b8;--ink:#080b14;--accent:#46e0c0;--rim:#3348b8;--rim2:#a5b8ff;--field1:#17203a;--field2:#0b1020;--ribbon:#141c3f;--ribbon2:#0b1020;--steel1:#dfe6fb;--steel2:#a9b6d6;--steel3:#7d8bb0"><polygon class="shard" style="--i:0" fill="var(--t3)" fill-opacity="0.2" points="3,12 8,5 10,14"/><polygon class="shard" style="--i:1" fill="var(--t2)" fill-opacity="0.18" points="88,8 95,13 90,19"/><polygon class="shard" style="--i:2" fill="var(--t4)" fill-opacity="0.2" points="93,52 98,60 91,62"/><polygon class="shard" style="--i:3" fill="var(--t2)" fill-opacity="0.16" points="2,74 7,70 6,80"/><polygon class="shard" style="--i:4" fill="var(--t3)" fill-opacity="0.16" points="80,86 86,82 85,92"/><polygon class="shard" style="--i:5" fill="var(--accent)" fill-opacity="0.16" points="96,30 99,36 94,35"/><polygon class="shard" style="--i:6" fill="var(--accent)" fill-opacity="0.14" points="6,40 9,46 4,47"/><polygon class="shard" style="--i:7" fill="var(--t4)" fill-opacity="0.16" points="72,4 77,8 71,10"/></svg><!-- /art:shards --></div>
-    <div class="container">
-      <header class="page-head">
-        <div class="page-art"><!-- art:piece-king --><svg class="piece piece-king" viewBox="0 0 100 100" aria-hidden="true" style="--t1:#c9d4ff;--t2:#a5b8ff;--t3:#6d8bff;--t4:#4f6ef7;--t5:#3348b8;--ink:#080b14;--accent:#46e0c0;--rim:#3348b8;--rim2:#a5b8ff;--field1:#17203a;--field2:#0b1020;--ribbon:#141c3f;--ribbon2:#0b1020;--steel1:#dfe6fb;--steel2:#a9b6d6;--steel3:#7d8bb0"><defs><clipPath id="pc-king-r"><rect x="50" y="0" width="50" height="100"/></clipPath></defs><g class="sect" style="--i:0"><path d="M20 94H80V88C80 84 76 81 72 81H28C24 81 20 84 20 88Z" fill="var(--t2)"/><path d="M20 94H80V88C80 84 76 81 72 81H28C24 81 20 84 20 88Z" fill="var(--t4)" clip-path="url(#pc-king-r)"/></g><g class="sect" style="--i:1"><path d="M28 81H72L67 74H33Z" fill="var(--t3)"/><path d="M28 81H72L67 74H33Z" fill="var(--t5)" clip-path="url(#pc-king-r)"/></g><g class="sect" style="--i:2"><path d="M34 74C37 63 41 54 42 46H58C59 54 63 63 66 74Z" fill="var(--t2)"/><path d="M34 74C37 63 41 54 42 46H58C59 54 63 63 66 74Z" fill="var(--t4)" clip-path="url(#pc-king-r)"/></g><g class="sect" style="--i:3"><path d="M35 46H65C65 42 59 40 50 40C41 40 35 42 35 46Z" fill="var(--t3)"/><path d="M35 46H65C65 42 59 40 50 40C41 40 35 42 35 46Z" fill="var(--t5)" clip-path="url(#pc-king-r)"/></g><g class="sect" style="--i:4"><path d="M34 40C33 30 38 24 50 24C62 24 67 30 66 40Z" fill="var(--t2)"/><path d="M34 40C33 30 38 24 50 24C62 24 67 30 66 40Z" fill="var(--t4)" clip-path="url(#pc-king-r)"/></g><g class="sect" style="--i:5"><path d="M47 2H53V8H59V14H53V24H47V14H41V8H47Z" fill="var(--accent)"/></g></svg><!-- /art:piece-king --></div>
+  <!-- ===================== PAGE HEAD (split form). The object beside it is the page's own price list:
+       the "On this page" list, so every price on the page is on the first screen. ===================== -->
+  <section class="page-head">
+    <div class="container page-head-split">
+      <div>
         <p class="eyebrow">Pricing</p>
-        <h1>Fixed prices, published up front</h1>
-        <p class="section-sub">Every price here is fixed, for websites, consulting and automation alike. What you see is what you pay, confirmed in writing before any work begins.</p>
-      </header>
-    </div>
-  </section>
-
-  <section class="section section-alt" id="pricing">
-    <div class="container">
-
-      <div class="grid pricing-grid">
-        <article class="price-card reveal">
-          <h2 class="h3">One-page</h2>
-          <p class="price">$1,000</p>
-          <p class="price-plan">Or $500 down, then about $167/mo for 3 months</p>
-          <p class="price-note">One polished page: who you are, what you offer and how to reach you. Live in as little as 7 days.</p>
-          <ul class="ticks">
-            <li>1 page</li>
-            <li>Custom design</li>
-            <li>1 revision round</li>
-            <li>Copy editing and polish (you supply the text)</li>
-            <li>Contact form</li>
-            <li>Mobile &amp; SEO basics</li>
-            <li>14 days support</li>
-          </ul>
-          <a class="btn btn-ghost btn-block" href="/contact/?package=onepage">Start a one-page site</a>
-        </article>
-
-        <article class="price-card reveal">
-          <h2 class="h3">Starter</h2>
-          <p class="price">$2,000</p>
-          <p class="price-plan">Or $1,000 down, then about $333/mo for 3 months</p>
-          <p class="price-note">An information website: who you are, what you offer and how to reach you. Live in as little as 7–10 days.</p>
-          <ul class="ticks">
-            <li>Up to 5 pages</li>
-            <li>Custom design</li>
-            <li>1 revision round</li>
-            <li>Copy editing and polish (you supply the text)</li>
-            <li>Contact form</li>
-            <li>Mobile &amp; SEO basics</li>
-            <li>30 days support</li>
-          </ul>
-          <a class="btn btn-ghost btn-block" href="/checkout/?plan=starter-deposit">Pay 50% deposit — $1,000</a>
-        </article>
-
-        <article class="price-card featured reveal">
-          <span class="price-flag">Most popular</span>
-          <h2 class="h3">Business</h2>
-          <p class="price">$4,000</p>
-          <p class="price-plan">Or $2,000 down, then about $667/mo for 3 months</p>
-          <p class="price-note">The full marketing site most growing businesses need. Live in 2–4 weeks.</p>
-          <ul class="ticks">
-            <li>Up to 10 pages</li>
-            <li>Up to 3 design rounds, plus a final tweaks round</li>
-            <li>Copywriting: we draft, you edit</li>
-            <li>Blog or news section</li>
-            <li>Analytics &amp; tracking setup</li>
-            <li>Local SEO configuration</li>
-            <li>90 days support</li>
-          </ul>
-          <a class="btn btn-primary btn-block" href="/checkout/?plan=business-deposit">Pay 50% deposit — $2,000</a>
-        </article>
-
-        <article class="price-card reveal">
-          <h2 class="h3">Commerce</h2>
-          <p class="price">$8,000</p>
-          <p class="price-plan">Or $4,000 down, then about $1,333/mo for 3 months</p>
-          <p class="price-note">Sell online, with the operations side set up properly. Live in 4–6 weeks.</p>
-          <ul class="ticks">
-            <li>Full store build</li>
-            <li>Up to 3 design rounds, plus a final tweaks round</li>
-            <li>Payments, shipping &amp; tax</li>
-            <li>Product import</li>
-            <li>Email &amp; abandoned cart flows</li>
-            <li>Team training session</li>
-            <li>6 months support</li>
-          </ul>
-          <a class="btn btn-ghost btn-block" href="/checkout/?plan=commerce-deposit">Pay 50% deposit — $4,000</a>
-        </article>
+        <h1><span class="l">Fixed prices,</span> <span class="l">published <span class="mark">up front</span></span></h1>
+        <p class="lede">Websites, consulting and automation: what you see is what you pay, confirmed in writing before we start.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary btn-lg" href="/contact/" data-booking>Book a free 30-minute call</a>
+        </div>
       </div>
-
-
-      <!-- Add-ons: automation is the highest-margin work and needs its own price -->
-      <aside class="addons reveal">
-        <div class="addons-head">
-          <p class="eyebrow">Add to any project</p>
-          <h2 class="h3">Add-ons</h2>
-          <p>A brand to build the site around, and the tools you already run wired in,
-             so enquiries, bookings and records stop being copied by hand.</p>
-        </div>
-        <ul class="addon-list">
-          <li>
-            <span class="addon-name">Brand identity</span>
-            <span class="addon-desc">Logo and mark, colours, fonts, a brand guidelines document and social templates.</span>
-            <span class="addon-price">$1,500</span>
-          </li>
-          <li>
-            <span class="addon-name">Booking &amp; scheduling setup</span>
-            <span class="addon-desc">Branded booking, service config, calendars and automatic text and email reminders.</span>
-            <span class="addon-price">$750</span>
-          </li>
-          <li>
-            <span class="addon-name">CRM &amp; calendar sync</span>
-            <span class="addon-desc">Enquiries land in your CRM automatically — no re-typing, nothing lost.</span>
-            <span class="addon-price">$750</span>
-          </li>
-        </ul>
-      </aside>
-
-      <!-- Consulting & automation: fixed prices, same rules as the site tiers -->
-      <aside class="addons reveal" id="consulting">
-        <div class="addons-head">
-          <p class="eyebrow">Consulting &amp; automation</p>
-          <h2 class="h3">Systems that win customers and save time</h2>
-          <p>Start with a free online check or a $350 Growth Audit, then set up only what your business needs. Software and texting services run on accounts in your name, with their fees paid to the provider.
-             <a class="more-link" href="/consulting/">How each one works<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a></p>
-        </div>
-        <ul class="addon-list">
-          <li>
-            <span class="addon-name">Growth Audit &amp; action plan</span>
-            <span class="addon-desc">60-minute session and a written plan ranked by impact. The $350 comes off any project booked within 30 days.</span>
-            <span class="addon-price">$350</span>
-          </li>
-          <li>
-            <span class="addon-name">Strategy session</span>
-            <span class="addon-desc">60 minutes on one question, with written notes afterwards.</span>
-            <span class="addon-price">$150</span>
-          </li>
-          <li>
-            <span class="addon-name">Google profile &amp; reviews</span>
-            <span class="addon-desc">Profile completed, listings made consistent, review link, QR code and reply templates.</span>
-            <span class="addon-price">$500</span>
-          </li>
-          <li>
-            <span class="addon-name">Missed-call text-back</span>
-            <span class="addon-desc">Every missed call gets a text back from your business number within a minute.</span>
-            <span class="addon-price">$750</span>
-          </li>
-          <li>
-            <span class="addon-name">Lead follow-up system</span>
-            <span class="addon-desc">Every enquiry in one list, automatic follow-ups on quiet quotes, review requests after each job.</span>
-            <span class="addon-price">$1,500</span>
-          </li>
-          <li>
-            <span class="addon-name">Custom automation workflow</span>
-            <span class="addon-desc">One process automated end to end, with a recorded walkthrough and 30 days of fixes.</span>
-            <span class="addon-price">$1,500</span>
-          </li>
-          <li>
-            <span class="addon-name">Advisor plan</span>
-            <span class="addon-desc">Monthly strategy call, Google profile managed, review replies and a monthly report.</span>
-            <span class="addon-price">$500/mo</span>
-          </li>
-          <li>
-            <span class="addon-name">Partner plan</span>
-            <span class="addon-desc">Everything in Advisor, two calls a month and up to 5 hours of hands-on work a month.</span>
-            <span class="addon-price">$1,000/mo</span>
-          </li>
-          <li>
-            <span class="addon-name">Launch bundle</span>
-            <span class="addon-desc">Starter website, Google profile &amp; reviews and missed-call text-back. $3,250 bought separately.</span>
-            <span class="addon-price">$3,000</span>
-          </li>
-        </ul>
-      </aside>
-
-      <!-- Recurring revenue: the care plan is a product, not a footnote -->
-      <aside class="care-panel reveal">
-        <div class="care-copy">
-          <p class="eyebrow">After launch</p>
-          <h2 class="h3">Care plans</h2>
-          <p>
-            A site isn't finished at launch — it needs patching, monitoring and small
-            changes, or it quietly rots. We keep yours fast, current and online, and you
-            get a person who already knows your site when something needs doing.
-          </p>
-          <a class="btn btn-primary" href="/contact/">Ask about care plans</a>
-        </div>
-
-        <ol class="care-tiers">
-          <li>
-            <span class="tier-name">Basic</span>
-            <span class="tier-price">$125<small>/mo</small></span>
-            <span class="tier-fit">One-page and Starter sites</span>
-            <span class="tier-terms">1 small change a month, made within 5 business days</span>
-            <span class="tier-terms">You keep your own domain and hosting renewals current</span>
-            <a class="btn btn-ghost btn-sm tier-cta" href="/contact/?package=care" aria-label="Request the Basic care plan">Request plan</a>
-          </li>
-          <li>
-            <span class="tier-name">Essential</span>
-            <span class="tier-price">$300<small>/mo</small></span>
-            <span class="tier-fit">Brochure and marketing sites</span>
-            <span class="tier-terms">Changes made within 4 business days, up to 2 requests a month</span>
-            <span class="tier-terms">You keep your own domain and hosting renewals current</span>
-            <a class="btn btn-ghost btn-sm tier-cta" href="/checkout/?plan=essential-care" aria-label="Start the Essential care plan">Start plan</a>
-          </li>
-          <li class="tier-mid">
-            <span class="tier-name">Growth</span>
-            <span class="tier-price">$600<small>/mo</small></span>
-            <span class="tier-fit">Sites with booking or lead flows</span>
-            <span class="tier-terms">Changes made within 2 business days, up to 5 requests a month</span>
-            <span class="tier-terms">Your Netlify hosting, SSL and IONOS domain renewals looked after (domain and hosting costs billed at cost on top)</span>
-            <a class="btn btn-ghost btn-sm tier-cta" href="/checkout/?plan=growth-care" aria-label="Start the Growth care plan">Start plan</a>
-          </li>
-          <li>
-            <span class="tier-name">Commerce</span>
-            <span class="tier-price">$1,000<small>/mo</small></span>
-            <span class="tier-fit">Stores and integrations</span>
-            <span class="tier-terms">Same-day response for urgent issues, unlimited small requests and a direct text line</span>
-            <span class="tier-terms">Your Netlify hosting, SSL and IONOS domain renewals looked after (domain and hosting costs billed at cost on top)</span>
-            <a class="btn btn-ghost btn-sm tier-cta" href="/checkout/?plan=commerce-care" aria-label="Start the Commerce care plan">Start plan</a>
-          </li>
-        </ol>
-        <div class="care-includes">
-          <p class="care-includes-head">Every plan includes</p>
-          <ul class="ticks care-list">
-            <li>Daily off-site backups, restored on request</li>
-            <li>24/7 uptime monitoring with alerts</li>
-            <li>Security patches and platform updates</li>
-            <li>Error monitoring, with fixes when something breaks</li>
-            <li>Changes you request, made for you</li>
-            <li>No long-term contract or minimum term. Cancel or change with <a href="/terms/">10 days' written notice</a>, no fee.</li>
-          </ul>
-        </div>
-      </aside>
-
-      <p class="pricing-foot reveal">Standard is 50% to start and 50% at launch. Payment plans are available on all projects: 50% up front, then the rest in up to 3 equal monthly payments, the first due one month after the deposit (on Starter, $1,000 down, then about $333 a month for 3 months). Pay by card or ACH bank transfer through Stripe, or by check on request. The details are in our <a href="/terms/">terms</a>.</p>
+      <div class="page-head-aside">
+        <nav class="toc card" aria-labelledby="toc-title">
+          <p class="label" id="toc-title">On this page</p>
+          <ol role="list">
+            <li><a href="#packages"><span class="toc-name">Website packages</span><span class="dots" aria-hidden="true"></span><span class="toc-price">$1,000 · $2,000 · $4,000 · $8,000</span></a></li>
+            <li><a href="#payment"><span class="toc-name">How you pay</span><span class="dots" aria-hidden="true"></span><span class="toc-price">50% to start, 50% at launch</span></a></li>
+            <li><a href="#addons"><span class="toc-name">Add-ons</span><span class="dots" aria-hidden="true"></span><span class="toc-price">$750 or $1,500</span></a></li>
+            <li><a href="#consulting"><span class="toc-name">Consulting &amp; automation</span><span class="dots" aria-hidden="true"></span><span class="toc-price">$350 audit · $500 or <span class="nowrap">$1,000/mo</span></span></a></li>
+            <li><a href="#care"><span class="toc-name">Care plans</span><span class="dots" aria-hidden="true"></span><span class="toc-price">$125, $300, $600 or <span class="nowrap">$1,000/mo</span></span></a></li>
+          </ol>
+        </nav>
+        <div class="toc-seal wide-only"><!-- art:seal --><svg class="seal" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><defs><path id="sl-arc" d="M60 60m-42 0a42 42 0 1 1 84 0a42 42 0 1 1-84 0"/></defs><circle cx="60" cy="60" r="58" fill="var(--card)"/><circle cx="60" cy="60" r="54.5" fill="none" stroke="var(--brick)" stroke-width="2"/><circle cx="60" cy="60" r="31" fill="none" stroke="var(--brick)" stroke-width="1"/><text font-size="7.6"><textPath href="#sl-arc" textLength="258" lengthAdjust="spacing">PUBLISHED UP FRONT · CONFIRMED IN WRITING ·</textPath></text><text class="seal-big" font-size="15.5" x="60" y="58" text-anchor="middle">Fixed</text><text class="seal-big" font-size="15.5" x="60" y="74" text-anchor="middle">prices</text></svg><!-- /art:seal --></div>
+      </div>
     </div>
   </section>
 
-  <section class="cta-band">
-    <div class="container cta-inner reveal">
-      <h2>Still deciding? Book the free call.</h2>
-      <p>Thirty minutes, no pitch. You'll get a clear view of what your website and your systems need, and what it should cost — even if you do it yourself.</p>
-      <a class="btn btn-light" href="/contact/" data-booking>Book a discovery call</a>
+  <!-- ===================== WEBSITE PACKAGES: the comparison, then how you pay and the add-ons ===================== -->
+  <section class="section section-first" id="pricing">
+    <div class="container">
+      <header class="section-head" id="packages">
+        <p class="eyebrow">Websites</p>
+        <h2>Four packages. Pick the one that fits.</h2>
+      </header>
+
+      <table class="spec" role="table" aria-label="Website packages compared" style="--rows:9">
+        <thead role="rowgroup">
+          <tr role="row">
+            <th role="columnheader" scope="col"><span class="sr-only">Package</span></th>
+            <th role="columnheader" scope="col"><span class="sr-only">Price</span></th>
+            <th role="columnheader" scope="col">What it is</th>
+            <th role="columnheader" scope="col">Live in</th>
+            <th role="columnheader" scope="col">Size</th>
+            <th role="columnheader" scope="col">Design</th>
+            <th role="columnheader" scope="col">Included</th>
+            <th role="columnheader" scope="col">Support</th>
+            <th role="columnheader" scope="col"><span class="sr-only">Start</span></th>
+          </tr>
+        </thead>
+        <tbody role="rowgroup">
+          <tr role="row">
+            <th role="rowheader" scope="row" class="spec-name">One-page</th>
+            <td role="cell" class="spec-price">$1,000 <small>Or $500 down, then about <span class="nowrap">$167/mo</span> for 3 months</small></td>
+            <td role="cell" class="spec-what"><span class="cell-label" aria-hidden="true">What it is</span>One polished page: who you are, what you offer and how to reach you.</td>
+            <td role="cell"><span class="cell-label" aria-hidden="true">Live in</span>As little as 7 days</td>
+            <td role="cell"><span class="cell-label" aria-hidden="true">Size</span>1 page</td>
+            <td role="cell"><span class="cell-label" aria-hidden="true">Design</span>Custom design, 1 revision round</td>
+            <td role="cell"><span class="cell-label" aria-hidden="true">Included</span><ul role="list"><li>Copy editing and polish (you supply the text)</li><li>Contact form</li><li>Mobile &amp; SEO basics</li></ul></td>
+            <td role="cell"><span class="cell-label" aria-hidden="true">Support</span>14 days</td>
+            <td role="cell" class="spec-act"><a class="btn btn-block" href="/contact/?package=onepage">Start a one-page site</a><a class="btn btn-quiet" href="/contact/" data-booking>Or book the free call first</a></td>
+          </tr>
+          <tr role="row">
+            <th role="rowheader" scope="row" class="spec-name">Starter</th>
+            <td role="cell" class="spec-price">$2,000 <small>Or $1,000 down, then about <span class="nowrap">$333/mo</span> for 3 months</small></td>
+            <td role="cell" class="spec-what"><span class="cell-label" aria-hidden="true">What it is</span>An information website: who you are, what you offer and how to reach you.</td>
+            <td role="cell"><span class="cell-label" aria-hidden="true">Live in</span>As little as <span class="nowrap">7–10 days</span></td>
+            <td role="cell"><span class="cell-label" aria-hidden="true">Size</span>Up to 5 pages</td>
+            <td role="cell"><span class="cell-label" aria-hidden="true">Design</span>Custom design, 1 revision round</td>
+            <td role="cell"><span class="cell-label" aria-hidden="true">Included</span><ul role="list"><li>Copy editing and polish (you supply the text)</li><li>Contact form</li><li>Mobile &amp; SEO basics</li></ul></td>
+            <td role="cell"><span class="cell-label" aria-hidden="true">Support</span>30 days</td>
+            <td role="cell" class="spec-act"><a class="btn btn-block" href="/checkout/?plan=starter-deposit">Pay 50% deposit —&nbsp;$1,000</a><a class="btn btn-quiet" href="/contact/?package=starter">Or send an enquiry first<span class="sr-only"> about the Starter package</span></a></td>
+          </tr>
+          <tr role="row" class="is-popular">
+            <th role="rowheader" scope="row" class="spec-name">Business <span class="popular">Most popular</span></th>
+            <td role="cell" class="spec-price">$4,000 <small>Or $2,000 down, then about <span class="nowrap">$667/mo</span> for 3 months</small></td>
+            <td role="cell" class="spec-what"><span class="cell-label" aria-hidden="true">What it is</span>The full marketing site most growing businesses need.</td>
+            <td role="cell"><span class="cell-label" aria-hidden="true">Live in</span>2–4 weeks</td>
+            <td role="cell"><span class="cell-label" aria-hidden="true">Size</span>Up to 10 pages</td>
+            <td role="cell"><span class="cell-label" aria-hidden="true">Design</span>Up to 3 design rounds, plus a final tweaks round</td>
+            <td role="cell"><span class="cell-label" aria-hidden="true">Included</span><ul role="list"><li>Copywriting: we draft, you edit</li><li>Blog or news section</li><li>Analytics &amp; tracking setup</li><li>Local SEO configuration</li></ul></td>
+            <td role="cell"><span class="cell-label" aria-hidden="true">Support</span>90 days</td>
+            <td role="cell" class="spec-act"><a class="btn btn-primary btn-block" href="/checkout/?plan=business-deposit">Pay 50% deposit —&nbsp;$2,000</a><a class="btn btn-quiet" href="/contact/?package=business">Or send an enquiry first<span class="sr-only"> about the Business package</span></a></td>
+          </tr>
+          <tr role="row">
+            <th role="rowheader" scope="row" class="spec-name">Commerce</th>
+            <td role="cell" class="spec-price">$8,000 <small>Or $4,000 down, then about <span class="nowrap">$1,333/mo</span> for 3 months</small></td>
+            <td role="cell" class="spec-what"><span class="cell-label" aria-hidden="true">What it is</span>Sell online, with the operations side set up properly.</td>
+            <td role="cell"><span class="cell-label" aria-hidden="true">Live in</span>4–6 weeks</td>
+            <td role="cell"><span class="cell-label" aria-hidden="true">Size</span>Full store build</td>
+            <td role="cell"><span class="cell-label" aria-hidden="true">Design</span>Up to 3 design rounds, plus a final tweaks round</td>
+            <td role="cell"><span class="cell-label" aria-hidden="true">Included</span><ul role="list"><li>Payments, shipping &amp; tax</li><li>Product import</li><li>Email &amp; abandoned cart flows</li><li>Team training session</li></ul></td>
+            <td role="cell"><span class="cell-label" aria-hidden="true">Support</span>6 months</td>
+            <td role="cell" class="spec-act"><a class="btn btn-block" href="/checkout/?plan=commerce-deposit">Pay 50% deposit —&nbsp;$4,000</a><a class="btn btn-quiet" href="/contact/?package=commerce">Or send an enquiry first<span class="sr-only"> about the Commerce package</span></a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Under the table, like the foot of a printed price list: the terms on the left, the extras on the right -->
+      <div class="split split-even space-above">
+        <div class="reveal" id="payment">
+          <p class="eyebrow">How you pay</p>
+          <h3>Half to start, half at launch. Or spread it out.</h3>
+          <ul class="ticks" role="list">
+            <li>Standard is 50% to start and 50% at launch.</li>
+            <li>Payment plans are available on all projects: 50% up front, then the rest in up to 3 equal monthly payments, the first due one month after the deposit (on Starter, $1,000 down, then about $333 a month for 3 months).</li>
+            <li>Pay by card or ACH bank transfer through Stripe, or by check on request. The details are in our <a href="/terms/">terms</a>.</li>
+          </ul>
+          <figure class="payplan" role="img" aria-label="Two ways to pay for a Starter site: half to start and half at launch, or $1,000 down and then about $333 a month for 3 months">
+            <p class="label payplan-std" aria-hidden="true">Standard</p>
+            <div class="payplan-bar payplan-std" aria-hidden="true"><span class="payplan-seg payplan-dep" style="--w:50"><b>50%</b>to start</span><span class="payplan-seg" style="--w:50"><b>50%</b>at launch</span></div>
+            <p class="label" aria-hidden="true">Payment plan, shown on Starter</p>
+            <div class="payplan-bar" aria-hidden="true"><span class="payplan-seg payplan-dep" style="--w:50"><b>$1,000</b>down</span><span class="payplan-seg" style="--w:16.67"><b>$333</b>month 1</span><span class="payplan-seg" style="--w:16.67"><b>$333</b>month 2</span><span class="payplan-seg" style="--w:16.67"><b>$333</b>month 3</span></div>
+            <p class="fine" aria-hidden="true">Monthly amounts are rounded: about $333 a month.</p>
+          </figure>
+        </div>
+
+        <div class="reveal" id="addons">
+          <p class="eyebrow">Add to any project</p>
+          <h3>Add-ons</h3>
+          <p>A brand to build the site around, and the tools you already run, wired in.</p>
+          <ul class="pricelist" role="list">
+            <li>
+              <div class="pl-row"><h4 class="pl-name">Brand identity</h4><span class="dots" aria-hidden="true"></span><span class="pl-price">$1,500</span></div>
+              <p>Logo and mark, colours, fonts, a brand guidelines document and social templates.</p>
+            </li>
+            <li>
+              <div class="pl-row"><h4 class="pl-name">Booking &amp; scheduling setup</h4><span class="dots" aria-hidden="true"></span><span class="pl-price">$750</span></div>
+              <p>Branded booking, service config, calendars and automatic text and email reminders.</p>
+            </li>
+            <li>
+              <div class="pl-row"><h4 class="pl-name">CRM &amp; calendar sync</h4><span class="dots" aria-hidden="true"></span><span class="pl-price">$750</span></div>
+              <p>Enquiries land in your CRM automatically — no re-typing, nothing lost.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONSULTING & AUTOMATION: two columns of the price list, the bundle as its receipt ===================== -->
+  <section class="section section-sand" id="consulting">
+    <div class="container">
+      <header class="section-head section-head-split reveal">
+        <div>
+          <p class="eyebrow">Consulting &amp; automation</p>
+          <h2>Systems that win customers and save time</h2>
+        </div>
+        <div>
+          <p class="section-sub">Start with a <a href="/contact/?package=check">free online check</a> or a $350 Growth Audit, then set up only what your business needs. Software and texting services run on accounts in your name, with their fees paid to the provider.</p>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="/contact/?package=audit">Book a Growth Audit, $350</a>
+            <a class="btn btn-quiet" href="/consulting/">How each setup works</a>
+          </div>
+        </div>
+      </header>
+
+      <!-- Four ruled groups. On a phone they run in buying order; from 760px the two short lists share the top row. -->
+      <div class="grid grid-2 price-groups">
+        <div class="reveal">
+          <h3 class="pl-group">Start here</h3>
+          <ul class="pricelist" role="list">
+            <li>
+              <div class="pl-row"><h4 class="pl-name">Growth Audit &amp; action plan</h4><span class="dots" aria-hidden="true"></span><span class="pl-price">$350</span></div>
+              <p>60-minute session and a written plan ranked by impact. The $350 comes off any project booked within 30 days.</p>
+            </li>
+            <li>
+              <div class="pl-row"><h4 class="pl-name">Strategy session</h4><span class="dots" aria-hidden="true"></span><span class="pl-price">$150</span></div>
+              <p>60 minutes on one question, with written notes afterwards.</p>
+            </li>
+          </ul>
+        </div>
+        <div class="reveal">
+          <h3 class="pl-group">One-time setups</h3>
+          <ul class="pricelist" role="list">
+            <li>
+              <div class="pl-row"><h4 class="pl-name">Google profile &amp; reviews</h4><span class="dots" aria-hidden="true"></span><span class="pl-price">$500</span></div>
+              <p>Profile completed, listings made consistent, review link, QR code and reply templates.</p>
+            </li>
+            <li>
+              <div class="pl-row"><h4 class="pl-name">Missed-call text-back</h4><span class="dots" aria-hidden="true"></span><span class="pl-price">$750</span></div>
+              <p>Every missed call gets a text back from your business number within a minute.</p>
+            </li>
+            <li>
+              <div class="pl-row"><h4 class="pl-name">Lead follow-up system</h4><span class="dots" aria-hidden="true"></span><span class="pl-price">$1,500</span></div>
+              <p>Every enquiry in one list, automatic follow-ups on quiet quotes, review requests after each job.</p>
+            </li>
+            <li>
+              <div class="pl-row"><h4 class="pl-name">Custom automation workflow</h4><span class="dots" aria-hidden="true"></span><span class="pl-price">$1,500</span></div>
+              <p>One process automated end to end, with a recorded walkthrough and 30 days of fixes.</p>
+            </li>
+          </ul>
+        </div>
+        <div class="reveal">
+          <h3 class="pl-group">By the month</h3>
+          <ul class="pricelist" role="list">
+            <li>
+              <div class="pl-row"><h4 class="pl-name">Advisor plan</h4><span class="dots" aria-hidden="true"></span><span class="pl-price">$500/mo</span></div>
+              <p>Monthly strategy call, Google profile managed, review replies and a monthly report.</p>
+            </li>
+            <li>
+              <div class="pl-row"><h4 class="pl-name">Partner plan</h4><span class="dots" aria-hidden="true"></span><span class="pl-price">$1,000/mo</span></div>
+              <p>Everything in Advisor, two calls a month and up to 5 hours of hands-on work a month.</p>
+            </li>
+          </ul>
+        </div>
+        <div class="reveal">
+          <h3 class="pl-group">Bundle</h3>
+          <!-- The page's one tilted object. Every line is a published price and the receipt adds up. The button is as wide as the receipt. -->
+          <div class="bundle">
+            <div class="receipt tilt on-paper">
+              <p class="receipt-head"><span>Launch bundle</span><span>Receipt</span></p>
+              <ul class="receipt-lines" role="list">
+                <li><span>Starter website</span><span class="dots" aria-hidden="true"></span><b>$2,000</b></li>
+                <li><span>Google profile &amp; reviews</span><span class="dots" aria-hidden="true"></span><b>$500</b></li>
+                <li><span>Missed-call text-back</span><span class="dots" aria-hidden="true"></span><b>$750</b></li>
+              </ul>
+              <p class="receipt-sum"><span>Bought separately</span><s>$3,250</s></p>
+              <p class="receipt-total"><span>Launch bundle</span><b>$3,000</b></p>
+            </div>
+            <a class="btn" href="/contact/?package=bundle">Start the Launch bundle</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CARE PLANS ===================== -->
+  <section class="section" id="care">
+    <div class="container">
+      <header class="section-head section-head-split reveal">
+        <div>
+          <p class="eyebrow">After launch</p>
+          <h2>Care plans</h2>
+        </div>
+        <p class="section-sub">
+          A site isn't finished at launch — it needs patching, monitoring and small
+          changes, or it quietly rots. We keep yours fast, current and online, and you
+          get a person who already knows your site when something needs doing.
+        </p>
+      </header>
+
+      <table class="table table-stack reveal" role="table">
+        <caption>Care plans, by the month</caption>
+        <thead role="rowgroup">
+          <tr role="row"><th role="columnheader" scope="col">Plan</th><th role="columnheader" scope="col">Fits</th><th role="columnheader" scope="col">What you get</th><th role="columnheader" scope="col" class="num">Price</th><th role="columnheader" scope="col"><span class="sr-only">Start</span></th></tr>
+        </thead>
+        <tbody role="rowgroup">
+          <tr role="row">
+            <th role="rowheader" scope="row">Basic</th>
+            <td role="cell"><span class="cell-label" aria-hidden="true">Fits</span>One-page and Starter sites</td>
+            <td role="cell"><span class="cell-label" aria-hidden="true">What you get</span><ul role="list"><li>1 small change a month, made within 5 business days</li><li>You keep your own domain and hosting renewals current</li></ul></td>
+            <td role="cell" class="num">$125<small>/mo</small></td>
+            <td role="cell"><a class="btn btn-sm btn-block" href="/contact/?package=care" aria-label="Request plan: Basic care, $125 a month">Request plan</a></td>
+          </tr>
+          <tr role="row">
+            <th role="rowheader" scope="row">Essential</th>
+            <td role="cell"><span class="cell-label" aria-hidden="true">Fits</span>Brochure and marketing sites</td>
+            <td role="cell"><span class="cell-label" aria-hidden="true">What you get</span><ul role="list"><li>Changes made within 4 business days, up to 2 requests a month</li><li>You keep your own domain and hosting renewals current</li></ul></td>
+            <td role="cell" class="num">$300<small>/mo</small></td>
+            <td role="cell"><a class="btn btn-sm btn-block" href="/checkout/?plan=essential-care" aria-label="Start plan: Essential care, $300 a month">Start plan</a></td>
+          </tr>
+          <tr role="row">
+            <th role="rowheader" scope="row">Growth</th>
+            <td role="cell"><span class="cell-label" aria-hidden="true">Fits</span>Sites with booking or lead flows</td>
+            <td role="cell"><span class="cell-label" aria-hidden="true">What you get</span><ul role="list"><li>Changes made within 2 business days, up to 5 requests a month</li><li>Your Netlify hosting, SSL and IONOS domain renewals looked after (domain and hosting costs billed at cost on top)</li></ul></td>
+            <td role="cell" class="num">$600<small>/mo</small></td>
+            <td role="cell"><a class="btn btn-sm btn-block" href="/checkout/?plan=growth-care" aria-label="Start plan: Growth care, $600 a month">Start plan</a></td>
+          </tr>
+          <tr role="row">
+            <th role="rowheader" scope="row">Commerce</th>
+            <td role="cell"><span class="cell-label" aria-hidden="true">Fits</span>Stores and integrations</td>
+            <td role="cell"><span class="cell-label" aria-hidden="true">What you get</span><ul role="list"><li>Same-day response for urgent issues, unlimited small requests and a direct text line</li><li>Your Netlify hosting, SSL and IONOS domain renewals looked after (domain and hosting costs billed at cost on top)</li></ul></td>
+            <td role="cell" class="num">$1,000<small>/mo</small></td>
+            <td role="cell"><a class="btn btn-sm btn-block" href="/checkout/?plan=commerce-care" aria-label="Start plan: Commerce care, $1,000 a month">Start plan</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="card stack space-above reveal">
+        <h3 class="label">Every plan includes</h3>
+        <ul class="ticks" role="list">
+          <li>Daily off-site backups, restored on request</li>
+          <li>24/7 uptime monitoring with alerts</li>
+          <li>Security patches and platform updates</li>
+          <li>Error monitoring, with fixes when something breaks</li>
+          <li>Changes you request, made for you</li>
+          <li>No long-term contract or minimum term. Cancel or change with <a href="/terms/">10 days' written notice</a>, no fee.</li>
+        </ul>
+        <div class="btn-row">
+          <a class="btn" href="/contact/">Ask about care plans</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CLOSING CALL TO ACTION ===================== -->
+  <section class="cta-band on-blue">
+    <div class="container cta-inner">
+      <div class="cta-copy">
+        <h2>Still deciding? Book the free call.</h2>
+        <p>Thirty minutes, no pitch. You'll get a clear view of what your website and your systems need, and what it should cost — even if you do it yourself.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary btn-lg" href="/contact/" data-booking>Book a free 30-minute call</a>
+          <a class="btn btn-lg" href="/contact/">Send an enquiry</a>
+        </div>
+      </div>
+      <!-- Decorative: the same facts as the paragraph, drawn as an appointment card. Beside the copy from 980px; left out below that to keep the phone page short. -->
+      <div class="appt on-paper wide-only" aria-hidden="true">
+        <p class="appt-head"><span>Appointment card</span><span>No. 01</span></p>
+        <p class="appt-title">Discovery call</p>
+        <dl class="appt-lines">
+          <div><dt>Cost</dt><dd>Free</dd></div>
+          <div><dt>Length</dt><dd>30 minutes</dd></div>
+          <div><dt>Sales pitch</dt><dd>None</dd></div>
+          <div><dt>Where</dt><dd>A call, or in person</dd></div>
+        </dl>
+      </div>
     </div>
   </section>
 
 </main>
 
-<!-- Mobile-only sticky CTA: the header's "Get a quote" is hidden below 980px,
-     so without this there is no persistent way to convert on a phone. -->
+<!-- Phones and tablets: the header button is hidden there, so this bar keeps
+     a call and a booking one thumb-tap away. main.js shows it after the first
+     screen and hides it over the footer. -->
 <div class="mobile-cta" id="mobile-cta" hidden>
   <div class="mobile-cta-inner">
-    <span class="mobile-cta-text">Free 30-min call<span> · no pitch</span></span>
-    <a class="btn btn-primary btn-sm" href="/contact/">Get a quote</a>
+    <a class="btn" href="tel:+12252550837" aria-label="Call (225) 255-0837">
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
+      Call
+    </a>
+    <a class="btn btn-primary" href="/contact/" data-booking>Free 30-min call<span> · no pitch</span></a>
   </div>
 </div>
 
 <!-- ===================== FOOTER ===================== -->
-<footer class="site-footer">
+<footer class="site-footer on-ink">
+  <!-- Baton Rouge on the horizon: the Capitol tower, downtown and the river bridge. After dark the windows and bridge lamps are lit (.sky-lit). -->
+  <svg class="footer-skyline" viewBox="0 0 1440 120" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+    <path d="M0 120V102Q26 88 58 99Q92 84 128 100Q150 93 176 104V120Z"/>
+    <path d="M180 120V86h38v34ZM222 120V72h34v48ZM268 120V84h124v36ZM296 86V68h68v18ZM314 70V24h32v46ZM319 26V13h22v13ZM324 15V6h12v9ZM327 7l3-7 3 7Z"/>
+    <path d="M420 120V66h48v54ZM474 120V48h44v72ZM522 120V78h56v42ZM582 120V58h38v62ZM624 120V88h60v32ZM690 120V70h46v50ZM740 120V94h70v26Z"/>
+    <path d="M818 120V108Q836 98 852 107V120Z"/>
+    <g fill="none" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M880 93L960 78L1040 38L1090 72L1140 80L1190 72L1240 38L1320 78L1400 93"/>
+      <path d="M960 78V93M1040 38V93M1090 72V93M1140 80V93M1190 72V93M1240 38V93M1320 78V93"/>
+      <path d="M960 93L1040 38L1090 93L1140 80L1190 93L1240 38L1320 93M1000 58V93M1280 58V93"/>
+    </g>
+    <path d="M856 91h568v5H856ZM1033 94h14v26h-14ZM1233 94h14v26h-14ZM956 94h8v26h-8ZM1316 94h8v26h-8Z"/>
+    <path d="M1396 120V104Q1414 92 1440 100V120Z"/>
+    <path d="M0 114h1440v6H0Z"/>
+    <path class="sky-lit" d="M190 96h4v5h-4ZM230 80h4v5h-4ZM242 94h4v5h-4ZM282 94h4v5h-4ZM306 75h4v5h-4ZM350 75h4v5h-4ZM372 98h4v5h-4ZM326 34h4v5h-4ZM334 34h4v5h-4ZM326 47h4v5h-4ZM334 59h4v5h-4ZM430 76h4v5h-4ZM448 92h4v5h-4ZM484 58h4v5h-4ZM500 58h4v5h-4ZM484 76h4v5h-4ZM500 94h4v5h-4ZM536 88h4v5h-4ZM560 102h4v5h-4ZM592 68h4v5h-4ZM604 86h4v5h-4ZM640 98h4v5h-4ZM664 98h4v5h-4ZM700 80h4v5h-4ZM720 96h4v5h-4ZM760 102h4v5h-4ZM790 102h4v5h-4ZM1038 31h5v5h-5ZM1238 31h5v5h-5ZM959 73h3v3h-3ZM1089 67h3v3h-3ZM1139 75h3v3h-3ZM1189 67h3v3h-3ZM1319 73h3v3h-3Z"/>
+  </svg>
+
   <div class="container footer-grid">
     <div class="footer-brand">
       <a class="brand" href="/">
-        <!-- art:crest-footer --><svg class="crest footer-crest" viewBox="0 0 120 120" aria-hidden="true" style="--t1:#c9d4ff;--t2:#a5b8ff;--t3:#6d8bff;--t4:#4f6ef7;--t5:#3348b8;--ink:#080b14;--accent:#46e0c0;--rim:#3348b8;--rim2:#a5b8ff;--field1:#17203a;--field2:#0b1020;--ribbon:#141c3f;--ribbon2:#0b1020;--steel1:#dfe6fb;--steel2:#a9b6d6;--steel3:#7d8bb0"><defs><linearGradient id="cf-fld" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--field1)"/><stop offset="1" stop-color="var(--field2)"/></linearGradient><radialGradient id="cf-glow" cx=".5" cy=".42" r=".5"><stop offset="0" stop-color="#6d8bff" stop-opacity=".35"/><stop offset="1" stop-color="#6d8bff" stop-opacity="0"/></radialGradient><linearGradient id="cf-gl" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".5"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="cf-in"><path d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z"/></clipPath><clipPath id="cf-out"><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z"/></clipPath></defs><g class="a-rim"><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z" fill="var(--rim)"/><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z" fill="none" stroke="var(--rim2)" stroke-opacity=".55" stroke-width="1.2"/><path class="a-field" d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z" fill="url(#cf-fld)"/></g><g clip-path="url(#cf-in)"><circle class="a-field" cx="60" cy="50" r="42" fill="url(#cf-glow)"/><g transform="translate(22 22) scale(.86)" stroke-linejoin="round"><polygon class="facet" style="--i:0;--dx:-8.0px;--dy:-6.4px" fill="var(--t2)" points="54,4 61,15 46,12"/><polygon class="facet" style="--i:1;--dx:-1.6px;--dy:6.4px" fill="var(--t1)" points="54,4 46,12 50,9"/><polygon class="facet" style="--i:2;--dx:4.8px;--dy:4.8px" fill="var(--t3)" points="37,15 46,12 61,15 63,24 35,29"/><polygon class="facet" style="--i:3;--dx:-6.4px;--dy:3.2px" fill="var(--t1)" points="37,15 24,27 35,29"/><polygon class="facet" style="--i:4;--dx:0.0px;--dy:1.6px" fill="var(--t2)" points="24,27 13,41 24,46 35,29"/><polygon class="facet" style="--i:5;--dx:6.4px;--dy:0.0px" fill="var(--t1)" points="13,41 8,49 12,56 23,58 24,46"/><polygon class="facet" style="--i:6;--dx:-4.8px;--dy:-1.6px" fill="var(--t3)" points="35,29 24,46 50,37"/><polygon class="facet" style="--i:7;--dx:1.6px;--dy:-3.2px" fill="var(--t4)" points="35,29 50,37 63,24"/><polygon class="facet" style="--i:8;--dx:8.0px;--dy:-4.8px" fill="var(--t4)" points="24,46 23,58 42,54 50,37"/><polygon class="facet" style="--i:9;--dx:-3.2px;--dy:-6.4px" fill="var(--t3)" points="50,37 42,54 38,63 63,63 65,43"/><polygon class="facet" style="--i:10;--dx:3.2px;--dy:6.4px" fill="var(--t4)" points="50,37 65,43 63,24"/><polygon class="facet" style="--i:11;--dx:-8.0px;--dy:4.8px" fill="var(--t3)" points="38,63 31,80 26,112 53,112 63,63"/><polygon class="facet" style="--i:12;--dx:-1.6px;--dy:3.2px" fill="var(--t4)" points="63,63 53,112 78,112 72,80"/><polygon class="facet" style="--i:13;--dx:4.8px;--dy:1.6px" fill="var(--t5)" points="61,15 67,16 72,22 69,26 77,32 73,36 79,44 74,48 79,57 73,61 76,70 72,80 63,63 65,43 63,24"/><path class="eye" d="M30 27Q35 24 40 27Q35 30 30 27Z" fill="var(--ink)"/><path d="M12 46L16 45" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round"/></g></g><path class="a-line" pathLength="1" d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z" fill="none" stroke="var(--accent)" stroke-opacity=".9" stroke-width="1"/><circle class="rivet" style="--i:0" cx="24" cy="20" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:1" cx="42" cy="15.5" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:2" cx="60" cy="11" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:3" cx="78" cy="15.5" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:4" cx="96" cy="20" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:5" cx="100" cy="44" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:6" cx="20" cy="44" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:7" cx="94" cy="76" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:8" cx="26" cy="76" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:9" cx="79" cy="97" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:10" cx="41" cy="97" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><g clip-path="url(#cf-out)"><g transform="rotate(20 60 60)"><rect class="a-glint" x="-60" y="-30" width="16" height="180" fill="url(#cf-gl)"/></g></g></svg><!-- /art:crest-footer -->
+        <!-- art:crest-footer --><svg class="crest" viewBox="0 0 120 120" aria-hidden="true" style="--t1:#DCE3FF;--t2:#B9C7FF;--t3:#8FA5FF;--t4:#5C77EC;--t5:#2C46C4;--ink:#161B2C;--accent:#F0C369;--rim:#2C46C4;--rim2:#B9C7FF;--glow:#8FA5FF;--field1:#24306A;--field2:#161B2C;--ribbon:#1B2C84;--ribbon2:#14205E;--steel1:#FBF5E6;--steel2:#CFC7B4;--steel3:#8E8A80;--letter:#FFFBF2"><defs><linearGradient id="cf-fld" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--field1)"/><stop offset="1" stop-color="var(--field2)"/></linearGradient><radialGradient id="cf-glow" cx=".5" cy=".42" r=".5"><stop offset="0" stop-color="var(--glow)" stop-opacity=".35"/><stop offset="1" stop-color="var(--glow)" stop-opacity="0"/></radialGradient><linearGradient id="cf-gl" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".5"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="cf-in"><path d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z"/></clipPath><clipPath id="cf-out"><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z"/></clipPath></defs><g class="a-rim"><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z" fill="var(--rim)"/><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z" fill="none" stroke="var(--rim2)" stroke-opacity=".55" stroke-width="1.2"/><path class="a-field" d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z" fill="url(#cf-fld)"/></g><g clip-path="url(#cf-in)"><circle class="a-field" cx="60" cy="50" r="42" fill="url(#cf-glow)"/><g transform="translate(22 22) scale(.86)" stroke-linejoin="round"><polygon class="facet" style="--i:0;--dx:-8.0px;--dy:-6.4px" fill="var(--t2)" points="54,4 61,15 46,12"/><polygon class="facet" style="--i:1;--dx:-1.6px;--dy:6.4px" fill="var(--t1)" points="54,4 46,12 50,9"/><polygon class="facet" style="--i:2;--dx:4.8px;--dy:4.8px" fill="var(--t3)" points="37,15 46,12 61,15 63,24 35,29"/><polygon class="facet" style="--i:3;--dx:-6.4px;--dy:3.2px" fill="var(--t1)" points="37,15 24,27 35,29"/><polygon class="facet" style="--i:4;--dx:0.0px;--dy:1.6px" fill="var(--t2)" points="24,27 13,41 24,46 35,29"/><polygon class="facet" style="--i:5;--dx:6.4px;--dy:0.0px" fill="var(--t1)" points="13,41 8,49 12,56 23,58 24,46"/><polygon class="facet" style="--i:6;--dx:-4.8px;--dy:-1.6px" fill="var(--t3)" points="35,29 24,46 50,37"/><polygon class="facet" style="--i:7;--dx:1.6px;--dy:-3.2px" fill="var(--t4)" points="35,29 50,37 63,24"/><polygon class="facet" style="--i:8;--dx:8.0px;--dy:-4.8px" fill="var(--t4)" points="24,46 23,58 42,54 50,37"/><polygon class="facet" style="--i:9;--dx:-3.2px;--dy:-6.4px" fill="var(--t3)" points="50,37 42,54 38,63 63,63 65,43"/><polygon class="facet" style="--i:10;--dx:3.2px;--dy:6.4px" fill="var(--t4)" points="50,37 65,43 63,24"/><polygon class="facet" style="--i:11;--dx:-8.0px;--dy:4.8px" fill="var(--t3)" points="38,63 31,80 26,112 53,112 63,63"/><polygon class="facet" style="--i:12;--dx:-1.6px;--dy:3.2px" fill="var(--t4)" points="63,63 53,112 78,112 72,80"/><polygon class="facet" style="--i:13;--dx:4.8px;--dy:1.6px" fill="var(--t5)" points="61,15 67,16 72,22 69,26 77,32 73,36 79,44 74,48 79,57 73,61 76,70 72,80 63,63 65,43 63,24"/><path class="eye" d="M30 27Q35 24 40 27Q35 30 30 27Z" fill="var(--ink)"/><path d="M12 46L16 45" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round"/></g></g><path class="a-line" pathLength="1" d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z" fill="none" stroke="var(--accent)" stroke-opacity=".9" stroke-width="1"/><circle class="rivet" style="--i:0" cx="24" cy="20" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:1" cx="42" cy="15.5" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:2" cx="60" cy="11" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:3" cx="78" cy="15.5" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:4" cx="96" cy="20" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:5" cx="100" cy="44" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:6" cx="20" cy="44" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:7" cx="94" cy="76" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:8" cx="26" cy="76" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:9" cx="79" cy="97" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:10" cx="41" cy="97" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><g clip-path="url(#cf-out)"><g transform="rotate(20 60 60)"><rect class="a-glint" x="-60" y="-30" width="16" height="180" fill="url(#cf-gl)"/></g></g></svg><!-- /art:crest-footer -->
         <span class="brand-name">KnightWebstudio</span>
       </a>
       <p>Websites, automation and consulting for local businesses that need to be found, trusted and chosen.</p>
-      <!-- EDIT ME: location. Also in the JSON-LD address and on the contact page. -->
       <p class="footer-loc">Based in Baton Rouge, Louisiana. Working with clients anywhere.</p>
     </div>
 
     <nav class="footer-col" aria-label="Services">
-      <h3>Services</h3>
+      <p class="footer-title">Services</p>
       <a href="/services/">Website design</a>
       <a href="/consulting/">Consulting &amp; automation</a>
       <a href="/services/">E-commerce</a>
@@ -671,7 +795,7 @@
     </nav>
 
     <nav class="footer-col" aria-label="Company">
-      <h3>Company</h3>
+      <p class="footer-title">Company</p>
       <a href="/about/">About</a>
       <a href="/work/">Our work</a>
       <a href="/process/">Process</a>
@@ -680,7 +804,7 @@
     </nav>
 
     <nav class="footer-col" aria-label="Areas we serve">
-      <h3>Areas we serve</h3>
+      <p class="footer-title">Areas we serve</p>
       <a href="/web-design-baton-rouge/">Baton Rouge</a>
       <a href="/web-design-gonzales/">Gonzales</a>
       <a href="/web-design-prairieville/">Prairieville</a>
@@ -691,8 +815,8 @@
     </nav>
 
     <nav class="footer-col" aria-label="Contact">
-      <h3>Contact</h3>
-      <a href="mailto:knightwebstudio1@gmail.com">knightwebstudio1@gmail.com</a>
+      <p class="footer-title">Contact</p>
+      <a href="mailto:knightwebstudio1@gmail.com"><span>knightwebstudio1@<wbr>gmail.com</span></a>
       <a href="tel:+12252550837">(225) 255-0837</a>
       <a href="/contact/">Start a project</a>
     </nav>
@@ -703,6 +827,6 @@
     <p class="footer-links"><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="#top">Back to top ↑</a></p>
   </div>
 </footer>
-<script src="/assets/js/main.js" defer></script>
+<script src="/assets/js/main.js?v=2" defer></script>
 </body>
 </html>

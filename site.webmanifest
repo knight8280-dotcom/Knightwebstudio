@@ -4,8 +4,8 @@
   "description": "Web design and development studio building fast, modern websites for small businesses.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#080b14",
-  "theme_color": "#080b14",
+  "background_color": "#F6F0E4",
+  "theme_color": "#F6F0E4",
   "icons": [
     {
       "src": "/assets/img/logo.svg",
