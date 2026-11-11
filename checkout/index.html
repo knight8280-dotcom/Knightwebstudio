@@ -128,7 +128,7 @@
     <div class="container">
       <p class="eyebrow">Checkout</p>
       <h1>Secure checkout</h1>
-      <p class="lede">Pay your project deposit or start a care plan. Payments are processed securely by Stripe — we never see or store your card or bank details.</p>
+      <p class="lede">Pay for your project or start a care plan. We take card payments only (credit or debit; Apple Pay and Google Pay work too), processed securely by Stripe — we never see or store your card details.</p>
     </div>
   </section>
 
@@ -284,15 +284,25 @@
 
   // What each plan key is called and costs, for the order summary above the
   // form. Display-only — the amount actually charged always comes from the
-  // server's whitelist (server/plans.json). Keep the two in sync, and keep
+  // server's whitelist (server/plans.json, and live in STRIPE_PLANS_JSON plus server/plans.live-extra.json). Keep the two in sync, and keep
   // this map in sync with the copy on /checkout/success/.
   var PLAN_DETAILS = {
-    'starter-deposit':  { name: 'Starter website — 50% deposit',  price: '$1,000' },
-    'business-deposit': { name: 'Business website — 50% deposit', price: '$2,000' },
-    'commerce-deposit': { name: 'Commerce website — 50% deposit', price: '$4,000' },
-    'essential-care':   { name: 'Essential care plan',            price: '$300/month' },
-    'growth-care':      { name: 'Growth care plan',               price: '$600/month' },
-    'commerce-care':    { name: 'Commerce care plan',             price: '$1,000/month' }
+    'onepage-full':     { name: 'One-page website — paid in full', price: '$1,000' },
+    'onepage-deposit':  { name: 'One-page website — 50% deposit',  price: '$500' },
+    'onepage-final':    { name: 'One-page website — final 50%',    price: '$500' },
+    'starter-full':     { name: 'Starter website — paid in full',  price: '$2,000' },
+    'starter-deposit':  { name: 'Starter website — 50% deposit',   price: '$1,000' },
+    'starter-final':    { name: 'Starter website — final 50%',     price: '$1,000' },
+    'business-full':    { name: 'Business website — paid in full', price: '$4,000' },
+    'business-deposit': { name: 'Business website — 50% deposit',  price: '$2,000' },
+    'business-final':   { name: 'Business website — final 50%',    price: '$2,000' },
+    'commerce-full':    { name: 'Commerce website — paid in full', price: '$8,000' },
+    'commerce-deposit': { name: 'Commerce website — 50% deposit',  price: '$4,000' },
+    'commerce-final':   { name: 'Commerce website — final 50%',    price: '$4,000' },
+    'basic-care':       { name: 'Basic care plan',                 price: '$125/month' },
+    'essential-care':   { name: 'Essential care plan',             price: '$300/month' },
+    'growth-care':      { name: 'Growth care plan',                price: '$600/month' },
+    'commerce-care':    { name: 'Commerce care plan',              price: '$1,000/month' }
   };
 
   (function () {

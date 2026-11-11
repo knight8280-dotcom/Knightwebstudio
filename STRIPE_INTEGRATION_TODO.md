@@ -25,11 +25,14 @@ static (GitHub Pages), so every Stripe call goes through a small server in
   confirms the payment with Stripe. This only works once the webhook and
   email env vars below are set in Render. Until then the webhook rejects
   events and no emails are sent. Stripe's own receipts are unaffected.
-- **Payment methods** shown in the form come from the Stripe Dashboard
-  (Settings → Payment methods), not from the code. Card is on. For ACH
-  bank transfer, turn on **ACH Direct Debit** there. Checks are handled
-  outside Stripe: take them by hand, then mark the invoice paid in Stripe
-  ("Paid out of band") if one was issued.
+- **Card only (11 November 2026).** The site and agreements say card only.
+  Payment methods shown in the form come from the Stripe Dashboard
+  (Settings → Payment methods), not from the code: this API version rejects
+  `payment_method_types` on Checkout Sessions. Switch off everything there
+  except **Cards**, **Apple Pay** and **Google Pay** (on 11 November ACH
+  Direct Debit, Link, Amazon Pay, Pay by Bank, Bancontact, BLIK, EPS,
+  MB WAY, Pix and Satispay were on). The same settings apply to Stripe
+  invoices and payment links.
 - To go back to test mode: set Render `STRIPE_SECRET_KEY` to the sandbox test
   key, delete `STRIPE_PLANS_JSON`, put the sandbox `pk_test_...` back in the
   page, and use a test-mode webhook secret.
@@ -41,6 +44,12 @@ static (GitHub Pages), so every Stripe call goes through a small server in
   (override the site with `SITE_URL`), the page loads the current Stripe.js
   build (`/endive/stripe.js`, no preview flag), and a failed confirmation now
   shows a message beside the form instead of nothing.
+- **Every payment option (11 November 2026).** Pay in full, 50% deposit
+  and final 50% for all four packages, plus Basic care, are sold through
+  checkout. The new keys live in `server/plans.live-extra.json`, so Render's
+  `STRIPE_PLANS_JSON` did not need changing. Payment plan monthly payments
+  are not on the site: email the client a Stripe invoice or payment link for
+  each one.
 - **$1 test payment.** `/checkout/?plan=test-payment` (linked from nowhere)
   charges $1 in live mode; refund it in the Dashboard afterwards. It comes
   from `server/plans.live-extra.json`.
@@ -227,13 +236,25 @@ Link to `/checkout/?plan=<key>`. Unknown keys get a 400.
 | `growth-care` | Growth Care Plan | `price_1UKp1pLOmAZAVClwt7Q7FRRm` | $600/mo | subscription |
 | `commerce-care` | Commerce Care Plan | `price_1UKp1pLOmAZAVClwfflhnSP5` | $1,000/mo | subscription |
 
-Other live prices (not sold on the checkout page):
+### Live mode (in `server/plans.live-extra.json`, added on top)
 
-| Package | Final payment | Full price |
-| --- | --- | --- |
-| Starter | `price_1UKp1pLOmAZAVClw0tiD3try` | `price_1UKp1pLOmAZAVClw2YtF9eoZ` |
-| Business | `price_1UKp1pLOmAZAVClwc8YbQb0O` | `price_1UKp1pLOmAZAVClwzFsXDUYB` |
-| Commerce | `price_1UKp1uLOmAZAVClwkVRjc917` | `price_1UKp1uLOmAZAVClwYDwM8fNX` |
+| Plan key | Product | Price ID | Amount | Mode |
+| --- | --- | --- | --- | --- |
+| `onepage-full` | One-page Website, paid in full | `price_1UaeItLOmAZAVClwCL3mWznO` | $1,000 | payment |
+| `onepage-deposit` | One-page Website 50% Deposit | `price_1UaeJ5LOmAZAVClw4hw7EYlB` | $500 | payment |
+| `onepage-final` | One-page Website final 50% | `price_1UaeJ8LOmAZAVClwRPmpo0ek` | $500 | payment |
+| `starter-full` | Starter Website, paid in full | `price_1UKp1pLOmAZAVClw2YtF9eoZ` | $2,000 | payment |
+| `starter-final` | Starter Website final 50% | `price_1UKp1pLOmAZAVClw0tiD3try` | $1,000 | payment |
+| `business-full` | Business Website, paid in full | `price_1UKp1pLOmAZAVClwzFsXDUYB` | $4,000 | payment |
+| `business-final` | Business Website final 50% | `price_1UKp1pLOmAZAVClwc8YbQb0O` | $2,000 | payment |
+| `commerce-full` | Commerce Website, paid in full | `price_1UKp1uLOmAZAVClwYDwM8fNX` | $8,000 | payment |
+| `commerce-final` | Commerce Website final 50% | `price_1UKp1uLOmAZAVClwkVRjc917` | $4,000 | payment |
+| `basic-care` | Basic Care Plan | `price_1UaeJCLOmAZAVClwczUJAD95` | $125/mo | subscription |
+| `test-payment` | Test payment | `price_1UaYxsLOmAZAVClwqvuBLKul` | $1 | payment |
+
+Stripe products: One-page Website `prod_Vbs2nxxMSlRuF9`, Basic Care Plan
+`prod_Vbs3WMQPmatVrl` (both created 11 November 2026). The test-mode sandbox
+has none of these keys, so locally they return 400 "Unknown plan".
 
 Live customer portal configuration: `bpc_1UKpY2LOmAZAVClwJdiPQXoi`.
 

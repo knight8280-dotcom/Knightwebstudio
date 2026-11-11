@@ -180,6 +180,9 @@ app.post("/api/create-checkout-session", async (req, res) => {
     mode,
     line_items: [{ price: plan.price, quantity: 1 }],
     metadata: { plan: planKey },
+    // Which payment methods show is set in the Stripe Dashboard (Settings →
+    // Payment methods), not here: this API version rejects
+    // payment_method_types on Checkout Sessions. The site says card only.
   };
   if (mode === "payment") {
     // submit_type only applies to payment-mode sessions.
@@ -357,10 +360,18 @@ function clientEmail(s) {
   const greeting = firstName ? `Hi ${firstName},` : "Hi there,";
   const paid = s.subscription ? `${s.amount} a month` : s.amount;
   const subject = s.subscription ? `Your ${s.label} is active` : `Payment received: ${s.label}`;
+  // A "-final" plan is the last 50% at launch: the project is already under way.
+  const final = /-final$/.test(s.planKey || "");
   const intro = s.subscription
     ? `Thank you for starting your ${s.label}. Your first payment has gone through and your plan is now active.`
-    : "Thank you for your payment. It has gone through, and your project is booked in.";
-  const steps = s.subscription
+    : final
+      ? "Thank you for your final payment. It has gone through, and your project is now paid in full."
+      : "Thank you for your payment. It has gone through, and your project is booked in.";
+  const steps = final
+    ? [
+        { text: "Your site's design and code are now fully yours. If anything about the launch needs a hand, just reply to this email." },
+      ]
+    : s.subscription
     ? [
         { text: "We'll email you within one business day to introduce ourselves and collect anything we need to start looking after your site." },
         { text: "Want to talk it through first? Book a call:", link: CALENDLY_URL },
