@@ -22,17 +22,24 @@
       if (t !== 'dark' && t !== 'light') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       d.setAttribute('data-theme', t);
     } catch (e) { /* private mode: the stylesheet follows the device instead */ }
+    // A visitor who paused the motion gets a still page from the first frame, also where shader.js is not loaded
+    try { if (localStorage.getItem('kws-motion') === 'off') d.setAttribute('data-motion', 'off'); } catch (e) {}
     // Scroll reveals hide blocks until main.js shows them. A deferred script has
     // run, or failed, by DOMContentLoaded: if main.js has not started by then
     // (or the page has none), the page is a no-script page. If it is still on
     // its way after four seconds, show every block and leave the header alone.
     document.addEventListener('DOMContentLoaded', function () { if (!window.kwsReady) d.classList.remove('js'); });
     setTimeout(function () { if (!window.kwsReady) d.classList.add('show-all'); }, 4000);
+    // The motion kit: hold each carousel's place until motion.js upgrades it, and give the plain lists back if it
+    // never comes (a page without motion.js drops the classes at load and after four seconds)
+    d.classList.add('kws-js', 'kws-hold');
+    addEventListener('load', function () { if (!(window.KWS && KWS.folders)) d.classList.remove('kws-js'); });
+    setTimeout(function () { if (!(window.KWS && KWS.folders)) d.classList.remove('kws-js'); d.classList.remove('kws-hold'); }, 4000);
   })();
 </script>
 <link rel="preload" href="/assets/fonts/fraunces-soft.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/figtree.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/styles.css?v=3">
+<link rel="stylesheet" href="/assets/css/styles.css?v=4">
 </head>
 
 <body data-page="notfound">
@@ -45,6 +52,8 @@
       <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
       <span><span class="topbar-more">Based in </span>Baton Rouge<span class="topbar-state">, Louisiana</span><span class="topbar-long"> · We meet in person anywhere in Greater Baton Rouge</span></span>
     </p>
+    <!-- The motion pause control: shader.js shows it (a pill from 1100px, a round button below it) -->
+    <button class="kws-motion" data-kws="motion" type="button" hidden><svg class="kws-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg><svg class="kws-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg><span class="kws-motion-label"></span></button>
     <a class="topbar-tel" href="tel:+12252550837">
       <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
       <span class="sr-only">Call </span>(225) 255-0837
@@ -89,28 +98,41 @@
 </main>
 
 <!-- ===================== FOOTER ===================== -->
-<footer class="site-footer on-ink">
-  <!-- Baton Rouge on the horizon: the Capitol tower, downtown and the river bridge. After dark the windows and bridge lamps are lit (.sky-lit). -->
-  <svg class="footer-skyline" viewBox="0 0 1440 120" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
-    <path d="M0 120V102Q26 88 58 99Q92 84 128 100Q150 93 176 104V120Z"/>
-    <path d="M180 120V86h38v34ZM222 120V72h34v48ZM268 120V84h124v36ZM296 86V68h68v18ZM314 70V24h32v46ZM319 26V13h22v13ZM324 15V6h12v9ZM327 7l3-7 3 7Z"/>
-    <path d="M420 120V66h48v54ZM474 120V48h44v72ZM522 120V78h56v42ZM582 120V58h38v62ZM624 120V88h60v32ZM690 120V70h46v50ZM740 120V94h70v26Z"/>
-    <path d="M818 120V108Q836 98 852 107V120Z"/>
-    <g fill="none" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
-      <path d="M880 93L960 78L1040 38L1090 72L1140 80L1190 72L1240 38L1320 78L1400 93"/>
-      <path d="M960 78V93M1040 38V93M1090 72V93M1140 80V93M1190 72V93M1240 38V93M1320 78V93"/>
-      <path d="M960 93L1040 38L1090 93L1140 80L1190 93L1240 38L1320 93M1000 58V93M1280 58V93"/>
-    </g>
-    <path d="M856 91h568v5H856ZM1033 94h14v26h-14ZM1233 94h14v26h-14ZM956 94h8v26h-8ZM1316 94h8v26h-8Z"/>
-    <path d="M1396 120V104Q1414 92 1440 100V120Z"/>
-    <path d="M0 114h1440v6H0Z"/>
-    <path class="sky-lit" d="M190 96h4v5h-4ZM230 80h4v5h-4ZM242 94h4v5h-4ZM282 94h4v5h-4ZM306 75h4v5h-4ZM350 75h4v5h-4ZM372 98h4v5h-4ZM326 34h4v5h-4ZM334 34h4v5h-4ZM326 47h4v5h-4ZM334 59h4v5h-4ZM430 76h4v5h-4ZM448 92h4v5h-4ZM484 58h4v5h-4ZM500 58h4v5h-4ZM484 76h4v5h-4ZM500 94h4v5h-4ZM536 88h4v5h-4ZM560 102h4v5h-4ZM592 68h4v5h-4ZM604 86h4v5h-4ZM640 98h4v5h-4ZM664 98h4v5h-4ZM700 80h4v5h-4ZM720 96h4v5h-4ZM760 102h4v5h-4ZM790 102h4v5h-4ZM1038 31h5v5h-5ZM1238 31h5v5h-5ZM959 73h3v3h-3ZM1089 67h3v3h-3ZM1139 75h3v3h-3ZM1189 67h3v3h-3ZM1319 73h3v3h-3Z"/>
-  </svg>
+<footer class="site-footer on-ink kws-foot kws-foot--slim">
+  <!-- The slim footer of the not-found page, which loads no script: no year to fill in and no pause control, so the sky stays still. -->
+  <div class="kws-foot-in kws-foot-end">
+    <p class="kws-foot-bye">KnightWebstudio<span> · </span><span>Based in Baton Rouge, Louisiana</span></p>
+    <p class="kws-foot-links"><a class="kws-foot-mail" href="tel:+12252550837">(225) 255-0837</a><a class="kws-foot-mail" href="mailto:knightwebstudio1@gmail.com"><span>knightwebstudio1@<wbr>gmail.com</span></a></p>
+    <p class="kws-foot-links"><a href="/">Home</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></p>
+  </div>
 
-  <div class="container footer-bottom">
-    <p>KnightWebstudio · Based in Baton Rouge, Louisiana</p>
-    <p class="footer-links"><a href="mailto:knightwebstudio1@gmail.com"><span>knightwebstudio1@<wbr>gmail.com</span></a><a href="tel:+12252550837">(225) 255-0837</a></p>
-    <p class="footer-links"><a href="/">Home</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></p>
+  <div class="kws-skyline" aria-hidden="true">
+    <div class="kws-skyline-sky"></div>
+    <!-- Baton Rouge on the horizon: the Capitol tower, downtown and the river bridge, with the windows and bridge lamps lit (.kws-skyline-lit).
+         On a phone the far end of downtown (.kws-skyline-far) steps out, the bridge (.kws-skyline-span) moves up beside the rest,
+         and the whole drawing (the one <g>) shifts left so the Capitol and a bridge tower are both in the frame. -->
+    <svg class="kws-skyline-art" viewBox="0 0 1440 120" preserveAspectRatio="xMinYMax slice" focusable="false">
+      <g>
+        <path d="M0 120V102Q26 88 58 99Q92 84 128 100Q150 93 176 104V120Z"/>
+        <path d="M180 120V86h38v34ZM222 120V72h34v48ZM268 120V84h124v36ZM296 86V68h68v18ZM314 70V24h32v46ZM319 26V13h22v13ZM324 15V6h12v9ZM327 7l3-7 3 7Z"/>
+        <path d="M420 120V66h48v54ZM474 120V48h44v72ZM522 120V78h56v42ZM582 120V58h38v62Z"/>
+        <path class="kws-skyline-lit" d="M190 96h4v5h-4ZM230 80h4v5h-4ZM242 94h4v5h-4ZM282 94h4v5h-4ZM306 75h4v5h-4ZM350 75h4v5h-4ZM372 98h4v5h-4ZM326 34h4v5h-4ZM334 34h4v5h-4ZM326 47h4v5h-4ZM334 59h4v5h-4ZM430 76h4v5h-4ZM448 92h4v5h-4ZM484 58h4v5h-4ZM500 58h4v5h-4ZM484 76h4v5h-4ZM500 94h4v5h-4ZM536 88h4v5h-4ZM560 102h4v5h-4ZM592 68h4v5h-4ZM604 86h4v5h-4Z"/>
+        <g class="kws-skyline-far">
+          <path d="M624 120V88h60v32ZM690 120V70h46v50ZM740 120V94h70v26ZM818 120V108Q836 98 852 107V120Z"/>
+          <path class="kws-skyline-lit" d="M640 98h4v5h-4ZM664 98h4v5h-4ZM700 80h4v5h-4ZM720 96h4v5h-4ZM760 102h4v5h-4ZM790 102h4v5h-4Z"/>
+        </g>
+        <g class="kws-skyline-span">
+          <g fill="none" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+            <path d="M880 93L960 78L1040 38L1090 72L1140 80L1190 72L1240 38L1320 78L1400 93"/>
+            <path d="M960 78V93M1040 38V93M1090 72V93M1140 80V93M1190 72V93M1240 38V93M1320 78V93"/>
+            <path d="M960 93L1040 38L1090 93L1140 80L1190 93L1240 38L1320 93M1000 58V93M1280 58V93"/>
+          </g>
+          <path d="M856 91h568v5H856ZM1033 94h14v26h-14ZM1233 94h14v26h-14ZM956 94h8v26h-8ZM1316 94h8v26h-8ZM1396 120V104Q1414 92 1440 100V120Z"/>
+          <path class="kws-skyline-lit" d="M1038 31h5v5h-5ZM1238 31h5v5h-5ZM959 73h3v3h-3ZM1089 67h3v3h-3ZM1139 75h3v3h-3ZM1189 67h3v3h-3ZM1319 73h3v3h-3Z"/>
+        </g>
+        <path d="M0 114h1440v6H0Z"/>
+      </g>
+    </svg>
   </div>
 </footer>
 </body>

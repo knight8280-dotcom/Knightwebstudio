@@ -236,15 +236,16 @@
 
   /* ---------- Mobile sticky CTA ----------
      Appears once the hero is behind you, and gets out of the way over the
-     contact section, the closing band (.cta-band, which has its own booking
-     button) and the footer, so it never covers what it points at. */
+     contact section, the closing band (.kws-close, or .cta-band on an older
+     page; both have their own booking button) and the footer, so it never
+     covers what it points at. */
   var mobileCta = document.getElementById('mobile-cta');
   if (mobileCta) {
     mobileCta.hidden = false;
     // Sub-pages have no #contact section, only the footer — observe whichever
     // exists, and track each target separately so one leaving the viewport
     // doesn't cancel the other still being in it.
-    var avoid = [document.getElementById('contact'), document.querySelector('.cta-band'), document.querySelector('.site-footer')]
+    var avoid = [document.getElementById('contact'), document.querySelector('.cta-band, .kws-close'), document.querySelector('.site-footer')]
       .filter(Boolean);
     var inView = [];
     var nearForm = false;

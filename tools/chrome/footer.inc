@@ -1,56 +1,72 @@
 <!-- ===================== FOOTER ===================== -->
-<footer class="site-footer on-ink">
-{{skyline}}
+<footer class="site-footer on-ink kws-foot">
+  <!-- The motion kit's footer (styles.css section 16). It keeps class site-footer: main.js looks for it (the phone bar steps aside over the footer). -->
+  <div class="kws-foot-in">
+    <div class="kws-foot-grid">
+      <div class="kws-foot-who">
+        <a class="kws-foot-logo" href="/" aria-label="KnightWebstudio home">
+          <!-- art:crest-footer --><!-- /art:crest-footer -->
+        </a>
+        <p class="kws-foot-bye">Based in Baton Rouge, Louisiana. Working with clients anywhere.</p>
+        <p class="kws-foot-what">Websites, automation and consulting for local businesses that need to be found, trusted and chosen.</p>
+      </div>
 
-  <div class="container footer-grid">
-    <div class="footer-brand">
-      <a class="brand" href="/">
-        <!-- art:crest-footer --><!-- /art:crest-footer -->
-        <span class="brand-name">KnightWebstudio</span>
-      </a>
-      <p>Websites, automation and consulting for local businesses that need to be found, trusted and chosen.</p>
-      <p class="footer-loc">Based in Baton Rouge, Louisiana. Working with clients anywhere.</p>
+      <nav class="kws-foot-call" aria-label="Contact">
+        <p class="kws-foot-title">Contact</p>
+        <ul>
+          <li><a class="kws-foot-tel" href="tel:+12252550837">(225) 255-0837</a></li>
+          <li><a class="kws-foot-mail" href="mailto:knightwebstudio1@gmail.com"><span>knightwebstudio1@<wbr>gmail.com</span></a></li>
+          <li><a class="kws-btn" href="/contact/">Start a project <span aria-hidden="true">→</span></a></li>
+        </ul>
+      </nav>
+
+      <nav aria-label="Services">
+        <p class="kws-foot-title">Services</p>
+        <ul>
+          <li><a href="/services/">Website design</a></li>
+          <li><a href="/consulting/">Consulting &amp; automation</a></li>
+          <li><a href="/services/">E-commerce</a></li>
+          <li><a href="/services/">SEO</a></li>
+          <li><a href="/services/">Care plans</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-label="Company">
+        <p class="kws-foot-title">Company</p>
+        <ul>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/work/">Our work</a></li>
+          <li><a href="/process/">Process</a></li>
+          <li><a href="/pricing/">Pricing</a></li>
+          <li><a href="/faq/">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <nav class="kws-foot-wide" aria-label="Areas we serve">
+        <p class="kws-foot-title">Areas we serve</p>
+        <ul class="kws-foot-places">
+          <li><a href="/web-design-baton-rouge/">Baton Rouge</a></li>
+          <li><a href="/web-design-gonzales/">Gonzales</a></li>
+          <li><a href="/web-design-prairieville/">Prairieville</a></li>
+          <li><a href="/web-design-denham-springs/">Denham Springs</a></li>
+          <li><span>Zachary</span></li>
+          <li><span>Central</span></li>
+          <li><span>Baker</span></li>
+        </ul>
+      </nav>
     </div>
 
-    <nav class="footer-col" aria-label="Services">
-      <p class="footer-title">Services</p>
-      <a href="/services/">Website design</a>
-      <a href="/consulting/">Consulting &amp; automation</a>
-      <a href="/services/">E-commerce</a>
-      <a href="/services/">SEO</a>
-      <a href="/services/">Care plans</a>
-    </nav>
-
-    <nav class="footer-col" aria-label="Company">
-      <p class="footer-title">Company</p>
-      <a href="/about/">About</a>
-      <a href="/work/">Our work</a>
-      <a href="/process/">Process</a>
-      <a href="/pricing/">Pricing</a>
-      <a href="/faq/">FAQ</a>
-    </nav>
-
-    <nav class="footer-col" aria-label="Areas we serve">
-      <p class="footer-title">Areas we serve</p>
-      <a href="/web-design-baton-rouge/">Baton Rouge</a>
-      <a href="/web-design-gonzales/">Gonzales</a>
-      <a href="/web-design-prairieville/">Prairieville</a>
-      <a href="/web-design-denham-springs/">Denham Springs</a>
-      <span class="footer-place">Zachary</span>
-      <span class="footer-place">Central</span>
-      <span class="footer-place">Baker</span>
-    </nav>
-
-    <nav class="footer-col" aria-label="Contact">
-      <p class="footer-title">Contact</p>
-      <a href="mailto:knightwebstudio1@gmail.com"><span>knightwebstudio1@<wbr>gmail.com</span></a>
-      <a href="tel:+12252550837">(225) 255-0837</a>
-      <a href="/contact/">Start a project</a>
-    </nav>
+    <div class="kws-foot-end">
+      <p>&copy; <span id="year">2026</span> KnightWebstudio. All rights reserved.</p>
+      <!-- Last in the row, the motion pause control: shader.js shows it and writes its words; without that script (and with script off) it stays hidden -->
+      <p class="kws-foot-links"><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="#top">Back to top ↑</a><button class="kws-motion" data-kws="motion" type="button" hidden><svg class="kws-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg><svg class="kws-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg><span class="kws-motion-label"></span></button></p>
+    </div>
   </div>
 
-  <div class="container footer-bottom">
-    <p>&copy; <span id="year">2026</span> KnightWebstudio. All rights reserved.</p>
-    <p class="footer-links"><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="#top">Back to top ↑</a></p>
+  <!-- The town at night, with the name rising behind its skyline. Decorative: everything it says is in the text above. -->
+  <div class="kws-skyline" aria-hidden="true">
+    <div class="kws-skyline-sky"></div>
+    <p class="kws-skyline-name">KnightWebstudio</p>
+{{skyline}}
   </div>
 </footer>

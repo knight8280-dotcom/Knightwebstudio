@@ -29,6 +29,7 @@
             Call (225) 255-0837
           </a>
           <a class="nav-mail" href="mailto:knightwebstudio1@gmail.com">knightwebstudio1@gmail.com</a>
+          <button class="kws-motion" data-kws="motion" type="button" hidden><svg class="kws-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg><svg class="kws-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg><span class="kws-motion-label"></span></button>
         </div>
       </div>
     </nav>

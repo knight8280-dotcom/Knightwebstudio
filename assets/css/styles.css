@@ -2,26 +2,21 @@
    Tokens first; one line per colour holds both themes: var(--L, day) var(--D, night). Tone scopes re-point them.
    Phone first; breakpoints 380, 600, 760, 980, 1100, 1280.
 
-   Contents
-   The system, shared by every page:
-     01 Fonts                               02 Tokens                              03 Base
-     04 Type                                05 Layout                              06 Top strip, header, menu
-     07 Buttons and small parts             08 Text blocks                         09 Prices
-     10 Tables                              11 Receipt and payment plan            12 Paper objects
-     13 Mocks and figures                   14 Work, FAQ, forms                    15 Closing band
-     16 Footer and the phone's sticky bar   17 Motion                              18 No script, reduced motion, forced colours, print
-   Pages, the page-only rules, one block per page, every selector scoped with [data-page="<slug>"]:
-     19 Home               20 Services           21 Consulting         22 Work
-     23 Process            24 Pricing            25 FAQ                26 About
-     27 City pages         28 Contact            29 Privacy            30 Terms
-     31 Checkout           32 Checkout success   33 Start              34 Not found */
+   Contents. The system, shared by every page: 01 Fonts, 02 Tokens, 03 Base, 04 Type, 05 Layout, 06 Top strip, header,
+   menu, 07 Buttons and small parts, 08 Text blocks, 09 Prices, 10 Tables, 11 Receipt and payment plan, 12 Paper objects,
+   13 Mocks and figures, 14 Work, FAQ, forms, 15 Closing band, 16 Footer, the town at night and the phone's sticky bar,
+   17 Motion: reveals, the pause control and the backgrounds' still layer, 18 No script, reduced motion, forced colours,
+   print. 15 to 17 hold the motion kit's base layer: its dist/base.css, compact as the kit writes it, with the kit's
+   variables resolved to these tokens. What a page places (cards, carousels) is /assets/css/motion.css (README).
+   Pages, one block each, every selector scoped with [data-page="<slug>"]: 19 Home, 20 Services, 21 Consulting, 22 Work,
+   23 Process, 24 Pricing, 25 FAQ, 26 About, 27 City pages, 28 Contact, 29 Privacy, 30 Terms, 31 Checkout,
+   32 Checkout success, 33 Start, 34 Not found */
 
 /* == 01 Fonts == */
 @font-face { font-family: "Fraunces"; src: url("/assets/fonts/fraunces-soft.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
 @font-face { font-family: "Figtree"; src: url("/assets/fonts/figtree.woff2") format("woff2"); font-weight: 300 900; font-display: swap; }
-/* Metric-matched fallbacks: the font swap does not move the page.
-   Headings: Georgia Bold, named as a face so every engine picks the same file (Safari would take the bold for a 600
-   heading anyway), then Noto Serif for Android, each scaled to Fraunces' width */
+/* Metric-matched fallbacks, so the font swap does not move the page. Headings: Georgia Bold, named as a face so every
+   engine picks the same file, then Noto Serif for Android, each scaled to Fraunces' width */
 @font-face { font-family: "Fraunces Fallback"; src: local("Georgia Bold"), local("Georgia-Bold"); font-weight: 100 900; size-adjust: 94%; ascent-override: 104%; descent-override: 27%; }
 @font-face { font-family: "Fraunces Fallback Noto"; src: local("Noto Serif"); size-adjust: 101%; ascent-override: 97%; descent-override: 25%; }
 @font-face { font-family: "Figtree Fallback"; src: local("Arial"), local("Roboto"); size-adjust: 101%; ascent-override: 94%; descent-override: 25%; }
@@ -90,7 +85,6 @@
   --pad-lg: clamp(24px, 4.6vw, 60px);
   --stack: clamp(32px, 5vw, 56px);
   --sec: clamp(64px, 9vw, 128px);
-  --skyline: clamp(54px, 8.4vw, 120px);
 
   --maxw: 1240px; --maxw-text: 46rem; --maxw-card: 26rem;
   --header-h: 64px;
@@ -127,6 +121,7 @@
 /* == 03 Base == */
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding: calc(var(--header-h) + var(--s-5)) 0 var(--s-5); }
+html[data-motion="off"] { scroll-behavior: auto; }   /* paused: jumps, like reduced motion */
 /* Focus never lands under the phone bar */
 @media (max-width: 1099.98px) { html { scroll-padding-bottom: calc(var(--btn-h) + var(--s-6)); } }
 body {
@@ -134,7 +129,7 @@ body {
   background: var(--paper); color: var(--ink-2);
   font: 400 var(--fs-body)/1.6 var(--font-text); -webkit-font-smoothing: antialiased;
 }
-main { padding-bottom: var(--skyline); }   img, svg { display: block; max-width: 100%; }
+img, svg { display: block; max-width: 100%; }
 img { height: auto; }
 a { color: var(--blue); text-decoration-thickness: .08em; text-underline-offset: .2em; }
 p { margin: 0 0 1em; }
@@ -156,7 +151,7 @@ strong, b { font-weight: 700; color: var(--ink); }
 
 /* == 04 Type == */
 h1, h2, h3, h4, .h2, .h3, .h4, .title, .display, .brand-name, .tag, .tier-amt, .board-extras dd, .pl-price, .spec-price, .toc-price, .price-strip-nums, .receipt b, .table tbody .num,
-.bigfig b, .steps-no, .payplan-seg b, .appt-title, .bizcard-name, .bizcard-top b, .faq-item summary, .ledger tfoot :is(th, td) {
+.bigfig b, .steps-no, .payplan-seg b, .bizcard-name, .bizcard-top b, .faq-item summary, .ledger tfoot :is(th, td) {
   font-family: var(--font-display); font-weight: 600; font-variation-settings: "SOFT" 100; font-synthesis: none; font-variant-numeric: lining-nums;
 }
 h1, h2, h3, h4, .h2, .h3, .h4, .title { margin: 0; color: var(--ink); text-wrap: balance; }
@@ -167,8 +162,8 @@ h3, .h3 { font-size: var(--fs-h3); line-height: 1.18; letter-spacing: -.012em; }
 h4, .h4 { font-size: var(--fs-h4); line-height: 1.25; letter-spacing: -.008em; }
 @media (min-width: 600px) { h1 .l { display: block; } }
 
-.eyebrow, .label, .cell-label, .spec-name, .tier-name, .pl-group, .ticket-head, .receipt-head, .appt-head, .phone-label, .flag, .popular, .stamp, .price-strip-label,
-.footer-title, .bizcard-top span, .bizcard-name span, .notice-top, .cal-day span, .lead-src, :is(.table, .ledger) thead th, :is(.table, .ledger) caption, .spec thead th {
+.eyebrow, .label, .cell-label, .spec-name, .tier-name, .pl-group, .ticket-head, .receipt-head, .phone-label, .flag, .popular, .stamp, .price-strip-label,
+.bizcard-top span, .bizcard-name span, .notice-top, .cal-day span, .lead-src, :is(.table, .ledger) thead th, :is(.table, .ledger) caption, .spec thead th {
   font: 800 var(--fs-label)/1.4 var(--font-text); letter-spacing: .12em; text-transform: uppercase;
 }
 .eyebrow { display: flex; align-items: flex-start; gap: var(--s-3); margin: 0 0 var(--s-4); color: var(--brick); }
@@ -178,7 +173,7 @@ h4, .h4 { font-size: var(--fs-h4); line-height: 1.25; letter-spacing: -.008em; }
 .fine, .help, .form-fine, .print-kind, .fig-credit { font-size: var(--fs-sm); line-height: 1.5; color: var(--ink-3); }
 /* Short lines break evenly; running text does not end on one word */
 .btn, .faq-item summary, .tier-plan, .board-head p, .board-extras dd, .points span, .spec-price small { text-wrap: balance; }
-.lede, .section-sub, .cta-copy p, .faq-body, .prose p, .steps p { text-wrap: pretty; }
+.lede, .section-sub, .kws-close-text, .faq-body, .prose p, .steps p { text-wrap: pretty; }
 
 .mark { position: relative; white-space: nowrap; text-decoration: underline var(--brick); }
 @supports ((-webkit-mask-size: 100% 100%) or (mask-size: 100% 100%)) {
@@ -199,7 +194,7 @@ h4, .h4 { font-size: var(--fs-h4); line-height: 1.25; letter-spacing: -.008em; }
 .page-head h1 { max-width: 14em; margin-bottom: var(--s-5); }
 .page-head .btn-row { margin-top: var(--s-6); }
 .page-head .price-strip { margin-top: var(--s-5); }
-/* One column until its breakpoint: minmax(0, 1fr), so a long word or enlarged text cannot widen it past the screen */
+/* One column until its breakpoint: minmax(0, 1fr), so a long word cannot widen it past the screen */
 .page-head-split { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--stack) var(--gap-lg); align-items: center; }
 .page-head-aside { display: grid; justify-items: center; justify-self: center; width: min(100%, var(--maxw-card)); }
 .price-strip { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-2) var(--s-4); width: fit-content; max-width: 100%; min-height: var(--tap); margin: 0; color: var(--ink-2); font-size: var(--fs-sm); text-decoration: none; }
@@ -247,7 +242,7 @@ a.price-strip .price-strip-note { color: var(--blue); text-decoration: underline
 .topbar-inner { display: flex; align-items: center; justify-content: space-between; gap: var(--s-3); min-height: var(--tap); }
 .topbar-place, .topbar-tel { display: inline-flex; align-items: center; gap: var(--s-2); margin: 0; color: var(--ink); }
 .topbar-tel, .header-tel { align-items: center; gap: var(--s-2); min-height: var(--tap); color: var(--ink); font-weight: 700; text-decoration: none; white-space: nowrap; }
-/* The strip is the link's height, so its focus ring is drawn inside it; side padding gives the ring room without moving the number */
+/* The strip is the link's height, so its ring is drawn inside; side padding gives the ring room */
 .topbar-tel { padding-inline: var(--s-2); margin-inline: calc(-1 * var(--s-2)); }
 .topbar-tel:focus-visible { outline-offset: calc(-1 * var(--focus-w)); }
 .topbar-more, .topbar-long { display: none; }
@@ -255,7 +250,7 @@ a.price-strip .price-strip-note { color: var(--blue); text-decoration: underline
 .site-header { position: sticky; top: 0; z-index: var(--z-header); }
 .site-header::before { content: ""; position: absolute; inset: 0; z-index: -2; border-bottom: var(--hair) solid transparent; background: var(--paper); }
 .site-header.scrolled::before { border-bottom-color: var(--line); box-shadow: var(--shadow-head); }
-/* The row wraps only when enlarged or spaced text no longer fits it: then the actions drop to a second row, at the right */
+/* Only enlarged or spaced text wraps the row: then the actions drop to a second row, at the right */
 .header-inner { position: relative; display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-1) var(--s-3); min-height: var(--header-h); }
 .scroll-progress { position: absolute; inset: auto 0 calc(-1 * var(--hair)); height: var(--bold); background: var(--brick); transform: scaleX(0); transform-origin: 0 50%; pointer-events: none; }
 
@@ -312,12 +307,18 @@ a.price-strip .price-strip-note { color: var(--blue); text-decoration: underline
   .nav-links [aria-current="page"]::after { transform: scaleX(1); }
 }
 @media (max-width: 379.98px) {
-  .topbar-state { display: none; } .brand-name { font-size: var(--fs-md); } .brand, .header-inner, .header-actions { gap: var(--s-2); }
-  /* Under 360px the crest and two gaps give way, so a 320px phone keeps one row at default text size */
+  .brand-name { font-size: var(--fs-md); } .brand, .header-inner, .header-actions { gap: var(--s-2); }
+  /* Under 360px the crest and two gaps give way: one row on a 320px phone */
   .site-header { --crest: clamp(2rem, 20vw - 2rem, 2.5rem); }
   .brand, .header-inner { column-gap: clamp(var(--s-1), 10vw - 1.75rem, var(--s-2)); }
 }
-@media (max-width: 599.98px) { .topbar-place svg, .site-header .header-book { display: none; } }
+/* A phone's top strip: the city, the round pause button where a page moves, the number. One line at every width */
+@media (max-width: 599.98px) { .topbar-place svg, .topbar-state, .site-header .header-book { display: none; } }
+/* The pause control (17), wherever shader.js shows it: in the top strip, a pill from 1100px and a round button below
+   it, and in the phone menu. Nobody has to scroll to the footer, or open the menu, to stop a page head's background */
+.topbar .kws-motion { margin-left: auto; border-color: transparent; background: none; }
+.nav-foot .kws-motion { place-self: center; }
+@media (max-width: 1099.98px) { .topbar .kws-motion-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; } }
 @media (min-width: 600px) { .topbar-more { display: inline; } .nav-foot { margin-top: var(--s-5); } }
 @media (min-width: 980px) { .topbar-long { display: inline; } }
 @media (min-width: 1280px) { .header-tel { display: inline-flex; } .header-actions { gap: var(--s-4); } }
@@ -329,18 +330,18 @@ a.price-strip .price-strip-note { color: var(--blue); text-decoration: underline
 }
 
 /* == 07 Buttons and small parts == */
-.btn {
+.btn, .kws-btn {
   display: inline-flex; align-items: center; justify-content: center; gap: var(--s-2);
   min-height: var(--btn-h); padding: var(--s-3) var(--s-5); border: var(--frame); border-radius: var(--r-md);
   background: var(--card); color: var(--ink); box-shadow: var(--press), var(--shadow-1);
   font: 700 var(--fs-md)/1.2 var(--font-text); text-align: center; text-decoration: none; cursor: pointer; -webkit-tap-highlight-color: transparent;
   transition: transform var(--t-fast) var(--ease);
 }
-.btn:active, .icon-btn:active, .faq-item summary:active, .chip :active + span { transform: translateY(var(--hair)); }
-.btn:active { box-shadow: none; }
-.btn-primary { border-color: var(--blue); background: var(--blue); color: var(--on-blue); }
+.btn:active, .kws-btn:active, .icon-btn:active, .faq-item summary:active, .chip :active + span { transform: translateY(var(--hair)); }
+:is(.btn, .kws-btn):active { box-shadow: none; }
+.btn-primary, .kws-btn--main { border-color: var(--blue); background: var(--blue); color: var(--on-blue); }
 .btn-quiet { min-height: var(--tap); padding: var(--s-2) var(--s-1); border-color: transparent; background: none; box-shadow: none; color: var(--blue); font-weight: 600; text-decoration: underline; }
-.btn-lg { min-height: var(--btn-h-lg); padding-inline: var(--s-6); font-size: var(--fs-body); }
+.btn-lg, .kws-btn { min-height: var(--btn-h-lg); padding-inline: var(--s-6); font-size: var(--fs-body); }
 .btn-sm { min-height: var(--tap); padding: var(--s-2) var(--s-4); font-size: var(--fs-sm); }
 .btn-block { display: flex; width: 100%; }
 .btn[disabled], .field :disabled { opacity: .6; cursor: not-allowed; }
@@ -355,10 +356,10 @@ a.price-strip .price-strip-note { color: var(--blue); text-decoration: underline
 .more-link { --arrow: calc(1.15em + var(--s-2)); display: inline-block; padding: var(--s-3) var(--arrow) var(--s-3) 0; font-weight: 700; line-height: 1.5; text-decoration-thickness: var(--bold); text-underline-offset: .35em; }
 .more-link svg { display: inline-block; margin: 0 calc(-1 * var(--arrow)) 0 var(--s-2); vertical-align: -.2em; stroke-width: 2.2; transition: var(--move); }
 @media (hover: hover) {
-  .btn:hover { color: var(--ink); transform: translateY(calc(-1 * var(--s-0))); }
-  .btn-primary:hover { border-color: var(--blue-deep); background: var(--blue-deep); color: var(--on-blue); }
+  .btn:hover, .kws-btn:hover { color: var(--ink); transform: translateY(calc(-1 * var(--s-0))); }
+  .btn-primary:hover, .kws-btn--main:hover { border-color: var(--blue-deep); background: var(--blue-deep); color: var(--on-blue); }
   .btn-quiet:hover { color: var(--blue-deep); transform: none; }
-  .btn:hover:active { transform: translateY(var(--hair)); }
+  :is(.btn, .kws-btn):hover:active { transform: translateY(var(--hair)); }
   .icon-btn:hover { border-color: var(--ctl); background: var(--well); }
   .more-link:hover svg { transform: translateX(var(--s-1)); }
 }
@@ -426,8 +427,8 @@ a.price-strip .price-strip-note { color: var(--blue); text-decoration: underline
 @media (min-width: 600px) and (max-width: 979.98px) { .toc-plain ol { columns: 2; column-gap: var(--gap); } .toc-plain li { break-inside: avoid; } }
 @media (hover: hover) { .toc a:hover .toc-name, .faq-item summary:hover { color: var(--blue); } }
 
-.dots, .board-extras div::after, .appt-lines div::after { content: ""; flex: 1 1 var(--s-4); min-width: var(--s-4); border-bottom: var(--bold) dotted var(--line-2); transform: translateY(-.3em); }
-:is(.board-extras, .appt-lines) div::after { order: 1; }
+.dots, .board-extras div::after { content: ""; flex: 1 1 var(--s-4); min-width: var(--s-4); border-bottom: var(--bold) dotted var(--line-2); transform: translateY(-.3em); }
+.board-extras div::after { order: 1; }
 
 /* == 09 Prices == */
 .board-head { display: grid; gap: var(--s-3) var(--s-7); margin-bottom: var(--stack); }
@@ -462,25 +463,25 @@ a.price-strip .price-strip-note { color: var(--blue); text-decoration: underline
   .board-tiers li:first-child .tier { padding-left: var(--s-1); }
   .tier-amt { margin-block: var(--s-3); }
 }
-/* Four across, the payment line runs to three lines in some columns until 1280px: give it three in all, so the row stays level */
+/* Four across until 1280px some payment lines run to three: give all three, so the row stays level */
 @media (min-width: 1100px) and (max-width: 1279.98px) { .tier-plan { min-height: 4.5em; } }
 @media (hover: hover) { .tier:hover { background: var(--card); color: inherit; } }
 
 .pricelist { list-style: none; max-width: var(--maxw-text); border-top: var(--frame); }
 .pricelist > li { padding: var(--s-4) 0; border-bottom: var(--edge); }
-/* The price stays on the first line. The leader gives way first, down to nothing; only then does a long name wrap under itself */
+/* The price stays on the first line: the leader gives way first, then a long name wraps under itself */
 .pl-row { display: flex; align-items: baseline; gap: 0 var(--s-3); }
 .pl-name { flex: 0 1 auto; min-width: 0; font-size: var(--fs-h4); }
 .pl-price { flex: none; margin-left: auto; font-size: var(--fs-h3); color: var(--ink); }
 .pl-row .dots { flex: 1 1 0; min-width: 0; }
-/* A leader too short to read as one (under four dots) is not drawn, and gives its gap back to the name */
+/* A leader under four dots is not drawn and gives its gap back to the name */
 @supports (container-type: inline-size) {
   .pl-row .dots { container-type: inline-size; margin-left: calc(-1 * var(--s-3)); border-bottom: 0; }
   .pl-row .dots::before { content: ""; display: block; margin-left: var(--s-3); border-bottom: var(--bold) dotted var(--line-2); }
   @container (max-width: 1.75rem) { .pl-row .dots::before { display: none; } }
 }
-/* A price that is a phrase (.pl-row.pl-long) is set no larger than its name. Where the list is narrow, on a phone
-   and in a two-column grid until 1280px, it sits under the name, with no leader left pointing at nothing */
+/* A price that is a phrase (.pl-row.pl-long) is no larger than its name; on a phone and in a .grid-2 until 1280px it
+   sits under the name, with no leader */
 .pl-long .pl-price { font-size: var(--fs-h4); }
 @media (max-width: 599.98px) {
   .pl-long { flex-wrap: wrap; }
@@ -498,11 +499,11 @@ a.price-strip .price-strip-note { color: var(--blue); text-decoration: underline
 .pl-group:first-child { margin-top: 0; }
 
 /* == 10 Tables == */
-/* A labelled line: the label hangs in the cell's left padding (--lab), so the value can hold any markup */
+/* A labelled line: the label hangs in the cell's left padding (--lab); the value holds any markup */
 .cell-label { display: none; float: left; width: var(--lab); margin-left: calc(-1 * var(--lab)); padding-right: var(--s-3); color: var(--ink-3); }
 
-/* Spec table. A card per package: name and price on one line, what it is, then labelled lines.
-   Two by two from 760px, in shared rows. From 1100px one table: a column per package, the popular one a raised sheet */
+/* Spec table: a card per package (name and price, what it is, labelled lines); two by two in shared rows from 760px;
+   from 1100px one table, a column per package, the popular one a raised sheet */
 .spec, .spec th, .spec td { display: block; padding: 0; text-align: left; }
 .spec tbody { display: grid; gap: var(--gap); }
 .spec tr { position: relative; display: grid; align-content: start; padding-bottom: var(--s-3); }
@@ -578,7 +579,7 @@ a.price-strip .price-strip-note { color: var(--blue); text-decoration: underline
   /* Stacked: the name with its price beside it, then the other cells under them */
   :is(.table-stack, .ledger) tr { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; gap: var(--s-1) var(--s-3); padding-block: var(--s-3); border-top: var(--dash); }
   :is(.table-stack, .ledger) :is(th, td), .ledger tfoot :is(th, td) { width: auto; padding: 0; border: 0; text-align: left; }
-  /* A stacked row reads like a package card: who it fits in grey, what you get, a full-size button */
+  /* A stacked row reads like a package card: who it fits, what you get, a full-size button */
   .table-stack tr { padding-block: var(--s-4); }
   .table-stack td { grid-column: 1 / -1; }
   .table-stack tbody th { font-size: var(--fs-h4); }
@@ -594,14 +595,14 @@ a.price-strip .price-strip-note { color: var(--blue); text-decoration: underline
 }
 
 .bigfig { display: grid; gap: var(--s-4); }
-:is(.bigfig, .receipt, .appt, .bizcard, .notice, .cal, .leads) p { margin: 0; }
+:is(.bigfig, .receipt, .bizcard, .notice, .cal, .leads) p { margin: 0; }
 .bigfig-num { color: var(--ink); font-weight: 600; line-height: 1.3; }
 .bigfig b { display: block; margin-left: -.04em; font-size: var(--fs-figure); line-height: .9; letter-spacing: -.04em; color: var(--brick); }
 
 /* == 11 Receipt and payment plan == */
 .receipt { position: relative; max-width: var(--maxw-card); padding: var(--s-5) var(--pad) var(--s-6); border-bottom: 0; border-radius: var(--r-xs) var(--r-xs) 0 0; font-size: var(--fs-sm); }
 .receipt::after { content: ""; position: absolute; inset: 100% calc(-1 * var(--hair)) auto; height: var(--s-2); background: linear-gradient(135deg, var(--card) 25%, transparent 0) 0 0 / var(--s-4) var(--s-4), linear-gradient(225deg, var(--card) 25%, transparent 0) 0 0 / var(--s-4) var(--s-4); }
-.receipt-head, .appt-head, .ticket-head { display: flex; justify-content: space-between; gap: var(--s-3); padding-bottom: var(--s-3); border-bottom: var(--bold) dotted var(--line-2); color: var(--ink-3); font-size: var(--fs-cap); letter-spacing: .14em; }
+.receipt-head, .ticket-head { display: flex; justify-content: space-between; gap: var(--s-3); padding-bottom: var(--s-3); border-bottom: var(--bold) dotted var(--line-2); color: var(--ink-3); font-size: var(--fs-cap); letter-spacing: .14em; }
 .receipt-lines { list-style: none; padding-block: var(--s-3); }
 .receipt-lines li, .receipt-sum, .receipt-total { display: flex; align-items: baseline; gap: var(--s-2); padding-block: var(--s-1); }
 .receipt-lines b { font-variant-numeric: lining-nums tabular-nums; }
@@ -645,13 +646,6 @@ a.price-strip .price-strip-note { color: var(--blue); text-decoration: underline
 
 .sheet { position: relative; padding: var(--s-6) var(--pad) var(--s-5); border-radius: var(--r-xs) var(--r-xs) var(--r-md) var(--r-md); }
 .sheet::before { content: ""; position: absolute; inset: 0 0 auto; height: var(--s-3); border-radius: var(--r-xs) var(--r-xs) 0 0; background: repeating-linear-gradient(90deg, var(--brick) 0 var(--s-3), transparent 0 var(--s-5)); opacity: .85; }
-
-.appt { width: min(100%, 21rem); padding: var(--s-5); border-radius: var(--r-md); background: var(--cream); box-shadow: var(--shadow-3); }
-.appt-title { padding-block: var(--s-4) var(--s-3); white-space: nowrap; font-size: var(--fs-title); line-height: 1.05; letter-spacing: -.015em; color: var(--ink); }
-.appt-lines div { display: flex; align-items: baseline; gap: var(--s-2); padding: var(--s-2) 0; font-size: var(--fs-sm); }
-.appt-lines dt { font-weight: 600; }
-.appt-lines dd { order: 2; color: var(--ink); font-weight: 700; }
-.appt-lines div:first-child dd { color: var(--brick); }
 
 .bizcard { --crest: 2.875rem; width: min(100%, var(--maxw-card)); padding: var(--pad); border-radius: var(--r-md); box-shadow: var(--shadow-3); }
 .bizcard-top { display: flex; align-items: center; gap: var(--s-3); padding-bottom: var(--s-4); border-bottom: var(--seam); line-height: 1.2; }
@@ -750,15 +744,15 @@ a.price-strip .price-strip-note { color: var(--blue); text-decoration: underline
 .print-name { display: flex; align-items: center; justify-content: space-between; gap: var(--s-3); }
 .print-name .ico { width: 1.4em; height: 1.4em; color: var(--ink-3); }
 .print-kind { margin: var(--s-1) 0 0; }
-/* A caption written in two halves (kind, .sep, what was built) breaks only between them. Until the caption has
-   room for the longest one on a single line, the halves stand on two lines, with no dot */
+/* A two-half caption (kind, .sep, what was built) breaks only between the halves: two lines and no dot until the
+   longest caption fits on one */
 .print-cap { container-type: inline-size; }
 .print-kind .sep + span { display: inline-block; }
 @container (max-width: 21.5rem) { .print-kind .sep { display: none; } .print-kind .sep + span { display: block; } }
 @supports not (container-type: inline-size) {
   @media (max-width: 1279.98px) { .print-kind .sep { display: none; } .print-kind .sep + span { display: block; } }
 }
-/* Three prints sharing a row are narrow until 980px: the caption lines up with the picture's edge and the name is a size down, so each name stays on one line */
+/* Three prints in a row are narrow until 980px: caption flush with the picture, the name a size down, one line each */
 @media (max-width: 979.98px) { .grid-3 .print h3 { font-size: var(--fs-h4); } .grid-3 .print-name { gap: var(--s-2); } .grid-3 .print-cap { padding-inline: 0; } }
 .case { display: grid; gap: var(--gap); align-items: center; padding-block: var(--stack); border-top: var(--edge); }
 .case-copy > * + * { margin-top: var(--s-4); }
@@ -815,47 +809,88 @@ fieldset.field { display: block; }
 .hp { position: absolute; left: -200vw; }   .captcha-wrap { margin-bottom: var(--s-4); }
 .form-status, .status { margin: var(--s-4) 0 0; color: var(--ink); font-weight: 600; }
 :is(.form-status, .status).error { color: var(--brick); }
-/* What main.js says back under the form, boxed: a problem in brick, the thank-you in ink with a tick */
+/* main.js's answer under the form, boxed: a problem in brick, the thank-you in ink with a tick */
 .form-status { padding: var(--s-3) var(--s-4); border-left: var(--focus-w) solid var(--brick); border-radius: var(--r-xs); background: var(--brick-tint); animation: kws-fade var(--t-slow) var(--ease) both; }
 .form-status.ok { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: var(--s-3); border-color: var(--ink); background: var(--paper-3); font-size: var(--fs-body); }
 .form-status.ok::before { content: ""; width: var(--s-3); height: var(--s-5); margin: 0 var(--s-1) 0 var(--s-2); border: solid var(--ink); border-width: 0 var(--focus-w) var(--focus-w) 0; transform: rotate(40deg) scale(.7); }
 @media (min-width: 600px) { .field-row { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 
 /* == 15 Closing band == */
-/* Its scalloped edge rises over the section above; its foot runs under the skyline */
-.cta-band { position: relative; margin-bottom: calc(-1 * var(--skyline)); padding: var(--sec) 0 calc(var(--sec) * .5 + var(--skyline)); }
-.cta-band::before { content: ""; position: absolute; inset: auto 0 calc(100% - var(--hair)); height: var(--s-4); background: radial-gradient(circle at 50% 100%, var(--board) calc(var(--s-4) - var(--hair)), transparent var(--s-4)) 50% 0 / var(--s-6) 100% repeat-x; }
-.cta-inner { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--s-7); justify-items: start; }
-.cta-band h2 { margin-bottom: var(--s-4); }
-.cta-copy p { max-width: var(--measure); margin-bottom: var(--s-6); font-size: var(--fs-lede); }
-@media (min-width: 980px) { .cta-inner { grid-template-columns: minmax(0, 1fr) auto; gap: var(--gap-lg); align-items: center; } }
+/* The kit's band on .on-blue: kws-close (statement), --strip, --card (its .kws-appt is in motion.css). Markup: DESIGN.md */
+.kws-close{--_i:var(--ink);--_g:var(--board);--_au:var(--gold);--_d:color-mix(in oklab,var(--_g),black 28%);--_x:center;--_t:clamp(2.375rem,1.1rem + 5.4vw,4.75rem);position:relative;padding:var(--_p,var(--sec)) 0;border-bottom:2px solid var(--_au);background:var(--_g);color:var(--ink-2);font-family:var(--font-text);text-align:var(--_x);overflow-wrap:anywhere}
+.kws-close[class]{background-image:linear-gradient(var(--_g),transparent 22%),linear-gradient(104deg,var(--_d),transparent 28% 54%,color-mix(in oklab,var(--_g),black 13%) 66%,transparent 78%,var(--_d))}
+.kws-close::before{content:"";position:absolute;inset:auto 0 calc(100% - 1px);height:16px;background:radial-gradient(circle at 50% 100%,var(--_g) 15px,transparent 16px) 50% 0/32px 100% repeat-x}
+.kws-close :where(h2,p){margin:0}
+.kws-close-in{display:grid;gap:20px clamp(32px,5vw,80px);width:min(100% - 2*var(--gutter),var(--maxw));margin:0 auto}
+.kws-close-title,.kws-close-tel a:any-link{color:var(--_i);font:600 var(--fs-h3)/1.04 var(--font-display);font-variation-settings:"SOFT" 100;letter-spacing:-.02em}
+.kws-close-title{font-size:var(--_t);text-wrap:balance}
+.kws-close-mark{display:inline-block;max-width:100%}
+.kws-close-mark>span{position:relative;isolation:isolate}
+.kws-close-mark>span::after{--_m:var(--brush) 0 0/100% 100%;content:"";position:absolute;inset:auto 0 -.05em;z-index:-1;height:.22em;background:var(--_au);-webkit-mask:var(--_m);mask:var(--_m)}
+.kws-close-text{display:inline-block;max-width:34em;margin-top:20px;font-size:var(--fs-lede);line-height:1.5}
+.kws-close-acts{display:grid;gap:12px}
+.kws-close-tel a:any-link{display:inline-flex;align-items:center;min-height:44px;text-decoration:underline;text-decoration-color:var(--_au);text-decoration-thickness:2px;text-underline-offset:.2em}
+.kws-close-tel a:focus-visible{outline:3px solid var(--_au);outline-offset:3px}
+.kws-close--card,.kws-close--strip{--_x:start;--_t:clamp(1.875rem,1.2rem + 2.9vw,3.125rem)}
+.kws-close--strip{--_p:clamp(40px,5vw,72px)}
+.kws-close--card{--_p:clamp(48px,9vw,128px)}
+.kws-close--card .kws-appt{max-width:none}
+@media (min-width:600px){.kws-close:not(.kws-close--card) .kws-close-acts{display:flex;flex-wrap:wrap;justify-content:var(--_x)}}
+@media (min-width:760px){.kws-close--card .kws-close-in{grid-template:auto auto 1fr/minmax(0,1fr) 20rem}.kws-close--card .kws-appt{grid-area:1/2/4/3;align-self:center}.kws-close--card .kws-close-acts{display:flex}}
+@media (min-width:980px){.kws-close--strip .kws-close-in{grid-template-columns:minmax(0,1fr) auto}.kws-close--strip .kws-close-copy{grid-row:span 2;align-self:center}.kws-close--strip .kws-close-acts{align-self:end}}
+@media (hover:hover){.kws-close-tel a:hover{text-underline-offset:.34em}}
+@media print{.kws-close{display:none}}
+/* Site rule: on a phone the card layout is as short as the strip; the card (the sentence says what it says) gives way
+   to its button, which takes the band's tone */
+@media (max-width:599.98px){.kws-close--card{--_p:clamp(40px,5vw,72px)}.kws-close--card .kws-appt{display:contents}.kws-close--card .kws-appt>:not(.kws-btn){display:none}.kws-close--card .kws-appt>.kws-btn{margin:0;--blue:var(--cream);--blue-deep:var(--gold);--on-blue:var(--ink);--focus:var(--gold)}}
 
 /* == 16 Footer and the phone's sticky bar == */
-.site-footer { --crest: 3rem; position: relative; padding: var(--s-8) 0 var(--s-6); font-size: var(--fs-sm); }
-.footer-skyline { position: absolute; left: 0; bottom: calc(100% - var(--hair)); width: 100%; height: var(--skyline); fill: var(--footer); stroke: var(--L, var(--footer)) var(--D, var(--line-2)); pointer-events: none; }
-.sky-lit { fill: var(--gold); stroke: none; opacity: var(--L, 0) var(--D, .8); }
-.footer-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-6) var(--s-5); }
-.footer-brand { grid-column: 1 / -1; max-width: var(--maxw-card); }
-.footer-brand p { margin: var(--s-3) 0 0; }
-.footer-loc { color: var(--ink); font-weight: 600; }
-.footer-col { display: flex; flex-direction: column; align-items: flex-start; }
-.footer-title { margin: 0 0 var(--s-2); color: var(--gold); font-size: var(--fs-cap); letter-spacing: .14em; }
-.footer-col a, .footer-place, .footer-links a { display: inline-flex; align-items: center; min-width: var(--tap); min-height: var(--tap); text-decoration: none; overflow-wrap: anywhere; }
-.footer-place { color: var(--ink-3); }
-.footer-bottom { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--s-2) var(--s-5); margin-top: var(--s-7); padding-top: var(--s-4); border-top: var(--seam); }
-.footer-bottom p { margin: 0; }
-.footer-links { display: flex; flex-wrap: wrap; gap: 0 var(--s-5); }
-@media (max-width: 759.98px) {
-  .footer-col:nth-of-type(n+3) { grid-column: 1 / -1; }
-  .footer-col:nth-of-type(3) { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--s-5); }
-  .footer-col:nth-of-type(3) .footer-title { grid-column: 1 / -1; }
-}
-@media (min-width: 760px) { .footer-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
-@media (min-width: 1100px) {
-  .footer-grid { grid-template-columns: minmax(0, 1.45fr) minmax(0, .95fr) minmax(0, .8fr) minmax(0, .9fr) minmax(0, 1.3fr); gap: var(--s-6); }
-  .footer-brand { grid-column: auto; }
-}
-@media (hover: hover) { .site-footer a:hover { text-decoration: underline; } }
+/* The kit's footer (kws-foot, --slim) and the town at night (kws-skyline): the sky glows only where the pause control
+   shows; the name's rise is scroll-linked; both still when reduced or paused */
+.kws-foot{--_i:var(--ink);--_au:var(--gold);--_l:1px solid var(--line);--_s:24px;padding:calc(var(--_s) + 16px) 0 0;background:var(--footer);color:var(--ink-2);font:var(--fs-sm)/1.6 var(--font-text);overflow-wrap:anywhere}
+.kws-foot :where(p,ul){margin:0;padding:0;list-style:none}
+.kws-foot a:any-link{color:var(--_i);text-decoration:none}
+.kws-foot a:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.kws-foot-in{width:min(100% - 2*var(--gutter),var(--maxw));margin:0 auto}
+.kws-foot-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--_s) 24px}
+.kws-foot-grid>:where(.kws-foot-who,.kws-foot-call,.kws-foot-wide){grid-column:span 2}
+.kws-foot-grid::before{content:"";border-top:var(--_l)}
+.kws-foot-grid::before{grid-column:1/-1}
+.kws-foot-who,.kws-foot-call{order:-1}
+.kws-foot-who{display:grid;grid-template-columns:auto 1fr;align-content:start;align-items:center;gap:12px 16px}
+.kws-foot-logo{display:flex;align-items:center;gap:12px;font-size:1.4rem}
+.kws-foot-logo>:is(svg,img){flex:none;width:3rem;height:3rem}
+.kws-foot-what{grid-column:1/-1;max-width:27em}
+.kws-foot-logo,.kws-foot-tel,.kws-foot-bye{font-family:var(--font-display);font-weight:600;font-variation-settings:"SOFT" 100;letter-spacing:-.02em}
+.kws-foot-bye{color:var(--_i);font-size:clamp(1rem,4.4vw,1.1875rem);line-height:1.3;text-wrap:balance}
+.kws-foot-title{margin-bottom:8px;color:var(--_au);font-size:var(--fs-cap);font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.kws-foot :is(li,.kws-foot-links)>:where(a,span){display:inline-flex;align-items:center;min-width:44px;min-height:var(--_r,44px);line-height:1.3}
+.kws-foot li>span{color:var(--ink-3)}
+.kws-foot-places{display:flex;flex-wrap:wrap;gap:0 20px}
+.kws-foot .kws-foot-tel{min-height:56px;font-size:var(--_p,min(10vw,3.25rem));line-height:1.1}
+.kws-foot-mail{font-size:var(--fs-body);font-weight:600}
+.kws-foot .kws-btn{min-height:48px;margin-top:12px;padding:0 20px}
+.kws-foot-grid+*{margin-top:var(--_s);padding-top:24px;border-top:var(--_l)}
+.kws-foot-end{display:grid;gap:4px 24px;padding-bottom:16px}
+.kws-foot-links{display:flex;flex-wrap:wrap;gap:0 24px}
+@media (max-width:599.98px){.kws-foot-what,.kws-foot-bye span:first-child{display:none}.kws-foot-bye span{display:block}}
+@media (min-width:760px){.kws-foot{--_s:32px;--_p:2.5rem}.kws-foot-grid{grid-template-columns:repeat(4,1fr)}.kws-foot-places{display:block;columns:2;column-gap:24px}.kws-foot-end{grid-template-columns:1fr auto;align-items:center}}
+@media (min-width:1100px){.kws-foot{--_p:clamp(2.75rem,3.6vw,3.25rem)}.kws-foot-grid{grid-template:auto 1fr auto/5fr 2.3fr 1.6fr 3.3fr;row-gap:24px}.kws-foot-grid>*{grid-area:1/auto/3/auto}.kws-foot-grid>.kws-foot-who{grid-area:1/1}.kws-foot-grid>.kws-foot-call{grid-area:2/1/4}.kws-foot-grid::before{display:none}}
+.kws-foot--slim{--_s:8px}
+@media (hover:hover){.kws-foot a:not(.kws-btn):hover{text-decoration:underline;text-decoration-color:var(--_au);text-decoration-thickness:2px;text-underline-offset:.2em}}
+@media (hover:hover) and (min-width:980px){.kws-foot li{--_r:32px}}
+.kws-skyline{--_g:var(--footer);--_au:var(--gold);--_i:var(--ink);--_w:1vw;--_h:clamp(54px,var(--_w)*8.4,180px);display:grid;overflow:hidden;overflow:clip;background:var(--_g)}
+@supports (width:1cqw){.kws-skyline{container-type:inline-size;--_w:1cqw}}
+.kws-skyline>*{grid-area:1/1;position:relative;align-self:end;margin:0}
+.kws-skyline-sky{--_s:var(--_au) 1px,transparent 1.7px;align-self:stretch;min-height:calc(var(--_h) + 36px);background:radial-gradient(circle at 5% 36%,var(--_s)),radial-gradient(circle at 16% 58%,var(--_s)),radial-gradient(circle at 27% 24%,var(--_s)),radial-gradient(circle at 44% 40%,var(--_s)),radial-gradient(circle at 59% 20%,var(--_s)),radial-gradient(circle at 70% 52%,var(--_s)),radial-gradient(circle at 84% 30%,var(--_s)),radial-gradient(circle at 95% 48%,var(--_s)),var(--_g);-webkit-mask:linear-gradient(transparent,black 45%);mask:linear-gradient(transparent,black 45%)}
+.kws-skyline-sky::after{content:"";position:absolute;inset:0 0 0 -8%;background:linear-gradient(0deg,color-mix(in srgb,var(--_au) 66%,transparent),color-mix(in srgb,var(--_au) 26%,transparent) calc(var(--_h)*.3),transparent calc(var(--_h)*.95)),radial-gradient(110% 130% at 50% 100%,var(--board),transparent 70%)}
+.kws-skyline-name{padding:.16em 0 max(var(--_h)*.3,22px);color:var(--_i);font:600 min(var(--_w)*100/var(--kws-fit,8.3),16rem)/.8 var(--font-display);font-variation-settings:"SOFT" 100;letter-spacing:-.03em;text-align:center;white-space:nowrap;opacity:.68;-webkit-mask:linear-gradient(black 30%,transparent);mask:linear-gradient(black 30%,transparent)}
+@supports (background-clip:text) or (-webkit-background-clip:text){.kws-skyline-name{background:linear-gradient(var(--_au) 20%,var(--_i) 70%);-webkit-background-clip:text;background-clip:text;color:transparent}}
+.kws-skyline-art{width:100%;height:var(--_h);fill:var(--_g);stroke:var(--_g)}
+.kws-skyline-lit{fill:var(--_au);stroke:none}
+@container (max-width:599.98px){.kws-skyline-far{display:none}.kws-skyline-span{transform:translateX(-190px)}.kws-skyline-art>g{transform:translateX(max(-160px,var(--_w)*222 - 1440px))}}
+@media (prefers-reduced-motion:no-preference){:root:has(.kws-motion:not([hidden])) .kws-skyline-sky::after{animation:kws-skyline-glow 16s ease-in-out infinite var(--_ps,running)}[data-motion=off] .kws-skyline{--_ps:paused}@keyframes kws-skyline-glow{50%{transform:translateX(6%);opacity:.65}}@supports (animation-timeline:view()){:root:not([data-motion=off]) .kws-skyline-name{animation:kws-skyline-rise 1ms linear both;animation-timeline:view(0px);animation-range:entry}@keyframes kws-skyline-rise{from{transform:translateY(40%)}}}}
+@media print{.kws-skyline{display:none}}
 
 .mobile-cta { display: none; }
 @media (max-width: 1099.98px) {
@@ -872,9 +907,8 @@ fieldset.field { display: block; }
   .mobile-cta .btn-primary span { white-space: pre; font-weight: 600; }
 }
 @media (max-width: 379.98px) { .mobile-cta .btn-primary span { display: none; } }
-/* A window under 300px tall (a laptop zoomed to 400%): the header and phone bar let go, so the reader keeps the whole
-   window. The header stays positioned (relative), so the phone menu still opens above the page. Phones held sideways
-   are taller than this and keep both. */
+/* A window under 300px tall (a laptop at 400%): header and phone bar let go, so the reader keeps the window; the header
+   stays relative, so the phone menu still opens above the page. Phones held sideways are taller and keep both */
 @media (max-height: 300px) {
   .site-header { position: relative; }
   .mobile-cta, .mobile-cta.show { display: none; }
@@ -887,7 +921,7 @@ fieldset.field { display: block; }
 .stack > * { margin-block: 0; }
 .tilt { rotate: 2deg; }
 .space-above { margin-top: var(--stack); }
-/* Last of the layout rules, so no component's own display can show a decorative object below 980px */
+/* Last of the layout rules, so no component's display shows a decorative object below 980px */
 @media (max-width: 979.98px) { .wide-only { display: none; } }
 
 /* == 17 Motion == */
@@ -897,9 +931,36 @@ fieldset.field { display: block; }
 
 .js .reveal .seq { opacity: 0; transform: translateY(var(--s-2)); transition: opacity var(--t) var(--ease), transform var(--t) var(--ease); transition-delay: calc(var(--n, 1) * var(--t-step)); }
 .js .reveal.visible .seq { opacity: 1; transform: none; }
-/* Set by the head script when main.js has not started after four seconds: show every block, leave the header alone */
+/* Set by the head script when main.js has not started after four seconds: show every block */
 .show-all .reveal, .show-all .reveal .seq { opacity: 1; transform: none; }
 .js .reveal:not(.visible) .bubble-typing i { animation: none; }
+
+/* The kit's pause control (shader.js sets html[data-motion="off"] and remembers it) and the backgrounds' still layer */
+.kws-motion{display:inline-flex;align-items:center;box-sizing:border-box;min-width:var(--tap);min-height:var(--tap);margin:0;padding:0;border:1.5px solid var(--line-2);border-radius:var(--r-pill);background:var(--card);color:var(--ink);font:600 var(--fs-sm)/1 var(--font-text);white-space:nowrap;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:transform var(--t-fast),border-color var(--t-fast)}
+.kws-motion svg{width:18px;height:18px;margin-inline:11.5px;fill:currentColor;stroke:none}
+.kws-motion-label{margin-inline:-4px var(--s-4)}
+.kws-motion[hidden],.kws-motion .kws-play,[data-motion=off] .kws-motion .kws-pause{display:none}
+[data-motion=off] .kws-motion .kws-play{display:block}
+.kws-motion:active{transform:translateY(1px)}
+.kws-motion:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+@media (hover:hover){.kws-motion:hover{border-color:var(--ink)}}
+@media (prefers-reduced-motion:reduce){.kws-motion{transition:none}}
+.kws-shader-host{position:relative;isolation:isolate}
+.kws-shader{position:absolute;inset:0;z-index:-1;overflow:hidden;border-radius:inherit;pointer-events:none;--kws-s1:var(--L,var(--brick-tint)) var(--D,var(--board));--kws-s2:var(--L,var(--card)) var(--D,var(--paper-3));--kws-s3:var(--paper-3);--kws-t1:var(--ink);--kws-ga:.04}
+.kws-shader::before,.kws-shader::after,.kws-shader canvas{content:"";position:absolute;inset:0;width:100%;height:100%;transform-origin:100% 100%;transition:opacity var(--t)}
+.kws-shader::before{background:radial-gradient(58% 60% at 84% 8%,var(--kws-s2),transparent 72%),radial-gradient(46% 48% at 10% 34%,var(--kws-s2),transparent 70%)}
+.kws-shader[data-shader=band]{--kws-s2:var(--kws-t1);--kws-ga:.1}
+.kws-shader[data-shader=band]::before{opacity:.09}
+.kws-shader canvas,.kws-shader.is-live::before{opacity:0}
+.kws-shader.is-live canvas{opacity:1}
+@supports (mask-composite:intersect){.kws-shader::after{--kws-g:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.8 -.6'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background:var(--kws-t1);opacity:var(--kws-ga);mask:var(--kws-g),linear-gradient(transparent,black 15% 55%,transparent);mask-composite:intersect}.kws-shader:is([data-shader=band],[data-shader=ribbon])::after{mask:var(--kws-g)}.kws-shader[data-shader=band]::after{filter:invert(1)}}
+.kws-glints i{position:absolute;left:var(--x);top:var(--y);width:var(--s);height:var(--s);margin:calc(var(--s)/-2);opacity:var(--o);background:var(--gold);clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%)}
+@media (prefers-reduced-motion:no-preference){html:not([data-motion=off]) .is-seen>.kws-glints i{animation:kws-glint calc(var(--n)*.2s) steps(var(--n)) calc(var(--k)*-.2s) infinite alternate}}
+@keyframes kws-glint{to{opacity:.3}}
+@media (prefers-reduced-motion:reduce){.kws-shader::before,.kws-shader canvas{transition:none}}
+[data-motion=off] .kws-shader::before,[data-motion=off] .kws-shader canvas{transition:none}
+/* Gold only on blue: the light behind a carousel's item in focus (the kit's --glow, gilt by default) is the card's */
+:root :is(.kws-arc,.kws-spot){--glow:var(--card)}
 
 /* The crest builds once a visit, and on hover */
 .crest .facet { transform-box: fill-box; transform-origin: center; }
@@ -930,6 +991,9 @@ html:not(.js) :is(#theme-toggle, .nav-toggle, .nav-foot) { display: none; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .js .reveal, .js .reveal .seq { opacity: 1; transform: none; }
 }
+/* Motion paused with the pause control (html[data-motion="off"], shader.js): the same still page */
+[data-motion=off] *, [data-motion=off] ::before, [data-motion=off] ::after { animation: none !important; transition: none !important; }
+[data-motion=off] .reveal, [data-motion=off] .reveal .seq { opacity: 1; transform: none; }
 
 /* Forced colours (Windows High Contrast): drawn marks keep a system colour */
 @media (forced-colors: active) {
@@ -941,38 +1005,30 @@ html:not(.js) :is(#theme-toggle, .nav-toggle, .nav-foot) { display: none; }
 }
 
 @media print {
-  .topbar, .mobile-cta, .skip-link, .cta-band, .footer-skyline { display: none; }
+  .topbar, .mobile-cta, .skip-link { display: none; }
   /* The header heads page one: crest, name and phone number, no menu or buttons */
   .site-header { position: static; box-shadow: none; }
   html .site-header .nav, .site-header .header-actions > :not(.header-tel) { display: none; }
   .header-tel { display: inline-flex; opacity: 1; visibility: visible; }
   /* Light text on a dark fill prints pale once the fill is dropped */
-  .btn-primary, .popular, .payplan-dep, .bubble-biz, .fig-n, .fig-legend li::before, .cal-day .new, .chip :checked + span { background: none; color: #000; border: 1px solid #000; box-shadow: none; }
+  .btn-primary, .kws-btn--main, .popular, .payplan-dep, .bubble-biz, .fig-n, .fig-legend li::before, .cal-day .new, .chip :checked + span { background: none; color: #000; border: 1px solid #000; box-shadow: none; }
   body, .on-blue, .on-ink { --ink: #000; --ink-2: #000; --ink-3: #333; --brick: #000; --blue: #000; --gold: #000; --card: #fff; --board: #fff; --footer: #fff; background: #fff; }
   .js .reveal, .js .reveal .seq { opacity: 1; transform: none; }
 }
 
-/* ======================================================================================================
-   PAGES
-   Page-only rules: one block per page, in the order of PAGES in tools/sync_chrome.py.
-   Every selector is scoped with [data-page="<slug>"] (the slug is on <body>), so no block can reach another
-   page: it starts with the scope, or with ".js " or "html:not(.js) " before it where a rule depends on
-   scripts. The two checkout pages share rules through [data-page^="checkout"]. This part stays last in the
-   file: a page rule then wins over a shared rule of the same weight, as it did when each block was a file
-   of its own, linked after this one.
-   ====================================================================================================== */
+/* == PAGES ==========================================================================================================
+   One block per page, in the order of PAGES in tools/sync_chrome.py. Every selector starts with [data-page="<slug>"]
+   (the slug is on <body>), or has ".js " or "html:not(.js) " before it, so no block reaches another page; the two
+   checkout pages share [data-page^="checkout"]. Last in the file, so a page rule beats a shared rule of equal weight */
 
 /* == 19 Home: [data-page="home"], / == */
-/* Home page only. Every rule is scoped with [data-page="home"]. */
 
-/* One line down the page. --right is the width of the right-hand column of a split section head (the shared
-   1.1fr and 1fr with the wide gap). The services rows, the story's pictures and the founder's card take the same
-   right-hand column, so their second column starts where the section intros start. */
+/* One line down the page: --right is the right-hand column of a split section head (1.1fr and 1fr, the wide gap). The
+   services rows, the story's pictures and the founder's card take it, so their second column starts with the intros */
 [data-page="home"] { --right: calc((100% - var(--gap-lg)) / 2.1); }
 
-/* Hero: the shop front with the caller's phone standing in front of it.
-   The phone is pulled up by a share of the art's width, so at every size its top sits just under the awning
-   and never touches the painted sign. Its caption stands in the clear space beside it, under the street. */
+/* Hero: the shop front, the caller's phone in front of it, pulled up by a share of the art's width so its top sits just
+   under the awning at every size, clear of the sign. Its caption stands in the clear space beside it */
 [data-page="home"] .hero { padding-bottom: var(--s-4); }
 [data-page="home"] .hero .lede { text-wrap: balance; }
 [data-page="home"] .hero-grid { align-items: start; }
@@ -985,22 +1041,16 @@ html:not(.js) :is(#theme-toggle, .nav-toggle, .nav-foot) { display: none; }
 [data-page="home"] .hero-cap { grid-area: 2 / 2; display: grid; align-content: start; justify-items: start; gap: var(--s-2); margin: var(--s-4) 0 0 calc(var(--s-4) - var(--hang)); }
 [data-page="home"] .hero-cap .phone-label { margin: 0; text-wrap: balance; }
 [data-page="home"] .hero-phone .thread-note { text-align: center; text-wrap: balance; }
-[data-page="home"] .points { margin-top: var(--stack); }
-/* The facts shelf: five across is too tight until 1100px (one fact ran to four lines at 1024px),
-   so it is three and two between 980 and 1099px. */
-@media (min-width: 980px) and (max-width: 1099.98px) {
-  [data-page="home"] .points { grid-template-columns: repeat(6, minmax(0, 1fr)); }
-  [data-page="home"] .points li { grid-column: span 2; }
-  [data-page="home"] .points li:nth-child(n+4) { grid-column: span 3; }
-}
 @media (max-width: 599.98px) {
-  /* A phone's first screen is the city, the headline, what we do, one button and the prices. The picture is the
-     first scroll: the phone stands in the middle, under the awning, with its caption on one line below it. */
+  /* A phone's first screen: city, headline, what we do, one button, the prices. The picture is the first scroll: the
+     phone in the middle under the awning, its caption on one line below */
   [data-page="home"] .hero { padding-top: var(--s-5); }
   [data-page="home"] .hero .sep, [data-page="home"] .hero .btn-row .btn:not(.btn-primary) { display: none; }
   [data-page="home"] .hero .sep + span { display: block; }
   [data-page="home"] .hero-phone { justify-self: center; }
   [data-page="home"] .hero-cap { grid-area: 3 / 1 / auto / -1; grid-auto-flow: column; align-items: center; justify-self: center; margin: var(--s-3) 0 0; }
+  /* The caption sits in the phone's shadow on the wash: one step darker keeps it at AA */
+  [data-page="home"] .hero-cap .phone-label { color: var(--ink-2); }
 }
 @media (min-width: 600px) { [data-page="home"] .hero-art { --hang: var(--s-5); } }
 @media (min-width: 980px) {
@@ -1013,11 +1063,9 @@ html:not(.js) :is(#theme-toggle, .nav-toggle, .nav-foot) { display: none; }
   [data-page="home"] .hero-art { --phone-w: 15rem; }
 }
 
-/* Motion, once. Below 980px the phone is under the first screen, so it is a scroll reveal and its messages arrive
-   when it is seen (the shared .reveal and .seq). From 980px it is on the first screen and must not wait for a
-   script: there it is never hidden, and the same arrival, at the same pace, plays on load. The animation is
-   declared outside the media query so that crossing 980px cannot replay it; under 980px it runs unseen and ends.
-   The typing dots start once their bubble has landed. */
+/* Motion, once. Below 980px the phone is under the first screen: a scroll reveal (.reveal, .seq). From 980px it is on
+   the first screen, never hidden, and the same arrival plays on load; it is declared outside the media query, so
+   crossing 980px cannot replay it. The typing dots start once their bubble has landed */
 [data-page="home"] .hero-phone .bubble-typing i { animation-delay: var(--t-slow); }
 [data-page="home"] .hero-phone .bubble-typing i:nth-of-type(2) { animation-delay: calc(var(--t-slow) + var(--t-fast)); }
 [data-page="home"] .hero-phone .bubble-typing i:nth-of-type(3) { animation-delay: calc(var(--t-slow) + var(--t)); }
@@ -1028,21 +1076,22 @@ html:not(.js) :is(#theme-toggle, .nav-toggle, .nav-foot) { display: none; }
 }
 @keyframes home-rise { from { opacity: 0; transform: translateY(var(--s-3)); } }
 
-/* Services: the name with its price under it and what it is; beside them, what you get. The rows have no leader. */
-[data-page="home"] .offer { max-width: none; }
-[data-page="home"] .offer .pl-row { display: grid; gap: var(--s-1); }
-[data-page="home"] .offer .pl-name { font-size: var(--fs-title); }
-[data-page="home"] .offer .pl-price { margin: 0; font-size: var(--fs-h4); }
-[data-page="home"] .offer p { text-wrap: pretty; }
-@media (min-width: 760px) {
-  [data-page="home"] .offer > li { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 0 var(--gap-lg); padding-block: var(--s-6); }
-  [data-page="home"] .offer p { font-size: var(--fs-body); }
-  [data-page="home"] .offer .ticks { grid-area: 1 / 2 / span 2; align-self: start; margin-top: var(--s-2); }
+/* Services: three bookmark cards (motion.css). On a phone the ribbon is a swatch beside the name and price, and the
+   arrow stands by the bookmark so the line runs the full width: the cards cost the page as little as they can (the
+   kit's window runs 16:7 across the card) */
+@media (max-width: 599.98px) {
+  [data-page="home"] .kws-marks { gap: var(--s-3); }
+  [data-page="home"] .kws-mark { display: grid; grid-template-columns: clamp(4rem, 26%, 5.5rem) minmax(0, 1fr); align-content: start; gap: var(--s-2) var(--s-3); padding: var(--s-4); }
+  [data-page="home"] .kws-mark > h3 { font-size: var(--fs-h3); }
+  [data-page="home"] .kws-mark > :last-child { padding-right: 0; }
+  [data-page="home"] .kws-mark .kws-go { inset: var(--s-3) calc(var(--s-7) + var(--s-3)) auto auto; }
+  [data-page="home"] .kws-mark > * { grid-column: 1 / -1; }
+  [data-page="home"] .kws-mark > .kws-mark-art { grid-area: 2 / 1 / span 2; min-height: 5.5rem; margin: 0; aspect-ratio: auto; }
+  [data-page="home"] .kws-mark > h3 { grid-area: 2 / 2; align-self: end; }
+  [data-page="home"] .kws-mark > .kws-mark-price { grid-area: 3 / 2; align-self: start; }
 }
-@media (min-width: 980px) { [data-page="home"] .offer > li { grid-template-columns: minmax(0, 1fr) var(--right); } }
 
-/* The story: one missed call, followed through three stops to the total.
-   Each stop reads headline, picture, explanation on a phone; from 980px the picture stands beside the words. */
+/* The story: one missed call through three stops to the total; from 980px each picture beside its words */
 [data-page="home"] #automation { --pin: var(--s-6); }
 [data-page="home"] .route { list-style: none; }
 [data-page="home"] .stop { position: relative; display: grid; grid-template-columns: var(--pin) minmax(0, 1fr); gap: var(--s-4) var(--s-3); }
@@ -1055,20 +1104,20 @@ html:not(.js) :is(#theme-toggle, .nav-toggle, .nav-foot) { display: none; }
 [data-page="home"] .stop h3 span { display: block; }
 [data-page="home"] .stop-body { max-width: var(--measure); margin: 0; text-wrap: pretty; }
 
-/* The example week, added up: "About" as a label, the figure with its words on one line, the note right beside it */
+/* The example week, added up: "About" as a label, the figure and its words on one line, the note beside it */
 [data-page="home"] .stop-sum .stop-pin { background: var(--ink); color: var(--paper-2); }
 [data-page="home"] .stop-sum .bigfig-num { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 var(--s-3); font-size: var(--fs-h3); line-height: 1.1; }
 [data-page="home"] .stop-sum .label { flex-basis: 100%; margin: 0; }
 [data-page="home"] .stop-sum > p { max-width: var(--measure); text-wrap: pretty; }
 [data-page="home"] .stop-links { display: grid; justify-items: start; }
 
-/* The text that goes out, then the reply on the owner's phone: side by side when there is room, else stacked */
+/* The text that goes out, then the reply on the owner's phone: side by side when there is room */
 [data-page="home"] .stop-reply { --thread: 14rem; --thread-max: 20rem; --notice: 15.5rem; display: flex; flex-wrap: wrap; align-items: flex-end; gap: var(--s-2) var(--s-5); }
 [data-page="home"] .stop-reply .thread { flex: 1 1 var(--thread); max-width: var(--thread-max); padding: 0; }
 [data-page="home"] .stop-reply .notice { flex: 0 1 var(--notice); margin-left: auto; }
 @media (max-width: 599.98px) { [data-page="home"] .stop-art { padding: var(--s-7) var(--s-3) var(--s-3); } }
 @media (max-width: 979.98px) {
-  /* Stacked: the total is ruled off from the three stops above it, like the foot of a column of figures */
+  /* Stacked: the total ruled off from the three stops, like the foot of a column of figures */
   [data-page="home"] .stop-sum { padding-top: var(--s-6); border-top: var(--frame); }
   [data-page="home"] .stop-sum .stop-pin { display: none; }
 }
@@ -1096,13 +1145,8 @@ html:not(.js) :is(#theme-toggle, .nav-toggle, .nav-foot) { display: none; }
   [data-page="home"] .stop-sum .bigfig-num { grid-column: 2; }
 }
 
-/* Work: the local project leads; on a phone the other two are short rows under it, picture left, name right. */
-@media (max-width: 759.98px) {
-  [data-page="home"] .print + .print { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 5fr); align-items: center; gap: var(--s-2); padding-bottom: var(--s-3); }
-  [data-page="home"] .print + .print .print-cap { padding: 0 0 0 var(--s-2); }
-}
-/* The smallest phones: a smaller picture, so the longest caption keeps to two lines like the others */
-@media (max-width: 379.98px) { [data-page="home"] .print + .print { grid-template-columns: minmax(0, 2fr) minmax(0, 5fr); } }
+/* Work: the spotlight (motion.css). Each caption is a kind, a name and one link: room for exactly that */
+[data-page="home"] .kws-spot { --cap: 9.5rem; }
 
 /* Who you work with: the note and the business card */
 [data-page="home"] .who { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--gap-lg); align-items: center; }
@@ -1116,8 +1160,7 @@ html:not(.js) :is(#theme-toggle, .nav-toggle, .nav-foot) { display: none; }
   [data-page="home"] .bizcard { justify-self: start; }
 }
 
-/* The testimonials block is commented out in the page until there are real quotes; this is its layout.
-   These rules match nothing today on purpose: keep them when unused rules are pruned. */
+/* The testimonials layout, for the block commented out in the page until there are real quotes. Keep it when pruning */
 [data-page="home"] .quote-grid { display: grid; gap: var(--gap); }
 [data-page="home"] .quote { display: grid; align-content: space-between; gap: var(--s-5); padding: var(--pad); border: var(--edge); border-radius: var(--r-lg); background: var(--card); box-shadow: var(--shadow-1); }
 [data-page="home"] .quote blockquote { color: var(--ink); font-size: var(--fs-lede); line-height: 1.52; }
@@ -1146,7 +1189,7 @@ html:not(.js) :is(#theme-toggle, .nav-toggle, .nav-foot) { display: none; }
 @media (max-width: 599.98px) { [data-page="services"] .menu .dots { display: none; } }
 @media (min-width: 1280px) { [data-page="services"] .menu-cols { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 
-/* A lead service: its paragraphs keep to the reading measure (its 50px title needs the column); closer set on a phone */
+/* A lead service: its paragraphs keep the reading measure (the 50px title needs the column); closer set on a phone */
 [data-page="services"] .svc-lead > p { max-width: var(--measure); }
 @media (max-width: 759.98px) { [data-page="services"] .svc-lead { --stack-gap: var(--s-3); } }
 @media (max-width: 599.98px) { [data-page="services"] .svc-lead > .btn { width: 100%; } }
@@ -1158,13 +1201,13 @@ html:not(.js) :is(#theme-toggle, .nav-toggle, .nav-foot) { display: none; }
   [data-page="services"] #care .ticks { grid-row: span 2; align-self: start; }
 }
 
-/* A price-list row that opens. Markup: .faq.pricelist, each summary holding an h3.pl-row.
-   The row's id is on its .faq-body, so a link to it opens the row (main.js does it where the browser does not). */
+/* A price-list row that opens (.faq.pricelist, each summary an h3.pl-row). Its id is on its .faq-body, so a link
+   opens the row (main.js does it where the browser does not) */
 [data-page="services"] summary { gap: var(--s-3); }
 [data-page="services"] summary h3 { flex: 1; min-width: 0; color: inherit; }
 [data-page="services"] .faq-body { padding-bottom: var(--s-3); scroll-margin-top: var(--s-9); }
 
-/* The one illustration: the phone above its caption. After the Automation lead on a phone, beside it from 760px, beside the rows too from 980px. */
+/* The one illustration, the phone above its caption: after the Automation lead on a phone, beside it from 760px */
 [data-page="services"] #win .split { --phone-w: 17rem; row-gap: var(--stack); }
 [data-page="services"] .fig { gap: var(--s-4); }
 [data-page="services"] .fig-credit { margin: 0; text-align: center; text-wrap: balance; }
@@ -1181,11 +1224,9 @@ html:not(.js) :is(#theme-toggle, .nav-toggle, .nav-foot) { display: none; }
 }
 
 /* == 21 Consulting: [data-page="consulting"], /consulting/ == */
-/* Consulting page only. Every rule is scoped with [data-page="consulting"].
-   The calculator below is the canonical one from DESIGN.md ("Calculator"):
-   keep its markup and ids, and add the rest of the page's rules under it. */
+/* Consulting. The calculator is the canonical one from DESIGN.md ("Calculator"): keep its markup and ids */
 
-/* ---------- Calculator: number fields on the left, the estimate as a receipt on the right ---------- */
+/* Calculator: number fields on the left, the estimate as a receipt on the right */
 [data-page="consulting"] .calc, [data-page="consulting"] .calc-inputs { display: grid; gap: var(--s-5) var(--gap); align-items: start; }
 [data-page="consulting"] .calc-group legend { width: 100%; margin: 0 0 var(--s-4); padding: var(--s-3) 0 0; border-top: var(--frame); }
 [data-page="consulting"] .calc-group .field { margin-bottom: var(--s-4); }
@@ -1216,7 +1257,7 @@ html:not(.js) :is(#theme-toggle, .nav-toggle, .nav-foot) { display: none; }
 /* The focus ring goes round the box and its unit */
 [data-page="consulting"] .field-unit:focus-within { outline: var(--focus-w) solid var(--focus); outline-offset: var(--s-0); border-radius: var(--r-sm); }
 [data-page="consulting"] .field-unit input:focus-visible { outline: none; }
-/* From 600px: one ruled row per group, boxes level. The group is a fieldset, so it wraps as flex, never grid (see fieldset.field) */
+/* From 600px one ruled row per group, boxes level. A fieldset wraps as flex, never grid (see fieldset.field) */
 @media (min-width: 600px) {
   [data-page="consulting"] .calc-inputs { grid-template-columns: minmax(0, 1fr); }
   [data-page="consulting"] .calc-group { --pair: 11rem; display: flex; flex-wrap: wrap; gap: var(--s-4) var(--gap); }
@@ -1238,33 +1279,31 @@ html:not(.js) :is(#theme-toggle, .nav-toggle, .nav-foot) { display: none; }
   .js [data-page="consulting"] .sheet .ledger-bar span { transform-origin: 0 50%; transition: transform var(--t-slow) var(--ease) var(--t); }
   .js [data-page="consulting"] .sheet:not(.visible) .ledger-bar span { transform: scaleX(0); }
 }
-/* An automation: name and price | mock | steps */
-[data-page="consulting"] .auto { --phone-w: 18rem; --mock: 20rem; --name: 9rem; --slip: 17rem; display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--s-3) var(--gap-lg); }
-[data-page="consulting"] .auto + .auto { margin-top: var(--s-4); padding-top: var(--s-3); border-top: var(--edge); }
-[data-page="consulting"] .auto-head { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-3) var(--s-4); }
-[data-page="consulting"] .auto-head h3 { flex: 1 1 var(--name); }
-[data-page="consulting"] .auto-saves { max-width: var(--measure); margin: 0; font-size: var(--fs-sm); line-height: 1.5; }
-[data-page="consulting"] .auto .fig { gap: var(--s-3); }
-[data-page="consulting"] .auto :is(.cal, .leads) { width: min(100%, var(--mock)); }
-[data-page="consulting"] .notices { display: grid; gap: var(--s-2); width: min(100%, var(--slip)); }
-@media (min-width: 600px) { [data-page="consulting"] .auto-head h3 { flex: none; } }
-@media (min-width: 760px) {
-  [data-page="consulting"] .auto { row-gap: var(--s-4); }
-  [data-page="consulting"] .auto + .auto { margin-top: var(--stack); padding-top: var(--stack); }
-  [data-page="consulting"] .auto .fig { grid-template-columns: var(--mock) minmax(0, 1fr); align-items: start; gap: var(--gap-lg); }
+/* What each automation does: the cylinder (motion.css). Below 441px the cards are a little wider than the kit's 72vw,
+   so the calendar's five days keep their words. Each drawing fills the picture slot, markers clear of the words */
+[data-page="consulting"] .kws-cyl { --w: min(78vw, 21.5rem); }
+[data-page="consulting"] .kws-cyl-art > .fig-art { width: 100%; }
+[data-page="consulting"] .kws-cyl-art .phone { width: min(100%, 18rem); }
+[data-page="consulting"] .notices { display: grid; gap: var(--s-2); }
+[data-page="consulting"] .kws-cyl-art .notices { width: min(100%, 17rem); }
+[data-page="consulting"] .kws-cyl-art :is(.cal, .leads) { width: min(100%, 20rem); padding: var(--s-3); box-shadow: var(--shadow-1); }
+/* Today's column is wider: it takes the booking's two words */
+[data-page="consulting"] .kws-cyl-art .cal-grid { grid-template-columns: repeat(3, minmax(0, 1fr)) minmax(0, 1.5fr) minmax(0, 1fr); }
+/* A phone: each drawing cut to its telling part */
+@media (max-width: 599.98px) {
+  [data-page="consulting"] .kws-cyl-art :is(.thread li:nth-child(n+3), .cal-log, .leads li + li, .notice + .notice) { display: none; }
+  [data-page="consulting"] .kws-cyl-art .cal-grid { column-gap: var(--s-1); }
 }
-@media (min-width: 1100px) {
-  [data-page="consulting"] .auto { grid-template-columns: minmax(0, 3fr) minmax(0, 8fr); grid-template-rows: auto 1fr; }
-  [data-page="consulting"] .auto-head { flex-direction: column; align-items: flex-start; }
-  [data-page="consulting"] .auto .fig { grid-area: 1 / 2 / 3 / 3; }
-  [data-page="consulting"] .auto-own p { grid-column: 1 / -1; }
+/* No script (and no kit hold): the four cards two by two at the drum's card width, not three and one */
+@media (min-width: 760px) {
+  [data-page="consulting"]:not(:root:is(.kws-js, .kws-hold) > *) .kws-cyl-track { grid-template-columns: repeat(2, minmax(0, 21.5rem)); justify-content: center; }
 }
 /* Steps that hold price-list rows */
 [data-page="consulting"] .path > li > div { display: grid; gap: var(--s-3); justify-items: start; }
-[data-page="consulting"] .path > li > div > :is(p, .ticks) { margin: 0; }
+[data-page="consulting"] .path > li > div > p { margin: 0; }
 [data-page="consulting"] .path h3 { font-size: var(--fs-h3); }
 [data-page="consulting"] .path :is(.pl-row, .pricelist) { width: 100%; }
-[data-page="consulting"] .path :is(p, .ticks) { font-size: var(--fs-sm); line-height: 1.5; }
+[data-page="consulting"] .path p { font-size: var(--fs-sm); line-height: 1.5; }
 [data-page="consulting"] .path-more { grid-column: 2; margin-top: var(--s-4); }
 /* The step divider closes a step's last list */
 [data-page="consulting"] .path-more:last-child > li { border-bottom: 0; }
@@ -1274,7 +1313,6 @@ html:not(.js) :is(#theme-toggle, .nav-toggle, .nav-foot) { display: none; }
   [data-page="consulting"] .path > li { grid-template-columns: auto minmax(0, 1fr); gap: var(--s-3); }
   [data-page="consulting"] .path > li > div { display: contents; }
   [data-page="consulting"] .path > li > div > :not(:first-child), [data-page="consulting"] .path-more { grid-column: 1 / -1; margin-top: 0; }
-  [data-page="consulting"] .path .ticks { gap: var(--s-2); }
   [data-page="consulting"] .path .more-link { justify-self: start; }
 }
 @media (min-width: 760px) {
@@ -1297,24 +1335,23 @@ html:not(.js) :is(#theme-toggle, .nav-toggle, .nav-foot) { display: none; }
   [data-page="consulting"] #bundle .receipt { grid-area: 1 / 2 / 3 / 3; }
 }
 
-/* The booking mock's tick line takes the numbered markers' width, so its three lines share a left edge */
+/* The booking mock's tick line takes the markers' width: its three lines share a left edge */
 [data-page="consulting"] .cal-log .ico { flex: 0 0 var(--s-5); }
 
 /* == 22 Work: [data-page="work"], /work/ == */
-/* Work page only. Every rule is scoped with [data-page="work"].
-   Three case rows from the shared parts, one band each; this adds the pressable browser frame and the "what we built" list. */
+/* Work: three case rows from the shared parts, one band each, with the pressable browser frame and the built list */
 
-/* Each row has a band to itself: the band does the spacing, so the row needs no rule and no padding */
+/* Each row has a band to itself, which does the spacing: no rule, no padding */
 [data-page="work"] .case { row-gap: var(--s-5); padding-block: 0; border-top: 0; }
 [data-page="work"] .case-copy { text-wrap: pretty; }
 [data-page="work"] .case .eyebrow { text-wrap: balance; }
-/* Until the eyebrow fits on one line, its two halves stack without the dot, as the project captions do */
+/* Until the eyebrow fits on one line its halves stack without the dot, as captions do */
 @media (max-width: 1279.98px) { [data-page="work"] .case .eyebrow .sep { display: none; } [data-page="work"] .case .eyebrow .sep + span { display: block; } }
 /* "What we built": the label sits close to its list */
 [data-page="work"] .case .label { margin: var(--s-5) 0 0; }
 [data-page="work"] .case .ticks { gap: var(--s-2); }
 [data-page="work"] .case .fine { margin: var(--s-3) 0 0; }
-/* One fact row: the status, then the link to the live site. The link is already a 44px target, so the row needs no padding */
+/* One fact row: the status, then the link to the live site (already a 44px target, so no padding) */
 [data-page="work"] .case-facts div { padding-block: 0; }
 
 /* The browser frame as a link to the live site (the print already is one) */
@@ -1338,56 +1375,33 @@ html:not(.js) :is(#theme-toggle, .nav-toggle, .nav-foot) { display: none; }
 [data-page="work"] a.browser:active { transform: translateY(var(--hair)); box-shadow: var(--shadow-1); }
 
 /* == 23 Process: [data-page="process"], /process/ == */
-/* Process page only: the job ticket as a ruled sheet. Each station is the step, what we do, what you do and its terms. */
-
-/* Room under the ticket for the stamp that hangs off its corner */
-[data-page="process"] .ticket { margin-bottom: var(--s-5); }
-/* Phone: numeral and title share a line; "We" and "You" run the full width of the ticket */
-[data-page="process"] .ticket .steps > li { position: relative; padding-block: var(--pad); }
-[data-page="process"] .steps-no + div { display: contents; }
-[data-page="process"] .steps :is(p, .steps-you) { grid-column: 1 / -1; }
-/* Each station is a stub: the ticket is notched at both ends of the tear line */
-[data-page="process"] .steps > li + li::before {
-  --r: var(--s-2); --cut: var(--paper) calc(var(--r) - var(--hair)), var(--line-2) 0, var(--line-2) var(--r), transparent 0;
-  content: ""; position: absolute; inset: calc(-1 * var(--r)) calc(-1 * var(--pad) - var(--hair)) auto; height: calc(2 * var(--r));
-  background: radial-gradient(circle at 0, var(--cut)), radial-gradient(circle at 100%, var(--cut));
-}
-
-/* The appointment card's leader lines (.appt-lines) as a terms list on the ticket */
-[data-page="process"] .steps dl { margin-top: var(--s-3); }
-[data-page="process"] .steps dl div { padding-block: var(--s-1); line-height: 1.4; }
-[data-page="process"] .steps dl ::after { flex-basis: 0; min-width: 0; }
-[data-page="process"] .steps dl div dd { color: var(--ink); text-align: right; }
-
-/* Phones: tighter stubs, so every term stays on one line */
+/* Process: the four steps as job folders (motion.css), the stamp under them */
+[data-page="process"] .kws-folder-body p { text-wrap: pretty; }
+/* The stamp: under the folders at the right, clear of them and of the band's scallops; it hangs into the bottom padding */
+[data-page="process"] .kws-folders + .stamp { display: table; margin: var(--s-4) var(--s-3) calc(-1 * var(--s-6)) auto; }
+/* Phones: the four folders packed tighter, so the page is no longer than the ticket made it */
 @media (max-width: 599.98px) {
-  [data-page="process"] .ticket { --pad: var(--s-4); }
+  [data-page="process"] .kws-folders { gap: var(--s-3); }
+  [data-page="process"] .kws-folder { --kws-p: var(--s-4); }
+  [data-page="process"] .kws-folder-body { gap: var(--s-2); }
+  [data-page="process"] .kws-folder-tab { min-height: 0; padding-block: var(--s-2) 0; }
+  [data-page="process"] :is(.kws-folder-tab, .kws-folder-no) { line-height: 1; }
+  [data-page="process"] .kws-folders + .stamp { margin-bottom: calc(-1 * var(--s-5)); }
+  [data-page="process"] .kws-folder-art { height: calc(var(--s-6) + var(--s-2)); }
+  [data-page="process"] .kws-folder dl > div { padding-block: var(--s-1); }
 }
-@media (min-width: 600px) {
-  [data-page="process"] .steps :is(p, .steps-you) { grid-column: 2; }
-}
-/* From 980px "You" stands beside the step, on the same baseline as its title */
-@media (min-width: 980px) {
-  [data-page="process"] .ticket .steps > li { grid-template: auto 1fr / var(--no) repeat(2, minmax(0, 1fr)); column-gap: var(--s-6); }
-  [data-page="process"] .ticket .steps > li::after { content: none; }
-  [data-page="process"] .steps .steps-you { grid-area: 1 / 3 / span 2; }
-  [data-page="process"] .steps-you p { margin-top: 0; }
-}
-/* Wide screens: one ruled row a station; step, "We" and "You" line up */
-@media (min-width: 1280px) {
-  [data-page="process"] .ticket .steps > li { grid-template: none / var(--no) minmax(0, 3fr) repeat(2, minmax(0, 5fr)); }
-  [data-page="process"] .ticket .steps h2 + p { grid-area: 1 / 3; margin-top: 0; }
-  [data-page="process"] .steps .steps-you { grid-area: 1 / 4; }
-}
+/* Four across: every step title on one line, so the four sentences start level */
+@media (min-width: 1100px) { [data-page="process"] .kws-folder { --kws-p: var(--s-5); } }
+@media (min-width: 1100px) and (max-width: 1279.98px) { [data-page="process"] .kws-folder-body h2 { font-size: var(--fs-h4); } }
 
-/* The stamp lands once, at the end of the ticket (main.js reveals it clear of the phone bar). Screen only */
+/* The stamp lands once, clear of the phone bar. Screen only */
 @media screen and (prefers-reduced-motion: no-preference) {
-  .js [data-page="process"] .stamp.reveal { transform: scale(1.4); transition-duration: var(--t); }
+  .js:not([data-motion=off]) [data-page="process"] .stamp.reveal { transform: scale(1.4); transition-duration: var(--t); }
   .js [data-page="process"] .stamp.reveal.visible { transform: none; }
 }
 
 /* == 24 Pricing: [data-page="pricing"], /pricing/ == */
-/* Pricing: shared parts (the spec table, the stacked care table, the payment plan) with the page's own layout round them. */
+/* Pricing: shared parts (spec table, stacked care table, payment plan) with the page's own layout round them */
 
 /* Head: the contents list beside the headline, the seal on its corner */
 [data-page="pricing"] .page-head-aside{position:relative;justify-items:stretch;justify-self:stretch;width:auto}
@@ -1425,24 +1439,30 @@ html:not(.js) :is(#theme-toggle, .nav-toggle, .nav-foot) { display: none; }
 [data-page="pricing"] .card .ticks{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 
+/* The packages below 760px: the folder stack (motion.css, word for word from the spec table) with the kit's script; the
+   stacked table without it (shorter than four open folders). From 760px always the table */
+@media (max-width:759.98px){
+[data-page="pricing"]:is(:root.kws-js>*) .spec,[data-page="pricing"]:not(:root.kws-js>*) .kws-folders--stack{display:none}
+}
+@media (min-width:760px){[data-page="pricing"] .kws-folders--stack{display:none}}
+[data-page="pricing"] .kws-folder-body>p{text-wrap:pretty}
+
 /* == 25 FAQ: [data-page="faq"], /faq/ == */
-/* FAQ. Shared parts do the work: the contents list, the FAQ list, the closing band. */
+/* FAQ: shared parts do the work */
 
 /* A group: its heading, then its questions */
 [data-page="faq"] .faq{margin-top:var(--s-4)}
-/* An answer fades in once when its question is opened (not the one that is open on arrival) */
+/* An answer fades in once when its question is opened (not one open on arrival) */
 [data-page="faq"] .faq-group~.faq-group [open] .faq-body,[data-page="faq"] .faq-item~[open] .faq-body{animation:kws-fade var(--t) var(--ease) both}
 
-/* A short contents list. Below 980px the links sit two by two, then in one row,
-   instead of one ruled row each, so the first questions are on a phone's first screen */
+/* A short contents list: below 980px two by two, then one row, so the first questions are on a phone's first screen */
 @media (max-width:979.98px){
 [data-page="faq"] .toc ol{display:grid;grid-template-columns:auto auto;justify-content:start;gap:0 var(--s-4);padding-block:var(--s-1);border-bottom:var(--edge)}
 [data-page="faq"] .toc a{min-height:var(--tap);padding-block:var(--s-2);border-bottom:0}
 }
 @media (min-width:600px) and (max-width:759.98px){[data-page="faq"] .toc ol{grid-template-columns:repeat(2,minmax(0,1fr));justify-content:stretch}}
 @media (min-width:760px) and (max-width:979.98px){[data-page="faq"] .toc ol{display:flex}}
-/* From 980px the list is a rail beside the questions, with a way to ask under it.
-   The rail starts a little lower so its top rule lines up with the first group's */
+/* From 980px a rail beside the questions, a way to ask under it; its top rule level with the first group's */
 @media (min-width:980px){
 [data-page="faq"] .faq-rail{padding-top:calc(var(--s-4) + var(--s-1))}
 [data-page="faq"] .faq-rail .fine{margin:var(--s-5) 0 0}
@@ -1453,13 +1473,12 @@ html:not(.js) :is(#theme-toggle, .nav-toggle, .nav-foot) { display: none; }
 /* A 15-letter word fits a 320px phone (--fs-h1 stops at 38px) */
 [data-page="about"] h1{font-size:min(var(--fs-h1),10.4vw);overflow-wrap:anywhere}
 
-/* Arriving, once: the name is underlined and the card is put down.
-   The brush is on the headline's first line, so it is lifted clear of the next */
+/* Arriving, once: the name is underlined and the card put down; the brush, on the first line, is lifted clear */
 [data-page="about"] .mark::after{bottom:.01em;right:.05em;height:.2em;animation:kws-brush var(--t-slow) var(--ease) var(--t-slow) both}
 [data-page="about"] .bizcard{animation:about-card var(--t-slow) var(--ease) var(--t-fast) both}
 @keyframes about-card{from{opacity:0;transform:translateY(var(--s-4)) rotate(-4deg)}}
-/* Beside the headline at 980 to 1100px the card is as narrow as a phone's: the same tight top row.
-   The three declarations repeat the shared phone rule for .bizcard on purpose: that one asks the window, this one the column */
+/* Beside the headline at 980 to 1100px the card is phone-narrow: the same tight top row. It repeats the shared phone
+   rule for .bizcard on purpose: that one asks the window, this one the column */
 [data-page="about"] .page-head-aside{container-type:inline-size}
 @container (max-width:25rem){
 [data-page="about"] .bizcard{--crest:2rem}
@@ -1511,19 +1530,17 @@ html:not(.js) :is(#theme-toggle, .nav-toggle, .nav-foot) { display: none; }
 }
 
 /* == 27 City pages: [data-page="city"], the four /web-design-<town>/ pages == */
-/* The four local landing pages share this file: built from shared parts, this is what they add. */
+/* The four town pages: what they add to the shared parts */
 
-/* Head: the town's name fills the column; --em (on the h1) is its measured width in em, with 3% air.
-   It wraps only if a reader widens the letter spacing. The brush sits behind the letters and paints in once. */
+/* Head: the town's name fills the column (--em on the h1 is its measured width in em, plus 3% air); the brush paints in once */
 [data-page="city"] .city-title { max-width: none; container-type: inline-size; }
 [data-page="city"] .city-title > span { display: block; font-size: var(--fs-title); line-height: 1.2; letter-spacing: -.015em; }
 [data-page="city"] .city-title > .city-name { margin-bottom: .24em; font-size: var(--fs-h1); line-height: 1; letter-spacing: -.03em; }
 @supports (width: 1cqi) { [data-page="city"] .city-title > .city-name { font-size: min(var(--fs-figure), calc(100cqi / var(--em))); } }
 [data-page="city"] .city-name .mark { display: inline-block; white-space: normal; overflow-wrap: anywhere; }
 [data-page="city"] .city-name .mark::after { bottom: -.22em; animation: kws-brush var(--t-slow) var(--ease) var(--t) both; }
-/* A phone's head has one button, so the prices stay on the first screen (the enquiry button is in the closing band).
-   From 1280 the intro sits left and the action right, on the line the columns below share. */
-/* Below 600px the eyebrow's two halves stack, without the dot, as on the home page */
+/* A phone's head has one button, so the prices stay on the first screen. From 1280 intro left, action right */
+/* Below 600px the eyebrow's halves stack without the dot, as on the home page */
 @media (max-width: 599.98px) {
   [data-page="city"] .page-head .btn + .btn, [data-page="city"] .page-head .eyebrow .sep { display: none; }
   [data-page="city"] .page-head .eyebrow .sep + span { display: block; }
@@ -1535,8 +1552,8 @@ html:not(.js) :is(#theme-toggle, .nav-toggle, .nav-foot) { display: none; }
   [data-page="city"] .page-head .btn-row { margin-top: 0; }
 }
 
-/* The in-person card: a stamp on its corner, as on the job ticket, and a brick pin on this town.
-   The stamp's rule repeats .ticket .stamp on purpose: sharing it would mean position: relative on every .card */
+/* The in-person card: a stamp on its corner and a brick pin on this town. The stamp repeats .ticket .stamp on purpose:
+   sharing it would put position: relative on every .card */
 [data-page="city"] .city-meet { position: relative; padding-bottom: calc(var(--fs-cap) * 4); }
 [data-page="city"] .city-meet .stamp { position: absolute; right: var(--pad); bottom: calc(-1 * var(--s-5)); background: var(--card); }
 [data-page="city"] .pills .ico { color: var(--brick); }
@@ -1546,11 +1563,11 @@ html:not(.js) :is(#theme-toggle, .nav-toggle, .nav-foot) { display: none; }
 [data-page="city"] .board-extras div::after { display: none; }
 [data-page="city"] .board-extras div > * { display: inline; }
 
-/* The enquiry promise sits under the closing band's buttons */
-[data-page="city"] .cta-copy .fine { margin: var(--s-5) 0 0; font-size: var(--fs-sm); }
+/* The enquiry promise is the closing band's last line, under the number */
+[data-page="city"] .kws-close .fine { font-size: var(--fs-sm); }
 
 /* These two short lines never end on a single word */
-[data-page="city"] :is(.board-extras div, .cta-copy .fine) { text-wrap: balance; }
+[data-page="city"] :is(.board-extras div, .kws-close .fine) { text-wrap: balance; }
 
 /* == 28 Contact: [data-page="contact"], /contact/ == */
 /* Contact: the phone line, the enquiry ticket and what happens next. */
@@ -1602,24 +1619,22 @@ html:not(.js) :is(#theme-toggle, .nav-toggle, .nav-foot) { display: none; }
 }
 
 /* == 29 Privacy: [data-page="privacy"], /privacy/ == */
-/* Privacy page only: shared parts (.toc-plain beside the prose from 980px, .split-sticky) and one rule.
-   The dateline sits on the first heading */
+/* Privacy: shared parts (.toc-plain beside the prose from 980px, .split-sticky); the dateline sits on the first heading */
 [data-page="privacy"] .prose > .label + h2 { margin-top: var(--s-5); }
 
 /* == 30 Terms: [data-page="terms"], /terms/ == */
-/* Terms page only: shared parts (.toc-plain beside the prose from 980px, .split-sticky) and one rule.
-   A display-face figure in a sentence keeps the line spacing */
+/* Terms: shared parts (.toc-plain beside the prose from 980px, .split-sticky); a display-face figure keeps the line spacing */
 [data-page="terms"] .prose .display { line-height: 1; }
 
 /* == 31 Checkout: [data-page="checkout"], /checkout/ == */
-/* The till. On a phone: the order slip, the payment sheet, then help. From 980px the sheet takes the wide column
-   and the slip and help stand beside it. The first rules are shared with /checkout/success/ ([data-page^="checkout"]). */
+/* The till: order slip, payment sheet, help; from 980px the sheet takes the wide column, slip and help beside it.
+   The first rules are shared with /checkout/success/ ([data-page^="checkout"]) */
 [data-page^="checkout"] .till { gap: var(--s-6) var(--gap-lg); }
-/* The help text is sized by its words (.stack), so a long email address has to be able to break */
+/* The help text is sized by its words (.stack), so a long email address must break */
 [data-page^="checkout"] .till-side p { overflow-wrap: anywhere; }
 /* Two-screen pages where brick is the colour of an error: no reading line */
 [data-page^="checkout"] .scroll-progress { display: none; }
-/* The order slip: a receipt as wide as its column. It arrives once, when the script shows it; its bottom margin is the torn edge */
+/* The order slip: a receipt as wide as its column, arriving once when the script shows it; its margin is the torn edge */
 [data-page^="checkout"] .receipt { max-width: none; margin-bottom: var(--s-2); animation: kws-slip var(--t-slow) var(--ease) both; }
 /* The price shrinks to fit a narrow slip ("$1,000/month"), and wraps before it would overflow */
 [data-page^="checkout"] .receipt-total { container-type: inline-size; }
@@ -1630,7 +1645,7 @@ html:not(.js) :is(#theme-toggle, .nav-toggle, .nav-foot) { display: none; }
 [data-page="checkout"] .till-pay .status { max-width: var(--measure); margin: 0; }
 /* An error that is the page's main message is larger than a form field's error */
 [data-page="checkout"] .till-pay .status.error { padding-left: var(--s-4); border-left: var(--focus-w) solid var(--brick); font-size: var(--fs-body); font-weight: 600; line-height: 1.5; }
-/* Once loading has failed, Stripe's placeholder goes (nothing can bring the form back); while it loads, the line stands clear of it */
+/* Once loading has failed, Stripe's placeholder goes; while it loads, the line stands clear of it */
 [data-page="checkout"] #checkout-status.error:not([hidden]) ~ #checkout-form { display: none; }
 [data-page="checkout"] .till-pay .status:not([hidden], .error) { margin-bottom: var(--s-4); }
 [data-page="checkout"] .till-side .btn-row { justify-self: stretch; }
@@ -1639,7 +1654,7 @@ html:not(.js) :is(#theme-toggle, .nav-toggle, .nav-foot) { display: none; }
 @media (scripting: none) { [data-page="checkout"] #checkout-status { display: none; } }
 @supports selector(:has(a)) {
   [data-page="checkout"] .till-pay:has(noscript > p) #checkout-status { display: none; }
-  /* While Stripe loads, the sheet holds room for its form, so less jumps under a thumb when it arrives */
+  /* While Stripe loads the sheet holds room for its form, so less jumps when it arrives */
   [data-page="checkout"] .till-pay:not(:has(noscript > p)):has(#checkout-status:not([hidden], .error)) { min-height: var(--maxw-card); }
 }
 
@@ -1658,7 +1673,7 @@ html:not(.js) :is(#theme-toggle, .nav-toggle, .nav-foot) { display: none; }
 @supports selector(:has(a)){
 /* No receipt under "No payment was taken" */
 [data-page="checkout-success"] .till:has(#success-retry:not([hidden])) .receipt{display:none}
-/* The dash never starts a line: plain wrapping where pretty is missing, and a phone size small enough for "Payment confirmed —" */
+/* The dash never starts a line: plain wrapping without pretty, a phone size that fits "Payment confirmed —" */
 @media (max-width:979.98px){[data-page="checkout-success"]:not(:has(#success-retry:not([hidden]))) .page-head h1{text-wrap:wrap;text-wrap:pretty}}
 @media (max-width:599.98px){[data-page="checkout-success"]:not(:has(#success-retry:not([hidden]))) .page-head h1{font-size:calc(var(--fs-h1)*.76)}}
 }
@@ -1673,11 +1688,9 @@ html:not(.js) :is(#theme-toggle, .nav-toggle, .nav-foot) { display: none; }
 @media (min-width:980px) and (max-width:1099.98px){[data-page="checkout-success"] .btn-row{display:grid}}
 
 /* == 33 Start: [data-page="start"], /start/, the landing page == */
-/* Landing page only. Every rule is scoped with [data-page="start"]. */
 
-/* Head. Below 980px three facts stand beside the small shop front; from 980px the shop is the aside, the facts a shelf.
-   Nothing re-wraps when the fonts arrive: headline and lede are set lines (the headline a size down
-   below 980px, so a phone's first screen holds the prices), the buttons have room, the price note keeps its own row. */
+/* Head: below 980px three facts beside the small shop front; from 980px the shop is the aside, the facts a shelf.
+   Nothing re-wraps as the fonts arrive: set lines (the headline a size down below 980px), roomy buttons */
 [data-page="start"] .page-head-split { --shop: calc(var(--s-9) + var(--s-7)); grid-template-columns: minmax(0, 1fr) var(--shop); column-gap: var(--s-4); align-items: end; }
 [data-page="start"] .l { display: block; }
 @media (max-width: 979.98px) {
@@ -1706,13 +1719,26 @@ html:not(.js) :is(#theme-toggle, .nav-toggle, .nav-foot) { display: none; }
 /* The brush stroke is painted once, as the page opens */
 [data-page="start"] .mark::after { animation: kws-brush var(--t-slow) var(--ease) var(--t) both; }
 
-/* The menu: two price lists, side by side from 760px, name and price at one size */
-[data-page="start"] .menu { gap: var(--s-5) var(--gap-lg); }
+/* The price board's rows: name and price at one size */
 [data-page="start"] .pricelist > li { padding-block: var(--s-3); }
 [data-page="start"] :is(.pl-price, .steps h3) { font-size: var(--fs-h4); }
 [data-page="start"] :is(.more-link, .steps p, .board-foot p) { font-size: var(--fs-sm); line-height: 1.5; }
 /* The price note keeps its own row until the head is wide */
 @media (max-width: 1279.98px) { [data-page="start"] .price-strip-note { flex-basis: 100%; } }
+
+/* The service wheel (the arc, motion.css): its captions carry no link here, so the place kept is the tallest caption */
+[data-page="start"] .kws-arc { --cap: 7.75rem; }
+/* Below 760px the service wheel stays a list (data-from="760" in the markup): all nine services and prices in view,
+   also while the kit holds its place */
+@media (max-width:759.98px){
+[data-page="start"] .kws-arc{--t:5.5rem;--cap:0;text-align:start}
+[data-page="start"] .kws-arc .kws-arc-list{gap:1.5rem 2rem;padding:0}
+[data-page="start"] .kws-arc .kws-arc-item{grid-template-columns:var(--t) minmax(0,1fr);place-content:start stretch;place-items:center stretch;gap:1rem}
+[data-page="start"] .kws-arc .kws-arc-item+.kws-arc-item{display:grid}
+[data-page="start"] .kws-arc .kws-arc-tile{margin:0}
+[data-page="start"] .kws-arc .kws-arc-cap{place-content:start stretch;justify-items:start;gap:.5rem}
+[data-page="start"] .kws-arc .kws-arc-name{font-size:var(--fs-h4,1.1875rem)}
+}
 
 /* Work: three small rows on a phone */
 @media (max-width: 759.98px) {
@@ -1721,8 +1747,7 @@ html:not(.js) :is(#theme-toggle, .nav-toggle, .nav-foot) { display: none; }
   [data-page="start"] .print-cap { padding: 0; }
 }
 
-/* The board: its extras are a price list with gold prices, two across from 760px;
-   its foot holds a sentence beside the button */
+/* The board: its extras a price list with gold prices, two across from 760px; its foot a sentence beside the button */
 [data-page="start"] .board .pricelist { max-width: none; margin-top: var(--s-5); border-top: 0; }
 [data-page="start"] .board .pl-price { color: var(--gold); }
 [data-page="start"] .board-foot { display: grid; gap: var(--s-5) var(--gap-lg); }
@@ -1747,23 +1772,18 @@ html:not(.js) :is(#theme-toggle, .nav-toggle, .nav-foot) { display: none; }
   [data-page="start"] .ticket .steps > li:first-child { padding-left: 0; border-left: 0; }
 }
 
-/* The closing band: the written route sits under the two buttons.
-   A way-forward link in a sentence has a 44px hit area; its focus ring stays on the words */
-[data-page="start"] .write { margin: var(--s-5) 0 0; font-size: var(--fs-body); }
+/* The closing band's written route: a link in a sentence has a 44px hit area; its focus ring stays on the words */
+[data-page="start"] .write { margin: 0; font-size: var(--fs-body); }
 [data-page="start"] .write a { font-weight: 700; }
 [data-page="start"] :is(.write, .board-foot p) a { position: relative; }
 [data-page="start"] :is(.write, .board-foot p) a::after { content: ""; position: absolute; inset: calc(-1 * var(--s-4)) 0; }
-
-/* The stamp under the job ticket keeps clear of the closing band's scallops, as on /process/ */
-[data-page="start"] #process .ticket { margin-bottom: var(--s-5); }
 
 /* == 34 Not found: [data-page="notfound"], /404.html == */
 /* The 404 block, a call link and a short list of pages. Phone: one centred column. From 760px: scene left, words right. */
 /* A page shorter than the window keeps its footer at the bottom */
 [data-page="notfound"] { display: flex; flex-direction: column; }
 [data-page="notfound"] main { flex: 1 0 auto; display: grid; align-content: center; }
-/* This page loads no script, so the head snippet drops .js after four seconds. Its bare header has no in-flow
-   menu to make room for: it stays sticky and keeps its height */
+/* No script here (the head snippet drops .js), and the bare header has no in-flow menu: it stays sticky at its height */
 html:not(.js) [data-page="notfound"] .site-header { position: sticky; }
 html:not(.js) [data-page="notfound"] .header-inner { padding-bottom: 0; }
 [data-page="notfound"] .nf { --scene: 11.5rem; --col: 34em; display: grid; justify-items: center; gap: var(--s-4); padding-block: var(--stack); text-align: center; }
