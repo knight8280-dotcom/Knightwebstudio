@@ -56,6 +56,7 @@ PAGES = {
     'privacy/index.html':                   ('privacy',) + NO_BAR,
     'terms/index.html':                     ('terms',) + NO_BAR,
     'checkout/index.html':                  ('checkout',) + NO_BAR,
+    'pay/index.html':                       ('pay',) + NO_BAR,
     'checkout/success/index.html':          ('checkout-success',) + NO_BAR,
     'start/index.html':                     ('start', 'header-start', 'footer-start', True),
     '404.html':                             ('notfound', 'header-bare', 'footer-bare', False),

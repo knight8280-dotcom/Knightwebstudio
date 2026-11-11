@@ -1649,6 +1649,8 @@ html:not(.js) :is(#theme-toggle, .nav-toggle, .nav-foot) { display: none; }
 [data-page="checkout"] #checkout-status.error:not([hidden]) ~ #checkout-form { display: none; }
 [data-page="checkout"] .till-pay .status:not([hidden], .error) { margin-bottom: var(--s-4); }
 [data-page="checkout"] .till-side .btn-row { justify-self: stretch; }
+/* /pay/: each price list fills its column */
+[data-page="pay"] .pay-groups .pricelist { justify-self: stretch; }
 
 /* With scripts off, the plain message in <noscript> stands in for "Loading" */
 @media (scripting: none) { [data-page="checkout"] #checkout-status { display: none; } }

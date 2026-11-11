@@ -115,6 +115,19 @@ function loadPlans() {
     raw = require("./plans.json");
     source = "plans.json";
   }
+  // Live only: extra plans kept in the repository (plans.live-extra.json), for
+  // items such as the $1 test payment. They never replace a key the live list has.
+  if (source === "STRIPE_PLANS_JSON") {
+    try {
+      const extra = require("./plans.live-extra.json");
+      for (const [key, plan] of Object.entries(extra)) {
+        if (!key.startsWith("_") && !Object.prototype.hasOwnProperty.call(raw, key)) raw[key] = plan;
+      }
+      source += " + plans.live-extra.json";
+    } catch (err) {
+      if (err.code !== "MODULE_NOT_FOUND") throw err;
+    }
+  }
   const plans = {};
   for (const [key, plan] of Object.entries(raw)) {
     if (key.startsWith("_")) continue; // comments

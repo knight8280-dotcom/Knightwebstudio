@@ -39,6 +39,7 @@
           <li><a href="/process/">Process</a></li>
           <li><a href="/pricing/">Pricing</a></li>
           <li><a href="/faq/">FAQ</a></li>
+          <li><a href="/pay/">Pay online</a></li>
         </ul>
       </nav>
 
