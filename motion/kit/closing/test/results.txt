@@ -114,3 +114,17 @@ PASS  tap on "Send an enquiry" follows the link: /contact/
 
 == contrast against the painted pixels: demo page (site palette and the client palette) ==
 light 390  still                77 texts, lowest 6.14:1 (needs 4.5) "dd in kws-appt | Free"
+light 390  shader live, 6 frames  77 texts, lowest 4.77:1 (needs 4.5) "kws-close-tel in kws-close.kws-close--strip.kws-shader-host | Or call"
+light 1440 still                79 texts, lowest 6.14:1 (needs 4.5) "dd in kws-appt | Free"
+light 1440 shader live, 6 frames  79 texts, lowest 4.78:1 (needs 4.5) "kws-close-tel in kws-close.kws-close--card.kws-shader-host | Or call"
+dark  390  still                77 texts, lowest 6.14:1 (needs 4.5) "dd in kws-appt | Free"
+node:internal/process/promises:394
+    triggerUncaughtException(err, true /* fromPromise */);
+    ^
+
+page.waitForTimeout: Target page, context or browser has been closed
+    at /tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/motion/kit/closing/test/contrast.js:49:17 {
+  log: []
+}
+
+Node.js v22.23.4

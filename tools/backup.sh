@@ -49,7 +49,7 @@ def want(p):
     if p.suffix.lower() not in TEXT: return False
     if p.stat().st_size > 600_000: return False
     if top in ('review', 'integrate'):   # reviewers' evidence folders are huge: keep findings, worklists and their top-level scripts only
-        if len(rel.parts) > 4 or p.stat().st_size > 120_000: return False
+        if len(rel.parts) > 4 or p.stat().st_size > (200_000 if rel.name in ('confirmed.json', 'notes.json') else 120_000): return False
         if p.suffix.lower() not in {'.md', '.json', '.py', '.js', '.txt'}: return False
     if any('copy' in part.lower() or part in ('site', 'repo', 'dist') for part in rel.parts[:-1]): return False
     return True

@@ -144,3 +144,104 @@ PASS  demo 820px, reduced motion: layout shift 0.0000; heights held 532/416/532/
 PASS  demo 1440px, reduced motion: layout shift 0.0000; heights held 532/544/532/544 doc 4976, live 532/544/532/544 doc 4976; cards shown while held: 1,1
 PASS  bare page 390px: layout shift 0.0000; heights held 526/312 doc 2111, live 526/312 doc 2111; cards shown while held: 1
 PASS  bare page 820px: layout shift 0.0000; heights held 490/416 doc 1757, live 490/416 doc 1757; cards shown while held: 1
+PASS  bare page 1440px: layout shift 0.0000; heights held 490/544 doc 1629, live 490/544 doc 1629; cards shown while held: 1
+PASS  bare page 390px, reduced motion: layout shift 0.0000; heights held 526/312 doc 2111, live 526/312 doc 2111; cards shown while held: 1
+PASS  bare page 820px, reduced motion: layout shift 0.0000; heights held 490/416 doc 1757, live 490/416 doc 1757; cards shown while held: 1
+PASS  bare page 1440px, reduced motion: layout shift 0.0000; heights held 490/544 doc 1629, live 490/544 doc 1629; cards shown while held: 1
+
+== scripts that never arrive, or arrive after the four seconds ==
+PASS  chromium 390px: scripts blocked. Held: one card, drum 512px, stage 312px. After four seconds: all 5 cards in 1 column, no stage (0px), lists 350px wide
+PASS  chromium 1440px: scripts blocked. Held: one card, drum 532px, stage 544px. After four seconds: all 5 cards in 3 columns, no stage (0px), lists 1240px wide
+PASS  chromium 390px, reduced motion: scripts blocked. Held: one card, drum 512px, stage 312px. After four seconds: all 5 cards in 1 column, no stage (0px), lists 350px wide
+PASS  chromium 1440px, reduced motion: scripts blocked. Held: one card, drum 532px, stage 544px. After four seconds: all 5 cards in 3 columns, no stage (0px), lists 1240px wide
+PASS  chromium 390px: scripts 5.2s late. At 4.3s the plain lists are back (5 cards); when the scripts land all 4 components start
+PASS  firefox 390px: scripts blocked. Held: one card, drum 512px, stage 312px. After four seconds: all 5 cards in 1 column, no stage (0px), lists 350px wide
+PASS  firefox 1440px: scripts blocked. Held: one card, drum 532px, stage 544px. After four seconds: all 5 cards in 3 columns, no stage (0px), lists 1240px wide
+PASS  firefox 390px, reduced motion: scripts blocked. Held: one card, drum 512px, stage 312px. After four seconds: all 5 cards in 1 column, no stage (0px), lists 350px wide
+PASS  firefox 1440px, reduced motion: scripts blocked. Held: one card, drum 532px, stage 544px. After four seconds: all 5 cards in 3 columns, no stage (0px), lists 1240px wide
+PASS  firefox 390px: scripts 5.2s late. At 4.3s the plain lists are back (5 cards); when the scripts land all 4 components start
+PASS  webkit 390px: scripts blocked. Held: one card, drum 512px, stage 312px. After four seconds: all 5 cards in 1 column, no stage (0px), lists 350px wide
+PASS  webkit 1440px: scripts blocked. Held: one card, drum 532px, stage 544px. After four seconds: all 5 cards in 3 columns, no stage (0px), lists 1240px wide
+PASS  webkit 390px, reduced motion: scripts blocked. Held: one card, drum 512px, stage 312px. After four seconds: all 5 cards in 1 column, no stage (0px), lists 350px wide
+PASS  webkit 1440px, reduced motion: scripts blocked. Held: one card, drum 532px, stage 544px. After four seconds: all 5 cards in 3 columns, no stage (0px), lists 1240px wide
+PASS  webkit 390px: scripts 5.2s late. At 4.3s the plain lists are back (5 cards); when the scripts land all 4 components start
+
+== text sizes and targets at 390px (site tool) ==
+no text under 12px and no target under 44px
+
+== contrast: painted pixels at rest, both themes, 1440 and 390 (site tool) ==
+light /kit/depth/demo.html 1440 all text passes AA
+light /kit/depth/demo.html 390 all text passes AA
+dark /kit/depth/demo.html 1440 all text passes AA
+dark /kit/depth/demo.html 390 all text passes AA
+
+== contrast on the drum: every card in view, each step and every frame of a turn, strength and light counted ==
+PASS  day 390px, site: at rest on each of the five steps, 72 texts on cards in view, 0 under AA  (card strength/light seen: 1/0.4 1/1)
+PASS  day 390px, client band: at rest on each of the five steps, 71 texts on cards in view, 0 under AA  (card strength/light seen: 1/0.4 1/1)
+PASS  day 820px, site: at rest on each of the five steps, 131 texts on cards in view, 0 under AA  (card strength/light seen: 1/0.4 1/1)
+PASS  day 820px, client band: at rest on each of the five steps, 132 texts on cards in view, 0 under AA  (card strength/light seen: 1/0.4 1/1)
+PASS  day 1280px, site: at rest on each of the five steps, 198 texts on cards in view, 0 under AA  (card strength/light seen: 1/0.4 1/1)
+PASS  day 1280px, client band: at rest on each of the five steps, 198 texts on cards in view, 0 under AA  (card strength/light seen: 1/0.4 1/1)
+PASS  day 1920px, site: at rest on each of the five steps, 214 texts on cards in view, 0 under AA  (card strength/light seen: 1/0.4 1/1)
+PASS  day 1920px, client band: at rest on each of the five steps, 214 texts on cards in view, 0 under AA  (card strength/light seen: 1/0.4 1/1)
+PASS  night 390px, site: at rest on each of the five steps, 72 texts on cards in view, 0 under AA  (card strength/light seen: 1/0.4 1/1)
+PASS  night 390px, client band: at rest on each of the five steps, 71 texts on cards in view, 0 under AA  (card strength/light seen: 1/0.4 1/1)
+PASS  night 820px, site: at rest on each of the five steps, 131 texts on cards in view, 0 under AA  (card strength/light seen: 1/0.4 1/1)
+PASS  night 820px, client band: at rest on each of the five steps, 132 texts on cards in view, 0 under AA  (card strength/light seen: 1/0.4 1/1)
+PASS  night 1280px, site: at rest on each of the five steps, 198 texts on cards in view, 0 under AA  (card strength/light seen: 1/0.4 1/1)
+PASS  night 1280px, client band: at rest on each of the five steps, 198 texts on cards in view, 0 under AA  (card strength/light seen: 1/0.4 1/1)
+PASS  night 1920px, site: at rest on each of the five steps, 214 texts on cards in view, 0 under AA  (card strength/light seen: 1/0.4 1/1)
+PASS  night 1920px, client band: at rest on each of the five steps, 214 texts on cards in view, 0 under AA  (card strength/light seen: 1/0.4 1/1)
+      lowest ratio met at rest: 4.84:1 (needs 4.5) for "Missed call" (thread-note thread-misse, 15px) day 390px site
+PASS  day 1440px, one turn sampled on 58 frames (the light crossing from card to card included): texts under AA on any card at full strength: 0; a card leaving the drum fades for 11 of those frames
+PASS  night 1440px, one turn sampled on 59 frames (the light crossing from card to card included): texts under AA on any card at full strength: 0; a card leaving the drum fades for 11 of those frames
+
+== leaks ==
+PASS  40 components made and removed: 0 still alive after garbage collection
+PASS  scroll listeners on the window: 3 before, 3 after
+PASS  no errors
+
+== WebKit (Playwright's Linux build: Safari's engine, not Safari on an iPhone) ==
+PASS  webkit 390px: the demo loads with no errors and all four components start
+PASS  webkit 390px drum: Next moves one step, lands flat-on and says so
+PASS  webkit 390px drum: arrow keys, Home and End
+PASS  webkit 390px drum: a mouse drag turns it one card
+PASS  webkit 390px drum: a press in mid-turn does not leave it part-way (it lands flat on a card)  [step 3]
+PASS  webkit 390px drum: the remover leaves the markup as it found it  [{"cls":"kws-cyl","kids":1,"attrs":"class,class,class,class,class"}]
+PASS  webkit 390px ring: thirty cards, one stood up flat with its words, at rest on a card  ["One-page: 14 days of support"]
+PASS  webkit 390px ring: it turns with the page and settles on another card  [-36 degrees, now "1 revision round"]
+PASS  webkit 390px ring: a sideways drag turns it and it settles on a card  [-60 degrees]
+PASS  webkit 390px ring: the remover leaves the markup as it found it  [{"cls":"kws-ring","kids":0,"attrs":"class+aria-hidden"}]
+PASS  webkit 390px: no errors, no sideways scroll
+PASS  webkit 390px, reduced motion: the ring is still with one card up; the drum lands at once
+PASS  webkit 1280px: the demo loads with no errors and all four components start
+PASS  webkit 1280px drum: Next moves one step, lands flat-on and says so
+PASS  webkit 1280px drum: arrow keys, Home and End
+PASS  webkit 1280px drum: a mouse drag turns it one card
+PASS  webkit 1280px drum: a press in mid-turn does not leave it part-way (it lands flat on a card)  [step 2]
+PASS  webkit 1280px drum: the remover leaves the markup as it found it  [{"cls":"kws-cyl","kids":1,"attrs":"class,class,class,class,class"}]
+PASS  webkit 1280px ring: thirty cards, one stood up flat with its words, at rest on a card  ["One-page: 14 days of support"]
+PASS  webkit 1280px ring: it turns with the page and settles on another card  [-36 degrees, now "1 revision round"]
+PASS  webkit 1280px ring: a sideways drag turns it and it settles on a card  [-36 degrees]
+PASS  webkit 1280px ring: the remover leaves the markup as it found it  [{"cls":"kws-ring","kids":0,"attrs":"class+aria-hidden"}]
+PASS  webkit 1280px: no errors, no sideways scroll
+PASS  webkit 1280px, reduced motion: the ring is still with one card up; the drum lands at once
+PASS  webkit: the bare client page starts both with no errors
+
+25 passed, 0 failed
+
+== Firefox ==
+PASS  firefox 390px: the demo loads with no errors and all four components start
+PASS  firefox 390px drum: Next moves one step, lands flat-on and says so
+PASS  firefox 390px drum: arrow keys, Home and End
+node:internal/process/promises:394
+    triggerUncaughtException(err, true /* fromPromise */);
+    ^
+
+page.evaluate: Target page, context or browser has been closed
+    at drum (/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/motion/kit/depth/test/lib.js:31:34)
+    at /tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/motion/kit/depth/test/engines.js:16:204 {
+  log: []
+}
+
+Node.js v22.23.4
