@@ -263,8 +263,8 @@
 </footer>
 <script src="/assets/js/main.js?v=5" defer></script>
 <!-- Stripe.js must load from js.stripe.com (never bundled or self-hosted, for
-     PCI compliance). The dahlia build provides stripe.initCheckoutFormSdk. -->
-<script src="https://js.stripe.com/dahlia/stripe.js"></script>
+     PCI compliance). The current build provides stripe.initCheckoutFormSdk. -->
+<script src="https://js.stripe.com/endive/stripe.js"></script>
 <script>
   // ==========================================================================
   // CONFIGURE ME — the only two values this page needs.
@@ -302,7 +302,6 @@
       statusEl.classList.add('error');
     }
 
-    // The beta flag is required for the Checkout Form SDK on the dahlia build.
     // An ad or content blocker can stop Stripe.js from loading; say so
     // instead of leaving the page on "Loading secure checkout…".
     if (typeof Stripe === 'undefined') {
@@ -318,7 +317,7 @@
       }
     }, 8000);
 
-    var stripe = Stripe(STRIPE_PUBLISHABLE_KEY, { betas: ['custom_checkout_payment_form_1'] });
+    var stripe = Stripe(STRIPE_PUBLISHABLE_KEY);
 
     // Appearance is fixed in Checkout Studio — keep in sync with
     // STRIPE_INTEGRATION_TODO.md.
@@ -393,7 +392,13 @@
               window.location.assign('/checkout/success/?plan=' + encodeURIComponent(plan) +
                 (sessionId ? '&session_id=' + encodeURIComponent(sessionId) : ''));
             })
-            .catch(function (error) { console.error('Payment confirmation error:', error); });
+            .catch(function (error) {
+              // Never fail silently: say so beside the form, which stays usable for another try.
+              console.error('Payment confirmation error:', error);
+              statusEl.textContent = 'The payment could not be completed. Please try again, or call (225) 255-0837.';
+              statusEl.hidden = false;
+              statusEl.scrollIntoView({ block: 'center' });
+            });
         });
       } else {
         showError('Checkout could not be loaded. Please try again shortly, or email knightwebstudio1@gmail.com.');
