@@ -1308,6 +1308,8 @@ html:not(.js) :is(#theme-toggle, .nav-toggle, .nav-foot) { display: none; }
 [data-page="work"] .case { row-gap: var(--s-5); padding-block: 0; border-top: 0; }
 [data-page="work"] .case-copy { text-wrap: pretty; }
 [data-page="work"] .case .eyebrow { text-wrap: balance; }
+/* Until the eyebrow fits on one line, its two halves stack without the dot, as the project captions do */
+@media (max-width: 1279.98px) { [data-page="work"] .case .eyebrow .sep { display: none; } [data-page="work"] .case .eyebrow .sep + span { display: block; } }
 /* "What we built": the label sits close to its list */
 [data-page="work"] .case .label { margin: var(--s-5) 0 0; }
 [data-page="work"] .case .ticks { gap: var(--s-2); }

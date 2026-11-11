@@ -154,19 +154,20 @@ pattern, or Lighthouse will flag skipped heading levels.
     <section class="cta-band on-blue"> … </section>
   </main>
   … phone bar and footer (from tools/chrome/) …
-  <script src="/assets/js/main.js?v=2" defer></script>
+  <script src="/assets/js/main.js?v=3" defer></script>
 </body>
 ```
 
 - **Asset versions.** Every page links the stylesheet as
-  `/assets/css/styles.css?v=2` and the script as `/assets/js/main.js?v=2`
+  `/assets/css/styles.css?v=3` and the script as `/assets/js/main.js?v=3`
   (the 404 page has no script). GitHub Pages lets browsers keep both files for
   ten minutes, so a visitor who had the old files would otherwise get new HTML
   with an old stylesheet or script. Whenever you change `styles.css` or
   `main.js`, raise the number by one in all 19 pages in the same commit
-  (for example `grep -rl 'styles.css?v=2' --include=*.html .` lists them),
-  and keep every page on the same number. `calculator.js`, fonts and images
-  are not versioned: give a changed one a new file name instead.
+  (for example `grep -rl 'styles.css?v=3' --include=*.html .` lists them),
+  and keep every page on the same number. `calculator.js` (used only by
+  /consulting/) carries the same number; raise it with the others. Fonts and
+  images are not versioned: give a changed one a new file name instead.
 
 - **`data-page`** names the page for the stylesheet: `home`, `services`,
   `consulting`, `work`, `process`, `pricing`, `faq`, `contact`, `about`,
