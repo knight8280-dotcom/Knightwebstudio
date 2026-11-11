@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#F6F0E4">
+<title>Motion kit demo: arc focus carousel and spotlight carousel</title>
+<script>
+  // Set the theme before first paint, so nobody sees a flash of the wrong
+  // one. Light is the default: a saved choice wins, otherwise a device set
+  // to dark gets the night theme. main.js still owns the toggle itself.
+  (function () {
+    var d = document.documentElement; d.classList.add('js');
+    // Motion kit: hold the space a carousel will take until its script runs, so nothing shifts when it does.
+    // A class and a timer, not a CSS animation, so it also works when the visitor has reduced motion on.
+    // If the script has not started after four seconds, the plain list comes back.
+    d.classList.add('kws-hold'); setTimeout(function () { d.classList.remove('kws-hold'); }, 4000);
+    // The header crest builds itself on the first page of a visit only
+    try { if (!sessionStorage.getItem('kws-crest')) { d.classList.add('crest-intro'); sessionStorage.setItem('kws-crest', '1'); } } catch (e) {}
+    try {
+      var t = localStorage.getItem('theme');
+      if (t !== 'dark' && t !== 'light') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      d.setAttribute('data-theme', t);
+    } catch (e) { /* private mode: the stylesheet follows the device instead */ }
+    // Scroll reveals hide blocks until main.js shows them. If that script has
+    // not started after four seconds (or the page has none), show everything.
+    setTimeout(function () { if (!window.kwsReady) d.classList.remove('js'); }, 4000);
+  })();
+</script>
+<link rel="preload" href="/assets/fonts/fraunces-soft.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/figtree.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/styles.css">
+<link rel="stylesheet" href="arc.css">
+<link rel="stylesheet" href="spotlight.css">
+<style>
+/* Demo page only: none of this ships. */
+.demo-bar { position: sticky; top: 0; z-index: var(--z-header); border-bottom: var(--seam); background: var(--paper); }
+.demo-bar-in { display: flex; align-items: center; gap: var(--s-3); min-height: var(--header-h); }
+.demo-bar .brand { margin-right: auto; }
+#demo-motion { white-space: nowrap; }
+html:not(.js) #demo-motion { display: none; }
+@media (max-width: 599.98px) { .demo-bar .brand-name { display: none; } }
+/* What a page stylesheet adds when a carousel sits on a sand band: the band's own tone, for the veil over the side cards. */
+.section-sand { --kit-bg: var(--paper-2); }
+/* A client's brand: dark green and cream, a bakery say. These variables re-skin every kit component. */
+.demo-client {
+  --kit-bg: #12352A; --kit-surface: #1B4536; --kit-ink: #FBF3DC; --kit-muted: #CBD8C5; --kit-line: #4B7A62;
+  --kit-accent: #F3C55B; --kit-accent-ink: #12352A; --kit-notice: #F6A27A; --kit-gilt: #12352A;
+  --kit-radius: 4px; --kit-font-display: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  --kit-font-body: "Trebuchet MS", "Lucida Grande", Verdana, sans-serif; --kit-shadow: 0 2px 0 rgba(0, 0, 0, .35), 0 18px 34px -18px rgba(0, 0, 0, .7);
+  padding-block: var(--sec); background: var(--kit-bg); color: var(--kit-muted); font-family: var(--kit-font-body);
+}
+/* This brand's gilt is a dark green line, so the light behind the object in focus is told to use the brand's gold instead. */
+.demo-client :is(.kws-arc, .kws-spot) { --glow: #F3C55B; }
+.demo-client h2 { color: var(--kit-ink); font-family: var(--kit-font-display); font-variation-settings: normal; letter-spacing: 0; }
+.demo-client .demo-kicker { margin: 0 0 var(--s-3); color: var(--kit-notice); font-size: var(--fs-label); font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.demo-client .demo-sub { max-width: var(--measure); margin: var(--s-4) 0 var(--stack); color: var(--kit-muted); font-size: var(--fs-lede); }
+.demo-client .demo-gap { margin-top: var(--sec); }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="demo-bar">
+  <div class="container demo-bar-in">
+    <a class="brand" href="/" aria-label="KnightWebstudio home"><img class="crest" src="/assets/img/logo.svg" alt="" width="40" height="40"><span class="brand-name">KnightWebstudio</span></a>
+    <button class="btn btn-sm" id="demo-motion" type="button" aria-pressed="false">Pause motion</button>
+    <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to dark theme" title="Toggle theme">
+      <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+  <h1 class="sr-only">Motion kit demo: the service wheel and the project spotlight</h1>
+
+  <!-- ===================== 1. THE SERVICE WHEEL, as the home page's services section =====================
+       The wheel goes where no at-a-glance list of the nine exists: the home page (shown here) or /start/.
+       It does not go on /services/, where the service menu already shows all nine prices on one screen. -->
+  <section class="section section-first" id="services">
+    <div class="container">
+      <header class="section-head section-head-split">
+        <div>
+          <p class="eyebrow">What we do</p>
+          <h2 id="svc-title">Your website, and the systems behind it</h2>
+        </div>
+        <p class="section-sub">Pick a single service or hand us the whole thing. Some clients start with a new site, others with a Growth Audit and the one automation that saves them the most time.</p>
+      </header>
+{{ARC_SITE}}
+      <p class="section-more"><a class="more-link" href="/services/">All services<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a></p>
+    </div>
+  </section>
+
+  <!-- ===================== 2. THE PROJECT SPOTLIGHT, as the home page's projects section (or above the case rows on Work) ===================== -->
+  <section class="section section-sand" id="work">
+    <div class="container">
+      <header class="section-head section-head-split">
+        <div>
+          <p class="eyebrow">Selected work</p>
+          <h2 id="spot-title">Recent projects</h2>
+        </div>
+        <p class="section-sub">Three live sites. Visit them and judge for yourself.</p>
+      </header>
+{{SPOT_SITE}}
+    </div>
+  </section>
+
+  <!-- ===================== 3. THE SAME TWO COMPONENTS ON A CLIENT'S PALETTE ===================== -->
+  <section class="demo-client" id="client">
+    <div class="container">
+      <p class="demo-kicker">Portability check</p>
+      <h2>The same wheel in a client’s colours</h2>
+      <p class="demo-sub">Nothing in the component files changed. This band sets the kit variables to a dark green and cream brand with other typefaces, the way a client build would.</p>
+{{ARC_CLIENT}}
+      <h2 class="demo-gap">And the same spotlight</h2>
+      <p class="demo-sub">The same three real projects, shown here only to prove the theme contract.</p>
+{{SPOT_CLIENT}}
+    </div>
+  </section>
+
+</main>
+
+<script>
+  // Demo only: stands in for the site-wide pause control. The kit reads html[data-motion="off"] each time it is about to move.
+  document.getElementById('demo-motion').addEventListener('click', function () {
+    var off = document.documentElement.getAttribute('data-motion') !== 'off';
+    if (off) document.documentElement.setAttribute('data-motion', 'off'); else document.documentElement.removeAttribute('data-motion');
+    this.setAttribute('aria-pressed', off); this.textContent = off ? 'Motion paused' : 'Pause motion';
+  });
+</script>
+<script src="/assets/js/main.js" defer></script>
+<script src="arc.js" defer></script>
+<script src="spotlight.js" defer></script>
+</body>
+</html>

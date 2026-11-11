@@ -1,0 +1,22 @@
+P-1 consulting 360 rows with the price under the name: 0 | rows wider than their list: 0
+P-1 consulting 390 rows with the price under the name: 0 | rows wider than their list: 0
+P-5 consulting 1440 deposit share with the rule: 49.6%
+P-12 home 360 tagline lines: 1
+P-12 home 375 tagline lines: 1
+P-12 home 390 tagline lines: 1
+P-15 / 390 height 11979 -> 11995
+P-15 /start/ 390 height 6186 -> 6134
+P-15 /contact/ 390 height 3702 -> 3702
+P-15 /checkout/success/ 390 height 2210 -> 2218
+P-15 /consulting/ 390 height 13984 -> 13984
+P-15 /process/ 390 height 3315 -> 3323
+P-15 /web-design-gonzales/ 390 height 7362 -> 7362
+row-gap 0 / 390 height 11979 -> 11947
+row-gap 0 /consulting/ 390 height 13984 -> 13936
+row-gap 0 /pricing/ 390 height 10410 -> 10378
+F1 appt width with the rule at 1280: 336
+measure 31em / 1440 height 9198 -> 9220 | 390 height 11979 -> 11979
+measure 31em /pricing/ 1440 height 5988 -> 5988 | 390 height 10410 -> 10410
+measure 31em /terms/ 1440 height 3650 -> 3840 | 390 height 5236 -> 5236
+measure 31em /about/ 1440 height 3755 -> 3836 | 390 height 5158 -> 5158
+measure 31em /consulting/ 1440 height 9978 -> 10045 | 390 height 13984 -> 13984

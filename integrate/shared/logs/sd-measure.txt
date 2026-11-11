@@ -1,0 +1,775 @@
+home__390__light: page 11942 -> 11942px, 0 band(s) changed
+services__390__light: page 5700 -> 5700px, 0 band(s) changed
+consulting__390__light: page 13936 -> 13936px, 0 band(s) changed
+work__390__light: page 4459 -> 4459px, 0 band(s) changed
+process__390__light: page 3315 -> 3315px, 0 band(s) changed
+pricing__390__light: page 10378 -> 10378px, 0 band(s) changed
+faq__390__light: page 3663 -> 3663px, 0 band(s) changed
+contact__390__light: page 3702 -> 3702px, 0 band(s) changed
+about__390__light: page 5158 -> 5158px, 0 band(s) changed
+start__390__light: page 6134 -> 6134px, 0 band(s) changed
+web-design-baton-rouge__390__light: page 7416 -> 7416px, 0 band(s) changed
+web-design-denham-springs__390__light: page 7210 -> 7210px, 0 band(s) changed
+web-design-gonzales__390__light: page 7362 -> 7362px, 0 band(s) changed
+web-design-prairieville__390__light: page 7360 -> 7360px, 0 band(s) changed
+privacy__390__light: page 4971 -> 4971px, 0 band(s) changed
+terms__390__light: page 5236 -> 5236px, 0 band(s) changed
+checkout__390__light: page 2149 -> 2149px, 0 band(s) changed
+checkout_success__390__light: page 2218 -> 2218px, 0 band(s) changed
+404.html__390__light: page 1239 -> 1239px, 0 band(s) changed
+home__820__light: page 10120 -> 10201px, 8 band(s) changed
+  [2] section#top.page-head.hero  (1518.1 -> 1518.1px)  1 change(s), 1 width-only
+  [3] section#services.section  (1216.4 -> 1216.4px)  1 change(s), 1 width-only
+  [4] section#automation.section.section-sand  (2509.5 -> 2532px)  10 change(s), 5 width-only
+      SIZE section.section.section-sand " ": 820x2509.5 -> 820x2532
+      SIZE div.container "    ": 738x2359.9 -> 738x2382.4
+      SIZE div.stop.stop-sum.bigfig "     ": 738x451.8 -> 738x474.3
+      SIZE p.note "These are example numbers ": 510x47.3 -> 465x69.8
+      MOVE p.stop-links "  ": at 0,352.8 -> 0,375.3 in its parent
+  [5] section#work.section.section-tight  (591.9 -> 591.9px)  1 change(s), 1 width-only
+  [6] section#process.section.section-sand  (1078.8 -> 1106px)  12 change(s), 4 width-only
+      SIZE section.section.section-sand " ": 820x1078.8 -> 820x1106
+      SIZE div.container.split.split-sticky "  ": 738x929.2 -> 738x956.4
+      SIZE div.ticket "   ": 738x687.9 -> 738x715.1
+      SIZE ol.steps "    ": 686.8x614.5 -> 686.8x641.7
+      SIZE li "  ": 686.8x153.9 -> 686.8x181.1
+      SIZE div: 615x89.9 -> 615x117.1
+      ... 2 more
+  [8] section#about.section.section-tight.section-sand  (913.1 -> 913.1px)  3 change(s), 3 width-only
+  [9] section.cta-band.on-blue  (392.1 -> 423.5px)  7 change(s), 2 width-only
+      SIZE section.cta-band.on-blue " ": 820x392.1 -> 820x423.5
+      SIZE div.container.cta-inner.reveal "   ": 738x212.5 -> 738x244
+      SIZE div.cta-copy "   ": 668.8x212.5 -> 651.6x244
+      SIZE p "Thirty minutes, no pitch. ": 668.8x62.9 -> 609.8x94.4
+      MOVE div.btn-row "  ": at 0,156.5 -> 0,188 in its parent
+  [10] footer.site-footer.on-ink  (744.8 -> 744.8px)  1 change(s)
+      MOVE wbr: at -612.5,-9671.2 -> -612.5,-9752.3 in its parent
+services__820__light: page 4531 -> 4619px, 5 band(s) changed
+  [2] section.page-head  (465.1 -> 495px)  4 change(s)
+      SIZE section.page-head " ": 820x465.1 -> 820x495
+      SIZE div.container "     ": 738x424.1 -> 738x454
+      SIZE p.lede "Pick a single service or h": 668.8x29.9 -> 609.8x59.8
+      MOVE div.btn-row " ": at 0,300.1 -> 0,330 in its parent
+  [3] section#services.section.section-first  (1450.1 -> 1477.3px)  33 change(s), 20 width-only
+      SIZE section.section.section-first " ": 820x1450.1 -> 820x1477.3
+      SIZE div.container "    ": 738x1344.3 -> 738x1371.5
+      SIZE div.split.split-even.split-sticky "  ": 738x671.6 -> 738x698.8
+      SIZE div.svc-lead.stack.reveal "      ": 578x386.4 -> 527x413.6
+      SIZE p "A custom-designed marketin": 578x54.4 -> 527x81.6
+      MOVE ul.ticks "   ": at 0,220.5 -> 0,247.7 in its parent
+      ... 7 more
+  [5] section#win.section  (1014.7 -> 1014.7px)  12 change(s), 12 width-only
+  [6] section.cta-band.on-blue  (392.1 -> 423.5px)  7 change(s), 2 width-only
+      SIZE section.cta-band.on-blue " ": 820x392.1 -> 820x423.5
+      SIZE div.container.cta-inner.reveal "   ": 738x212.5 -> 738x244
+      SIZE div.cta-copy "   ": 668.8x212.5 -> 651.6x244
+      SIZE p "Thirty minutes, no pitch. ": 668.8x62.9 -> 609.8x94.4
+      MOVE div.btn-row "  ": at 0,156.5 -> 0,188 in its parent
+  [7] footer.site-footer.on-ink  (744.8 -> 744.8px)  1 change(s)
+      MOVE wbr: at -612.5,-4081.8 -> -612.5,-4170.3 in its parent
+consulting__820__light: page 11287 -> 11354px, 8 band(s) changed
+  [2] section.page-head  (464.9 -> 464.9px)  1 change(s), 1 width-only
+  [3] section.section.section-first  (1431.6 -> 1431.6px)  1 change(s), 1 width-only
+  [4] section#how.section.section-sand  (2651.1 -> 2651.1px)  6 change(s), 6 width-only
+  [5] section#calculator.section  (1775.2 -> 1775.2px)  1 change(s), 1 width-only
+  [6] section#process.section.section-sand  (3178.1 -> 3245.6px)  28 change(s), 6 width-only
+      SIZE section.section.section-sand " ": 820x3178.1 -> 820x3245.6
+      SIZE div.container "   ": 738x3028.5 -> 738x3096
+      SIZE div.split.split-sticky "  ": 738x2237.6 -> 738x2305.1
+      SIZE ol.steps.path "    ": 736x2108.7 -> 736x2176.2
+      SIZE li.reveal.visible "   ": 736x473.1 -> 736x495.6
+      SIZE div "    ": 664.1x270.8 -> 664.1x293.3
+      ... 16 more
+  [7] section#consulting-faq.section.section-tight  (464 -> 464px)  8 change(s), 4 width-only
+      SIZE div.faq-body: 578x105.6 -> 527x132.8
+      SIZE p "No. The messages are short": 578x81.6 -> 527x108.8
+      SIZE div.faq-body: 578x105.6 -> 527x132.8
+      SIZE p "No. Most setups work with ": 578x81.6 -> 527x108.8
+  [8] section.cta-band.on-blue  (469.1 -> 469.1px)  1 change(s), 1 width-only
+  [9] footer.site-footer.on-ink  (744.8 -> 744.8px)  1 change(s)
+      MOVE wbr: at -612.5,-10837.7 -> -612.5,-10905.2 in its parent
+work__820__light: page 4008 -> 4070px, 3 band(s) changed
+  [2] section.page-head  (277.1 -> 307px)  6 change(s)
+      SIZE section.page-head " ": 820x277.1 -> 820x307
+      SIZE div.container "    ": 738x236.1 -> 738x266
+      SIZE p.lede "All three are live. Visit ": 668.8x29.9 -> 609.8x59.8
+      SIZE a "see the fixed prices": 171x24 -> 555.7x53.9
+      MOVE a "see the fixed prices": at 491.1,2 -> 0,2 in its parent
+      MOVE div.btn-row " ": at 0,180.1 -> 0,210 in its parent
+  [6] section.cta-band.on-blue  (392.1 -> 423.5px)  7 change(s), 2 width-only
+      SIZE section.cta-band.on-blue " ": 820x392.1 -> 820x423.5
+      SIZE div.container.cta-inner.reveal "   ": 738x212.5 -> 738x244
+      SIZE div.cta-copy "   ": 668.8x212.5 -> 651.6x244
+      SIZE p "Thirty minutes, no pitch. ": 668.8x62.9 -> 609.8x94.4
+      MOVE div.btn-row "  ": at 0,156.5 -> 0,188 in its parent
+  [7] footer.site-footer.on-ink  (744.8 -> 744.8px)  1 change(s)
+      MOVE wbr: at -612.5,-3559.1 -> -612.5,-3620.5 in its parent
+process__820__light: page 2813 -> 2845px, 4 band(s) changed
+  [2] section.page-head  (337.1 -> 337.1px)  1 change(s), 1 width-only
+  [3] section#process.section.section-first  (1231.3 -> 1231.3px)  9 change(s), 8 width-only
+      MOVE strong.nowrap "Free, 30 minutes.": at 66,30.2 -> 86.5,30.2 in its parent
+  [4] section.cta-band.on-blue  (392.1 -> 423.5px)  7 change(s), 2 width-only
+      SIZE section.cta-band.on-blue " ": 820x392.1 -> 820x423.5
+      SIZE div.container.cta-inner.reveal "   ": 738x212.5 -> 738x244
+      SIZE div.cta-copy "   ": 668.8x212.5 -> 651.6x244
+      SIZE p "Thirty minutes, no pitch. ": 668.8x62.9 -> 609.8x94.4
+      MOVE div.btn-row "  ": at 0,156.5 -> 0,188 in its parent
+  [5] footer.site-footer.on-ink  (744.8 -> 744.8px)  1 change(s)
+      MOVE wbr: at -612.5,-2364.2 -> -612.5,-2395.7 in its parent
+pricing__820__light: page 7244 -> 7328px, 6 band(s) changed
+  [2] section.page-head  (733.5 -> 733.5px)  1 change(s), 1 width-only
+  [3] section#pricing.section.section-first  (2489.2 -> 2511.7px)  13 change(s), 6 width-only
+      SIZE section.section.section-first " ": 820x2489.2 -> 820x2511.7
+      SIZE div.container "    ": 738x2374.4 -> 738x2396.9
+      SIZE div.split.split-even.space-above "  ": 738x1051.5 -> 738x1074
+      SIZE div.reveal.visible "    ": 738x466.3 -> 738x488.8
+      SIZE ul.pricelist "   ": 736x348.4 -> 736x370.9
+      SIZE li "  ": 736x100.8 -> 736x123.3
+      ... 1 more
+  [4] section#consulting.section.section-sand  (1382.4 -> 1382.4px)  1 change(s), 1 width-only
+  [5] section#care.section  (1394.3 -> 1424.1px)  5 change(s)
+      SIZE section.section " ": 820x1394.3 -> 820x1424.1
+      SIZE div.container "   ": 738x1246.7 -> 738x1276.5
+      SIZE header.section-head.section-head-split.reveal "  ": 738x185.4 -> 738x215.3
+      SIZE p.section-sub "A site isn't finished at l": 668.8x89.7 -> 609.8x119.6
+      MOVE table.table.table-stack.reveal "   ": at 0,226.4 -> 0,256.3 in its parent
+  [6] section.cta-band.on-blue  (392.1 -> 423.5px)  7 change(s), 2 width-only
+      SIZE section.cta-band.on-blue " ": 820x392.1 -> 820x423.5
+      SIZE div.container.cta-inner.reveal "   ": 738x212.5 -> 738x244
+      SIZE div.cta-copy "   ": 668.8x212.5 -> 651.6x244
+      SIZE p "Thirty minutes, no pitch. ": 668.8x62.9 -> 609.8x94.4
+      MOVE div.btn-row "  ": at 0,156.5 -> 0,188 in its parent
+  [7] footer.site-footer.on-ink  (744.8 -> 744.8px)  1 change(s)
+      MOVE wbr: at -612.5,-6795.3 -> -612.5,-6879.1 in its parent
+faq__820__light: page 2961 -> 2988px, 4 band(s) changed
+  [2] section.page-head  (189.1 -> 189.1px)  1 change(s), 1 width-only
+  [3] section#faq.section.section-first  (1507.1 -> 1534.3px)  39 change(s), 14 width-only
+      SIZE section.section.section-first " ": 820x1507.1 -> 820x1534.3
+      SIZE div.container.split.split-sticky "  ": 738x1392.3 -> 738x1419.5
+      SIZE div.faq-groups "    ": 738x1258.9 -> 738x1286.1
+      SIZE section.faq-group "  ": 738x412.4 -> 738x439.6
+      SIZE div.faq "    ": 736x364.5 -> 736x391.7
+      SIZE details.faq-item "  ": 736x190.4 -> 736x217.6
+      ... 19 more
+  [4] section.cta-band.on-blue  (392.1 -> 392.1px)  4 change(s), 4 width-only
+  [5] footer.site-footer.on-ink  (744.8 -> 744.8px)  1 change(s)
+      MOVE wbr: at -612.5,-2511.7 -> -612.5,-2538.9 in its parent
+contact__820__light: page 3088 -> 3088px, 2 band(s) changed
+  [2] section.page-head  (488.7 -> 488.7px)  1 change(s), 1 width-only
+  [3] section#contact.section.section-first  (1677.9 -> 1677.9px)  3 change(s), 3 width-only
+about__820__light: page 4562 -> 4592px, 4 band(s) changed
+  [2] section.page-head  (838.1 -> 868px)  6 change(s)
+      SIZE section.page-head " ": 820x838.1 -> 820x868
+      SIZE div.container.page-head-split "  ": 738x797.1 -> 738x827
+      SIZE div "    ": 738x415.9 -> 738x445.8
+      SIZE p.lede "I build fast, modern websi": 668.8x89.7 -> 609.8x119.6
+      MOVE div.btn-row " ": at 0,359.9 -> 0,389.8 in its parent
+      MOVE div.page-head-aside " ": at 0,456.9 -> 0,486.8 in its parent
+  [3] section#about.section.section-first  (1474.2 -> 1474.2px)  6 change(s), 6 width-only
+  [5] section.cta-band.on-blue  (455 -> 455px)  4 change(s), 4 width-only
+  [6] footer.site-footer.on-ink  (744.8 -> 744.8px)  1 change(s)
+      MOVE wbr: at -612.5,-4113.3 -> -612.5,-4143.2 in its parent
+start__820__light: page 4599 -> 4621px, 5 band(s) changed
+  [2] section.page-head  (735.5 -> 735.5px)  3 change(s), 3 width-only
+  [3] section#offer.section.section-first  (967.8 -> 967.8px)  1 change(s), 1 width-only
+  [4] section#work.section.section-tight.section-sand  (500.4 -> 500.4px)  1 change(s), 1 width-only
+  [5] section#pricing.section.section-tight  (1040 -> 1062.5px)  8 change(s)
+      SIZE section.section.section-tight " ": 820x1040 -> 820x1062.5
+      SIZE div.container " ": 738x936.7 -> 738x959.2
+      SIZE div.board.on-blue "    ": 738x936.7 -> 738x959.2
+      STYLE div.board.on-blue "    "::before: pseudo28: 920.688px -> 943.188px
+      SIZE div.board-foot "  ": 662.6x121 -> 662.6x143.5
+      SIZE p "Payment plans are availabl": 510x45 -> 465x67.5
+      ... 2 more
+  [7] section#contact.cta-band.on-blue  (474.7 -> 474.7px)  6 change(s), 5 width-only
+      MOVE span.nowrap "you hire us.": at 437.2,34.5 -> 481.2,34.5 in its parent
+web-design-baton-rouge__820__light: page 6251 -> 6364px, 8 band(s) changed
+  [2] section.page-head  (535.8 -> 535.8px)  1 change(s), 1 width-only
+  [3] section#intro.section.section-first  (685.1 -> 712.3px)  7 change(s), 1 width-only
+      SIZE section.section.section-first " ": 820x685.1 -> 820x712.3
+      SIZE div.container.split.split-even "  ": 738x570.3 -> 738x597.5
+      SIZE div.prose "  ": 578x260.7 -> 527x287.9
+      SIZE p "Baton Rouge is our home ba": 578x108.8 -> 527x135.9
+      MOVE p "Whether your customers fin": at 0,124.8 -> 0,151.9 in its parent
+      MOVE aside.card.stack.city-meet "    ": at 0,309.9 -> 0,337.1 in its parent
+  [4] section#pricing.section.section-sand  (1101.8 -> 1101.8px)  4 change(s), 3 width-only
+      MOVE a "See how consulting and aut": at 87.8,69.5 -> 229.7,69.5 in its parent
+  [5] section#what-we-build.section  (1034.3 -> 1088.7px)  13 change(s), 1 width-only
+      SIZE section.section " ": 820x1034.3 -> 820x1088.7
+      SIZE div.container.split.split-even "  ": 738x886.8 -> 738x941.1
+      SIZE ol.steps "   ": 736x757.8 -> 736x812.2
+      SIZE li.reveal.visible "  ": 736x255.1 -> 736x282.3
+      SIZE div "   ": 664.1x191.1 -> 664.1x218.3
+      SIZE p "Clear services, obvious co": 578x54.4 -> 527x81.6
+      ... 6 more
+  [6] section#local-work.section.section-sand  (1221.3 -> 1221.3px)  1 change(s), 1 width-only
+  [7] section#questions.section.section-tight  (358.5 -> 358.5px)  6 change(s), 6 width-only
+  [8] section.cta-band.on-blue  (461.1 -> 492.5px)  8 change(s), 3 width-only
+      SIZE section.cta-band.on-blue " ": 820x461.1 -> 820x492.5
+      SIZE div.container.cta-inner "  ": 738x281.5 -> 738x313
+      SIZE div.cta-copy "    ": 668.8x281.5 -> 661.8x313
+      SIZE p "Thirty minutes, no pitch —": 668.8x62.9 -> 609.8x94.4
+      MOVE div.btn-row "  ": at 0,156.5 -> 0,188 in its parent
+  [9] footer.site-footer.on-ink  (744.8 -> 744.8px)  1 change(s)
+      MOVE wbr: at -612.5,-5801.7 -> -612.5,-5914.7 in its parent
+web-design-denham-springs__820__light: page 6113 -> 6277px, 8 band(s) changed
+  [2] section.page-head  (500.4 -> 500.4px)  1 change(s), 1 width-only
+  [3] section#intro.section.section-first  (658 -> 685.1px)  7 change(s), 1 width-only
+      SIZE section.section.section-first " ": 820x658 -> 820x685.1
+      SIZE div.container.split.split-even "  ": 738x543.2 -> 738x570.3
+      SIZE div.prose "  ": 578x206.3 -> 527x233.5
+      MOVE span.nowrap "I-12": at 99.4,57.4 -> 148.4,57.4 in its parent
+      SIZE p "From the shops of the Anti": 578x81.6 -> 527x108.8
+      MOVE aside.card.stack.city-meet "    ": at 0,255.5 -> 0,282.7 in its parent
+  [4] section#pricing.section.section-sand  (1071.9 -> 1124.3px)  14 change(s)
+      SIZE section.section.section-sand " ": 820x1071.9 -> 820x1124.3
+      SIZE div.container " ": 738x922.3 -> 738x974.7
+      SIZE div.board.on-blue "    ": 738x922.3 -> 738x974.7
+      STYLE div.board.on-blue "    "::before: pseudo28: 906.281px -> 958.672px
+      SIZE header.board-head " ": 662.6x91.5 -> 662.6x121.3
+      SIZE div "  ": 662.6x91.5 -> 662.6x121.3
+      ... 8 more
+  [5] section#what-we-build.section  (978.2 -> 1032.6px)  13 change(s), 1 width-only
+      SIZE section.section " ": 820x978.2 -> 820x1032.6
+      SIZE div.container.split.split-even "  ": 738x830.6 -> 738x885
+      SIZE ol.steps "   ": 736x690.3 -> 736x744.7
+      SIZE li.reveal.visible "  ": 736x220.4 -> 736x247.6
+      SIZE div "   ": 664.1x157.4 -> 664.1x184.6
+      SIZE p "Local SEO configuration an": 578x54.4 -> 527x81.6
+      ... 6 more
+  [6] section#local-work.section.section-sand  (1187.1 -> 1217px)  5 change(s)
+      SIZE section.section.section-sand " ": 820x1187.1 -> 820x1217
+      SIZE div.container "  ": 738x1037.5 -> 738x1067.4
+      SIZE header.section-head "  ": 736x166.9 -> 736x196.8
+      SIZE p.section-sub "Smilys Softwash cleans roo": 668.8x59.8 -> 609.8x89.7
+      MOVE article.split.split-even "  ": at 0,207.9 -> 0,237.8 in its parent
+  [7] section#questions.section.section-tight  (358.5 -> 358.5px)  7 change(s), 4 width-only
+      SIZE div.faq-body: 578x78.4 -> 527x105.6
+      SIZE p "Yes — Walker, Watson, Livi": 578x54.4 -> 527x81.6
+      MOVE span.nowrap "2–4 weeks": at 68.6,30.2 -> 138.7,30.2 in its parent
+  [8] section.cta-band.on-blue  (506.6 -> 506.6px)  2 change(s), 2 width-only
+  [9] footer.site-footer.on-ink  (744.8 -> 744.8px)  1 change(s)
+      MOVE wbr: at -612.5,-5664.4 -> -612.5,-5828.3 in its parent
+web-design-gonzales__820__light: page 6165 -> 6281px, 8 band(s) changed
+  [2] section.page-head  (556.4 -> 586.3px)  5 change(s)
+      SIZE section.page-head " ": 820x556.4 -> 820x586.3
+      SIZE div.container "     ": 738x515.4 -> 738x545.3
+      SIZE p.lede "Custom websites for Ascens": 668.8x59.8 -> 609.8x89.7
+      MOVE span.nowrap "7–10 days": at 112.1,31.9 -> 197.1,31.9 in its parent
+      MOVE div.btn-row "  ": at 0,391.4 -> 0,421.3 in its parent
+  [3] section#intro.section.section-first  (712.3 -> 739.5px)  7 change(s), 1 width-only
+      SIZE section.section.section-first " ": 820x712.3 -> 820x739.5
+      SIZE div.container.split.split-even "  ": 738x597.5 -> 738x624.7
+      SIZE div.prose "  ": 578x260.7 -> 527x287.9
+      SIZE p "Gonzales sits on between B": 578x135.9 -> 527x163.1
+      MOVE p "Whether you run a shop on ": at 0,151.9 -> 0,179.1 in its parent
+      MOVE aside.card.stack.city-meet "    ": at 0,309.9 -> 0,337.1 in its parent
+  [4] section#pricing.section.section-sand  (1101.8 -> 1101.8px)  4 change(s), 3 width-only
+      MOVE a "See how consulting and aut": at 87.8,69.5 -> 196.7,69.5 in its parent
+  [5] section#what-we-build.section  (951 -> 978.2px)  10 change(s), 2 width-only
+      SIZE section.section " ": 820x951 -> 820x978.2
+      SIZE div.container.split.split-even "  ": 738x803.4 -> 738x830.6
+      SIZE ol.steps "   ": 736x663.1 -> 736x690.3
+      SIZE li.reveal.visible "  ": 736x220.4 -> 736x247.6
+      SIZE div "   ": 664.1x157.4 -> 664.1x184.6
+      SIZE p "Local SEO and clear servic": 578x54.4 -> 527x81.6
+      ... 2 more
+  [6] section#local-work.section.section-sand  (1171.5 -> 1171.5px)  1 change(s), 1 width-only
+  [7] section#questions.section.section-tight  (358.5 -> 358.5px)  6 change(s), 6 width-only
+  [8] section.cta-band.on-blue  (461.1 -> 492.5px)  8 change(s), 3 width-only
+      SIZE section.cta-band.on-blue " ": 820x461.1 -> 820x492.5
+      SIZE div.container.cta-inner "  ": 738x281.5 -> 738x313
+      SIZE div.cta-copy "    ": 668.8x281.5 -> 652.7x313
+      SIZE p "Book the free 30-minute ca": 668.8x62.9 -> 609.8x94.4
+      MOVE div.btn-row "  ": at 0,156.5 -> 0,188 in its parent
+  [9] footer.site-footer.on-ink  (744.8 -> 744.8px)  1 change(s)
+      MOVE wbr: at -612.5,-5716.3 -> -612.5,-5832 in its parent
+web-design-prairieville__820__light: page 6294 -> 6352px, 8 band(s) changed
+  [2] section.page-head  (556.4 -> 586.3px)  4 change(s)
+      SIZE section.page-head " ": 820x556.4 -> 820x586.3
+      SIZE div.container "     ": 738x515.4 -> 738x545.3
+      SIZE p.lede "For the contractors, home-": 668.8x59.8 -> 609.8x89.7
+      MOVE div.btn-row "  ": at 0,391.4 -> 0,421.3 in its parent
+  [3] section#intro.section.section-first  (658 -> 658px)  4 change(s), 3 width-only
+      MOVE strong "are": at 244.9,84.6 -> 377.5,84.6 in its parent
+  [4] section#pricing.section.section-sand  (1101.8 -> 1101.8px)  4 change(s), 3 width-only
+      MOVE a "See how consulting and aut": at 87.8,69.5 -> 196.7,69.5 in its parent
+  [5] section#what-we-build.section  (1039.2 -> 1066.3px)  10 change(s), 2 width-only
+      SIZE section.section " ": 820x1039.2 -> 820x1066.3
+      SIZE div.container.split.split-even "  ": 738x891.6 -> 738x918.8
+      SIZE ol.steps "   ": 736x751.3 -> 736x778.4
+      SIZE li.reveal.visible "  ": 736x255.1 -> 736x282.3
+      SIZE div "   ": 664.1x191.1 -> 664.1x218.3
+      SIZE p "An information website of ": 578x54.4 -> 527x81.6
+      ... 2 more
+  [6] section#local-work.section.section-sand  (1221.3 -> 1221.3px)  1 change(s), 1 width-only
+  [7] section#questions.section.section-tight  (358.5 -> 358.5px)  6 change(s), 4 width-only
+      SIZE div.faq-body: 578x105.6 -> 527x132.8
+      SIZE p "Often, yes. Starter is an ": 578x81.6 -> 527x108.8
+  [8] section.cta-band.on-blue  (506.6 -> 506.6px)  2 change(s), 2 width-only
+  [9] footer.site-footer.on-ink  (744.8 -> 744.8px)  1 change(s)
+      MOVE wbr: at -612.5,-5845.5 -> -612.5,-5902.5 in its parent
+privacy__820__light: page 3781 -> 3862px, 3 band(s) changed
+  [2] section.page-head  (308.9 -> 308.9px)  1 change(s), 1 width-only
+  [3] section#privacy.section.section-first  (2530.3 -> 2611.9px)  33 change(s), 22 width-only
+      SIZE section.section.section-first " ": 820x2530.3 -> 820x2611.9
+      SIZE div.container.split.split-sticky "  ": 738x2415.5 -> 738x2497.1
+      SIZE div.prose "                         ": 578x2115.1 -> 527x2196.7
+      SIZE p "When you send the form on ": 578x135.9 -> 527x163.1
+      MOVE a "Web3Forms": at 97.6,84.6 -> 223.4,84.6 in its parent
+      SIZE p "We use it for one thing: r": 578x81.6 -> 527x108.8
+      ... 5 more
+  [4] footer.site-footer.on-ink  (744.8 -> 744.8px)  1 change(s)
+      MOVE wbr: at -612.5,-3331.5 -> -612.5,-3413.1 in its parent
+terms__820__light: page 3961 -> 4151px, 3 band(s) changed
+  [2] section.page-head  (279 -> 279px)  1 change(s), 1 width-only
+  [3] section#terms.section.section-first  (2740.6 -> 2930.9px)  36 change(s), 22 width-only
+      SIZE section.section.section-first " ": 820x2740.6 -> 820x2930.9
+      SIZE div.container.split.split-sticky "  ": 738x2625.8 -> 738x2816.1
+      SIZE div.prose "                         ": 578x2325.4 -> 527x2515.7
+      SIZE p "This page sums up, in plai": 578x81.6 -> 527x108.8
+      MOVE h2 "Standard payment terms": at 0,163.8 -> 0,190.9 in its parent
+      MOVE b.display "50%": at 74.4,56.4 -> 151.7,56.4 in its parent
+      ... 8 more
+  [4] footer.site-footer.on-ink  (744.8 -> 744.8px)  1 change(s)
+      MOVE wbr: at -612.5,-3511.9 -> -612.5,-3702.2 in its parent
+checkout__820__light: page 1642 -> 1642px, 2 band(s) changed
+  [2] section.page-head  (219 -> 219px)  1 change(s), 1 width-only
+  [3] section#checkout.section.section-first  (482.1 -> 482.1px)  1 change(s), 1 width-only
+checkout_success__820__light: page 1755 -> 1755px, 2 band(s) changed
+  [2] section.page-head  (210 -> 210px)  1 change(s), 1 width-only
+  [3] section#checkout-success.section.section-first  (603.5 -> 603.5px)  2 change(s), 2 width-only
+404.html__820__light: page 1105 -> 1105px, 0 band(s) changed
+home__1100__light: page 8894 -> 8903px, 3 band(s) changed
+  [4] section#automation.section.section-sand  (2255.4 -> 2255.4px)  1 change(s), 1 width-only
+  [9] section.cta-band.on-blue  (541.1 -> 550px)  6 change(s)
+      SIZE section.cta-band.on-blue " ": 1100x541.1 -> 1100x550
+      SIZE div.container.cta-inner.reveal "   ": 1004x300.2 -> 1004x309.1
+      SIZE div.cta-copy "   ": 679.8x276.1 -> 679.8x309.1
+      MOVE div.cta-copy "   ": at 0,12 -> 0,0 in its parent
+      SIZE p "Thirty minutes, no pitch. ": 679.8x66.1 -> 640.1x99.1
+      MOVE div.btn-row "  ": at 0,220.1 -> 0,253.1 in its parent
+  [10] footer.site-footer.on-ink  (537.8 -> 537.8px)  1 change(s)
+      MOVE wbr: at -841.1,-8445.1 -> -841.1,-8454.1 in its parent
+services__1100__light: page 4321 -> 4362px, 6 band(s) changed
+  [2] section.page-head  (415 -> 446.4px)  4 change(s)
+      SIZE section.page-head " ": 1100x415 -> 1100x446.4
+      SIZE div.container "     ": 1004x360 -> 1004x391.4
+      SIZE p.lede "Pick a single service or h": 702.1x31.4 -> 640.1x62.8
+      MOVE div.btn-row " ": at 0,236 -> 0,267.4 in its parent
+  [3] section#services.section.section-first  (1309.6 -> 1309.6px)  4 change(s), 4 width-only
+  [4] section#keep.section.section-sand.section-tight  (371.7 -> 371.7px)  1 change(s), 1 width-only
+  [5] section#win.section  (1030.3 -> 1030.3px)  14 change(s), 14 width-only
+  [6] section.cta-band.on-blue  (541.1 -> 550px)  6 change(s)
+      SIZE section.cta-band.on-blue " ": 1100x541.1 -> 1100x550
+      SIZE div.container.cta-inner.reveal "   ": 1004x300.2 -> 1004x309.1
+      SIZE div.cta-copy "   ": 679.8x276.1 -> 679.8x309.1
+      MOVE div.cta-copy "   ": at 0,12 -> 0,0 in its parent
+      SIZE p "Thirty minutes, no pitch. ": 679.8x66.1 -> 640.1x99.1
+      MOVE div.btn-row "  ": at 0,220.1 -> 0,253.1 in its parent
+  [7] footer.site-footer.on-ink  (537.8 -> 537.8px)  1 change(s)
+      MOVE wbr: at -841.1,-3872.4 -> -841.1,-3912.8 in its parent
+consulting__1100__light: page 10174 -> 10241px, 6 band(s) changed
+  [2] section.page-head  (477.8 -> 477.8px)  1 change(s), 1 width-only
+  [4] section#how.section.section-sand  (2444.5 -> 2444.5px)  1 change(s), 1 width-only
+  [6] section#process.section.section-sand  (3176.2 -> 3243.7px)  30 change(s), 8 width-only
+      SIZE section.section.section-sand " ": 1100x3176.2 -> 1100x3243.7
+      SIZE div.container "   ": 1004x2976.2 -> 1004x3043.7
+      SIZE div.split.split-sticky "  ": 1004x2433.3 -> 1004x2500.8
+      SIZE ol.steps.path "    ": 596.9x2433.3 -> 596.9x2500.8
+      SIZE li.reveal.visible "   ": 596.9x482.5 -> 596.9x505
+      SIZE div "    ": 515.9x273.5 -> 515.9x296
+      ... 16 more
+  [7] section#consulting-faq.section.section-tight  (370.3 -> 370.3px)  8 change(s), 4 width-only
+      SIZE div.faq-body: 578x105.6 -> 527x132.8
+      SIZE p "No. The messages are short": 578x81.6 -> 527x108.8
+      SIZE div.faq-body: 578x105.6 -> 527x132.8
+      SIZE p "No. Most setups work with ": 578x81.6 -> 527x108.8
+  [8] section.cta-band.on-blue  (550 -> 550px)  1 change(s), 1 width-only
+  [9] footer.site-footer.on-ink  (537.8 -> 537.8px)  1 change(s)
+      MOVE wbr: at -841.1,-9724.7 -> -841.1,-9792.2 in its parent
+work__1100__light: page 3282 -> 3322px, 3 band(s) changed
+  [2] section.page-head  (289.8 -> 321.2px)  6 change(s)
+      SIZE section.page-head " ": 1100x289.8 -> 1100x321.2
+      SIZE div.container "    ": 1004x234.8 -> 1004x266.2
+      SIZE p.lede "All three are live. Visit ": 702.1x31.4 -> 640.1x62.8
+      SIZE a "see the fixed prices": 179.5x25 -> 583.5x56.4
+      MOVE a "see the fixed prices": at 515.7,3 -> 0,3 in its parent
+      MOVE div.btn-row " ": at 0,178.8 -> 0,210.2 in its parent
+  [6] section.cta-band.on-blue  (541.1 -> 550px)  6 change(s)
+      SIZE section.cta-band.on-blue " ": 1100x541.1 -> 1100x550
+      SIZE div.container.cta-inner.reveal "   ": 1004x300.2 -> 1004x309.1
+      SIZE div.cta-copy "   ": 679.8x276.1 -> 679.8x309.1
+      MOVE div.cta-copy "   ": at 0,12 -> 0,0 in its parent
+      SIZE p "Thirty minutes, no pitch. ": 679.8x66.1 -> 640.1x99.1
+      MOVE div.btn-row "  ": at 0,220.1 -> 0,253.1 in its parent
+  [7] footer.site-footer.on-ink  (537.8 -> 537.8px)  1 change(s)
+      MOVE wbr: at -841.1,-2832.5 -> -841.1,-2872.9 in its parent
+process__1100__light: page 2620 -> 2629px, 3 band(s) changed
+  [2] section.page-head  (347 -> 347px)  1 change(s), 1 width-only
+  [4] section.cta-band.on-blue  (541.1 -> 550px)  6 change(s)
+      SIZE section.cta-band.on-blue " ": 1100x541.1 -> 1100x550
+      SIZE div.container.cta-inner.reveal "   ": 1004x300.2 -> 1004x309.1
+      SIZE div.cta-copy "   ": 679.8x276.1 -> 679.8x309.1
+      MOVE div.cta-copy "   ": at 0,12 -> 0,0 in its parent
+      SIZE p "Thirty minutes, no pitch. ": 679.8x66.1 -> 640.1x99.1
+      MOVE div.btn-row "  ": at 0,220.1 -> 0,253.1 in its parent
+  [5] footer.site-footer.on-ink  (537.8 -> 537.8px)  1 change(s)
+      MOVE wbr: at -841.1,-2171 -> -841.1,-2179.9 in its parent
+pricing__1100__light: page 5934 -> 5943px, 4 band(s) changed
+  [3] section#pricing.section.section-first  (1687.9 -> 1687.9px)  3 change(s), 3 width-only
+  [4] section#consulting.section.section-sand  (1361.3 -> 1361.3px)  8 change(s), 8 width-only
+  [6] section.cta-band.on-blue  (541.1 -> 550px)  6 change(s)
+      SIZE section.cta-band.on-blue " ": 1100x541.1 -> 1100x550
+      SIZE div.container.cta-inner.reveal "   ": 1004x300.2 -> 1004x309.1
+      SIZE div.cta-copy "   ": 679.8x276.1 -> 679.8x309.1
+      MOVE div.cta-copy "   ": at 0,12 -> 0,0 in its parent
+      SIZE p "Thirty minutes, no pitch. ": 679.8x66.1 -> 640.1x99.1
+      MOVE div.btn-row "  ": at 0,220.1 -> 0,253.1 in its parent
+  [7] footer.site-footer.on-ink  (537.8 -> 537.8px)  1 change(s)
+      MOVE wbr: at -841.1,-5485.3 -> -841.1,-5494.2 in its parent
+faq__1100__light: page 2885 -> 2912px, 4 band(s) changed
+  [2] section.page-head  (201.8 -> 201.8px)  1 change(s), 1 width-only
+  [3] section#faq.section.section-first  (1467.3 -> 1494.4px)  39 change(s), 14 width-only
+      SIZE section.section.section-first " ": 1100x1467.3 -> 1100x1494.4
+      SIZE div.container.split.split-sticky "  ": 1004x1313.3 -> 1004x1340.4
+      SIZE div.faq-groups "    ": 596.9x1313.3 -> 596.9x1340.4
+      SIZE section.faq-group "  ": 596.9x415.5 -> 596.9x442.7
+      SIZE div.faq "    ": 596.9x364.5 -> 596.9x391.7
+      SIZE details.faq-item "  ": 596.9x190.4 -> 596.9x217.6
+      ... 19 more
+  [4] section.cta-band.on-blue  (541.1 -> 541.1px)  1 change(s), 1 width-only
+  [5] footer.site-footer.on-ink  (537.8 -> 537.8px)  1 change(s)
+      MOVE wbr: at -841.1,-2435.5 -> -841.1,-2462.7 in its parent
+contact__1100__light: page 2318 -> 2318px, 0 band(s) changed
+about__1100__light: page 3743 -> 3743px, 1 band(s) changed
+  [5] section.cta-band.on-blue  (541.1 -> 541.1px)  4 change(s), 4 width-only
+start__1100__light: page 4610 -> 4626px, 4 band(s) changed
+  [3] section#offer.section.section-first  (983.1 -> 983.1px)  9 change(s), 9 width-only
+  [4] section#work.section.section-tight.section-sand  (580.3 -> 580.3px)  1 change(s), 1 width-only
+  [5] section#pricing.section.section-tight  (977 -> 992.5px)  8 change(s)
+      SIZE section.section.section-tight " ": 1100x977 -> 1100x992.5
+      SIZE div.container " ": 1004x838.5 -> 1004x854
+      SIZE div.board.on-blue "    ": 1004x838.5 -> 1004x854
+      STYLE div.board.on-blue "    "::before: pseudo28: 822.453px -> 837.953px
+      SIZE div.board-foot "  ": 902.8x52 -> 902.8x67.5
+      SIZE p "Payment plans are availabl": 510x45 -> 465x67.5
+      ... 2 more
+  [7] section#contact.cta-band.on-blue  (548.2 -> 548.2px)  6 change(s), 5 width-only
+      MOVE span.nowrap "you hire us.": at 459.1,37 -> 505.3,37 in its parent
+web-design-baton-rouge__1100__light: page 5612 -> 5612px, 4 band(s) changed
+  [2] section.page-head  (581.9 -> 581.9px)  1 change(s), 1 width-only
+  [4] section#pricing.section.section-sand  (1059 -> 1059px)  1 change(s), 1 width-only
+  [6] section#local-work.section.section-sand  (822 -> 822px)  1 change(s), 1 width-only
+  [8] section.cta-band.on-blue  (619 -> 619px)  2 change(s), 2 width-only
+web-design-denham-springs__1100__light: page 5468 -> 5530px, 5 band(s) changed
+  [2] section.page-head  (565.9 -> 565.9px)  1 change(s), 1 width-only
+  [4] section#pricing.section.section-sand  (1027.7 -> 1059px)  8 change(s)
+      SIZE section.section.section-sand " ": 1100x1027.7 -> 1100x1059
+      SIZE div.container " ": 1004x827.7 -> 1004x859
+      SIZE div.board.on-blue "    ": 1004x827.7 -> 1004x859
+      STYLE div.board.on-blue "    "::before: pseudo28: 811.656px -> 843.047px
+      SIZE header.board-head " ": 902.8x100.4 -> 902.8x131.8
+      SIZE div "  ": 854.8x100.4 -> 854.8x131.8
+      ... 2 more
+  [6] section#local-work.section.section-sand  (787.8 -> 819.2px)  5 change(s)
+      SIZE section.section.section-sand " ": 1100x787.8 -> 1100x819.2
+      SIZE div.container "  ": 1004x587.8 -> 1004x619.2
+      SIZE header.section-head "  ": 736x184.8 -> 736x216.2
+      SIZE p.section-sub "Smilys Softwash cleans roo": 702.1x62.8 -> 640.1x94.2
+      MOVE article.split.split-even "  ": at 0,239.8 -> 0,271.2 in its parent
+  [8] section.cta-band.on-blue  (586 -> 586px)  2 change(s), 2 width-only
+  [9] footer.site-footer.on-ink  (537.8 -> 537.8px)  1 change(s)
+      MOVE wbr: at -841.1,-5018.6 -> -841.1,-5081.4 in its parent
+web-design-gonzales__1100__light: page 5482 -> 5513px, 5 band(s) changed
+  [2] section.page-head  (581.9 -> 613.3px)  5 change(s)
+      SIZE section.page-head " ": 1100x581.9 -> 1100x613.3
+      SIZE div.container "     ": 1004x526.9 -> 1004x558.3
+      SIZE p.lede "Custom websites for Ascens": 702.1x62.8 -> 640.1x94.2
+      MOVE span.nowrap "7–10 days": at 117.7,34.4 -> 207,34.4 in its parent
+      MOVE div.btn-row "  ": at 0,402.9 -> 0,434.3 in its parent
+  [4] section#pricing.section.section-sand  (1059 -> 1059px)  1 change(s), 1 width-only
+  [6] section#local-work.section.section-sand  (766.2 -> 766.2px)  1 change(s), 1 width-only
+  [8] section.cta-band.on-blue  (619 -> 619px)  2 change(s), 2 width-only
+  [9] footer.site-footer.on-ink  (537.8 -> 537.8px)  1 change(s)
+      MOVE wbr: at -841.1,-5033.1 -> -841.1,-5064.5 in its parent
+web-design-prairieville__1100__light: page 5545 -> 5577px, 5 band(s) changed
+  [2] section.page-head  (581.9 -> 613.3px)  4 change(s)
+      SIZE section.page-head " ": 1100x581.9 -> 1100x613.3
+      SIZE div.container "     ": 1004x526.9 -> 1004x558.3
+      SIZE p.lede "For the contractors, home-": 702.1x62.8 -> 640.1x94.2
+      MOVE div.btn-row "  ": at 0,402.9 -> 0,434.3 in its parent
+  [4] section#pricing.section.section-sand  (1059 -> 1059px)  1 change(s), 1 width-only
+  [6] section#local-work.section.section-sand  (822 -> 822px)  1 change(s), 1 width-only
+  [8] section.cta-band.on-blue  (586 -> 586px)  2 change(s), 2 width-only
+  [9] footer.site-footer.on-ink  (537.8 -> 537.8px)  1 change(s)
+      MOVE wbr: at -841.1,-5096.5 -> -841.1,-5127.8 in its parent
+privacy__1100__light: page 3374 -> 3455px, 3 band(s) changed
+  [2] section.page-head  (321.8 -> 321.8px)  1 change(s), 1 width-only
+  [3] section#privacy.section.section-first  (2285.3 -> 2366.9px)  33 change(s), 22 width-only
+      SIZE section.section.section-first " ": 1100x2285.3 -> 1100x2366.9
+      SIZE div.container.split.split-sticky "  ": 1004x2131.3 -> 1004x2212.9
+      SIZE div.prose "                         ": 578x2131.3 -> 527x2212.9
+      SIZE p "When you send the form on ": 578x135.9 -> 527x163.1
+      MOVE a "Web3Forms": at 97.6,84.6 -> 223.4,84.6 in its parent
+      SIZE p "We use it for one thing: r": 578x81.6 -> 527x108.8
+      ... 5 more
+  [4] footer.site-footer.on-ink  (537.8 -> 537.8px)  1 change(s)
+      MOVE wbr: at -841.1,-2924.9 -> -841.1,-3006.5 in its parent
+terms__1100__light: page 3555 -> 3745px, 3 band(s) changed
+  [2] section.page-head  (290.4 -> 290.4px)  1 change(s), 1 width-only
+  [3] section#terms.section.section-first  (2497.4 -> 2687.7px)  36 change(s), 22 width-only
+      SIZE section.section.section-first " ": 1100x2497.4 -> 1100x2687.7
+      SIZE div.container.split.split-sticky "  ": 1004x2343.4 -> 1004x2533.7
+      SIZE div.prose "                         ": 578x2343.4 -> 527x2533.7
+      SIZE p "This page sums up, in plai": 578x81.6 -> 527x108.8
+      MOVE h2 "Standard payment terms": at 0,163.8 -> 0,190.9 in its parent
+      MOVE b.display "50%": at 74.4,56.4 -> 151.7,56.4 in its parent
+      ... 8 more
+  [4] footer.site-footer.on-ink  (537.8 -> 537.8px)  1 change(s)
+      MOVE wbr: at -841.1,-3105.6 -> -841.1,-3295.9 in its parent
+checkout__1100__light: page 1443 -> 1443px, 1 band(s) changed
+  [2] section.page-head  (233.2 -> 233.2px)  1 change(s), 1 width-only
+checkout_success__1100__light: page 1585 -> 1585px, 1 band(s) changed
+  [2] section.page-head  (233.2 -> 233.2px)  1 change(s), 1 width-only
+404.html__1100__light: page 1004 -> 1004px, 0 band(s) changed
+home__1440__light: page 9198 -> 9220px, 6 band(s) changed
+  [2] section#top.page-head.hero  (817.4 -> 817.4px)  1 change(s), 1 width-only
+  [3] section#services.section  (1223.6 -> 1223.6px)  3 change(s), 3 width-only
+  [4] section#automation.section.section-sand  (2265.8 -> 2288.3px)  12 change(s), 6 width-only
+      SIZE section.section.section-sand " ": 1440x2265.8 -> 1440x2288.3
+      SIZE div.container "    ": 1240x2007.8 -> 1240x2030.3
+      SIZE div.stop.stop-sum.bigfig "     ": 1240x327.9 -> 1240x350.4
+      STYLE div.stop.stop-sum.bigfig "     "::before: pseudo28: 163.938px -> 175.188px
+      MOVE span.stop-pin: at 0,139.9 -> 0,151.2 in its parent
+      SIZE p.note "These are example numbers ": 510x47.3 -> 465x69.8
+  [6] section#process.section.section-sand  (1008.5 -> 1008.5px)  4 change(s), 4 width-only
+  [9] section.cta-band.on-blue  (612.4 -> 612.4px)  4 change(s)
+      SIZE div.cta-copy "   ": 758.3x224.2 -> 758.3x257.8
+      MOVE div.cta-copy "   ": at 0,38.1 -> 0,21.3 in its parent
+      SIZE p "Thirty minutes, no pitch. ": 714x67.2 -> 651x100.8
+      MOVE div.btn-row "  ": at 0,168.2 -> 0,201.8 in its parent
+  [10] footer.site-footer.on-ink  (537.8 -> 537.8px)  1 change(s)
+      MOVE wbr: at -1072.3,-8748.9 -> -1072.3,-8771.4 in its parent
+services__1440__light: page 4203 -> 4315px, 6 band(s) changed
+  [2] section.page-head  (451.8 -> 483.8px)  4 change(s)
+      SIZE section.page-head " ": 1440x451.8 -> 1440x483.8
+      SIZE div.container "     ": 1240x395.8 -> 1240x427.8
+      SIZE p.lede "Pick a single service or h": 714x31.9 -> 651x63.8
+      MOVE div.btn-row " ": at 0,271.8 -> 0,303.8 in its parent
+  [3] section#services.section.section-first  (983.4 -> 1063.6px)  33 change(s), 20 width-only
+      SIZE section.section.section-first " ": 1440x983.4 -> 1440x1063.6
+      SIZE div.container "    ": 1240x823.4 -> 1240x903.6
+      SIZE div.split.split-even.split-sticky "  ": 1240x393.9 -> 1240x474.1
+      SIZE div.svc-lead.stack.reveal "      ": 578x393.9 -> 527x474.1
+      SIZE h3.h2 "Website design & build": 530.1x53 -> 527x106
+      MOVE p.tag "$1,000, $2,000 or $4,000": at 0,103.2 -> 0,156.2 in its parent
+      ... 7 more
+  [4] section#keep.section.section-sand.section-tight  (412.3 -> 412.3px)  1 change(s), 1 width-only
+  [5] section#win.section  (1089.3 -> 1089.3px)  14 change(s), 14 width-only
+  [6] section.cta-band.on-blue  (612.4 -> 612.4px)  4 change(s)
+      SIZE div.cta-copy "   ": 758.3x224.2 -> 758.3x257.8
+      MOVE div.cta-copy "   ": at 0,38.1 -> 0,21.3 in its parent
+      SIZE p "Thirty minutes, no pitch. ": 714x67.2 -> 651x100.8
+      MOVE div.btn-row "  ": at 0,168.2 -> 0,201.8 in its parent
+  [7] footer.site-footer.on-ink  (537.8 -> 537.8px)  1 change(s)
+      MOVE wbr: at -1072.3,-3754 -> -1072.3,-3866.1 in its parent
+consulting__1440__light: page 9978 -> 10045px, 6 band(s) changed
+  [2] section.page-head  (515.7 -> 515.7px)  1 change(s), 1 width-only
+  [4] section#how.section.section-sand  (2402.2 -> 2402.2px)  1 change(s), 1 width-only
+  [6] section#process.section.section-sand  (2999.5 -> 3067px)  28 change(s), 6 width-only
+      SIZE section.section.section-sand " ": 1440x2999.5 -> 1440x3067
+      SIZE div.container "   ": 1240x2741.5 -> 1240x2809
+      SIZE div.split.split-sticky "  ": 1240x2176.8 -> 1240x2244.3
+      SIZE ol.steps.path "    ": 736x2176.8 -> 736x2244.3
+      SIZE li.reveal.visible "   ": 736x482.5 -> 736x505
+      SIZE div "    ": 655x273.5 -> 655x296
+      ... 16 more
+  [7] section#consulting-faq.section.section-tight  (410.9 -> 410.9px)  8 change(s), 4 width-only
+      SIZE div.faq-body: 578x105.6 -> 527x132.8
+      SIZE p "No. The messages are short": 578x81.6 -> 527x108.8
+      SIZE div.faq-body: 578x105.6 -> 527x132.8
+      SIZE p "No. Most setups work with ": 578x81.6 -> 527x108.8
+  [8] section.cta-band.on-blue  (622.8 -> 622.8px)  1 change(s), 1 width-only
+  [9] footer.site-footer.on-ink  (537.8 -> 537.8px)  1 change(s)
+      MOVE wbr: at -1072.3,-9528.8 -> -1072.3,-9596.3 in its parent
+work__1440__light: page 3456 -> 3488px, 3 band(s) changed
+  [2] section.page-head  (309 -> 340.9px)  6 change(s)
+      SIZE section.page-head " ": 1440x309 -> 1440x340.9
+      SIZE div.container "    ": 1240x253 -> 1240x284.9
+      SIZE p.lede "All three are live. Visit ": 714x31.9 -> 651x63.8
+      SIZE a "see the fixed prices": 182.7x25 -> 593.7x56.9
+      MOVE a "see the fixed prices": at 524.7,3 -> 0,3 in its parent
+      MOVE div.btn-row " ": at 0,197 -> 0,228.9 in its parent
+  [6] section.cta-band.on-blue  (612.4 -> 612.4px)  4 change(s)
+      SIZE div.cta-copy "   ": 758.3x224.2 -> 758.3x257.8
+      MOVE div.cta-copy "   ": at 0,38.1 -> 0,21.3 in its parent
+      SIZE p "Thirty minutes, no pitch. ": 714x67.2 -> 651x100.8
+      MOVE div.btn-row "  ": at 0,168.2 -> 0,201.8 in its parent
+  [7] footer.site-footer.on-ink  (537.8 -> 537.8px)  1 change(s)
+      MOVE wbr: at -1072.3,-3007.3 -> -1072.3,-3039.2 in its parent
+process__1440__light: page 2709 -> 2709px, 2 band(s) changed
+  [2] section.page-head  (383.8 -> 383.8px)  1 change(s), 1 width-only
+  [4] section.cta-band.on-blue  (612.4 -> 612.4px)  4 change(s)
+      SIZE div.cta-copy "   ": 758.3x224.2 -> 758.3x257.8
+      MOVE div.cta-copy "   ": at 0,38.1 -> 0,21.3 in its parent
+      SIZE p "Thirty minutes, no pitch. ": 714x67.2 -> 651x100.8
+      MOVE div.btn-row "  ": at 0,168.2 -> 0,201.8 in its parent
+pricing__1440__light: page 5988 -> 5988px, 4 band(s) changed
+  [2] section.page-head  (516.1 -> 516.1px)  1 change(s), 1 width-only
+  [3] section#pricing.section.section-first  (1629.4 -> 1629.4px)  10 change(s), 6 width-only
+      SIZE div.reveal.visible "    ": 580x476.4 -> 580x498.9
+      SIZE ul.pricelist "   ": 580x356.5 -> 580x379
+      SIZE li "  ": 580x103.5 -> 580x126
+      SIZE p "Enquiries land in your CRM": 510x22.5 -> 465x45
+  [4] section#consulting.section.section-sand  (1392 -> 1392px)  8 change(s), 8 width-only
+  [6] section.cta-band.on-blue  (612.4 -> 612.4px)  4 change(s)
+      SIZE div.cta-copy "   ": 758.3x224.2 -> 758.3x257.8
+      MOVE div.cta-copy "   ": at 0,38.1 -> 0,21.3 in its parent
+      SIZE p "Thirty minutes, no pitch. ": 714x67.2 -> 651x100.8
+      MOVE div.btn-row "  ": at 0,168.2 -> 0,201.8 in its parent
+faq__1440__light: page 3009 -> 3036px, 4 band(s) changed
+  [2] section.page-head  (221 -> 221px)  1 change(s), 1 width-only
+  [3] section#faq.section.section-first  (1501.1 -> 1528.3px)  39 change(s), 14 width-only
+      SIZE section.section.section-first " ": 1440x1501.1 -> 1440x1528.3
+      SIZE div.container.split.split-sticky "  ": 1240x1317.1 -> 1240x1344.3
+      SIZE div.faq-groups "    ": 738.2x1317.1 -> 738.2x1344.3
+      SIZE section.faq-group "  ": 738.2x415.7 -> 738.2x442.9
+      SIZE div.faq "    ": 736x364.5 -> 736x391.7
+      SIZE details.faq-item "  ": 736x190.4 -> 736x217.6
+      ... 19 more
+  [4] section.cta-band.on-blue  (612.4 -> 612.4px)  1 change(s), 1 width-only
+  [5] footer.site-footer.on-ink  (537.8 -> 537.8px)  1 change(s)
+      MOVE wbr: at -1072.3,-2560.3 -> -1072.3,-2587.5 in its parent
+contact__1440__light: page 2253 -> 2253px, 1 band(s) changed
+  [2] section.page-head  (327.8 -> 327.8px)  1 change(s), 1 width-only
+about__1440__light: page 3755 -> 3836px, 5 band(s) changed
+  [2] section.page-head  (554.4 -> 554.4px)  1 change(s), 1 width-only
+  [3] section#about.section.section-first  (1024.4 -> 1024.4px)  5 change(s), 5 width-only
+  [4] section.section.section-tight.section-sand  (909.6 -> 991.2px)  15 change(s), 2 width-only
+      SIZE section.section.section-tight.section-sand " ": 1440x909.6 -> 1440x991.2
+      SIZE div.container "  ": 1240x728.4 -> 1240x810
+      SIZE ul.pricelist.terms.reveal "     ": 1240x619.4 -> 1240x701
+      SIZE li "  ": 1240x107.4 -> 1240x134.6
+      SIZE p "It depends on the package.": 578x54.4 -> 527x81.6
+      MOVE span.nowrap "7–10 days": at 0,30.2 -> 58.6,30.2 in its parent
+      ... 7 more
+  [5] section.cta-band.on-blue  (612.4 -> 612.4px)  4 change(s), 4 width-only
+  [6] footer.site-footer.on-ink  (537.8 -> 537.8px)  1 change(s)
+      MOVE wbr: at -1072.3,-3305.7 -> -1072.3,-3387.2 in its parent
+start__1440__light: page 4647 -> 4663px, 5 band(s) changed
+  [2] section.page-head  (669.6 -> 669.6px)  3 change(s), 3 width-only
+  [3] section#offer.section.section-first  (877 -> 877px)  9 change(s), 9 width-only
+  [4] section#work.section.section-tight.section-sand  (642.8 -> 642.8px)  1 change(s), 1 width-only
+  [5] section#pricing.section.section-tight  (919 -> 934.5px)  10 change(s), 2 width-only
+      SIZE section.section.section-tight " ": 1440x919 -> 1440x934.5
+      SIZE div.container " ": 1240x739.8 -> 1240x755.3
+      SIZE div.board.on-blue "    ": 1240x739.8 -> 1240x755.3
+      STYLE div.board.on-blue "    "::before: pseudo28: 723.766px -> 739.266px
+      SIZE div.board-foot "  ": 1120x52 -> 1120x67.5
+      SIZE p "Payment plans are availabl": 510x45 -> 465x67.5
+      ... 2 more
+  [7] section#contact.cta-band.on-blue  (621 -> 621px)  6 change(s), 5 width-only
+      MOVE span.nowrap "you hire us.": at 467.1,37.6 -> 514,37.6 in its parent
+web-design-baton-rouge__1440__light: page 5734 -> 5760px, 6 band(s) changed
+  [3] section#intro.section.section-first  (510.6 -> 510.6px)  4 change(s), 1 width-only
+      SIZE div.prose "  ": 578x260.7 -> 527x287.9
+      SIZE p "Baton Rouge is our home ba": 578x108.8 -> 527x135.9
+      MOVE p "Whether your customers fin": at 0,124.8 -> 0,151.9 in its parent
+  [4] section#pricing.section.section-sand  (1072.4 -> 1072.4px)  1 change(s), 1 width-only
+  [6] section#local-work.section.section-sand  (944.5 -> 944.5px)  1 change(s), 1 width-only
+  [7] section#questions.section.section-tight  (353.3 -> 353.3px)  6 change(s), 6 width-only
+  [8] section.cta-band.on-blue  (612.4 -> 638.8px)  7 change(s), 1 width-only
+      SIZE section.cta-band.on-blue " ": 1440x612.4 -> 1440x638.8
+      SIZE div.container.cta-inner "  ": 1240x300.4 -> 1240x326.8
+      SIZE div.cta-copy "    ": 770.1x293.2 -> 770.1x326.8
+      MOVE div.cta-copy "    ": at 0,3.6 -> 0,0 in its parent
+      SIZE p "Thirty minutes, no pitch —": 714x67.2 -> 651x100.8
+      MOVE div.btn-row "  ": at 0,168.2 -> 0,201.8 in its parent
+  [9] footer.site-footer.on-ink  (537.8 -> 537.8px)  1 change(s)
+      MOVE wbr: at -1072.3,-5284.5 -> -1072.3,-5310.9 in its parent
+web-design-denham-springs__1440__light: page 5663 -> 5727px, 6 band(s) changed
+  [3] section#intro.section.section-first  (481.1 -> 481.1px)  4 change(s), 1 width-only
+      SIZE div.prose "  ": 578x206.3 -> 527x233.5
+      MOVE span.nowrap "I-12": at 99.4,57.4 -> 148.4,57.4 in its parent
+      SIZE p "From the shops of the Anti": 578x81.6 -> 527x108.8
+  [4] section#pricing.section.section-sand  (1063 -> 1094.9px)  8 change(s)
+      SIZE section.section.section-sand " ": 1440x1063 -> 1440x1094.9
+      SIZE div.container " ": 1240x805 -> 1240x836.9
+      SIZE div.board.on-blue "    ": 1240x805 -> 1240x836.9
+      STYLE div.board.on-blue "    "::before: pseudo28: 788.984px -> 820.891px
+      SIZE header.board-head " ": 1120x100.9 -> 1120x132.8
+      SIZE div "  ": 1072x100.9 -> 1072x132.8
+      ... 2 more
+  [6] section#local-work.section.section-sand  (910.3 -> 942.2px)  5 change(s)
+      SIZE section.section.section-sand " ": 1440x910.3 -> 1440x942.2
+      SIZE div.container "  ": 1240x652.3 -> 1240x684.2
+      SIZE header.section-head "  ": 736x185.8 -> 736x217.7
+      SIZE p.section-sub "Smilys Softwash cleans roo": 714x63.8 -> 651x95.7
+      MOVE article.split.split-even "  ": at 0,241.8 -> 0,273.7 in its parent
+  [7] section#questions.section.section-tight  (377.9 -> 377.9px)  7 change(s), 4 width-only
+      SIZE div.faq-body: 578x78.4 -> 527x105.6
+      SIZE p "Yes — Walker, Watson, Livi": 578x54.4 -> 527x81.6
+      MOVE span.nowrap "2–4 weeks": at 68.6,30.2 -> 138.7,30.2 in its parent
+  [8] section.cta-band.on-blue  (658.2 -> 658.2px)  2 change(s), 2 width-only
+  [9] footer.site-footer.on-ink  (537.8 -> 537.8px)  1 change(s)
+      MOVE wbr: at -1072.3,-5214.4 -> -1072.3,-5278.2 in its parent
+web-design-gonzales__1440__light: page 5554 -> 5580px, 6 band(s) changed
+  [3] section#intro.section.section-first  (481.1 -> 481.1px)  4 change(s), 1 width-only
+      SIZE div.prose "  ": 578x260.7 -> 527x287.9
+      SIZE p "Gonzales sits on between B": 578x135.9 -> 527x163.1
+      MOVE p "Whether you run a shop on ": at 0,151.9 -> 0,179.1 in its parent
+  [4] section#pricing.section.section-sand  (1072.4 -> 1072.4px)  1 change(s), 1 width-only
+  [6] section#local-work.section.section-sand  (889.2 -> 889.2px)  1 change(s), 1 width-only
+  [7] section#questions.section.section-tight  (353.3 -> 353.3px)  6 change(s), 6 width-only
+  [8] section.cta-band.on-blue  (612.4 -> 638.8px)  7 change(s), 1 width-only
+      SIZE section.cta-band.on-blue " ": 1440x612.4 -> 1440x638.8
+      SIZE div.container.cta-inner "  ": 1240x300.4 -> 1240x326.8
+      SIZE div.cta-copy "    ": 759.5x293.2 -> 759.5x326.8
+      MOVE div.cta-copy "    ": at 0,3.6 -> 0,0 in its parent
+      SIZE p "Book the free 30-minute ca": 714x67.2 -> 651x100.8
+      MOVE div.btn-row "  ": at 0,168.2 -> 0,201.8 in its parent
+  [9] footer.site-footer.on-ink  (537.8 -> 537.8px)  1 change(s)
+      MOVE wbr: at -1072.3,-5105.1 -> -1072.3,-5131.5 in its parent
+web-design-prairieville__1440__light: page 5670 -> 5670px, 5 band(s) changed
+  [3] section#intro.section.section-first  (481.1 -> 481.1px)  4 change(s), 3 width-only
+      MOVE strong "are": at 244.9,84.6 -> 377.5,84.6 in its parent
+  [4] section#pricing.section.section-sand  (1072.4 -> 1072.4px)  1 change(s), 1 width-only
+  [6] section#local-work.section.section-sand  (944.5 -> 944.5px)  1 change(s), 1 width-only
+  [7] section#questions.section.section-tight  (353.3 -> 353.3px)  6 change(s), 4 width-only
+      SIZE div.faq-body: 578x105.6 -> 527x132.8
+      SIZE p "Often, yes. Starter is an ": 578x81.6 -> 527x108.8
+  [8] section.cta-band.on-blue  (612.4 -> 612.4px)  2 change(s), 2 width-only
+privacy__1440__light: page 3470 -> 3551px, 3 band(s) changed
+  [2] section.page-head  (359.7 -> 359.7px)  1 change(s), 1 width-only
+  [3] section#privacy.section.section-first  (2315.3 -> 2396.9px)  33 change(s), 22 width-only
+      SIZE section.section.section-first " ": 1440x2315.3 -> 1440x2396.9
+      SIZE div.container.split.split-sticky "  ": 1240x2131.3 -> 1240x2212.9
+      SIZE div.prose "                         ": 578x2131.3 -> 527x2212.9
+      SIZE p "When you send the form on ": 578x135.9 -> 527x163.1
+      MOVE a "Web3Forms": at 97.6,84.6 -> 223.4,84.6 in its parent
+      SIZE p "We use it for one thing: r": 578x81.6 -> 527x108.8
+      ... 5 more
+  [4] footer.site-footer.on-ink  (537.8 -> 537.8px)  1 change(s)
+      MOVE wbr: at -1072.3,-3020.8 -> -1072.3,-3102.3 in its parent
+terms__1440__light: page 3650 -> 3840px, 3 band(s) changed
+  [2] section.page-head  (327.8 -> 327.8px)  1 change(s), 1 width-only
+  [3] section#terms.section.section-first  (2527.4 -> 2717.7px)  36 change(s), 22 width-only
+      SIZE section.section.section-first " ": 1440x2527.4 -> 1440x2717.7
+      SIZE div.container.split.split-sticky "  ": 1240x2343.4 -> 1240x2533.7
+      SIZE div.prose "                         ": 578x2343.4 -> 527x2533.7
+      SIZE p "This page sums up, in plai": 578x81.6 -> 527x108.8
+      MOVE h2 "Standard payment terms": at 0,163.8 -> 0,190.9 in its parent
+      MOVE b.display "50%": at 74.4,56.4 -> 151.7,56.4 in its parent
+      ... 8 more
+  [4] footer.site-footer.on-ink  (537.8 -> 537.8px)  1 change(s)
+      MOVE wbr: at -1072.3,-3200.9 -> -1072.3,-3391.2 in its parent
+checkout__1440__light: page 1493 -> 1493px, 2 band(s) changed
+  [2] section.page-head  (252.9 -> 252.9px)  1 change(s), 1 width-only
+  [3] section#checkout.section.section-first  (445.4 -> 445.4px)  1 change(s), 1 width-only
+checkout_success__1440__light: page 1635 -> 1635px, 2 band(s) changed
+  [2] section.page-head  (252.9 -> 252.9px)  1 change(s), 1 width-only
+  [3] section#checkout-success.section.section-first  (587.8 -> 587.8px)  2 change(s), 2 width-only
+404.html__1440__light: page 1062 -> 1062px, 0 band(s) changed
+
+227 changed band(s) in all

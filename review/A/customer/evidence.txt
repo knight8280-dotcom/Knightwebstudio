@@ -1,0 +1,52 @@
+
+/ @390x844  page height 11912px = 14.1 screens
+    9448px  screen 12.2  79% down  p 18px  who: "I'm Christian Knight"
+    1422px  screen  2.7  12% down  span 15px  own: "You own everything" (facts shelf)
+    8856px  screen 11.5  74% down  dt 17px  care row on board
+    6745px  screen  9.0  57% down  h2 31px  process heading
+     624px  screen  1.7  5% down  span 15px  price strip
+
+/start/ @390x844  page height 6134px = 7.3 screens
+     140px  screen  1.2  2% down  p 13px  who (eyebrow)
+     336px  screen  1.4  5% down  span 18px  own (lede)
+    2290px  screen  3.7  37% down  p 15px  first plain description of the "systems"
+     741px  screen  1.9  12% down  span 15px  "Automations that run while you work"
+
+/consulting/ @390x844  page height 13936px = 16.5 screens
+     281px  screen  1.3  2% down  p 18px  lede promise
+     451px  screen  1.5  3% down  a 17px  hero CTA
+    8460px  screen 11.0  61% down  a 17px  first "Ask for the free check" action
+    8606px  screen 11.2  62% down  p 15px  what a Growth Audit is
+   10805px  screen 13.8  78% down  p 15px  cancel line
+
+/pricing/ @390x844  page height 10378px = 12.3 screens
+    6885px  screen  9.2  66% down  h2 31px  care heading
+    6933px  screen  9.2  67% down  p 18px  care intro
+    7580px  screen 10.0  73% down  a 16px  first Start plan (checkout)
+    8522px  screen 11.1  82% down  li 17px  cancel line
+
+/ @1280x800  page height 9045px = 11.3 screens
+    7475px  screen 10.3  83% down  p 21px  who: "I'm Christian Knight"
+     844px  screen  2.1  9% down  span 15px  own: "You own everything" (facts shelf)
+    6803px  screen  9.5  75% down  dt 17px  care row on board
+    5268px  screen  7.6  58% down  h2 50px  process heading
+     658px  screen  1.8  7% down  span 15px  price strip
+
+/start/ @1280x800  page height 4625px = 5.8 screens
+     172px  screen  1.2  4% down  p 13px  who (eyebrow)
+     462px  screen  1.6  10% down  span 21px  own (lede)
+    1343px  screen  2.7  29% down  p 15px  first plain description of the "systems"
+     723px  screen  1.9  16% down  span 15px  "Automations that run while you work"
+
+/consulting/ @1280x800  page height 9925px = 12.4 screens
+     363px  screen  1.5  4% down  p 21px  lede promise
+     491px  screen  1.6  5% down  a 17px  hero CTA
+    5662px  screen  8.1  57% down  a 17px  first "Ask for the free check" action
+    5826px  screen  8.3  59% down  p 15px  what a Growth Audit is
+    7668px  screen 10.6  77% down  p 15px  cancel line
+
+/pricing/ @1280x800  page height 5946px = 7.4 screens
+    3870px  screen  5.8  65% down  h2 50px  care heading
+    3763px  screen  5.7  63% down  p 21px  care intro
+    4135px  screen  6.2  70% down  a 15px  first Start plan (checkout)
+    4574px  screen  6.7  77% down  li 17px  cancel line

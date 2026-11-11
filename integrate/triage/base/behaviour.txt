@@ -1,0 +1,68 @@
+PASS  theme: light by default
+PASS  theme: toggle label says what it will do
+PASS  theme: toggle switches to dark
+PASS  theme: label flips
+PASS  theme: choice saved
+PASS  theme: browser colour follows
+PASS  theme: page is actually dark
+PASS  theme: persists on the next page
+PASS  theme: toggles back to light
+PASS  theme: a device set to dark gets night with no saved choice
+PASS  header: year is current
+PASS  header: phone number is real text, a tel: link
+PASS  header: at the top the phone number is in the strip only, not printed twice
+PASS  header: the button books the free call
+PASS  top strip: city and tap-to-call
+PASS  header: scrolled state after scrolling
+PASS  header: phone number shows at 1440 once the strip has scrolled away
+PASS  header: reading line moves
+PASS  booking: every [data-booking] opens the calendar in a new tab
+PASS  analytics: Plausible script queued
+PASS  desktop: no phone bar
+PASS  menu: closed at first
+PASS  phone bar: hidden on the first screen
+PASS  menu: opens
+PASS  menu: page behind is locked and inert
+PASS  menu: focus moves to the first link
+PASS  menu: the top strip stays in view above the sheet
+PASS  menu: Call button is real text
+PASS  menu: every target is at least 44px tall
+PASS  menu: Tab stays inside the header while open
+PASS  menu: Escape closes and returns focus to the button
+PASS  menu: a link navigates and the menu is closed on arrival
+PASS  menu: current page is marked
+PASS  phone bar: shows after the first screen
+PASS  phone bar: labelled Call (tel:) beside the booking button, 50px or taller
+PASS  phone bar: steps aside over the footer
+PASS  menu on a short screen (375x667): the list scrolls under the header, not through it
+PASS  menu: reopens at the top of its list
+PASS  focus: no tab stop on /pricing/ lands under the phone bar at 390px (33 stops)
+PASS  focus: no tab stop on /pricing/ lands under the phone bar at 820px (35 stops)
+PASS  late script: if main.js never starts, every reveal block is shown after four seconds
+PASS  contact: ?package= preselects the package
+PASS  contact: booking box is revealed
+PASS  contact: no phone bar on this page
+PASS  contact: empty submit is stopped and says why
+PASS  contact: bad fields are marked for everyone
+PASS  contact: focus moves to the first bad field
+PASS  contact: focused field shows a real ring (2px or more)
+PASS  contact: email format is checked
+PASS  contact: draft saved as you type
+PASS  contact: draft restored after a reload
+PASS  contact: captcha is requested only once the form is used
+PASS  contact: sends to Web3Forms with the hidden fields
+PASS  contact: success message, form cleared, draft cleared
+PASS  calculator: default results match the page
+PASS  calculator: results follow the inputs
+PASS  checkout: inline script runs and reports its state
+PASS  checkout: no phone bar
+PASS  checkout success: page and its script load
+PASS  /start/: no menu, booking button in the header
+PASS  404: loads no script, shows the top strip and a way home
+PASS  no script: menu links sit in the page
+PASS  no script: dead buttons are hidden
+PASS  no script: nothing is faded out
+PASS  no script: a device set to dark still gets night (stylesheet only)
+PASS  no console or page errors in any test
+
+all behaviour checks passed

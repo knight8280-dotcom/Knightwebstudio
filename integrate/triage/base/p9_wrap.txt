@@ -1,0 +1,26 @@
+normal          320   header 92px nothing sticks out
+normal          360   header 64px nothing sticks out
+normal          390   header 64px nothing sticks out
+   menu opens with the fix at 390: visible
+normal          820   header 64px nothing sticks out
+normal          1280  header 72px nothing sticks out
+root 125%       320   header 98px nothing sticks out
+root 125%       360   header 98px nothing sticks out
+root 125%       390   header 98px nothing sticks out
+root 125%       820   header 64px nothing sticks out
+root 125%       1280  header 98px nothing sticks out
+root 150%       320   header 108px nothing sticks out
+root 150%       360   header 108px nothing sticks out
+root 150%       390   header 108px nothing sticks out
+root 150%       820   header 64px nothing sticks out
+root 150%       1280  header 109px nothing sticks out
+root 200%       320   header 128px STICKS OUT: brand+65 topTel+60
+root 200%       360   header 128px STICKS OUT: brand+25 topTel+20
+root 200%       390   header 128px STICKS OUT: brand+51 topTel+30
+root 200%       820   header 80px nothing sticks out
+root 200%       1280  header 196px nothing sticks out
+1.4.12 spacing  320   header 92px nothing sticks out
+1.4.12 spacing  360   header 92px nothing sticks out
+1.4.12 spacing  390   header 92px nothing sticks out
+1.4.12 spacing  820   header 64px nothing sticks out
+1.4.12 spacing  1280  header 92px nothing sticks out

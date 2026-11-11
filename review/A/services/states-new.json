@@ -1,0 +1,4060 @@
+{
+ "co-noplan__m390-light": {
+  "m": {
+   "theme": "light",
+   "overflowX": 0,
+   "pageH": 2072,
+   "h1": "Secure checkout",
+   "lede": "Pay your project deposit or start a care plan. Payments are processed securely by Stripe — we never see or store your card or bank details.",
+   "status": {
+    "text": "Choose a package on the pricing page to start checkout. See pricing",
+    "cls": "status error",
+    "visible": true,
+    "rect": [
+     41,
+     455,
+     308,
+     51
+    ],
+    "color": "rgb(168, 60, 38)",
+    "bg": "rgb(255, 252, 245)"
+   },
+   "card": [
+    20,
+    400,
+    350,
+    127
+   ],
+   "form": [
+    41,
+    506,
+    308,
+    0
+   ],
+   "formIframes": 0,
+   "receiptVisible": false,
+   "noscriptShown": "inline",
+   "statusLink": {
+    "href": "/pricing/",
+    "rect": [
+     244,
+     483,
+     87,
+     20
+    ]
+   }
+  },
+  "file": "shots/states/new__co-noplan__m390-light.png",
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "You may test your Stripe.js integration over HTTP. However, live Stripe.js integrations must use HTTPS."
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "co-noplan__m390-dark": {
+  "m": {
+   "theme": "dark",
+   "overflowX": 0,
+   "pageH": 2072,
+   "h1": "Secure checkout",
+   "lede": "Pay your project deposit or start a care plan. Payments are processed securely by Stripe — we never see or store your card or bank details.",
+   "status": {
+    "text": "Choose a package on the pricing page to start checkout. See pricing",
+    "cls": "status error",
+    "visible": true,
+    "rect": [
+     41,
+     455,
+     308,
+     51
+    ],
+    "color": "rgb(168, 60, 38)",
+    "bg": "rgb(255, 252, 245)"
+   },
+   "card": [
+    20,
+    400,
+    350,
+    127
+   ],
+   "form": [
+    41,
+    506,
+    308,
+    0
+   ],
+   "formIframes": 0,
+   "receiptVisible": false,
+   "noscriptShown": "inline",
+   "statusLink": {
+    "href": "/pricing/",
+    "rect": [
+     244,
+     483,
+     87,
+     20
+    ]
+   }
+  },
+  "file": "shots/states/new__co-noplan__m390-dark.png",
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "You may test your Stripe.js integration over HTTP. However, live Stripe.js integrations must use HTTPS."
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "co-noplan__d1280-light": {
+  "m": {
+   "theme": "light",
+   "overflowX": 0,
+   "pageH": 1460,
+   "h1": "Secure checkout",
+   "lede": "Pay your project deposit or start a care plan. Payments are processed securely by Stripe — we never see or store your card or bank details.",
+   "status": {
+    "text": "Choose a package on the pricing page to start checkout. See pricing",
+    "cls": "status error",
+    "visible": true,
+    "rect": [
+     81,
+     505,
+     527,
+     51
+    ],
+    "color": "rgb(168, 60, 38)",
+    "bg": "rgb(255, 252, 245)"
+   },
+   "card": [
+    48,
+    438,
+    646,
+    151
+   ],
+   "form": [
+    81,
+    556,
+    580,
+    0
+   ],
+   "formIframes": 0,
+   "receiptVisible": false,
+   "noscriptShown": "inline",
+   "statusLink": {
+    "href": "/pricing/",
+    "rect": [
+     100,
+     507,
+     469,
+     46
+    ]
+   }
+  },
+  "file": "shots/states/new__co-noplan__d1280-light.png",
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "You may test your Stripe.js integration over HTTP. However, live Stripe.js integrations must use HTTPS."
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "co-noplan__d1280-dark": {
+  "m": {
+   "theme": "dark",
+   "overflowX": 0,
+   "pageH": 1460,
+   "h1": "Secure checkout",
+   "lede": "Pay your project deposit or start a care plan. Payments are processed securely by Stripe — we never see or store your card or bank details.",
+   "status": {
+    "text": "Choose a package on the pricing page to start checkout. See pricing",
+    "cls": "status error",
+    "visible": true,
+    "rect": [
+     81,
+     505,
+     527,
+     51
+    ],
+    "color": "rgb(168, 60, 38)",
+    "bg": "rgb(255, 252, 245)"
+   },
+   "card": [
+    48,
+    438,
+    646,
+    151
+   ],
+   "form": [
+    81,
+    556,
+    580,
+    0
+   ],
+   "formIframes": 0,
+   "receiptVisible": false,
+   "noscriptShown": "inline",
+   "statusLink": {
+    "href": "/pricing/",
+    "rect": [
+     100,
+     507,
+     469,
+     46
+    ]
+   }
+  },
+  "file": "shots/states/new__co-noplan__d1280-dark.png",
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "You may test your Stripe.js integration over HTTP. However, live Stripe.js integrations must use HTTPS."
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "co-badregex__m390-light": {
+  "m": {
+   "theme": "light",
+   "overflowX": 0,
+   "pageH": 2072,
+   "h1": "Secure checkout",
+   "lede": "Pay your project deposit or start a care plan. Payments are processed securely by Stripe — we never see or store your card or bank details.",
+   "status": {
+    "text": "Choose a package on the pricing page to start checkout. See pricing",
+    "cls": "status error",
+    "visible": true,
+    "rect": [
+     41,
+     455,
+     308,
+     51
+    ],
+    "color": "rgb(168, 60, 38)",
+    "bg": "rgb(255, 252, 245)"
+   },
+   "card": [
+    20,
+    400,
+    350,
+    127
+   ],
+   "form": [
+    41,
+    506,
+    308,
+    0
+   ],
+   "formIframes": 0,
+   "receiptVisible": false,
+   "noscriptShown": "inline",
+   "statusLink": {
+    "href": "/pricing/",
+    "rect": [
+     244,
+     483,
+     87,
+     20
+    ]
+   }
+  },
+  "file": "shots/states/new__co-badregex__m390-light.png",
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "You may test your Stripe.js integration over HTTP. However, live Stripe.js integrations must use HTTPS."
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "co-badregex__m390-dark": {
+  "m": {
+   "theme": "dark",
+   "overflowX": 0,
+   "pageH": 2072,
+   "h1": "Secure checkout",
+   "lede": "Pay your project deposit or start a care plan. Payments are processed securely by Stripe — we never see or store your card or bank details.",
+   "status": {
+    "text": "Choose a package on the pricing page to start checkout. See pricing",
+    "cls": "status error",
+    "visible": true,
+    "rect": [
+     41,
+     455,
+     308,
+     51
+    ],
+    "color": "rgb(168, 60, 38)",
+    "bg": "rgb(255, 252, 245)"
+   },
+   "card": [
+    20,
+    400,
+    350,
+    127
+   ],
+   "form": [
+    41,
+    506,
+    308,
+    0
+   ],
+   "formIframes": 0,
+   "receiptVisible": false,
+   "noscriptShown": "inline",
+   "statusLink": {
+    "href": "/pricing/",
+    "rect": [
+     244,
+     483,
+     87,
+     20
+    ]
+   }
+  },
+  "file": "shots/states/new__co-badregex__m390-dark.png",
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "You may test your Stripe.js integration over HTTP. However, live Stripe.js integrations must use HTTPS."
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "co-badregex__d1280-light": {
+  "m": {
+   "theme": "light",
+   "overflowX": 0,
+   "pageH": 1460,
+   "h1": "Secure checkout",
+   "lede": "Pay your project deposit or start a care plan. Payments are processed securely by Stripe — we never see or store your card or bank details.",
+   "status": {
+    "text": "Choose a package on the pricing page to start checkout. See pricing",
+    "cls": "status error",
+    "visible": true,
+    "rect": [
+     81,
+     505,
+     527,
+     51
+    ],
+    "color": "rgb(168, 60, 38)",
+    "bg": "rgb(255, 252, 245)"
+   },
+   "card": [
+    48,
+    438,
+    646,
+    151
+   ],
+   "form": [
+    81,
+    556,
+    580,
+    0
+   ],
+   "formIframes": 0,
+   "receiptVisible": false,
+   "noscriptShown": "inline",
+   "statusLink": {
+    "href": "/pricing/",
+    "rect": [
+     100,
+     507,
+     469,
+     46
+    ]
+   }
+  },
+  "file": "shots/states/new__co-badregex__d1280-light.png",
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "You may test your Stripe.js integration over HTTP. However, live Stripe.js integrations must use HTTPS."
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "co-badregex__d1280-dark": {
+  "m": {
+   "theme": "dark",
+   "overflowX": 0,
+   "pageH": 1460,
+   "h1": "Secure checkout",
+   "lede": "Pay your project deposit or start a care plan. Payments are processed securely by Stripe — we never see or store your card or bank details.",
+   "status": {
+    "text": "Choose a package on the pricing page to start checkout. See pricing",
+    "cls": "status error",
+    "visible": true,
+    "rect": [
+     81,
+     505,
+     527,
+     51
+    ],
+    "color": "rgb(168, 60, 38)",
+    "bg": "rgb(255, 252, 245)"
+   },
+   "card": [
+    48,
+    438,
+    646,
+    151
+   ],
+   "form": [
+    81,
+    556,
+    580,
+    0
+   ],
+   "formIframes": 0,
+   "receiptVisible": false,
+   "noscriptShown": "inline",
+   "statusLink": {
+    "href": "/pricing/",
+    "rect": [
+     100,
+     507,
+     469,
+     46
+    ]
+   }
+  },
+  "file": "shots/states/new__co-badregex__d1280-dark.png",
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "You may test your Stripe.js integration over HTTP. However, live Stripe.js integrations must use HTTPS."
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "co-unknownplan__m390-light": {
+  "m": {
+   "theme": "light",
+   "overflowX": 0,
+   "pageH": 2774,
+   "h1": "Secure checkout",
+   "lede": "Pay your project deposit or start a care plan. Payments are processed securely by Stripe — we never see or store your card or bank details.",
+   "status": {
+    "text": "Checkout could not be loaded. Please try again shortly, or email knightwebstudio1@gmail.com.",
+    "cls": "status error",
+    "visible": true,
+    "rect": [
+     41,
+     455,
+     308,
+     77
+    ],
+    "color": "rgb(168, 60, 38)",
+    "bg": "rgb(255, 252, 245)"
+   },
+   "card": [
+    20,
+    400,
+    350,
+    829
+   ],
+   "form": [
+    41,
+    528,
+    308,
+    684
+   ],
+   "formIframes": 1,
+   "receiptVisible": false,
+   "noscriptShown": "inline",
+   "statusLink": null
+  },
+  "file": "shots/states/new__co-unknownplan__m390-light.png",
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "You may test your Stripe.js integration over HTTP. However, live Stripe.js integrations must use HTTPS."
+   },
+   {
+    "t": "response",
+    "status": 400,
+    "url": "https://knightwebstudio-checkout.onrender.com/api/create-checkout-session",
+    "type": "fetch"
+   },
+   {
+    "t": "console.error",
+    "text": "Failed to load resource: the server responded with a status of 400 (Bad Request)"
+   },
+   {
+    "t": "pageerror",
+    "text": "Error: Unknown plan: no-such-plan"
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   },
+   {
+    "t": "response",
+    "status": 429,
+    "url": "https://errors.stripe.com/api/11777/envelope/?sentry_version=7&sentry_key=ed32a93268c61e4c4a958d70ab82ab6a&sentry_client=sentry.javascript.browser%2F10.65.0",
+    "type": "fetch"
+   },
+   {
+    "t": "console.error",
+    "text": "Failed to load resource: the server responded with a status of 429 (Too Many Requests)"
+   },
+   {
+    "t": "console.error",
+    "text": "Failed to load resource: the server responded with a status of 400 (Bad Request)"
+   }
+  ]
+ },
+ "co-unknownplan__m390-dark": {
+  "m": {
+   "theme": "dark",
+   "overflowX": 0,
+   "pageH": 2774,
+   "h1": "Secure checkout",
+   "lede": "Pay your project deposit or start a care plan. Payments are processed securely by Stripe — we never see or store your card or bank details.",
+   "status": {
+    "text": "Checkout could not be loaded. Please try again shortly, or email knightwebstudio1@gmail.com.",
+    "cls": "status error",
+    "visible": true,
+    "rect": [
+     41,
+     455,
+     308,
+     77
+    ],
+    "color": "rgb(168, 60, 38)",
+    "bg": "rgb(255, 252, 245)"
+   },
+   "card": [
+    20,
+    400,
+    350,
+    829
+   ],
+   "form": [
+    41,
+    528,
+    308,
+    684
+   ],
+   "formIframes": 1,
+   "receiptVisible": false,
+   "noscriptShown": "inline",
+   "statusLink": null
+  },
+  "file": "shots/states/new__co-unknownplan__m390-dark.png",
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "You may test your Stripe.js integration over HTTP. However, live Stripe.js integrations must use HTTPS."
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   },
+   {
+    "t": "response",
+    "status": 400,
+    "url": "https://knightwebstudio-checkout.onrender.com/api/create-checkout-session",
+    "type": "fetch"
+   },
+   {
+    "t": "console.error",
+    "text": "Failed to load resource: the server responded with a status of 400 (Bad Request)"
+   },
+   {
+    "t": "pageerror",
+    "text": "Error: Unknown plan: no-such-plan"
+   },
+   {
+    "t": "response",
+    "status": 429,
+    "url": "https://errors.stripe.com/api/11777/envelope/?sentry_version=7&sentry_key=ed32a93268c61e4c4a958d70ab82ab6a&sentry_client=sentry.javascript.browser%2F10.65.0",
+    "type": "fetch"
+   },
+   {
+    "t": "console.error",
+    "text": "Failed to load resource: the server responded with a status of 429 (Too Many Requests)"
+   },
+   {
+    "t": "console.error",
+    "text": "Failed to load resource: the server responded with a status of 400 (Bad Request)"
+   }
+  ]
+ },
+ "co-unknownplan__d1280-light": {
+  "m": {
+   "theme": "light",
+   "overflowX": 0,
+   "pageH": 2025,
+   "h1": "Secure checkout",
+   "lede": "Pay your project deposit or start a care plan. Payments are processed securely by Stripe — we never see or store your card or bank details.",
+   "status": {
+    "text": "Checkout could not be loaded. Please try again shortly, or email knightwebstudio1@gmail.com.",
+    "cls": "status error",
+    "visible": true,
+    "rect": [
+     81,
+     505,
+     527,
+     51
+    ],
+    "color": "rgb(168, 60, 38)",
+    "bg": "rgb(255, 252, 245)"
+   },
+   "card": [
+    48,
+    438,
+    646,
+    827
+   ],
+   "form": [
+    81,
+    552,
+    580,
+    684
+   ],
+   "formIframes": 1,
+   "receiptVisible": false,
+   "noscriptShown": "inline",
+   "statusLink": null
+  },
+  "file": "shots/states/new__co-unknownplan__d1280-light.png",
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "You may test your Stripe.js integration over HTTP. However, live Stripe.js integrations must use HTTPS."
+   },
+   {
+    "t": "response",
+    "status": 400,
+    "url": "https://knightwebstudio-checkout.onrender.com/api/create-checkout-session",
+    "type": "fetch"
+   },
+   {
+    "t": "console.error",
+    "text": "Failed to load resource: the server responded with a status of 400 (Bad Request)"
+   },
+   {
+    "t": "pageerror",
+    "text": "Error: Unknown plan: no-such-plan"
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   },
+   {
+    "t": "response",
+    "status": 429,
+    "url": "https://errors.stripe.com/api/11777/envelope/?sentry_version=7&sentry_key=ed32a93268c61e4c4a958d70ab82ab6a&sentry_client=sentry.javascript.browser%2F10.65.0",
+    "type": "fetch"
+   },
+   {
+    "t": "console.error",
+    "text": "Failed to load resource: the server responded with a status of 429 (Too Many Requests)"
+   },
+   {
+    "t": "console.error",
+    "text": "Failed to load resource: the server responded with a status of 400 (Bad Request)"
+   }
+  ]
+ },
+ "co-unknownplan__d1280-dark": {
+  "m": {
+   "theme": "dark",
+   "overflowX": 0,
+   "pageH": 2025,
+   "h1": "Secure checkout",
+   "lede": "Pay your project deposit or start a care plan. Payments are processed securely by Stripe — we never see or store your card or bank details.",
+   "status": {
+    "text": "Checkout could not be loaded. Please try again shortly, or email knightwebstudio1@gmail.com.",
+    "cls": "status error",
+    "visible": true,
+    "rect": [
+     81,
+     505,
+     527,
+     51
+    ],
+    "color": "rgb(168, 60, 38)",
+    "bg": "rgb(255, 252, 245)"
+   },
+   "card": [
+    48,
+    438,
+    646,
+    827
+   ],
+   "form": [
+    81,
+    552,
+    580,
+    684
+   ],
+   "formIframes": 1,
+   "receiptVisible": false,
+   "noscriptShown": "inline",
+   "statusLink": null
+  },
+  "file": "shots/states/new__co-unknownplan__d1280-dark.png",
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "You may test your Stripe.js integration over HTTP. However, live Stripe.js integrations must use HTTPS."
+   },
+   {
+    "t": "response",
+    "status": 400,
+    "url": "https://knightwebstudio-checkout.onrender.com/api/create-checkout-session",
+    "type": "fetch"
+   },
+   {
+    "t": "console.error",
+    "text": "Failed to load resource: the server responded with a status of 400 (Bad Request)"
+   },
+   {
+    "t": "pageerror",
+    "text": "Error: Unknown plan: no-such-plan"
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   },
+   {
+    "t": "response",
+    "status": 429,
+    "url": "https://errors.stripe.com/api/11777/envelope/?sentry_version=7&sentry_key=ed32a93268c61e4c4a958d70ab82ab6a&sentry_client=sentry.javascript.browser%2F10.65.0",
+    "type": "fetch"
+   },
+   {
+    "t": "console.error",
+    "text": "Failed to load resource: the server responded with a status of 429 (Too Many Requests)"
+   },
+   {
+    "t": "console.error",
+    "text": "Failed to load resource: the server responded with a status of 400 (Bad Request)"
+   }
+  ]
+ },
+ "co-stripeblocked__m390-light": {
+  "m": {
+   "theme": "light",
+   "overflowX": 0,
+   "pageH": 2149,
+   "h1": "Secure checkout",
+   "lede": "Pay your project deposit or start a care plan. Payments are processed securely by Stripe — we never see or store your card or bank details.",
+   "status": {
+    "text": "Secure checkout could not load. If you use an ad or content blocker, allow js.stripe.com and refresh the page, or email knightwebstudio1@gmail.com.",
+    "cls": "status error",
+    "visible": true,
+    "rect": [
+     41,
+     455,
+     308,
+     128
+    ],
+    "color": "rgb(168, 60, 38)",
+    "bg": "rgb(255, 252, 245)"
+   },
+   "card": [
+    20,
+    400,
+    350,
+    204
+   ],
+   "form": [
+    41,
+    583,
+    308,
+    0
+   ],
+   "formIframes": 0,
+   "receiptVisible": false,
+   "noscriptShown": "inline",
+   "statusLink": null
+  },
+  "file": "shots/states/new__co-stripeblocked__m390-light.png",
+  "log": [
+   {
+    "t": "requestfailed",
+    "url": "https://js.stripe.com/dahlia/stripe.js",
+    "err": "net::ERR_FAILED"
+   },
+   {
+    "t": "console.error",
+    "text": "Failed to load resource: net::ERR_FAILED"
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "co-stripeblocked__m390-dark": {
+  "m": {
+   "theme": "dark",
+   "overflowX": 0,
+   "pageH": 2149,
+   "h1": "Secure checkout",
+   "lede": "Pay your project deposit or start a care plan. Payments are processed securely by Stripe — we never see or store your card or bank details.",
+   "status": {
+    "text": "Secure checkout could not load. If you use an ad or content blocker, allow js.stripe.com and refresh the page, or email knightwebstudio1@gmail.com.",
+    "cls": "status error",
+    "visible": true,
+    "rect": [
+     41,
+     455,
+     308,
+     128
+    ],
+    "color": "rgb(168, 60, 38)",
+    "bg": "rgb(255, 252, 245)"
+   },
+   "card": [
+    20,
+    400,
+    350,
+    204
+   ],
+   "form": [
+    41,
+    583,
+    308,
+    0
+   ],
+   "formIframes": 0,
+   "receiptVisible": false,
+   "noscriptShown": "inline",
+   "statusLink": null
+  },
+  "file": "shots/states/new__co-stripeblocked__m390-dark.png",
+  "log": [
+   {
+    "t": "requestfailed",
+    "url": "https://js.stripe.com/dahlia/stripe.js",
+    "err": "net::ERR_FAILED"
+   },
+   {
+    "t": "console.error",
+    "text": "Failed to load resource: net::ERR_FAILED"
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "co-stripeblocked__d1280-light": {
+  "m": {
+   "theme": "light",
+   "overflowX": 0,
+   "pageH": 1460,
+   "h1": "Secure checkout",
+   "lede": "Pay your project deposit or start a care plan. Payments are processed securely by Stripe — we never see or store your card or bank details.",
+   "status": {
+    "text": "Secure checkout could not load. If you use an ad or content blocker, allow js.stripe.com and refresh the page, or email knightwebstudio1@gmail.com.",
+    "cls": "status error",
+    "visible": true,
+    "rect": [
+     81,
+     505,
+     527,
+     77
+    ],
+    "color": "rgb(168, 60, 38)",
+    "bg": "rgb(255, 252, 245)"
+   },
+   "card": [
+    48,
+    438,
+    646,
+    177
+   ],
+   "form": [
+    81,
+    581,
+    580,
+    0
+   ],
+   "formIframes": 0,
+   "receiptVisible": false,
+   "noscriptShown": "inline",
+   "statusLink": null
+  },
+  "file": "shots/states/new__co-stripeblocked__d1280-light.png",
+  "log": [
+   {
+    "t": "requestfailed",
+    "url": "https://js.stripe.com/dahlia/stripe.js",
+    "err": "net::ERR_FAILED"
+   },
+   {
+    "t": "console.error",
+    "text": "Failed to load resource: net::ERR_FAILED"
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "co-stripeblocked__d1280-dark": {
+  "m": {
+   "theme": "dark",
+   "overflowX": 0,
+   "pageH": 1460,
+   "h1": "Secure checkout",
+   "lede": "Pay your project deposit or start a care plan. Payments are processed securely by Stripe — we never see or store your card or bank details.",
+   "status": {
+    "text": "Secure checkout could not load. If you use an ad or content blocker, allow js.stripe.com and refresh the page, or email knightwebstudio1@gmail.com.",
+    "cls": "status error",
+    "visible": true,
+    "rect": [
+     81,
+     505,
+     527,
+     77
+    ],
+    "color": "rgb(168, 60, 38)",
+    "bg": "rgb(255, 252, 245)"
+   },
+   "card": [
+    48,
+    438,
+    646,
+    177
+   ],
+   "form": [
+    81,
+    581,
+    580,
+    0
+   ],
+   "formIframes": 0,
+   "receiptVisible": false,
+   "noscriptShown": "inline",
+   "statusLink": null
+  },
+  "file": "shots/states/new__co-stripeblocked__d1280-dark.png",
+  "log": [
+   {
+    "t": "requestfailed",
+    "url": "https://js.stripe.com/dahlia/stripe.js",
+    "err": "net::ERR_FAILED"
+   },
+   {
+    "t": "console.error",
+    "text": "Failed to load resource: net::ERR_FAILED"
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "co-serverdown__m390-light": {
+  "m": {
+   "theme": "light",
+   "overflowX": 0,
+   "pageH": 2981,
+   "h1": "Secure checkout",
+   "lede": "Pay your project deposit or start a care plan. Payments are processed securely by Stripe — we never see or store your card or bank details.",
+   "status": {
+    "text": "Checkout could not be loaded. Please try again shortly, or email knightwebstudio1@gmail.com.",
+    "cls": "status error",
+    "visible": true,
+    "rect": [
+     41,
+     662,
+     308,
+     77
+    ],
+    "color": "rgb(168, 60, 38)",
+    "bg": "rgb(255, 252, 245)"
+   },
+   "card": [
+    20,
+    607,
+    350,
+    829
+   ],
+   "form": [
+    41,
+    734,
+    308,
+    684
+   ],
+   "formIframes": 1,
+   "receiptVisible": true,
+   "noscriptShown": "inline",
+   "statusLink": null
+  },
+  "file": "shots/states/new__co-serverdown__m390-light.png",
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "You may test your Stripe.js integration over HTTP. However, live Stripe.js integrations must use HTTPS."
+   },
+   {
+    "t": "requestfailed",
+    "url": "https://knightwebstudio-checkout.onrender.com/api/create-checkout-session",
+    "err": "net::ERR_FAILED"
+   },
+   {
+    "t": "console.error",
+    "text": "Failed to load resource: net::ERR_FAILED"
+   },
+   {
+    "t": "pageerror",
+    "text": "TypeError: Failed to fetch"
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   },
+   {
+    "t": "response",
+    "status": 429,
+    "url": "https://errors.stripe.com/api/11777/envelope/?sentry_version=7&sentry_key=ed32a93268c61e4c4a958d70ab82ab6a&sentry_client=sentry.javascript.browser%2F10.65.0",
+    "type": "fetch"
+   },
+   {
+    "t": "console.error",
+    "text": "Failed to load resource: the server responded with a status of 429 (Too Many Requests)"
+   },
+   {
+    "t": "console.error",
+    "text": "Failed to load resource: net::ERR_FAILED"
+   }
+  ]
+ },
+ "co-serverdown__m390-dark": {
+  "m": {
+   "theme": "dark",
+   "overflowX": 0,
+   "pageH": 2981,
+   "h1": "Secure checkout",
+   "lede": "Pay your project deposit or start a care plan. Payments are processed securely by Stripe — we never see or store your card or bank details.",
+   "status": {
+    "text": "Checkout could not be loaded. Please try again shortly, or email knightwebstudio1@gmail.com.",
+    "cls": "status error",
+    "visible": true,
+    "rect": [
+     41,
+     662,
+     308,
+     77
+    ],
+    "color": "rgb(168, 60, 38)",
+    "bg": "rgb(255, 252, 245)"
+   },
+   "card": [
+    20,
+    607,
+    350,
+    829
+   ],
+   "form": [
+    41,
+    734,
+    308,
+    684
+   ],
+   "formIframes": 1,
+   "receiptVisible": true,
+   "noscriptShown": "inline",
+   "statusLink": null
+  },
+  "file": "shots/states/new__co-serverdown__m390-dark.png",
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "You may test your Stripe.js integration over HTTP. However, live Stripe.js integrations must use HTTPS."
+   },
+   {
+    "t": "requestfailed",
+    "url": "https://knightwebstudio-checkout.onrender.com/api/create-checkout-session",
+    "err": "net::ERR_FAILED"
+   },
+   {
+    "t": "console.error",
+    "text": "Failed to load resource: net::ERR_FAILED"
+   },
+   {
+    "t": "pageerror",
+    "text": "TypeError: Failed to fetch"
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   },
+   {
+    "t": "response",
+    "status": 429,
+    "url": "https://errors.stripe.com/api/11777/envelope/?sentry_version=7&sentry_key=ed32a93268c61e4c4a958d70ab82ab6a&sentry_client=sentry.javascript.browser%2F10.65.0",
+    "type": "fetch"
+   },
+   {
+    "t": "console.error",
+    "text": "Failed to load resource: the server responded with a status of 429 (Too Many Requests)"
+   },
+   {
+    "t": "console.error",
+    "text": "Failed to load resource: net::ERR_FAILED"
+   }
+  ]
+ },
+ "co-serverdown__d1280-light": {
+  "m": {
+   "theme": "light",
+   "overflowX": 0,
+   "pageH": 2025,
+   "h1": "Secure checkout",
+   "lede": "Pay your project deposit or start a care plan. Payments are processed securely by Stripe — we never see or store your card or bank details.",
+   "status": {
+    "text": "Checkout could not be loaded. Please try again shortly, or email knightwebstudio1@gmail.com.",
+    "cls": "status error",
+    "visible": true,
+    "rect": [
+     81,
+     505,
+     527,
+     51
+    ],
+    "color": "rgb(168, 60, 38)",
+    "bg": "rgb(255, 252, 245)"
+   },
+   "card": [
+    48,
+    438,
+    646,
+    827
+   ],
+   "form": [
+    81,
+    552,
+    580,
+    684
+   ],
+   "formIframes": 1,
+   "receiptVisible": true,
+   "noscriptShown": "inline",
+   "statusLink": null
+  },
+  "file": "shots/states/new__co-serverdown__d1280-light.png",
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "You may test your Stripe.js integration over HTTP. However, live Stripe.js integrations must use HTTPS."
+   },
+   {
+    "t": "requestfailed",
+    "url": "https://knightwebstudio-checkout.onrender.com/api/create-checkout-session",
+    "err": "net::ERR_FAILED"
+   },
+   {
+    "t": "console.error",
+    "text": "Failed to load resource: net::ERR_FAILED"
+   },
+   {
+    "t": "pageerror",
+    "text": "TypeError: Failed to fetch"
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   },
+   {
+    "t": "console.error",
+    "text": "Failed to load resource: net::ERR_FAILED"
+   }
+  ]
+ },
+ "co-serverdown__d1280-dark": {
+  "m": {
+   "theme": "dark",
+   "overflowX": 0,
+   "pageH": 2025,
+   "h1": "Secure checkout",
+   "lede": "Pay your project deposit or start a care plan. Payments are processed securely by Stripe — we never see or store your card or bank details.",
+   "status": {
+    "text": "Checkout could not be loaded. Please try again shortly, or email knightwebstudio1@gmail.com.",
+    "cls": "status error",
+    "visible": true,
+    "rect": [
+     81,
+     505,
+     527,
+     51
+    ],
+    "color": "rgb(168, 60, 38)",
+    "bg": "rgb(255, 252, 245)"
+   },
+   "card": [
+    48,
+    438,
+    646,
+    827
+   ],
+   "form": [
+    81,
+    552,
+    580,
+    684
+   ],
+   "formIframes": 1,
+   "receiptVisible": true,
+   "noscriptShown": "inline",
+   "statusLink": null
+  },
+  "file": "shots/states/new__co-serverdown__d1280-dark.png",
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "You may test your Stripe.js integration over HTTP. However, live Stripe.js integrations must use HTTPS."
+   },
+   {
+    "t": "requestfailed",
+    "url": "https://knightwebstudio-checkout.onrender.com/api/create-checkout-session",
+    "err": "net::ERR_FAILED"
+   },
+   {
+    "t": "console.error",
+    "text": "Failed to load resource: net::ERR_FAILED"
+   },
+   {
+    "t": "pageerror",
+    "text": "TypeError: Failed to fetch"
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   },
+   {
+    "t": "response",
+    "status": 429,
+    "url": "https://errors.stripe.com/api/11777/envelope/?sentry_version=7&sentry_key=ed32a93268c61e4c4a958d70ab82ab6a&sentry_client=sentry.javascript.browser%2F10.65.0",
+    "type": "fetch"
+   },
+   {
+    "t": "console.error",
+    "text": "Failed to load resource: the server responded with a status of 429 (Too Many Requests)"
+   },
+   {
+    "t": "console.error",
+    "text": "Failed to load resource: net::ERR_FAILED"
+   }
+  ]
+ },
+ "co-serverslow__m390-light": {
+  "m": {
+   "theme": "light",
+   "overflowX": 0,
+   "pageH": 2958,
+   "h1": "Secure checkout",
+   "lede": "Pay your project deposit or start a care plan. Payments are processed securely by Stripe — we never see or store your card or bank details.",
+   "status": {
+    "text": "Waking up secure checkout. The first load can take up to a minute.",
+    "cls": "status",
+    "visible": true,
+    "rect": [
+     41,
+     662,
+     308,
+     54
+    ],
+    "color": "rgb(26, 34, 56)",
+    "bg": "rgb(255, 252, 245)"
+   },
+   "card": [
+    20,
+    607,
+    350,
+    807
+   ],
+   "form": [
+    41,
+    712,
+    308,
+    684
+   ],
+   "formIframes": 1,
+   "receiptVisible": true,
+   "noscriptShown": "inline",
+   "statusLink": null
+  },
+  "file": "shots/states/new__co-serverslow__m390-light.png",
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "You may test your Stripe.js integration over HTTP. However, live Stripe.js integrations must use HTTPS."
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "co-serverslow__m390-dark": {
+  "m": {
+   "theme": "dark",
+   "overflowX": 0,
+   "pageH": 2958,
+   "h1": "Secure checkout",
+   "lede": "Pay your project deposit or start a care plan. Payments are processed securely by Stripe — we never see or store your card or bank details.",
+   "status": {
+    "text": "Waking up secure checkout. The first load can take up to a minute.",
+    "cls": "status",
+    "visible": true,
+    "rect": [
+     41,
+     662,
+     308,
+     54
+    ],
+    "color": "rgb(26, 34, 56)",
+    "bg": "rgb(255, 252, 245)"
+   },
+   "card": [
+    20,
+    607,
+    350,
+    807
+   ],
+   "form": [
+    41,
+    712,
+    308,
+    684
+   ],
+   "formIframes": 1,
+   "receiptVisible": true,
+   "noscriptShown": "inline",
+   "statusLink": null
+  },
+  "file": "shots/states/new__co-serverslow__m390-dark.png",
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "You may test your Stripe.js integration over HTTP. However, live Stripe.js integrations must use HTTPS."
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "co-serverslow__d1280-light": {
+  "m": {
+   "theme": "light",
+   "overflowX": 0,
+   "pageH": 2001,
+   "h1": "Secure checkout",
+   "lede": "Pay your project deposit or start a care plan. Payments are processed securely by Stripe — we never see or store your card or bank details.",
+   "status": {
+    "text": "Waking up secure checkout. The first load can take up to a minute.",
+    "cls": "status",
+    "visible": true,
+    "rect": [
+     81,
+     505,
+     527,
+     27
+    ],
+    "color": "rgb(26, 34, 56)",
+    "bg": "rgb(255, 252, 245)"
+   },
+   "card": [
+    48,
+    438,
+    646,
+    803
+   ],
+   "form": [
+    81,
+    528,
+    580,
+    684
+   ],
+   "formIframes": 1,
+   "receiptVisible": true,
+   "noscriptShown": "inline",
+   "statusLink": null
+  },
+  "file": "shots/states/new__co-serverslow__d1280-light.png",
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "You may test your Stripe.js integration over HTTP. However, live Stripe.js integrations must use HTTPS."
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "co-serverslow__d1280-dark": {
+  "m": {
+   "theme": "dark",
+   "overflowX": 0,
+   "pageH": 2001,
+   "h1": "Secure checkout",
+   "lede": "Pay your project deposit or start a care plan. Payments are processed securely by Stripe — we never see or store your card or bank details.",
+   "status": {
+    "text": "Waking up secure checkout. The first load can take up to a minute.",
+    "cls": "status",
+    "visible": true,
+    "rect": [
+     81,
+     505,
+     527,
+     27
+    ],
+    "color": "rgb(26, 34, 56)",
+    "bg": "rgb(255, 252, 245)"
+   },
+   "card": [
+    48,
+    438,
+    646,
+    803
+   ],
+   "form": [
+    81,
+    528,
+    580,
+    684
+   ],
+   "formIframes": 1,
+   "receiptVisible": true,
+   "noscriptShown": "inline",
+   "statusLink": null
+  },
+  "file": "shots/states/new__co-serverslow__d1280-dark.png",
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "You may test your Stripe.js integration over HTTP. However, live Stripe.js integrations must use HTTPS."
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "co-nojs__m390-light": {
+  "m": {
+   "theme": "auto",
+   "overflowX": 0,
+   "pageH": 2203,
+   "h1": "Secure checkout",
+   "lede": "Pay your project deposit or start a care plan. Payments are processed securely by Stripe — we never see or store your card or bank details.",
+   "status": {
+    "text": "Loading secure checkout…",
+    "cls": "status",
+    "visible": false,
+    "rect": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "color": "rgb(26, 34, 56)",
+    "bg": "rgb(255, 252, 245)"
+   },
+   "card": [
+    20,
+    480,
+    350,
+    178
+   ],
+   "form": [
+    41,
+    637,
+    308,
+    0
+   ],
+   "formIframes": 0,
+   "receiptVisible": false,
+   "noscriptShown": "inline",
+   "statusLink": null
+  },
+  "file": "shots/states/new__co-nojs__m390-light.png",
+  "log": []
+ },
+ "co-nojs__m390-dark": {
+  "m": {
+   "theme": "auto",
+   "overflowX": 0,
+   "pageH": 2203,
+   "h1": "Secure checkout",
+   "lede": "Pay your project deposit or start a care plan. Payments are processed securely by Stripe — we never see or store your card or bank details.",
+   "status": {
+    "text": "Loading secure checkout…",
+    "cls": "status",
+    "visible": false,
+    "rect": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "color": "rgb(26, 34, 56)",
+    "bg": "rgb(255, 252, 245)"
+   },
+   "card": [
+    20,
+    480,
+    350,
+    178
+   ],
+   "form": [
+    41,
+    637,
+    308,
+    0
+   ],
+   "formIframes": 0,
+   "receiptVisible": false,
+   "noscriptShown": "inline",
+   "statusLink": null
+  },
+  "file": "shots/states/new__co-nojs__m390-dark.png",
+  "log": []
+ },
+ "co-nojs__d1280-light": {
+  "m": {
+   "theme": "auto",
+   "overflowX": 0,
+   "pageH": 1460,
+   "h1": "Secure checkout",
+   "lede": "Pay your project deposit or start a care plan. Payments are processed securely by Stripe — we never see or store your card or bank details.",
+   "status": {
+    "text": "Loading secure checkout…",
+    "cls": "status",
+    "visible": false,
+    "rect": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "color": "rgb(26, 34, 56)",
+    "bg": "rgb(255, 252, 245)"
+   },
+   "card": [
+    48,
+    438,
+    646,
+    151
+   ],
+   "form": [
+    81,
+    556,
+    580,
+    0
+   ],
+   "formIframes": 0,
+   "receiptVisible": false,
+   "noscriptShown": "inline",
+   "statusLink": null
+  },
+  "file": "shots/states/new__co-nojs__d1280-light.png",
+  "log": []
+ },
+ "co-nojs__d1280-dark": {
+  "m": {
+   "theme": "auto",
+   "overflowX": 0,
+   "pageH": 1460,
+   "h1": "Secure checkout",
+   "lede": "Pay your project deposit or start a care plan. Payments are processed securely by Stripe — we never see or store your card or bank details.",
+   "status": {
+    "text": "Loading secure checkout…",
+    "cls": "status",
+    "visible": false,
+    "rect": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "color": "rgb(26, 34, 56)",
+    "bg": "rgb(255, 252, 245)"
+   },
+   "card": [
+    48,
+    438,
+    646,
+    151
+   ],
+   "form": [
+    81,
+    556,
+    580,
+    0
+   ],
+   "formIframes": 0,
+   "receiptVisible": false,
+   "noscriptShown": "inline",
+   "statusLink": null
+  },
+  "file": "shots/states/new__co-nojs__d1280-dark.png",
+  "log": []
+ },
+ "ok-plain__m390-light": {
+  "m": {
+   "theme": "light",
+   "overflowX": 0,
+   "pageH": 2218,
+   "h1": "Thank you",
+   "lede": "If your payment went through, Stripe will email your receipt within a few minutes.",
+   "status": {
+    "text": "Confirming your payment with Stripe…",
+    "cls": "status till-side",
+    "visible": false,
+    "rect": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "color": "rgb(26, 34, 56)",
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   "receiptVisible": false,
+   "receipt": " | ",
+   "stepsProject": true,
+   "stepsCare": false,
+   "next": true,
+   "book": {
+    "vis": true,
+    "text": "Schedule your kickoff call",
+    "href": "https://calendly.com/knightwebstudio1/30min",
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   "retry": {
+    "vis": false,
+    "text": "Return to checkout",
+    "href": "/pricing/"
+   },
+   "buttons": [
+    "Schedule your kickoff call@20,711,350,56",
+    "Back to the homepage@20,779,350,56"
+   ]
+  },
+  "file": "shots/states/new__ok-plain__m390-light.png",
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "ok-plain__m390-dark": {
+  "m": {
+   "theme": "dark",
+   "overflowX": 0,
+   "pageH": 2218,
+   "h1": "Thank you",
+   "lede": "If your payment went through, Stripe will email your receipt within a few minutes.",
+   "status": {
+    "text": "Confirming your payment with Stripe…",
+    "cls": "status till-side",
+    "visible": false,
+    "rect": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "color": "rgb(243, 236, 221)",
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   "receiptVisible": false,
+   "receipt": " | ",
+   "stepsProject": true,
+   "stepsCare": false,
+   "next": true,
+   "book": {
+    "vis": true,
+    "text": "Schedule your kickoff call",
+    "href": "https://calendly.com/knightwebstudio1/30min",
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   "retry": {
+    "vis": false,
+    "text": "Return to checkout",
+    "href": "/pricing/"
+   },
+   "buttons": [
+    "Schedule your kickoff call@20,711,350,56",
+    "Back to the homepage@20,779,350,56"
+   ]
+  },
+  "file": "shots/states/new__ok-plain__m390-dark.png",
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "ok-plain__d1280-light": {
+  "m": {
+   "theme": "light",
+   "overflowX": 0,
+   "pageH": 1602,
+   "h1": "Thank you",
+   "lede": "If your payment went through, Stripe will email your receipt within a few minutes.",
+   "status": {
+    "text": "Confirming your payment with Stripe…",
+    "cls": "status till-side",
+    "visible": false,
+    "rect": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "color": "rgb(26, 34, 56)",
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   "receiptVisible": false,
+   "receipt": " | ",
+   "stepsProject": true,
+   "stepsCare": false,
+   "next": true,
+   "book": {
+    "vis": true,
+    "text": "Schedule your kickoff call",
+    "href": "https://calendly.com/knightwebstudio1/30min",
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   "retry": {
+    "vis": false,
+    "text": "Return to checkout",
+    "href": "/pricing/"
+   },
+   "buttons": [
+    "Schedule your kickoff call@48,785,267,56",
+    "Back to the homepage@327,785,241,56"
+   ]
+  },
+  "file": "shots/states/new__ok-plain__d1280-light.png",
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "ok-plain__d1280-dark": {
+  "m": {
+   "theme": "dark",
+   "overflowX": 0,
+   "pageH": 1602,
+   "h1": "Thank you",
+   "lede": "If your payment went through, Stripe will email your receipt within a few minutes.",
+   "status": {
+    "text": "Confirming your payment with Stripe…",
+    "cls": "status till-side",
+    "visible": false,
+    "rect": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "color": "rgb(243, 236, 221)",
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   "receiptVisible": false,
+   "receipt": " | ",
+   "stepsProject": true,
+   "stepsCare": false,
+   "next": true,
+   "book": {
+    "vis": true,
+    "text": "Schedule your kickoff call",
+    "href": "https://calendly.com/knightwebstudio1/30min",
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   "retry": {
+    "vis": false,
+    "text": "Return to checkout",
+    "href": "/pricing/"
+   },
+   "buttons": [
+    "Schedule your kickoff call@48,785,267,56",
+    "Back to the homepage@327,785,241,56"
+   ]
+  },
+  "file": "shots/states/new__ok-plain__d1280-dark.png",
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "ok-plan-deposit__m390-light": {
+  "m": {
+   "theme": "light",
+   "overflowX": 0,
+   "pageH": 2425,
+   "h1": "Thank you",
+   "lede": "If your payment went through, Stripe will email your receipt within a few minutes.",
+   "status": {
+    "text": "Confirming your payment with Stripe…",
+    "cls": "status till-side",
+    "visible": false,
+    "rect": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "color": "rgb(26, 34, 56)",
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   "receiptVisible": true,
+   "receipt": "Business website — 50% deposit | $2,000",
+   "stepsProject": true,
+   "stepsCare": false,
+   "next": true,
+   "book": {
+    "vis": true,
+    "text": "Schedule your kickoff call",
+    "href": "https://calendly.com/knightwebstudio1/30min",
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   "retry": {
+    "vis": false,
+    "text": "Return to checkout",
+    "href": "/pricing/"
+   },
+   "buttons": [
+    "Schedule your kickoff call@20,918,350,56",
+    "Back to the homepage@20,986,350,56"
+   ]
+  },
+  "file": "shots/states/new__ok-plan-deposit__m390-light.png",
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "ok-plan-deposit__m390-dark": {
+  "m": {
+   "theme": "dark",
+   "overflowX": 0,
+   "pageH": 2425,
+   "h1": "Thank you",
+   "lede": "If your payment went through, Stripe will email your receipt within a few minutes.",
+   "status": {
+    "text": "Confirming your payment with Stripe…",
+    "cls": "status till-side",
+    "visible": false,
+    "rect": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "color": "rgb(243, 236, 221)",
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   "receiptVisible": true,
+   "receipt": "Business website — 50% deposit | $2,000",
+   "stepsProject": true,
+   "stepsCare": false,
+   "next": true,
+   "book": {
+    "vis": true,
+    "text": "Schedule your kickoff call",
+    "href": "https://calendly.com/knightwebstudio1/30min",
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   "retry": {
+    "vis": false,
+    "text": "Return to checkout",
+    "href": "/pricing/"
+   },
+   "buttons": [
+    "Schedule your kickoff call@20,918,350,56",
+    "Back to the homepage@20,986,350,56"
+   ]
+  },
+  "file": "shots/states/new__ok-plan-deposit__m390-dark.png",
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "ok-plan-deposit__d1280-light": {
+  "m": {
+   "theme": "light",
+   "overflowX": 0,
+   "pageH": 1602,
+   "h1": "Thank you",
+   "lede": "If your payment went through, Stripe will email your receipt within a few minutes.",
+   "status": {
+    "text": "Confirming your payment with Stripe…",
+    "cls": "status till-side",
+    "visible": false,
+    "rect": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "color": "rgb(26, 34, 56)",
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   "receiptVisible": true,
+   "receipt": "Business website — 50% deposit | $2,000",
+   "stepsProject": true,
+   "stepsCare": false,
+   "next": true,
+   "book": {
+    "vis": true,
+    "text": "Schedule your kickoff call",
+    "href": "https://calendly.com/knightwebstudio1/30min",
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   "retry": {
+    "vis": false,
+    "text": "Return to checkout",
+    "href": "/pricing/"
+   },
+   "buttons": [
+    "Schedule your kickoff call@48,785,267,56",
+    "Back to the homepage@327,785,241,56"
+   ]
+  },
+  "file": "shots/states/new__ok-plan-deposit__d1280-light.png",
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "ok-plan-deposit__d1280-dark": {
+  "m": {
+   "theme": "dark",
+   "overflowX": 0,
+   "pageH": 1602,
+   "h1": "Thank you",
+   "lede": "If your payment went through, Stripe will email your receipt within a few minutes.",
+   "status": {
+    "text": "Confirming your payment with Stripe…",
+    "cls": "status till-side",
+    "visible": false,
+    "rect": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "color": "rgb(243, 236, 221)",
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   "receiptVisible": true,
+   "receipt": "Business website — 50% deposit | $2,000",
+   "stepsProject": true,
+   "stepsCare": false,
+   "next": true,
+   "book": {
+    "vis": true,
+    "text": "Schedule your kickoff call",
+    "href": "https://calendly.com/knightwebstudio1/30min",
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   "retry": {
+    "vis": false,
+    "text": "Return to checkout",
+    "href": "/pricing/"
+   },
+   "buttons": [
+    "Schedule your kickoff call@48,785,267,56",
+    "Back to the homepage@327,785,241,56"
+   ]
+  },
+  "file": "shots/states/new__ok-plan-deposit__d1280-dark.png",
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "ok-plan-care__m390-light": {
+  "m": {
+   "theme": "light",
+   "overflowX": 0,
+   "pageH": 2385,
+   "h1": "Thank you",
+   "lede": "If your payment went through, Stripe will email your receipt within a few minutes.",
+   "status": {
+    "text": "Confirming your payment with Stripe…",
+    "cls": "status till-side",
+    "visible": false,
+    "rect": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "color": "rgb(26, 34, 56)",
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   "receiptVisible": true,
+   "receipt": "Essential care plan | $300/month",
+   "stepsProject": false,
+   "stepsCare": true,
+   "next": true,
+   "book": {
+    "vis": true,
+    "text": "Book a call",
+    "href": "https://calendly.com/knightwebstudio1/30min",
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   "retry": {
+    "vis": false,
+    "text": "Return to checkout",
+    "href": "/pricing/"
+   },
+   "buttons": [
+    "Book a call@20,879,350,56",
+    "Back to the homepage@20,947,350,56"
+   ]
+  },
+  "file": "shots/states/new__ok-plan-care__m390-light.png",
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "ok-plan-care__m390-dark": {
+  "m": {
+   "theme": "dark",
+   "overflowX": 0,
+   "pageH": 2385,
+   "h1": "Thank you",
+   "lede": "If your payment went through, Stripe will email your receipt within a few minutes.",
+   "status": {
+    "text": "Confirming your payment with Stripe…",
+    "cls": "status till-side",
+    "visible": false,
+    "rect": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "color": "rgb(243, 236, 221)",
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   "receiptVisible": true,
+   "receipt": "Essential care plan | $300/month",
+   "stepsProject": false,
+   "stepsCare": true,
+   "next": true,
+   "book": {
+    "vis": true,
+    "text": "Book a call",
+    "href": "https://calendly.com/knightwebstudio1/30min",
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   "retry": {
+    "vis": false,
+    "text": "Return to checkout",
+    "href": "/pricing/"
+   },
+   "buttons": [
+    "Book a call@20,879,350,56",
+    "Back to the homepage@20,947,350,56"
+   ]
+  },
+  "file": "shots/states/new__ok-plan-care__m390-dark.png",
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "ok-plan-care__d1280-light": {
+  "m": {
+   "theme": "light",
+   "overflowX": 0,
+   "pageH": 1590,
+   "h1": "Thank you",
+   "lede": "If your payment went through, Stripe will email your receipt within a few minutes.",
+   "status": {
+    "text": "Confirming your payment with Stripe…",
+    "cls": "status till-side",
+    "visible": false,
+    "rect": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "color": "rgb(26, 34, 56)",
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   "receiptVisible": true,
+   "receipt": "Essential care plan | $300/month",
+   "stepsProject": false,
+   "stepsCare": true,
+   "next": true,
+   "book": {
+    "vis": true,
+    "text": "Book a call",
+    "href": "https://calendly.com/knightwebstudio1/30min",
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   "retry": {
+    "vis": false,
+    "text": "Return to checkout",
+    "href": "/pricing/"
+   },
+   "buttons": [
+    "Book a call@48,773,149,56",
+    "Back to the homepage@209,773,241,56"
+   ]
+  },
+  "file": "shots/states/new__ok-plan-care__d1280-light.png",
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "ok-plan-care__d1280-dark": {
+  "m": {
+   "theme": "dark",
+   "overflowX": 0,
+   "pageH": 1590,
+   "h1": "Thank you",
+   "lede": "If your payment went through, Stripe will email your receipt within a few minutes.",
+   "status": {
+    "text": "Confirming your payment with Stripe…",
+    "cls": "status till-side",
+    "visible": false,
+    "rect": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "color": "rgb(243, 236, 221)",
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   "receiptVisible": true,
+   "receipt": "Essential care plan | $300/month",
+   "stepsProject": false,
+   "stepsCare": true,
+   "next": true,
+   "book": {
+    "vis": true,
+    "text": "Book a call",
+    "href": "https://calendly.com/knightwebstudio1/30min",
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   "retry": {
+    "vis": false,
+    "text": "Return to checkout",
+    "href": "/pricing/"
+   },
+   "buttons": [
+    "Book a call@48,773,149,56",
+    "Back to the homepage@209,773,241,56"
+   ]
+  },
+  "file": "shots/states/new__ok-plan-care__d1280-dark.png",
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "ok-real-notcompleted__m390-light": {
+  "m": {
+   "theme": "light",
+   "overflowX": 0,
+   "pageH": 1908,
+   "h1": "Your payment wasn’t completed",
+   "lede": "No payment was taken. You can return to checkout and try again, or get in touch if something went wrong.",
+   "status": {
+    "text": "Confirming your payment with Stripe…",
+    "cls": "status till-side",
+    "visible": false,
+    "rect": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "color": "rgb(26, 34, 56)",
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   "receiptVisible": false,
+   "receipt": "Starter website — 50% deposit | $1,000",
+   "stepsProject": false,
+   "stepsCare": false,
+   "next": false,
+   "book": {
+    "vis": false,
+    "text": "Schedule your kickoff call",
+    "href": "https://calendly.com/knightwebstudio1/30min",
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   "retry": {
+    "vis": true,
+    "text": "Return to checkout",
+    "href": "/checkout/?plan=starter-deposit"
+   },
+   "buttons": [
+    "Return to checkout@20,401,350,56",
+    "Back to the homepage@20,469,350,56"
+   ]
+  },
+  "file": "shots/states/new__ok-real-notcompleted__m390-light.png",
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   },
+   {
+    "t": "response",
+    "status": 200,
+    "url": "https://knightwebstudio-checkout.onrender.com/api/session-status?session_id=cs_live_a0J6vZS0j5519GOc5gmTJQXdBx5Eru2JLMkO3AgI48kjAAFSrbiryD2FlB",
+    "type": "fetch"
+   }
+  ]
+ },
+ "ok-real-notcompleted__m390-dark": {
+  "m": {
+   "theme": "dark",
+   "overflowX": 0,
+   "pageH": 1908,
+   "h1": "Your payment wasn’t completed",
+   "lede": "No payment was taken. You can return to checkout and try again, or get in touch if something went wrong.",
+   "status": {
+    "text": "Confirming your payment with Stripe…",
+    "cls": "status till-side",
+    "visible": false,
+    "rect": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "color": "rgb(243, 236, 221)",
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   "receiptVisible": false,
+   "receipt": "Starter website — 50% deposit | $1,000",
+   "stepsProject": false,
+   "stepsCare": false,
+   "next": false,
+   "book": {
+    "vis": false,
+    "text": "Schedule your kickoff call",
+    "href": "https://calendly.com/knightwebstudio1/30min",
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   "retry": {
+    "vis": true,
+    "text": "Return to checkout",
+    "href": "/checkout/?plan=starter-deposit"
+   },
+   "buttons": [
+    "Return to checkout@20,401,350,56",
+    "Back to the homepage@20,469,350,56"
+   ]
+  },
+  "file": "shots/states/new__ok-real-notcompleted__m390-dark.png",
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   },
+   {
+    "t": "response",
+    "status": 200,
+    "url": "https://knightwebstudio-checkout.onrender.com/api/session-status?session_id=cs_live_a0J6vZS0j5519GOc5gmTJQXdBx5Eru2JLMkO3AgI48kjAAFSrbiryD2FlB",
+    "type": "fetch"
+   }
+  ]
+ },
+ "ok-real-notcompleted__d1280-light": {
+  "m": {
+   "theme": "light",
+   "overflowX": 0,
+   "pageH": 1356,
+   "h1": "Your payment wasn’t completed",
+   "lede": "No payment was taken. You can return to checkout and try again, or get in touch if something went wrong.",
+   "status": {
+    "text": "Confirming your payment with Stripe…",
+    "cls": "status till-side",
+    "visible": false,
+    "rect": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "color": "rgb(26, 34, 56)",
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   "receiptVisible": false,
+   "receipt": "Starter website — 50% deposit | $1,000",
+   "stepsProject": false,
+   "stepsCare": false,
+   "next": false,
+   "book": {
+    "vis": false,
+    "text": "Schedule your kickoff call",
+    "href": "https://calendly.com/knightwebstudio1/30min",
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   "retry": {
+    "vis": true,
+    "text": "Return to checkout",
+    "href": "/checkout/?plan=starter-deposit"
+   },
+   "buttons": [
+    "Return to checkout@48,438,216,56",
+    "Back to the homepage@276,438,241,56"
+   ]
+  },
+  "file": "shots/states/new__ok-real-notcompleted__d1280-light.png",
+  "log": [
+   {
+    "t": "response",
+    "status": 200,
+    "url": "https://knightwebstudio-checkout.onrender.com/api/session-status?session_id=cs_live_a0J6vZS0j5519GOc5gmTJQXdBx5Eru2JLMkO3AgI48kjAAFSrbiryD2FlB",
+    "type": "fetch"
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "ok-real-notcompleted__d1280-dark": {
+  "m": {
+   "theme": "dark",
+   "overflowX": 0,
+   "pageH": 1356,
+   "h1": "Your payment wasn’t completed",
+   "lede": "No payment was taken. You can return to checkout and try again, or get in touch if something went wrong.",
+   "status": {
+    "text": "Confirming your payment with Stripe…",
+    "cls": "status till-side",
+    "visible": false,
+    "rect": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "color": "rgb(243, 236, 221)",
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   "receiptVisible": false,
+   "receipt": "Starter website — 50% deposit | $1,000",
+   "stepsProject": false,
+   "stepsCare": false,
+   "next": false,
+   "book": {
+    "vis": false,
+    "text": "Schedule your kickoff call",
+    "href": "https://calendly.com/knightwebstudio1/30min",
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   "retry": {
+    "vis": true,
+    "text": "Return to checkout",
+    "href": "/checkout/?plan=starter-deposit"
+   },
+   "buttons": [
+    "Return to checkout@48,438,216,56",
+    "Back to the homepage@276,438,241,56"
+   ]
+  },
+  "file": "shots/states/new__ok-real-notcompleted__d1280-dark.png",
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   },
+   {
+    "t": "response",
+    "status": 200,
+    "url": "https://knightwebstudio-checkout.onrender.com/api/session-status?session_id=cs_live_a0J6vZS0j5519GOc5gmTJQXdBx5Eru2JLMkO3AgI48kjAAFSrbiryD2FlB",
+    "type": "fetch"
+   }
+  ]
+ },
+ "ok-real-notcompleted-care__m390-light": {
+  "m": {
+   "theme": "light",
+   "overflowX": 0,
+   "pageH": 1908,
+   "h1": "Your payment wasn’t completed",
+   "lede": "No payment was taken. You can return to checkout and try again, or get in touch if something went wrong.",
+   "status": {
+    "text": "Confirming your payment with Stripe…",
+    "cls": "status till-side",
+    "visible": false,
+    "rect": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "color": "rgb(26, 34, 56)",
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   "receiptVisible": false,
+   "receipt": "Growth care plan | $600/month",
+   "stepsProject": false,
+   "stepsCare": false,
+   "next": false,
+   "book": {
+    "vis": false,
+    "text": "Book a call",
+    "href": "https://calendly.com/knightwebstudio1/30min",
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   "retry": {
+    "vis": true,
+    "text": "Return to checkout",
+    "href": "/checkout/?plan=growth-care"
+   },
+   "buttons": [
+    "Return to checkout@20,401,350,56",
+    "Back to the homepage@20,469,350,56"
+   ]
+  },
+  "file": "shots/states/new__ok-real-notcompleted-care__m390-light.png",
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   },
+   {
+    "t": "response",
+    "status": 200,
+    "url": "https://knightwebstudio-checkout.onrender.com/api/session-status?session_id=cs_live_a06hoTXKduD65CXbFEKSjltzuhDk6eSRGXPXhpbwaTqRfNmuMiM0L4uZV6",
+    "type": "fetch"
+   }
+  ]
+ },
+ "ok-real-notcompleted-care__m390-dark": {
+  "m": {
+   "theme": "dark",
+   "overflowX": 0,
+   "pageH": 1908,
+   "h1": "Your payment wasn’t completed",
+   "lede": "No payment was taken. You can return to checkout and try again, or get in touch if something went wrong.",
+   "status": {
+    "text": "Confirming your payment with Stripe…",
+    "cls": "status till-side",
+    "visible": false,
+    "rect": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "color": "rgb(243, 236, 221)",
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   "receiptVisible": false,
+   "receipt": "Growth care plan | $600/month",
+   "stepsProject": false,
+   "stepsCare": false,
+   "next": false,
+   "book": {
+    "vis": false,
+    "text": "Book a call",
+    "href": "https://calendly.com/knightwebstudio1/30min",
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   "retry": {
+    "vis": true,
+    "text": "Return to checkout",
+    "href": "/checkout/?plan=growth-care"
+   },
+   "buttons": [
+    "Return to checkout@20,401,350,56",
+    "Back to the homepage@20,469,350,56"
+   ]
+  },
+  "file": "shots/states/new__ok-real-notcompleted-care__m390-dark.png",
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   },
+   {
+    "t": "response",
+    "status": 200,
+    "url": "https://knightwebstudio-checkout.onrender.com/api/session-status?session_id=cs_live_a06hoTXKduD65CXbFEKSjltzuhDk6eSRGXPXhpbwaTqRfNmuMiM0L4uZV6",
+    "type": "fetch"
+   }
+  ]
+ },
+ "ok-real-notcompleted-care__d1280-light": {
+  "m": {
+   "theme": "light",
+   "overflowX": 0,
+   "pageH": 1356,
+   "h1": "Your payment wasn’t completed",
+   "lede": "No payment was taken. You can return to checkout and try again, or get in touch if something went wrong.",
+   "status": {
+    "text": "Confirming your payment with Stripe…",
+    "cls": "status till-side",
+    "visible": false,
+    "rect": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "color": "rgb(26, 34, 56)",
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   "receiptVisible": false,
+   "receipt": "Growth care plan | $600/month",
+   "stepsProject": false,
+   "stepsCare": false,
+   "next": false,
+   "book": {
+    "vis": false,
+    "text": "Book a call",
+    "href": "https://calendly.com/knightwebstudio1/30min",
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   "retry": {
+    "vis": true,
+    "text": "Return to checkout",
+    "href": "/checkout/?plan=growth-care"
+   },
+   "buttons": [
+    "Return to checkout@48,438,216,56",
+    "Back to the homepage@276,438,241,56"
+   ]
+  },
+  "file": "shots/states/new__ok-real-notcompleted-care__d1280-light.png",
+  "log": [
+   {
+    "t": "response",
+    "status": 200,
+    "url": "https://knightwebstudio-checkout.onrender.com/api/session-status?session_id=cs_live_a06hoTXKduD65CXbFEKSjltzuhDk6eSRGXPXhpbwaTqRfNmuMiM0L4uZV6",
+    "type": "fetch"
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "ok-real-notcompleted-care__d1280-dark": {
+  "m": {
+   "theme": "dark",
+   "overflowX": 0,
+   "pageH": 1356,
+   "h1": "Your payment wasn’t completed",
+   "lede": "No payment was taken. You can return to checkout and try again, or get in touch if something went wrong.",
+   "status": {
+    "text": "Confirming your payment with Stripe…",
+    "cls": "status till-side",
+    "visible": false,
+    "rect": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "color": "rgb(243, 236, 221)",
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   "receiptVisible": false,
+   "receipt": "Growth care plan | $600/month",
+   "stepsProject": false,
+   "stepsCare": false,
+   "next": false,
+   "book": {
+    "vis": false,
+    "text": "Book a call",
+    "href": "https://calendly.com/knightwebstudio1/30min",
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   "retry": {
+    "vis": true,
+    "text": "Return to checkout",
+    "href": "/checkout/?plan=growth-care"
+   },
+   "buttons": [
+    "Return to checkout@48,438,216,56",
+    "Back to the homepage@276,438,241,56"
+   ]
+  },
+  "file": "shots/states/new__ok-real-notcompleted-care__d1280-dark.png",
+  "log": [
+   {
+    "t": "response",
+    "status": 200,
+    "url": "https://knightwebstudio-checkout.onrender.com/api/session-status?session_id=cs_live_a06hoTXKduD65CXbFEKSjltzuhDk6eSRGXPXhpbwaTqRfNmuMiM0L4uZV6",
+    "type": "fetch"
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "ok-real-unknownsession__m390-light": {
+  "m": {
+   "theme": "light",
+   "overflowX": 0,
+   "pageH": 2507,
+   "h1": "Thank you",
+   "lede": "We couldn’t confirm your payment automatically just now. If it went through, Stripe will email your receipt within a few minutes, and we’ll be in touch within one business day.",
+   "status": {
+    "text": "Confirming your payment with Stripe…",
+    "cls": "status till-side",
+    "visible": false,
+    "rect": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "color": "rgb(26, 34, 56)",
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   "receiptVisible": true,
+   "receipt": "Starter website — 50% deposit | $1,000",
+   "stepsProject": true,
+   "stepsCare": false,
+   "next": true,
+   "book": {
+    "vis": true,
+    "text": "Schedule your kickoff call",
+    "href": "https://calendly.com/knightwebstudio1/30min",
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   "retry": {
+    "vis": false,
+    "text": "Return to checkout",
+    "href": "/pricing/"
+   },
+   "buttons": [
+    "Schedule your kickoff call@20,1001,350,56",
+    "Back to the homepage@20,1069,350,56"
+   ]
+  },
+  "file": "shots/states/new__ok-real-unknownsession__m390-light.png",
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   },
+   {
+    "t": "response",
+    "status": 404,
+    "url": "https://knightwebstudio-checkout.onrender.com/api/session-status?session_id=cs_live_FAKEFAKEFAKEFAKE0000",
+    "type": "fetch"
+   },
+   {
+    "t": "console.error",
+    "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+   },
+   {
+    "t": "console.error",
+    "text": "Could not confirm the payment: Error: Status check responded 404\n    at http://localhost:8720/checkout/success/?plan=starter-deposit&session_id=cs_live_FAKEFAKEFAKEFAKE0000:311:33"
+   }
+  ]
+ },
+ "ok-real-unknownsession__m390-dark": {
+  "m": {
+   "theme": "dark",
+   "overflowX": 0,
+   "pageH": 2507,
+   "h1": "Thank you",
+   "lede": "We couldn’t confirm your payment automatically just now. If it went through, Stripe will email your receipt within a few minutes, and we’ll be in touch within one business day.",
+   "status": {
+    "text": "Confirming your payment with Stripe…",
+    "cls": "status till-side",
+    "visible": false,
+    "rect": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "color": "rgb(243, 236, 221)",
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   "receiptVisible": true,
+   "receipt": "Starter website — 50% deposit | $1,000",
+   "stepsProject": true,
+   "stepsCare": false,
+   "next": true,
+   "book": {
+    "vis": true,
+    "text": "Schedule your kickoff call",
+    "href": "https://calendly.com/knightwebstudio1/30min",
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   "retry": {
+    "vis": false,
+    "text": "Return to checkout",
+    "href": "/pricing/"
+   },
+   "buttons": [
+    "Schedule your kickoff call@20,1001,350,56",
+    "Back to the homepage@20,1069,350,56"
+   ]
+  },
+  "file": "shots/states/new__ok-real-unknownsession__m390-dark.png",
+  "log": [
+   {
+    "t": "response",
+    "status": 404,
+    "url": "https://knightwebstudio-checkout.onrender.com/api/session-status?session_id=cs_live_FAKEFAKEFAKEFAKE0000",
+    "type": "fetch"
+   },
+   {
+    "t": "console.error",
+    "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+   },
+   {
+    "t": "console.error",
+    "text": "Could not confirm the payment: Error: Status check responded 404\n    at http://localhost:8720/checkout/success/?plan=starter-deposit&session_id=cs_live_FAKEFAKEFAKEFAKE0000:311:33"
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "ok-real-unknownsession__d1280-light": {
+  "m": {
+   "theme": "light",
+   "overflowX": 0,
+   "pageH": 1634,
+   "h1": "Thank you",
+   "lede": "We couldn’t confirm your payment automatically just now. If it went through, Stripe will email your receipt within a few minutes, and we’ll be in touch within one business day.",
+   "status": {
+    "text": "Confirming your payment with Stripe…",
+    "cls": "status till-side",
+    "visible": false,
+    "rect": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "color": "rgb(26, 34, 56)",
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   "receiptVisible": true,
+   "receipt": "Starter website — 50% deposit | $1,000",
+   "stepsProject": true,
+   "stepsCare": false,
+   "next": true,
+   "book": {
+    "vis": true,
+    "text": "Schedule your kickoff call",
+    "href": "https://calendly.com/knightwebstudio1/30min",
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   "retry": {
+    "vis": false,
+    "text": "Return to checkout",
+    "href": "/pricing/"
+   },
+   "buttons": [
+    "Schedule your kickoff call@48,817,267,56",
+    "Back to the homepage@327,817,241,56"
+   ]
+  },
+  "file": "shots/states/new__ok-real-unknownsession__d1280-light.png",
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   },
+   {
+    "t": "response",
+    "status": 404,
+    "url": "https://knightwebstudio-checkout.onrender.com/api/session-status?session_id=cs_live_FAKEFAKEFAKEFAKE0000",
+    "type": "fetch"
+   },
+   {
+    "t": "console.error",
+    "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+   },
+   {
+    "t": "console.error",
+    "text": "Could not confirm the payment: Error: Status check responded 404\n    at http://localhost:8720/checkout/success/?plan=starter-deposit&session_id=cs_live_FAKEFAKEFAKEFAKE0000:311:33"
+   }
+  ]
+ },
+ "ok-real-unknownsession__d1280-dark": {
+  "m": {
+   "theme": "dark",
+   "overflowX": 0,
+   "pageH": 1634,
+   "h1": "Thank you",
+   "lede": "We couldn’t confirm your payment automatically just now. If it went through, Stripe will email your receipt within a few minutes, and we’ll be in touch within one business day.",
+   "status": {
+    "text": "Confirming your payment with Stripe…",
+    "cls": "status till-side",
+    "visible": false,
+    "rect": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "color": "rgb(243, 236, 221)",
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   "receiptVisible": true,
+   "receipt": "Starter website — 50% deposit | $1,000",
+   "stepsProject": true,
+   "stepsCare": false,
+   "next": true,
+   "book": {
+    "vis": true,
+    "text": "Schedule your kickoff call",
+    "href": "https://calendly.com/knightwebstudio1/30min",
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   "retry": {
+    "vis": false,
+    "text": "Return to checkout",
+    "href": "/pricing/"
+   },
+   "buttons": [
+    "Schedule your kickoff call@48,817,267,56",
+    "Back to the homepage@327,817,241,56"
+   ]
+  },
+  "file": "shots/states/new__ok-real-unknownsession__d1280-dark.png",
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   },
+   {
+    "t": "response",
+    "status": 404,
+    "url": "https://knightwebstudio-checkout.onrender.com/api/session-status?session_id=cs_live_FAKEFAKEFAKEFAKE0000",
+    "type": "fetch"
+   },
+   {
+    "t": "console.error",
+    "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+   },
+   {
+    "t": "console.error",
+    "text": "Could not confirm the payment: Error: Status check responded 404\n    at http://localhost:8720/checkout/success/?plan=starter-deposit&session_id=cs_live_FAKEFAKEFAKEFAKE0000:311:33"
+   }
+  ]
+ },
+ "ok-serverdown__m390-light": {
+  "m": {
+   "theme": "light",
+   "overflowX": 0,
+   "pageH": 2507,
+   "h1": "Thank you",
+   "lede": "We couldn’t confirm your payment automatically just now. If it went through, Stripe will email your receipt within a few minutes, and we’ll be in touch within one business day.",
+   "status": {
+    "text": "Confirming your payment with Stripe…",
+    "cls": "status till-side",
+    "visible": false,
+    "rect": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "color": "rgb(26, 34, 56)",
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   "receiptVisible": true,
+   "receipt": "Starter website — 50% deposit | $1,000",
+   "stepsProject": true,
+   "stepsCare": false,
+   "next": true,
+   "book": {
+    "vis": true,
+    "text": "Schedule your kickoff call",
+    "href": "https://calendly.com/knightwebstudio1/30min",
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   "retry": {
+    "vis": false,
+    "text": "Return to checkout",
+    "href": "/pricing/"
+   },
+   "buttons": [
+    "Schedule your kickoff call@20,1001,350,56",
+    "Back to the homepage@20,1069,350,56"
+   ]
+  },
+  "file": "shots/states/new__ok-serverdown__m390-light.png",
+  "log": [
+   {
+    "t": "requestfailed",
+    "url": "https://knightwebstudio-checkout.onrender.com/api/session-status?session_id=cs_live_FAKEFAKEFAKEFAKE0000",
+    "err": "net::ERR_FAILED"
+   },
+   {
+    "t": "console.error",
+    "text": "Failed to load resource: net::ERR_FAILED"
+   },
+   {
+    "t": "console.error",
+    "text": "Could not confirm the payment: TypeError: Failed to fetch\n    at http://localhost:8720/checkout/success/?plan=starter-deposit&session_id=cs_live_FAKEFAKEFAKEFAKE0000:308:5\n    at http://localhost:8720/checkout/success/?plan=starter-deposit&session_id=cs_live_FAKEFAKEFAKEFAKE0000:346:5"
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "ok-serverdown__m390-dark": {
+  "m": {
+   "theme": "dark",
+   "overflowX": 0,
+   "pageH": 2507,
+   "h1": "Thank you",
+   "lede": "We couldn’t confirm your payment automatically just now. If it went through, Stripe will email your receipt within a few minutes, and we’ll be in touch within one business day.",
+   "status": {
+    "text": "Confirming your payment with Stripe…",
+    "cls": "status till-side",
+    "visible": false,
+    "rect": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "color": "rgb(243, 236, 221)",
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   "receiptVisible": true,
+   "receipt": "Starter website — 50% deposit | $1,000",
+   "stepsProject": true,
+   "stepsCare": false,
+   "next": true,
+   "book": {
+    "vis": true,
+    "text": "Schedule your kickoff call",
+    "href": "https://calendly.com/knightwebstudio1/30min",
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   "retry": {
+    "vis": false,
+    "text": "Return to checkout",
+    "href": "/pricing/"
+   },
+   "buttons": [
+    "Schedule your kickoff call@20,1001,350,56",
+    "Back to the homepage@20,1069,350,56"
+   ]
+  },
+  "file": "shots/states/new__ok-serverdown__m390-dark.png",
+  "log": [
+   {
+    "t": "requestfailed",
+    "url": "https://knightwebstudio-checkout.onrender.com/api/session-status?session_id=cs_live_FAKEFAKEFAKEFAKE0000",
+    "err": "net::ERR_FAILED"
+   },
+   {
+    "t": "console.error",
+    "text": "Failed to load resource: net::ERR_FAILED"
+   },
+   {
+    "t": "console.error",
+    "text": "Could not confirm the payment: TypeError: Failed to fetch\n    at http://localhost:8720/checkout/success/?plan=starter-deposit&session_id=cs_live_FAKEFAKEFAKEFAKE0000:308:5\n    at http://localhost:8720/checkout/success/?plan=starter-deposit&session_id=cs_live_FAKEFAKEFAKEFAKE0000:346:5"
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "ok-serverdown__d1280-light": {
+  "m": {
+   "theme": "light",
+   "overflowX": 0,
+   "pageH": 1634,
+   "h1": "Thank you",
+   "lede": "We couldn’t confirm your payment automatically just now. If it went through, Stripe will email your receipt within a few minutes, and we’ll be in touch within one business day.",
+   "status": {
+    "text": "Confirming your payment with Stripe…",
+    "cls": "status till-side",
+    "visible": false,
+    "rect": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "color": "rgb(26, 34, 56)",
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   "receiptVisible": true,
+   "receipt": "Starter website — 50% deposit | $1,000",
+   "stepsProject": true,
+   "stepsCare": false,
+   "next": true,
+   "book": {
+    "vis": true,
+    "text": "Schedule your kickoff call",
+    "href": "https://calendly.com/knightwebstudio1/30min",
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   "retry": {
+    "vis": false,
+    "text": "Return to checkout",
+    "href": "/pricing/"
+   },
+   "buttons": [
+    "Schedule your kickoff call@48,817,267,56",
+    "Back to the homepage@327,817,241,56"
+   ]
+  },
+  "file": "shots/states/new__ok-serverdown__d1280-light.png",
+  "log": [
+   {
+    "t": "requestfailed",
+    "url": "https://knightwebstudio-checkout.onrender.com/api/session-status?session_id=cs_live_FAKEFAKEFAKEFAKE0000",
+    "err": "net::ERR_FAILED"
+   },
+   {
+    "t": "console.error",
+    "text": "Failed to load resource: net::ERR_FAILED"
+   },
+   {
+    "t": "console.error",
+    "text": "Could not confirm the payment: TypeError: Failed to fetch\n    at http://localhost:8720/checkout/success/?plan=starter-deposit&session_id=cs_live_FAKEFAKEFAKEFAKE0000:308:5\n    at http://localhost:8720/checkout/success/?plan=starter-deposit&session_id=cs_live_FAKEFAKEFAKEFAKE0000:346:5"
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "ok-serverdown__d1280-dark": {
+  "m": {
+   "theme": "dark",
+   "overflowX": 0,
+   "pageH": 1634,
+   "h1": "Thank you",
+   "lede": "We couldn’t confirm your payment automatically just now. If it went through, Stripe will email your receipt within a few minutes, and we’ll be in touch within one business day.",
+   "status": {
+    "text": "Confirming your payment with Stripe…",
+    "cls": "status till-side",
+    "visible": false,
+    "rect": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "color": "rgb(243, 236, 221)",
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   "receiptVisible": true,
+   "receipt": "Starter website — 50% deposit | $1,000",
+   "stepsProject": true,
+   "stepsCare": false,
+   "next": true,
+   "book": {
+    "vis": true,
+    "text": "Schedule your kickoff call",
+    "href": "https://calendly.com/knightwebstudio1/30min",
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   "retry": {
+    "vis": false,
+    "text": "Return to checkout",
+    "href": "/pricing/"
+   },
+   "buttons": [
+    "Schedule your kickoff call@48,817,267,56",
+    "Back to the homepage@327,817,241,56"
+   ]
+  },
+  "file": "shots/states/new__ok-serverdown__d1280-dark.png",
+  "log": [
+   {
+    "t": "requestfailed",
+    "url": "https://knightwebstudio-checkout.onrender.com/api/session-status?session_id=cs_live_FAKEFAKEFAKEFAKE0000",
+    "err": "net::ERR_FAILED"
+   },
+   {
+    "t": "console.error",
+    "text": "Failed to load resource: net::ERR_FAILED"
+   },
+   {
+    "t": "console.error",
+    "text": "Could not confirm the payment: TypeError: Failed to fetch\n    at http://localhost:8720/checkout/success/?plan=starter-deposit&session_id=cs_live_FAKEFAKEFAKEFAKE0000:308:5\n    at http://localhost:8720/checkout/success/?plan=starter-deposit&session_id=cs_live_FAKEFAKEFAKEFAKE0000:346:5"
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "ok-confirming__m390-light": {
+  "m": {
+   "theme": "light",
+   "overflowX": 0,
+   "pageH": 2484,
+   "h1": "Thank you",
+   "lede": "If your payment went through, Stripe will email your receipt within a few minutes.",
+   "status": {
+    "text": "Confirming your payment with Stripe…",
+    "cls": "status till-side",
+    "visible": true,
+    "rect": [
+     20,
+     545,
+     350,
+     27
+    ],
+    "color": "rgb(26, 34, 56)",
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   "receiptVisible": true,
+   "receipt": "Commerce website — 50% deposit | $4,000",
+   "stepsProject": true,
+   "stepsCare": false,
+   "next": true,
+   "book": {
+    "vis": true,
+    "text": "Schedule your kickoff call",
+    "href": "https://calendly.com/knightwebstudio1/30min",
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   "retry": {
+    "vis": false,
+    "text": "Return to checkout",
+    "href": "/pricing/"
+   },
+   "buttons": [
+    "Schedule your kickoff call@20,977,350,56",
+    "Back to the homepage@20,1045,350,56"
+   ]
+  },
+  "file": "shots/states/new__ok-confirming__m390-light.png",
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "ok-confirming__m390-dark": {
+  "m": {
+   "theme": "dark",
+   "overflowX": 0,
+   "pageH": 2484,
+   "h1": "Thank you",
+   "lede": "If your payment went through, Stripe will email your receipt within a few minutes.",
+   "status": {
+    "text": "Confirming your payment with Stripe…",
+    "cls": "status till-side",
+    "visible": true,
+    "rect": [
+     20,
+     545,
+     350,
+     27
+    ],
+    "color": "rgb(243, 236, 221)",
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   "receiptVisible": true,
+   "receipt": "Commerce website — 50% deposit | $4,000",
+   "stepsProject": true,
+   "stepsCare": false,
+   "next": true,
+   "book": {
+    "vis": true,
+    "text": "Schedule your kickoff call",
+    "href": "https://calendly.com/knightwebstudio1/30min",
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   "retry": {
+    "vis": false,
+    "text": "Return to checkout",
+    "href": "/pricing/"
+   },
+   "buttons": [
+    "Schedule your kickoff call@20,977,350,56",
+    "Back to the homepage@20,1045,350,56"
+   ]
+  },
+  "file": "shots/states/new__ok-confirming__m390-dark.png",
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "ok-confirming__d1280-light": {
+  "m": {
+   "theme": "light",
+   "overflowX": 0,
+   "pageH": 1602,
+   "h1": "Thank you",
+   "lede": "If your payment went through, Stripe will email your receipt within a few minutes.",
+   "status": {
+    "text": "Confirming your payment with Stripe…",
+    "cls": "status till-side",
+    "visible": true,
+    "rect": [
+     771,
+     622,
+     461,
+     27
+    ],
+    "color": "rgb(26, 34, 56)",
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   "receiptVisible": true,
+   "receipt": "Commerce website — 50% deposit | $4,000",
+   "stepsProject": true,
+   "stepsCare": false,
+   "next": true,
+   "book": {
+    "vis": true,
+    "text": "Schedule your kickoff call",
+    "href": "https://calendly.com/knightwebstudio1/30min",
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   "retry": {
+    "vis": false,
+    "text": "Return to checkout",
+    "href": "/pricing/"
+   },
+   "buttons": [
+    "Schedule your kickoff call@48,785,267,56",
+    "Back to the homepage@327,785,241,56"
+   ]
+  },
+  "file": "shots/states/new__ok-confirming__d1280-light.png",
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "ok-confirming__d1280-dark": {
+  "m": {
+   "theme": "dark",
+   "overflowX": 0,
+   "pageH": 1602,
+   "h1": "Thank you",
+   "lede": "If your payment went through, Stripe will email your receipt within a few minutes.",
+   "status": {
+    "text": "Confirming your payment with Stripe…",
+    "cls": "status till-side",
+    "visible": true,
+    "rect": [
+     771,
+     622,
+     461,
+     27
+    ],
+    "color": "rgb(243, 236, 221)",
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   "receiptVisible": true,
+   "receipt": "Commerce website — 50% deposit | $4,000",
+   "stepsProject": true,
+   "stepsCare": false,
+   "next": true,
+   "book": {
+    "vis": true,
+    "text": "Schedule your kickoff call",
+    "href": "https://calendly.com/knightwebstudio1/30min",
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   "retry": {
+    "vis": false,
+    "text": "Return to checkout",
+    "href": "/pricing/"
+   },
+   "buttons": [
+    "Schedule your kickoff call@48,785,267,56",
+    "Back to the homepage@327,785,241,56"
+   ]
+  },
+  "file": "shots/states/new__ok-confirming__d1280-dark.png",
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "ok-mock-paid-deposit__m390-light": {
+  "m": {
+   "theme": "light",
+   "overflowX": 0,
+   "pageH": 2487,
+   "h1": "Payment confirmed — thank you",
+   "lede": "We’ve received your payment. Your Stripe receipt and a confirmation email from us are on their way to your inbox.",
+   "status": {
+    "text": "Confirming your payment with Stripe…",
+    "cls": "status till-side",
+    "visible": false,
+    "rect": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "color": "rgb(26, 34, 56)",
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   "receiptVisible": true,
+   "receipt": "Commerce website — 50% deposit | $4,000",
+   "stepsProject": true,
+   "stepsCare": false,
+   "next": true,
+   "book": {
+    "vis": true,
+    "text": "Schedule your kickoff call",
+    "href": "https://calendly.com/knightwebstudio1/30min",
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   "retry": {
+    "vis": false,
+    "text": "Return to checkout",
+    "href": "/pricing/"
+   },
+   "buttons": [
+    "Schedule your kickoff call@20,981,350,56",
+    "Back to the homepage@20,1049,350,56"
+   ]
+  },
+  "file": "shots/states/new__ok-mock-paid-deposit__m390-light.png",
+  "log": [
+   {
+    "t": "response",
+    "status": 200,
+    "url": "https://knightwebstudio-checkout.onrender.com/api/session-status?session_id=cs_live_MOCKMOCKMOCKMOCK0000",
+    "type": "fetch"
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "ok-mock-paid-deposit__m390-dark": {
+  "m": {
+   "theme": "dark",
+   "overflowX": 0,
+   "pageH": 2487,
+   "h1": "Payment confirmed — thank you",
+   "lede": "We’ve received your payment. Your Stripe receipt and a confirmation email from us are on their way to your inbox.",
+   "status": {
+    "text": "Confirming your payment with Stripe…",
+    "cls": "status till-side",
+    "visible": false,
+    "rect": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "color": "rgb(243, 236, 221)",
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   "receiptVisible": true,
+   "receipt": "Commerce website — 50% deposit | $4,000",
+   "stepsProject": true,
+   "stepsCare": false,
+   "next": true,
+   "book": {
+    "vis": true,
+    "text": "Schedule your kickoff call",
+    "href": "https://calendly.com/knightwebstudio1/30min",
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   "retry": {
+    "vis": false,
+    "text": "Return to checkout",
+    "href": "/pricing/"
+   },
+   "buttons": [
+    "Schedule your kickoff call@20,981,350,56",
+    "Back to the homepage@20,1049,350,56"
+   ]
+  },
+  "file": "shots/states/new__ok-mock-paid-deposit__m390-dark.png",
+  "log": [
+   {
+    "t": "response",
+    "status": 200,
+    "url": "https://knightwebstudio-checkout.onrender.com/api/session-status?session_id=cs_live_MOCKMOCKMOCKMOCK0000",
+    "type": "fetch"
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "ok-mock-paid-deposit__d1280-light": {
+  "m": {
+   "theme": "light",
+   "overflowX": 0,
+   "pageH": 1602,
+   "h1": "Payment confirmed — thank you",
+   "lede": "We’ve received your payment. Your Stripe receipt and a confirmation email from us are on their way to your inbox.",
+   "status": {
+    "text": "Confirming your payment with Stripe…",
+    "cls": "status till-side",
+    "visible": false,
+    "rect": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "color": "rgb(26, 34, 56)",
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   "receiptVisible": true,
+   "receipt": "Commerce website — 50% deposit | $4,000",
+   "stepsProject": true,
+   "stepsCare": false,
+   "next": true,
+   "book": {
+    "vis": true,
+    "text": "Schedule your kickoff call",
+    "href": "https://calendly.com/knightwebstudio1/30min",
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   "retry": {
+    "vis": false,
+    "text": "Return to checkout",
+    "href": "/pricing/"
+   },
+   "buttons": [
+    "Schedule your kickoff call@48,785,267,56",
+    "Back to the homepage@327,785,241,56"
+   ]
+  },
+  "file": "shots/states/new__ok-mock-paid-deposit__d1280-light.png",
+  "log": [
+   {
+    "t": "response",
+    "status": 200,
+    "url": "https://knightwebstudio-checkout.onrender.com/api/session-status?session_id=cs_live_MOCKMOCKMOCKMOCK0000",
+    "type": "fetch"
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "ok-mock-paid-deposit__d1280-dark": {
+  "m": {
+   "theme": "dark",
+   "overflowX": 0,
+   "pageH": 1602,
+   "h1": "Payment confirmed — thank you",
+   "lede": "We’ve received your payment. Your Stripe receipt and a confirmation email from us are on their way to your inbox.",
+   "status": {
+    "text": "Confirming your payment with Stripe…",
+    "cls": "status till-side",
+    "visible": false,
+    "rect": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "color": "rgb(243, 236, 221)",
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   "receiptVisible": true,
+   "receipt": "Commerce website — 50% deposit | $4,000",
+   "stepsProject": true,
+   "stepsCare": false,
+   "next": true,
+   "book": {
+    "vis": true,
+    "text": "Schedule your kickoff call",
+    "href": "https://calendly.com/knightwebstudio1/30min",
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   "retry": {
+    "vis": false,
+    "text": "Return to checkout",
+    "href": "/pricing/"
+   },
+   "buttons": [
+    "Schedule your kickoff call@48,785,267,56",
+    "Back to the homepage@327,785,241,56"
+   ]
+  },
+  "file": "shots/states/new__ok-mock-paid-deposit__d1280-dark.png",
+  "log": [
+   {
+    "t": "response",
+    "status": 200,
+    "url": "https://knightwebstudio-checkout.onrender.com/api/session-status?session_id=cs_live_MOCKMOCKMOCKMOCK0000",
+    "type": "fetch"
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "ok-mock-paid-care__m390-light": {
+  "m": {
+   "theme": "light",
+   "overflowX": 0,
+   "pageH": 2448,
+   "h1": "Payment confirmed — thank you",
+   "lede": "Your care plan is active. Your Stripe receipt and a confirmation email from us are on their way to your inbox.",
+   "status": {
+    "text": "Confirming your payment with Stripe…",
+    "cls": "status till-side",
+    "visible": false,
+    "rect": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "color": "rgb(26, 34, 56)",
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   "receiptVisible": true,
+   "receipt": "Commerce care plan | $1,000/month",
+   "stepsProject": false,
+   "stepsCare": true,
+   "next": true,
+   "book": {
+    "vis": true,
+    "text": "Book a call",
+    "href": "https://calendly.com/knightwebstudio1/30min",
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   "retry": {
+    "vis": false,
+    "text": "Return to checkout",
+    "href": "/pricing/"
+   },
+   "buttons": [
+    "Book a call@20,942,350,56",
+    "Back to the homepage@20,1010,350,56"
+   ]
+  },
+  "file": "shots/states/new__ok-mock-paid-care__m390-light.png",
+  "log": [
+   {
+    "t": "response",
+    "status": 200,
+    "url": "https://knightwebstudio-checkout.onrender.com/api/session-status?session_id=cs_live_MOCKMOCKMOCKMOCK0000",
+    "type": "fetch"
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "ok-mock-paid-care__m390-dark": {
+  "m": {
+   "theme": "dark",
+   "overflowX": 0,
+   "pageH": 2448,
+   "h1": "Payment confirmed — thank you",
+   "lede": "Your care plan is active. Your Stripe receipt and a confirmation email from us are on their way to your inbox.",
+   "status": {
+    "text": "Confirming your payment with Stripe…",
+    "cls": "status till-side",
+    "visible": false,
+    "rect": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "color": "rgb(243, 236, 221)",
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   "receiptVisible": true,
+   "receipt": "Commerce care plan | $1,000/month",
+   "stepsProject": false,
+   "stepsCare": true,
+   "next": true,
+   "book": {
+    "vis": true,
+    "text": "Book a call",
+    "href": "https://calendly.com/knightwebstudio1/30min",
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   "retry": {
+    "vis": false,
+    "text": "Return to checkout",
+    "href": "/pricing/"
+   },
+   "buttons": [
+    "Book a call@20,942,350,56",
+    "Back to the homepage@20,1010,350,56"
+   ]
+  },
+  "file": "shots/states/new__ok-mock-paid-care__m390-dark.png",
+  "log": [
+   {
+    "t": "response",
+    "status": 200,
+    "url": "https://knightwebstudio-checkout.onrender.com/api/session-status?session_id=cs_live_MOCKMOCKMOCKMOCK0000",
+    "type": "fetch"
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "ok-mock-paid-care__d1280-light": {
+  "m": {
+   "theme": "light",
+   "overflowX": 0,
+   "pageH": 1590,
+   "h1": "Payment confirmed — thank you",
+   "lede": "Your care plan is active. Your Stripe receipt and a confirmation email from us are on their way to your inbox.",
+   "status": {
+    "text": "Confirming your payment with Stripe…",
+    "cls": "status till-side",
+    "visible": false,
+    "rect": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "color": "rgb(26, 34, 56)",
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   "receiptVisible": true,
+   "receipt": "Commerce care plan | $1,000/month",
+   "stepsProject": false,
+   "stepsCare": true,
+   "next": true,
+   "book": {
+    "vis": true,
+    "text": "Book a call",
+    "href": "https://calendly.com/knightwebstudio1/30min",
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   "retry": {
+    "vis": false,
+    "text": "Return to checkout",
+    "href": "/pricing/"
+   },
+   "buttons": [
+    "Book a call@48,773,149,56",
+    "Back to the homepage@209,773,241,56"
+   ]
+  },
+  "file": "shots/states/new__ok-mock-paid-care__d1280-light.png",
+  "log": [
+   {
+    "t": "response",
+    "status": 200,
+    "url": "https://knightwebstudio-checkout.onrender.com/api/session-status?session_id=cs_live_MOCKMOCKMOCKMOCK0000",
+    "type": "fetch"
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "ok-mock-paid-care__d1280-dark": {
+  "m": {
+   "theme": "dark",
+   "overflowX": 0,
+   "pageH": 1590,
+   "h1": "Payment confirmed — thank you",
+   "lede": "Your care plan is active. Your Stripe receipt and a confirmation email from us are on their way to your inbox.",
+   "status": {
+    "text": "Confirming your payment with Stripe…",
+    "cls": "status till-side",
+    "visible": false,
+    "rect": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "color": "rgb(243, 236, 221)",
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   "receiptVisible": true,
+   "receipt": "Commerce care plan | $1,000/month",
+   "stepsProject": false,
+   "stepsCare": true,
+   "next": true,
+   "book": {
+    "vis": true,
+    "text": "Book a call",
+    "href": "https://calendly.com/knightwebstudio1/30min",
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   "retry": {
+    "vis": false,
+    "text": "Return to checkout",
+    "href": "/pricing/"
+   },
+   "buttons": [
+    "Book a call@48,773,149,56",
+    "Back to the homepage@209,773,241,56"
+   ]
+  },
+  "file": "shots/states/new__ok-mock-paid-care__d1280-dark.png",
+  "log": [
+   {
+    "t": "response",
+    "status": 200,
+    "url": "https://knightwebstudio-checkout.onrender.com/api/session-status?session_id=cs_live_MOCKMOCKMOCKMOCK0000",
+    "type": "fetch"
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "ok-mock-ach-processing__m390-light": {
+  "m": {
+   "theme": "light",
+   "overflowX": 0,
+   "pageH": 2550,
+   "h1": "Thank you — your bank payment is processing",
+   "lede": "Bank transfers (ACH) usually take a few business days to clear. We’ll email you a confirmation as soon as it does; there’s nothing else you need to do.",
+   "status": {
+    "text": "Confirming your payment with Stripe…",
+    "cls": "status till-side",
+    "visible": false,
+    "rect": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "color": "rgb(26, 34, 56)",
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   "receiptVisible": true,
+   "receipt": "Business website — 50% deposit | $2,000",
+   "stepsProject": true,
+   "stepsCare": false,
+   "next": true,
+   "book": {
+    "vis": true,
+    "text": "Schedule your kickoff call",
+    "href": "https://calendly.com/knightwebstudio1/30min",
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   "retry": {
+    "vis": false,
+    "text": "Return to checkout",
+    "href": "/pricing/"
+   },
+   "buttons": [
+    "Schedule your kickoff call@20,1044,350,56",
+    "Back to the homepage@20,1112,350,56"
+   ]
+  },
+  "file": "shots/states/new__ok-mock-ach-processing__m390-light.png",
+  "log": [
+   {
+    "t": "response",
+    "status": 200,
+    "url": "https://knightwebstudio-checkout.onrender.com/api/session-status?session_id=cs_live_MOCKMOCKMOCKMOCK0000",
+    "type": "fetch"
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "ok-mock-ach-processing__m390-dark": {
+  "m": {
+   "theme": "dark",
+   "overflowX": 0,
+   "pageH": 2550,
+   "h1": "Thank you — your bank payment is processing",
+   "lede": "Bank transfers (ACH) usually take a few business days to clear. We’ll email you a confirmation as soon as it does; there’s nothing else you need to do.",
+   "status": {
+    "text": "Confirming your payment with Stripe…",
+    "cls": "status till-side",
+    "visible": false,
+    "rect": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "color": "rgb(243, 236, 221)",
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   "receiptVisible": true,
+   "receipt": "Business website — 50% deposit | $2,000",
+   "stepsProject": true,
+   "stepsCare": false,
+   "next": true,
+   "book": {
+    "vis": true,
+    "text": "Schedule your kickoff call",
+    "href": "https://calendly.com/knightwebstudio1/30min",
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   "retry": {
+    "vis": false,
+    "text": "Return to checkout",
+    "href": "/pricing/"
+   },
+   "buttons": [
+    "Schedule your kickoff call@20,1044,350,56",
+    "Back to the homepage@20,1112,350,56"
+   ]
+  },
+  "file": "shots/states/new__ok-mock-ach-processing__m390-dark.png",
+  "log": [
+   {
+    "t": "response",
+    "status": 200,
+    "url": "https://knightwebstudio-checkout.onrender.com/api/session-status?session_id=cs_live_MOCKMOCKMOCKMOCK0000",
+    "type": "fetch"
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "ok-mock-ach-processing__d1280-light": {
+  "m": {
+   "theme": "light",
+   "overflowX": 0,
+   "pageH": 1700,
+   "h1": "Thank you — your bank payment is processing",
+   "lede": "Bank transfers (ACH) usually take a few business days to clear. We’ll email you a confirmation as soon as it does; there’s nothing else you need to do.",
+   "status": {
+    "text": "Confirming your payment with Stripe…",
+    "cls": "status till-side",
+    "visible": false,
+    "rect": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "color": "rgb(26, 34, 56)",
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   "receiptVisible": true,
+   "receipt": "Business website — 50% deposit | $2,000",
+   "stepsProject": true,
+   "stepsCare": false,
+   "next": true,
+   "book": {
+    "vis": true,
+    "text": "Schedule your kickoff call",
+    "href": "https://calendly.com/knightwebstudio1/30min",
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   "retry": {
+    "vis": false,
+    "text": "Return to checkout",
+    "href": "/pricing/"
+   },
+   "buttons": [
+    "Schedule your kickoff call@48,884,267,56",
+    "Back to the homepage@327,884,241,56"
+   ]
+  },
+  "file": "shots/states/new__ok-mock-ach-processing__d1280-light.png",
+  "log": [
+   {
+    "t": "response",
+    "status": 200,
+    "url": "https://knightwebstudio-checkout.onrender.com/api/session-status?session_id=cs_live_MOCKMOCKMOCKMOCK0000",
+    "type": "fetch"
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ },
+ "ok-mock-ach-processing__d1280-dark": {
+  "m": {
+   "theme": "dark",
+   "overflowX": 0,
+   "pageH": 1700,
+   "h1": "Thank you — your bank payment is processing",
+   "lede": "Bank transfers (ACH) usually take a few business days to clear. We’ll email you a confirmation as soon as it does; there’s nothing else you need to do.",
+   "status": {
+    "text": "Confirming your payment with Stripe…",
+    "cls": "status till-side",
+    "visible": false,
+    "rect": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "color": "rgb(243, 236, 221)",
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   "receiptVisible": true,
+   "receipt": "Business website — 50% deposit | $2,000",
+   "stepsProject": true,
+   "stepsCare": false,
+   "next": true,
+   "book": {
+    "vis": true,
+    "text": "Schedule your kickoff call",
+    "href": "https://calendly.com/knightwebstudio1/30min",
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   "retry": {
+    "vis": false,
+    "text": "Return to checkout",
+    "href": "/pricing/"
+   },
+   "buttons": [
+    "Schedule your kickoff call@48,884,267,56",
+    "Back to the homepage@327,884,241,56"
+   ]
+  },
+  "file": "shots/states/new__ok-mock-ach-processing__d1280-dark.png",
+  "log": [
+   {
+    "t": "response",
+    "status": 200,
+    "url": "https://knightwebstudio-checkout.onrender.com/api/session-status?session_id=cs_live_MOCKMOCKMOCKMOCK0000",
+    "type": "fetch"
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   }
+  ]
+ }
+}

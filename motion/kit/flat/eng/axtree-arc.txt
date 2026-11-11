@@ -1,0 +1,98 @@
+region "Our services and their prices" [roledescription=carousel]
+  list
+    listitem "1 of 9" [level=1 roledescription=slide]
+      heading "Website design & build" [level=2]
+        StaticText "Website design & build"
+      paragraph
+        StaticText "$1,000, $2,000 or $4,000"
+      paragraph
+        StaticText "A custom-designed marketing site, built from scratch and mobile-first."
+      link "See what's included in Website design & build" [focusable=true url=http://localhost:8730/services/#website-design]
+        StaticText "See what's included"
+    listitem "2 of 9" [level=1 roledescription=slide]
+      heading "E-commerce stores" [level=2]
+        StaticText "E-commerce stores"
+      paragraph
+        StaticText "$8,000"
+      paragraph
+        StaticText "Sell online with a checkout people trust: Shopify, or a custom store."
+      link "See what's included in E-commerce stores" [focusable=true url=http://localhost:8730/services/#ecommerce]
+        StaticText "See what's included"
+    listitem "3 of 9" [level=1 roledescription=slide]
+      heading "Redesigns & rescues" [level=2]
+        StaticText "Redesigns & rescues"
+      paragraph
+        StaticText "priced as a new site"
+      paragraph
+        StaticText "Dated, slow or abandoned sites rebuilt without losing your search rankings."
+      link "See what's included in Redesigns & rescues" [focusable=true url=http://localhost:8730/services/#redesigns]
+        StaticText "See what's included"
+    listitem "4 of 9" [level=1 roledescription=slide]
+      heading "Brand & identity" [level=2]
+        StaticText "Brand & identity"
+      paragraph
+        StaticText "$1,500"
+      paragraph
+        StaticText "Logo, colours and type, so everything you publish looks like one company."
+      link "See what's included in Brand & identity" [focusable=true url=http://localhost:8730/services/#brand]
+        StaticText "See what's included"
+    listitem "5 of 9" [level=1 roledescription=slide]
+      heading "SEO & performance" [level=2]
+        StaticText "SEO & performance"
+      paragraph
+        StaticText "in every build"
+      paragraph
+        StaticText "Get found and stay fast, with analytics you can actually read."
+      link "See what's included in SEO & performance" [focusable=true url=http://localhost:8730/services/#seo]
+        StaticText "See what's included"
+    listitem "6 of 9" [level=1 roledescription=slide]
+      heading "Care & maintenance" [level=2]
+        StaticText "Care & maintenance"
+      paragraph
+        StaticText "$125, $300, $600 or $1,000/mo"
+      paragraph
+        StaticText "Updates, backups, uptime monitoring and security patches."
+      link "See what's included in Care & maintenance" [focusable=true url=http://localhost:8730/services/#care]
+        StaticText "See what's included"
+    listitem "7 of 9" [level=1 roledescription=slide]
+      heading "Automation" [level=2]
+        StaticText "Automation"
+      paragraph
+        StaticText "$750 or $1,500 per setup"
+      paragraph
+        StaticText "Missed calls texted back, bookings and reminders, quotes followed up."
+      link "See what's included in Automation" [focusable=true url=http://localhost:8730/services/#automation]
+        StaticText "See what's included"
+    listitem "8 of 9" [level=1 roledescription=slide]
+      heading "Google profile & reviews" [level=2]
+        StaticText "Google profile & reviews"
+      paragraph
+        StaticText "$500"
+      paragraph
+        StaticText "Your Google profile filled out properly, and a simple way to ask for reviews."
+      link "See what's included in Google profile & reviews" [focusable=true url=http://localhost:8730/services/#google-reviews]
+        StaticText "See what's included"
+    listitem "9 of 9" [level=1 roledescription=slide]
+      heading "Growth consulting" [level=2]
+        StaticText "Growth consulting"
+      paragraph
+        StaticText "$350 audit · $500 or $1,000/mo"
+      paragraph
+        StaticText "A clear plan for getting more customers, starting with a free online check."
+      link "See what's included in Growth consulting" [focusable=true url=http://localhost:8730/services/#growth-consulting]
+        StaticText "See what's included"
+  group "Choose a service"
+    button "Previous service" [focusable=true]
+      StaticText "‹"
+    button "Website design & build, 1 of 9" [focusable=true]
+    button "E-commerce stores, 2 of 9" [focusable=true]
+    button "Redesigns & rescues, 3 of 9" [focusable=true]
+    button "Brand & identity, 4 of 9" [focusable=true]
+    button "SEO & performance, 5 of 9" [focusable=true]
+    button "Care & maintenance, 6 of 9" [focusable=true]
+    button "Automation, 7 of 9" [focusable=true]
+    button "Google profile & reviews, 8 of 9" [focusable=true]
+    button "Growth consulting, 9 of 9" [focusable=true]
+    button "Next service" [focusable=true]
+      StaticText "›"
+  paragraph [live=polite]

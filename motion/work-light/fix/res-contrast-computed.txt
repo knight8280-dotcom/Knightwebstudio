@@ -1,0 +1,8 @@
+light /kit/light/demo.html 1440 all text passes AA
+light /kit/light/demo.html 390 all text passes AA
+light /kit/light/portable.html 1440 [
+light /kit/light/portable.html 390 [
+dark /kit/light/demo.html 1440 all text passes AA
+dark /kit/light/demo.html 390 all text passes AA
+dark /kit/light/portable.html 1440 all text passes AA
+dark /kit/light/portable.html 390 all text passes AA

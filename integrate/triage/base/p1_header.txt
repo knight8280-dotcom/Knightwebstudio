@@ -1,0 +1,21 @@
+/ header button height by width (top of page):
+  1100:54 1110:54 1120:54 1130:54 1140:54 1150:44 1160:44 1170:44 1180:44 1190:44 1200:44 1210:44 1220:44 1230:44 1240:44 1250:44 1260:44 1270:44 1280:54 1290:54 1300:44 1310:44 1320:44 1330:44 1340:44 1350:44 1360:44 1370:44 1380:44 1390:44 1400:44
+  1280 scrolled: {"ctaH":54,"tel":["flex","1",134]}
+  parts at 1280: [".brand=216",".nav=590",".header-tel=134","#theme-toggle=44",".header-cta=120",".header-inner=1184"]
+/pricing/ header button height by width (top of page):
+  1100:54 1110:54 1120:54 1130:54 1140:54 1150:44 1160:44 1170:44 1180:44 1190:44 1200:44 1210:44 1220:44 1230:44 1240:44 1250:44 1260:44 1270:44 1280:54 1290:54 1300:44 1310:44 1320:44 1330:44 1340:44 1350:44 1360:44 1370:44 1380:44 1390:44 1400:44
+  1280 scrolled: {"ctaH":54,"tel":["flex","1",134]}
+  parts at 1280: [".brand=216",".nav=590",".header-tel=134","#theme-toggle=44",".header-cta=120",".header-inner=1184"]
+/start/ header button height by width (top of page):
+  1100:44 1110:44 1120:44 1130:44 1140:44 1150:44 1160:44 1170:44 1180:44 1190:44 1200:44 1210:44 1220:44 1230:44 1240:44 1250:44 1260:44 1270:44 1280:44 1290:44 1300:44 1310:44 1320:44 1330:44 1340:44 1350:44 1360:44 1370:44 1380:44 1390:44 1400:44
+  1280 scrolled: {"ctaH":44,"tel":null}
+  parts at 1280: [".brand=216",".nav=none",".header-tel=none","#theme-toggle=44",".header-cta=none",".header-inner=1184"]
+/start/ 390 header: [["brand","flex",216],["icon-btn","grid",44],["btn.btn-primary.btn-sm","none",0]]
+root 125% 390 {"headerActionsOver":9,"navToggleOver":9,"ctaOver":-390,"topbarTelOver":-20,"docOver":9}
+root 125% 1280 {"headerActionsOver":91,"navToggleOver":-1280,"ctaOver":91,"topbarTelOver":-48,"docOver":91}
+root 150% 390 {"headerActionsOver":60,"navToggleOver":60,"ctaOver":-390,"topbarTelOver":-20,"docOver":60}
+root 150% 1280 {"headerActionsOver":282,"navToggleOver":-1280,"ctaOver":282,"topbarTelOver":-48,"docOver":282}
+root 200% 390 {"headerActionsOver":163,"navToggleOver":163,"ctaOver":-390,"topbarTelOver":30,"docOver":163}
+root 200% 1280 {"headerActionsOver":664,"navToggleOver":-1280,"ctaOver":664,"topbarTelOver":-48,"docOver":664}
+WCAG 1.4.12 spacing 390 {"headerActionsOver":-3,"navToggleOver":-3,"ctaOver":-390,"topbarTelOver":-20,"docOver":0}
+WCAG 1.4.12 spacing 1280 {"headerActionsOver":66,"navToggleOver":-1280,"ctaOver":66,"topbarTelOver":-48,"docOver":66}

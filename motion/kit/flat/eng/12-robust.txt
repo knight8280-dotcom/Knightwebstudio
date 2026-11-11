@@ -1,0 +1,36 @@
+FAIL  360: arc with a very long name, price, word and sign label: no sideways scroll, nothing past the edge, caption does not run into the controls  {"sx":221,"h":533,"capToCtl":16,"picToCap":36,"over":[],"clipped":["kws-arc-name 423>320","kws-arc-line 561>320"],"ctl":11}
+PASS  360: a 12-letter sign label stays inside its sign  {"label":96,"tile":104,"spill":-8}
+FAIL  360: spotlight with a very long name, label and domain  {"sx":231,"h":580,"capToCtl":16,"picToCap":16,"over":[],"clipped":["kws-spot-name 571>320"],"ctl":5}
+PASS  360: a long domain in the browser bar does not overflow the bar (it is clipped by the frame, with no ellipsis, if it does)  {"barScroll":273,"barClient":273,"frameW":273,"imgW":273}
+FAIL  360: arc with 1 item(s): mounts, one in focus, nothing past the edge  {"controls":3,"visiblePictures":1,"nextSequence":[0,0],"h":400}
+FAIL  360: arc with 2 item(s): mounts, one in focus, nothing past the edge  {"controls":4,"visiblePictures":2,"nextSequence":[1,0,1],"h":400}
+FAIL  360: arc with 3 item(s): mounts, one in focus, nothing past the edge  {"controls":5,"visiblePictures":3,"nextSequence":[1,2,0,1],"h":400}
+FAIL  360: arc with 30 item(s): mounts, one in focus, nothing past the edge  {"controls":32,"visiblePictures":3,"nextSequence":[1,2,3,4,5],"h":488}
+FAIL  360: spotlight with 1 item(s): mounts, one in focus, nothing past the edge  {"controls":0,"visiblePictures":1,"nextSequence":[],"h":434}
+FAIL  360: spotlight with 2 item(s): mounts, one in focus, nothing past the edge  {"controls":4,"visiblePictures":2,"nextSequence":[1,0,1],"h":494}
+FAIL  360: spotlight with 12 item(s): mounts, one in focus, nothing past the edge  {"controls":14,"visiblePictures":3,"nextSequence":[1,2,3,4,5],"h":538}
+PASS  360: no console errors in the above  
+FAIL  390: arc with a very long name, price, word and sign label: no sideways scroll, nothing past the edge, caption does not run into the controls  {"sx":191,"h":534,"capToCtl":16,"picToCap":36,"over":[],"clipped":["kws-arc-name 428>350","kws-arc-line 561>350"],"ctl":11}
+PASS  390: a 12-letter sign label stays inside its sign  {"label":96,"tile":104,"spill":-8}
+FAIL  390: spotlight with a very long name, label and domain  {"sx":208,"h":550,"capToCtl":16,"picToCap":16,"over":[],"clipped":["kws-spot-name 578>350"],"ctl":5}
+PASS  390: a long domain in the browser bar does not overflow the bar (it is clipped by the frame, with no ellipsis, if it does)  {"barScroll":295,"barClient":295,"frameW":295,"imgW":295}
+FAIL  390: arc with 1 item(s): mounts, one in focus, nothing past the edge  {"controls":3,"visiblePictures":1,"nextSequence":[0,0],"h":400}
+FAIL  390: arc with 2 item(s): mounts, one in focus, nothing past the edge  {"controls":4,"visiblePictures":2,"nextSequence":[1,0,1],"h":400}
+FAIL  390: arc with 3 item(s): mounts, one in focus, nothing past the edge  {"controls":5,"visiblePictures":3,"nextSequence":[1,2,0,1],"h":400}
+FAIL  390: arc with 30 item(s): mounts, one in focus, nothing past the edge  {"controls":32,"visiblePictures":3,"nextSequence":[1,2,3,4,5],"h":488}
+FAIL  390: spotlight with 1 item(s): mounts, one in focus, nothing past the edge  {"controls":0,"visiblePictures":1,"nextSequence":[],"h":431}
+FAIL  390: spotlight with 2 item(s): mounts, one in focus, nothing past the edge  {"controls":4,"visiblePictures":2,"nextSequence":[1,0,1],"h":491}
+FAIL  390: spotlight with 12 item(s): mounts, one in focus, nothing past the edge  {"controls":14,"visiblePictures":3,"nextSequence":[1,2,3,4,5],"h":535}
+PASS  390: no console errors in the above  
+PASS  1280: arc with a very long name, price, word and sign label: no sideways scroll, nothing past the edge, caption does not run into the controls  {"sx":0,"h":500,"capToCtl":16,"picToCap":36,"over":[],"clipped":["kws-arc-line 561>451"],"ctl":11}
+PASS  1280: a 12-letter sign label stays inside its sign  {"label":141,"tile":152,"spill":-11}
+PASS  1280: spotlight with a very long name, label and domain  {"sx":0,"h":586,"capToCtl":22,"picToCap":16,"over":[],"clipped":[],"ctl":5}
+PASS  1280: a long domain in the browser bar does not overflow the bar (it is clipped by the frame, with no ellipsis, if it does)  {"barScroll":545,"barClient":545,"frameW":545,"imgW":545}
+PASS  1280: arc with 1 item(s): mounts, one in focus, nothing past the edge  {"controls":3,"visiblePictures":1,"nextSequence":[0,0],"h":448}
+PASS  1280: arc with 2 item(s): mounts, one in focus, nothing past the edge  {"controls":4,"visiblePictures":2,"nextSequence":[1,0,1],"h":448}
+PASS  1280: arc with 3 item(s): mounts, one in focus, nothing past the edge  {"controls":5,"visiblePictures":3,"nextSequence":[1,2,0,1],"h":448}
+PASS  1280: arc with 30 item(s): mounts, one in focus, nothing past the edge  {"controls":32,"visiblePictures":9,"nextSequence":[1,2,3,4,5],"h":448}
+PASS  1280: spotlight with 1 item(s): mounts, one in focus, nothing past the edge  {"controls":0,"visiblePictures":1,"nextSequence":[],"h":526}
+PASS  1280: spotlight with 2 item(s): mounts, one in focus, nothing past the edge  {"controls":4,"visiblePictures":2,"nextSequence":[1,0,1],"h":586}
+PASS  1280: spotlight with 12 item(s): mounts, one in focus, nothing past the edge  {"controls":14,"visiblePictures":3,"nextSequence":[1,2,3,4,5],"h":586}
+PASS  1280: no console errors in the above  

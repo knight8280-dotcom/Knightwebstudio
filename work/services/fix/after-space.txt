@@ -1,0 +1,4 @@
+360x844 {"H":5742,"over":0,"boardTop":653,"boardH":712,"firstRowTop":747,"rows":"59 59 44 44 59 59 59 59 44","sums":"74 57 57 74 74 57","cta":0,"figH":324,"labelH":17,"careH":32,"keepH":493}
+390x844 {"H":5675,"over":0,"boardTop":642,"boardH":698,"firstRowTop":736,"rows":"59 59 44 44 44 59 59 59 44","sums":"74 57 57 56 74 57","cta":0,"figH":324,"labelH":17,"careH":32,"keepH":494}
+820x900 {"H":4531,"over":0,"boardTop":605,"boardH":632,"firstRowTop":705,"rows":"44 44 44 44 44 44 44 44 44","sums":"56 60 60 56 56 60","cta":0,"figH":469,"labelH":17,"careH":46,"keepH":356}
+1440x900 {"H":4203,"over":0,"boardTop":600,"boardH":374,"firstRowTop":710,"rows":"44 44 44 44 44 44 44 44 44","sums":"56 62 62 56 56 62","cta":44,"figH":469,"labelH":17,"careH":53,"keepH":412}

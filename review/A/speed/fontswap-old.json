@@ -1,0 +1,3422 @@
+[
+ {
+  "p": "/",
+  "vw": 360,
+  "h1A": 157,
+  "h1B": 157,
+  "h1lines": [
+   4,
+   4
+  ],
+  "docA": 10619,
+  "docB": 10489,
+  "worst": {
+   "d": 0,
+   "what": "section.hero \"Web studio & consulting · Bato\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/services/",
+  "vw": 360,
+  "h1A": 134,
+  "h1B": 101,
+  "h1lines": [
+   4,
+   3
+  ],
+  "docA": 6647,
+  "docB": 6566,
+  "worst": {
+   "d": -34,
+   "what": "p.section-sub \"Pick a single service or hand \"",
+   "from": 404,
+   "to": 370
+  }
+ },
+ {
+  "p": "/consulting/",
+  "vw": 360,
+  "h1A": 67,
+  "h1B": 67,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 17791,
+  "docB": 17338,
+  "worst": {
+   "d": -29,
+   "what": "section.section \"Why automate The hours that di\"",
+   "from": 714,
+   "to": 685
+  }
+ },
+ {
+  "p": "/work/",
+  "vw": 360,
+  "h1A": 34,
+  "h1B": 34,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 4234,
+  "docB": 4159,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"Selected work Recent projects \"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/process/",
+  "vw": 360,
+  "h1A": 67,
+  "h1B": 67,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 3544,
+  "docB": 3470,
+  "worst": {
+   "d": -24,
+   "what": "li.step \"02 Proposal & design A fixed q\"",
+   "from": 706,
+   "to": 682
+  }
+ },
+ {
+  "p": "/pricing/",
+  "vw": 360,
+  "h1A": 67,
+  "h1B": 67,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 10234,
+  "docB": 10212,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"Pricing Fixed prices, publishe\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/faq/",
+  "vw": 360,
+  "h1A": 67,
+  "h1B": 67,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 3681,
+  "docB": 3655,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"FAQ Questions we get asked The\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/contact/",
+  "vw": 360,
+  "h1A": 67,
+  "h1B": 67,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 3886,
+  "docB": 3888,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"Get in touch Tell us about you\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/about/",
+  "vw": 360,
+  "h1A": 67,
+  "h1B": 67,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 4996,
+  "docB": 4893,
+  "worst": {
+   "d": -28,
+   "what": "section.section \"Hi, I'm Christian I'm the foun\"",
+   "from": 417,
+   "to": 389
+  }
+ },
+ {
+  "p": "/start/",
+  "vw": 360,
+  "h1A": 141,
+  "h1B": 141,
+  "h1lines": [
+   4,
+   4
+  ],
+  "docA": 7710,
+  "docB": 7600,
+  "worst": {
+   "d": 0,
+   "what": "section.lp-hero \"KnightWebstudio · Baton Rouge,\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/web-design-baton-rouge/",
+  "vw": 360,
+  "h1A": 101,
+  "h1B": 101,
+  "h1lines": [
+   3,
+   3
+  ],
+  "docA": 8179,
+  "docB": 8057,
+  "worst": {
+   "d": -26,
+   "what": "p. \"Whether your customers find yo\"",
+   "from": 645,
+   "to": 619
+  }
+ },
+ {
+  "p": "/web-design-denham-springs/",
+  "vw": 360,
+  "h1A": 101,
+  "h1B": 101,
+  "h1lines": [
+   3,
+   3
+  ],
+  "docA": 8029,
+  "docB": 7874,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"Areas we serve · Denham Spring\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/web-design-gonzales/",
+  "vw": 360,
+  "h1A": 101,
+  "h1B": 67,
+  "h1lines": [
+   3,
+   2
+  ],
+  "docA": 8182,
+  "docB": 7982,
+  "worst": {
+   "d": -34,
+   "what": "p.section-sub \"Custom websites for Ascension \"",
+   "from": 280,
+   "to": 246
+  }
+ },
+ {
+  "p": "/web-design-prairieville/",
+  "vw": 360,
+  "h1A": 101,
+  "h1B": 67,
+  "h1lines": [
+   3,
+   2
+  ],
+  "docA": 8137,
+  "docB": 7901,
+  "worst": {
+   "d": -59,
+   "what": "p. \"New neighbors are searching fo\"",
+   "from": 645,
+   "to": 586
+  }
+ },
+ {
+  "p": "/privacy/",
+  "vw": 360,
+  "h1A": 67,
+  "h1B": 67,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 4736,
+  "docB": 4659,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"Privacy What we collect, and w\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/terms/",
+  "vw": 360,
+  "h1A": 67,
+  "h1B": 67,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 4933,
+  "docB": 4831,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"Terms How payment and projects\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/checkout/",
+  "vw": 360,
+  "h1A": 34,
+  "h1B": 34,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 2121,
+  "docB": 2121,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"Checkout Secure checkout Pay y\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/checkout/success/",
+  "vw": 360,
+  "h1A": 34,
+  "h1B": 34,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 2381,
+  "docB": 2355,
+  "worst": {
+   "d": -26,
+   "what": "li. \"Watch your inbox. We'll email \"",
+   "from": 495,
+   "to": 469
+  }
+ },
+ {
+  "p": "/404.html",
+  "vw": 360,
+  "h1A": 78,
+  "h1B": 78,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 740,
+  "docB": 740,
+  "worst": {
+   "d": 0,
+   "what": "p.nf-code \"404\"",
+   "from": 256,
+   "to": 256
+  }
+ },
+ {
+  "p": "/",
+  "vw": 375,
+  "h1A": 157,
+  "h1B": 157,
+  "h1lines": [
+   4,
+   4
+  ],
+  "docA": 10465,
+  "docB": 10386,
+  "worst": {
+   "d": 0,
+   "what": "section.hero \"Web studio & consulting · Bato\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/services/",
+  "vw": 375,
+  "h1A": 101,
+  "h1B": 101,
+  "h1lines": [
+   3,
+   3
+  ],
+  "docA": 6542,
+  "docB": 6493,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"What we do Everything your bus\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/consulting/",
+  "vw": 375,
+  "h1A": 67,
+  "h1B": 67,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 17262,
+  "docB": 16968,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"Consulting & automation More c\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/work/",
+  "vw": 375,
+  "h1A": 34,
+  "h1B": 34,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 4182,
+  "docB": 4182,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"Selected work Recent projects \"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/process/",
+  "vw": 375,
+  "h1A": 67,
+  "h1B": 34,
+  "h1lines": [
+   2,
+   1
+  ],
+  "docA": 3422,
+  "docB": 3388,
+  "worst": {
+   "d": -33,
+   "what": "p.section-sub \"You'll always know what's happ\"",
+   "from": 336,
+   "to": 303
+  }
+ },
+ {
+  "p": "/pricing/",
+  "vw": 375,
+  "h1A": 67,
+  "h1B": 67,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 10092,
+  "docB": 9860,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"Pricing Fixed prices, publishe\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/faq/",
+  "vw": 375,
+  "h1A": 67,
+  "h1B": 34,
+  "h1lines": [
+   2,
+   1
+  ],
+  "docA": 3640,
+  "docB": 3606,
+  "worst": {
+   "d": -34,
+   "what": "section.section \"How long does a website take? \"",
+   "from": 422,
+   "to": 388
+  }
+ },
+ {
+  "p": "/contact/",
+  "vw": 375,
+  "h1A": 67,
+  "h1B": 67,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 3886,
+  "docB": 3864,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"Get in touch Tell us about you\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/about/",
+  "vw": 375,
+  "h1A": 67,
+  "h1B": 67,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 4916,
+  "docB": 4714,
+  "worst": {
+   "d": -26,
+   "what": "p. \"I'm a self-taught software dev\"",
+   "from": 570,
+   "to": 544
+  }
+ },
+ {
+  "p": "/start/",
+  "vw": 375,
+  "h1A": 141,
+  "h1B": 141,
+  "h1lines": [
+   4,
+   4
+  ],
+  "docA": 7640,
+  "docB": 7432,
+  "worst": {
+   "d": 0,
+   "what": "section.lp-hero \"KnightWebstudio · Baton Rouge,\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/web-design-baton-rouge/",
+  "vw": 375,
+  "h1A": 101,
+  "h1B": 67,
+  "h1lines": [
+   3,
+   2
+  ],
+  "docA": 8025,
+  "docB": 7870,
+  "worst": {
+   "d": -34,
+   "what": "p.section-sub \"Baton Rouge is home. Fast, cus\"",
+   "from": 280,
+   "to": 246
+  }
+ },
+ {
+  "p": "/web-design-denham-springs/",
+  "vw": 375,
+  "h1A": 101,
+  "h1B": 67,
+  "h1lines": [
+   3,
+   2
+  ],
+  "docA": 7913,
+  "docB": 7690,
+  "worst": {
+   "d": -63,
+   "what": "p. \"From the shops of the Antique \"",
+   "from": 594,
+   "to": 531
+  }
+ },
+ {
+  "p": "/web-design-gonzales/",
+  "vw": 375,
+  "h1A": 67,
+  "h1B": 67,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 7937,
+  "docB": 7882,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"Areas we serve · Gonzales, LA \"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/web-design-prairieville/",
+  "vw": 375,
+  "h1A": 101,
+  "h1B": 67,
+  "h1lines": [
+   3,
+   2
+  ],
+  "docA": 7942,
+  "docB": 7797,
+  "worst": {
+   "d": -34,
+   "what": "p.section-sub \"For the contractors, home-serv\"",
+   "from": 280,
+   "to": 246
+  }
+ },
+ {
+  "p": "/privacy/",
+  "vw": 375,
+  "h1A": 67,
+  "h1B": 67,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 4634,
+  "docB": 4480,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"Privacy What we collect, and w\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/terms/",
+  "vw": 375,
+  "h1A": 67,
+  "h1B": 67,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 4803,
+  "docB": 4726,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"Terms How payment and projects\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/checkout/",
+  "vw": 375,
+  "h1A": 34,
+  "h1B": 34,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 2100,
+  "docB": 2100,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"Checkout Secure checkout Pay y\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/checkout/success/",
+  "vw": 375,
+  "h1A": 34,
+  "h1B": 34,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 2327,
+  "docB": 2327,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"Checkout Thank you If your pay\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/404.html",
+  "vw": 375,
+  "h1A": 78,
+  "h1B": 78,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 667,
+  "docB": 667,
+  "worst": {
+   "d": 0,
+   "what": "p.nf-code \"404\"",
+   "from": 220,
+   "to": 220
+  }
+ },
+ {
+  "p": "/",
+  "vw": 390,
+  "h1A": 157,
+  "h1B": 157,
+  "h1lines": [
+   4,
+   4
+  ],
+  "docA": 10388,
+  "docB": 10215,
+  "worst": {
+   "d": 0,
+   "what": "section.hero \"Web studio & consulting · Bato\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/services/",
+  "vw": 390,
+  "h1A": 101,
+  "h1B": 101,
+  "h1lines": [
+   3,
+   3
+  ],
+  "docA": 6444,
+  "docB": 6371,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"What we do Everything your bus\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/consulting/",
+  "vw": 390,
+  "h1A": 67,
+  "h1B": 67,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 16879,
+  "docB": 16644,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"Consulting & automation More c\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/work/",
+  "vw": 390,
+  "h1A": 34,
+  "h1B": 34,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 4206,
+  "docB": 4181,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"Selected work Recent projects \"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/process/",
+  "vw": 390,
+  "h1A": 67,
+  "h1B": 34,
+  "h1lines": [
+   2,
+   1
+  ],
+  "docA": 3422,
+  "docB": 3388,
+  "worst": {
+   "d": -34,
+   "what": "li.step \"02 Proposal & design A fixed q\"",
+   "from": 682,
+   "to": 648
+  }
+ },
+ {
+  "p": "/pricing/",
+  "vw": 390,
+  "h1A": 67,
+  "h1B": 67,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 9791,
+  "docB": 9700,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"Pricing Fixed prices, publishe\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/faq/",
+  "vw": 390,
+  "h1A": 67,
+  "h1B": 34,
+  "h1lines": [
+   2,
+   1
+  ],
+  "docA": 3640,
+  "docB": 3606,
+  "worst": {
+   "d": -34,
+   "what": "section.section \"How long does a website take? \"",
+   "from": 422,
+   "to": 388
+  }
+ },
+ {
+  "p": "/contact/",
+  "vw": 390,
+  "h1A": 67,
+  "h1B": 34,
+  "h1lines": [
+   2,
+   1
+  ],
+  "docA": 3816,
+  "docB": 3784,
+  "worst": {
+   "d": -34,
+   "what": "section.section \"What happens next We read it p\"",
+   "from": 479,
+   "to": 445
+  }
+ },
+ {
+  "p": "/about/",
+  "vw": 390,
+  "h1A": 67,
+  "h1B": 67,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 4714,
+  "docB": 4638,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"About The person behind Knight\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/start/",
+  "vw": 390,
+  "h1A": 141,
+  "h1B": 141,
+  "h1lines": [
+   4,
+   4
+  ],
+  "docA": 7471,
+  "docB": 7250,
+  "worst": {
+   "d": 0,
+   "what": "section.lp-hero \"KnightWebstudio · Baton Rouge,\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/web-design-baton-rouge/",
+  "vw": 390,
+  "h1A": 101,
+  "h1B": 67,
+  "h1lines": [
+   3,
+   2
+  ],
+  "docA": 7937,
+  "docB": 7807,
+  "worst": {
+   "d": -34,
+   "what": "p.section-sub \"Baton Rouge is home. Fast, cus\"",
+   "from": 280,
+   "to": 246
+  }
+ },
+ {
+  "p": "/web-design-denham-springs/",
+  "vw": 390,
+  "h1A": 101,
+  "h1B": 67,
+  "h1lines": [
+   3,
+   2
+  ],
+  "docA": 7769,
+  "docB": 7630,
+  "worst": {
+   "d": -59,
+   "what": "p. \"From the shops of the Antique \"",
+   "from": 565,
+   "to": 506
+  }
+ },
+ {
+  "p": "/web-design-gonzales/",
+  "vw": 390,
+  "h1A": 67,
+  "h1B": 67,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 7867,
+  "docB": 7749,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"Areas we serve · Gonzales, LA \"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/web-design-prairieville/",
+  "vw": 390,
+  "h1A": 67,
+  "h1B": 67,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 7825,
+  "docB": 7761,
+  "worst": {
+   "d": -26,
+   "what": "p. \"New neighbors are searching fo\"",
+   "from": 586,
+   "to": 560
+  }
+ },
+ {
+  "p": "/privacy/",
+  "vw": 390,
+  "h1A": 67,
+  "h1B": 67,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 4506,
+  "docB": 4426,
+  "worst": {
+   "d": -29,
+   "what": "section.section \"Last updated 2 October 2026 Th\"",
+   "from": 389,
+   "to": 360
+  }
+ },
+ {
+  "p": "/terms/",
+  "vw": 390,
+  "h1A": 67,
+  "h1B": 67,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 4726,
+  "docB": 4598,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"Terms How payment and projects\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/checkout/",
+  "vw": 390,
+  "h1A": 34,
+  "h1B": 34,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 2100,
+  "docB": 2076,
+  "worst": {
+   "d": -23,
+   "what": "p.checkout-fine \"Questions before you pay? Emai\"",
+   "from": 532,
+   "to": 509
+  }
+ },
+ {
+  "p": "/checkout/success/",
+  "vw": 390,
+  "h1A": 34,
+  "h1B": 34,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 2327,
+  "docB": 2327,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"Checkout Thank you If your pay\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/404.html",
+  "vw": 390,
+  "h1A": 78,
+  "h1B": 78,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 844,
+  "docB": 844,
+  "worst": {
+   "d": 13,
+   "what": "p.nf-code \"404\"",
+   "from": 308,
+   "to": 321
+  }
+ },
+ {
+  "p": "/",
+  "vw": 393,
+  "h1A": 157,
+  "h1B": 157,
+  "h1lines": [
+   4,
+   4
+  ],
+  "docA": 10343,
+  "docB": 10167,
+  "worst": {
+   "d": 0,
+   "what": "section.hero \"Web studio & consulting · Bato\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/services/",
+  "vw": 393,
+  "h1A": 101,
+  "h1B": 101,
+  "h1lines": [
+   3,
+   3
+  ],
+  "docA": 6396,
+  "docB": 6371,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"What we do Everything your bus\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/consulting/",
+  "vw": 393,
+  "h1A": 67,
+  "h1B": 67,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 16879,
+  "docB": 16591,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"Consulting & automation More c\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/work/",
+  "vw": 393,
+  "h1A": 34,
+  "h1B": 34,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 4186,
+  "docB": 4161,
+  "worst": {
+   "d": -25,
+   "what": "p. \"“Rise into divine health.” An \"",
+   "from": 718,
+   "to": 693
+  }
+ },
+ {
+  "p": "/process/",
+  "vw": 393,
+  "h1A": 67,
+  "h1B": 34,
+  "h1lines": [
+   2,
+   1
+  ],
+  "docA": 3422,
+  "docB": 3388,
+  "worst": {
+   "d": -34,
+   "what": "li.step \"02 Proposal & design A fixed q\"",
+   "from": 682,
+   "to": 648
+  }
+ },
+ {
+  "p": "/pricing/",
+  "vw": 393,
+  "h1A": 67,
+  "h1B": 67,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 9745,
+  "docB": 9700,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"Pricing Fixed prices, publishe\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/faq/",
+  "vw": 393,
+  "h1A": 67,
+  "h1B": 34,
+  "h1lines": [
+   2,
+   1
+  ],
+  "docA": 3640,
+  "docB": 3562,
+  "worst": {
+   "d": -78,
+   "what": "p. \"Your logo if you have one, any\"",
+   "from": 626,
+   "to": 548
+  }
+ },
+ {
+  "p": "/contact/",
+  "vw": 393,
+  "h1A": 67,
+  "h1B": 34,
+  "h1lines": [
+   2,
+   1
+  ],
+  "docA": 3816,
+  "docB": 3784,
+  "worst": {
+   "d": -34,
+   "what": "section.section \"What happens next We read it p\"",
+   "from": 479,
+   "to": 445
+  }
+ },
+ {
+  "p": "/about/",
+  "vw": 393,
+  "h1A": 67,
+  "h1B": 67,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 4714,
+  "docB": 4612,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"About The person behind Knight\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/start/",
+  "vw": 393,
+  "h1A": 141,
+  "h1B": 141,
+  "h1lines": [
+   4,
+   4
+  ],
+  "docA": 7427,
+  "docB": 7233,
+  "worst": {
+   "d": 0,
+   "what": "section.lp-hero \"KnightWebstudio · Baton Rouge,\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/web-design-baton-rouge/",
+  "vw": 393,
+  "h1A": 101,
+  "h1B": 67,
+  "h1lines": [
+   3,
+   2
+  ],
+  "docA": 7913,
+  "docB": 7808,
+  "worst": {
+   "d": -34,
+   "what": "p.section-sub \"Baton Rouge is home. Fast, cus\"",
+   "from": 280,
+   "to": 246
+  }
+ },
+ {
+  "p": "/web-design-denham-springs/",
+  "vw": 393,
+  "h1A": 101,
+  "h1B": 67,
+  "h1lines": [
+   3,
+   2
+  ],
+  "docA": 7770,
+  "docB": 7631,
+  "worst": {
+   "d": -59,
+   "what": "p. \"From the shops of the Antique \"",
+   "from": 565,
+   "to": 506
+  }
+ },
+ {
+  "p": "/web-design-gonzales/",
+  "vw": 393,
+  "h1A": 67,
+  "h1B": 67,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 7844,
+  "docB": 7727,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"Areas we serve · Gonzales, LA \"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/web-design-prairieville/",
+  "vw": 393,
+  "h1A": 67,
+  "h1B": 67,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 7826,
+  "docB": 7739,
+  "worst": {
+   "d": -26,
+   "what": "p. \"New neighbors are searching fo\"",
+   "from": 586,
+   "to": 560
+  }
+ },
+ {
+  "p": "/privacy/",
+  "vw": 393,
+  "h1A": 67,
+  "h1B": 67,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 4452,
+  "docB": 4426,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"Privacy What we collect, and w\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/terms/",
+  "vw": 393,
+  "h1A": 67,
+  "h1B": 67,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 4700,
+  "docB": 4598,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"Terms How payment and projects\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/checkout/",
+  "vw": 393,
+  "h1A": 34,
+  "h1B": 34,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 2076,
+  "docB": 2076,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"Checkout Secure checkout Pay y\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/checkout/success/",
+  "vw": 393,
+  "h1A": 34,
+  "h1B": 34,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 2327,
+  "docB": 2327,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"Checkout Thank you If your pay\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/404.html",
+  "vw": 393,
+  "h1A": 78,
+  "h1B": 78,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 852,
+  "docB": 852,
+  "worst": {
+   "d": 47,
+   "what": "p.nf-code \"404\"",
+   "from": 312,
+   "to": 359
+  }
+ },
+ {
+  "p": "/",
+  "vw": 412,
+  "h1A": 157,
+  "h1B": 118,
+  "h1lines": [
+   4,
+   3
+  ],
+  "docA": 10135,
+  "docB": 9950,
+  "worst": {
+   "d": -40,
+   "what": "li. \"Automations that run while you\"",
+   "from": 694,
+   "to": 654
+  }
+ },
+ {
+  "p": "/services/",
+  "vw": 412,
+  "h1A": 101,
+  "h1B": 101,
+  "h1lines": [
+   3,
+   3
+  ],
+  "docA": 6343,
+  "docB": 6244,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"What we do Everything your bus\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/consulting/",
+  "vw": 412,
+  "h1A": 67,
+  "h1B": 67,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 16559,
+  "docB": 16240,
+  "worst": {
+   "d": -29,
+   "what": "p.eyebrow \"Why automate\"",
+   "from": 716,
+   "to": 687
+  }
+ },
+ {
+  "p": "/work/",
+  "vw": 412,
+  "h1A": 34,
+  "h1B": 34,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 4191,
+  "docB": 4117,
+  "worst": {
+   "d": -25,
+   "what": "p. \"“Rise into divine health.” An \"",
+   "from": 728,
+   "to": 703
+  }
+ },
+ {
+  "p": "/process/",
+  "vw": 412,
+  "h1A": 34,
+  "h1B": 34,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 3388,
+  "docB": 3364,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"How it works Four steps, no su\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/pricing/",
+  "vw": 412,
+  "h1A": 67,
+  "h1B": 67,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 9635,
+  "docB": 9505,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"Pricing Fixed prices, publishe\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/faq/",
+  "vw": 412,
+  "h1A": 34,
+  "h1B": 34,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 3547,
+  "docB": 3470,
+  "worst": {
+   "d": -14,
+   "what": "p. \"Give us 10 days' written notic\"",
+   "from": 906,
+   "to": 892
+  }
+ },
+ {
+  "p": "/contact/",
+  "vw": 412,
+  "h1A": 67,
+  "h1B": 34,
+  "h1lines": [
+   2,
+   1
+  ],
+  "docA": 3816,
+  "docB": 3756,
+  "worst": {
+   "d": -62,
+   "what": "section.section \"What happens next We read it p\"",
+   "from": 479,
+   "to": 417
+  }
+ },
+ {
+  "p": "/about/",
+  "vw": 412,
+  "h1A": 67,
+  "h1B": 67,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 4612,
+  "docB": 4561,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"About The person behind Knight\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/start/",
+  "vw": 412,
+  "h1A": 141,
+  "h1B": 141,
+  "h1lines": [
+   4,
+   4
+  ],
+  "docA": 7247,
+  "docB": 7186,
+  "worst": {
+   "d": 0,
+   "what": "section.lp-hero \"KnightWebstudio · Baton Rouge,\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/web-design-baton-rouge/",
+  "vw": 412,
+  "h1A": 101,
+  "h1B": 67,
+  "h1lines": [
+   3,
+   2
+  ],
+  "docA": 7791,
+  "docB": 7693,
+  "worst": {
+   "d": -34,
+   "what": "p.section-sub \"Baton Rouge is home. Fast, cus\"",
+   "from": 280,
+   "to": 246
+  }
+ },
+ {
+  "p": "/web-design-denham-springs/",
+  "vw": 412,
+  "h1A": 67,
+  "h1B": 67,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 7530,
+  "docB": 7490,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"Areas we serve · Denham Spring\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/web-design-gonzales/",
+  "vw": 412,
+  "h1A": 67,
+  "h1B": 67,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 7676,
+  "docB": 7604,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"Areas we serve · Gonzales, LA \"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/web-design-prairieville/",
+  "vw": 412,
+  "h1A": 67,
+  "h1B": 67,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 7639,
+  "docB": 7570,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"Areas we serve · Prairieville,\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/privacy/",
+  "vw": 412,
+  "h1A": 67,
+  "h1B": 67,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 4426,
+  "docB": 4324,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"Privacy What we collect, and w\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/terms/",
+  "vw": 412,
+  "h1A": 67,
+  "h1B": 67,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 4598,
+  "docB": 4572,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"Terms How payment and projects\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/checkout/",
+  "vw": 412,
+  "h1A": 34,
+  "h1B": 34,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 2076,
+  "docB": 2076,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"Checkout Secure checkout Pay y\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/checkout/success/",
+  "vw": 412,
+  "h1A": 34,
+  "h1B": 34,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 2327,
+  "docB": 2327,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"Checkout Thank you If your pay\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/404.html",
+  "vw": 412,
+  "h1A": 78,
+  "h1B": 78,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 915,
+  "docB": 915,
+  "worst": {
+   "d": 0,
+   "what": "p.nf-code \"404\"",
+   "from": 390,
+   "to": 390
+  }
+ },
+ {
+  "p": "/",
+  "vw": 430,
+  "h1A": 157,
+  "h1B": 118,
+  "h1lines": [
+   4,
+   3
+  ],
+  "docA": 9994,
+  "docB": 9839,
+  "worst": {
+   "d": -40,
+   "what": "li. \"Automations that run while you\"",
+   "from": 694,
+   "to": 654
+  }
+ },
+ {
+  "p": "/services/",
+  "vw": 430,
+  "h1A": 101,
+  "h1B": 67,
+  "h1lines": [
+   3,
+   2
+  ],
+  "docA": 6221,
+  "docB": 6156,
+  "worst": {
+   "d": -34,
+   "what": "p.section-sub \"Pick a single service or hand \"",
+   "from": 370,
+   "to": 336
+  }
+ },
+ {
+  "p": "/consulting/",
+  "vw": 430,
+  "h1A": 67,
+  "h1B": 67,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 16045,
+  "docB": 15716,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"Consulting & automation More c\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/work/",
+  "vw": 430,
+  "h1A": 34,
+  "h1B": 34,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 4121,
+  "docB": 4037,
+  "worst": {
+   "d": -29,
+   "what": "section.section \"Live Health & wellness · Onlin\"",
+   "from": 360,
+   "to": 331
+  }
+ },
+ {
+  "p": "/process/",
+  "vw": 430,
+  "h1A": 34,
+  "h1B": 34,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 3340,
+  "docB": 3261,
+  "worst": {
+   "d": -25,
+   "what": "li.step \"03 Build & review We build on \"",
+   "from": 931,
+   "to": 906
+  }
+ },
+ {
+  "p": "/pricing/",
+  "vw": 430,
+  "h1A": 67,
+  "h1B": 67,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 9364,
+  "docB": 9122,
+  "worst": {
+   "d": -52,
+   "what": "li. \"Mobile & SEO basics\"",
+   "from": 904,
+   "to": 852
+  }
+ },
+ {
+  "p": "/faq/",
+  "vw": 430,
+  "h1A": 34,
+  "h1B": 34,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 3446,
+  "docB": 3415,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"FAQ Questions we get asked The\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/contact/",
+  "vw": 430,
+  "h1A": 34,
+  "h1B": 34,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 3730,
+  "docB": 3732,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"Get in touch Tell us about you\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/about/",
+  "vw": 430,
+  "h1A": 67,
+  "h1B": 67,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 4511,
+  "docB": 4511,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"About The person behind Knight\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/start/",
+  "vw": 430,
+  "h1A": 141,
+  "h1B": 106,
+  "h1lines": [
+   4,
+   3
+  ],
+  "docA": 7176,
+  "docB": 7061,
+  "worst": {
+   "d": -35,
+   "what": "p.lede \"Custom websites live in as lit\"",
+   "from": 579,
+   "to": 544
+  }
+ },
+ {
+  "p": "/web-design-baton-rouge/",
+  "vw": 430,
+  "h1A": 67,
+  "h1B": 67,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 7629,
+  "docB": 7544,
+  "worst": {
+   "d": -29,
+   "what": "p. \"Whether your customers find yo\"",
+   "from": 560,
+   "to": 531
+  }
+ },
+ {
+  "p": "/web-design-denham-springs/",
+  "vw": 430,
+  "h1A": 67,
+  "h1B": 67,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 7475,
+  "docB": 7367,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"Areas we serve · Denham Spring\"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/web-design-gonzales/",
+  "vw": 430,
+  "h1A": 67,
+  "h1B": 67,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 7621,
+  "docB": 7453,
+  "worst": {
+   "d": 0,
+   "what": "section.page-head-wrap \"Areas we serve · Gonzales, LA \"",
+   "from": 73,
+   "to": 73
+  }
+ },
+ {
+  "p": "/web-design-prairieville/",
+  "vw": 430,
+  "h1A": 67,
+  "h1B": 67,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 7531,
+  "docB": 7414,
+  "worst": {
+   "d": -25,
+   "what": "h2.h3 \"Prefer a handshake?\"",
+   "from": 830,
+   "to": 805
+  }
+ },
+ {
+  "p": "/privacy/",
+  "vw": 430,
+  "h1A": 67,
+  "h1B": 67,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 4300,
+  "docB": 4223,
+  "worst": {
+   "d": -26,
+   "what": "p. \"The contact page loads hCaptch\"",
+   "from": 900,
+   "to": 874
+  }
+ },
+ {
+  "p": "/terms/",
+  "vw": 430,
+  "h1A": 67,
+  "h1B": 67,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 4497,
+  "docB": 4420,
+  "worst": {
+   "d": -26,
+   "what": "h2. \"Standard payment terms\"",
+   "from": 583,
+   "to": 557
+  }
+ },
+ {
+  "p": "/checkout/",
+  "vw": 430,
+  "h1A": 34,
+  "h1B": 34,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 2052,
+  "docB": 2024,
+  "worst": {
+   "d": -29,
+   "what": "section.section \"Secure checkout could not load\"",
+   "from": 327,
+   "to": 298
+  }
+ },
+ {
+  "p": "/checkout/success/",
+  "vw": 430,
+  "h1A": 34,
+  "h1B": 34,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 2303,
+  "docB": 2277,
+  "worst": {
+   "d": -25,
+   "what": "p.checkout-fine \"Questions about your payment? \"",
+   "from": 738,
+   "to": 713
+  }
+ },
+ {
+  "p": "/404.html",
+  "vw": 430,
+  "h1A": 78,
+  "h1B": 39,
+  "h1lines": [
+   2,
+   1
+  ],
+  "docA": 932,
+  "docB": 932,
+  "worst": {
+   "d": 20,
+   "what": "p.nf-code \"404\"",
+   "from": 399,
+   "to": 419
+  }
+ },
+ {
+  "p": "/",
+  "vw": 768,
+  "h1A": 86,
+  "h1B": 86,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 7083,
+  "docB": 6965,
+  "worst": {
+   "d": -30,
+   "what": "li. \"Meet in person anywhere in Gre\"",
+   "from": 566,
+   "to": 536
+  }
+ },
+ {
+  "p": "/services/",
+  "vw": 768,
+  "h1A": 68,
+  "h1B": 68,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 4102,
+  "docB": 4056,
+  "worst": {
+   "d": 1,
+   "what": "p.eyebrow \"What we do\"",
+   "from": 217,
+   "to": 218
+  }
+ },
+ {
+  "p": "/consulting/",
+  "vw": 768,
+  "h1A": 34,
+  "h1B": 34,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 11130,
+  "docB": 10941,
+  "worst": {
+   "d": 2,
+   "what": "p.eyebrow \"Why automate\"",
+   "from": 537,
+   "to": 539
+  }
+ },
+ {
+  "p": "/work/",
+  "vw": 768,
+  "h1A": 34,
+  "h1B": 34,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 3067,
+  "docB": 3020,
+  "worst": {
+   "d": -24,
+   "what": "h2.h3 \"Risen Health\"",
+   "from": 675,
+   "to": 651
+  }
+ },
+ {
+  "p": "/process/",
+  "vw": 768,
+  "h1A": 34,
+  "h1B": 34,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 2318,
+  "docB": 2296,
+  "worst": {
+   "d": 1,
+   "what": "p.eyebrow \"How it works\"",
+   "from": 217,
+   "to": 218
+  }
+ },
+ {
+  "p": "/pricing/",
+  "vw": 768,
+  "h1A": 34,
+  "h1B": 34,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 6213,
+  "docB": 6093,
+  "worst": {
+   "d": -28,
+   "what": "section.section \"One-page $1,000 Or $500 down, \"",
+   "from": 397,
+   "to": 369
+  }
+ },
+ {
+  "p": "/faq/",
+  "vw": 768,
+  "h1A": 34,
+  "h1B": 34,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 2970,
+  "docB": 2948,
+  "worst": {
+   "d": 1,
+   "what": "p.eyebrow \"FAQ\"",
+   "from": 217,
+   "to": 218
+  }
+ },
+ {
+  "p": "/contact/",
+  "vw": 768,
+  "h1A": 34,
+  "h1B": 34,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 2894,
+  "docB": 2872,
+  "worst": {
+   "d": 1,
+   "what": "p.eyebrow \"Get in touch\"",
+   "from": 217,
+   "to": 218
+  }
+ },
+ {
+  "p": "/about/",
+  "vw": 768,
+  "h1A": 34,
+  "h1B": 34,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 3262,
+  "docB": 3240,
+  "worst": {
+   "d": 1,
+   "what": "p.eyebrow \"About\"",
+   "from": 127,
+   "to": 128
+  }
+ },
+ {
+  "p": "/start/",
+  "vw": 768,
+  "h1A": 74,
+  "h1B": 74,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 4816,
+  "docB": 4726,
+  "worst": {
+   "d": -30,
+   "what": "li. \"Reply within one business day\"",
+   "from": 796,
+   "to": 766
+  }
+ },
+ {
+  "p": "/web-design-baton-rouge/",
+  "vw": 768,
+  "h1A": 34,
+  "h1B": 34,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 5710,
+  "docB": 5650,
+  "worst": {
+   "d": 2,
+   "what": "p.eyebrow \"What we build\"",
+   "from": 809,
+   "to": 811
+  }
+ },
+ {
+  "p": "/web-design-denham-springs/",
+  "vw": 768,
+  "h1A": 34,
+  "h1B": 34,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 5623,
+  "docB": 5563,
+  "worst": {
+   "d": 2,
+   "what": "p.eyebrow \"What we build\"",
+   "from": 783,
+   "to": 785
+  }
+ },
+ {
+  "p": "/web-design-gonzales/",
+  "vw": 768,
+  "h1A": 34,
+  "h1B": 34,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 5657,
+  "docB": 5593,
+  "worst": {
+   "d": -28,
+   "what": "section.section \"Gonzales sits on I-10 between \"",
+   "from": 307,
+   "to": 279
+  }
+ },
+ {
+  "p": "/web-design-prairieville/",
+  "vw": 768,
+  "h1A": 34,
+  "h1B": 34,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 5649,
+  "docB": 5600,
+  "worst": {
+   "d": 2,
+   "what": "p.eyebrow \"What we build\"",
+   "from": 783,
+   "to": 785
+  }
+ },
+ {
+  "p": "/privacy/",
+  "vw": 768,
+  "h1A": 34,
+  "h1B": 34,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 3036,
+  "docB": 2989,
+  "worst": {
+   "d": 1,
+   "what": "p.eyebrow \"Privacy\"",
+   "from": 127,
+   "to": 128
+  }
+ },
+ {
+  "p": "/terms/",
+  "vw": 768,
+  "h1A": 34,
+  "h1B": 34,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 3259,
+  "docB": 3237,
+  "worst": {
+   "d": 1,
+   "what": "p.eyebrow \"Terms\"",
+   "from": 127,
+   "to": 128
+  }
+ },
+ {
+  "p": "/checkout/",
+  "vw": 768,
+  "h1A": 34,
+  "h1B": 34,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 1531,
+  "docB": 1509,
+  "worst": {
+   "d": 1,
+   "what": "p.eyebrow \"Checkout\"",
+   "from": 127,
+   "to": 128
+  }
+ },
+ {
+  "p": "/checkout/success/",
+  "vw": 768,
+  "h1A": 34,
+  "h1B": 34,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 1751,
+  "docB": 1681,
+  "worst": {
+   "d": -47,
+   "what": "footer.site-footer \"KnightWebstudio Websites, auto\"",
+   "from": 757,
+   "to": 710
+  }
+ },
+ {
+  "p": "/404.html",
+  "vw": 768,
+  "h1A": 43,
+  "h1B": 43,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 1024,
+  "docB": 1024,
+  "worst": {
+   "d": 0,
+   "what": "p.nf-code \"404\"",
+   "from": 447,
+   "to": 447
+  }
+ },
+ {
+  "p": "/",
+  "vw": 1280,
+  "h1A": 287,
+  "h1B": 287,
+  "h1lines": [
+   4,
+   4
+  ],
+  "docA": 6263,
+  "docB": 6193,
+  "worst": {
+   "d": 1,
+   "what": "p.eyebrow \"Web studio & consulting · Bato\"",
+   "from": 161,
+   "to": 162
+  }
+ },
+ {
+  "p": "/services/",
+  "vw": 1280,
+  "h1A": 107,
+  "h1B": 107,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 3056,
+  "docB": 3010,
+  "worst": {
+   "d": 1,
+   "what": "p.eyebrow \"What we do\"",
+   "from": 277,
+   "to": 278
+  }
+ },
+ {
+  "p": "/consulting/",
+  "vw": 1280,
+  "h1A": 107,
+  "h1B": 54,
+  "h1lines": [
+   2,
+   1
+  ],
+  "docA": 9560,
+  "docB": 9348,
+  "worst": {
+   "d": -53,
+   "what": "p.section-sub \"A website is one piece. We als\"",
+   "from": 452,
+   "to": 399
+  }
+ },
+ {
+  "p": "/work/",
+  "vw": 1280,
+  "h1A": 54,
+  "h1B": 54,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 2688,
+  "docB": 2642,
+  "worst": {
+   "d": 1,
+   "what": "p.eyebrow \"Selected work\"",
+   "from": 277,
+   "to": 278
+  }
+ },
+ {
+  "p": "/process/",
+  "vw": 1280,
+  "h1A": 54,
+  "h1B": 54,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 1883,
+  "docB": 1837,
+  "worst": {
+   "d": 1,
+   "what": "p.eyebrow \"How it works\"",
+   "from": 277,
+   "to": 278
+  }
+ },
+ {
+  "p": "/pricing/",
+  "vw": 1280,
+  "h1A": 107,
+  "h1B": 54,
+  "h1lines": [
+   2,
+   1
+  ],
+  "docA": 4935,
+  "docB": 4758,
+  "worst": {
+   "d": -81,
+   "what": "section.section \"One-page $1,000 Or $500 down, \"",
+   "from": 537,
+   "to": 456
+  }
+ },
+ {
+  "p": "/faq/",
+  "vw": 1280,
+  "h1A": 54,
+  "h1B": 54,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 2769,
+  "docB": 2723,
+  "worst": {
+   "d": 2,
+   "what": "p. \"Completely. The domain is regi\"",
+   "from": 747,
+   "to": 749
+  }
+ },
+ {
+  "p": "/contact/",
+  "vw": 1280,
+  "h1A": 54,
+  "h1B": 54,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 1967,
+  "docB": 1921,
+  "worst": {
+   "d": -23,
+   "what": "li. \"Then a free 30-minute call, if\"",
+   "from": 708,
+   "to": 685
+  }
+ },
+ {
+  "p": "/about/",
+  "vw": 1280,
+  "h1A": 107,
+  "h1B": 107,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 3088,
+  "docB": 3042,
+  "worst": {
+   "d": 1,
+   "what": "p.eyebrow \"About\"",
+   "from": 161,
+   "to": 162
+  }
+ },
+ {
+  "p": "/start/",
+  "vw": 1280,
+  "h1A": 237,
+  "h1B": 178,
+  "h1lines": [
+   4,
+   3
+  ],
+  "docA": 4721,
+  "docB": 4643,
+  "worst": {
+   "d": -58,
+   "what": "p.lede \"Custom websites live in as lit\"",
+   "from": 465,
+   "to": 407
+  }
+ },
+ {
+  "p": "/web-design-baton-rouge/",
+  "vw": 1280,
+  "h1A": 107,
+  "h1B": 107,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 5286,
+  "docB": 5149,
+  "worst": {
+   "d": 1,
+   "what": "p.eyebrow \"Areas we serve · Baton Rouge, \"",
+   "from": 161,
+   "to": 162
+  }
+ },
+ {
+  "p": "/web-design-denham-springs/",
+  "vw": 1280,
+  "h1A": 107,
+  "h1B": 107,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 5199,
+  "docB": 5202,
+  "worst": {
+   "d": 1,
+   "what": "p.eyebrow \"Areas we serve · Denham Spring\"",
+   "from": 161,
+   "to": 162
+  }
+ },
+ {
+  "p": "/web-design-gonzales/",
+  "vw": 1280,
+  "h1A": 107,
+  "h1B": 107,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 5186,
+  "docB": 5115,
+  "worst": {
+   "d": -28,
+   "what": "p. \"Whether you run a shop on Airl\"",
+   "from": 588,
+   "to": 560
+  }
+ },
+ {
+  "p": "/web-design-prairieville/",
+  "vw": 1280,
+  "h1A": 107,
+  "h1B": 107,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 5188,
+  "docB": 5193,
+  "worst": {
+   "d": 1,
+   "what": "p.eyebrow \"Areas we serve · Prairieville,\"",
+   "from": 161,
+   "to": 162
+  }
+ },
+ {
+  "p": "/privacy/",
+  "vw": 1280,
+  "h1A": 107,
+  "h1B": 107,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 2681,
+  "docB": 2682,
+  "worst": {
+   "d": 1,
+   "what": "p.eyebrow \"Privacy\"",
+   "from": 161,
+   "to": 162
+  }
+ },
+ {
+  "p": "/terms/",
+  "vw": 1280,
+  "h1A": 107,
+  "h1B": 54,
+  "h1lines": [
+   2,
+   1
+  ],
+  "docA": 2930,
+  "docB": 2877,
+  "worst": {
+   "d": -53,
+   "what": "p.section-sub \"Short version: fixed prices, 5\"",
+   "from": 336,
+   "to": 283
+  }
+ },
+ {
+  "p": "/checkout/",
+  "vw": 1280,
+  "h1A": 54,
+  "h1B": 54,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 1158,
+  "docB": 1159,
+  "worst": {
+   "d": 1,
+   "what": "p.eyebrow \"Checkout\"",
+   "from": 161,
+   "to": 162
+  }
+ },
+ {
+  "p": "/checkout/success/",
+  "vw": 1280,
+  "h1A": 54,
+  "h1B": 54,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 1386,
+  "docB": 1339,
+  "worst": {
+   "d": -26,
+   "what": "p.checkout-fine \"Questions about your payment? \"",
+   "from": 747,
+   "to": 721
+  }
+ },
+ {
+  "p": "/404.html",
+  "vw": 1280,
+  "h1A": 72,
+  "h1B": 72,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 800,
+  "docB": 800,
+  "worst": {
+   "d": 0,
+   "what": "p.nf-code \"404\"",
+   "from": 302,
+   "to": 302
+  }
+ },
+ {
+  "p": "/",
+  "vw": 1440,
+  "h1A": 288,
+  "h1B": 288,
+  "h1lines": [
+   4,
+   4
+  ],
+  "docA": 6360,
+  "docB": 6291,
+  "worst": {
+   "d": 1,
+   "what": "p.eyebrow \"Web studio & consulting · Bato\"",
+   "from": 161,
+   "to": 162
+  }
+ },
+ {
+  "p": "/services/",
+  "vw": 1440,
+  "h1A": 107,
+  "h1B": 107,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 3065,
+  "docB": 3019,
+  "worst": {
+   "d": -24,
+   "what": "li. \"Google Business Profile setup\"",
+   "from": 858,
+   "to": 834
+  }
+ },
+ {
+  "p": "/consulting/",
+  "vw": 1440,
+  "h1A": 107,
+  "h1B": 54,
+  "h1lines": [
+   2,
+   1
+  ],
+  "docA": 9690,
+  "docB": 9478,
+  "worst": {
+   "d": -98,
+   "what": "p.section-sub \"Surveys of small business owne\"",
+   "from": 860,
+   "to": 762
+  }
+ },
+ {
+  "p": "/work/",
+  "vw": 1440,
+  "h1A": 54,
+  "h1B": 54,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 2697,
+  "docB": 2651,
+  "worst": {
+   "d": 1,
+   "what": "p.eyebrow \"Selected work\"",
+   "from": 277,
+   "to": 278
+  }
+ },
+ {
+  "p": "/process/",
+  "vw": 1440,
+  "h1A": 54,
+  "h1B": 54,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 1893,
+  "docB": 1847,
+  "worst": {
+   "d": 1,
+   "what": "p.eyebrow \"How it works\"",
+   "from": 277,
+   "to": 278
+  }
+ },
+ {
+  "p": "/pricing/",
+  "vw": 1440,
+  "h1A": 107,
+  "h1B": 54,
+  "h1lines": [
+   2,
+   1
+  ],
+  "docA": 4949,
+  "docB": 4772,
+  "worst": {
+   "d": -81,
+   "what": "section.section \"One-page $1,000 Or $500 down, \"",
+   "from": 537,
+   "to": 456
+  }
+ },
+ {
+  "p": "/faq/",
+  "vw": 1440,
+  "h1A": 54,
+  "h1B": 54,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 2778,
+  "docB": 2732,
+  "worst": {
+   "d": 1,
+   "what": "p.eyebrow \"FAQ\"",
+   "from": 277,
+   "to": 278
+  }
+ },
+ {
+  "p": "/contact/",
+  "vw": 1440,
+  "h1A": 54,
+  "h1B": 54,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 1976,
+  "docB": 1931,
+  "worst": {
+   "d": -23,
+   "what": "li. \"Then a free 30-minute call, if\"",
+   "from": 708,
+   "to": 685
+  }
+ },
+ {
+  "p": "/about/",
+  "vw": 1440,
+  "h1A": 107,
+  "h1B": 107,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 3098,
+  "docB": 3052,
+  "worst": {
+   "d": 1,
+   "what": "p.eyebrow \"About\"",
+   "from": 161,
+   "to": 162
+  }
+ },
+ {
+  "p": "/start/",
+  "vw": 1440,
+  "h1A": 237,
+  "h1B": 178,
+  "h1lines": [
+   4,
+   3
+  ],
+  "docA": 4809,
+  "docB": 4732,
+  "worst": {
+   "d": -59,
+   "what": "li. \"Fixed, published prices\"",
+   "from": 708,
+   "to": 649
+  }
+ },
+ {
+  "p": "/web-design-baton-rouge/",
+  "vw": 1440,
+  "h1A": 107,
+  "h1B": 107,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 5372,
+  "docB": 5235,
+  "worst": {
+   "d": 1,
+   "what": "p.eyebrow \"Areas we serve · Baton Rouge, \"",
+   "from": 161,
+   "to": 162
+  }
+ },
+ {
+  "p": "/web-design-denham-springs/",
+  "vw": 1440,
+  "h1A": 107,
+  "h1B": 107,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 5285,
+  "docB": 5289,
+  "worst": {
+   "d": 1,
+   "what": "p.eyebrow \"Areas we serve · Denham Spring\"",
+   "from": 161,
+   "to": 162
+  }
+ },
+ {
+  "p": "/web-design-gonzales/",
+  "vw": 1440,
+  "h1A": 107,
+  "h1B": 107,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 5273,
+  "docB": 5202,
+  "worst": {
+   "d": -28,
+   "what": "p. \"Whether you run a shop on Airl\"",
+   "from": 588,
+   "to": 560
+  }
+ },
+ {
+  "p": "/web-design-prairieville/",
+  "vw": 1440,
+  "h1A": 107,
+  "h1B": 107,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 5274,
+  "docB": 5279,
+  "worst": {
+   "d": 1,
+   "what": "p.eyebrow \"Areas we serve · Prairieville,\"",
+   "from": 161,
+   "to": 162
+  }
+ },
+ {
+  "p": "/privacy/",
+  "vw": 1440,
+  "h1A": 107,
+  "h1B": 107,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 2691,
+  "docB": 2692,
+  "worst": {
+   "d": 1,
+   "what": "p.eyebrow \"Privacy\"",
+   "from": 161,
+   "to": 162
+  }
+ },
+ {
+  "p": "/terms/",
+  "vw": 1440,
+  "h1A": 107,
+  "h1B": 54,
+  "h1lines": [
+   2,
+   1
+  ],
+  "docA": 2939,
+  "docB": 2887,
+  "worst": {
+   "d": -53,
+   "what": "p.section-sub \"Short version: fixed prices, 5\"",
+   "from": 336,
+   "to": 283
+  }
+ },
+ {
+  "p": "/checkout/",
+  "vw": 1440,
+  "h1A": 54,
+  "h1B": 54,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 1167,
+  "docB": 1168,
+  "worst": {
+   "d": 1,
+   "what": "p.eyebrow \"Checkout\"",
+   "from": 161,
+   "to": 162
+  }
+ },
+ {
+  "p": "/checkout/success/",
+  "vw": 1440,
+  "h1A": 54,
+  "h1B": 54,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 1396,
+  "docB": 1348,
+  "worst": {
+   "d": -26,
+   "what": "p.checkout-fine \"Questions about your payment? \"",
+   "from": 747,
+   "to": 721
+  }
+ },
+ {
+  "p": "/404.html",
+  "vw": 1440,
+  "h1A": 72,
+  "h1B": 72,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 900,
+  "docB": 900,
+  "worst": {
+   "d": 0,
+   "what": "p.nf-code \"404\"",
+   "from": 351,
+   "to": 351
+  }
+ },
+ {
+  "p": "/",
+  "vw": 1920,
+  "h1A": 288,
+  "h1B": 288,
+  "h1lines": [
+   4,
+   4
+  ],
+  "docA": 6360,
+  "docB": 6291,
+  "worst": {
+   "d": 2,
+   "what": "p.eyebrow \"What we do\"",
+   "from": 1037,
+   "to": 1039
+  }
+ },
+ {
+  "p": "/services/",
+  "vw": 1920,
+  "h1A": 107,
+  "h1B": 107,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 3065,
+  "docB": 3019,
+  "worst": {
+   "d": -24,
+   "what": "li. \"Google Business Profile setup\"",
+   "from": 858,
+   "to": 834
+  }
+ },
+ {
+  "p": "/consulting/",
+  "vw": 1920,
+  "h1A": 107,
+  "h1B": 54,
+  "h1lines": [
+   2,
+   1
+  ],
+  "docA": 9691,
+  "docB": 9478,
+  "worst": {
+   "d": -98,
+   "what": "p.section-sub \"Surveys of small business owne\"",
+   "from": 860,
+   "to": 762
+  }
+ },
+ {
+  "p": "/work/",
+  "vw": 1920,
+  "h1A": 54,
+  "h1B": 54,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 2697,
+  "docB": 2651,
+  "worst": {
+   "d": 1,
+   "what": "p.eyebrow \"Selected work\"",
+   "from": 277,
+   "to": 278
+  }
+ },
+ {
+  "p": "/process/",
+  "vw": 1920,
+  "h1A": 54,
+  "h1B": 54,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 1893,
+  "docB": 1847,
+  "worst": {
+   "d": 1,
+   "what": "p.eyebrow \"How it works\"",
+   "from": 277,
+   "to": 278
+  }
+ },
+ {
+  "p": "/pricing/",
+  "vw": 1920,
+  "h1A": 107,
+  "h1B": 54,
+  "h1lines": [
+   2,
+   1
+  ],
+  "docA": 4950,
+  "docB": 4773,
+  "worst": {
+   "d": -95,
+   "what": "li. \"Contact form\"",
+   "from": 1053,
+   "to": 958
+  }
+ },
+ {
+  "p": "/faq/",
+  "vw": 1920,
+  "h1A": 54,
+  "h1B": 54,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 2778,
+  "docB": 2732,
+  "worst": {
+   "d": 1,
+   "what": "p.eyebrow \"FAQ\"",
+   "from": 277,
+   "to": 278
+  }
+ },
+ {
+  "p": "/contact/",
+  "vw": 1920,
+  "h1A": 54,
+  "h1B": 54,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 1976,
+  "docB": 1931,
+  "worst": {
+   "d": -23,
+   "what": "li. \"Then a free 30-minute call, if\"",
+   "from": 708,
+   "to": 685
+  }
+ },
+ {
+  "p": "/about/",
+  "vw": 1920,
+  "h1A": 107,
+  "h1B": 107,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 3098,
+  "docB": 3052,
+  "worst": {
+   "d": 1,
+   "what": "p.eyebrow \"About\"",
+   "from": 161,
+   "to": 162
+  }
+ },
+ {
+  "p": "/start/",
+  "vw": 1920,
+  "h1A": 237,
+  "h1B": 178,
+  "h1lines": [
+   4,
+   3
+  ],
+  "docA": 4809,
+  "docB": 4732,
+  "worst": {
+   "d": -59,
+   "what": "li. \"Fixed, published prices\"",
+   "from": 708,
+   "to": 649
+  }
+ },
+ {
+  "p": "/web-design-baton-rouge/",
+  "vw": 1920,
+  "h1A": 107,
+  "h1B": 107,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 5372,
+  "docB": 5235,
+  "worst": {
+   "d": 2,
+   "what": "p.eyebrow \"What we build\"",
+   "from": 1048,
+   "to": 1050
+  }
+ },
+ {
+  "p": "/web-design-denham-springs/",
+  "vw": 1920,
+  "h1A": 107,
+  "h1B": 107,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 5285,
+  "docB": 5289,
+  "worst": {
+   "d": 2,
+   "what": "p.eyebrow \"What we build\"",
+   "from": 1022,
+   "to": 1024
+  }
+ },
+ {
+  "p": "/web-design-gonzales/",
+  "vw": 1920,
+  "h1A": 107,
+  "h1B": 107,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 5273,
+  "docB": 5202,
+  "worst": {
+   "d": -28,
+   "what": "p. \"Whether you run a shop on Airl\"",
+   "from": 588,
+   "to": 560
+  }
+ },
+ {
+  "p": "/web-design-prairieville/",
+  "vw": 1920,
+  "h1A": 107,
+  "h1B": 107,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 5274,
+  "docB": 5279,
+  "worst": {
+   "d": 2,
+   "what": "p.eyebrow \"What we build\"",
+   "from": 1022,
+   "to": 1024
+  }
+ },
+ {
+  "p": "/privacy/",
+  "vw": 1920,
+  "h1A": 107,
+  "h1B": 107,
+  "h1lines": [
+   2,
+   2
+  ],
+  "docA": 2691,
+  "docB": 2692,
+  "worst": {
+   "d": 1,
+   "what": "p.eyebrow \"Privacy\"",
+   "from": 161,
+   "to": 162
+  }
+ },
+ {
+  "p": "/terms/",
+  "vw": 1920,
+  "h1A": 107,
+  "h1B": 54,
+  "h1lines": [
+   2,
+   1
+  ],
+  "docA": 2939,
+  "docB": 2887,
+  "worst": {
+   "d": -53,
+   "what": "p.section-sub \"Short version: fixed prices, 5\"",
+   "from": 336,
+   "to": 283
+  }
+ },
+ {
+  "p": "/checkout/",
+  "vw": 1920,
+  "h1A": 54,
+  "h1B": 54,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 1167,
+  "docB": 1168,
+  "worst": {
+   "d": 1,
+   "what": "p.eyebrow \"Checkout\"",
+   "from": 161,
+   "to": 162
+  }
+ },
+ {
+  "p": "/checkout/success/",
+  "vw": 1920,
+  "h1A": 54,
+  "h1B": 54,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 1396,
+  "docB": 1348,
+  "worst": {
+   "d": -47,
+   "what": "footer.site-footer \"KnightWebstudio Websites, auto\"",
+   "from": 902,
+   "to": 855
+  }
+ },
+ {
+  "p": "/404.html",
+  "vw": 1920,
+  "h1A": 72,
+  "h1B": 72,
+  "h1lines": [
+   1,
+   1
+  ],
+  "docA": 1080,
+  "docB": 1080,
+  "worst": {
+   "d": 0,
+   "what": "p.nf-code \"404\"",
+   "from": 441,
+   "to": 441
+  }
+ }
+]

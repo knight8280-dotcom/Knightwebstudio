@@ -1,0 +1,243 @@
+WARN  404.html: an inline <script> differs from the baseline (fine only for the theme/first-paint snippet; say why)
+WARN  404.html: extra stylesheet linked: /assets/css/pages/notfound.css (allowed only while pages are being built; the finished site has one stylesheet)
+WARN  about/index.html: an inline <script> differs from the baseline (fine only for the theme/first-paint snippet; say why)
+WARN  about/index.html: extra stylesheet linked: /assets/css/pages/about.css (allowed only while pages are being built; the finished site has one stylesheet)
+WARN  checkout/index.html: the first-paint <script> in the head differs from the baseline (fine if it only changes the default theme)
+WARN  checkout/index.html: extra stylesheet linked: /assets/css/pages/checkout.css (allowed only while pages are being built; the finished site has one stylesheet)
+WARN  checkout/success/index.html: the first-paint <script> in the head differs from the baseline (fine if it only changes the default theme)
+WARN  checkout/success/index.html: extra stylesheet linked: /assets/css/pages/checkout-success.css (allowed only while pages are being built; the finished site has one stylesheet)
+WARN  consulting/index.html: an inline <script> differs from the baseline (fine only for the theme/first-paint snippet; say why)
+WARN  consulting/index.html: extra stylesheet linked: /assets/css/pages/consulting.css (allowed only while pages are being built; the finished site has one stylesheet)
+WARN  contact/index.html: an inline <script> differs from the baseline (fine only for the theme/first-paint snippet; say why)
+WARN  contact/index.html: extra stylesheet linked: /assets/css/pages/contact.css (allowed only while pages are being built; the finished site has one stylesheet)
+WARN  faq/index.html: an inline <script> differs from the baseline (fine only for the theme/first-paint snippet; say why)
+WARN  faq/index.html: extra stylesheet linked: /assets/css/pages/faq.css (allowed only while pages are being built; the finished site has one stylesheet)
+WARN  index.html: an inline <script> differs from the baseline (fine only for the theme/first-paint snippet; say why)
+WARN  index.html: extra stylesheet linked: /assets/css/pages/home.css (allowed only while pages are being built; the finished site has one stylesheet)
+WARN  pricing/index.html: an inline <script> differs from the baseline (fine only for the theme/first-paint snippet; say why)
+WARN  pricing/index.html: extra stylesheet linked: /assets/css/pages/pricing.css (allowed only while pages are being built; the finished site has one stylesheet)
+WARN  privacy/index.html: an inline <script> differs from the baseline (fine only for the theme/first-paint snippet; say why)
+WARN  privacy/index.html: extra stylesheet linked: /assets/css/pages/privacy.css (allowed only while pages are being built; the finished site has one stylesheet)
+WARN  process/index.html: an inline <script> differs from the baseline (fine only for the theme/first-paint snippet; say why)
+WARN  process/index.html: extra stylesheet linked: /assets/css/pages/process.css (allowed only while pages are being built; the finished site has one stylesheet)
+WARN  services/index.html: an inline <script> differs from the baseline (fine only for the theme/first-paint snippet; say why)
+WARN  services/index.html: extra stylesheet linked: /assets/css/pages/services.css (allowed only while pages are being built; the finished site has one stylesheet)
+WARN  start/index.html: an inline <script> differs from the baseline (fine only for the theme/first-paint snippet; say why)
+WARN  start/index.html: extra stylesheet linked: /assets/css/pages/start.css (allowed only while pages are being built; the finished site has one stylesheet)
+WARN  terms/index.html: an inline <script> differs from the baseline (fine only for the theme/first-paint snippet; say why)
+WARN  terms/index.html: extra stylesheet linked: /assets/css/pages/terms.css (allowed only while pages are being built; the finished site has one stylesheet)
+WARN  web-design-baton-rouge/index.html: an inline <script> differs from the baseline (fine only for the theme/first-paint snippet; say why)
+WARN  web-design-baton-rouge/index.html: extra stylesheet linked: /assets/css/pages/city.css (allowed only while pages are being built; the finished site has one stylesheet)
+WARN  web-design-denham-springs/index.html: an inline <script> differs from the baseline (fine only for the theme/first-paint snippet; say why)
+WARN  web-design-denham-springs/index.html: extra stylesheet linked: /assets/css/pages/city.css (allowed only while pages are being built; the finished site has one stylesheet)
+WARN  web-design-gonzales/index.html: an inline <script> differs from the baseline (fine only for the theme/first-paint snippet; say why)
+WARN  web-design-gonzales/index.html: extra stylesheet linked: /assets/css/pages/city.css (allowed only while pages are being built; the finished site has one stylesheet)
+WARN  web-design-prairieville/index.html: an inline <script> differs from the baseline (fine only for the theme/first-paint snippet; say why)
+WARN  web-design-prairieville/index.html: extra stylesheet linked: /assets/css/pages/city.css (allowed only while pages are being built; the finished site has one stylesheet)
+WARN  work/index.html: an inline <script> differs from the baseline (fine only for the theme/first-paint snippet; say why)
+WARN  work/index.html: extra stylesheet linked: /assets/css/pages/work.css (allowed only while pages are being built; the finished site has one stylesheet)
+INFO  404.html: 0 of 3 baseline sentences are reworded or removed
+INFO  about/index.html: 11 of 32 baseline sentences are reworded or removed
+        - Skip to content KnightWebstudio Services Consulting Work Process Pricing FAQ About Contact Start your project knightwebstudio1@gmail.com Get a quote About The person behind KnightWebstudio I'm Christian Knight.
+        - I build fast, modern websites for local businesses, and set up the systems that help them win more customers and get hours back, from right here in Baton Rouge, LA.
+        - Hi, I'm Christian I'm the founder of KnightWebstudio, and I'm based in Baton Rouge, Louisiana.
+        - How I work Fixed, published prices.
+        - Launch in 7 days to 6 weeks, depending on the package.
+        - Care after launch, if you want it.
+        - Work I've built Work you can visit and judge for yourself: Risen Health - Health & wellness · Online store Corbel Books - Fintech SaaS · Product site & app UI Smilys Softwash - Exterior cleaning in Greater Baton Rouge · 
+        - Let's talk The easiest way to start is a free 30-minute call.
+        - Email: knightwebstudio1@gmail.com Phone: (225) 255-0837 Send an enquiry Book a free 30-minute call Let's see what your business needs.
+        - Thirty minutes, no pitch - on a call, or in person anywhere in Greater Baton Rouge.
+        - Book a discovery call Free 30-min call · no pitch Get a quote KnightWebstudio Websites, automation and consulting for local businesses that need to be found, trusted and chosen.
+INFO  consulting/index.html: prices new to this page (valid elsewhere on the site): $2,000
+INFO  consulting/index.html: 44 of 90 baseline sentences are reworded or removed
+        - Skip to content KnightWebstudio Services Consulting Work Process Pricing FAQ About Contact Start your project knightwebstudio1@gmail.com Get a quote Consulting & automation More customers, less busywork A website is one 
+        - Fewer customers slip through the cracks, and you get hours of your week back.
+        - Fixed prices, like everything else we do.
+        - Book a Growth Audit, $350 Estimate what it's worth Why automate The hours that disappear every week Surveys of small business owners have found admin taking 11 to 16 hours of their week.
+        - Most of it is the same handful of small jobs: calling people back, booking appointments, chasing quotes, copying details from one place to another and remembering to ask for reviews.
+        - An example week for a small service business Done by hand Example Time a week Once it's automated Returning missed calls and voicemails 5 calls × 6 minutes 30 min The caller gets a text within a minute and tells you what
+        - How it works What happens, step by step No new habits to learn.
+        - Missed-call text-back $750 You're on a job and can't pick up.
+        - Within a minute, the caller gets a text from your business number: "Sorry we missed your call, this is [your business].
+        - What can we help with?" They reply by text, and the conversation lands on your phone with their number saved.
+        - Online booking & reminders $750 A customer picks a time on your website or Google profile, day or night.
+        - It goes straight onto your calendar, with no double bookings.
+        - They get a confirmation right away and a reminder the day before.
+        - Lead follow-up system $1,500 An enquiry comes in from your website, Google, Facebook or a missed call.
+        - Custom automation $1,500 per workflow We map one process that eats your time: quote emails, intake forms, invoices or the questions customers ask every day.
+        - We connect the tools you already use, so the information moves on its own instead of being retyped.
+        - You get a recorded walkthrough, and we fix anything that breaks in the first 30 days.
+        - Estimate it What could this be worth to your business?
+        - Your business Average value of a new job or customer ($) What an hour of your time is worth ($) Missed calls Calls you miss in a typical week Share of those callers an instant text would win back (%) Follow-up Quotes or 
+        - Check my real numbers in a Growth Audit An estimate from the numbers you enter, not a promise or a guarantee of results.
+        - What we offer Consulting and setup, at fixed prices Start with the free check or the Growth Audit, then pick only the pieces your business needs.
+        - Every setup runs on accounts in your name, and you keep it all if we stop working together.
+        - We look at your website, Google profile, reviews and how easy you are to reach, then email you a short list of what to fix first within 2 business days.
+        - Website and Google profile reviewed Reviews and listings checked Top three fixes, in plain English Growth Audit & action plan $350 A 60-minute session, in person in Greater Baton Rouge or by video.
+        - We go through how customers find you, how calls and enquiries are handled and where your week goes, then send a written plan ranked by impact, with a fixed price on anything we'd do.
+        - Written action plan within 3 business days Time and revenue estimate from your numbers The $350 comes off any project booked within 30 days Google profile & reviews $500 Your Google Business Profile filled out properly, 
+        - Categories, services, hours, photos and booking link Listings fixed on Apple Maps, Bing, Yelp and Facebook Review link, QR code and reply templates Missed-call text-back $750 Every call you can't answer gets a text back 
+        - Works with a business line you keep Replies come straight to your phone After-hours message set up too Online booking & reminders $750 Customers book a time from your website or Google profile, and confirmations and remi
+        - Synced with the calendar you use Text and email reminders Deposits taken at booking, if you want them Lead follow-up system $1,500 Every enquiry in one list, automatic follow-ups on quotes that go quiet, and a review req
+        - Website, Google, Facebook and missed calls in one place Follow-ups after 2 days and after a week A weekly summary email of new leads Custom work Custom automation One process of your choice, automated end to end: quote e
+        - Anything drafted for you waits for your approval before it goes out.
+        - Custom automation workflow Mapped, built and tested on your accounts, with a recorded walkthrough and 30 days of fixes.
+        - $1,500 Strategy session 60 minutes on one question, like pricing, a new service or which tools to use, with written notes afterwards.
+        - $150 Ongoing A partner who keeps it working Systems need looking after, and there's always a next improvement.
+        - A monthly plan gives you someone who already knows your business.
+        - Advisor $500 /mo For owners who want their Google presence handled and a monthly plan to follow.
+        - One 60-minute strategy call a month Google Business Profile managed: 2 posts a month and new photos Replies to every review within 2 business days Monthly report: calls, enquiries, reviews and Google views Email support,
+        - Everything in Advisor Two strategy calls a month Up to 5 hours of hands-on work a month: new automations, website changes, email campaigns Your automations monitored and fixed when something breaks A written growth plan 
+        - Starter website, up to 5 pages Google profile & reviews setup Missed-call text-back 30 days support Start the Launch bundle Setup projects are 50% to start and 50% when they go live.
+        - Software and texting services run on accounts in your name, and their fees are paid straight to the provider; we pick the lowest-cost option that does the job.
+        - How we work together Four steps, no surprises 01 Free check We look at your website, Google profile and reviews, and email you the top three fixes.
+        - 02 Growth Audit A 60-minute session and a written plan, ranked by impact, with a fixed price on each step.
+        - 04 Run & improve A recorded walkthrough, 30 days of fixes, and a monthly plan if you want someone keeping it all working.
+        - Book a discovery call Free 30-min call · no pitch Get a quote KnightWebstudio Websites, automation and consulting for local businesses that need to be found, trusted and chosen.
+INFO  contact/index.html: 8 of 15 baseline sentences are reworded or removed
+        - Skip to content KnightWebstudio Services Consulting Work Process Pricing FAQ About Contact Start your project knightwebstudio1@gmail.com Get a quote Get in touch Tell us about your project We'll come back within one busi
+        - We're happy to meet in person.
+        - What happens next We read it properly.
+        - A real person reads your enquiry - there is no auto-responder and no sales sequence.
+        - Honest advice and a fixed price, even if the answer is "you don't need us for this".
+        - Skip the form and pick a time.
+        - Book a 30-minute call knightwebstudio1@gmail.com Baton Rouge, Louisiana - meet in person anywhere in Greater Baton Rouge, or work with us from anywhere (225) 255-0837 Mon-Fri, 9am-6pm Central Time Your name * Email * Bus
+        - New website Redesign E-commerce SEO Branding Maintenance Consulting Automation Google reviews Project details * Leave this empty Send enquiry We reply within one business day.
+INFO  faq/index.html: 2 of 59 baseline sentences are reworded or removed
+        - Skip to content KnightWebstudio Services Consulting Work Process Pricing FAQ About Contact Start your project knightwebstudio1@gmail.com Get a quote FAQ Questions we get asked The things people ask before they hire us, a
+        - Book a discovery call Free 30-min call · no pitch Get a quote KnightWebstudio Websites, automation and consulting for local businesses that need to be found, trusted and chosen.
+INFO  index.html: 17 of 40 baseline sentences are reworded or removed
+        - Skip to content KnightWebstudio Services Consulting Work Process Pricing FAQ About Contact Start your project knightwebstudio1@gmail.com Get a quote Web studio & consulting · Baton Rouge, LA More customers, fewer missed 
+        - One local partner for getting found, getting chosen and getting your evenings back.
+        - Start your project See how automation works Websites live in as little as 7-10 days Automations that run while you work Fixed, published prices You own everything Meet in person anywhere in Greater Baton Rouge Recent wor
+        - Website design & build $1,000, $2,000 or $4,000 A custom-designed marketing site built from scratch - brochure sites, service businesses, portfolios and landing pages that actually convert.
+        - Custom design, built for you Copywriting support on Business and Commerce Built mobile-first Automation $750 or $1,500 per setup Missed calls get a text back, customers book themselves, quotes follow up on their own and 
+        - Missed-call text-back Online booking & reminders Lead follow-up and custom workflows Growth consulting $350 audit · $500 or $1,000/mo A clear plan for getting more customers online: your Google profile, reviews, how call
+        - Free online check to start Google profile & reviews, $500 Monthly Advisor and Partner plans All services Automation About 4 hours a week, back Returning missed calls, booking by phone, chasing quotes, copying enquiries a
+        - Here's how each one runs on its own.
+        - Missed-call text-back You can't pick up.
+        - Online booking Customers pick a time on your site or Google profile.
+        - Lead follow-up Every enquiry is saved to one list automatically.
+        - Estimate what it's worth to your business Selected work Recent projects Three live sites.
+        - Risen Health Health & wellness · Online store Corbel Books Fintech SaaS · Product site & app UI Smilys Softwash Exterior cleaning · Local service & SEO See the work in detail How it works Four steps, no surprises You'll 
+        - How a project runs, step by step Pricing Fixed prices, published up front What you see is what you pay.
+        - Care plans keep a site running for $125, $300, $600 or $1,000 a month, and automation setups are $750 or $1,500.
+        - Full pricing, consulting and care plans Still deciding?
+        - Book a discovery call Free 30-min call · no pitch Get a quote KnightWebstudio Websites, automation and consulting for local businesses that need to be found, trusted and chosen.
+INFO  pricing/index.html: prices new to this page (valid elsewhere on the site): $125,, $300,
+INFO  pricing/index.html: 25 of 36 baseline sentences are reworded or removed
+        - Skip to content KnightWebstudio Services Consulting Work Process Pricing FAQ About Contact Start your project knightwebstudio1@gmail.com Get a quote Pricing Fixed prices, published up front Every price here is fixed, for
+        - What you see is what you pay, confirmed in writing before any work begins.
+        - One-page $1,000 Or $500 down, then about $167/mo for 3 months One polished page: who you are, what you offer and how to reach you.
+        - Live in as little as 7 days.
+        - 1 page Custom design 1 revision round Copy editing and polish (you supply the text) Contact form Mobile & SEO basics 14 days support Start a one-page site Starter $2,000 Or $1,000 down, then about $333/mo for 3 months An
+        - Live in as little as 7-10 days.
+        - Up to 5 pages Custom design 1 revision round Copy editing and polish (you supply the text) Contact form Mobile & SEO basics 30 days support Pay 50% deposit - $1,000 Most popular Business $4,000 Or $2,000 down, then about
+        - Up to 10 pages Up to 3 design rounds, plus a final tweaks round Copywriting: we draft, you edit Blog or news section Analytics & tracking setup Local SEO configuration 90 days support Pay 50% deposit - $2,000 Commerce $8
+        - Full store build Up to 3 design rounds, plus a final tweaks round Payments, shipping & tax Product import Email & abandoned cart flows Team training session 6 months support Pay 50% deposit - $4,000 Add to any project Ad
+        - Brand identity Logo and mark, colours, fonts, a brand guidelines document and social templates.
+        - $1,500 Booking & scheduling setup Branded booking, service config, calendars and automatic text and email reminders.
+        - $750 CRM & calendar sync Enquiries land in your CRM automatically - no re-typing, nothing lost.
+        - $750 Consulting & automation Systems that win customers and save time Start with a free online check or a $350 Growth Audit, then set up only what your business needs.
+        - How each one works Growth Audit & action plan 60-minute session and a written plan ranked by impact.
+        - $350 Strategy session 60 minutes on one question, with written notes afterwards.
+        - $150 Google profile & reviews Profile completed, listings made consistent, review link, QR code and reply templates.
+        - $500 Missed-call text-back Every missed call gets a text back from your business number within a minute.
+        - $750 Lead follow-up system Every enquiry in one list, automatic follow-ups on quiet quotes, review requests after each job.
+        - $1,500 Custom automation workflow One process automated end to end, with a recorded walkthrough and 30 days of fixes.
+        - $1,500 Advisor plan Monthly strategy call, Google profile managed, review replies and a monthly report.
+        - $500/mo Partner plan Everything in Advisor, two calls a month and up to 5 hours of hands-on work a month.
+        - $1,000/mo Launch bundle Starter website, Google profile & reviews and missed-call text-back.
+        - $3,000 After launch Care plans A site isn't finished at launch - it needs patching, monitoring and small changes, or it quietly rots.
+        - Ask about care plans Basic $125 /mo One-page and Starter sites 1 small change a month, made within 5 business days You keep your own domain and hosting renewals current Request plan Essential $300 /mo Brochure and market
+        - Book a discovery call Free 30-min call · no pitch Get a quote KnightWebstudio Websites, automation and consulting for local businesses that need to be found, trusted and chosen.
+INFO  process/index.html: 9 of 13 baseline sentences are reworded or removed
+        - Skip to content KnightWebstudio Services Consulting Work Process Pricing FAQ About Contact Start your project knightwebstudio1@gmail.com Get a quote How it works Four steps, no surprises You'll always know what's happeni
+        - 01 Discovery call A free 30-minute call about your business, your customers and what the site needs to achieve.
+        - You leave with a plan whether or not you hire us.
+        - 02 Proposal & design A fixed quote and timeline, then design concepts for your key pages.
+        - We refine the design with you: one revision round on Starter, and up to three design rounds on Business and Commerce.
+        - 03 Build & review We build on a private staging link you can check any time, with weekly progress notes.
+        - After launch you get a walkthrough video and free support: 30 days on Starter, 90 days on Business, six months on Commerce.
+        - You'll get a clear view of what your site needs and what it should cost - even if you build it yourself.
+        - Book a discovery call Free 30-min call · no pitch Get a quote KnightWebstudio Websites, automation and consulting for local businesses that need to be found, trusted and chosen.
+INFO  services/index.html: 12 of 21 baseline sentences are reworded or removed
+        - Skip to content KnightWebstudio Services Consulting Work Process Pricing FAQ About Contact Start your project knightwebstudio1@gmail.com Get a quote What we do Everything your business needs online, under one roof Pick a
+        - Websites, care plans and branding on one side; consulting and the automations that save you hours every week on the other.
+        - Custom design, built for you Copywriting support on Business and Commerce Built mobile-first E-commerce stores $8,000 Sell products or services online with a checkout that people trust.
+        - Payments & tax configured Inventory and order flow Training so you can run it SEO & performance in every build Get found and stay fast.
+        - Google Business Profile setup Core Web Vitals tuning One-time setup at launch Care & maintenance $125, $300, $600 or $1,000/mo Updates, backups, uptime monitoring and security patches, so your site never quietly breaks o
+        - Daily off-site backups 24/7 uptime monitoring Content edits on request Redesigns & rescues priced as a new site Inherited a site nobody can edit?
+        - Full content migration Redirect map, rankings kept Works on any platform Brand & identity $1,500 Logo, colour palette, typography and the small details that make everything you publish look like it came from the same com
+        - Logo and mark design Brand guidelines document Social & print assets Growth consulting $350 audit · $500 or $1,000/mo A clear plan for getting more customers: how people find you, how calls and enquiries are handled and 
+        - Free online check Growth Audit & action plan, $350 Advisor and Partner monthly plans Google profile & reviews $500 Your Google Business Profile filled out properly, your listings made consistent everywhere, and a simple 
+        - Profile, photos and booking link Apple Maps, Bing, Yelp and Facebook listings Review link, QR code and reply templates Automation $750 or $1,500 per setup The busywork, handled: missed calls texted back, bookings and rem
+        - Missed-call text-back or online booking, $750 Lead follow-up system, $1,500 Custom automation workflow, $1,500 How consulting and automation work Still deciding?
+        - Book a discovery call Free 30-min call · no pitch Get a quote KnightWebstudio Websites, automation and consulting for local businesses that need to be found, trusted and chosen.
+INFO  start/index.html: 11 of 29 baseline sentences are reworded or removed
+        - Skip to content KnightWebstudio Book a free call KnightWebstudio · Baton Rouge, Louisiana A website and the systems that bring in customers, and give you hours back Custom websites live in as little as 7-10 days, plus mi
+        - Flat prices quoted before we start, and you own everything.
+        - Here is everything we do, on one page.
+        - Book a free 30-minute call Get a quote Fixed, published prices Automations that run while you work Reply within one business day What we offer Nine services, one studio Take one, or hand us the whole thing.
+        - Website add-ons: booking and scheduling setup, and CRM or calendar sync, $750 each.
+        - Launch bundle (Starter website, Google profile & reviews and missed-call text-back): $3,000.
+        - Estimate what automation is worth to you Pricing at a glance Fixed prices, published up front One-page $1,000 Or $500 down, then about $167/mo for 3 months One page with a contact form, live in as little as 7 days, 14 da
+        - After launch, care plans keep it running for $125, $300, $600 or $1,000 a month.
+        - Standard is 50% to start and 50% at launch, and payment plans are available on every project: 50% up front, then the rest in up to 3 equal monthly payments.
+        - Full pricing Selected work Recent projects Risen Health Health & wellness · Online store Corbel Books Fintech SaaS · Product site & app UI Smilys Softwash Exterior cleaning · Local service & SEO How it works Four steps, 
+        - Book a free 30-minute call or send an enquiry Free 30-min call · no pitch Book a call © 2026 KnightWebstudio · knightwebstudio1@gmail.com · (225) 255-0837 Full website Privacy Terms
+INFO  web-design-baton-rouge/index.html: 9 of 42 baseline sentences are reworded or removed
+        - Skip to content KnightWebstudio Services Consulting Work Process Pricing FAQ About Contact Start your project knightwebstudio1@gmail.com Get a quote Areas we serve · Baton Rouge, LA Website design for Baton Rouge busines
+        - What we build What a Baton Rouge site needs to do Win the "near me" search Google Business Profile setup, local SEO configuration and fast, clean pages, so you compete across the whole city, not just your own neighborhoo
+        - Google Business Profile setup Local SEO configuration Core Web Vitals tuning Turn visits into enquiries Clear services, obvious contact buttons and a form that lands in your inbox.
+        - Custom design, built for you Copywriting support on Business and Commerce Built mobile-first Keep running after launch Care plans cover backups, security updates, monitoring and the changes you ask for, with someone in t
+        - Live Exterior cleaning · Local service & SEO Smilys Softwash "Don't replace it.
+        - Live site · Online quotes Visit smilyssoftwash.com See the work in detail Pricing Fixed prices, published up front The same prices for a Baton Rouge shop as for anyone else: what you see is what you pay.
+        - Full pricing, consulting and care plans Questions Baton Rouge questions, answered Do you only work with Baton Rouge businesses?
+        - Send an enquiry Book a free 30-minute call Baton Rouge business?
+        - Book a discovery call Free 30-min call · no pitch Get a quote KnightWebstudio Websites, automation and consulting for local businesses that need to be found, trusted and chosen.
+INFO  web-design-denham-springs/index.html: 10 of 45 baseline sentences are reworded or removed
+        - Skip to content KnightWebstudio Services Consulting Work Process Pricing FAQ About Contact Start your project knightwebstudio1@gmail.com Get a quote Areas we serve · Denham Springs, LA Web design for Denham Springs busin
+        - What we build What we build for Denham Springs businesses Cover the whole parish Local SEO configuration and location-aware copy, so you show up for searches in Denham Springs, Walker, Watson and across Livingston Parish
+        - Local SEO configuration Google Business Profile setup Tell your story properly A longtime local business deserves more than a template.
+        - Custom design, built for you Copywriting support on Business and Commerce Sell beyond the parish Retail shop with products people want to buy online?
+        - $8,000, fixed 6 months support Local work Local work from across Greater Baton Rouge Smilys Softwash cleans roofs and houses across Greater Baton Rouge, and takes quote requests through its site.
+        - Live Exterior cleaning · Local service & SEO Smilys Softwash "Don't replace it.
+        - Live site · Online quotes Visit smilyssoftwash.com See the work in detail Pricing Fixed prices, published up front Published prices, the same for every client.
+        - Full pricing, consulting and care plans Questions Denham Springs questions, answered Do you work with Livingston Parish businesses outside Denham Springs?
+        - Send an enquiry Book a free 30-minute call Denham Springs business?
+        - Book a discovery call Free 30-min call · no pitch Get a quote KnightWebstudio Websites, automation and consulting for local businesses that need to be found, trusted and chosen.
+INFO  web-design-gonzales/index.html: 10 of 37 baseline sentences are reworded or removed
+        - Skip to content KnightWebstudio Services Consulting Work Process Pricing FAQ About Contact Start your project knightwebstudio1@gmail.com Get a quote Areas we serve · Gonzales, LA Web design for Gonzales businesses Custom
+        - What we build What we build for Gonzales businesses Reach customers in every direction Local SEO and clear service-area wording, so you show up for customers in Gonzales, Sorrento and Prairieville, and up toward Baton Ro
+        - Local SEO configuration Google Business Profile setup Look as established as you are If your reputation offline is stronger than your website, a custom design built around your real photos and services closes that gap.
+        - Custom design, built for you Copywriting support on Business and Commerce Take bookings or sell online Commerce builds include payments, shipping and tax, and branded booking with automatic reminders is a $750 add-on to 
+        - Commerce site: $8,000 Booking setup: $750 add-on Local work Local work, just up the road Smilys Softwash, a soft-washing company working across Greater Baton Rouge, takes quote requests through the site we built.
+        - Live Exterior cleaning · Local service & SEO Smilys Softwash "Don't replace it.
+        - Live site · Online quotes Visit smilyssoftwash.com See the work in detail Pricing Fixed prices, published up front No quotes that change halfway through: every price is fixed and confirmed in writing before work begins.
+        - Full pricing, consulting and care plans Questions Gonzales questions, answered Will you really come to Gonzales to meet?
+        - Send an enquiry Book a free 30-minute call Running a business in Gonzales?
+        - Book a discovery call Free 30-min call · no pitch Get a quote KnightWebstudio Websites, automation and consulting for local businesses that need to be found, trusted and chosen.
+INFO  web-design-prairieville/index.html: 9 of 45 baseline sentences are reworded or removed
+        - Skip to content KnightWebstudio Services Consulting Work Process Pricing FAQ About Contact Start your project knightwebstudio1@gmail.com Get a quote Areas we serve · Prairieville, LA Websites for Prairieville businesses 
+        - What we build What we build for Prairieville businesses Set up as a service-area business No shop front?
+        - Google Business Profile setup Service areas, not a street address Start lean with Starter An information website of up to 5 pages: who you are, what you offer and how to reach you.
+        - $2,000, fixed Live in as little as 7-10 days 30 days support Show your work before they call Project photos, before-and-after galleries and clear service pages, like the ones we built for Smilys Softwash, so homeowners c
+        - Live Exterior cleaning · Local service & SEO Smilys Softwash "Don't replace it.
+        - Live site · Online quotes Visit smilyssoftwash.com See the work in detail Pricing Fixed prices, published up front Many service businesses start on Starter and grow into Business.
+        - Full pricing, consulting and care plans Questions Prairieville questions, answered I'm a one-person business.
+        - Send an enquiry Book a free 30-minute call Grow your Prairieville business online Thirty minutes, no pitch.
+        - Book a discovery call Free 30-min call · no pitch Get a quote KnightWebstudio Websites, automation and consulting for local businesses that need to be found, trusted and chosen.
+INFO  work/index.html: 9 of 13 baseline sentences are reworded or removed
+        - Skip to content KnightWebstudio Services Consulting Work Process Pricing FAQ About Contact Start your project knightwebstudio1@gmail.com Get a quote Selected work Recent projects Three live sites.
+        - Visit them and judge for yourself.
+        - Live Health & wellness · Online store Risen Health "Rise into divine health." An online store for a family-owned peptide supplier: a 36-product catalog across eight categories, a page for every product with its size, pri
+        - Live store · 36 products, 8 categories Visit risenhealthco.com Live Fintech SaaS · Product site & app UI Corbel Books "Bookkeeping that runs itself." A full product site and dashboard for an invoicing and cash-flow tool 
+        - Live product · Stripe + Plaid integrated Visit corbelbooks.com Live Exterior cleaning · Local service & SEO Smilys Softwash "Don't replace it.
+        - Renew it." Roof and house soft washing across Greater Baton Rouge - a service page per treatment, a before-and-after gallery, and online quote requests.
+        - Live site · Online quotes Visit smilyssoftwash.com Still deciding?
+        - You'll get a clear view of what your site needs and what it should cost - even if you build it yourself.
+        - Book a discovery call Free 30-min call · no pitch Get a quote KnightWebstudio Websites, automation and consulting for local businesses that need to be found, trusted and chosen.
+
+0 FAIL, 38 WARN, 17 INFO across 19 pages

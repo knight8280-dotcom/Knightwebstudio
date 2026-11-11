@@ -1,0 +1,87 @@
+/* Landing page only. Every rule is scoped with [data-page="start"]. */
+
+/* Head. Below 980px three facts stand beside the small shop front; from 980px the shop is the aside, the facts a shelf.
+   SHARED-CANDIDATE: nothing re-wraps when the fonts arrive. Headline and lede are set lines (the headline a size down
+   below 980px, so a phone's first screen holds the prices), the buttons have room, the price note keeps its own row. */
+[data-page="start"] .page-head-split { --shop: calc(var(--s-9) + var(--s-7)); grid-template-columns: minmax(0, 1fr) var(--shop); column-gap: var(--s-4); align-items: end; }
+[data-page="start"] .l { display: block; }
+@media (max-width: 979.98px) {
+  [data-page="start"] h1 { font-size: calc(var(--fs-h1) * .887); }
+  [data-page="start"] .head-copy { grid-column: 1 / -1; }
+  [data-page="start"] .page-head-aside { grid-area: 2 / 2; }
+  [data-page="start"] .points { grid-area: 2 / 1; grid-template-columns: minmax(0, 1fr); }
+  [data-page="start"] .points li { padding-block: var(--s-2); }
+  [data-page="start"] .points li + li { border-top: var(--seam); }
+}
+@media (max-width: 379.98px) {
+  [data-page="start"] .page-head-split { --shop: calc(var(--s-9) + var(--s-6)); }
+  [data-page="start"] .lede { font-size: var(--fs-body); }
+  [data-page="start"] .board .dots { display: none; }
+}
+@media (min-width: 600px) {
+  [data-page="start"] .page-head-split { --shop: calc(var(--s-9) * 2); column-gap: var(--gap-lg); }
+  [data-page="start"] .btn-lg { padding-inline: var(--s-5); }
+}
+@media (min-width: 600px) and (max-width: 979.98px) { [data-page="start"] .points li { padding-block: var(--s-5); } }
+@media (min-width: 980px) {
+  [data-page="start"] .page-head-split { --shop: calc(var(--s-9) * 2 + var(--s-8)); align-items: center; }
+  [data-page="start"] .points { grid-column: 1 / -1; grid-template-columns: repeat(3, auto); }
+}
+@media (min-width: 1100px) { [data-page="start"] .page-head-split { --shop: min(37%, var(--maxw-card)); } }
+/* The brush stroke is painted once, as the page opens */
+[data-page="start"] .mark::after { transform-origin: 0 50%; animation: kws-start-brush var(--t-slow) var(--ease) var(--t) both; }
+@keyframes kws-start-brush { from { transform: scaleX(0); } }
+
+/* The menu: two price lists, side by side from 760px, name and price at one size */
+[data-page="start"] .section-head-split { row-gap: 0; }
+[data-page="start"] .menu { gap: var(--s-5) var(--gap-lg); }
+[data-page="start"] .pricelist > li { padding-block: var(--s-3); }
+[data-page="start"] :is(.pl-price, .steps h3) { font-size: var(--fs-h4); }
+[data-page="start"] :is(.more-link, .steps p, .board-foot p) { font-size: var(--fs-sm); line-height: 1.5; }
+/* SHARED-CANDIDATE: a price that is a phrase sits under its name, with no leader left pointing at nothing */
+@media (max-width: 1279.98px) {
+  [data-page="start"] .pl-long .dots { display: none; }
+  [data-page="start"] .pl-long .pl-price { flex-basis: 100%; }
+  [data-page="start"] .price-strip-note { flex-basis: 100%; }
+}
+
+/* Work: three small rows on a phone */
+@media (max-width: 759.98px) {
+  [data-page="start"] .prints { --thumb: calc(var(--s-9) + var(--s-5)); gap: var(--s-3); }
+  [data-page="start"] .print { display: grid; grid-template-columns: var(--thumb) minmax(0, 1fr); align-items: center; gap: var(--s-4); padding: var(--s-3); }
+  [data-page="start"] .print-cap { padding: 0; }
+  [data-page="start"] .print h3 { font-size: var(--fs-h4); }
+}
+
+/* The board. SHARED-CANDIDATE: its extras are a price list with gold prices, two across from 760px;
+   its foot holds a sentence beside the button (as in city.css) */
+[data-page="start"] .board .pricelist { max-width: none; margin-top: var(--s-5); border-top: 0; }
+[data-page="start"] .board .pl-price { color: var(--gold); }
+[data-page="start"] .board-foot { display: grid; gap: var(--s-5) var(--gap-lg); }
+[data-page="start"] .board-foot p { max-width: var(--measure); margin: 0; }
+@media (min-width: 600px) { [data-page="start"] .board-foot { justify-items: start; } }
+@media (min-width: 760px) { [data-page="start"] .board .pricelist { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--s-7); } }
+@media (min-width: 980px) { [data-page="start"] .board-foot { grid-template-columns: minmax(0, 1fr) auto; align-items: center; } }
+
+/* The job ticket as a strip: rows, two by two from 760px, four stubs across from 1100px */
+[data-page="start"] .ticket { padding-bottom: var(--s-6); }
+[data-page="start"] .ticket .steps > li { grid-template-columns: var(--s-7) minmax(0, 1fr); padding-block: var(--s-3); }
+[data-page="start"] .ticket .steps > li::after { content: none; }
+[data-page="start"] .steps p { margin-top: var(--s-1); text-wrap: balance; }
+@media (min-width: 760px) {
+  [data-page="start"] .steps { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--gap-lg); }
+  [data-page="start"] .ticket .steps > li:nth-child(2) { border-top: 0; }
+}
+@media (max-width: 1099.98px) { [data-page="start"] .steps-no { font-size: var(--fs-title); } }
+@media (min-width: 1100px) {
+  [data-page="start"] .steps { grid-template-columns: repeat(4, minmax(0, 1fr)); column-gap: 0; }
+  [data-page="start"] .ticket .steps > li { grid-template-columns: minmax(0, 1fr); align-content: start; gap: var(--s-2); padding: var(--s-5) var(--s-5) var(--s-4); border-top: 0; border-left: var(--dash); }
+  [data-page="start"] .ticket .steps > li:first-child { padding-left: 0; border-left: 0; }
+}
+
+/* The closing band: the written route sits under the two buttons.
+   SHARED-CANDIDATE: a way-forward link in a sentence has a 44px hit area; its focus ring stays on the words */
+[data-page="start"] .write { margin: var(--s-5) 0 0; font-size: var(--fs-body); }
+[data-page="start"] .write a { font-weight: 700; }
+[data-page="start"] :is(.write, .board-foot p) a { position: relative; }
+[data-page="start"] :is(.write, .board-foot p) a::after { content: ""; position: absolute; inset: calc(-1 * var(--s-4)) 0; }

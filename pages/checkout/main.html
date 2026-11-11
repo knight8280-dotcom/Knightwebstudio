@@ -1,0 +1,41 @@
+<main id="main">
+
+  <section class="page-head">
+    <div class="container">
+      <p class="eyebrow">Checkout</p>
+      <h1>Secure checkout</h1>
+      <p class="lede">Pay your project deposit or start a care plan. Payments are processed securely by Stripe — we never see or store your card or bank details.</p>
+    </div>
+  </section>
+
+  <section class="section section-first" id="checkout">
+    <div class="container split till">
+
+      <!-- The order slip. The script below fills in the two ids and shows it. -->
+      <div class="receipt on-paper till-side" id="checkout-plan" hidden>
+        <p class="receipt-head"><span>Your order</span><span>KnightWebstudio</span></p>
+        <p class="receipt-total"><span id="checkout-plan-name"></span><b id="checkout-plan-price"></b></p>
+      </div>
+
+      <!-- Stripe's form is light whatever the theme, so this sheet stays paper at night (on-paper). -->
+      <div class="card on-paper till-pay">
+        <h2 class="label">Payment details</h2>
+        <p class="status" id="checkout-status" role="status">Loading secure checkout…</p>
+        <noscript><p class="status error">This page needs JavaScript to load Stripe's secure payment form. Turn it on and refresh the page, or email or call us and we'll help.</p></noscript>
+        <div id="checkout-form"></div>
+      </div>
+
+      <aside class="stack till-side">
+        <h2 class="h4">Questions before you pay?</h2>
+        <p>Email <a href="mailto:knightwebstudio1@gmail.com">knightwebstudio1@gmail.com</a> or <a href="/contact/">start a conversation</a>.</p>
+        <p class="fine">The payment terms are on the <a href="/terms/">terms page</a>.</p>
+        <div class="btn-row">
+          <a class="btn" href="tel:+12252550837"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>Call (225) 255-0837</a>
+          <a class="btn btn-quiet" href="/pricing/">Back to pricing</a>
+        </div>
+      </aside>
+
+    </div>
+  </section>
+
+</main>

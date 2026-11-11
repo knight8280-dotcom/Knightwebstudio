@@ -1,0 +1,6 @@
+reviewer 341x162 /pricing/: never shown 0 of 10; shown early below the fold 0
+reviewer 341x162 /consulting/: never shown 0 of 17; shown early below the fold 0
+reviewer 341x162 /about/: never shown 0 of 5; shown early below the fold 0
+reviewer 320x150 /pricing/: never shown 0 of 10; shown early below the fold 0
+reviewer 320x150 /consulting/: never shown 0 of 17; shown early below the fold 0
+reviewer 320x150 /about/: never shown 0 of 5; shown early below the fold 0

@@ -1,0 +1,24 @@
+PASS script off: all four package folders and their tabs show ["One-page $1,000","Starter $2,000","Business $4,000","Commerce $8,000"]
+PASS script off: the pause button stays hidden (0 visible)
+PASS script off: no canvas; the ribbon art is its CSS still (radial-gradient(150% 150% at 0px 150%, r...)
+PASS script off: 3 bookmark cards, 4 step folders, no sideways scroll
+PASS tabs: tablist "Website packages", 4 tabs (buttons) wired to 4 panels ["One-page $1,000","Starter $2,000","Business $4,000","Commerce $8,000"]
+PASS tabs: first selected, roving tabindex, 3 panels hidden from everyone
+PASS tabs: every tab at least 44px tall [58,59,59,59]
+PASS keyboard: Right moves to and opens Starter; focus ring solid 3px
+PASS keyboard: End opens Commerce
+PASS keyboard: Right from the last wraps to the first
+PASS keyboard: Left, Home, Right, Right lands on Business
+PASS keyboard: Tab goes from the tab to its open panel (pkg-business)
+PASS keyboard: next Tab reaches the open panel's button "Pay 50% deposit — $2,000"; hidden panels are skipped
+PASS keyboard: focus leaves the stack after its two links (not trapped)
+PASS keyboard: a bookmark card's link shows a 3px ring around the whole card (373x517, rgb(44, 70, 196))
+PASS a #hash that names a folder brings it to the front
+PASS click on a tab opens it
+PASS pause button: shown by script, 44x44px, "Pause background motion"
+PASS pause button: one press sets data-motion="off", saves "off", both buttons now read "Play background motion"
+PASS pause button: the choice survives a reload
+PASS pause button: pressing again resumes and saves "on"
+PASS no console errors or page errors
+PASS layout shift at 390px: cumulative 0.0000 []
+PASS layout shift at 1440px: cumulative 0.0000 []

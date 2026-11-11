@@ -1,0 +1,221 @@
+
+# /start/
+    54              /                                                | KnightWebstudio
+   395 BOOK _blank  https://calendly.com/knightwebstudio1/30min      | Book a free 30-minute call
+   463              tel:+12252550837                                 | Call (225) 255-0837
+   543              #pricing                                         | WEBSITES $1,000 $2,000 $4,000 $8,000 Four fixed packages
+  2380              /consulting/#calculator                          | Estimate what automation is worth to you
+  2697      _blank  https://smilyssoftwash.com                       | Smilys Softwash Exterior cleaning Local service & SEO (opens
+  2807      _blank  https://risenhealthco.com                        | Risen Health Health & wellness Online store (opens in a new 
+  2918      _blank  https://corbelbooks.com                          | Corbel Books Bookkeeping software Product site & app screens
+  3291              /pricing/                                        | ONE-PAGE $1,000 Or $500 down, then about $167/mo for 3 month
+  3466              /pricing/                                        | STARTER $2,000 Or $1,000 down, then about $333/mo for 3 mont
+  3663              /pricing/                                        | BUSINESS $4,000 Or $2,000 down, then about $667/mo for 3 mon
+  3838              /pricing/                                        | COMMERCE $8,000 Or $4,000 down, then about $1,333/mo for 3 m
+  4378              /pricing/                                        | See full pricing and care plans
+  4422              /contact/                                        | Get a quote
+  5533 BOOK _blank  https://calendly.com/knightwebstudio1/30min      | Book a free 30-minute call
+  5601              tel:+12252550837                                 | Call (225) 255-0837
+  5684              /contact/                                        | Send an enquiry
+   680              tel:+12252550837                                 | Call (225) 255-0837
+   680 BOOK _blank  https://calendly.com/knightwebstudio1/30min      | 
+   ANCHOR #pricing {"targetTop":88,"headerBottom":64,"barTop":595,"headingTop":191,"headingText":"Fixed prices, published up front","tag":"SECTION"}
+
+# /
+    54              /                                                | KnightWebstudio
+   124              /services/                                       | 
+   177              /consulting/                                     | 
+   230              /work/                                           | 
+   283              /process/                                        | 
+   336              /pricing/                                        | 
+   389              /faq/                                            | 
+   442              /about/                                          | 
+   495              /contact/                                        | 
+   572              /contact/                                        | 
+   636              tel:+12252550837                                 | 
+   700              mailto:knightwebstudio1@gmail.com                | 
+   489 BOOK _blank  https://calendly.com/knightwebstudio1/30min      | Book a free 30-minute call
+   569              #pricing                                         | WEBSITES $1,000 $2,000 $4,000 $8,000 Four fixed packages
+  2821              /services/                                       | All services
+  5613              /consulting/#calculator                          | Estimate what it's worth to you
+  5663              /consulting/#how                                 | How each automation works
+  5992      _blank  https://smilyssoftwash.com                       | Smilys Softwash Exterior cleaning Local service & SEO (opens
+  6306      _blank  https://risenhealthco.com                        | Risen Health Health & wellness Online store (opens in a new 
+  6421      _blank  https://corbelbooks.com                          | Corbel Books Bookkeeping software Product site & app screens
+  6551              /work/                                           | See the work in detail
+  6848              /process/                                        | How a project runs, step by step
+  8075              /contact/?package=onepage                        | ONE-PAGE $1,000 Or $500 down, then about $167/mo for 3 month
+  8272              /checkout/?plan=starter-deposit                  | STARTER $2,000 Or $1,000 down, then about $333/mo for 3 mont
+  8470              /checkout/?plan=business-deposit                 | BUSINESS $4,000 Or $2,000 down, then about $667/mo for 3 mon
+  8645              /checkout/?plan=commerce-deposit                 | COMMERCE $8,000 Or $4,000 down, then about $1,333/mo for 3 m
+  9123              /pricing/                                        | Full pricing, consulting and care plans
+  9831              /about/                                          | More about Christian
+ 10078              tel:+12252550837                                 | (225) 255-0837
+ 10122              mailto:knightwebstudio1@gmail.com                | knightwebstudio1@gmail.com
+ 10564 BOOK _blank  https://calendly.com/knightwebstudio1/30min      | Book a free 30-minute call
+ 10632              /contact/                                        | Send an enquiry
+   680              tel:+12252550837                                 | Call (225) 255-0837
+   680 BOOK _blank  https://calendly.com/knightwebstudio1/30min      | 
+   ANCHOR #pricing {"targetTop":199,"headerBottom":64,"barTop":595,"headingTop":322,"headingText":"Fixed prices, published up front","tag":"SECTION"}
+
+# /pricing/
+    54              /                                                | KnightWebstudio
+   124              /services/                                       | 
+   177              /consulting/                                     | 
+   230              /work/                                           | 
+   283              /process/                                        | 
+   336              /pricing/                                        | 
+   389              /faq/                                            | 
+   442              /about/                                          | 
+   495              /contact/                                        | 
+   572              /contact/                                        | 
+   636              tel:+12252550837                                 | 
+   700              mailto:knightwebstudio1@gmail.com                | 
+   437 BOOK _blank  https://calendly.com/knightwebstudio1/30min      | Book a free 30-minute call
+   576              #packages                                        | Website packages $1,000 · $2,000 · $4,000 · $8,000
+   644              #payment                                         | How you pay 50% to start, 50% at launch
+   713              #addons                                          | Add-ons $750 or $1,500
+   781              #consulting                                      | Consulting & automation $350 audit · $500 or $1,000/mo
+   849              #care                                            | Care plans $125, $300, $600 or $1,000/mo
+  1505              /contact/?package=onepage                        | Start a one-page site
+  1561 BOOK _blank  https://calendly.com/knightwebstudio1/30min      | Or book the free call first
+  2055              /checkout/?plan=starter-deposit                  | Pay 50% deposit — $1,000
+  2111              /contact/?package=starter                        | Or send an enquiry first about the Starter package
+  2629              /checkout/?plan=business-deposit                 | Pay 50% deposit — $2,000
+  2685              /contact/?package=business                       | Or send an enquiry first about the Business package
+  3204              /checkout/?plan=commerce-deposit                 | Pay 50% deposit — $4,000
+  3260              /contact/?package=commerce                       | Or send an enquiry first about the Commerce package
+  3733              /terms/                                          | terms
+  4780              /contact/?package=check                          | free online check
+  4940              /contact/?package=audit                          | Book a Growth Audit, $350
+  5004              /consulting/                                     | How each setup works
+  6670              /contact/?package=bundle                         | Start the Launch bundle
+  7337              /contact/?package=care                           | Request plan
+  7580              /checkout/?plan=essential-care                   | Start plan
+  7845              /checkout/?plan=growth-care                      | Start plan
+  8109              /checkout/?plan=commerce-care                    | Start plan
+  8548              /terms/                                          | 10 days' written notice
+  8612              /contact/                                        | Ask about care plans
+  9030 BOOK _blank  https://calendly.com/knightwebstudio1/30min      | Book a free 30-minute call
+  9098              /contact/                                        | Send an enquiry
+   680              tel:+12252550837                                 | Call (225) 255-0837
+   680 BOOK _blank  https://calendly.com/knightwebstudio1/30min      | 
+   ANCHOR #packages {"targetTop":88,"headerBottom":64,"barTop":595,"headingTop":122,"headingText":"Four packages. Pick the one that fits.","tag":"HEADER"}
+   ANCHOR #payment {"targetTop":3365,"headerBottom":108,"barTop":664,"headingTop":3399,"headingText":"Half to start, half at launch. Or spread it out.","tag":"DIV"}
+   ANCHOR #addons {"targetTop":76,"headerBottom":64,"barTop":595,"headingTop":110,"headingText":"Add-ons","tag":"DIV"}
+   ANCHOR #consulting {"targetTop":4554,"headerBottom":108,"barTop":664,"headingTop":4665,"headingText":"Systems that win customers and save time","tag":"SECTION"}
+   ANCHOR #care {"targetTop":123,"headerBottom":64,"barTop":595,"headingTop":221,"headingText":"Care plans","tag":"SECTION"}
+
+# /consulting/
+    54              /                                                | KnightWebstudio
+   124              /services/                                       | 
+   177              /consulting/                                     | 
+   230              /work/                                           | 
+   283              /process/                                        | 
+   336              /pricing/                                        | 
+   389              /faq/                                            | 
+   442              /about/                                          | 
+   495              /contact/                                        | 
+   572              /contact/                                        | 
+   636              tel:+12252550837                                 | 
+   700              mailto:knightwebstudio1@gmail.com                | 
+   451              /contact/?package=audit                          | Book a Growth Audit, $350
+   519              #calculator                                      | Estimate what it's worth
+   599              #services                                        | SETUPS $500 $750 $1,500 Fixed, published prices
+   715              #how                                             | What each automation does $750 or $1,500 per setup
+   791              #calculator                                      | What it could be worth Your numbers, an estimate
+   867              #process                                         | Four steps, no surprises Free check · $350 audit
+   944              #plans                                           | Monthly plans and the Launch bundle $500 or $1,000/mo · $3,0
+  7950              /contact/?package=audit                          | Check my real numbers in a Growth Audit
+  8460              /contact/?package=check                          | Ask for the free check
+  8838              /contact/?package=audit                          | Book a Growth Audit, $350
+  9826              /terms/                                          | terms
+ 10317              /contact/?package=advisor                        | Ask about Advisor
+ 10727              /contact/?package=partner                        | Ask about Partner
+ 11664              /contact/?package=bundle                         | Start the Launch bundle
+ 12587 BOOK _blank  https://calendly.com/knightwebstudio1/30min      | Book a free 30-minute call
+ 12655              /contact/?package=check                          | Ask for the free check
+   680              tel:+12252550837                                 | Call (225) 255-0837
+   680 BOOK _blank  https://calendly.com/knightwebstudio1/30min      | 
+   ANCHOR #calculator {"targetTop":110,"headerBottom":64,"barTop":595,"headingTop":174,"headingText":"What could this be worth to your business?","tag":"SECTION"}
+   ANCHOR #services {"targetTop":9068,"headerBottom":108,"barTop":664,"headingTop":9099,"headingText":"Setup","tag":"LI"}
+   ANCHOR #how {"targetTop":88,"headerBottom":64,"barTop":595,"headingTop":153,"headingText":"What each automation does, step by step","tag":"SECTION"}
+   ANCHOR #process {"targetTop":8111,"headerBottom":108,"barTop":664,"headingTop":8222,"headingText":"Four steps, no surprises","tag":"SECTION"}
+   ANCHOR #plans {"targetTop":251,"headerBottom":64,"barTop":595,"headingTop":282,"headingText":"Run & improve","tag":"LI"}
+
+# /work/
+    54              /                                                | KnightWebstudio
+   124              /services/                                       | 
+   177              /consulting/                                     | 
+   230              /work/                                           | 
+   283              /process/                                        | 
+   336              /pricing/                                        | 
+   389              /faq/                                            | 
+   442              /about/                                          | 
+   495              /contact/                                        | 
+   572              /contact/                                        | 
+   636              tel:+12252550837                                 | 
+   700              mailto:knightwebstudio1@gmail.com                | 
+   310              /pricing/                                        | see the fixed prices
+   368 BOOK _blank  https://calendly.com/knightwebstudio1/30min      | Book a free 30-minute call
+   456      _blank  https://smilyssoftwash.com                       | smilyssoftwash.com Visit smilyssoftwash.com (opens in a new 
+  1046      _blank  https://smilyssoftwash.com                       | smilyssoftwash.com (opens in a new tab)
+  1219      _blank  https://risenhealthco.com                        | risenhealthco.com Visit risenhealthco.com (opens in a new ta
+  1927      _blank  https://risenhealthco.com                        | risenhealthco.com (opens in a new tab)
+  2088      _blank  https://corbelbooks.com                          | corbelbooks.com Visit corbelbooks.com (opens in a new tab).
+  2721      _blank  https://corbelbooks.com                          | corbelbooks.com (opens in a new tab)
+  3110 BOOK _blank  https://calendly.com/knightwebstudio1/30min      | Book a free 30-minute call
+  3178              /contact/                                        | Send an enquiry
+   680              tel:+12252550837                                 | Call (225) 255-0837
+   680 BOOK _blank  https://calendly.com/knightwebstudio1/30min      | 
+
+# /about/
+    54              /                                                | KnightWebstudio
+   124              /services/                                       | 
+   177              /consulting/                                     | 
+   230              /work/                                           | 
+   283              /process/                                        | 
+   336              /pricing/                                        | 
+   389              /faq/                                            | 
+   442              /about/                                          | 
+   495              /contact/                                        | 
+   572              /contact/                                        | 
+   636              tel:+12252550837                                 | 
+   700              mailto:knightwebstudio1@gmail.com                | 
+   518 BOOK _blank  https://calendly.com/knightwebstudio1/30min      | Book a free 30-minute call
+   773              tel:+12252550837                                 | (225) 255-0837
+   817              mailto:knightwebstudio1@gmail.com                | knightwebstudio1@gmail.com
+  1594              /consulting/                                     | Growth Audit
+  1808      _blank  https://smilyssoftwash.com                       | Smilys Softwash Exterior cleaning in Greater Baton Rouge · L
+  1904      _blank  https://risenhealthco.com                        | Risen Health Health & wellness · Online store (opens in a ne
+  1978      _blank  https://corbelbooks.com                          | Corbel Books Bookkeeping software · Product site & app scree
+  2069              /work/                                           | See the work in detail
+  2287              /web-design-baton-rouge/                         | Baton Rouge
+  2332              /web-design-gonzales/                            | Gonzales
+  2377              /web-design-prairieville/                        | Prairieville
+  2422              /web-design-denham-springs/                      | Denham Springs
+  2806              /pricing/                                        | pricing page
+  3244              /consulting/                                     | consulting page
+  3810 BOOK _blank  https://calendly.com/knightwebstudio1/30min      | Book a free 30-minute call
+  3878              /contact/                                        | Send an enquiry
+   680              tel:+12252550837                                 | Call (225) 255-0837
+   680 BOOK _blank  https://calendly.com/knightwebstudio1/30min      | 
+
+# /contact/
+    54              /                                                | KnightWebstudio
+   124              /services/                                       | 
+   177              /consulting/                                     | 
+   230              /work/                                           | 
+   283              /process/                                        | 
+   336              /pricing/                                        | 
+   389              /faq/                                            | 
+   442              /about/                                          | 
+   495              /contact/                                        | 
+   572              /contact/                                        | 
+   636              tel:+12252550837                                 | 
+   700              mailto:knightwebstudio1@gmail.com                | 
+   422              tel:+12252550837                                 | Call (225) 255-0837
+   512 BOOK _blank  https://calendly.com/knightwebstudio1/30min      | Book a free 30-minute call
+  1636                                                               | Send enquiry
+  2242              tel:+12252550837                                 | (225) 255-0837
+  2303              mailto:knightwebstudio1@gmail.com                | knightwebstudio1@gmail.com

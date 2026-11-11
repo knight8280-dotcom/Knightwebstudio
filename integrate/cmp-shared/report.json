@@ -1,0 +1,894 @@
+{
+  "home__390__light": {
+    "heightA": 11979,
+    "heightB": 11942,
+    "differingPixels": 961388,
+    "percent": 20.5785,
+    "bbox": [
+      0,
+      595,
+      390,
+      11979
+    ]
+  },
+  "services__390__light": {
+    "heightA": 5675,
+    "heightB": 5700,
+    "differingPixels": 326890,
+    "percent": 14.7049,
+    "bbox": [
+      0,
+      557,
+      390,
+      5700
+    ]
+  },
+  "consulting__390__light": {
+    "heightA": 13984,
+    "heightB": 13936,
+    "differingPixels": 1474443,
+    "percent": 27.0353,
+    "bbox": [
+      0,
+      257,
+      390,
+      13984
+    ]
+  },
+  "work__390__light": {
+    "heightA": 4459,
+    "heightB": 4459,
+    "differingPixels": 62,
+    "percent": 0.0036,
+    "bbox": [
+      163,
+      4173,
+      175,
+      4181
+    ]
+  },
+  "process__390__light": {
+    "heightA": 3315,
+    "heightB": 3315,
+    "differingPixels": 104,
+    "percent": 0.008,
+    "bbox": [
+      142,
+      256,
+      175,
+      3037
+    ]
+  },
+  "pricing__390__light": {
+    "heightA": 10410,
+    "heightB": 10378,
+    "differingPixels": 549142,
+    "percent": 13.526,
+    "bbox": [
+      0,
+      298,
+      390,
+      10410
+    ]
+  },
+  "faq__390__light": {
+    "heightA": 3663,
+    "heightB": 3663,
+    "differingPixels": 62,
+    "percent": 0.0043,
+    "bbox": [
+      163,
+      3377,
+      175,
+      3385
+    ]
+  },
+  "contact__390__light": {
+    "heightA": 3702,
+    "heightB": 3702,
+    "differingPixels": 62,
+    "percent": 0.0043,
+    "bbox": [
+      163,
+      3416,
+      175,
+      3424
+    ]
+  },
+  "about__390__light": {
+    "heightA": 5158,
+    "heightB": 5158,
+    "differingPixels": 62,
+    "percent": 0.0031,
+    "bbox": [
+      163,
+      4872,
+      175,
+      4880
+    ]
+  },
+  "start__390__light": {
+    "heightA": 6186,
+    "heightB": 6134,
+    "differingPixels": 209853,
+    "percent": 8.6984,
+    "bbox": [
+      0,
+      570,
+      390,
+      6186
+    ]
+  },
+  "web-design-baton-rouge__390__light": {
+    "heightA": 7416,
+    "heightB": 7416,
+    "differingPixels": 6345,
+    "percent": 0.2194,
+    "bbox": [
+      20,
+      390,
+      361,
+      7138
+    ]
+  },
+  "web-design-denham-springs__390__light": {
+    "heightA": 7210,
+    "heightB": 7210,
+    "differingPixels": 8397,
+    "percent": 0.2986,
+    "bbox": [
+      20,
+      552,
+      366,
+      6932
+    ]
+  },
+  "web-design-gonzales__390__light": {
+    "heightA": 7362,
+    "heightB": 7362,
+    "differingPixels": 6152,
+    "percent": 0.2143,
+    "bbox": [
+      20,
+      607,
+      366,
+      7084
+    ]
+  },
+  "web-design-prairieville__390__light": {
+    "heightA": 7360,
+    "heightB": 7360,
+    "differingPixels": 8932,
+    "percent": 0.3112,
+    "bbox": [
+      20,
+      589,
+      361,
+      7082
+    ]
+  },
+  "privacy__390__light": {
+    "heightA": 4971,
+    "heightB": 4971,
+    "differingPixels": 62,
+    "percent": 0.0032,
+    "bbox": [
+      163,
+      4685,
+      175,
+      4693
+    ]
+  },
+  "terms__390__light": {
+    "heightA": 5236,
+    "heightB": 5236,
+    "differingPixels": 62,
+    "percent": 0.003,
+    "bbox": [
+      163,
+      4950,
+      175,
+      4958
+    ]
+  },
+  "checkout__390__light": {
+    "heightA": 2149,
+    "heightB": 2149,
+    "differingPixels": 62,
+    "percent": 0.0074,
+    "bbox": [
+      163,
+      1863,
+      175,
+      1871
+    ]
+  },
+  "checkout_success__390__light": {
+    "heightA": 2210,
+    "heightB": 2218,
+    "differingPixels": 94250,
+    "percent": 10.8957,
+    "bbox": [
+      0,
+      438,
+      390,
+      2218
+    ]
+  },
+  "404.html__390__light": {
+    "heightA": 1239,
+    "heightB": 1239,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "home__1440__light": {
+    "heightA": 9198,
+    "heightB": 9220,
+    "differingPixels": 1051819,
+    "percent": 7.9222,
+    "bbox": [
+      0,
+      74,
+      1440,
+      9220
+    ]
+  },
+  "services__1440__light": {
+    "heightA": 4203,
+    "heightB": 4262,
+    "differingPixels": 1194158,
+    "percent": 19.4574,
+    "bbox": [
+      0,
+      74,
+      1440,
+      4262
+    ]
+  },
+  "consulting__1440__light": {
+    "heightA": 9978,
+    "heightB": 10045,
+    "differingPixels": 1212958,
+    "percent": 8.3856,
+    "bbox": [
+      0,
+      74,
+      1440,
+      10045
+    ]
+  },
+  "work__1440__light": {
+    "heightA": 3456,
+    "heightB": 3488,
+    "differingPixels": 873807,
+    "percent": 17.3971,
+    "bbox": [
+      0,
+      74,
+      1440,
+      3488
+    ]
+  },
+  "process__1440__light": {
+    "heightA": 2709,
+    "heightB": 2709,
+    "differingPixels": 57013,
+    "percent": 1.4615,
+    "bbox": [
+      100,
+      74,
+      930,
+      1966
+    ]
+  },
+  "pricing__1440__light": {
+    "heightA": 5988,
+    "heightB": 5988,
+    "differingPixels": 76387,
+    "percent": 0.8859,
+    "bbox": [
+      100,
+      74,
+      1340,
+      5245
+    ]
+  },
+  "faq__1440__light": {
+    "heightA": 3036,
+    "heightB": 3036,
+    "differingPixels": 9291,
+    "percent": 0.2125,
+    "bbox": [
+      100,
+      74,
+      930,
+      2184
+    ]
+  },
+  "contact__1440__light": {
+    "heightA": 2253,
+    "heightB": 2253,
+    "differingPixels": 4088,
+    "percent": 0.126,
+    "bbox": [
+      361,
+      74,
+      930,
+      94
+    ]
+  },
+  "about__1440__light": {
+    "heightA": 3755,
+    "heightB": 3836,
+    "differingPixels": 623546,
+    "percent": 11.2883,
+    "bbox": [
+      0,
+      74,
+      1440,
+      3836
+    ]
+  },
+  "start__1440__light": {
+    "heightA": 4647,
+    "heightB": 4663,
+    "differingPixels": 393205,
+    "percent": 5.8559,
+    "bbox": [
+      0,
+      647,
+      1440,
+      4663
+    ]
+  },
+  "web-design-baton-rouge__1440__light": {
+    "heightA": 5734,
+    "heightB": 5760,
+    "differingPixels": 245691,
+    "percent": 2.9621,
+    "bbox": [
+      0,
+      74,
+      1440,
+      5760
+    ]
+  },
+  "web-design-denham-springs__1440__light": {
+    "heightA": 5663,
+    "heightB": 5727,
+    "differingPixels": 1332307,
+    "percent": 16.1553,
+    "bbox": [
+      0,
+      74,
+      1440,
+      5727
+    ]
+  },
+  "web-design-gonzales__1440__light": {
+    "heightA": 5554,
+    "heightB": 5580,
+    "differingPixels": 418091,
+    "percent": 5.2032,
+    "bbox": [
+      0,
+      74,
+      1440,
+      5580
+    ]
+  },
+  "web-design-prairieville__1440__light": {
+    "heightA": 5670,
+    "heightB": 5670,
+    "differingPixels": 35943,
+    "percent": 0.4402,
+    "bbox": [
+      100,
+      74,
+      930,
+      4783
+    ]
+  },
+  "privacy__1440__light": {
+    "heightA": 3470,
+    "heightB": 3551,
+    "differingPixels": 513043,
+    "percent": 10.0332,
+    "bbox": [
+      0,
+      74,
+      1440,
+      3551
+    ]
+  },
+  "terms__1440__light": {
+    "heightA": 3650,
+    "heightB": 3840,
+    "differingPixels": 851050,
+    "percent": 15.3908,
+    "bbox": [
+      0,
+      74,
+      1440,
+      3840
+    ]
+  },
+  "checkout__1440__light": {
+    "heightA": 1493,
+    "heightB": 1493,
+    "differingPixels": 7731,
+    "percent": 0.3596,
+    "bbox": [
+      152,
+      74,
+      930,
+      561
+    ]
+  },
+  "checkout_success__1440__light": {
+    "heightA": 1635,
+    "heightB": 1635,
+    "differingPixels": 6836,
+    "percent": 0.2903,
+    "bbox": [
+      100,
+      74,
+      930,
+      741
+    ]
+  },
+  "404.html__1440__light": {
+    "heightA": 1062,
+    "heightB": 1062,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "home__390__dark": {
+    "heightA": 11979,
+    "heightB": 11942,
+    "differingPixels": 1866902,
+    "percent": 39.961,
+    "bbox": [
+      0,
+      595,
+      390,
+      11979
+    ]
+  },
+  "services__390__dark": {
+    "heightA": 5675,
+    "heightB": 5700,
+    "differingPixels": 449113,
+    "percent": 20.203,
+    "bbox": [
+      0,
+      557,
+      390,
+      5700
+    ]
+  },
+  "consulting__390__dark": {
+    "heightA": 13984,
+    "heightB": 13936,
+    "differingPixels": 2998107,
+    "percent": 54.9732,
+    "bbox": [
+      0,
+      257,
+      390,
+      13984
+    ]
+  },
+  "work__390__dark": {
+    "heightA": 4459,
+    "heightB": 4459,
+    "differingPixels": 309585,
+    "percent": 17.8024,
+    "bbox": [
+      0,
+      469,
+      390,
+      4181
+    ]
+  },
+  "process__390__dark": {
+    "heightA": 3315,
+    "heightB": 3315,
+    "differingPixels": 108,
+    "percent": 0.0084,
+    "bbox": [
+      141,
+      256,
+      175,
+      3037
+    ]
+  },
+  "pricing__390__dark": {
+    "heightA": 10410,
+    "heightB": 10378,
+    "differingPixels": 1122801,
+    "percent": 27.6559,
+    "bbox": [
+      0,
+      298,
+      390,
+      10410
+    ]
+  },
+  "faq__390__dark": {
+    "heightA": 3663,
+    "heightB": 3663,
+    "differingPixels": 62,
+    "percent": 0.0043,
+    "bbox": [
+      163,
+      3377,
+      175,
+      3385
+    ]
+  },
+  "contact__390__dark": {
+    "heightA": 3702,
+    "heightB": 3702,
+    "differingPixels": 62,
+    "percent": 0.0043,
+    "bbox": [
+      163,
+      3416,
+      175,
+      3424
+    ]
+  },
+  "about__390__dark": {
+    "heightA": 5158,
+    "heightB": 5158,
+    "differingPixels": 317425,
+    "percent": 15.7796,
+    "bbox": [
+      0,
+      2591,
+      390,
+      4880
+    ]
+  },
+  "start__390__dark": {
+    "heightA": 6186,
+    "heightB": 6134,
+    "differingPixels": 381428,
+    "percent": 15.8102,
+    "bbox": [
+      0,
+      570,
+      390,
+      6186
+    ]
+  },
+  "web-design-baton-rouge__390__dark": {
+    "heightA": 7416,
+    "heightB": 7416,
+    "differingPixels": 390961,
+    "percent": 13.5176,
+    "bbox": [
+      0,
+      390,
+      390,
+      7138
+    ]
+  },
+  "web-design-denham-springs__390__dark": {
+    "heightA": 7210,
+    "heightB": 7210,
+    "differingPixels": 387846,
+    "percent": 13.793,
+    "bbox": [
+      0,
+      552,
+      390,
+      6932
+    ]
+  },
+  "web-design-gonzales__390__dark": {
+    "heightA": 7362,
+    "heightB": 7362,
+    "differingPixels": 389111,
+    "percent": 13.5523,
+    "bbox": [
+      0,
+      607,
+      390,
+      7084
+    ]
+  },
+  "web-design-prairieville__390__dark": {
+    "heightA": 7360,
+    "heightB": 7360,
+    "differingPixels": 402055,
+    "percent": 14.0069,
+    "bbox": [
+      0,
+      589,
+      390,
+      7082
+    ]
+  },
+  "privacy__390__dark": {
+    "heightA": 4971,
+    "heightB": 4971,
+    "differingPixels": 62,
+    "percent": 0.0032,
+    "bbox": [
+      163,
+      4685,
+      175,
+      4693
+    ]
+  },
+  "terms__390__dark": {
+    "heightA": 5236,
+    "heightB": 5236,
+    "differingPixels": 62,
+    "percent": 0.003,
+    "bbox": [
+      163,
+      4950,
+      175,
+      4958
+    ]
+  },
+  "checkout__390__dark": {
+    "heightA": 2149,
+    "heightB": 2149,
+    "differingPixels": 62,
+    "percent": 0.0074,
+    "bbox": [
+      163,
+      1863,
+      175,
+      1871
+    ]
+  },
+  "checkout_success__390__dark": {
+    "heightA": 2210,
+    "heightB": 2218,
+    "differingPixels": 91067,
+    "percent": 10.5277,
+    "bbox": [
+      0,
+      438,
+      390,
+      2218
+    ]
+  },
+  "404.html__390__dark": {
+    "heightA": 1239,
+    "heightB": 1239,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "home__1440__dark": {
+    "heightA": 9198,
+    "heightB": 9220,
+    "differingPixels": 5128509,
+    "percent": 38.6276,
+    "bbox": [
+      0,
+      74,
+      1440,
+      9220
+    ]
+  },
+  "services__1440__dark": {
+    "heightA": 4203,
+    "heightB": 4262,
+    "differingPixels": 1513040,
+    "percent": 24.6533,
+    "bbox": [
+      0,
+      74,
+      1440,
+      4262
+    ]
+  },
+  "consulting__1440__dark": {
+    "heightA": 9978,
+    "heightB": 10045,
+    "differingPixels": 7379251,
+    "percent": 51.0152,
+    "bbox": [
+      0,
+      74,
+      1440,
+      10045
+    ]
+  },
+  "work__1440__dark": {
+    "heightA": 3456,
+    "heightB": 3488,
+    "differingPixels": 1595196,
+    "percent": 31.7596,
+    "bbox": [
+      0,
+      74,
+      1440,
+      3488
+    ]
+  },
+  "process__1440__dark": {
+    "heightA": 2709,
+    "heightB": 2709,
+    "differingPixels": 58060,
+    "percent": 1.4884,
+    "bbox": [
+      99,
+      74,
+      930,
+      1968
+    ]
+  },
+  "pricing__1440__dark": {
+    "heightA": 5988,
+    "heightB": 5988,
+    "differingPixels": 1841868,
+    "percent": 21.3606,
+    "bbox": [
+      0,
+      74,
+      1440,
+      5247
+    ]
+  },
+  "faq__1440__dark": {
+    "heightA": 3036,
+    "heightB": 3036,
+    "differingPixels": 9308,
+    "percent": 0.2129,
+    "bbox": [
+      100,
+      74,
+      930,
+      2184
+    ]
+  },
+  "contact__1440__dark": {
+    "heightA": 2253,
+    "heightB": 2253,
+    "differingPixels": 4101,
+    "percent": 0.1264,
+    "bbox": [
+      361,
+      74,
+      930,
+      94
+    ]
+  },
+  "about__1440__dark": {
+    "heightA": 3755,
+    "heightB": 3836,
+    "differingPixels": 1836307,
+    "percent": 33.2433,
+    "bbox": [
+      0,
+      74,
+      1440,
+      3836
+    ]
+  },
+  "start__1440__dark": {
+    "heightA": 4647,
+    "heightB": 4663,
+    "differingPixels": 1354619,
+    "percent": 20.1739,
+    "bbox": [
+      0,
+      647,
+      1440,
+      4663
+    ]
+  },
+  "web-design-baton-rouge__1440__dark": {
+    "heightA": 5734,
+    "heightB": 5760,
+    "differingPixels": 2037825,
+    "percent": 24.5687,
+    "bbox": [
+      0,
+      74,
+      1440,
+      5760
+    ]
+  },
+  "web-design-denham-springs__1440__dark": {
+    "heightA": 5663,
+    "heightB": 5727,
+    "differingPixels": 2519570,
+    "percent": 30.5518,
+    "bbox": [
+      0,
+      74,
+      1440,
+      5727
+    ]
+  },
+  "web-design-gonzales__1440__dark": {
+    "heightA": 5554,
+    "heightB": 5580,
+    "differingPixels": 1962007,
+    "percent": 24.4176,
+    "bbox": [
+      0,
+      74,
+      1440,
+      5580
+    ]
+  },
+  "web-design-prairieville__1440__dark": {
+    "heightA": 5670,
+    "heightB": 5670,
+    "differingPixels": 1813074,
+    "percent": 22.206,
+    "bbox": [
+      0,
+      74,
+      1440,
+      4783
+    ]
+  },
+  "privacy__1440__dark": {
+    "heightA": 3470,
+    "heightB": 3551,
+    "differingPixels": 421618,
+    "percent": 8.2453,
+    "bbox": [
+      0,
+      74,
+      1440,
+      3551
+    ]
+  },
+  "terms__1440__dark": {
+    "heightA": 3650,
+    "heightB": 3840,
+    "differingPixels": 612597,
+    "percent": 11.0785,
+    "bbox": [
+      0,
+      74,
+      1440,
+      3840
+    ]
+  },
+  "checkout__1440__dark": {
+    "heightA": 1493,
+    "heightB": 1493,
+    "differingPixels": 7725,
+    "percent": 0.3593,
+    "bbox": [
+      152,
+      74,
+      930,
+      561
+    ]
+  },
+  "checkout_success__1440__dark": {
+    "heightA": 1635,
+    "heightB": 1635,
+    "differingPixels": 6829,
+    "percent": 0.2901,
+    "bbox": [
+      100,
+      74,
+      930,
+      741
+    ]
+  },
+  "404.html__1440__dark": {
+    "heightA": 1062,
+    "heightB": 1062,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  }
+}

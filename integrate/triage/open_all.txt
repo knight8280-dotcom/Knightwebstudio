@@ -1,0 +1,376 @@
+[pricing/built.open/0] Phone height is 10,441px against a target of 10,500px: only 59px of slack. Any shared change that adds height (for example to the closing band or footer) will push it over.
+
+[pricing/built.open/1] At 360px wide the lede is four lines, so the first row of prices ends at 657px; on a small phone with about 600px of visible height the prices are just below the first screen.
+
+[pricing/built.open/2] The care plans table on a phone is still the shared stacked layout (1,046px for four plans, narrow value column). It is the least refined part of the phone page; see sharedIssues.
+
+[pricing/built.open/3] In the care table 'Request plan' is wider than the three 'Start plan' buttons, so the button column is ragged on the right from 760px.
+
+[pricing/built.open/4] The three 'Or send an enquiry first' links have the same text and differ only by table row (their row header names the package). I did not add aria-labels.
+
+[pricing/built.open/5] The head has one button on desktop too; the left column is lighter than in the reference. I judged one clear action better than a second button that pushed the prices off the first phone screen.
+
+[pricing/built.open/6] The contents list in the head breaks the handbook's stated position for it. If the integrator wants services and consulting to match, they need the same treatment; if not, this page is the exception.
+
+[pricing/built.open/7] Without subgrid support (Safari before 16, Chrome before 117) the page from 1100px shows the shared two-by-two cards, not the compact cards and not the table. Readable, but not the designed view.
+
+[pricing/built.open/8] Only tested in headless Chromium. text-wrap: balance and the translate property are used as enhancements; neither was checked in Safari or Firefox.
+
+[pricing/built.open/9] The bundle's payment plan ($1,500 down, then $500 a month for 3 months) is no longer on this page; it remains on /consulting/. If the owner wants it on the pricing page, it is one receipt-note line.
+
+[pricing/fixed.open/0] Small iPhone with both Safari bars (375 wide, about 553px visible): the first screen shows the headline, lede, button and the top of the price card, but the first price row ends at 630px, 77px below. Every other size tested has a price on the first screen. Closing this gap needs a phone-only price strip, which says the prices a third time.
+
+[pricing/fixed.open/1] Text-only enlargement at 390px: at 150% the package name runs into the price by 9 to 30px in three of the four cards, and at 200% the cards are 37px wider than the screen. Browser zoom is fine. Not fixed; the fix belongs with the promoted spec rules.
+
+[pricing/fixed.open/2] Not seen in Safari. The table from 1100px relies on subgrid and a positioned row; the popular tab uses the translate property; the phone cards use baseline alignment in a grid. All render correctly in Chromium and Firefox 155.
+
+[pricing/fixed.open/3] Without subgrid support (Safari before 16, Chrome before 117) the page shows the compact cards two by two at every width from 760px, with rows not shared between neighbours. Readable, but not the designed table.
+
+[pricing/fixed.open/4] In Chromium at exactly 1100 to 1104px the Commerce plan line breaks as 'Or $4,000 down, / then about / $1,333/mo for 3 months'. One cell, a 5px range.
+
+[pricing/fixed.open/5] From 900 to 979px the add-ons price list stops at 46rem while the cards span the container, up to 148px short. This is the shared price-list cap.
+
+[pricing/fixed.open/6] On desktop the Bundle quarter still has about 70px of empty sand under its button, because 'One-time setups' beside it is taller. The care plans head is bottom-aligned while the consulting head is top-aligned.
+
+[pricing/fixed.open/7] pricing.css has 20 bytes of budget left and is written compact. Any further page rule needs the SHARED-CANDIDATE blocks promoted first.
+
+[pricing/fixed.open/8] Phone height is 10,410px against the 10,500px target: 90px of slack. With JavaScript off it is 10,498px. A shared change that adds height to the closing band or footer could push it over.
+
+[pricing/fixed.open/9] The bundle's payment plan ($1,500 down, then $500 a month for 3 months) is not on this page; it remains on /consulting/. It is one receipt-note line if the owner wants it here.
+
+[pricing/fixed.open/10] Six enquiry links the live page did not have are kept from the builder (starter, business, commerce, audit, check, bundle). All are valid ?package values on the contact form, and all 13 live call-to-action hrefs are unchanged.
+
+[city/built.open/0] Phone length misses the target: 7,338 to 7,489px at 390 against about 6,500. Remaining cuts short of editing copy: swap the board for the dot-leader list (about 230px), remove the town list and stamp (about 165px), and drop the three eyebrows that repeat their titles on most pages (about 100px). These total roughly 500px and still do not reach 6,500.
+
+[city/built.open/1] The price board takes about 1,500px on a phone, the tallest block on the page.
+
+[city/built.open/2] The --em values (6.05, 7.9, 4.3, 5.25) were measured for Fraunces at -0.03em letter-spacing with about 3% air. If the display face, its tracking or a town name changes they must be re-measured (work/city/measure1.js).
+
+[city/built.open/3] The name-fitting formula uses 100vw. On browsers with classic scrollbars the 3% air should cover the scrollbar width; this was calculated, not tested on Windows.
+
+[city/built.open/4] Headless Chromium only. Not checked in Safari or Firefox: min() inside font-size, display: contents on the steps wrapper, and the masked brush animation.
+
+[city/built.open/5] On Baton Rouge the stamp ('Meet in person') repeats the card's own heading; on the other three pages the heading is oblique and the stamp helps.
+
+[city/built.open/6] Two labels from the live pages are gone on purpose: the 'Questions' eyebrow and the 'Live' flag. Restoring 'Questions' is a one-line change in gen.py.
+
+[city/built.open/7] 'Send an enquiry' is hidden in the head under 600px by CSS. With JavaScript off it is still reachable in the closing band.
+
+[city/built.open/8] At 360px the eyebrow breaks after the middle dot ('AREAS WE SERVE ·' then 'BATON ROUGE, LA'); acceptable but not ideal.
+
+[city/built.open/9] The pricing intro paragraph is set in two places on each page (claim in the board head, care-plan sentence in the extras row). Each sentence is intact, but the paragraph is no longer one block.
+
+[city/fixed.open/0] Phone length misses the brief: 7,210 to 7,416px at 390 against about 6,500. The only cut left that does not touch copy is the shared phone footer (1,138px).
+
+[city/fixed.open/1] The price strip is a shared part and still fails on these pages in two edge cases: '$8,000' is cut off under widened letter spacing at 390px, and a 380px window with a classic scrollbar scrolls sideways by 8px.
+
+[city/fixed.open/2] Headless Chromium only. Not checked in Safari or Firefox: container units for the name, text-wrap: balance, display: contents on the phone step rows, and the masked brush. Each has a plain fallback.
+
+[city/fixed.open/3] Font fallback was checked with stand-ins, not the real fonts. Gelasio (built to match Georgia) and Noto Serif regular are both narrower than the display face, so the name should stay on one line while the web font loads. If a device resolves neither and uses a bold system serif, the name would be 0.4 to 4% too wide and would wrap briefly. Needs a look on a real phone.
+
+[city/fixed.open/4] The --em values (6.05, 7.9, 4.3, 5.25) must be re-measured if the display face, its tracking or a town name changes (work/city/measure1.js).
+
+[city/fixed.open/5] On phones the town name does not grow with text-only zoom, because it is fitted to the column. Normal page zoom is fine.
+
+[city/fixed.open/6] 'What we build for / Denham Springs / businesses' sets in three lines with 'businesses' alone at most widths; Gonzales and Prairieville do the same between 980 and 1180px. The name is intact; the line is too long for two.
+
+[city/fixed.open/7] Between 1100 and 1279px the head is still one column, so short names (Gonzales, Prairieville) leave the right half empty.
+
+[city/fixed.open/8] The header button wraps to two lines at 1280px on all four pages (shared; see sharedIssues).
+
+[city/fixed.open/9] Labels from the live pages that are gone on purpose: the 'Live' flag (now the 'Status: Live site · Online quotes' row) and the eyebrows that repeated their titles. If the owner wants them back for search, it is a one-line change in kicker() in gen.py.
+
+[city/fixed.open/10] 'Send an enquiry' is hidden in the head under 600px by CSS; it is in the closing band.
+
+[city/fixed.open/11] Owner's call: the ticks 'Core Web Vitals tuning' (Baton Rouge) and 'Local SEO configuration' (three pages) are the only jargon on these pages.
+
+[city/fixed.open/12] One command of mine was blocked and not run: I tried to clear my own screenshot folder before re-shooting. It was not needed; the re-run overwrote every file and no stale screenshots remain.
+
+[legalcheckout/built.open/0] The real Stripe form was never rendered. All checkout states were tested with a stub of Stripe.js and of the payment server, because I did not want to create sessions on the live server. The form's true height and look inside the paper sheet are unverified.
+
+[legalcheckout/built.open/1] The payment sheet is cream (#FFFCF5 via .on-paper), not the pure white of the live page. If Stripe paints its own opaque white background, a very faint white-on-cream edge would show.
+
+[legalcheckout/built.open/2] 'Payment confirmed — thank you' breaks before the dash on phones ('Payment confirmed / — thank you'). The string is written by the inline script, which may not change, and CSS cannot keep a dash on the previous line.
+
+[legalcheckout/built.open/3] The noscript sentence, 'Payment details', 'Your order', 'Back to pricing' and the 'Call (225) 255-0837' button are new microcopy on the checkout pages. No fact is new, but the owner may want to reword the noscript line.
+
+[legalcheckout/built.open/4] Loading is a single static line in a short sheet, so the page grows when Stripe's form mounts. No space is reserved because the form's height is unknown and a skeleton would be fake interface.
+
+[legalcheckout/built.open/5] On desktop in the 'payment wasn't completed' state the left column holds only the two buttons beside the slip. Correct, but sparse.
+
+[legalcheckout/built.open/6] The contents list does not mark the current section while reading; that would need JavaScript, which this run does not allow.
+
+[legalcheckout/built.open/7] On /checkout/success/ under 980px the h1 is 85% of the normal page-title size (35px at 390 against 41px on /checkout/), so the two sibling pages differ slightly on a phone.
+
+[legalcheckout/built.open/8] Everything was tested in headless Chromium only. :has() and text-wrap: balance have fallbacks, but Safari and Firefox were not looked at.
+
+[legalcheckout/fixed.open/0] The real Stripe form has still never been rendered inside the new sheet. Before merging, open the deploy preview's /checkout/?plan=starter-deposit and /checkout/?plan=commerce-care on an iPhone and a laptop, in both themes. Check: whether Stripe paints a white panel on the cream sheet; the form's true height; the sheet's 310px inner width at 390; Safari.
+
+[legalcheckout/fixed.open/1] The loading reserve (416px) is a guess. With a 520px stand-in form the sheet still grows to 596px when the form mounts, so the Call button moves about 180px on a phone (it was about 390px before). Set the value once the real height is known: one line in checkout.css.
+
+[legalcheckout/fixed.open/2] While loading, the sheet is a large card holding one line for up to a minute. At night it is a bright cream block on a dark page. That is the cost of holding the room without drawing fake fields.
+
+[legalcheckout/fixed.open/3] 'Payment confirmed / — thank you' still breaks before the dash on phones (360, 390, 430). Only a non-breaking space in the frozen script fixes it.
+
+[legalcheckout/fixed.open/4] The step titles on /checkout/success/ keep their full stops ('Book your kickoff call.'). I tested removing them: the word-for-word check then loses the baseline sentence 'Confirming your payment with Stripe… What happens next Book your kickoff call.'
+
+[legalcheckout/fixed.open/5] At about 600 to 650px the bank-payment title sets in three lines with 'processing' alone on the last. That is the price of keeping the dash on the first line of 'Payment confirmed' at tablet widths.
+
+[legalcheckout/fixed.open/6] Browsers without :has() (Firefox before 121) fall back to the earlier behaviour for three things: no reserved height while loading, the order slip still shows in the 'wasn't completed' state, and the tablet headline keeps its old break. The scripts-off message is covered by the second route.
+
+[legalcheckout/fixed.open/7] New microcopy on /checkout/: 'The payment terms are on the terms page.' No fact is new, but the owner may want to reword it, along with the builder's earlier additions ('Your order', 'Payment details', 'Back to pricing', the noscript sentence).
+
+[legalcheckout/fixed.open/8] In the 'wasn't completed' state on desktop the left column holds only the two buttons and the right column the help block. Correct, but sparse.
+
+[legalcheckout/fixed.open/9] On /checkout/success/ under 980px the h1 is 85% of the normal page-title size (35px at 390 against 41px on /checkout/). Unchanged from the build.
+
+[legalcheckout/fixed.open/10] The contents list does not mark the section being read; that would need JavaScript.
+
+[legalcheckout/fixed.open/11] Everything was tested in headless Chromium only. Text enlargement was emulated by doubling the root font size, not with a browser's own text-only zoom.
+
+[contactfaq/built.open/0] /faq/ is 3,503px at 390 with every question closed, against a target of about 3,200 (3,718 as served, with the first question open). Fixed chrome is 1,720px and the page head 256px, which leaves 1,224px. The fourteen questions alone need 966px at the shared component's size (seven wrap to two lines), before four headings and the contents list. Getting lower means shrinking the shared question size or dropping the contents list; I did neither.
+
+[contactfaq/built.open/1] /contact/ has no business card, against the handbook. A desktop-only card variant is mocked and kept at /tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/work/contactfaq/contact.main.card-variant.html (screenshot: /tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/work/contactfaq/look/try-card-1440.png). It needs about 330 more bytes of page CSS, repeats the phone number and email on desktop, and adds 'Christian Knight, Founder' to a page that does not carry it today.
+
+[contactfaq/built.open/2] The real hCaptcha widget was never loaded: the tools block it, so I tested with a simulated 303x78 box at 360 and 390. With the real widget the phone page is about 94px taller than the measured 3,598px.
+
+[contactfaq/built.open/3] Chromium only. The one thing to check in Safari and Firefox is the floated 'Optional, pick any' inside the legend.
+
+[contactfaq/built.open/4] The asterisk key in the ticket head ('* Needed to reply') is 12px uppercase, the shared ticket-head size. I treat it as a label; each field also has the required attribute and optional fields say 'Optional' at 15px.
+
+[contactfaq/built.open/5] At 360px the longest package label ('Google profile & reviews, $500') is cut with an ellipsis in the closed select; the open picker shows it in full.
+
+[contactfaq/built.open/6] contact.css is 3,921 of 4,000 bytes, so there is almost no room left on that page.
+
+[contactfaq/fixed.open/0] /contact/ is 3,702px at 390, against a target of about 3,600. This is the true height with the captcha's 78px held; the earlier 3,598 left the widget out (true figure then: 3,692). I added a Call row (61px) and the stamp gap (16px) and cut 67px of copy. Without the 1,138px footer the page is 2,564px.
+
+[contactfaq/fixed.open/1] /faq/ is 3,448px at 390 with every question closed (3,663 as served, first question open), against a target of about 3,200. It was 3,503 and 3,718. The rest is the footer and closing band.
+
+[contactfaq/fixed.open/2] The captcha's room is held whenever scripts run. Any tool or visitor that blocks hcaptcha.com sees an empty 78px slot above Send. The shared test tools block it, so their screenshots show that gap; it is not a spacing bug. With the widget loaded the slot is filled and Send does not move.
+
+[contactfaq/fixed.open/3] The captcha widget is a white box on the night ticket. That needs main.js (see sharedIssues).
+
+[contactfaq/fixed.open/4] 'Please fix the highlighted fields.' still stays on screen after the fields are corrected. That needs main.js.
+
+[contactfaq/fixed.open/5] The real hCaptcha widget was never loaded here; I tested with a 303x78 stand-in. Chromium only: Safari and Firefox are untested.
+
+[contactfaq/fixed.open/6] /contact/ still has no business card and no owner name. Adopt the card variant only if the owner wants his name there (mock-up: /tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/work/contactfaq/look/try-card-1440.png).
+
+[contactfaq/fixed.open/7] Four option labels are shorter than the product names used elsewhere (Starter website, Growth Audit, Booking & reminders, Custom automation). Values and prices are unchanged. The owner should know; the full names would be cut on a phone.
+
+[contactfaq/fixed.open/8] Balanced line breaks need Safari 17.5 or newer; older browsers wrap normally, so a short last line can come back there.
+
+[contactfaq/fixed.open/9] contact.css is 3,990 of 4,000 bytes. There is no room left on that page.
+
+[start/built.open/0] Tested in headless Chromium only (no Safari, Firefox or real phone).
+
+[start/built.open/1] Height margin is thin: 6,157px at 390 against the 6,200 target, so any added line on a phone will go over. At 360px the page is 6,415px.
+
+[start/built.open/2] The sentence 'After launch, care plans keep it running for $125, $300, $600 or $1,000 a month' is gone and the phrase 'care plans' no longer appears on the page. The four prices are kept in the 'Care & maintenance ... $125, $300, $600 or $1,000/mo' row. Restoring it as a third board extra costs about 105px on a phone and breaks the target.
+
+[start/built.open/3] 'Standard is' was dropped from the payment terms: the board now states '50% to start, 50% at launch.' and then the payment-plan sentence.
+
+[start/built.open/4] The closing band's appointment card (shared component, shown from 980px, aria-hidden) carries 'Where: A call, or in person', which is not on the live /start/ page, though it is on every other page's closing band.
+
+[start/built.open/5] On an iPhone SE sized screen (375x667) the two buttons are on the first screen (call button ends at 596px) but the price strip ends at 696px, 29px below the fold.
+
+[start/built.open/6] At exactly 600 to 606px wide the two head buttons have only 6px to spare, so they could wrap for a moment while the fallback font is showing.
+
+[start/built.open/7] The tel: buttons in the head and closing band are new links (the number itself was already on the live page); the brief asked for one-thumb calling, but it is an addition to the live link list.
+
+[start/fixed.open/0] Tested in headless Chromium only. The font-swap result was measured against this machine's fallbacks (Inter and Liberation Serif), not Georgia, Arial or Roboto.
+
+[start/fixed.open/1] Height margin is thin: 6,186px at 390 against the 6,200 target, and 6,378px at 360. One more line on a phone goes over.
+
+[start/fixed.open/2] On an iPhone SE in Safari (375x548) both buttons are on the first screen (Call ends at 512px) but the price figures end at 579px, below the fold. The lede's 'Fixed prices' is on screen.
+
+[start/fixed.open/3] 'Standard is' is still dropped from the payment terms; the board says '50% to start, 50% at launch.' and then the payment-plan sentence. The sentence 'After launch, care plans keep it running for…' is also gone; the four monthly prices are in the Care & maintenance row and 'care plans' is in the board's link.
+
+[start/fixed.open/4] The eyebrow names the owner on a page that otherwise says 'we'. It follows the home page's 'who you work with' note, but it is a positioning choice the owner may want to confirm.
+
+[start/fixed.open/5] Below 360px (not in the brief's range) the eyebrow wraps to two lines at 320px, and two menu rows wrap with a leader left on the name's line.
+
+[start/fixed.open/6] text-wrap: balance on the step text is an enhancement; browsers without it get the plain wrap with nowrap on 'to do.' and 'any time.'.
+
+[start/fixed.open/7] With text enlarged to 130% the headline runs to four or five lines on phones, and the shared price strip is wider than the screen (listed under shared issues).
+
+[start/fixed.open/8] The closing band's appointment card (shown from 980px, aria-hidden) carries 'Where: A call, or in person', which is not on the live /start/ page but is on every other page's closing band.
+
+[start/fixed.open/9] The tel: buttons in the head and closing band are additions to the live link list, as the brief asked.
+
+[consulting/built.open/0] At 360px the page is 14,579px; the 14,000 target is met at 390px only (13,985px).
+
+[consulting/built.open/1] Between 980 and about 1050px the calculator's inputs are one column of eight fields beside the sticky receipt, so the left column is much longer than the right. It works but is not elegant.
+
+[consulting/built.open/2] The calculator rows from 600px rely on a fieldset being a grid container. Browsers older than roughly Chrome 86 or Safari 16 would stack the two fields of a group with no gap between them; still usable, not tested. Everything was tested in headless Chromium only.
+
+[consulting/built.open/3] On phones 'Custom automation' and its price '$1,500 per workflow' do not fit one line: in the price list the price drops under the name, and in the figure header the tag drops under the title. This is the documented price-list behaviour, but it is the one row that looks different.
+
+[consulting/built.open/4] The four automation rows share one layout (name and price, mock, legend). The mocks give the variety; a reviewer who wants structural variety between the rows will not find it.
+
+[consulting/built.open/5] On desktop the sticky 'Four steps, no surprises' heading has an empty left column beside a long right column.
+
+[consulting/built.open/6] The illustrative mock wording listed under decisions (dates, the fourth enquiry row, the three notifications) is new illustration text, not on the live page. It follows the honest-mock rules, but the owner may want to read it.
+
+[consulting/built.open/7] Two WARNs remain from the checker, both expected (theme snippet, page stylesheet link).
+
+[consulting/fixed.open/0] At 360px the page is 14,556px; the 14,000 target is met at 390px only (13,984, with 16px to spare). Any added line on a phone will break it.
+
+[consulting/fixed.open/1] Monthly plans are stacked from 980 to about 1228px (iPad landscape, small laptops) and on phones; side by side elsewhere. Reviewer minor accepted rather than fixed; see decisions.
+
+[consulting/fixed.open/2] From 1100 to about 1150px the ledger's row names take three lines (two from about 1180px). Sums are always on one line and the bars are 117px or wider.
+
+[consulting/fixed.open/3] The 'Four steps' sub-heading exists only from 980px (wide-only on text). Deliberate, but it bends a handbook rule and the owner or integrator may prefer otherwise.
+
+[consulting/fixed.open/4] The bundle sentence is still the slogan alone and the panel has no eyebrow; the contents are in the receipt directly under it on phones and beside it on desktop. A reviewer who wants the contents in the sentence will not find them.
+
+[consulting/fixed.open/5] The lede no longer says 'like everything else we do' (microcopy, dropped for the first phone screen).
+
+[consulting/fixed.open/6] The header button wraps at 1280px on this page too, and at 150% text size the header and the h1 underline word still overflow a 390px screen. Both are shared; see sharedIssues.
+
+[consulting/fixed.open/7] With scripts off at 980px and wider, the note above the worksheet has an 80px gap under it.
+
+[consulting/fixed.open/8] The calculator rows from 600px rely on a fieldset being a grid container, and the tablet figure layout on fit-content(); older browsers would fall back to stacked fields and a stacked figure. Everything was tested in headless Chromium only.
+
+[consulting/fixed.open/9] Mock wording that is not on the live page remains as the builder left it (dates in the enquiry list, the fourth enquiry row, the three notifications), plus my 'Example: one quote request' label and 'In this example, a quote request comes in.' The owner may want to read them.
+
+[consulting/fixed.open/10] The orchestrator made a work-in-progress commit while I was working, so git shows only my last edits as uncommitted; the files on disk are the final state.
+
+[workprocess/built.open/0] Tested in headless Chromium only. The tablet two-column write-up on /work/ (760 to 979px) uses CSS columns with break-before: column, and both pages use text-wrap: pretty and balance; these should degrade gracefully but were not seen in Safari or Firefox.
+
+[workprocess/built.open/1] process.css is at 2,936 of 3,000 bytes, so there is no headroom for further page-only rules.
+
+[workprocess/built.open/2] The process page lists terms for Starter, Business and Commerce only, because the live page never mentions the One-page package there. The owner may want its terms added (they are on the pricing page).
+
+[workprocess/built.open/3] Below the tested range (320 to 340px wide) the two 'Up to three design rounds' rows wrap to two lines. From 360px every term is on one line.
+
+[workprocess/built.open/4] The 'what it costs' link in the process lede is padded to a 44px touch target, so its keyboard focus ring is 46px tall and overlaps the line above on a phone while focused.
+
+[workprocess/built.open/5] The /work/ h1 and eyebrow wording changed ('Three recent projects', 'Our work'). The page title and meta are untouched, but the owner may want to confirm the new headline.
+
+[workprocess/built.open/6] On /work/ the figure '8 categories' is now printed only as 'eight categories', and 'Stripe + Plaid integrated' only as two separate ticks. The facts are kept; the exact strings are not.
+
+[workprocess/built.open/7] The stub notches on the job ticket are painted with --paper, so the ticket must stay on a plain paper band; on a sand band they would show as the wrong colour.
+
+[workprocess/fixed.open/0] Owner to confirm the reworded Corbel Books labels: 'Bookkeeping software · Product site & app screens', 'Card payments (Stripe)', 'Bank sync (Plaid)'.
+
+[workprocess/fixed.open/1] Owner to confirm the /work/ headline and eyebrow ('Three recent projects', 'Our work'), the stamp 'No surprises', and step 03's 'private preview link (a staging link)'.
+
+[workprocess/fixed.open/2] Owner decision: the process page lists terms for Starter, Business and Commerce only, as the live page does. Rows ready to add if wanted: 'One-page ... One revision round' and 'One-page ... 14 days' (both published on /pricing/); the phone page would be about 3,373px.
+
+[workprocess/fixed.open/3] Not seen in Safari. Worth a real-device look: /work/ at 760 to 979px (CSS columns with break-before: column; if the label does not start the second column the layout still reads, in balanced columns), the /process/ ticket (display: contents, radial-gradient notches, the rotate property), text-wrap pretty and balance.
+
+[workprocess/fixed.open/4] The stamp's landing on phones depends on scroll speed: it starts half a second after the stamp enters the screen. A very slow scroll can still land it partly behind the phone bar. The real fix is the reveal margin in main.js.
+
+[workprocess/fixed.open/5] process.css is at 2,967 of 3,000 bytes: no room for further page-only rules.
+
+[workprocess/fixed.open/6] At 320px (below the tested range) the two 'Up to three design rounds' rows wrap to two lines, and the pages are 4,539px and 3,561px tall. From 360px every term is on one line.
+
+[workprocess/fixed.open/7] The three project pictures are not real page captures (see sharedIssues). This is the biggest remaining weakness of /work/.
+
+[workprocess/fixed.open/8] The stub notches on the job ticket are painted with --paper, so the ticket must stay on a plain paper band.
+
+[workprocess/fixed.open/9] The header's 'Book a free call' button wraps to two lines at 1280 to 1299px on both pages (chrome, not mine to fix).
+
+[home/built.open/0] At 360px wide the page is 12,585px; the 12,500 target is met at 390 (12,347), 375 (12,454) and 430 (12,195).
+
+[home/built.open/1] On laptop screens shorter than about 780px (for example 1366x768) the price strip is at or just below the fold; headline and buttons are visible. Fixing it would need a smaller headline or a shorter lede.
+
+[home/built.open/2] On a phone the shop scene and phone mock are just below the first screen. The first screen carries the city, phone number, headline, lede, both buttons and prices, so the picture is the first scroll.
+
+[home/built.open/3] Tested in headless Chromium only. text-wrap: balance and pretty fall back to ordinary wrapping in browsers without them, so a few one-word last lines may reappear there; nothing breaks.
+
+[home/built.open/4] On phones the seven town labels still break three, three and one ('Baker' alone); from 760px they break four and three.
+
+[home/built.open/5] Two things on the page come from the consulting page rather than the live home page: 'on accounts in your name' and the per-automation setup prices. They are true and the figures were already on the page, but the owner should know they are now stated here.
+
+[home/built.open/6] The home-only header workaround should be promoted or removed by the integrator; left as is, home differs slightly from every other page.
+
+[home/built.open/7] The keyboard-focus snapshots I took at 390px showed every stop clear of the phone bar except 'All services', which my own script reported as under it while focus was still scrolling; the site's behaviour test (which checks this for other pages) passes, but I did not re-measure that one stop after scrolling settled.
+
+[home/fixed.open/0] The header button wraps onto two lines on home at 1100-1140px and 1280-1290px, including the 1280x800 acceptance size, until the shared header fix lands. This follows the reviewers' instruction to delete the home-only override.
+
+[home/fixed.open/1] 'See how it works' is not on the page under 600px. Phone visitors reach the automation story by scrolling (hero art, facts, services, then the story).
+
+[home/fixed.open/2] The services section is no longer a three-column table at any width; it is two-column rows. If the architect wants the table back from 1100px, it will not line up with the section intro above it.
+
+[home/fixed.open/3] At 360px wide the lede runs four lines and the price strip ends at 659px; the 650px target was set at 390px, where it ends at 648px with 2px to spare.
+
+[home/fixed.open/4] On wide but short desktop windows (1420px and wider, under about 730px tall) the price strip ends at 730px, at or just under the fold. Headline and buttons are always visible.
+
+[home/fixed.open/5] The closing band's appointment card is 259px wide from 980px (shared fault, same on /pricing/); not worked around on home.
+
+[home/fixed.open/6] With text enlarged to 110% or more on a phone, the hero price strip sticks out of its column (shared component).
+
+[home/fixed.open/7] On phones the seven town labels break three, three and one ('Baker' alone); from 760px they break four and three. Left as a wrapped label row.
+
+[home/fixed.open/8] The business card's subtitle wraps with a hanging dot at 430px and narrower (shared component).
+
+[home/fixed.open/9] On a tall tablet where part of the hero phone is on the first screen at load, the phone arrives through main.js (the shared reveal), with the shared four-second fallback if the script never runs. From 980px it does not depend on the script.
+
+[home/fixed.open/10] Three things on the page come from the live consulting page rather than the live home page: 'on accounts in your name', the per-automation setup prices in the story, and 'Google' and 'Facebook' as sources in the example enquiry list. All are on the live site; the owner should know they are now stated here.
+
+[home/fixed.open/11] Tested in headless Chromium only. text-wrap balance and pretty fall back to ordinary wrapping where unsupported, so a few one-word last lines may reappear there; nothing breaks.
+
+[services/built.open/0] Four of the nine services (E-commerce stores, Brand & identity, SEO & performance, Google profile & reviews) are closed rows at every width, desktop included. A menu link or a deep link from another page lands on the closed row, marked with a brick underline, and needs a second tap. A link cannot open a details element without script. The all-open alternative is in scratch: 6,240px at 390px, 4,716px at 1440px.
+
+[services/built.open/1] No illustration under 760px; the phone mock is left out on phones to hold the height.
+
+[services/built.open/2] At 360px the page is 5,611px, 2% over the target.
+
+[services/built.open/3] Between 1100px and 1259px two or three rows of the two-column menu put their price on a second line. All nine are single-line from 1260px.
+
+[services/built.open/4] The page stylesheet has only 46 bytes of headroom.
+
+[services/built.open/5] Tested in headless Chromium only. Not checked in Safari or with VoiceOver: the summary as a flex container with a heading inside it, and the middot separators' empty alt text (older browsers fall back to a plain dot).
+
+[services/fixed.open/0] The page is 5,675px at 390px and 5,742px at 360px, about 3% and 4% over the 5,500 target. It is under 5,600 from 414px. The phone illustration costs about 360px; closing Redesigns & rescues paid back about 190px. Closing Growth consulting by default would bring 390px to about 5,360px.
+
+[services/fixed.open/1] Menu links opening their rows is verified in Chromium 153 only. In a browser that does not open a closed details from a link, five of the nine menu links (and deep links to those rows) do nothing until the main.js fallback listed first under shared issues is added. Not tested in Safari or Firefox.
+
+[services/fixed.open/2] Five of the six small services are closed rows by default at every width, desktop included. On desktop the four closed rows beside the Website lead repeat the menu above them until one is opened.
+
+[services/fixed.open/3] At 1280x800 the first screen shows the board's title and two rows; at 1366x768 less. The whole board is in the first screen only from about 1920x1080. Fixing that means changing the commercial page head, which I left alone.
+
+[services/fixed.open/4] The header button wraps to two lines at 1100-1147px and 1280-1299px on this page, as on every page. Shared, not patched.
+
+[services/fixed.open/5] Below 760px the phone mock is squat (272 by 240px) because the thread is cut to three lines.
+
+[services/fixed.open/6] Not checked with VoiceOver: whether the h3 inside each summary is still announced as a heading in Safari. Chromium exposes all 15 headings.
+
+[about404/built.open/0] /about/ is 5,136px at 390px against a target of about 4,300. Measured levers if it must come down: hide the card below 980px (add 'wide-only' to the aside; about 358px, but the phone page loses its only object); drop the head button on phones (88px); set the opening paragraph at body size (about 66px); drop 'Work you can visit and judge for yourself.' (39px). I did not take them because each makes the phone page plainer and even together they do not reach 4,300.
+
+[about404/built.open/1] Tested in headless Chromium only; no WebKit or Firefox was available. Subgrid and text-wrap:pretty degrade to plain layout where unsupported, but I have not seen the pages in Safari.
+
+[about404/built.open/2] At 360 to 389px the business card's tagline still wraps to two lines (see sharedIssues).
+
+[about404/built.open/3] So that the two lists start on one line, there is a one-line gap under 'Work you can visit and judge for yourself.' at 1440px and a two-line gap around 800 to 1100px. Without subgrid support the lists start at slightly different heights instead.
+
+[about404/built.open/4] On phones the 404 scene is 184px wide, so its PAGE NOT FOUND sign is too small to read; the big 404 and the h1 say the same. Making it readable (about 320px) pushes the buttons off the first screen.
+
+[about404/built.open/5] At exactly 1280px the shared header's button wraps to two lines on these pages as on every other (chrome, not mine to fix).
+
+[about404/built.open/6] The sand band meets the blue closing band directly, because How I work is now the last section; the scalloped edge sits on sand.
+
+[about404/fixed.open/0] /about/ is 5,158px at 390px against a target of about 4,300 (5,401px at 360). Both reviewers said to accept about 5,100 to 5,200. The remaining levers each make the phone page plainer: hide the card below 980px (about 358px), drop the head button (88px), towns as a wrapping row (48px), drop 'Work you can visit and judge for yourself.' (40px). The shared phone footer is 1,138px of it.
+
+[about404/fixed.open/1] Tablet page head (600 to 979px) is unchanged: the card sits left-aligned under the button with empty paper to its right. The critic marked this optional.
+
+[about404/fixed.open/2] On phones the tilted card's corners sit about 6px outside the text column (14px from the screen edge). Left as the look of a tilted object.
+
+[about404/fixed.open/3] The card tagline still wraps to two lines on phones narrower than 356px (for example 320px).
+
+[about404/fixed.open/4] From 980 to about 1100px the opening statement runs ten lines of roughly 25 to 28 characters. The engineer wanted a wider measure there; I kept the critic's larger size.
+
+[about404/fixed.open/5] From 980 to about 1040px there is one empty line (27px) under 'Work you can visit and judge for yourself.' so that both lists start level; from about 1040px there is none.
+
+[about404/fixed.open/6] about.css is 3,993 of 4,000 bytes and notfound.css 1,989 of 2,000: there is no room for more page rules.
+
+[about404/fixed.open/7] Raw values left in the page sheets: unitless line-heights (1.36, 1.3, 1.45, 1.6, .9), the brush offsets in em, rotate(-4deg) in the card keyframe, -.04em on the 404 figure, the 10.4vw headline cap and the 25rem container threshold. None breaks a lint rule.
+
+[about404/fixed.open/8] Tested in headless Chromium only; neither page has been seen in Safari or Firefox.
+
+[about404/fixed.open/9] On phones the 404 scene is 184px wide, so its PAGE NOT FOUND sign is too small to read; the big 404 and the h1 say the same. Unchanged from the builder's version.
+
+[about404/fixed.open/10] With the text-spacing overrides at 320px the page scrolls sideways by 23px. That comes from the shared header, not from page content (see sharedIssues).
+

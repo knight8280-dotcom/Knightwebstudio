@@ -1,0 +1,36 @@
+/* Services page only. Every rule is scoped with [data-page="services"].
+   The page is shared parts plus one thing of its own: the service menu. */
+
+/* The service menu: the page's one blue panel. Nine rows, each a link to its entry below. */
+[data-page="services"] .menu .board-head { margin-bottom: var(--s-5); }
+[data-page="services"] .menu-cols { display: grid; gap: var(--s-5) var(--gap-lg); }
+[data-page="services"] .menu ul { list-style: none; border-top: var(--rule) solid var(--line-2); }
+[data-page="services"] .menu .eyebrow { margin-bottom: var(--s-3); }
+[data-page="services"] .menu ul + .eyebrow { margin-top: var(--s-5); }
+[data-page="services"] .menu li { border-bottom: var(--seam); }
+[data-page="services"] .menu a { display: flex; flex-wrap: wrap; align-items: baseline; align-content: center; gap: 0 var(--s-3); min-height: var(--tap); padding: var(--s-2) var(--s-1); border-radius: var(--r-sm); color: var(--ink); line-height: 1.35; text-decoration: none; }
+[data-page="services"] .menu-name { font-weight: 700; text-decoration: underline var(--line-2); text-underline-offset: .25em; }
+[data-page="services"] .menu-price { margin-left: auto; color: var(--brick); font-size: var(--fs-h4); }
+[data-page="services"] .menu-price, [data-page="services"] .faq .pl-price { text-align: right; }
+/* The two longest prices stay on one line on a small phone */
+@media (max-width: 379.98px) {
+  [data-page="services"] .menu-price { font-size: var(--fs-body); }
+  [data-page="services"] .faq .pl-price { font-size: var(--fs-h4); }
+}
+@media (min-width: 760px) { [data-page="services"] .menu-cols { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+[data-page="services"] .menu a:active { background: var(--card); }
+@media (hover: hover) { [data-page="services"] .menu a:hover { background: var(--card); color: var(--ink); } }
+
+/* A lead service keeps to the reading measure. A ruled entry's heading is its dot-leader row. */
+[data-page="services"] .lead { --stack-gap: var(--s-3); max-width: var(--measure); }
+@media (min-width: 760px) { [data-page="services"] .lead { --stack-gap: var(--s-4); } }
+@media (max-width: 979.98px) { [data-page="services"] #care { gap: var(--gap); } }
+[data-page="services"] .faq summary { padding-block: var(--s-3); }
+[data-page="services"] .faq summary h2 { flex: 1; min-width: 0; color: inherit; font-size: inherit; line-height: inherit; }
+/* The row a menu link has just jumped to */
+[data-page="services"] .faq-item:target .pl-name { text-decoration: underline var(--bold) var(--brick); text-underline-offset: .3em; }
+
+/* The one illustration stands in its own column: the phone above its caption */
+[data-page="services"] .fig { --phone-w: 17rem; grid-template-columns: minmax(0, 1fr); gap: var(--s-5); justify-items: center; }
+[data-page="services"] .fig-credit { margin: 0; text-align: center; text-wrap: balance; }
+

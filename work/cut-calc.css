@@ -1,0 +1,18 @@
+/* Calculator */
+.calc, .calc-inputs { display: grid; gap: var(--s-5) var(--gap); align-items: start; }
+.calc-group legend { width: 100%; margin-bottom: var(--s-4); padding: var(--s-3) 0 0; border-top: var(--frame); color: var(--ink-3); }
+.calc-group .field { margin-bottom: var(--s-4); }
+.calc .receipt { justify-self: center; width: 100%; }
+/* Number field with a unit */
+.field-unit { display: flex; }
+.field-unit span { flex: none; display: grid; place-items: center; min-width: var(--tap); border: var(--rule) solid var(--ctl); background: var(--well); color: var(--ink); font-weight: 700; }
+.field-unit > :first-child { border-radius: var(--r-sm) 0 0 var(--r-sm); }
+.field-unit > :last-child { border-radius: 0 var(--r-sm) var(--r-sm) 0; }
+.field-unit span:first-child { border-right: 0; }
+.field-unit span:last-child { border-left: 0; }
+@media (min-width: 600px) { .calc-inputs { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 980px) {
+  .calc { grid-template-columns: minmax(0, 1fr) minmax(0, var(--maxw-card)); gap: var(--gap-lg); }
+  .calc .receipt { position: sticky; top: calc(var(--header-h) + var(--s-5)); }
+}
+

@@ -1,0 +1,90 @@
+BTN-2LINE | consulting | Check my real numbers / in a Growth Audit  @ 360,390,430,980,1100,1280,1440,1920
+BTN-2LINE | home | Full pricing, consulting / and care plans  @ 360,390
+HEAD-ORPHAN | consulting | Lead follow-up / system  @ 360,1100
+HEAD-ORPHAN | pricing | Custom automation / workflow  @ 360,390,760,820
+NUM-UNIT-SPLIT | consulting | $500/mo for 3 / months.  @ 430
+NUM-UNIT-SPLIT | consulting | every review within 2 / business days  @ 760,1280
+NUM-UNIT-SPLIT | consulting | itself in about 2 / weeks.  @ 360
+NUM-UNIT-SPLIT | consulting | or change with 10 / days' written notice,  @ 390
+NUM-UNIT-SPLIT | consulting | plain English, within 2 / business days.  @ 360
+NUM-UNIT-SPLIT | consulting | project booked within 30 / days  @ 430
+NUM-UNIT-SPLIT | consulting | recorded walkthrough and 30 / days of fixes.  @ 390
+NUM-UNIT-SPLIT | consulting | taking 11 to 16 / hours of their  @ 760,820
+NUM-UNIT-SPLIT | home | up to about 4 / hours a week  @ 360
+NUM-UNIT-SPLIT | pricing | Changes made within 2 / business days, up  @ 760
+NUM-UNIT-SPLIT | pricing | Changes made within 4 / business days, up  @ 760
+NUM-UNIT-SPLIT | pricing | a month for 3 / months).  @ 360
+NUM-UNIT-SPLIT | pricing | and up to 5 / hours of hands-on  @ 390,430,820
+NUM-UNIT-SPLIT | pricing | days, up to 2 / requests a month  @ 360,390
+NUM-UNIT-SPLIT | pricing | days, up to 5 / requests a month  @ 360,390
+NUM-UNIT-SPLIT | pricing | deposit (on Starter, $1,000 / down, then about  @ 1100
+NUM-UNIT-SPLIT | pricing | or change with 10 / days' written notice  @ 390,760,1280,1440,1920
+NUM-UNIT-SPLIT | services | example that's about 4 / hours a week  @ 390
+ORPHAN | consulting | … $25,600 a year, from about 5.3 extra jobs a / month  @ 390
+ORPHAN | consulting | … $500/mo for 3 / months.  @ 430
+ORPHAN | consulting | … An enquiry comes in from your website, Google, Facebook or a missed / call.  @ 600,980
+ORPHAN | consulting | … Business Saturday UK, 1,000 owners, 11 hours a / week.  @ 390,1100
+ORPHAN | consulting | … Copying enquiries into a list or / notebook  @ 360,390,760,820,1280,1440,1920
+ORPHAN | consulting | … Custom automation, $1,500 per workflow. An illustration, not a real / screen.  @ 600,980
+ORPHAN | consulting | … Deposits can be taken at booking, if you want / them.  @ 820
+ORPHAN | consulting | … Email support, replies within 1 business / day  @ 360,760,1280,1440,1920
+ORPHAN | consulting | … Express and Small Business Saturday UK, 1,000 owners, 11 hours a / week.  @ 980
+ORPHAN | consulting | … Google Business Profile managed: 2 posts a month and new / photos  @ 600,980
+ORPHAN | consulting | … Lead follow-up system, $1,500 to set up. An illustration, not a real / list.  @ 1440,1920
+ORPHAN | consulting | … Monthly report: calls, enquiries, reviews and Google / views  @ 430
+ORPHAN | consulting | … Online booking & reminders, $750 to set up. An illustration, not a real / booking.  @ 600,980
+ORPHAN | consulting | … Replies to every review within 2 business / days  @ 360,820,1440,1920
+ORPHAN | consulting | … Saves: the evenings spent at the desk on email and / paperwork.  @ 390,430
+ORPHAN | consulting | … The $350 comes off any project booked within 30 / days  @ 430
+ORPHAN | consulting | … The fastest way to get found, get chosen and stop missing / calls.  @ 600
+ORPHAN | consulting | … Time and revenue estimate from your / numbers  @ 360
+ORPHAN | consulting | … You call back when you're free, already knowing what they / need.  @ 1440,1920
+ORPHAN | consulting | … Your automations monitored and fixed when something / breaks  @ 980
+ORPHAN | consulting | … a reminder the day before, by text and / email.  @ 1100
+ORPHAN | consulting | … and texting fees are paid to the provider and are / extra.  @ 600,760
+ORPHAN | consulting | … automations, website changes, email / campaigns  @ 390
+ORPHAN | consulting | … can be taken at booking, if you want / them.  @ 1100
+ORPHAN | consulting | … into a list or / notebook  @ 1100
+ORPHAN | consulting | … is drafted for you, and you approve it before it goes / out.  @ 430
+ORPHAN | consulting | … lands on your phone with their number / saved.  @ 360,760
+ORPHAN | consulting | … new automations, website changes, email / campaigns  @ 360,820,1440,1920
+ORPHAN | consulting | … on the same kind of automation we set up for / clients.  @ 390
+ORPHAN | consulting | … otherwise try the next company on / Google.  @ 1100
+ORPHAN | consulting | … reminder the day before, by text and / email.  @ 760
+ORPHAN | consulting | … request with a direct link to your Google / page.  @ 360,760
+ORPHAN | consulting | … setup would pay for itself in about 2 / weeks.  @ 360
+ORPHAN | consulting | … the reminder, and your calendar updates / itself.  @ 360,760
+ORPHAN | consulting | … website, Google, Facebook or a missed / call.  @ 1100
+ORPHAN | consulting | … works with a business line you keep, and an after-hours message is set up / too.  @ 600
+ORPHAN | home | … What can we help / with?  @ 390,430,600,760,820,980
+ORPHAN | home | … [your business]. What can we help / with?  @ 360
+ORPHAN | pricing | … 1 small change a month, made within 5 business / days  @ 360,390
+ORPHAN | pricing | … 60 minutes on one question, with written notes / afterwards.  @ 360,390,430,760,820
+ORPHAN | pricing | … Changes made within 2 business days, up to 5 requests a / month  @ 430
+ORPHAN | pricing | … Changes made within 4 business days, up to 2 requests a / month  @ 430
+ORPHAN | pricing | … Copy editing and polish (you supply the / text)  @ 980,980
+ORPHAN | pricing | … Enquiries land in your CRM automatically — no re-typing, nothing / lost.  @ 600,760,820,1100,1280,1440,1920
+ORPHAN | pricing | … Error monitoring, with fixes when something / breaks  @ 980
+ORPHAN | pricing | … Monthly amounts are rounded: about $333 a / month.  @ 360
+ORPHAN | pricing | … Same-day response for urgent issues, unlimited small requests and a direct text / line  @ 600
+ORPHAN | pricing | … Standard is 50% to start and 50% at / launch.  @ 360,390
+ORPHAN | pricing | … You keep your own domain and hosting renewals / current  @ 390,390
+ORPHAN | pricing | … and hosting costs billed at cost on / top)  @ 820,820
+ORPHAN | pricing | … hosting costs billed at cost on / top)  @ 760,760
+ORPHAN | pricing | … looked after (domain and hosting costs billed at cost on / top)  @ 430,430,980,980
+ORPHAN | pricing | … then about $333 a month for 3 / months).  @ 360
+ORPHAN | services | … example that's about 4 hours a week / back.  @ 360
+ORPHAN | services | … patches, so your site never quietly breaks on a Sunday / night.  @ 820
+ORPHAN | services | … portfolios and landing pages that actually / convert.  @ 390
+ORPHAN | services | … sites, service businesses, portfolios and landing pages that actually / convert.  @ 600,760,820,1280,1440,1920
+ORPHAN | services | … someone take a look this / week?  @ 760,820,980,1100,1280,1440,1920
+ORPHAN | services | … typical example that's about 4 hours a week / back.  @ 760
+ORPHAN | start | … Booking and scheduling setup, and CRM or calendar / sync.  @ 980
+ORPHAN | start | … Starter website, Google profile & reviews and missed-call / text-back.  @ 980
+ORPHAN | start | … business, designed to turn visitors into / enquiries.  @ 360,760
+ORPHAN | start | … changes you ask for, so your site never quietly / breaks.  @ 360,390,760,820
+ORPHAN | start | … plan ranked by impact, and a monthly partner if you want / one.  @ 430
+ORPHAN | start | … without losing the search rankings you already / have.  @ 360,760
+ORPHAN | start | … you publish look like it came from one / company.  @ 360,760
+PRICE-WRAP | consulting | $2,133 / /mo  @ 360,390,430,600,760,820,980,1100,1280,1440,1920
+PRICE-WRAP | home | Online booking & / reminders · $750 setup  @ 360

@@ -1,0 +1,762 @@
+[
+ {
+  "p": "/",
+  "w": 375,
+  "h1": "4>4",
+  "h1h": "159>159",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 21
+ },
+ {
+  "p": "/",
+  "w": 390,
+  "h1": "4>4",
+  "h1h": "165>165",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 21
+ },
+ {
+  "p": "/",
+  "w": 430,
+  "h1": "4>4",
+  "h1h": "182>182",
+  "firstMove": 0,
+  "doc": -6,
+  "headsDiff": 0,
+  "nHeads": 21
+ },
+ {
+  "p": "/",
+  "w": 1280,
+  "h1": "8>8",
+  "h1h": "266>266",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 21
+ },
+ {
+  "p": "/services/",
+  "w": 375,
+  "h1": "4>4",
+  "h1h": "159>159",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 12
+ },
+ {
+  "p": "/services/",
+  "w": 390,
+  "h1": "4>4",
+  "h1h": "165>165",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 12
+ },
+ {
+  "p": "/services/",
+  "w": 430,
+  "h1": "4>4",
+  "h1h": "182>182",
+  "firstMove": 0,
+  "doc": -14,
+  "headsDiff": 0,
+  "nHeads": 12
+ },
+ {
+  "p": "/services/",
+  "w": 1280,
+  "h1": "4>4",
+  "h1h": "133>133",
+  "firstMove": 0,
+  "doc": -23,
+  "headsDiff": 0,
+  "nHeads": 12
+ },
+ {
+  "p": "/consulting/",
+  "w": 375,
+  "h1": "2>2",
+  "h1h": "80>80",
+  "firstMove": 0,
+  "doc": 23,
+  "headsDiff": 0,
+  "nHeads": 16
+ },
+ {
+  "p": "/consulting/",
+  "w": 390,
+  "h1": "2>2",
+  "h1h": "83>83",
+  "firstMove": 0,
+  "doc": 20,
+  "headsDiff": 0,
+  "nHeads": 16
+ },
+ {
+  "p": "/consulting/",
+  "w": 430,
+  "h1": "2>2",
+  "h1h": "91>91",
+  "firstMove": 27,
+  "doc": 26,
+  "headsDiff": 0,
+  "nHeads": 16
+ },
+ {
+  "p": "/consulting/",
+  "w": 1280,
+  "h1": "4>4",
+  "h1h": "133>133",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 16
+ },
+ {
+  "p": "/work/",
+  "w": 375,
+  "h1": "2>2",
+  "h1h": "80>80",
+  "firstMove": 0,
+  "doc": 22,
+  "headsDiff": 0,
+  "nHeads": 5
+ },
+ {
+  "p": "/work/",
+  "w": 390,
+  "h1": "2>2",
+  "h1h": "83>83",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 5
+ },
+ {
+  "p": "/work/",
+  "w": 430,
+  "h1": "2>2",
+  "h1h": "91>91",
+  "firstMove": 0,
+  "doc": -18,
+  "headsDiff": 0,
+  "nHeads": 5
+ },
+ {
+  "p": "/work/",
+  "w": 1280,
+  "h1": "1>1",
+  "h1h": "67>67",
+  "firstMove": 0,
+  "doc": -18,
+  "headsDiff": 0,
+  "nHeads": 5
+ },
+ {
+  "p": "/process/",
+  "w": 375,
+  "h1": "2>2",
+  "h1h": "80>80",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 6
+ },
+ {
+  "p": "/process/",
+  "w": 390,
+  "h1": "2>2",
+  "h1h": "83>83",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 6
+ },
+ {
+  "p": "/process/",
+  "w": 430,
+  "h1": "2>2",
+  "h1h": "91>91",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 6
+ },
+ {
+  "p": "/process/",
+  "w": 1280,
+  "h1": "4>4",
+  "h1h": "133>133",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 6
+ },
+ {
+  "p": "/pricing/",
+  "w": 375,
+  "h1": "3>3",
+  "h1h": "119>119",
+  "firstMove": 0,
+  "doc": 49,
+  "headsDiff": 0,
+  "nHeads": 7
+ },
+ {
+  "p": "/pricing/",
+  "w": 390,
+  "h1": "3>3",
+  "h1h": "124>124",
+  "firstMove": 0,
+  "doc": -42,
+  "headsDiff": 0,
+  "nHeads": 7
+ },
+ {
+  "p": "/pricing/",
+  "w": 430,
+  "h1": "3>3",
+  "h1h": "137>137",
+  "firstMove": 0,
+  "doc": 42,
+  "headsDiff": 0,
+  "nHeads": 7
+ },
+ {
+  "p": "/pricing/",
+  "w": 1280,
+  "h1": "4>4",
+  "h1h": "133>133",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 7
+ },
+ {
+  "p": "/faq/",
+  "w": 375,
+  "h1": "2>2",
+  "h1h": "80>80",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 6
+ },
+ {
+  "p": "/faq/",
+  "w": 390,
+  "h1": "2>2",
+  "h1h": "83>83",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 6
+ },
+ {
+  "p": "/faq/",
+  "w": 430,
+  "h1": "2>2",
+  "h1h": "91>91",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 6
+ },
+ {
+  "p": "/faq/",
+  "w": 1280,
+  "h1": "1>1",
+  "h1h": "67>67",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 6
+ },
+ {
+  "p": "/contact/",
+  "w": 375,
+  "h1": "2>2",
+  "h1h": "80>80",
+  "firstMove": 0,
+  "doc": -24,
+  "headsDiff": 0,
+  "nHeads": 3
+ },
+ {
+  "p": "/contact/",
+  "w": 390,
+  "h1": "2>2",
+  "h1h": "83>83",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 3
+ },
+ {
+  "p": "/contact/",
+  "w": 430,
+  "h1": "2>2",
+  "h1h": "91>91",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 3
+ },
+ {
+  "p": "/contact/",
+  "w": 1280,
+  "h1": "4>4",
+  "h1h": "133>133",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 3
+ },
+ {
+  "p": "/about/",
+  "w": 375,
+  "h1": "3>3",
+  "h1h": "117>117",
+  "firstMove": 0,
+  "doc": 27,
+  "headsDiff": 0,
+  "nHeads": 11
+ },
+ {
+  "p": "/about/",
+  "w": 390,
+  "h1": "3>3",
+  "h1h": "122>122",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 11
+ },
+ {
+  "p": "/about/",
+  "w": 430,
+  "h1": "3>3",
+  "h1h": "134>134",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 11
+ },
+ {
+  "p": "/about/",
+  "w": 1280,
+  "h1": "6>6",
+  "h1h": "200>200",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 11
+ },
+ {
+  "p": "/start/",
+  "w": 375,
+  "h1": "6>6",
+  "h1h": "106>106",
+  "firstMove": 0,
+  "doc": -23,
+  "headsDiff": 0,
+  "nHeads": 15
+ },
+ {
+  "p": "/start/",
+  "w": 390,
+  "h1": "6>6",
+  "h1h": "110>110",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 15
+ },
+ {
+  "p": "/start/",
+  "w": 430,
+  "h1": "6>6",
+  "h1h": "121>121",
+  "firstMove": 0,
+  "doc": 22,
+  "headsDiff": 0,
+  "nHeads": 15
+ },
+ {
+  "p": "/start/",
+  "w": 1280,
+  "h1": "6>6",
+  "h1h": "200>200",
+  "firstMove": 0,
+  "doc": 23,
+  "headsDiff": 0,
+  "nHeads": 15
+ },
+ {
+  "p": "/web-design-baton-rouge/",
+  "w": 375,
+  "h1": "6>6",
+  "h1h": "128>128",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 11
+ },
+ {
+  "p": "/web-design-baton-rouge/",
+  "w": 390,
+  "h1": "6>6",
+  "h1h": "131>131",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 11
+ },
+ {
+  "p": "/web-design-baton-rouge/",
+  "w": 430,
+  "h1": "6>6",
+  "h1h": "140>140",
+  "firstMove": 0,
+  "doc": 23,
+  "headsDiff": 0,
+  "nHeads": 11
+ },
+ {
+  "p": "/web-design-baton-rouge/",
+  "w": 1280,
+  "h1": "6>6",
+  "h1h": "250>250",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 11
+ },
+ {
+  "p": "/web-design-denham-springs/",
+  "w": 375,
+  "h1": "6>6",
+  "h1h": "111>111",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 11
+ },
+ {
+  "p": "/web-design-denham-springs/",
+  "w": 390,
+  "h1": "6>6",
+  "h1h": "114>114",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 11
+ },
+ {
+  "p": "/web-design-denham-springs/",
+  "w": 430,
+  "h1": "6>6",
+  "h1h": "121>121",
+  "firstMove": 0,
+  "doc": 23,
+  "headsDiff": 0,
+  "nHeads": 11
+ },
+ {
+  "p": "/web-design-denham-springs/",
+  "w": 1280,
+  "h1": "6>6",
+  "h1h": "250>250",
+  "firstMove": 0,
+  "doc": -27,
+  "headsDiff": 0,
+  "nHeads": 11
+ },
+ {
+  "p": "/web-design-gonzales/",
+  "w": 375,
+  "h1": "6>6",
+  "h1h": "156>156",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 11
+ },
+ {
+  "p": "/web-design-gonzales/",
+  "w": 390,
+  "h1": "6>6",
+  "h1h": "160>160",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 11
+ },
+ {
+  "p": "/web-design-gonzales/",
+  "w": 430,
+  "h1": "6>6",
+  "h1h": "169>169",
+  "firstMove": 0,
+  "doc": 23,
+  "headsDiff": 0,
+  "nHeads": 11
+ },
+ {
+  "p": "/web-design-gonzales/",
+  "w": 1280,
+  "h1": "6>6",
+  "h1h": "250>250",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 11
+ },
+ {
+  "p": "/web-design-prairieville/",
+  "w": 375,
+  "h1": "6>6",
+  "h1h": "138>138",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 11
+ },
+ {
+  "p": "/web-design-prairieville/",
+  "w": 390,
+  "h1": "6>6",
+  "h1h": "142>142",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 11
+ },
+ {
+  "p": "/web-design-prairieville/",
+  "w": 430,
+  "h1": "6>6",
+  "h1h": "152>152",
+  "firstMove": 0,
+  "doc": -54,
+  "headsDiff": 0,
+  "nHeads": 11
+ },
+ {
+  "p": "/web-design-prairieville/",
+  "w": 1280,
+  "h1": "6>6",
+  "h1h": "250>250",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 11
+ },
+ {
+  "p": "/privacy/",
+  "w": 375,
+  "h1": "3>3",
+  "h1h": "119>119",
+  "firstMove": 0,
+  "doc": -27,
+  "headsDiff": 0,
+  "nHeads": 10
+ },
+ {
+  "p": "/privacy/",
+  "w": 390,
+  "h1": "3>3",
+  "h1h": "124>124",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 10
+ },
+ {
+  "p": "/privacy/",
+  "w": 430,
+  "h1": "3>3",
+  "h1h": "137>137",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 10
+ },
+ {
+  "p": "/privacy/",
+  "w": 1280,
+  "h1": "4>4",
+  "h1h": "133>133",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 10
+ },
+ {
+  "p": "/terms/",
+  "w": 375,
+  "h1": "2>2",
+  "h1h": "80>80",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 11
+ },
+ {
+  "p": "/terms/",
+  "w": 390,
+  "h1": "2>2",
+  "h1h": "83>83",
+  "firstMove": 0,
+  "doc": -27,
+  "headsDiff": 0,
+  "nHeads": 11
+ },
+ {
+  "p": "/terms/",
+  "w": 430,
+  "h1": "2>2",
+  "h1h": "91>91",
+  "firstMove": 0,
+  "doc": -27,
+  "headsDiff": 0,
+  "nHeads": 11
+ },
+ {
+  "p": "/terms/",
+  "w": 1280,
+  "h1": "2>2",
+  "h1h": "133>133",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 11
+ },
+ {
+  "p": "/checkout/",
+  "w": 375,
+  "h1": "1>1",
+  "h1h": "40>40",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 2
+ },
+ {
+  "p": "/checkout/",
+  "w": 390,
+  "h1": "1>1",
+  "h1h": "41>41",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 2
+ },
+ {
+  "p": "/checkout/",
+  "w": 430,
+  "h1": "1>1",
+  "h1h": "46>46",
+  "firstMove": -28,
+  "doc": -28,
+  "headsDiff": 0,
+  "nHeads": 2
+ },
+ {
+  "p": "/checkout/",
+  "w": 1280,
+  "h1": "1>1",
+  "h1h": "67>67",
+  "firstMove": -31,
+  "doc": -31,
+  "headsDiff": 0,
+  "nHeads": 2
+ },
+ {
+  "p": "/checkout/success/",
+  "w": 375,
+  "h1": "1>1",
+  "h1h": "34>34",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 4
+ },
+ {
+  "p": "/checkout/success/",
+  "w": 390,
+  "h1": "1>1",
+  "h1h": "35>35",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 4
+ },
+ {
+  "p": "/checkout/success/",
+  "w": 430,
+  "h1": "1>1",
+  "h1h": "39>39",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 4
+ },
+ {
+  "p": "/checkout/success/",
+  "w": 1280,
+  "h1": "1>1",
+  "h1h": "67>67",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 4
+ },
+ {
+  "p": "/404.html",
+  "w": 375,
+  "h1": "1>1",
+  "h1h": "32>32",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 1
+ },
+ {
+  "p": "/404.html",
+  "w": 390,
+  "h1": "1>1",
+  "h1h": "32>32",
+  "firstMove": 0,
+  "doc": -51,
+  "headsDiff": 0,
+  "nHeads": 1
+ },
+ {
+  "p": "/404.html",
+  "w": 430,
+  "h1": "1>1",
+  "h1h": "34>34",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 1
+ },
+ {
+  "p": "/404.html",
+  "w": 1280,
+  "h1": "1>1",
+  "h1h": "53>53",
+  "firstMove": 0,
+  "doc": 0,
+  "headsDiff": 0,
+  "nHeads": 1
+ }
+]

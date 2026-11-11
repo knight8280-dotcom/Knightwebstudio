@@ -1,0 +1,250 @@
+
+== AX tree #services .kws-arc (98 lines; first 46) ==
+region "Our services and their prices" [roledescription=carousel]
+  list
+    listitem "1 of 9" [level=1 roledescription=slide]
+      heading "Website design & build" [level=2]
+        StaticText "Website design & build"
+      paragraph
+        StaticText "$1,000, $2,000 or $4,000"
+      paragraph
+        StaticText "A custom-designed marketing site, built from scratch and mobile-first."
+      link "See what's included in Website design & build" [focusable=true url=http://localhost:8730/services/#website-design]
+        StaticText "See what's included"
+    listitem "2 of 9" [level=1 roledescription=slide]
+      heading "E-commerce stores" [level=2]
+        StaticText "E-commerce stores"
+      paragraph
+        StaticText "$8,000"
+      paragraph
+        StaticText "Sell online with a checkout people trust: Shopify, or a custom store."
+      link "See what's included in E-commerce stores" [focusable=true url=http://localhost:8730/services/#ecommerce]
+        StaticText "See what's included"
+    listitem "3 of 9" [level=1 roledescription=slide]
+      heading "Redesigns & rescues" [level=2]
+        StaticText "Redesigns & rescues"
+      paragraph
+        StaticText "priced as a new site"
+      paragraph
+        StaticText "Dated, slow or abandoned sites rebuilt without losing your search rankings."
+      link "See what's included in Redesigns & rescues" [focusable=true url=http://localhost:8730/services/#redesigns]
+        StaticText "See what's included"
+    listitem "4 of 9" [level=1 roledescription=slide]
+      heading "Brand & identity" [level=2]
+        StaticText "Brand & identity"
+      paragraph
+        StaticText "$1,500"
+      paragraph
+        StaticText "Logo, colours and type, so everything you publish looks like one company."
+      link "See what's included in Brand & identity" [focusable=true url=http://localhost:8730/services/#brand]
+        StaticText "See what's included"
+    listitem "5 of 9" [level=1 roledescription=slide]
+      heading "SEO & performance" [level=2]
+        StaticText "SEO & performance"
+      paragraph
+        StaticText "in every build"
+      paragraph
+        StaticText "Get found and stay fast, with analytics you can actually read."
+      link "See what's included in SEO & performance" [focusable=true url=http://localhost:8730/services/#seo]
+   ...
+        StaticText "See what's included"
+  group "Choose a service"
+    button "Previous service" [focusable=true]
+      StaticText "‹"
+    button "Website design & build, 1 of 9" [focusable=true]
+    button "E-commerce stores, 2 of 9" [focusable=true]
+    button "Redesigns & rescues, 3 of 9" [focusable=true]
+    button "Brand & identity, 4 of 9" [focusable=true]
+    button "SEO & performance, 5 of 9" [focusable=true]
+    button "Care & maintenance, 6 of 9" [focusable=true]
+    button "Automation, 7 of 9" [focusable=true]
+    button "Google profile & reviews, 8 of 9" [focusable=true]
+    button "Growth consulting, 9 of 9" [focusable=true]
+    button "Next service" [focusable=true]
+      StaticText "›"
+  paragraph [live=polite]
+
+== AX tree #work .kws-spot (44 lines; first 46) ==
+region "Recent projects" [roledescription=carousel]
+  list
+    listitem "1 of 3" [level=1 roledescription=slide]
+      generic
+        image "Smilys Softwash — before and after of a soft-washed roof and house exterior" [url=http://localhost:8730/assets/img/work-smilyssoftwash.jpg]
+      paragraph
+        StaticText "EXTERIOR CLEANING · LOCAL SERVICE & SEO"
+      heading "Smilys Softwash" [level=3]
+        StaticText "Smilys Softwash"
+      paragraph
+        StaticText "Roof and house soft washing across Greater Baton Rouge: a service page per treatment, a before-and-after gallery and online quote requests."
+      link "See the project: Smilys Softwash" [focusable=true url=http://localhost:8730/work/]
+        StaticText "See the project"
+    listitem "2 of 3" [level=1 roledescription=slide]
+      generic
+        image "Risen Health — a vial of BPC-157 beside the tagline "Rise into divine health"" [url=http://localhost:8730/assets/img/work-risenhealthco.jpg]
+      paragraph
+        StaticText "HEALTH & WELLNESS · ONLINE STORE"
+      heading "Risen Health" [level=3]
+        StaticText "Risen Health"
+      paragraph
+        StaticText "An online store for a family-owned peptide supplier: a 36-product catalog across eight categories, with a page for every product."
+      link "See the project: Risen Health" [focusable=true url=http://localhost:8730/work/]
+        StaticText "See the project"
+    listitem "3 of 3" [level=1 roledescription=slide]
+      generic
+        image "Corbel Books homepage — bookkeeping and invoicing for small businesses" [url=http://localhost:8730/assets/img/work-corbelbooks.jpg]
+      paragraph
+        StaticText "FINTECH SAAS · PRODUCT SITE & APP UI"
+      heading "Corbel Books" [level=3]
+        StaticText "Corbel Books"
+      paragraph
+        StaticText "A full product site and dashboard for an invoicing and cash-flow tool, with Stripe card payments and Plaid bank sync."
+      link "See the project: Corbel Books" [focusable=true url=http://localhost:8730/work/]
+        StaticText "See the project"
+  group "Choose a project"
+    button "Previous project" [focusable=true]
+      StaticText "‹"
+    button "Smilys Softwash, 1 of 3" [focusable=true]
+    button "Risen Health, 2 of 3" [focusable=true]
+    button "Corbel Books, 3 of 3" [focusable=true]
+    button "Next project" [focusable=true]
+      StaticText "›"
+  paragraph [live=polite]
+   ...
+        StaticText "FINTECH SAAS · PRODUCT SITE & APP UI"
+      heading "Corbel Books" [level=3]
+        StaticText "Corbel Books"
+      paragraph
+        StaticText "A full product site and dashboard for an invoicing and cash-flow tool, with Stripe card payments and Plaid bank sync."
+      link "See the project: Corbel Books" [focusable=true url=http://localhost:8730/work/]
+        StaticText "See the project"
+  group "Choose a project"
+    button "Previous project" [focusable=true]
+      StaticText "‹"
+    button "Smilys Softwash, 1 of 3" [focusable=true]
+    button "Risen Health, 2 of 3" [focusable=true]
+    button "Corbel Books, 3 of 3" [focusable=true]
+    button "Next project" [focusable=true]
+      StaticText "›"
+  paragraph [live=polite]
+
+== ARIA attributes ==
+[
+ {
+  "root": [
+   "SECTION",
+   null,
+   "carousel",
+   "Our services and their prices"
+  ],
+  "li0": [
+   "class=kws-arc-item is-on",
+   "aria-roledescription=slide",
+   "aria-label=1 of 9"
+  ],
+  "ctl": [
+   "class=kws-arc-ctl",
+   "role=group",
+   "aria-label=Choose a service"
+  ],
+  "dots": "true,0|false,-1|false,-1|false,-1|false,-1|false,-1|false,-1|false,-1|false,-1",
+  "live": [
+   "class=kws-arc-sr",
+   "aria-live=polite"
+  ],
+  "hiddenTiles": true,
+  "imgAlts": []
+ },
+ {
+  "root": [
+   "SECTION",
+   null,
+   "carousel",
+   "spot-title"
+  ],
+  "li0": [
+   "class=kws-spot-item is-on",
+   "aria-roledescription=slide",
+   "aria-label=1 of 3"
+  ],
+  "ctl": [
+   "class=kws-spot-ctl",
+   "role=group",
+   "aria-label=Choose a project"
+  ],
+  "dots": "true,0|false,-1|false,-1",
+  "live": [
+   "class=kws-spot-sr",
+   "aria-live=polite"
+  ],
+  "hiddenTiles": true,
+  "imgAlts": [
+   "Smilys Softwash — before and after of a soft-washed roof and house exterior",
+   "Risen Health — a vial of BPC-157 beside the tagline \"Rise into divine health\"",
+   "Corbel Books homepage — bookkeeping and invoicing for small businesses"
+  ]
+ }
+]
+
+== Tab walk 1280px: 41 stops, 36 inside kit components ==
+                   A "Skip to content" on=null opacityNow=1 opacityAtFocus=1 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=12,12,152,51
+                   A "KnightWebstudio home" on=null opacityNow=1 opacityAtFocus=1 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=48,14,216,44
+                   BUTTON "Pause motion" on=null opacityNow=1 opacityAtFocus=1 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=1049,14,127,44
+                   BUTTON "Switch to dark theme" on=null opacityNow=1 opacityAtFocus=1 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=1188,14,44,44
+  kws-arc          A "See what's included in Website design & build" on=true opacityNow=1 opacityAtFocus=1 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=554,755,173,45
+  kws-arc          A "See what's included in E-commerce stores" on=true opacityNow=1 opacityAtFocus=0 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=554,755,173,45
+  kws-arc          A "See what's included in Redesigns & rescues" on=true opacityNow=1 opacityAtFocus=0 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=554,755,173,45
+  kws-arc          A "See what's included in Brand & identity" on=true opacityNow=1 opacityAtFocus=0 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=554,755,173,45
+  kws-arc          A "See what's included in SEO & performance" on=true opacityNow=1 opacityAtFocus=0 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=554,732,173,45
+  kws-arc          A "See what's included in Care & maintenance" on=true opacityNow=1 opacityAtFocus=0 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=554,732,173,45
+  kws-arc          A "See what's included in Automation" on=true opacityNow=1 opacityAtFocus=0 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=554,755,173,45
+  kws-arc          A "See what's included in Google profile & reviews" on=true opacityNow=1 opacityAtFocus=0 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=554,755,173,45
+  kws-arc          A "See what's included in Growth consulting" on=true opacityNow=1 opacityAtFocus=0 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=554,755,173,45
+  kws-arc          BUTTON "Previous service" on=null opacityNow=1 opacityAtFocus=1 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=486,426,44,44
+  kws-arc          BUTTON "Growth consulting, 9 of 9" on=null opacityNow=1 opacityAtFocus=1 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=724,426,24,44
+  kws-arc          BUTTON "Next service" on=null opacityNow=1 opacityAtFocus=1 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=750,426,44,44
+  kws-spot         A "See the project: Smilys Softwash" on=true opacityNow=1 opacityAtFocus=1 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=569,426,141,45
+  kws-spot         A "See the project: Risen Health" on=true opacityNow=1 opacityAtFocus=0 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=569,426,141,45
+  kws-spot         A "See the project: Corbel Books" on=true opacityNow=1 opacityAtFocus=0 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=569,426,141,45
+  kws-spot         BUTTON "Previous project" on=null opacityNow=1 opacityAtFocus=1 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=558,493,44,44
+  kws-spot         BUTTON "Corbel Books, 3 of 3" on=null opacityNow=1 opacityAtFocus=1 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=652,493,24,44
+  kws-spot         BUTTON "Next project" on=null opacityNow=1 opacityAtFocus=1 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=678,493,44,44
+                   A "See the work in detail" on=null opacityNow=1 opacityAtFocus=1 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=48,593,196,50
+  kws-arc(client)  A "See what's included in Website design & build" on=true opacityNow=1 opacityAtFocus=1 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=551,426,178,45
+  kws-arc(client)  A "See what's included in E-commerce stores" on=true opacityNow=1 opacityAtFocus=0 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=551,403,178,45
+  kws-arc(client)  A "See what's included in Redesigns & rescues" on=true opacityNow=1 opacityAtFocus=0 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=551,426,178,45
+  problems among kit stops after settling: 0 
+  live-region messages caused by Tab alone: []
+  Shift+Tab from Next: BUTTON "Growth consulting, 9 of 9" on=null op=1  <-  BUTTON "Previous service" on=null op=1  <-  A "See what's included in Growth consulting" on=true op=1  <-  A "See what's included in Google profile & reviews" on=true op=1  <-  A "See what's included in Automation" on=true op=1
+  ArrowRight on a link -> focus See what's included in Google profile & reviews on= true  says: [[0,44185,"Google profile & reviews, 8 of 9"]]
+
+== Tab walk 390px: 41 stops, 36 inside kit components ==
+                   A "Skip to content" on=null opacityNow=1 opacityAtFocus=1 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=12,12,152,51
+                   A "KnightWebstudio home" on=null opacityNow=1 opacityAtFocus=1 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=20,10,40,44
+                   BUTTON "Pause motion" on=null opacityNow=1 opacityAtFocus=1 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=187,10,127,44
+                   BUTTON "Switch to dark theme" on=null opacityNow=1 opacityAtFocus=1 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=326,10,44,44
+  kws-arc          A "See what's included in Website design & build" on=true opacityNow=1 opacityAtFocus=1 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=109,708,173,45
+  kws-arc          A "See what's included in E-commerce stores" on=true opacityNow=1 opacityAtFocus=0 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=109,708,173,45
+  kws-arc          A "See what's included in Redesigns & rescues" on=true opacityNow=1 opacityAtFocus=0 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=109,708,173,45
+  kws-arc          A "See what's included in Brand & identity" on=true opacityNow=1 opacityAtFocus=0 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=109,708,173,45
+  kws-arc          A "See what's included in SEO & performance" on=true opacityNow=1 opacityAtFocus=0 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=109,708,173,45
+  kws-arc          A "See what's included in Care & maintenance" on=true opacityNow=1 opacityAtFocus=0 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=109,708,173,45
+  kws-arc          A "See what's included in Automation" on=true opacityNow=1 opacityAtFocus=0 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=109,708,173,45
+  kws-arc          A "See what's included in Google profile & reviews" on=true opacityNow=1 opacityAtFocus=0 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=109,708,173,45
+  kws-arc          A "See what's included in Growth consulting" on=true opacityNow=1 opacityAtFocus=0 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=109,708,173,45
+  kws-arc          BUTTON "Previous service" on=null opacityNow=1 opacityAtFocus=1 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=41,402,44,44
+  kws-arc          BUTTON "Growth consulting, 9 of 9" on=null opacityNow=1 opacityAtFocus=1 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=279,402,24,44
+  kws-arc          BUTTON "Next service" on=null opacityNow=1 opacityAtFocus=1 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=305,402,44,44
+  kws-spot         A "See the project: Smilys Softwash" on=true opacityNow=1 opacityAtFocus=1 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=124,402,141,45
+  kws-spot         A "See the project: Risen Health" on=true opacityNow=1 opacityAtFocus=0 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=124,402,141,45
+  kws-spot         A "See the project: Corbel Books" on=true opacityNow=1 opacityAtFocus=0 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=124,402,141,45
+  kws-spot         BUTTON "Previous project" on=null opacityNow=1 opacityAtFocus=1 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=113,490,44,44
+  kws-spot         BUTTON "Corbel Books, 3 of 3" on=null opacityNow=1 opacityAtFocus=1 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=207,490,24,44
+  kws-spot         BUTTON "Next project" on=null opacityNow=1 opacityAtFocus=1 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=233,490,44,44
+                   A "See the work in detail" on=null opacityNow=1 opacityAtFocus=1 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=20,566,196,50
+  kws-arc(client)  A "See what's included in Website design & build" on=true opacityNow=1 opacityAtFocus=1 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=106,401,178,45
+  kws-arc(client)  A "See what's included in E-commerce stores" on=true opacityNow=1 opacityAtFocus=0 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=106,401,178,45
+  kws-arc(client)  A "See what's included in Redesigns & rescues" on=true opacityNow=1 opacityAtFocus=0 inView=true hit=true outline=solid 3px rgb(44, 70, 196) off 3px rect=106,401,178,45
+  problems among kit stops after settling: 0 
+  live-region messages caused by Tab alone: []
+  Shift+Tab from Next: BUTTON "Growth consulting, 9 of 9" on=null op=1  <-  BUTTON "Previous service" on=null op=1  <-  A "See what's included in Growth consulting" on=true op=1  <-  A "See what's included in Google profile & reviews" on=true op=1  <-  A "See what's included in Automation" on=true op=1
+  ArrowRight on a link -> focus See what's included in Google profile & reviews on= true  says: [[0,44366,"Google profile & reviews, 8 of 9"]]

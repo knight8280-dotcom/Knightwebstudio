@@ -1,0 +1,4 @@
+before {"nodes":957,"listeners":50,"heapKB":704} 
+after 300 mount/unmount cycles (both) {"nodes":957,"listeners":50,"heapKB":797} 
+after 10x mount + remove-from-DOM mid-move without calling the remover {"nodes":957,"listeners":50,"heapKB":822}
+print media: [{"visibleCaptions":1,"of":9,"controlsShown":true},{"visibleCaptions":1,"of":3,"controlsShown":true}]

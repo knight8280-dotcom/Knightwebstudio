@@ -1,0 +1,44 @@
+region "Recent projects" [roledescription=carousel]
+  list
+    listitem "1 of 3" [level=1 roledescription=slide]
+      generic
+        image "Smilys Softwash — before and after of a soft-washed roof and house exterior" [url=http://localhost:8730/assets/img/work-smilyssoftwash.jpg]
+      paragraph
+        StaticText "EXTERIOR CLEANING · LOCAL SERVICE & SEO"
+      heading "Smilys Softwash" [level=3]
+        StaticText "Smilys Softwash"
+      paragraph
+        StaticText "Roof and house soft washing across Greater Baton Rouge: a service page per treatment, a before-and-after gallery and online quote requests."
+      link "See the project: Smilys Softwash" [focusable=true url=http://localhost:8730/work/]
+        StaticText "See the project"
+    listitem "2 of 3" [level=1 roledescription=slide]
+      generic
+        image "Risen Health — a vial of BPC-157 beside the tagline "Rise into divine health"" [url=http://localhost:8730/assets/img/work-risenhealthco.jpg]
+      paragraph
+        StaticText "HEALTH & WELLNESS · ONLINE STORE"
+      heading "Risen Health" [level=3]
+        StaticText "Risen Health"
+      paragraph
+        StaticText "An online store for a family-owned peptide supplier: a 36-product catalog across eight categories, with a page for every product."
+      link "See the project: Risen Health" [focusable=true url=http://localhost:8730/work/]
+        StaticText "See the project"
+    listitem "3 of 3" [level=1 roledescription=slide]
+      generic
+        image "Corbel Books homepage — bookkeeping and invoicing for small businesses" [url=http://localhost:8730/assets/img/work-corbelbooks.jpg]
+      paragraph
+        StaticText "FINTECH SAAS · PRODUCT SITE & APP UI"
+      heading "Corbel Books" [level=3]
+        StaticText "Corbel Books"
+      paragraph
+        StaticText "A full product site and dashboard for an invoicing and cash-flow tool, with Stripe card payments and Plaid bank sync."
+      link "See the project: Corbel Books" [focusable=true url=http://localhost:8730/work/]
+        StaticText "See the project"
+  group "Choose a project"
+    button "Previous project" [focusable=true]
+      StaticText "‹"
+    button "Smilys Softwash, 1 of 3" [focusable=true]
+    button "Risen Health, 2 of 3" [focusable=true]
+    button "Corbel Books, 3 of 3" [focusable=true]
+    button "Next project" [focusable=true]
+      StaticText "›"
+  paragraph [live=polite]

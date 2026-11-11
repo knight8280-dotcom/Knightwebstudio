@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>still lab (scratch)</title>
+<style>
+body { margin: 0; font: 14px system-ui; }
+.p { --g: #24389F; height: 300px; margin-bottom: 6px; background-color: var(--g); color: #fff; display: grid; place-items: center; font-size: 40px; font-family: Georgia, serif; }
+.night .p { --g: #1B2A78; }
+.a { background-image: linear-gradient(var(--g), transparent 22%),
+  linear-gradient(104deg, color-mix(in oklab, var(--g), black 26%), transparent 28%, color-mix(in oklab, var(--g), white 9%) 52%, transparent 74%, color-mix(in oklab, var(--g), black 30%)); }
+.b { background-image: linear-gradient(var(--g), transparent 22%),
+  radial-gradient(120% 80% at 24% 112%, color-mix(in oklab, var(--g), white 12%), transparent 60%),
+  radial-gradient(90% 90% at 96% 28%, color-mix(in oklab, var(--g), black 34%), transparent 62%),
+  linear-gradient(100deg, transparent 38%, color-mix(in oklab, var(--g), white 6%) 58%, transparent 78%); }
+.c { background-image: linear-gradient(var(--g), transparent 22%),
+  radial-gradient(60% 150% at 30% 115%, color-mix(in oklab, var(--g), white 11%), transparent 70%),
+  radial-gradient(55% 140% at 78% -10%, color-mix(in oklab, var(--g), black 32%), transparent 70%),
+  radial-gradient(40% 120% at 104% 110%, color-mix(in oklab, var(--g), white 8%), transparent 70%),
+  radial-gradient(40% 110% at -4% 20%, color-mix(in oklab, var(--g), black 26%), transparent 70%); }
+.d { background-image: linear-gradient(var(--g), transparent 22%),
+  linear-gradient(98deg, color-mix(in oklab, var(--g), black 30%), transparent 24%, color-mix(in oklab, var(--g), white 10%) 46%, transparent 62%, color-mix(in oklab, var(--g), black 28%) 82%, color-mix(in oklab, var(--g), white 7%)),
+  radial-gradient(100% 70% at 50% 120%, color-mix(in oklab, var(--g), white 8%), transparent 70%); }
+</style></head><body>
+<div class="p a">A · Still deciding? Book the free call.</div>
+<div class="p b">B · Still deciding? Book the free call.</div>
+<div class="p c">C · Still deciding? Book the free call.</div>
+<div class="p d">D · Still deciding? Book the free call.</div>
+<div class="night">
+<div class="p a">A night</div>
+<div class="p c">C night</div>
+</div>
+</body></html>

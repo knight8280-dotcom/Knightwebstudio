@@ -1,0 +1,13 @@
+patched sizes (bytes): arc.js 7999 spotlight.js 7958 arc.css 3440 spotlight.css 3438
+HOLD FIX reduce        390 #work     scripts +300ms: CLS [0, 0, 0, 0, 0]  page height before->after upgrade [3299->3299]
+HOLD FIX reduce        1440 #services scripts +300ms: CLS [0, 0, 0, 0, 0]  page height before->after upgrade [4121->4121]
+HOLD FIX reduce        1440 #work     scripts +300ms: CLS [0, 0, 0, 0, 0]  page height before->after upgrade [4121->4121]
+HOLD FIX no-preference 390 #work     scripts +300ms: CLS [0, 0, 0, 0, 0]  page height before->after upgrade [3299->3299]
+HOLD FIX no-preference 1440 #services scripts +300ms: CLS [0, 0, 0, 0, 0]  page height before->after upgrade [4121->4121]
+HOLD FIX no-preference 1440 #work     scripts +300ms: CLS [0, 0, 0, 0, 0]  page height before->after upgrade [4121->4121]
+HOLD FIX never-arrives 390 (reduced motion): at 0.4s [height, items showing] [[400,1],[491,1]]; at 4.6s [[2058,9],[1356,3]]  (script-off list measured earlier: 390 -> 2058/1356, 1440 -> 758/463)
+HOLD FIX never-arrives 1440 (reduced motion): at 0.4s [height, items showing] [[448,1],[595,1]]; at 4.6s [[758,9],[463,3]]  (script-off list measured earlier: 390 -> 2058/1356, 1440 -> 758/463)
+DRAG FIX arc: hover after sloppy click -> moving=false changed=false (want false/false); Next then works: 0->1; mouse drag still works: mid-drag moving=true, 1->3; errors 0
+DRAG FIX arc touch: the sign follows the finger=true, item 0->2; vertical swipe still scrolls 252px
+DRAG FIX spot: hover after sloppy click -> moving=false changed=false (want false/false); Next then works: 0->1; mouse drag still works: mid-drag moving=true, 1->2; errors 0
+DRAG FIX spot touch: the sign follows the finger=true, item 0->1; vertical swipe still scrolls 254px

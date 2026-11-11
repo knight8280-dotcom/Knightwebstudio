@@ -1,0 +1,22 @@
+PASS reduced motion: starts with data-motion="off"; the button offers "Play background motion"
+PASS reduced motion: 1 layer(s) on screen drew one still frame, then 0 draws/s and 0.0 animation frames/s asked for
+PASS reduced motion: cards scrolled into view get their still frame (4 layers live) and nothing keeps running (0 draws/s)
+PASS reduced motion: choosing a tab swaps the folder at once (animation: none 1)
+PASS reduced motion: pressing Play is an explicit choice and starts the motion (59 draws/s)
+PASS top of page: 11 layers on the page, 1 on screen: 30.0 draws/s (one layer at about 30 a second); 1 live so far
+PASS three ribbon cards on screen: 55.0 draws/s shared by turns between the 3 layers on screen (3 drawn in the last half second, of 11 on the page)
+PASS paused: 0 draws/s, 0.0 animation frames/s asked for
+PASS paused: the canvas holds its last frame, unchanged
+PASS paused: switching theme to dark repaints each on-screen layer once (3 draws)
+PASS resumed: 61.3 draws/s
+PASS background tab: 0 draws/s
+PASS tab shown again: 60.8 draws/s
+PASS {"canv0":11,"liveMid":true,"canv1":11} 40 mounts and unmounts after load: canvases before 11, after 11; nothing left behind; a second mount on one element is the same instance
+PASS all layers removed from the page without cleanup: the loop notices and stops (0 draws, 0 animation frames asked for in 1.5s)
+PASS 24 drew; 24 full start-and-stop cycles (a new WebGL context each time): all drew, no "too many contexts" warning
+PASS touch: a 300px swipe up starting on #services .kws-mark-art scrolls the page 285px
+PASS touch: a 300px swipe up starting on #process .kws-folder-body scrolls the page 383px
+PASS touch: a 300px swipe up starting on #pricing .kws-folders-tabs scrolls the page 380px
+PASS touch: a 300px swipe up starting on #pricing .is-front .kws-folder-body scrolls the page 395px
+PASS touch: a 300px swipe up starting on .cta-band h2 scrolls the page 392px
+PASS touch: a tap on the Commerce tab opens it

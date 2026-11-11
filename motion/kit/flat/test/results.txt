@@ -1,0 +1,301 @@
+== sizes in bytes (budgets: scripts 8,000; stylesheets 3,500) ==
+ 3374 arc.css
+ 7992 arc.js
+ 3499 spotlight.css
+ 7988 spotlight.js
+22853 total
+
+== rules: hex colours, !important, media queries used ==
+arc.css:0
+spotlight.css:0
+arc.css:0
+spotlight.css:0
+      1 arc.css:@media (hover:hover)
+      1 spotlight.css:@media (hover:hover)
+
+== forbidden words in the delivered files (expect 0 each) ==
+arc.css:0
+arc.js:0
+spotlight.css:0
+spotlight.js:0
+demo.html:0
+NOTES.md:0
+test/bare.html:0
+
+== sideways scroll, 360 to 1920 in 20px steps ==
+http://localhost:8730/kit/flat/demo.html no horizontal overflow from 360 to 1920
+http://localhost:8730/kit/flat/test/bare.html no horizontal overflow from 360 to 1920
+
+== text sizes and targets at 390px ==
+
+no text under 12px and no target under 44px
+
+== contrast, both themes, 1440 and 390 ==
+light /kit/flat/demo.html 1440 all text passes AA
+light /kit/flat/demo.html 390 all text passes AA
+dark /kit/flat/demo.html 1440 all text passes AA
+dark /kit/flat/demo.html 390 all text passes AA
+
+== contract ==
+PASS  no console errors on load
+PASS  two wheels and two spotlights mounted on one page; KWS.arc.mount and KWS.spotlight.mount exposed  (2,2,true)
+PASS  only one global (window.KWS)  (kwsReady,KWS)
+PASS  arc: next arrow moves to item 2 and says so  ({"on":1,"moving":false,"live":true,"said":"Redesigns & rescues, 2 of 9"})
+PASS  arc: previous arrow twice wraps to the last item  ({"on":8,"moving":false,"live":true,"said":"Google profile & reviews, 9 of 9"})
+PASS  arc: second dot goes to item 2  ({"on":1,"moving":false,"live":true,"said":"Redesigns & rescues, 2 of 9"})
+PASS  arc: ArrowRight with focus inside moves on  ({"on":2,"moving":false,"live":true,"said":"E-commerce stores, 3 of 9"})
+PASS  arc: ArrowLeft twice moves back two  ({"on":0,"moving":false,"live":true,"said":"Website design & build, 1 of 9"})
+PASS  arc: arrows and dots are real buttons, at least 44px each way, named  ([[44,44,"Previous service","button"],[44,44,"Website design & build, 1 of 9","button"],[44,44,"Redesigns & rescues, 2 of 9","button"]])
+PASS  arc: labelled region with a list, carousel and slide roledescriptions, "n of N" labels, a status region (output) for announcements  ({"rd":"carousel","label":true,"tag":"SECTION","list":true,"slides":["slide:1 of 9","slide:2 of 9","slide:3 of 9","slide:4 of 9","slide:5 of 9","slide:6 of 9","slide:7 of 9","slide:8 of 9","slide:9 of 9"],"live":"polite",)
+PASS  arc: no console errors during use
+PASS  spotlight: next arrow moves to item 2 and says so  ({"on":1,"moving":false,"live":true,"said":"Risen Health, 2 of 3"})
+PASS  spotlight: previous arrow twice wraps to the last item  ({"on":2,"moving":false,"live":true,"said":"Corbel Books, 3 of 3"})
+PASS  spotlight: second dot goes to item 2  ({"on":1,"moving":false,"live":true,"said":"Risen Health, 2 of 3"})
+PASS  spotlight: ArrowRight with focus inside moves on  ({"on":2,"moving":false,"live":true,"said":"Corbel Books, 3 of 3"})
+PASS  spotlight: ArrowLeft twice moves back two  ({"on":0,"moving":false,"live":true,"said":"Smilys Softwash, 1 of 3"})
+PASS  spotlight: arrows and dots are real buttons, at least 44px each way, named  ([[44,44,"Previous project","button"],[44,44,"Smilys Softwash, 1 of 3","button"],[44,44,"Risen Health, 2 of 3","button"]])
+PASS  spotlight: labelled region with a list, carousel and slide roledescriptions, "n of N" labels, a status region (output) for announcements  ({"rd":"carousel","label":true,"tag":"SECTION","list":true,"slides":["slide:1 of 3","slide:2 of 3","slide:3 of 3"],"live":"polite","group":"Choose a project"})
+PASS  spotlight: no console errors during use
+PASS  arc: Tab reaches all 9 links, each one centred and fully visible when focused  ([[0,0,1],[1,1,1],[2,2,1],[3,3,1],[4,4,1],[5,5,1],[6,6,1],[7,7,1],[8,8,1]])
+PASS  arc: then previous, the dots as one stop, next (3 buttons), then focus leaves: no trap  (stops: 12)
+PASS  arc: focus ring visible on links and buttons  (solid 3px)
+PASS  arc: an arrow key moves focus with the item, so focus is never on a hidden link  (1,1)
+PASS  arc: arrow keys on the dots move the wheel and keep focus on the current dot  (true,0,3,Brand & identity, 4 of 9)
+PASS  spotlight: Tab reaches all 3 links, each one centred and fully visible when focused  ([[0,0,1],[1,1,1],[2,2,1]])
+PASS  spotlight: then previous, the dots as one stop, next (3 buttons), then focus leaves: no trap  (stops: 6)
+PASS  spotlight: focus ring visible on links and buttons  (solid 3px)
+PASS  spotlight: an arrow key moves focus with the item, so focus is never on a hidden link  (1,1)
+PASS  spotlight: arrow keys on the dots move the wheel and keep focus on the current dot  (true,0,3,Smilys Softwash, 1 of 3)
+PASS  script off: nine services and three projects all visible as a plain list, each in its own place, no dead controls  ([{"n":9,"allVisible":true,"distinctTops":9,"clipped":"visible","ctl":0},{"n":3,"allVisible":true,"distinctTops":3,"clipped":"visible","ctl":0}])
+PASS  script off: nine fixed prices as the site words them, in the order of /services/  ($1,000, $2,000 or $4,000|priced as a new site|$8,000|$1,500|in every build|$125, $300, $600 or $1,000/mo|$750 or $1,500 per setup|$350 audit · $500 or $1,000/mo|$500)
+PASS  reduced motion, arc: next is instant (same task), no animation frame requested  ({"on":1,"moving":false,"frames":0,"t":"translate(0px, 0px) rotate(0deg) scale(1)","cap":"1"})
+PASS  reduced motion, arc: a drag does not animate; it steps once on release  ([1,2])
+PASS  reduced motion, spotlight: next is instant (same task), no animation frame requested  ({"on":1,"moving":false,"frames":0,"t":"translate(0px) scale(1)","cap":"1"})
+PASS  reduced motion, spotlight: a drag does not animate; it steps once on release  ([1,2])
+PASS  paused motion, arc: next is instant (same task), no animation frame requested  ({"on":1,"moving":false,"frames":0,"t":"translate(0px, 0px) rotate(0deg) scale(1)","cap":"1"})
+PASS  paused motion, arc: a drag does not animate; it steps once on release  ([1,2])
+PASS  paused motion, spotlight: next is instant (same task), no animation frame requested  ({"on":1,"moving":false,"frames":0,"t":"translate(0px) scale(1)","cap":"1"})
+PASS  paused motion, spotlight: a drag does not animate; it steps once on release  ([1,2])
+PASS  arc: wheel over it scrolls the page (240px) and never turns it  ({"on":0,"moving":false,"live":true,"said":""})
+PASS  spotlight: wheel over it scrolls the page (240px) and never turns it  ({"on":0,"moving":false,"live":true,"said":""})
+PASS  left alone for 6.5 seconds, nothing moves (no auto-advance)
+PASS  arc: releasing a drag over the link does not follow it; a plain click on the same link does  (http://localhost:8730/services/#website-design)
+PASS  spotlight: releasing a drag over the link does not follow it; a plain click on the same link does  (http://localhost:8730/work/#smilys-softwash)
+PASS  arc: a click on the side one centres it (no navigation); a click on the centred one opens its link  (http://localhost:8730/services/#redesigns)
+PASS  spotlight: a click on the side one centres it (no navigation); a click on the centred one opens its link  (http://localhost:8730/work/#risen-health)
+PASS  arc: mounts after load; mount() twice returns the same remover; remover restores the markup byte for byte, even mid-animation; remounts  ({"live":true,"again":true,"restored":true,"original":true,"remount":true})
+PASS  spotlight: mounts after load; mount() twice returns the same remover; remover restores the markup byte for byte, even mid-animation; remounts  ({"live":true,"again":true,"restored":true,"original":true,"remount":true})
+
+all passed
+
+== signs against the caption, 360 to 1920 in 4px steps ==
+PASS  no sign that shows touches a line of the caption, at 7038 states (391 widths from 360 to 1920, every item in focus, two wheels)
+PASS  nearest a sign beside the caption comes to a line of it  (22.5px)
+PASS  smallest lettering on any sign that shows, after scaling  (12.07px)
+      signs showing on the site wheel: 3 from 360px to 724px; 5 from 728px to 908px; 7 from 912px to 1028px; 9 from 1032px to 1920px
+PASS  no console errors
+
+== touch ==
+PASS  wheel sign: a vertical swipe that starts on it scrolls the page and does not turn it  (page moved 257px, item 1)
+PASS  wheel sign: slanted swipes from 20° to 70° off horizontal either turn the carousel or scroll the page, never nothing  (20°:turn 30°:turn 34°:turn 37°:turn 40°:turn 42°:turn 44°:turn 47°:page 50°:page 60°:page 70°:page)
+PASS  wheel sign: a 180px sideways swipe turns it and the page stays put  (page moved 0px, item 1 to 3)
+PASS  wheel sign: a slow 60px swipe moves exactly one item on  (item 2)
+PASS  wheel sign: and the same swipe the other way comes back  (item 1)
+PASS  wheel sign: a 22px nudge springs back  (item 1)
+PASS  wheel caption: a vertical swipe that starts on it scrolls the page and does not turn it  (page moved 263px, item 1)
+PASS  wheel caption: slanted swipes from 20° to 70° off horizontal either turn the carousel or scroll the page, never nothing  (20°:turn 30°:turn 34°:turn 37°:turn 40°:turn 42°:turn 44°:turn 47°:page 50°:page 60°:page 70°:page)
+PASS  wheel caption: a 180px sideways swipe turns it and the page stays put  (page moved 0px, item 1 to 3)
+PASS  wheel caption: a slow 60px swipe moves exactly one item on  (item 2)
+PASS  wheel caption: and the same swipe the other way comes back  (item 1)
+PASS  wheel caption: a 22px nudge springs back  (item 1)
+PASS  spotlight card: a vertical swipe that starts on it scrolls the page and does not turn it  (page moved 259px, item 1)
+PASS  spotlight card: slanted swipes from 20° to 70° off horizontal either turn the carousel or scroll the page, never nothing  (20°:turn 30°:turn 34°:turn 37°:turn 40°:turn 42°:turn 44°:turn 47°:page 50°:page 60°:page 70°:page)
+PASS  spotlight card: a 180px sideways swipe turns it and the page stays put  (page moved 0px, item 1 to 2)
+PASS  spotlight card: a slow 60px swipe moves exactly one item on  (item 2)
+PASS  spotlight card: and the same swipe the other way comes back  (item 1)
+PASS  spotlight card: a 22px nudge springs back  (item 1)
+PASS  spotlight caption: a vertical swipe that starts on it scrolls the page and does not turn it  (page moved 255px, item 1)
+PASS  spotlight caption: slanted swipes from 20° to 70° off horizontal either turn the carousel or scroll the page, never nothing  (20°:turn 30°:turn 34°:turn 37°:turn 40°:turn 42°:turn 44°:turn 47°:page 50°:page 60°:page 70°:page)
+PASS  spotlight caption: a 180px sideways swipe turns it and the page stays put  (page moved 0px, item 1 to 2)
+PASS  spotlight caption: a slow 60px swipe moves exactly one item on  (item 2)
+PASS  spotlight caption: and the same swipe the other way comes back  (item 1)
+PASS  spotlight caption: a 22px nudge springs back  (item 1)
+PASS  wheel sign: follows the finger (it travels at least 90% of the next 60px of finger travel)  (61px for 60px)
+PASS  spotlight card: follows the finger (it travels at least 85% of the next 60px of finger travel)  (57px for 60px)
+PASS  wheel: fast flicks of 120, 200 and 250px carry on, but never more than two signs  (moved on by 2, 2, 2)
+PASS  wheel: and it settles exactly on a sign  (translate(0px, 0px) rotate(0deg) scale(1))
+PASS  spotlight: a fast 250px flick moves one card, not two  (item 2)
+PASS  no page errors
+
+== mouse ==
+PASS  wheel: after a press released outside the stage, moving the mouse over it turns nothing, and Next still works  (item 1, after hovering 1, after Next 2)
+PASS  wheel: a press whose release never arrives does not leave it following the mouse  (item 1)
+PASS  wheel: no console errors
+PASS  wheel: a click on the link with 10px of wobble still follows it  (/services/#website-design)
+PASS  wheel: Ctrl+click on the centred one opens a new tab and never moves this page  (new tab on try 1 of 5; this page left 0 times; the caption link itself opened a tab in 1 of 1 tries)
+PASS  wheel: the cursor is a pointer on a sign or card, link and arrows, a grab hand on the rest of the stage, and a closed hand while dragging  ({"c":{"part":"pointer","stage":"grab","link":"pointer","arrow":"pointer"},"dragging":{"part":"grabbing","stage":"grabbing"},"after":"pointer"})
+PASS  wheel: a sign or card lifts on hover and sinks when pressed  (hover 0px -2px; pressed 0px 1px)
+PASS  wheel: arrows and the caption link do the same  (arrow hover 0px -2px, pressed 0px 1px; link hover 0px -2px)
+PASS  spotlight: after a press released outside the stage, moving the mouse over it turns nothing, and Next still works  (item 1, after hovering 1, after Next 2)
+PASS  spotlight: a press whose release never arrives does not leave it following the mouse  (item 1)
+PASS  spotlight: no console errors
+PASS  spotlight: a click on the link with 10px of wobble still follows it  (/work/#smilys-softwash)
+PASS  spotlight: Ctrl+click on the centred one opens a new tab and never moves this page  (new tab on try 1 of 5; this page left 0 times; the caption link itself opened a tab in 1 of 1 tries)
+PASS  spotlight: the cursor is a pointer on a sign or card, link and arrows, a grab hand on the rest of the stage, and a closed hand while dragging  ({"c":{"part":"pointer","stage":"grab","link":"pointer","arrow":"pointer"},"dragging":{"part":"grabbing","stage":"grabbing"},"after":"pointer"})
+PASS  spotlight: a sign or card lifts on hover and sinks when pressed  (hover 0px -2px; pressed 0px 1px)
+PASS  spotlight: arrows and the caption link do the same  (arrow hover 0px -2px, pressed 0px 1px; link hover 0px -2px)
+
+== motion settings in mid-move, off screen, idle ==
+PASS  wheel: no animation frame is asked for while it is idle  (0 in 1.5s)
+PASS  wheel: pausing motion in the middle of a move ends it on the next frame, on the item it was heading for  ({"mid":true,"movingAfter":false,"frames":0,"on":1})
+PASS  wheel: so does the device's reduced-motion setting  (item 3)
+PASS  wheel: scrolled off screen in mid-move, it stops asking for frames  (0 frames in the next 0.6s)
+PASS  wheel: a move made while off screen is applied at once, with no frames  ({"frames":0,"moving":false})
+PASS  wheel: will-change is off when nothing is moving  (auto)
+PASS  spotlight: no animation frame is asked for while it is idle  (0 in 1.5s)
+PASS  spotlight: pausing motion in the middle of a move ends it on the next frame, on the item it was heading for  ({"mid":true,"movingAfter":false,"frames":0,"on":1})
+PASS  spotlight: so does the device's reduced-motion setting  (item 3)
+PASS  spotlight: scrolled off screen in mid-move, it stops asking for frames  (0 frames in the next 0.6s)
+PASS  spotlight: a move made while off screen is applied at once, with no frames  ({"frames":0,"moving":false})
+PASS  spotlight: will-change is off when nothing is moving  (auto)
+
+== theme and pause ==
+PASS  theme button flips the theme and every kit colour follows {"theme":"light","tile":"rgb(36, 56, 159)","name":"rgb(26, 34, 56)","frame":"rgb(255, 252, 245)","dot":"rgb(44, 70, 196)"} {"theme":"dark","tile":"rgb(27, 42, 120)","name":"rgb(243, 236, 221)","frame":"rgb(29, 35, 51)","dot":"rgb(157, 176, 255)"}
+PASS  pause button sets data-motion="off" and the next move is instant off,false,1
+PASS  no console errors
+
+== layout shift on upgrade ==
+PASS  390x844 at #services: first paint 132ms, upgrade 781ms; layout shift 0 with the upgrade, 0 without it
+PASS  390x844 at #work: first paint 304ms, upgrade 864ms; layout shift 0 with the upgrade, 0 without it
+PASS  768x1024 at #services: first paint 104ms, upgrade 747ms; layout shift 0 with the upgrade, 0 without it
+PASS  768x1024 at #work: first paint 120ms, upgrade 762ms; layout shift 0 with the upgrade, 0 without it
+PASS  1440x900 at #services: first paint 196ms, upgrade 763ms; layout shift 0 with the upgrade, 0 without it
+PASS  1440x900 at #work: first paint 204ms, upgrade 805ms; layout shift 0 with the upgrade, 0 without it
+PASS  reduced motion, 390x844 at #services: first paint 128ms, upgrade 839ms; layout shift 0 with the upgrade, 0 without it
+PASS  reduced motion, 390x844 at #work: first paint 200ms, upgrade 769ms; layout shift 0 with the upgrade, 0 without it
+PASS  reduced motion, 768x1024 at #services: first paint 156ms, upgrade 780ms; layout shift 0 with the upgrade, 0 without it
+PASS  reduced motion, 768x1024 at #work: first paint 140ms, upgrade 757ms; layout shift 0 with the upgrade, 0 without it
+PASS  reduced motion, 1440x900 at #services: first paint 200ms, upgrade 755ms; layout shift 0 with the upgrade, 0 without it
+PASS  reduced motion, 1440x900 at #work: first paint 308ms, upgrade 977ms; layout shift 0 with the upgrade, 0 without it
+
+== held space and the 4s fallback ==
+PASS  390px: one item held at first; after 4s all nine and all three are back, 1 across as with script off  (held 428px and 514px; list 3624px, 1 across and 1485px, 1 across)
+PASS  390px, reduced motion: one item held at first; after 4s all nine and all three are back, 1 across as with script off  (held 428px and 514px; list 3624px, 1 across and 1485px, 1 across)
+PASS  1440px: one item held at first; after 4s all nine and all three are back, 3 across as with script off  (held 473px and 625px; list 1362px, 3 across and 507px, 3 across)
+PASS  1440px, reduced motion: one item held at first; after 4s all nine and all three are back, 3 across as with script off  (held 473px and 625px; list 1362px, 3 across and 507px, 3 across)
+PASS  the remover, called once the hold has ended, gives the whole plain list back at once  (9 and 3 items showing)
+
+== heights before and after upgrade ==
+  360 arc: before 414.5 after 414.5 same | caption needs 192-192 of 216   spot: before 511.8 after 511.8 same | caption needs 204-246 of 255
+  364 arc: before 416.2 after 416.2 same | caption needs 192-192 of 216   spot: before 512.3 after 512.3 same | caption needs 204-246 of 253.7
+  372 arc: before 419.7 after 419.7 same | caption needs 193-193 of 216   spot: before 513.3 after 513.3 same | caption needs 204-246 of 251.1
+  376 arc: before 421.5 after 421.5 same | caption needs 193-193 of 216   spot: before 513.8 after 513.8 same | caption needs 204-227 of 249.8
+  380 arc: before 423.2 after 423.2 same | caption needs 193-193 of 216   spot: before 514.3 after 514.3 same | caption needs 204-227 of 248.5
+  384 arc: before 425 after 425 same | caption needs 194-194 of 216   spot: before 514.5 after 514.5 same | caption needs 204-224 of 247.2
+  392 arc: before 428.5 after 428.5 same | caption needs 194-194 of 216   spot: before 513.2 after 513.2 same | caption needs 204-224 of 244.6
+  400 arc: before 432 after 432 same | caption needs 195-195 of 216   spot: before 511.8 after 511.8 same | caption needs 204-224 of 242
+  414 arc: before 438.1 after 438.1 same | caption needs 196-196 of 216   spot: before 509.3 after 509.3 same | caption needs 204-224 of 237.45
+  430 arc: before 444.9 after 444.9 same | caption needs 197-197 of 216   spot: before 506.3 after 506.3 same | caption needs 205-224 of 232.25
+  440 arc: before 448.5 after 448.5 same | caption needs 198-198 of 216   spot: before 504.5 after 504.5 same | caption needs 205-224 of 229
+  450 arc: before 452.2 after 452.2 same | caption needs 199-199 of 216   spot: before 502.7 after 502.7 same | caption needs 202-205 of 225.75
+  470 arc: before 459.5 after 459.5 same | caption needs 200-200 of 216   spot: before 499 after 499 same | caption needs 202-205 of 219.25
+  480 arc: before 463.1 after 463.1 same | caption needs 201-201 of 216   spot: before 497.2 after 497.2 same | caption needs 202-205 of 216
+  520 arc: before 472.8 after 472.8 same | caption needs 203-203 of 216   spot: before 502.9 after 502.9 same | caption needs 183-206 of 216
+  560 arc: before 472.8 after 472.8 same | caption needs 203-203 of 216   spot: before 508.6 after 508.6 same | caption needs 184-184 of 216
+  599 arc: before 472.8 after 472.8 same | caption needs 203-203 of 216   spot: before 514.1 after 514.1 same | caption needs 184-184 of 216
+  600 arc: before 472.8 after 472.8 same | caption needs 203-203 of 216   spot: before 514.3 after 514.3 same | caption needs 184-184 of 216
+  640 arc: before 472.8 after 472.8 same | caption needs 203-203 of 216   spot: before 519.9 after 519.9 same | caption needs 184-184 of 216
+  700 arc: before 472.8 after 472.8 same | caption needs 203-203 of 216   spot: before 528.5 after 528.5 same | caption needs 185-185 of 216
+  760 arc: before 472.8 after 472.8 same | caption needs 203-203 of 216   spot: before 537 after 537 same | caption needs 186-186 of 216
+  820 arc: before 472.8 after 472.8 same | caption needs 203-203 of 216   spot: before 545.5 after 545.5 same | caption needs 186-186 of 216
+  980 arc: before 472.8 after 472.8 same | caption needs 203-203 of 216   spot: before 568.6 after 568.6 same | caption needs 188-188 of 216
+ 1100 arc: before 472.8 after 472.8 same | caption needs 203-203 of 216   spot: before 587.5 after 587.5 same | caption needs 189-189 of 216
+ 1280 arc: before 472.8 after 472.8 same | caption needs 203-203 of 216   spot: before 615.9 after 615.9 same | caption needs 190-190 of 216
+ 1440 arc: before 472.8 after 472.8 same | caption needs 203-203 of 216   spot: before 624.8 after 624.8 same | caption needs 190-190 of 216
+ 1920 arc: before 472.8 after 472.8 same | caption needs 203-203 of 216   spot: before 624.8 after 624.8 same | caption needs 190-190 of 216
+
+== other counts and options ==
+PASS  390px spotlight x1 {}: start 0, after 2 nexts at 0, after prev at 0, 1 showing, past the window edge by 0px
+PASS  390px spotlight x2 {}: start 0, after 3 nexts at 1, after prev at 0, 2 showing, past the window edge by 0px
+PASS  390px spotlight x4 {}: start 0, after 5 nexts at 1, after prev at 0, 3 showing, past the window edge by 0px
+PASS  390px spotlight x6 {"data-start":"2"}: start 2, after 7 nexts at 3, after prev at 2, 3 showing, past the window edge by 0px
+PASS  390px spotlight x3 {"data-loop":"false"}: start 0, after 4 nexts at 1, after prev at 0, 2 showing, past the window edge by 0px
+PASS  390px arc x1 {}: start 0, after 2 nexts at 0, after prev at 0, 1 showing, past the window edge by -20px
+PASS  390px arc x2 {}: start 0, after 3 nexts at 1, after prev at 0, 2 showing, past the window edge by 0px
+PASS  390px arc x4 {}: start 0, after 5 nexts at 1, after prev at 0, 3 showing, past the window edge by 0px
+PASS  390px arc x14 {}: start 0, after 15 nexts at 1, after prev at 0, 3 showing, past the window edge by 0px
+PASS  390px arc x9 {"data-loop":"false","data-start":"8"}: start 8, after 10 nexts at 0, after prev at 8, 2 showing, past the window edge by 0px
+PASS  1280px spotlight x1 {}: start 0, after 2 nexts at 0, after prev at 0, 1 showing, past the window edge by 0px
+PASS  1280px spotlight x2 {}: start 0, after 3 nexts at 1, after prev at 0, 2 showing, past the window edge by 0px
+PASS  1280px spotlight x4 {}: start 0, after 5 nexts at 1, after prev at 0, 3 showing, past the window edge by 0px
+PASS  1280px spotlight x6 {"data-start":"2"}: start 2, after 7 nexts at 3, after prev at 2, 3 showing, past the window edge by 0px
+PASS  1280px spotlight x3 {"data-loop":"false"}: start 0, after 4 nexts at 1, after prev at 0, 2 showing, past the window edge by 0px
+PASS  1280px arc x1 {}: start 0, after 2 nexts at 0, after prev at 0, 1 showing, past the window edge by -48px
+PASS  1280px arc x2 {}: start 0, after 3 nexts at 1, after prev at 0, 2 showing, past the window edge by -48px
+PASS  1280px arc x4 {}: start 0, after 5 nexts at 1, after prev at 0, 3 showing, past the window edge by -48px
+PASS  1280px arc x14 {}: start 0, after 15 nexts at 1, after prev at 0, 9 showing, past the window edge by -48px
+PASS  1280px arc x9 {"data-loop":"false","data-start":"8"}: start 8, after 10 nexts at 0, after prev at 8, 5 showing, past the window edge by -48px
+
+== things a client site might do ==
+PASS  360px: 50 to 80 letter words and an 80 letter address cause no sideways scroll; the browser dots keep their size; the address stays inside its frame  (page wider than window by 0px; dots 8,8,8px; address ends 14px inside the frame)
+PASS  390px: 50 to 80 letter words and an 80 letter address cause no sideways scroll; the browser dots keep their size; the address stays inside its frame  (page wider than window by 0px; dots 8,8,8px; address ends 14px inside the frame)
+PASS  1280px: 50 to 80 letter words and an 80 letter address cause no sideways scroll; the browser dots keep their size; the address stays inside its frame  (page wider than window by 0px; dots 8,8,8px; address ends 14px inside the frame)
+PASS  default font 20px at 360px wide: no sign past the window edge, no sideways scroll, controls on one row  (3 signs showing, nearest edge 17px inside, control row 44px tall)
+PASS  default font 24px at 390px wide: no sign past the window edge, no sideways scroll, controls on one row  (3 signs showing, nearest edge 24px inside, control row 44px tall)
+PASS  default font 24px at 430px wide: no sign past the window edge, no sideways scroll, controls on one row  (3 signs showing, nearest edge 27px inside, control row 44px tall)
+PASS  default font 32px at 390px wide: no sign past the window edge, no sideways scroll, controls on one row  (3 signs showing, nearest edge 24px inside, control row 45px tall)
+PASS  360px arc with 12 items: controls on one 44px row that fits, a count ("1 of 12"); height held before the script equals height after  (row 184px of 320px; held 414px, live 414px)
+PASS  360px arc with 30 items: controls on one 44px row that fits, a count ("1 of 30"); height held before the script equals height after  (row 184px of 320px; held 414px, live 414px)
+PASS  360px spotlight with 5 items: controls on one 44px row that fits, a count ("1 of 5"); height held before the script equals height after  (row 140px of 360px; held 512px, live 512px)
+PASS  360px spotlight with 12 items: controls on one 44px row that fits, a count ("1 of 12"); height held before the script equals height after  (row 146px of 360px; held 512px, live 512px)
+PASS  390px arc with 12 items: controls on one 44px row that fits, a count ("1 of 12"); height held before the script equals height after  (row 184px of 350px; held 428px, live 428px)
+PASS  390px arc with 30 items: controls on one 44px row that fits, a count ("1 of 30"); height held before the script equals height after  (row 184px of 350px; held 428px, live 428px)
+PASS  390px spotlight with 5 items: controls on one 44px row that fits, a count ("1 of 5"); height held before the script equals height after  (row 140px of 390px; held 514px, live 514px)
+PASS  390px spotlight with 12 items: controls on one 44px row that fits, a count ("1 of 12"); height held before the script equals height after  (row 146px of 390px; held 514px, live 514px)
+PASS  1280px arc with 12 items: controls on one 44px row that fits, 12 dots; height held before the script equals height after  (row 720px of 1184px; held 473px, live 473px)
+PASS  1280px arc with 30 items: controls on one 44px row that fits, a count ("1 of 30"); height held before the script equals height after  (row 184px of 1184px; held 473px, live 473px)
+PASS  1280px spotlight with 5 items: controls on one 44px row that fits, 5 dots; height held before the script equals height after  (row 356px of 1280px; held 616px, live 616px)
+PASS  1280px spotlight with 12 items: controls on one 44px row that fits, 12 dots; height held before the script equals height after  (row 720px of 1280px; held 616px, live 616px)
+PASS  arc without one .kws-arc-tile: mount does nothing and throws nothing
+PASS  arc without one .kws-arc-cap: mount does nothing and throws nothing
+PASS  spotlight without one .kws-spot-frame: mount does nothing and throws nothing
+PASS  spotlight without one .kws-spot-cap: mount does nothing and throws nothing
+PASS  no console errors
+
+== leaks ==
+PASS  arc: an element removed from the page while mounted and moving is garbage-collected (observers, listeners and frames let go)
+PASS  arc: 200 mount/unmount cycles: listeners 58 to 58, nodes 920 to 920
+PASS  spotlight: an element removed from the page while mounted and moving is garbage-collected (observers, listeners and frames let go)
+PASS  spotlight: 200 mount/unmount cycles: listeners 58 to 58, nodes 920 to 920
+
+== frame times ==
+1x  arc       next button: 33 frames, mean 18.2ms, median 16.7ms, 95th 33.3ms, worst 50.0ms, over 33ms: 1
+1x  arc       drag + settle: 114 frames, mean 16.7ms, median 16.7ms, 95th 16.7ms, worst 16.8ms, over 33ms: 0
+1x  arc       animation frames requested while idle: 0 before, 0 after use; will-change set while idle: auto
+1x  spotlight next button: 35 frames, mean 17.1ms, median 16.7ms, 95th 16.8ms, worst 33.4ms, over 33ms: 0
+1x  spotlight drag + settle: 113 frames, mean 16.7ms, median 16.7ms, 95th 16.7ms, worst 16.8ms, over 33ms: 0
+1x  spotlight animation frames requested while idle: 0 before, 0 after use; will-change set while idle: auto
+4x  arc       next button: 36 frames, mean 16.7ms, median 16.7ms, 95th 16.8ms, worst 16.8ms, over 33ms: 0
+4x  arc       drag + settle: 115 frames, mean 17.1ms, median 16.7ms, 95th 16.8ms, worst 66.6ms, over 33ms: 1
+4x  arc       animation frames requested while idle: 0 before, 0 after use; will-change set while idle: auto
+4x  spotlight next button: 36 frames, mean 16.7ms, median 16.7ms, 95th 16.7ms, worst 16.8ms, over 33ms: 0
+4x  spotlight drag + settle: 117 frames, mean 16.7ms, median 16.7ms, 95th 16.7ms, worst 16.8ms, over 33ms: 0
+4x  spotlight animation frames requested while idle: 0 before, 0 after use; will-change set while idle: auto
+4x  arc       next button: 36 frames, mean 16.7ms, median 16.7ms, 95th 16.7ms, worst 16.8ms, over 33ms: 0
+4x  arc       drag + settle: 114 frames, mean 17.4ms, median 16.7ms, 95th 16.8ms, worst 66.7ms, over 33ms: 1
+4x  arc       animation frames requested while idle: 0 before, 0 after use; will-change set while idle: auto
+4x  spotlight next button: 36 frames, mean 16.7ms, median 16.7ms, 95th 16.7ms, worst 16.8ms, over 33ms: 0
+4x  spotlight drag + settle: 114 frames, mean 16.7ms, median 16.7ms, 95th 16.8ms, worst 16.8ms, over 33ms: 0
+4x  spotlight animation frames requested while idle: 0 before, 0 after use; will-change set while idle: auto
+4x  arc       next button: 36 frames, mean 16.7ms, median 16.7ms, 95th 16.7ms, worst 16.8ms, over 33ms: 0
+4x  arc       drag + settle: 114 frames, mean 16.7ms, median 16.7ms, 95th 16.8ms, worst 16.8ms, over 33ms: 0
+4x  arc       animation frames requested while idle: 0 before, 0 after use; will-change set while idle: auto
+4x  spotlight next button: 36 frames, mean 16.7ms, median 16.7ms, 95th 16.7ms, worst 16.7ms, over 33ms: 0
+4x  spotlight drag + settle: 115 frames, mean 17.4ms, median 16.7ms, 95th 16.8ms, worst 66.6ms, over 33ms: 1
+4x  spotlight animation frames requested while idle: 0 before, 0 after use; will-change set while idle: auto
+4x  arc       next button: 36 frames, mean 16.7ms, median 16.7ms, 95th 16.7ms, worst 16.8ms, over 33ms: 0
+4x  arc       drag + settle: 114 frames, mean 16.7ms, median 16.7ms, 95th 16.7ms, worst 16.8ms, over 33ms: 0
+4x  arc       animation frames requested while idle: 0 before, 0 after use; will-change set while idle: auto
+4x  spotlight next button: 36 frames, mean 16.7ms, median 16.7ms, 95th 16.7ms, worst 16.7ms, over 33ms: 0
+4x  spotlight drag + settle: 116 frames, mean 16.8ms, median 16.7ms, 95th 16.8ms, worst 33.3ms, over 33ms: 0
+4x  spotlight animation frames requested while idle: 0 before, 0 after use; will-change set while idle: auto

@@ -1,0 +1,16 @@
+== firefox 155.0 ==
+PASS  firefox arc: mouse drag turns it, no navigation  {"from":0,"to":3,"url":"demo.html"}
+PASS  firefox arc: drag out and back released on the link does not navigate  flat/demo.html
+FAIL  firefox arc: STALE DRAG (button-less hover after an edge press) does not move the carousel  {"moving":true,"changed":true}
+PASS  firefox arc: focusing item 2's link centres it  1
+PASS  firefox arc: ArrowRight moves on and focus follows  {"on":2,"focus":"See what's included in Redesigns & rescues"}
+INFO  firefox arc: computed user-select on the stage = none
+PASS  firefox arc: no console errors  
+PASS  firefox spot: mouse drag turns it, no navigation  {"from":0,"to":1,"url":"demo.html"}
+PASS  firefox spot: drag out and back released on the link does not navigate  flat/demo.html
+FAIL  firefox spot: STALE DRAG (button-less hover after an edge press) does not move the carousel  {"moving":true,"changed":true}
+PASS  firefox spot: focusing item 2's link centres it  1
+PASS  firefox spot: ArrowRight moves on and focus follows  {"on":2,"focus":"See the project: Corbel Books"}
+INFO  firefox spot: computed user-select on the stage = none
+PASS  firefox spot: no console errors  
+INFO  webkit: cannot launch here (browserType.launch: )

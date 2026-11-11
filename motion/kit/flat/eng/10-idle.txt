@@ -1,0 +1,30 @@
+== listeners added by the kit (count across 2 instances each) ==
+   2 arc: click on .kws-arc-ctl passive=true capture=false
+   2 arc: pointerdown on .kws-arc-list passive=true capture=false
+   2 arc: pointermove on .kws-arc-list passive=true capture=false
+   2 arc: pointerup on .kws-arc-list passive=true capture=false
+   2 arc: pointercancel on .kws-arc-list passive=true capture=false
+   2 arc: dragstart on .kws-arc-list passive=false capture=false
+   2 arc: click on .kws-arc passive=false capture=true
+   2 arc: focusin on .kws-arc-list passive=true capture=false
+   2 arc: keydown on .kws-arc passive=false capture=false
+   2 spot: click on .kws-spot-ctl passive=true capture=false
+   2 spot: pointerdown on .kws-spot-list passive=true capture=false
+   2 spot: pointermove on .kws-spot-list passive=true capture=false
+   2 spot: pointerup on .kws-spot-list passive=true capture=false
+   2 spot: pointercancel on .kws-spot-list passive=true capture=false
+   2 spot: dragstart on .kws-spot-list passive=false capture=false
+   2 spot: click on .kws-spot passive=false capture=true
+   2 spot: focusin on .kws-spot-list passive=true capture=false
+   2 spot: keydown on .kws-spot passive=false capture=false
+   wheel/touch/scroll listeners: 0  window/document-level listeners: none
+== timers set by anyone during load == []
+== new globals == ["kwsReady","plausible","KWS"]
+== rAF requested in 3s idle (top of page): 0
+   will-change at idle: auto
+== off-screen Next: {"top":2104,"vh":844,"moving":false,"on":1}  rAF requested: 0
+== spring in flight, then scrolled away: further rAF requested while off screen: 41  (ends when the spring settles)
+   after that, 1.5s more: 0
+== background tab: visibilityState=visible; rAF requested in 1.5s while in background: 20; still is-moving: false
+   back in front: is-moving false state 3
+errors: none

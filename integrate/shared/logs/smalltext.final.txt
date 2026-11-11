@@ -1,0 +1,191 @@
+
+http://localhost:8720/
+  13px CAPS span in hero-copy                                | Web studio & consulting
+  13px CAPS .nowrap in                                       | Baton Rouge, LA
+  13px CAPS .price-strip-label in price-strip                | Websites
+  12px small in phone-bar                                    | Text message
+  12px .thread-note in thread                                | Missed call
+  12px CAPS .flag in hero-cap                                | Example
+  12px CAPS .phone-label in hero-cap                         | What your caller sees
+  13px CAPS .eyebrow in                                      | What we do
+  13px CAPS .eyebrow in section-head                         | How automation works
+  12px CAPS .flag in vig                                     | Example
+  12px CAPS .notice-top in notice                            | Your phone
+  12px .notice-when in notice-top                            | now
+  12px span in cal                                           | This week
+  12px CAPS span in cal-grid                                 | Mon
+  12px .new in cal-day                                       | Booked online
+  12px span in leads                                         | One list
+  12px CAPS .lead-src in seq                                 | Website form
+  12px .pill in seq                                          | New
+  13px CAPS .label in bigfig-num                             | About
+  12px CAPS .flag in note                                    | Example
+  12px CAPS span in ticket                                   | Job ticket
+  12px CAPS .stamp in ticket                                 | You own
+  13px CAPS .tier-name in tier                               | One-page
+  13px CAPS .eyebrow in stack                                | Who you work with
+  12px CAPS span in bizcard                                  | Websites · Automation · Consulting
+  13px CAPS span in bizcard                                  | Founder
+  12px CAPS .footer-title in footer-col                      | Services
+
+http://localhost:8720/services/
+  13px CAPS .eyebrow in container                            | What we do
+  13px CAPS .price-strip-label in price-strip                | Websites
+  13px CAPS .eyebrow in                                      | Build your website
+  13px CAPS .eyebrow in svc-lead                             | Build your website
+  12px CAPS .phone-label in phone                            | Example: what your caller sees
+  12px small in phone-bar                                    | Text message
+  12px .thread-note in thread                                | Missed call
+  12px CAPS .footer-title in footer-col                      | Services
+
+http://localhost:8720/consulting/
+  13px CAPS .eyebrow in container                            | Consulting & automation
+  13px CAPS .price-strip-label in price-strip                | Setups
+  13px CAPS .label in toc                                    | On this page
+  13px CAPS .eyebrow in                                      | Why automate
+  13px CAPS caption in sheet                                 | An example week for a small servic
+  13px CAPS th in sheet                                      | Example
+  13px CAPS .num in                                          | Time a week
+  12px CAPS .flag in note                                    | Example
+  12px CAPS .phone-label in phone                            | Example: one missed call
+  12px small in phone-bar                                    | Text message
+  12px .fig-n in thread-note                                 | 1
+  12px .thread-note in thread                                | Missed call
+  12px .fig-n in bubble                                      | 2
+  12px span in cal                                           | Example week
+  12px CAPS span in cal-grid                                 | Mon
+  12px .fig-n in new                                         | 1
+  12px .new in cal-day                                       | Booked online
+  12px .fig-n in seq                                         | 2
+  12px span in leads                                         | Example list
+  12px CAPS .lead-src in seq                                 | Website form · Today
+  12px .pill in seq                                          | New
+  12px CAPS .phone-label in notices                          | Example: one quote request
+  12px .fig-n in notice                                      | 1
+  12px CAPS .notice-top in notice                            | Intake form
+  12px .notice-when in notice-top                            | now
+  12px .pill in notice-meta                                  | Waiting for your OK
+  13px CAPS .label in calc-group                             | Your business
+  12px CAPS span in receipt                                  | Your estimate
+  13px CAPS .eyebrow in section-head                         | How we work together
+  13px CAPS .label in payplan                                | Payment plan
+  13px .payplan-seg in payplan-bar                           | down
+  12px CAPS .footer-title in footer-col                      | Services
+
+http://localhost:8720/work/
+  13px CAPS .eyebrow in container                            | Our work
+  12px span in browser                                       | smilyssoftwash.com
+  13px CAPS .eyebrow in case-copy                            | Exterior cleaning · Local service 
+  13px CAPS .label in case-copy                              | What we built
+  12px CAPS .footer-title in footer-col                      | Services
+
+http://localhost:8720/process/
+  13px CAPS .eyebrow in container                            | How it works
+  12px CAPS span in ticket                                   | Job ticket
+  12px CAPS .stamp in ticket                                 | No surprises
+  12px CAPS .footer-title in footer-col                      | Services
+
+http://localhost:8720/pricing/
+  13px CAPS .eyebrow in                                      | Pricing
+  13px CAPS .label in toc                                    | On this page
+  13px CAPS .eyebrow in section-head                         | Websites
+  13px CAPS th in container                                  | What it is
+  13px CAPS .spec-name in                                    | One-page
+  13px CAPS .cell-label in                                   | Live in
+  13px CAPS .spec-name in is-popular                         | Business
+  12px CAPS .popular in spec-name                            | Most popular
+  13px CAPS .eyebrow in reveal                               | How you pay
+  13px CAPS .label in payplan                                | Payment plan, shown on Starter
+  13px .payplan-seg in payplan-bar                           | down
+  13px CAPS .pl-group in reveal                              | Start here
+  12px CAPS span in receipt                                  | Launch bundle
+  13px CAPS caption in container                             | Care plans, by the month
+  13px CAPS .num in                                          | Price
+  13px CAPS .label in card                                   | Every plan includes
+  12px CAPS .footer-title in footer-col                      | Services
+
+http://localhost:8720/faq/
+  13px CAPS .eyebrow in container                            | FAQ
+  13px CAPS .label in toc                                    | On this page
+  12px CAPS .footer-title in footer-col                      | Services
+
+http://localhost:8720/contact/
+  13px CAPS .eyebrow in                                      | Get in touch
+  13px CAPS .label in page-head-aside                        | Rather talk it through first?
+  12px CAPS span in ticket                                   | Enquiry form
+  12px CAPS .req in                                          | *
+  12px CAPS .stamp in ticket                                 | No
+  12px CAPS .footer-title in footer-col                      | Services
+
+http://localhost:8720/about/
+  13px CAPS .eyebrow in                                      | About
+  12px CAPS span in bizcard                                  | Websites · Automation · Consulting
+  13px CAPS span in bizcard                                  | Founder
+  12px CAPS .footer-title in footer-col                      | Services
+
+http://localhost:8720/start/
+  13px CAPS .eyebrow in head-copy                            | Christian Knight, Baton Rouge
+  13px CAPS .price-strip-label in price-strip                | Websites
+  13px CAPS .pl-group in                                     | Your website
+  13px CAPS .eyebrow in                                      | Pricing at a glance
+  13px CAPS .tier-name in tier                               | One-page
+  13px CAPS .eyebrow in section-head                         | How it works
+  12px CAPS span in ticket                                   | Job ticket
+  12px CAPS .stamp in ticket                                 | No
+
+http://localhost:8720/web-design-baton-rouge/
+  13px CAPS .nowrap in                                       | Areas we serve
+  13px CAPS .price-strip-label in price-strip                | Websites
+  12px CAPS .stamp in card                                   | Home
+  13px CAPS .tier-name in tier                               | One-page
+  13px CAPS .eyebrow in section-head                         | What we build
+  12px CAPS .footer-title in footer-col                      | Services
+
+http://localhost:8720/web-design-denham-springs/
+  13px CAPS .nowrap in                                       | Areas we serve
+  13px CAPS .price-strip-label in price-strip                | Websites
+  12px CAPS .stamp in card                                   | Meet in
+  13px CAPS .tier-name in tier                               | One-page
+  12px CAPS .footer-title in footer-col                      | Services
+
+http://localhost:8720/web-design-gonzales/
+  13px CAPS .nowrap in                                       | Areas we serve
+  13px CAPS .price-strip-label in price-strip                | Websites
+  12px CAPS .stamp in card                                   | Meet in
+  13px CAPS .tier-name in tier                               | One-page
+  12px CAPS .footer-title in footer-col                      | Services
+
+http://localhost:8720/web-design-prairieville/
+  13px CAPS .nowrap in                                       | Areas we serve
+  13px CAPS .price-strip-label in price-strip                | Websites
+  12px CAPS .stamp in card                                   | Meet in
+  13px CAPS .tier-name in tier                               | One-page
+  13px CAPS .eyebrow in section-head                         | Local work
+  12px CAPS .footer-title in footer-col                      | Services
+
+http://localhost:8720/privacy/
+  13px CAPS .eyebrow in container                            | Privacy
+  13px CAPS .label in toc                                    | On this page
+  13px CAPS .label in prose                                  | Last updated 2 October 2026
+  12px CAPS .footer-title in footer-col                      | Services
+
+http://localhost:8720/terms/
+  13px CAPS .eyebrow in container                            | Terms
+  13px CAPS .label in toc                                    | On this page
+  13px CAPS .label in prose                                  | Last updated 31 October 2026
+  12px CAPS .footer-title in footer-col                      | Services
+
+http://localhost:8720/checkout/
+  13px CAPS .eyebrow in container                            | Checkout
+  13px CAPS .label in card                                   | Payment details
+  12px CAPS .footer-title in footer-col                      | Services
+
+http://localhost:8720/checkout/success/
+  13px CAPS .eyebrow in container                            | Checkout
+  13px CAPS .eyebrow in                                      | What happens next
+  12px CAPS .footer-title in footer-col                      | Services
+
+http://localhost:8720/404.html
+  13px CAPS .label in nf-more                                | Or go straight to
+
+no text under 12px and no target under 44px

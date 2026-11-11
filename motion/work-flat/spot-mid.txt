@@ -1,0 +1,32 @@
+	// On resize. A neighbour stands beside the middle card, or tucks behind it where there is no room. Between
+	// those places a card swings out (bulge), so two cards changing places part before they cross
+	const measure = () => {
+		const w = items[0].offsetWidth, f = frames[0].offsetWidth; // the list itself runs on into the page gutter
+		small = w < 560 ? .84 : .76;
+		shift = min(f * (1 + small) / 2 + 24, (w - f * small) / 2);
+		bulge = max(0, f * .47 - shift / 2);
+		step = shift + PI * bulge;
+		ctl.replaceChildren(prev, ...(w < n * 52 + 110 ? [count] : dots), next);
+		render();
+	};
+
+	const render = () => {
+		frames.forEach((frame, i) => {
+			const d = wrap(i - pos), a = abs(d), m = min(a, 1), o = min(1, 3 - a * 2), s = frame.style;
+			s.visibility = o > 0 ? '' : 'hidden';
+			if (o > 0) {
+				s.opacity = fix(o); s.zIndex = a < .5 ? 2 : a > 1 ? 0 : 1;
+				s.setProperty('--v', fix(m * .45)); // the veil
+				s.transform = `translate(${fix(sign(d) * (shift * m + bulge * sin(PI * m)))}px) scale(${fix(1 - (1 - small) * m - (a - m) * .3)})`;
+			}
+			caps[i].style.opacity = fix(max(0, 1 - a * 2));
+		});
+		const i = mod(round(pos));
+		if (i === cur) return;
+		cur = i; count.textContent = of(i);
+		items.forEach((li, j) => {
+			li.classList.toggle('is-on', j === i); dots[j].tabIndex = j === i ? 0 : -1;
+			set(dots[j], 'aria-current', j === i);
+		});
+	};
+

@@ -1,0 +1,13 @@
+viewport 1440x900 @1x, CPU throttle 4x
+  first screen (wash): page frame interval median 16.7ms, p95 16.8ms, max 33.3ms, 0 of 240 over 50ms | kit frame callback median 0.1ms, p95 4.1ms, max 8.6ms (239 calls)
+     layers drawn: wash 407x198 30.0/s
+  bookmark cards (ribbons): page frame interval median 16.7ms, p95 16.8ms, max 16.8ms, 0 of 243 over 50ms | kit frame callback median 0.1ms, p95 4.2ms, max 15.8ms (242 calls)
+     layers drawn: ribbon 407x198 20.3/s; ribbon 407x198 20.0/s; ribbon 407x198 20.0/s
+  step folders: page frame interval median 16.7ms, p95 16.8ms, max 33.4ms, 0 of 241 over 50ms | kit frame callback median 0.1ms, p95 2.6ms, max 8.0ms (240 calls)
+     layers drawn: ribbon 407x198 30.0/s
+  package stack: page frame interval median 16.7ms, p95 16.7ms, max 16.8ms, 0 of 243 over 50ms | kit frame callback median 0.0ms, p95 0.0ms, max 0.0ms (0 calls)
+     layers drawn: none
+  other brand: page frame interval median 16.7ms, p95 16.8ms, max 50.0ms, 0 of 234 over 50ms | kit frame callback median 0.1ms, p95 5.4ms, max 31.7ms (233 calls)
+     layers drawn: ribbon 579x198 12.3/s; ribbon 579x198 12.3/s; ribbon 579x198 12.3/s; wash 579x198 12.3/s
+  closing band: page frame interval median 16.7ms, p95 66.7ms, max 166.7ms, 11 of 179 over 50ms | kit frame callback median 0.1ms, p95 5.6ms, max 20.4ms (178 calls)
+     layers drawn: band 579x207 11.5/s

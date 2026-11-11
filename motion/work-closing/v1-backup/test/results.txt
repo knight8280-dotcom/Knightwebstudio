@@ -1,0 +1,113 @@
+== sizes (bytes; budget 3,500 per stylesheet) ==
+ 3485 closing.css
+ 2218 appt.css
+ 3103 footer.css
+ 2849 skyline.css
+ 3791 footer.inc
+ 1185 footer-start.inc
+  825 footer-bare.inc
+ 1840 skyline.inc
+19296 total
+
+== rules: hex colours, !important, site tokens used bare, widths in media queries ==
+closing.css: hex 0, important 0, bare site tokens 0, media:  1 @media (hover:hover); 1 @media (min-width:600px); 1 @media (min-width:980px);
+appt.css: hex 0, important 0, bare site tokens 0, media:  1 @media (hover:hover);
+footer.css: hex 0, important 0, bare site tokens 0, media:  1 @media (hover:hover); 1 @media (min-width:760px);
+skyline.css: hex 0, important 0, bare site tokens 0, media:  1 @media (prefers-reduced-motion:no-preference);
+
+== sideways scroll, 360 to 1920 in 20px steps ==
+http://localhost:8730/kit/closing/demo.html no horizontal overflow from 360 to 1920
+http://localhost:8730/kit/closing/portable.html no horizontal overflow from 360 to 1920
+http://localhost:8730/kit/closing/test/pricing-with-kit.html no horizontal overflow from 360 to 1920
+http://localhost:8730/kit/closing/test/start-with-kit.html no horizontal overflow from 360 to 1920
+http://localhost:8730/kit/closing/test/notfound-with-kit.html no horizontal overflow from 360 to 1920
+
+== text sizes and targets at 390px (site tool) ==
+http://localhost:8730/kit/closing/demo.html
+  13px CAPS .kws-close-kicker in kws-close-copy              | The discovery call
+  12px CAPS span in kws-appt                                 | Appointment card
+  12px CAPS .kws-foot-title in kws-foot-wide                 | Contact
+  12px CAPS .kws-foot-title in                               | Services
+http://localhost:8730/kit/closing/test/pricing-with-kit.html
+  13px CAPS .kws-close-kicker in kws-close-copy              | The discovery call
+  12px CAPS span in kws-appt                                 | Appointment card
+  12px CAPS .kws-foot-title in kws-foot-wide                 | Contact
+  12px CAPS .kws-foot-title in                               | Services
+http://localhost:8730/kit/closing/test/start-with-kit.html
+  13px CAPS .kws-close-kicker in kws-close-copy              | The discovery call
+  12px CAPS span in kws-appt                                 | Appointment card
+http://localhost:8730/kit/closing/test/notfound-with-kit.html
+no text under 12px and no target under 44px
+
+== contract checks ==
+PASS  no console errors: demo.html
+PASS  no console errors: portable.html
+PASS  no console errors: test/pricing-with-kit.html
+PASS  no console errors: test/start-with-kit.html
+PASS  no console errors: test/notfound-with-kit.html
+PASS  script off: demo.html: 5 booking link(s) go to /contact/, 0 dead button(s) showing, nothing hidden, skyline 54px
+PASS  script off: test/pricing-with-kit.html: 1 booking link(s) go to /contact/, 0 dead button(s) showing, nothing hidden, skyline 54px
+PASS  script off: test/start-with-kit.html: 1 booking link(s) go to /contact/, 0 dead button(s) showing, nothing hidden, skyline 54px
+PASS  name rises with the scroll only, 390px: entering: 32.7px down and unchanged after 1.2s; at the page end: 0.00px, progress 1.000
+PASS  motion paused (data-motion="off"), 390px: 0 animation(s), name at 0px
+PASS  reduced motion, 390px: 0 animation(s), name at 0px, html data-motion="off" (set by shader.js), 1 shader layer(s) showing a still frame
+PASS  name rises with the scroll only, 1440px: entering: 91.6px down and unchanged after 1.2s; at the page end: 0.00px, progress 1.000
+PASS  motion paused (data-motion="off"), 1440px: 0 animation(s), name at 0px
+PASS  reduced motion, 1440px: 0 animation(s), name at 0px, html data-motion="off" (set by shader.js), 2 shader layer(s) showing a still frame
+PASS  keyboard walk, pricing page: 25 stops in reading order, each with a 3px outline and scrolled into view: Book a free 30-minute call > Send an enquiry > (225) 255-0837 > KnightWebstudio > (225) 255-0837 > knightwebstudio1@gmail.com > Start a project → > Website design > Consulting & automation > E-commerce > SEO > Care plans > About > Our work > Process > Pricing > FAQ > Baton Rouge > Gonzales > Prairieville > Denham Springs > Pause background motion > Privacy > Terms > Back to top ↑
+PASS  the skyline scene holds nothing focusable and is aria-hidden: true
+PASS  focus ring colours: {"band button":"rgb(240, 195, 105)","card button":"rgb(44, 70, 196)","footer link":"rgb(240, 195, 105)"}
+PASS  structure: band is a section named by its h2 ("Still deciding? Book the free call."); footer has no headings and four labelled navs: Contact (4), Services (5), Company (5), Areas we serve (7); canvases hidden from assistive tech; card is a 4-row description list; tel links tel:+12252550837,tel:+12252550837
+PASS  main.js still fills #year: 2026
+PASS  booking button on the card is wired by main.js: https://calendly.com/knightwebstudio1/30min _blank noopener
+PASS  phone bar shows mid-page and gets out of the way over the footer: mid-page true, at the footer false
+PASS  theme button re-colours band and footer: rgb(36, 56, 159) / rgb(22, 27, 44)  ->  rgb(27, 42, 120) / rgb(12, 15, 24)
+PASS  open phone menu still takes the footer out of reach (main.js finds .site-footer): true
+PASS  360px: targets and type, demo.html: every link and button at least 44x44, smallest text 12px, page 0px wider than the screen
+PASS  360px: targets and type, portable.html: every link and button at least 44x44, smallest text 12px, page 0px wider than the screen
+PASS  no layout shift from the kit: demo.html at 390px: kit elements shifted 0 time(s); whole page score 0.0000
+PASS  no layout shift from the kit: demo.html at 1440px: kit elements shifted 0 time(s); whole page score 0.0000
+PASS  no layout shift from the kit: test/pricing-with-kit.html at 390px: kit elements shifted 0 time(s); whole page score 0.0000
+PASS  no layout shift from the kit: test/pricing-with-kit.html at 1440px: kit elements shifted 0 time(s); whole page score 0.0000
+PASS  bands and footers removed from the page: 7 canvases before; after removal 0 animation frames asked for in 2s, 0 errors (the kit's own files hold no script, listeners or observers)
+PASS  inserted after load, twice on a page: three copies, heights 292, 292, 292px
+
+all checks passed
+
+== touch ==
+PASS  swipe up from the band title: page scrolled 245px of 260; sideways swipe moved the page 0px; still on the page
+PASS  swipe up from the card booking button: page scrolled 245px of 260; sideways swipe moved the page 0px; still on the page
+PASS  swipe up from the band enquiry button: page scrolled 327px of 260; sideways swipe moved the page 0px; still on the page
+PASS  swipe up from the footer phone number: page scrolled 388px of 260; sideways swipe moved the page 0px; still on the page
+PASS  swipe up from the footer link: page scrolled 317px of 260; sideways swipe moved the page 0px; still on the page
+PASS  swipe down from the skyline scene: page scrolled back 296px of 240
+PASS  tap on "Send an enquiry" follows the link: /contact/
+
+== contrast against the painted pixels: demo page (site palette and the client palette) ==
+light 390  still                77 texts, lowest 4.91:1 (needs 4.5) "kws-close-kicker in kws-close.kws-shader-host | Free · 30 minutes · No pitch"
+light 390  shader live, 6 frames  77 texts, lowest 4.58:1 (needs 4.5) "kws-close-kicker in kws-close.kws-shader-host | Free · 30 minutes · No pitch"
+light 1440 still                77 texts, lowest 5.29:1 (needs 4.5) "kws-close-kicker in kws-close.kws-shader-host | Free · 30 minutes · No pitch"
+light 1440 shader live, 6 frames  77 texts, lowest 4.55:1 (needs 4.5) "kws-close-kicker in kws-close.kws-close--card.kws-shader-host | The discovery call"
+dark  390  still                77 texts, lowest 5.19:1 (needs 4.5) "kws-close-kicker in kws-close.kws-shader-host | Free · 30 minutes · No pitch"
+dark  390  shader live, 6 frames  77 texts, lowest 4.58:1 (needs 4.5) "kws-close-kicker in kws-close.kws-shader-host | Free · 30 minutes · No pitch"
+dark  1440 still                77 texts, lowest 5.84:1 (needs 4.5) "kws-close-kicker in kws-close.kws-shader-host | Free · 30 minutes · No pitch"
+dark  1440 shader live, 6 frames  77 texts, lowest 4.91:1 (needs 4.5) "kws-close-kicker in kws-close.kws-close--card.kws-shader-host | The discovery call"
+all text passes AA against the pixels behind it
+
+== contrast against the painted pixels: bare page, another brand ==
+light 390  still                50 texts, lowest 5.26:1 (needs 4.5) "dd in kws-appt | [Free]"
+light 1440 still                50 texts, lowest 5.26:1 (needs 4.5) "dd in kws-appt | [Free]"
+all text passes AA against the pixels behind it
+
+== frame times ==
+1x CPU  today   1845 frames in 3 passes: mean 16.7ms, median 16.7ms, p95 16.7ms, p99 16.8ms, over 34ms: 1 (0.05%), worst per pass 100/17/17ms; reached the end: true; idle: 0 frames asked for in 6s
+1x CPU  kit     2167 frames in 3 passes: mean 16.7ms, median 16.7ms, p95 16.7ms, p99 16.8ms, over 34ms: 0 (0.00%), worst per pass 17/17/17ms; reached the end: true; idle: 0 frames asked for in 6s
+1x CPU  kit+bg  1880 frames in 3 passes: mean 16.7ms, median 16.7ms, p95 16.8ms, p99 16.8ms, over 34ms: 0 (0.00%), worst per pass 33/33/33ms; reached the end: true; idle: 0 frames asked for in 6s
+4x CPU  today   1850 frames in 3 passes: mean 16.8ms, median 16.7ms, p95 16.7ms, p99 16.8ms, over 34ms: 1 (0.05%), worst per pass 33/133/33ms; reached the end: true; idle: 0 frames asked for in 6s
+4x CPU  kit     2121 frames in 3 passes: mean 16.8ms, median 16.7ms, p95 16.8ms, p99 16.8ms, over 34ms: 3 (0.14%), worst per pass 33/33/117ms; reached the end: true; idle: 0 frames asked for in 6s
+4x CPU  kit+bg  1898 frames in 3 passes: mean 17.0ms, median 16.7ms, p95 16.8ms, p99 33.3ms, over 34ms: 6 (0.32%), worst per pass 100/100/67ms; reached the end: true; idle: 0 frames asked for in 6s
+
+== other browsers ==
+PASS  firefox 155.0 at 390px: page 0px wider than the screen; footer grids 2+2 columns; skyline 54px, name 381px wide and at rest (0px) at the page end; container units true, scroll-linked rise false, colour mixing true; year 2026
+PASS  firefox 155.0 at 1440px: page 0px wider than the screen; footer grids 4+4 columns; skyline 121px, name 1407px wide and at rest (0px) at the page end; container units true, scroll-linked rise false, colour mixing true; year 2026
+SKIP  webkit: cannot launch here (Error: browserType.launch: )

@@ -1,0 +1,26 @@
+{
+  "404.html__mobile-light": {
+    "height": 1257,
+    "overflowX": 0,
+    "stops": 2,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "404.html__desktop-light": {
+    "height": 1316,
+    "overflowX": 0,
+    "stops": 2,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "404.html__desktop-dark": {
+    "height": 1316,
+    "overflowX": 0,
+    "stops": 2,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  }
+}

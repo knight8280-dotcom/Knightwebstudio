@@ -1,0 +1,7 @@
+390x844 at 3x, CPU throttled 4x, closing band, load 12.9
+all on               frames  446  median 16.7  p95  16.8  worst  100.0  over 50ms 7
+smooth glints (old)  frames  481  median 16.7  p95  16.7  worst   16.8  over 50ms 0
+no glints            frames  476  median 16.7  p95  16.8  worst   33.4  over 50ms 0
+glints only          frames  480  median 16.7  p95  16.7  worst   16.8  over 50ms 0
+paused               frames  478  median 16.7  p95  16.8  worst   33.3  over 50ms 0
+load after 7.4

@@ -1,0 +1,306 @@
+{
+  "home__mobile-light": {
+    "height": 11942,
+    "overflowX": 0,
+    "stops": 16,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "services__mobile-light": {
+    "height": 5700,
+    "overflowX": 0,
+    "stops": 8,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "consulting__mobile-light": {
+    "height": 13936,
+    "overflowX": 0,
+    "stops": 19,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "work__mobile-light": {
+    "height": 4459,
+    "overflowX": 0,
+    "stops": 6,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "process__mobile-light": {
+    "height": 3315,
+    "overflowX": 0,
+    "stops": 5,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "pricing__mobile-light": {
+    "height": 10378,
+    "overflowX": 0,
+    "stops": 14,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "faq__mobile-light": {
+    "height": 3663,
+    "overflowX": 0,
+    "stops": 5,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "contact__mobile-light": {
+    "height": 3702,
+    "overflowX": 0,
+    "stops": 5,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "about__mobile-light": {
+    "height": 5158,
+    "overflowX": 0,
+    "stops": 7,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "start__mobile-light": {
+    "height": 6134,
+    "overflowX": 0,
+    "stops": 9,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "web-design-baton-rouge__mobile-light": {
+    "height": 7416,
+    "overflowX": 0,
+    "stops": 10,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "web-design-denham-springs__mobile-light": {
+    "height": 7210,
+    "overflowX": 0,
+    "stops": 10,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "web-design-gonzales__mobile-light": {
+    "height": 7362,
+    "overflowX": 0,
+    "stops": 10,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "web-design-prairieville__mobile-light": {
+    "height": 7360,
+    "overflowX": 0,
+    "stops": 10,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "privacy__mobile-light": {
+    "height": 4971,
+    "overflowX": 0,
+    "stops": 7,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "terms__mobile-light": {
+    "height": 5236,
+    "overflowX": 0,
+    "stops": 7,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "checkout__mobile-light": {
+    "height": 2149,
+    "overflowX": 0,
+    "stops": 3,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "checkout_success__mobile-light": {
+    "height": 2218,
+    "overflowX": 0,
+    "stops": 3,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "404.html__mobile-light": {
+    "height": 1239,
+    "overflowX": 0,
+    "stops": 2,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "home__desktop-light": {
+    "height": 9220,
+    "overflowX": 0,
+    "stops": 12,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "services__desktop-light": {
+    "height": 4262,
+    "overflowX": 0,
+    "stops": 6,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "consulting__desktop-light": {
+    "height": 10045,
+    "overflowX": 0,
+    "stops": 13,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "work__desktop-light": {
+    "height": 3488,
+    "overflowX": 0,
+    "stops": 5,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "process__desktop-light": {
+    "height": 2709,
+    "overflowX": 0,
+    "stops": 4,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "pricing__desktop-light": {
+    "height": 5988,
+    "overflowX": 0,
+    "stops": 8,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "faq__desktop-light": {
+    "height": 3036,
+    "overflowX": 0,
+    "stops": 4,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "contact__desktop-light": {
+    "height": 2253,
+    "overflowX": 0,
+    "stops": 3,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "about__desktop-light": {
+    "height": 3836,
+    "overflowX": 0,
+    "stops": 5,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "start__desktop-light": {
+    "height": 4663,
+    "overflowX": 0,
+    "stops": 6,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "web-design-baton-rouge__desktop-light": {
+    "height": 5760,
+    "overflowX": 0,
+    "stops": 8,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "web-design-denham-springs__desktop-light": {
+    "height": 5727,
+    "overflowX": 0,
+    "stops": 8,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "web-design-gonzales__desktop-light": {
+    "height": 5580,
+    "overflowX": 0,
+    "stops": 7,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "web-design-prairieville__desktop-light": {
+    "height": 5670,
+    "overflowX": 0,
+    "stops": 7,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "privacy__desktop-light": {
+    "height": 3551,
+    "overflowX": 0,
+    "stops": 5,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "terms__desktop-light": {
+    "height": 3840,
+    "overflowX": 0,
+    "stops": 5,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "checkout__desktop-light": {
+    "height": 1493,
+    "overflowX": 0,
+    "stops": 2,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "checkout_success__desktop-light": {
+    "height": 1635,
+    "overflowX": 0,
+    "stops": 2,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "404.html__desktop-light": {
+    "height": 1062,
+    "overflowX": 0,
+    "stops": 2,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  }
+}

@@ -1,0 +1,131 @@
+== price strip: right edge of the figures against the column (px over), and link box width
+/ 
+  360:{"numsW":283,"colW":320,"over":-37,"linkW":320,"tag":"A","name":"Websites $1,000$2,000$4,000$8,000 Four fixed packages"}
+  375:{"numsW":283,"colW":335,"over":-52,"linkW":335,"tag":"A","name":"Websites $1,000$2,000$4,000$8,000 Four fixed packages"}
+  380:{"numsW":353,"colW":340,"over":13,"linkW":340,"tag":"A","name":"Websites $1,000$2,000$4,000$8,000 Four fixed packages"}
+  390:{"numsW":353,"colW":350,"over":3,"linkW":350,"tag":"A","name":"Websites $1,000$2,000$4,000$8,000 Four fixed packages"}
+  393:{"numsW":353,"colW":353,"over":0,"linkW":353,"tag":"A","name":"Websites $1,000$2,000$4,000$8,000 Four fixed packages"}
+  412:{"numsW":353,"colW":371,"over":-18,"linkW":371,"tag":"A","name":"Websites $1,000$2,000$4,000$8,000 Four fixed packages"}
+  430:{"numsW":353,"colW":387,"over":-34,"linkW":387,"tag":"A","name":"Websites $1,000$2,000$4,000$8,000 Four fixed packages"}
+  1280:{"numsW":353,"colW":646,"over":-201,"linkW":646,"tag":"A","name":"Websites $1,000$2,000$4,000$8,000 Four fixed packages"}
+/services/ 
+  360:{"numsW":283,"colW":320,"over":-37,"linkW":320,"tag":"A","name":"Websites $1,000 $2,000 $4,000 $8,000 All nine services, pric"}
+  375:{"numsW":283,"colW":335,"over":-52,"linkW":335,"tag":"A","name":"Websites $1,000 $2,000 $4,000 $8,000 All nine services, pric"}
+  380:{"numsW":353,"colW":340,"over":13,"linkW":340,"tag":"A","name":"Websites $1,000 $2,000 $4,000 $8,000 All nine services, pric"}
+  390:{"numsW":353,"colW":350,"over":3,"linkW":350,"tag":"A","name":"Websites $1,000 $2,000 $4,000 $8,000 All nine services, pric"}
+  393:{"numsW":353,"colW":353,"over":0,"linkW":353,"tag":"A","name":"Websites $1,000 $2,000 $4,000 $8,000 All nine services, pric"}
+  412:{"numsW":353,"colW":371,"over":-18,"linkW":371,"tag":"A","name":"Websites $1,000 $2,000 $4,000 $8,000 All nine services, pric"}
+  430:{"numsW":353,"colW":387,"over":-34,"linkW":387,"tag":"A","name":"Websites $1,000 $2,000 $4,000 $8,000 All nine services, pric"}
+  1280:{"numsW":353,"colW":1184,"over":-739,"linkW":1184,"tag":"A","name":"Websites $1,000 $2,000 $4,000 $8,000 All nine services, pric"}
+/consulting/ 
+  360:{"numsW":174,"colW":320,"over":-72,"linkW":320,"tag":"A","name":"Setups $500$750$1,500 Fixed, published prices"}
+  375:{"numsW":174,"colW":335,"over":-87,"linkW":335,"tag":"A","name":"Setups $500$750$1,500 Fixed, published prices"}
+  380:{"numsW":219,"colW":340,"over":-47,"linkW":340,"tag":"A","name":"Setups $500$750$1,500 Fixed, published prices"}
+  390:{"numsW":219,"colW":350,"over":-57,"linkW":350,"tag":"A","name":"Setups $500$750$1,500 Fixed, published prices"}
+  393:{"numsW":219,"colW":353,"over":-60,"linkW":353,"tag":"A","name":"Setups $500$750$1,500 Fixed, published prices"}
+  412:{"numsW":219,"colW":371,"over":-78,"linkW":371,"tag":"A","name":"Setups $500$750$1,500 Fixed, published prices"}
+  430:{"numsW":219,"colW":387,"over":-94,"linkW":387,"tag":"A","name":"Setups $500$750$1,500 Fixed, published prices"}
+  1280:{"numsW":219,"colW":1184,"over":-891,"linkW":1184,"tag":"A","name":"Setups $500$750$1,500 Fixed, published prices"}
+/start/ 
+  360:{"numsW":283,"colW":320,"over":-37,"linkW":320,"tag":"A","name":"Websites $1,000$2,000$4,000$8,000 Four fixed packages"}
+  375:{"numsW":283,"colW":335,"over":-52,"linkW":335,"tag":"A","name":"Websites $1,000$2,000$4,000$8,000 Four fixed packages"}
+  380:{"numsW":353,"colW":340,"over":13,"linkW":340,"tag":"A","name":"Websites $1,000$2,000$4,000$8,000 Four fixed packages"}
+  390:{"numsW":353,"colW":350,"over":3,"linkW":350,"tag":"A","name":"Websites $1,000$2,000$4,000$8,000 Four fixed packages"}
+  393:{"numsW":353,"colW":353,"over":0,"linkW":353,"tag":"A","name":"Websites $1,000$2,000$4,000$8,000 Four fixed packages"}
+  412:{"numsW":353,"colW":371,"over":-18,"linkW":371,"tag":"A","name":"Websites $1,000$2,000$4,000$8,000 Four fixed packages"}
+  430:{"numsW":353,"colW":387,"over":-34,"linkW":387,"tag":"A","name":"Websites $1,000$2,000$4,000$8,000 Four fixed packages"}
+  1280:{"numsW":353,"colW":691,"over":-246,"linkW":691,"tag":"A","name":"Websites $1,000$2,000$4,000$8,000 Four fixed packages"}
+/web-design-baton-rouge/ 
+  360:{"numsW":283,"colW":320,"over":-37,"linkW":320,"tag":"A","name":"Websites $1,000$2,000$4,000$8,000 Fixed, published prices"}
+  375:{"numsW":283,"colW":335,"over":-52,"linkW":335,"tag":"A","name":"Websites $1,000$2,000$4,000$8,000 Fixed, published prices"}
+  380:{"numsW":353,"colW":340,"over":13,"linkW":340,"tag":"A","name":"Websites $1,000$2,000$4,000$8,000 Fixed, published prices"}
+  390:{"numsW":353,"colW":350,"over":3,"linkW":350,"tag":"A","name":"Websites $1,000$2,000$4,000$8,000 Fixed, published prices"}
+  393:{"numsW":353,"colW":353,"over":0,"linkW":353,"tag":"A","name":"Websites $1,000$2,000$4,000$8,000 Fixed, published prices"}
+  412:{"numsW":353,"colW":371,"over":-18,"linkW":371,"tag":"A","name":"Websites $1,000$2,000$4,000$8,000 Fixed, published prices"}
+  430:{"numsW":353,"colW":387,"over":-34,"linkW":387,"tag":"A","name":"Websites $1,000$2,000$4,000$8,000 Fixed, published prices"}
+  1280:{"numsW":353,"colW":1184,"over":-108,"linkW":554,"tag":"A","name":"Websites $1,000$2,000$4,000$8,000 Fixed, published prices"}
+
+== price-list rows: price on another line than the name while a leader is drawn
+/consulting/ 360 1 row(s): ["Online booking & reminders | $750 | leader 52px"]
+
+== footer: e-mail link on two lines
+760 {"h":48,"w":153,"lines":1,"colW":153}
+800 {"h":48,"w":162,"lines":1,"colW":162}
+820 {"h":48,"w":167,"lines":1,"colW":167}
+900 {"h":48,"w":185,"lines":1,"colW":185}
+960 {"h":48,"w":198,"lines":1,"colW":198}
+979 {"h":44,"w":202,"lines":1,"colW":203}
+980 {"h":44,"w":202,"lines":1,"colW":203}
+1100 {"h":44,"w":202,"lines":1,"colW":211}
+
+== business card tagline lines
+/ 360 {"lines":2,"cardW":332,"onPaper":false,"tilt":true}
+/ 375 {"lines":2,"cardW":347,"onPaper":false,"tilt":true}
+/ 390 {"lines":2,"cardW":362,"onPaper":false,"tilt":true}
+/ 412 {"lines":1,"cardW":382,"onPaper":false,"tilt":true}
+/ 430 {"lines":1,"cardW":398,"onPaper":false,"tilt":true}
+/ 980 {"lines":1,"cardW":405,"onPaper":false,"tilt":true}
+/ 1040 {"lines":1,"cardW":428,"onPaper":false,"tilt":true}
+/ 1100 {"lines":1,"cardW":428,"onPaper":false,"tilt":true}
+/ 1440 {"lines":1,"cardW":428,"onPaper":false,"tilt":true}
+/about/ 360 {"lines":1,"cardW":331,"onPaper":true,"tilt":true}
+/about/ 375 {"lines":1,"cardW":346,"onPaper":true,"tilt":true}
+/about/ 390 {"lines":1,"cardW":361,"onPaper":true,"tilt":true}
+/about/ 412 {"lines":1,"cardW":382,"onPaper":true,"tilt":true}
+/about/ 430 {"lines":1,"cardW":398,"onPaper":true,"tilt":true}
+/about/ 980 {"lines":1,"cardW":356,"onPaper":true,"tilt":true}
+/about/ 1040 {"lines":1,"cardW":379,"onPaper":true,"tilt":true}
+/about/ 1100 {"lines":1,"cardW":403,"onPaper":true,"tilt":true}
+/about/ 1440 {"lines":1,"cardW":428,"onPaper":true,"tilt":true}
+
+== closing band: appointment card width from 980px (should be 21rem = 336)
+/ 980 {"apptW":258,"gap":59,"copyW":567}
+/ 1100 {"apptW":258,"gap":66,"copyW":680}
+/ 1280 {"apptW":259,"gap":166,"copyW":758}
+/ 1440 {"apptW":259,"gap":222,"copyW":758}
+/ 1920 {"apptW":259,"gap":222,"copyW":758}
+/pricing/ 980 {"apptW":258,"gap":59,"copyW":567}
+/pricing/ 1100 {"apptW":258,"gap":66,"copyW":680}
+/pricing/ 1280 {"apptW":259,"gap":166,"copyW":758}
+/pricing/ 1440 {"apptW":259,"gap":222,"copyW":758}
+/pricing/ 1920 {"apptW":259,"gap":222,"copyW":758}
+/web-design-gonzales/ 980 {"apptW":258,"gap":59,"copyW":567}
+/web-design-gonzales/ 1100 {"apptW":258,"gap":66,"copyW":680}
+/web-design-gonzales/ 1280 {"apptW":259,"gap":165,"copyW":759}
+/web-design-gonzales/ 1440 {"apptW":259,"gap":221,"copyW":759}
+/web-design-gonzales/ 1920 {"apptW":259,"gap":221,"copyW":759}
+/start/ 980 {"apptW":258,"gap":59,"copyW":567}
+/start/ 1100 {"apptW":258,"gap":66,"copyW":680}
+/start/ 1280 {"apptW":259,"gap":211,"copyW":714}
+/start/ 1440 {"apptW":259,"gap":267,"copyW":714}
+/start/ 1920 {"apptW":259,"gap":267,"copyW":714}
+
+== payment plan: deposit block as a share of the bar
+/pricing/ 390 ["NaN% of 0 segs 0/0","100.0% of 350 segs 350/114/114/114"]
+/pricing/ 600 ["49.6% of 540 segs 268/268","49.6% of 540 segs 268/87/87/87"]
+/pricing/ 820 ["49.7% of 738 segs 367/367","49.7% of 738 segs 367/120/120/120"]
+/pricing/ 1024 ["49.5% of 433 segs 215/215","49.5% of 433 segs 215/69/69/69"]
+/pricing/ 1440 ["49.7% of 580 segs 288/288","49.7% of 580 segs 288/93/93/93"]
+/consulting/ 390 ["100.0% of 302 segs 302/98/98/98"]
+/consulting/ 600 ["47.1% of 485 segs 228/81/81/81"]
+/consulting/ 820 ["47.9% of 663 segs 317/111/111/111"]
+/consulting/ 1024 ["46.4% of 386 segs 179/65/65/65"]
+/consulting/ 1440 ["47.3% of 520 segs 246/87/87/87"]
+
+== section-head-split: gap between h2 and its intro on a phone vs a plain head
+/ ["split 32px","plain 16px","split 32px","plain 16px"]
+/consulting/ ["split 32px","split 32px","split 32px","plain -8290px"]
+/pricing/ ["split 32px","split 32px"]
+/start/ ["split 16px","plain 16px"]
+
+== facts shelf at 980-1099
+/ 980 ["73@279","73@279","73@279","53@430","53@430"]
+/ 1024 ["53@293","53@293","53@293","53@452","53@452"]
+/ 1099 ["53@318","53@318","53@318","53@490","53@490"]
+/start/ 980 ["73@313","73@285","73@238"]
+/start/ 1024 ["73@357","73@285","73@238"]
+/start/ 1099 ["53@390","53@306","53@259"]
+
+== typing dots outside a .reveal; .wide-only on elements whose display is set later; hover lift on revealed prints
+/ {"typingOutsideReveal":0,"typing":1,"wideOnlyShown":[]}
+/services/ {"typingOutsideReveal":0,"typing":1,"wideOnlyShown":[]}

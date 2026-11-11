@@ -1,0 +1,218 @@
+{
+  "home__390__light": {
+    "heightA": 11979,
+    "heightB": 11979,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "work__390__light": {
+    "heightA": 4459,
+    "heightB": 4459,
+    "differingPixels": 6407,
+    "percent": 0.3684,
+    "bbox": [
+      21,
+      2160,
+      369,
+      2320
+    ]
+  },
+  "start__390__light": {
+    "heightA": 6186,
+    "heightB": 6186,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "web-design-baton-rouge__390__light": {
+    "heightA": 7416,
+    "heightB": 7416,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "web-design-denham-springs__390__light": {
+    "heightA": 7210,
+    "heightB": 7210,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "web-design-gonzales__390__light": {
+    "heightA": 7362,
+    "heightB": 7362,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "web-design-prairieville__390__light": {
+    "heightA": 7360,
+    "heightB": 7360,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "home__1440__light": {
+    "heightA": 9198,
+    "heightB": 9198,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "work__1440__light": {
+    "heightA": 3456,
+    "heightB": 3456,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "start__1440__light": {
+    "heightA": 4647,
+    "heightB": 4647,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "web-design-baton-rouge__1440__light": {
+    "heightA": 5734,
+    "heightB": 5734,
+    "differingPixels": 169370,
+    "percent": 2.0512,
+    "bbox": [
+      114,
+      3705,
+      666,
+      4015
+    ]
+  },
+  "web-design-denham-springs__1440__light": {
+    "heightA": 5663,
+    "heightB": 5663,
+    "differingPixels": 169925,
+    "percent": 2.0838,
+    "bbox": [
+      114,
+      3564,
+      666,
+      3875
+    ]
+  },
+  "web-design-gonzales__1440__light": {
+    "heightA": 5554,
+    "heightB": 5554,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "web-design-prairieville__1440__light": {
+    "heightA": 5670,
+    "heightB": 5670,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "home__390__dark": {
+    "heightA": 11979,
+    "heightB": 11979,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "work__390__dark": {
+    "heightA": 4459,
+    "heightB": 4459,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "start__390__dark": {
+    "heightA": 6186,
+    "heightB": 6186,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "web-design-baton-rouge__390__dark": {
+    "heightA": 7416,
+    "heightB": 7416,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "web-design-denham-springs__390__dark": {
+    "heightA": 7210,
+    "heightB": 7210,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "web-design-gonzales__390__dark": {
+    "heightA": 7362,
+    "heightB": 7362,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "web-design-prairieville__390__dark": {
+    "heightA": 7360,
+    "heightB": 7360,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "home__1440__dark": {
+    "heightA": 9198,
+    "heightB": 9198,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "work__1440__dark": {
+    "heightA": 3456,
+    "heightB": 3456,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "start__1440__dark": {
+    "heightA": 4647,
+    "heightB": 4647,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "web-design-baton-rouge__1440__dark": {
+    "heightA": 5734,
+    "heightB": 5734,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "web-design-denham-springs__1440__dark": {
+    "heightA": 5663,
+    "heightB": 5663,
+    "differingPixels": 168704,
+    "percent": 2.0688,
+    "bbox": [
+      114,
+      3564,
+      666,
+      3875
+    ]
+  },
+  "web-design-gonzales__1440__dark": {
+    "heightA": 5554,
+    "heightB": 5554,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "web-design-prairieville__1440__dark": {
+    "heightA": 5670,
+    "heightB": 5670,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  }
+}

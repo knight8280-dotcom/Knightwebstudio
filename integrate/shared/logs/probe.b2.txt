@@ -1,0 +1,25 @@
+A1 two-line header button at: never | sticks out by 0 | header taller than 72 at: never
+A2 text-spacing 320:ok(h96)  360:ok(h96)  390:ok(h92)  820:ok(h64)  1100:ok(h92)  1280:ok(h92)  1400:ok(h92)
+A2 125% 320:ok(h102)  360:ok(h102)  390:ok(h98)  820:ok(h64)  1100:ok(h98)  1280:ok(h98)  1400:ok(h98)
+A2 150% 320:ok(h112)  360:ok(h112)  390:ok(h108)  820:ok(h64)  1100:ok(h157)  1280:ok(h109)  1400:ok(h109)
+E1 price strip:
+  /@390 over-33 rows1 linkW350 "Websites $1,000 $2,000 $4,000 $8,000 Four fixed packages"
+  /@1280 over-213 rows1 linkW602
+  /services/@390 over-33 rows1 linkW350 "Websites $1,000 $2,000 $4,000 $8,000 All nine services, pric"
+  /services/@1280 over-751 rows1 linkW626
+  /start/@390 over-33 rows1 linkW350 "Websites $1,000 $2,000 $4,000 $8,000 Four fixed packages"
+  /start/@1280 over-258 rows1 linkW602
+  /consulting/@390 over-85 rows1 linkW350 "Setups $500 $750 $1,500 Fixed, published prices"
+  /consulting/@1280 over-903 rows1 linkW468
+  /web-design-baton-rouge/@390 over-33 rows1 linkW350 "Websites $1,000 $2,000 $4,000 $8,000 Fixed, published prices"
+  /web-design-baton-rouge/@1280 over-120 rows1 linkW554
+D1 errors: ["Add your name.","Add your email address so we can reply.","Tell us a little about what you need.","Please fix the highlighted fields."] | status after empty submit: "Please fix the highlighted fields." | invalid left: 0 | status after fixing: ""
+D2 hcaptcha requested at not within 1.5s (load event at 72ms); by 5s: 4063ms | slot data-theme: light
+C1 hovered button pressed: matrix(1, 0, 0, 1, 0, 1) | C2 print hover: transform none translate 0px -4px
+A3 #nav opacity after 1440 -> 1000: 0/hidden  0/hidden  0/hidden  0/hidden
+A4 404 header position: sticky -> sticky
+B7 title-to-intro gap at 390: / 16,16 | /consulting/ 16,16,16 | /pricing/ 16,16 | /start/ 16
+F1 band appointment card width at 1280: 259 | F2 footer email link height: 760:48 820:48 900:48 960:48 980:44 1100:44
+P-1 consulting@360 rows with a dangling leader: [] | P-5 deposit share: consulting 49.6%(--w 50) pricing 49.6% 49.6% | P-12 home card tagline lines 360:1 375:1 390:1
+D6 bar shown while the band button is on screen: 0 of 40 stops
+B5 tab stops ending within 6px of the window bottom (of 90): /terms/ 0 | /privacy/ 0 | /about/ 0 | /services/ 0

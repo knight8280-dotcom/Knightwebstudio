@@ -1,0 +1,260 @@
+{
+ "down-nofix-after25s": {
+  "text": "Checkout could not be loaded. Please try again shortly, or e",
+  "hidden": false,
+  "cls": "status error",
+  "status": {
+   "y": 662,
+   "h": 76.5,
+   "bottom": 738.5,
+   "w": 308
+  },
+  "form": {
+   "y": 734.5,
+   "h": 684,
+   "bottom": 1418.5,
+   "w": 308
+  },
+  "formDisplay": "block",
+  "card": {
+   "y": 606.8,
+   "h": 828.7,
+   "bottom": 1435.5,
+   "w": 350
+  },
+  "cardMinH": "auto",
+  "docH": 2981,
+  "iframe": {
+   "y": 734.5,
+   "h": 2,
+   "bottom": 736.5,
+   "w": 316
+  },
+  "nIframes": 1,
+  "log": [
+   "console: Failed to load resource: net::ERR_CONNECTION_REFUSED",
+   "pageerror: TypeError: Failed to fetch",
+   "429 https://errors.stripe.com/api/11777/envelope/?sentry_version=7&sentry_key=ed32a93268c61e4c",
+   "console: Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+   "console: Failed to load resource: net::ERR_CONNECTION_REFUSED"
+  ]
+ },
+ "down-reviewerfix": {
+  "text": "Checkout could not be loaded. Please try again shortly, or e",
+  "hidden": false,
+  "cls": "status error",
+  "status": {
+   "y": 662,
+   "h": 76.5,
+   "bottom": 738.5,
+   "w": 308
+  },
+  "form": {
+   "y": 0,
+   "h": 0,
+   "bottom": 0,
+   "w": 0
+  },
+  "formDisplay": "none",
+  "card": {
+   "y": 606.8,
+   "h": 168.7,
+   "bottom": 775.5,
+   "w": 350
+  },
+  "cardMinH": "auto",
+  "docH": 2321,
+  "iframe": {
+   "y": 0,
+   "h": 0,
+   "bottom": 0,
+   "w": 0
+  },
+  "nIframes": 1,
+  "log": [
+   "console: Failed to load resource: net::ERR_CONNECTION_REFUSED",
+   "pageerror: TypeError: Failed to fetch",
+   "429 https://errors.stripe.com/api/11777/envelope/?sentry_version=7&sentry_key=ed32a93268c61e4c",
+   "console: Failed to load resource: the server responded with a status of 429 (Too Many Requests)"
+  ]
+ },
+ "down-myfix": {
+  "text": "Checkout could not be loaded. Please try again shortly, or e",
+  "hidden": false,
+  "cls": "status error",
+  "status": {
+   "y": 662,
+   "h": 76.5,
+   "bottom": 738.5,
+   "w": 308
+  },
+  "form": {
+   "y": 0,
+   "h": 0,
+   "bottom": 0,
+   "w": 0
+  },
+  "formDisplay": "none",
+  "card": {
+   "y": 606.8,
+   "h": 168.7,
+   "bottom": 775.5,
+   "w": 350
+  },
+  "cardMinH": "auto",
+  "docH": 2321,
+  "iframe": {
+   "y": 0,
+   "h": 0,
+   "bottom": 0,
+   "w": 0
+  },
+  "nIframes": 1,
+  "log": [
+   "console: Failed to load resource: net::ERR_CONNECTION_REFUSED",
+   "pageerror: TypeError: Failed to fetch"
+  ]
+ },
+ "down-myfix-d1280-dark": {
+  "text": "Checkout could not be loaded. Please try again shortly, or e",
+  "hidden": false,
+  "cls": "status error",
+  "status": {
+   "y": 504.8,
+   "h": 51,
+   "bottom": 555.8,
+   "w": 527
+  },
+  "form": {
+   "y": 0,
+   "h": 0,
+   "bottom": 0,
+   "w": 0
+  },
+  "formDisplay": "none",
+  "card": {
+   "y": 437.6,
+   "h": 167.2,
+   "bottom": 604.8,
+   "w": 645.9
+  },
+  "cardMinH": "auto",
+  "docH": 1612,
+  "iframe": {
+   "y": 0,
+   "h": 0,
+   "bottom": 0,
+   "w": 0
+  },
+  "nIframes": 1,
+  "log": [
+   "console: Failed to load resource: net::ERR_CONNECTION_REFUSED",
+   "pageerror: TypeError: Failed to fetch",
+   "429 https://errors.stripe.com/api/11777/envelope/?sentry_version=7&sentry_key=ed32a93268c61e4c",
+   "console: Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+   "console: Failed to load resource: net::ERR_CONNECTION_REFUSED"
+  ]
+ },
+ "slow-nofix": {
+  "text": "Waking up secure checkout. The first load can take up to a m",
+  "hidden": false,
+  "cls": "status",
+  "status": {
+   "y": 662,
+   "h": 54.4,
+   "bottom": 716.4,
+   "w": 308
+  },
+  "form": {
+   "y": 712.4,
+   "h": 684,
+   "bottom": 1396.4,
+   "w": 308
+  },
+  "formDisplay": "block",
+  "card": {
+   "y": 606.8,
+   "h": 806.6,
+   "bottom": 1413.4,
+   "w": 350
+  },
+  "cardMinH": "416px",
+  "docH": 2958,
+  "iframe": {
+   "y": 712.4,
+   "h": 2,
+   "bottom": 714.4,
+   "w": 316
+  },
+  "nIframes": 1,
+  "log": []
+ },
+ "slow-myfix": {
+  "text": "Waking up secure checkout. The first load can take up to a m",
+  "hidden": false,
+  "cls": "status",
+  "status": {
+   "y": 662,
+   "h": 54.4,
+   "bottom": 716.4,
+   "w": 308
+  },
+  "form": {
+   "y": 728.4,
+   "h": 684,
+   "bottom": 1412.4,
+   "w": 308
+  },
+  "formDisplay": "block",
+  "card": {
+   "y": 606.8,
+   "h": 822.6,
+   "bottom": 1429.4,
+   "w": 350
+  },
+  "cardMinH": "416px",
+  "docH": 2974,
+  "iframe": {
+   "y": 728.4,
+   "h": 2,
+   "bottom": 730.4,
+   "w": 316
+  },
+  "nIframes": 1,
+  "log": []
+ },
+ "ok-myfix": {
+  "text": "Loading secure checkout…",
+  "hidden": true,
+  "cls": "status",
+  "status": {
+   "y": 0,
+   "h": 0,
+   "bottom": 0,
+   "w": 0
+  },
+  "form": {
+   "y": 658,
+   "h": 496.5,
+   "bottom": 1154.5,
+   "w": 308
+  },
+  "formDisplay": "block",
+  "card": {
+   "y": 606.8,
+   "h": 564.7,
+   "bottom": 1171.5,
+   "w": 350
+  },
+  "cardMinH": "auto",
+  "docH": 2716,
+  "iframe": {
+   "y": 658,
+   "h": 496.5,
+   "bottom": 1154.5,
+   "w": 316
+  },
+  "nIframes": 2,
+  "log": []
+ }
+}

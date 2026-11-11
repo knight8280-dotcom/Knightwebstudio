@@ -1,0 +1,14 @@
+/* KWS kit: the button that the closing band, the appointment card and the footer share. kws-btn is outlined, kws-btn--main is filled.
+   It takes the palette (--kit-*) of the block it sits on. Hover, pressed and focus states are here. See NOTES.md */
+.kws-btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;box-sizing:border-box;min-height:56px;padding:12px 28px;border:1.5px solid;border-radius:var(--kit-radius,var(--r-md,14px));background:var(--kit-surface,var(--card));box-shadow:inset 0 -2px rgb(0 0 0/.22);font:700 1.0625rem/1.2 var(--kit-font-body,var(--font-text));text-align:center;text-decoration:none;overflow-wrap:anywhere;-webkit-tap-highlight-color:transparent}
+.kws-btn:any-link{color:var(--kit-ink,var(--ink))}
+.kws-btn--main{--_f:var(--kit-accent,var(--blue));border-color:transparent;background:var(--_f)}
+.kws-btn--main:any-link{color:var(--kit-accent-ink,var(--on-blue))}
+.kws-btn:focus-visible{outline:3px solid var(--kit-accent,var(--focus));outline-offset:3px}
+@media (hover:hover){
+.kws-btn:hover{transform:translateY(-2px)}
+.kws-btn--main:hover{background:color-mix(in oklab,var(--_f),black 8%)}
+}
+/* After :hover on purpose, so a pressed button sinks under the pointer too */
+.kws-btn:active{transform:translateY(1px);box-shadow:none}
+@media (prefers-reduced-motion:no-preference){.kws-btn{transition:transform var(--t-fast,.16s)}}

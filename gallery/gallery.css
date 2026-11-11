@@ -1,0 +1,11 @@
+/* Gallery only: spacing between specimens. Not part of the site. */
+.gal { padding-block: var(--s-7); border-top: var(--hair) dashed var(--line-2); }
+.gal > .container > * + *, .gal > [data-page] > .container > * + * { margin-top: var(--s-5); }
+.gal-id { margin: 0; color: var(--brick); text-transform: none; letter-spacing: .02em; }
+.gal-title { margin: 0 0 var(--s-5); }
+/* A band in the middle of the gallery must not pull the next specimen up under it; the last one ends the page as on the site */
+.gal .cta-band { margin-top: var(--s-6); margin-bottom: 0; }
+.gal[data-comp="reference"] { padding-bottom: 0; }
+.gal[data-comp="reference"] .cta-band { margin-top: 0; margin-bottom: calc(-1 * var(--skyline)); }
+.gal .page-head + .page-head { margin-top: var(--s-8); padding-top: var(--s-8); border-top: var(--hair) dashed var(--line-2); }
+.gal code { font-size: var(--fs-sm); }

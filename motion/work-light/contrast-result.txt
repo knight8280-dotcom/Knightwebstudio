@@ -1,0 +1,35 @@
+light 390 hero live: true 21 text boxes
+light 390 band live: true 8 text boxes
+light 390 brand-head live: true 7 text boxes
+light 390 brand-band live: true 6 text boxes
+light 1440 hero live: true 17 text boxes
+light 1440 band live: true 5 text boxes
+light 1440 brand-head live: true 4 text boxes
+light 1440 brand-band live: true 5 text boxes
+dark 390 hero live: true 21 text boxes
+dark 390 band live: true 8 text boxes
+dark 390 brand-head live: true 7 text boxes
+dark 390 brand-band live: true 6 text boxes
+dark 1440 hero live: true 17 text boxes
+dark 1440 band live: true 5 text boxes
+dark 1440 brand-head live: true 4 text boxes
+dark 1440 brand-band live: true 5 text boxes
+light  390 hero        live=True frames=30 pixels=3,731,040 below AA=0  lowest 4.88:1 (needs 4.5:1) at "Websites" 13px, ground (242, 236, 225), text rgb(95, 102, 120)
+light  390 band        live=True frames=30 pixels=1,517,790 below AA=0  lowest 5.56:1 (needs 4.5:1) at "Thirty minutes, no pitch" 18.165px, ground (56, 78, 192), text rgb(227, 229, 244)
+light  390 brand-head  live=True frames=30 pixels=  987,780 below AA=0  lowest 5.01:1 (needs 4.5:1) at "[One or two lines about " 17px, ground (232, 228, 215), text rgb(79, 100, 87)
+light  390 brand-band  live=True frames=30 pixels=  786,930 below AA=0  lowest 5.34:1 (needs 4.5:1) at "[The "band" background t" 17px, ground (55, 92, 71), text rgb(211, 220, 203)
+light 1440 hero        live=True frames=30 pixels=8,035,320 below AA=0  lowest 4.97:1 (needs 4.5:1) at "Websites" 13px, ground (244, 238, 226), text rgb(95, 102, 120)
+light 1440 band        live=True frames=30 pixels=2,671,620 below AA=0  lowest 5.56:1 (needs 4.5:1) at "Thirty minutes, no pitch" 21px, ground (56, 78, 192), text rgb(227, 229, 244)
+light 1440 brand-head  live=True frames=30 pixels=1,536,870 below AA=0  lowest 5.06:1 (needs 4.5:1) at "Example · [your bakery]" 13px, ground (233, 229, 215), text rgb(79, 100, 87)
+light 1440 brand-band  live=True frames=30 pixels=1,058,460 below AA=0  lowest 5.34:1 (needs 4.5:1) at "[The "band" background t" 17px, ground (55, 92, 71), text rgb(211, 220, 203)
+dark   390 hero        live=True frames=30 pixels=3,731,040 below AA=0  lowest 6.13:1 (needs 4.5:1) at "Websites" 13px, ground (23, 27, 37), text rgb(158, 154, 144)
+dark   390 band        live=True frames=30 pixels=1,517,790 below AA=0  lowest 5.52:1 (needs 4.5:1) at "Thirty minutes, no pitch" 18.165px, ground (56, 79, 191), text rgb(227, 229, 244)
+dark   390 brand-head  live=True frames=30 pixels=  987,780 below AA=0  lowest 5.18:1 (needs 4.5:1) at "[One or two lines about " 17px, ground (44, 67, 50), text rgb(169, 184, 170)
+dark   390 brand-band  live=True frames=30 pixels=  786,930 below AA=0  lowest 5.34:1 (needs 4.5:1) at "[The "band" background t" 17px, ground (55, 92, 71), text rgb(211, 220, 203)
+dark  1440 hero        live=True frames=30 pixels=8,035,320 below AA=0  lowest 6.01:1 (needs 4.5:1) at "Web studio & consulting " 13px, ground (34, 42, 72), text rgb(240, 144, 122)
+dark  1440 band        live=True frames=30 pixels=2,671,620 below AA=0  lowest 5.52:1 (needs 4.5:1) at "Thirty minutes, no pitch" 21px, ground (56, 79, 191), text rgb(227, 229, 244)
+dark  1440 brand-head  live=True frames=30 pixels=1,536,870 below AA=0  lowest 5.43:1 (needs 4.5:1) at "Example · [your bakery]" 13px, ground (40, 64, 46), text rgb(169, 184, 170)
+dark  1440 brand-band  live=True frames=30 pixels=1,058,460 below AA=0  lowest 5.33:1 (needs 4.5:1) at "[The "band" background t" 17px, ground (56, 92, 71), text rgb(211, 220, 203)
+worst ratio to requirement: 1.085 PASS
+
+[exited with code 0]

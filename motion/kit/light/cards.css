@@ -1,0 +1,136 @@
+/* KnightWebstudio motion kit: folder cards, the folder stack, bookmark cards. Only the stack needs cards.js.
+   Theme: the --kit-* variables, each falling back to this site's token. Markup: NOTES.md. */
+
+/* == Shared == */
+.kws-folders, .kws-marks, .kws-folder, .kws-mark {
+  --kws-f: var(--kit-surface, var(--card)); --kws-b: var(--kit-bg, var(--paper)); --kws-i: var(--kit-ink, var(--ink)); --kws-m: var(--kit-muted, var(--ink-3));
+  --kws-l: var(--kit-line, var(--line-2)); --kws-e: 1px solid var(--kws-l); --kws-r: var(--kit-radius, var(--r-lg)); --kws-q: calc(var(--kws-r) * .55); --kws-p: var(--pad, 24px);
+  --kws-o: 3px solid var(--kit-accent, var(--focus)); --kws-t: var(--t, .28s) var(--ease, ease);
+  --kws-fd: 600 var(--fs-h4, 1.1875rem)/1.15 var(--kit-font-display, var(--font-display)); --kws-fb: var(--fs-sm, .9375rem)/1.5 var(--kit-font-body, var(--font-text));
+}
+.kws-folders, .kws-marks { display: grid; gap: var(--gap, 24px); margin: 0; padding: 0; list-style: none; }
+.kws-folder, .kws-mark { position: relative; isolation: isolate; display: flex; flex-direction: column; min-width: 0; color: var(--kws-m); font: 400 var(--kws-fb); overflow-wrap: anywhere; }
+:is(.kws-folder, .kws-mark) :is(p, dl, dd) { margin: 0; }
+.kws-folder-tab, .kws-folder-no, .kws-folder-price, .kws-folder-body h3, .kws-mark h3, .kws-mark-price { margin: 0; color: var(--kws-i); font: var(--kws-fd); font-variation-settings: "SOFT" 100; }
+.kws-label { color: var(--kws-m); font-size: var(--fs-label, .8125rem); font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.kws-nw { display: inline-block; }   /* a phrase that stays whole while it fits */
+/* .kws-link: the whole card is its heading's link. The focus ring goes round the whole object */
+.kws-link h3 a { color: inherit; text-decoration: none; outline: 0; scroll-margin-block: 20rem 12rem; -webkit-tap-highlight-color: transparent; }
+.kws-link h3 a::after { content: ""; position: absolute; inset: 0 0 -4px; z-index: 2; border-radius: var(--kws-r); }
+.kws-link h3 a:focus-visible::after { outline: var(--kws-o); outline-offset: 3px; }
+@supports selector(:has(a)) {
+  .kws-link h3 a:focus-visible::after { outline: 0; }
+  .kws-link:has(a:focus-visible) { outline: var(--kws-o); outline-offset: 3px; }
+}
+.kws-go {
+  position: absolute; right: 14px; top: 14px; box-sizing: border-box; width: 36px; height: 36px; padding: 8px; border: var(--kws-e); border-radius: 50%;
+  background: var(--kws-f); fill: none; stroke: var(--kit-accent, var(--blue)); stroke-width: 2.2; stroke-linecap: round;
+}
+/* a deeper, lower shadow fades in as the card lifts */
+.kws-link::after { content: ""; position: absolute; inset: 0; z-index: -1; border-radius: var(--kws-r); box-shadow: var(--kit-shadow, var(--shadow-3)); clip-path: inset(40% -4rem -5rem); opacity: 0; transform: translateY(6px); transition: opacity var(--kws-t); }
+.kws-link, .kws-go { transition: transform var(--kws-t); }
+.kws-link:active { transform: translateY(1px); }
+@media (hover: hover) {
+  .kws-link:hover { transform: translateY(-3px); }
+  .kws-link:hover::after { opacity: 1; }
+  .kws-link:hover .kws-go { transform: translateX(4px); }
+}
+@media (prefers-reduced-motion: reduce) { .kws-link, .kws-link::after, .kws-go { transition: none; } }
+
+/* == Folder cards == */
+.kws-folders, .kws-folder { --kws-r: var(--kit-radius, var(--r-md)); --kws-f: var(--kit-surface, var(--L, var(--card)) var(--D, var(--paper-3))); --kws-m: var(--kit-muted, var(--L, var(--ink-3)) var(--D, var(--ink-2))); }
+@media (min-width: 760px) { .kws-folders { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1100px) { .kws-folders { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.kws-folder { border-radius: var(--kws-q) var(--kws-r) var(--kws-r); }
+.kws-folder-tab {
+  position: relative; z-index: 1; box-sizing: border-box; align-self: flex-start; min-width: 5rem; min-height: var(--tap, 44px); margin-bottom: -1px; padding: 10px 18px 6px;
+  border: var(--kws-e); border-bottom: 0; border-radius: var(--kws-q) var(--kws-q) 0 0; background: var(--kws-f); text-align: left; overflow-wrap: break-word;
+}
+.kws-folder-tab b { font-weight: inherit; }
+.kws-folder-no { color: var(--kit-notice, var(--brick)); font-size: var(--fs-title, 1.75rem); }
+/* the curved shoulder beside a tab; the back leaf behind the front one */
+.kws-folder-tab::after, .kws-folder-tab::before { content: ""; position: absolute; left: 100%; bottom: 0; width: 12px; height: 12px; background: radial-gradient(circle at 100% 0, transparent 11px, var(--kws-l) 11.5px 12px, var(--kws-f) 12.5px); }
+.kws-folder-tab::before { display: none; left: auto; right: 100%; transform: scaleX(-1); }
+.kws-folder-body::before { content: ""; position: absolute; z-index: -1; inset: -6px 10px auto; height: 12px; border: var(--kws-e); border-radius: 6px 6px 0 0; background: var(--kws-b); }
+.kws-folder-body {
+  position: relative; flex: 1; display: grid; align-content: start; gap: 10px; padding: var(--kws-p);
+  border: var(--kws-e); border-radius: 0 var(--kws-r) var(--kws-r); background: var(--kws-f); box-shadow: var(--kit-shadow, var(--shadow-2));
+}
+.kws-folder-body > * { min-width: 0; }
+.kws-folder-body h3 { font-size: var(--fs-h3, 1.4rem); }
+.kws-folder-price { font-size: var(--fs-price, 2.75rem); line-height: 1; }
+.kws-folder-art, .kws-folder-body::after { position: relative; overflow: hidden; height: 84px; margin: calc(var(--kws-p) * -1) calc(var(--kws-p) * -1) 6px; border-bottom: var(--kws-e); border-radius: 0 var(--kws-r) 0 0; }
+.kws-folder dl > div { display: grid; grid-template-columns: 6.5em minmax(0, 1fr); column-gap: 12px; padding: 10px 0; border-top: 1px dashed var(--kws-l); }
+.kws-folder dd { grid-column: 2; color: var(--kws-i); }
+.kws-folder.kws-link::after { top: 3rem; }
+/* side by side, every folder keeps the strip's place (ruled paper where there is no art), so the headings line up */
+@media (min-width: 760px) {
+  .kws-folders:not(.kws-folders--stack) .kws-folder-body::after {
+    content: ""; order: -1; background: linear-gradient(var(--kws-l) 0 0) var(--kws-p) 46px / 30% 1px no-repeat, linear-gradient(var(--kws-l) 0 0) var(--kws-p) 60px / 18% 1px no-repeat, var(--kws-b);
+  }
+  .kws-folders:not(.kws-folders--stack) .kws-folder-art { position: absolute; inset: 0 0 auto; z-index: 1; margin: 0; }
+}
+
+/* == The folder stack ==  --kws-1 is on when stacked, --kws-0 when a plain list. Narrow: an index of
+   tabs over the front folder. From 600px of its own width: tabs joined to it. */
+.kws-folders--stack { --kws-1: ; --kws-0: initial; --kws-n: 2; --kws-h: 3.875rem; container-type: inline-size; gap: var(--kws-0, var(--gap, 24px)) var(--kws-1, 0px); }
+.kws-folders--stack:not(.kws-folders--phone) { grid-template-columns: minmax(0, 1fr); }
+.kws-js .kws-folders--stack[data-kws], .kws-folders--stack.is-live { --kws-1: initial; --kws-0: ; }
+@media (min-width: 760px) { .kws-folders--phone.kws-folders--phone[data-kws] { --kws-1: ; --kws-0: initial; } }
+/* --kws-n: the index's rows, kept free until cards.js builds it */
+.kws-folders--stack:not(:has(> :nth-of-type(3))) { --kws-n: 1; }
+.kws-folders--stack:has(> :nth-of-type(5)) { --kws-n: 3; }
+.kws-folders--stack > .kws-folder { grid-area: var(--kws-1, 2 / 1); visibility: var(--kws-1, hidden); }
+.kws-folders--stack:not(.is-live) > .kws-folder { margin-top: var(--kws-1, calc(var(--kws-n) * (var(--kws-h) + 6px))); }
+.kws-folders--stack:not(.is-live) > :first-child, .kws-folders--stack > .is-front { visibility: visible; }
+.kws-folders--stack > .kws-folder > .kws-folder-tab b { display: var(--kws-1, none) var(--kws-0, inline); }
+.kws-tabs { grid-area: 1 / 1; display: flex; flex-wrap: wrap; justify-content: space-between; }
+.kws-tabs > * {
+  flex: 0 0 calc(50% - 3px); min-width: 0; min-height: var(--kws-h); margin-bottom: 6px; padding: .5rem 12px; border-bottom: var(--kws-e); border-radius: var(--kws-q);
+  background: var(--kws-b); font: 700 var(--kws-fb); line-height: 1.25; cursor: pointer; -webkit-tap-highlight-color: transparent;
+}
+.kws-tabs b { display: block; font: var(--kws-fd); }
+.kws-tabs > [aria-selected="true"] { padding-top: calc(.5rem - 2px); border-top: 3px solid var(--kws-i); background: var(--kws-f); }
+.kws-tabs > ::after { display: none; }
+.kws-tabs > :active { transform: translateY(1px); }
+.kws-tabs > :focus-visible { z-index: 3; outline: var(--kws-o); outline-offset: 3px; }
+@media (hover: hover) { .kws-tabs > :hover { background: var(--kws-f); } }
+@media (forced-colors: active) { .kws-tabs > [aria-selected="true"] { border-top-color: Highlight; } }
+@container (min-width: 600px) {
+  .kws-folders--stack:not(.is-live) > .kws-folder { margin-top: var(--kws-1, calc(var(--kws-h) - 1px)); }
+  .kws-folders--stack > .kws-folder > .kws-folder-tab { display: var(--kws-1, none) var(--kws-0, block); }
+  .kws-folders--stack .kws-folder-body::before { content: var(--kws-0, ""); }
+  .kws-tabs { flex-wrap: nowrap; justify-content: flex-start; gap: 3px; }
+  .kws-tabs > * { z-index: 0; flex: 0 1 auto; margin-bottom: -1px; padding-inline: var(--kws-p); border-bottom: 0; border-radius: var(--kws-q) var(--kws-q) 0 0; }
+  .kws-tabs > [aria-selected="true"] { z-index: 2; }
+  .kws-tabs > [aria-selected="true"]::after, .kws-tabs > [aria-selected="true"]:not(:first-child)::before { display: block; }
+  /* the two folders behind */
+  .kws-tabs::after { content: ""; flex: 1; align-self: flex-end; height: 6px; margin: 0 10px 0 9px; border: var(--kws-e); border-bottom: 0; border-radius: 6px 6px 0 0; background: var(--kws-b); box-shadow: 0 -5px 0 -1px var(--kws-b), 0 -5px var(--kws-l); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  html:not([data-motion="off"]) .kws-folders.is-moved > .is-front { animation: kws-front var(--kws-t); }
+}
+@keyframes kws-front { from { opacity: 0; transform: translateY(6px); } }
+
+/* == Bookmark cards == */
+.kws-mark { gap: 8px; padding: 20px; border: var(--kws-e); border-radius: var(--kws-r); background: var(--kws-f); box-shadow: var(--kit-shadow, var(--shadow-1)); }
+.kws-mark::before { content: ""; position: absolute; top: -5px; right: 26px; width: 26px; height: 46px; background: var(--kit-notice, var(--brick)); clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 76%, 0 100%); }
+@supports (color: light-dark(currentColor, currentColor)) {   /* the fold over the card's edge: shaded with the darker of ink and ground */
+  .kws-mark::before { --kws-d: light-dark(var(--kws-i), var(--kws-b)); background: linear-gradient(color-mix(in srgb, var(--kws-d) 42%, transparent) 5px, color-mix(in srgb, var(--kws-d) 20%, transparent) 5px 7px, transparent 7px), var(--kit-notice, var(--brick)); }
+}
+.kws-mark.kws-link:has(a:focus-visible) { outline-offset: 7px; }
+.kws-mark .kws-label { padding-right: 48px; }
+.kws-mark-art { position: relative; overflow: hidden; aspect-ratio: 16 / 7; margin-bottom: 10px; border: var(--kws-e); border-radius: var(--kws-q); }
+.kws-mark h3 { font-size: var(--fs-title, 1.75rem); }
+.kws-mark > :last-child { padding-right: 44px; }
+.kws-mark .kws-go { inset: auto 20px 20px auto; }
+@media (min-width: 600px) and (max-width: 979.98px) {   /* a row: art on the left, words on the right */
+  .kws-mark { display: grid; grid-template-columns: 38% minmax(0, 1fr); column-gap: 20px; align-content: center; }
+  .kws-mark > * { grid-column: 2; }
+  .kws-mark > .kws-mark-art { grid-area: 1 / 1 / span 4; aspect-ratio: auto; min-height: 9.5rem; margin: 0; }
+}
+@media (min-width: 980px) {
+  .kws-marks { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .kws-mark-art { aspect-ratio: 4 / 3; }
+  @supports (grid-template-rows: subgrid) { .kws-mark { display: grid; grid-row: span 5; grid-template-rows: subgrid; } }
+}

@@ -1,0 +1,6 @@
+PASS context lost with motion on: the stills show at once, then every layer is redrawn on a new context  [{"n0":11,"mid":4,"after":11,"contexts":1,"lost":true,"errs":[]}]
+PASS context lost for good, motion on: every layer back to its still, and no frames are asked for  [{"live":0,"spinning":0,"errs":[]}]
+PASS context lost with motion off: the stills show at once, then every layer is redrawn on a new context  [{"n0":11,"mid":3,"after":11,"contexts":1,"lost":true,"errs":[]}]
+PASS context lost for good, motion off: every layer back to its still, and no frames are asked for  [{"live":0,"spinning":0,"errs":[]}]
+PASS 12 cycles of a stack, a pause button, a band and four ribbons added, mounted and removed from the page without their removers: nodes and listeners do not grow  [{"before":{"nodes":473,"listeners":13},"after":{"nodes":473,"listeners":13}}]
+all passed

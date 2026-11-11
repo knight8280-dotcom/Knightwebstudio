@@ -1,0 +1,66 @@
+{
+  "pricing__mobile-light": {
+    "height": 10459,
+    "overflowX": 0,
+    "stops": 14,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "pricing__mobile-dark": {
+    "height": 10459,
+    "overflowX": 0,
+    "stops": 14,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "pricing__small-light": {
+    "height": 10711,
+    "overflowX": 0,
+    "stops": 17,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "pricing__tablet-light": {
+    "height": 7288,
+    "overflowX": 0,
+    "stops": 8,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "pricing__laptop-light": {
+    "height": 5997,
+    "overflowX": 0,
+    "stops": 9,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "pricing__desktop-light": {
+    "height": 6039,
+    "overflowX": 0,
+    "stops": 8,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "pricing__desktop-dark": {
+    "height": 6039,
+    "overflowX": 0,
+    "stops": 8,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "pricing__wide-light": {
+    "height": 6039,
+    "overflowX": 0,
+    "stops": 7,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  }
+}

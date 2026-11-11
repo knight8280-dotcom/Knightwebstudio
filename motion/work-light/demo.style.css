@@ -1,0 +1,35 @@
+/* Demo scaffolding only: none of this belongs to the kit. */
+.footer-links .kws-motion { margin-right: auto; }
+/* The same button again where it is easy to find: the top strip from 1100px, and the phone menu's sheet */
+.topbar .kws-motion { display: none; margin-left: auto; margin-right: 20px; border-color: transparent; background: none; }
+@media (min-width: 1100px) { .topbar .kws-motion:not([hidden]) { display: inline-flex; } }
+.nav-foot .kws-motion { place-self: center; }
+#pricing .kws-folders { align-self: start; }
+
+/* Another brand, as a client site would set it: thirteen variables, plus three for the backgrounds. */
+.demo-brand {
+  --kit-bg: #F4EFE1; --kit-surface: #FFFDF6; --kit-ink: #1E3A2B; --kit-muted: #4F6457; --kit-line: #CFC8AF;
+  --kit-accent: #1F6B45; --kit-accent-ink: #FFFDF6; --kit-notice: #B4532A; --kit-gilt: #E8B84A;
+  --kit-radius: 6px; --kit-shadow: 0 1px 0 rgba(30, 58, 43, .14), 0 14px 26px -18px rgba(30, 58, 43, .45);
+  --kit-font-display: Georgia, "Times New Roman", serif; --kit-font-body: "Trebuchet MS", "Lucida Sans", Verdana, sans-serif;
+  --kit-shader-1: #CFE3C4; --kit-shader-2: #FFFDF6; --kit-shader-3: #F3D9A0;
+  display: grid; gap: 24px; padding: clamp(16px, 4vw, 40px); border: 1px solid var(--kit-line); border-radius: 12px;
+  background: var(--kit-bg); color: var(--kit-muted); font-family: var(--kit-font-body);
+}
+:root[data-theme="dark"] .demo-brand {
+  --kit-bg: #121C16; --kit-surface: #1A2920; --kit-ink: #F1EAD6; --kit-muted: #A9B8AA; --kit-line: #2F4437;
+  --kit-accent: #8FD0A5; --kit-accent-ink: #10201A; --kit-notice: #F0A47E;
+  --kit-shadow: 0 1px 0 rgba(0, 0, 0, .5), 0 14px 26px -18px rgba(0, 0, 0, .8);
+  --kit-shader-1: #1F6B45; --kit-shader-2: #2A3B30; --kit-shader-3: #3A3320;
+}
+.demo-brand p { margin: 0; max-width: 34em; }
+.demo-brand-head, .demo-brand-band { display: grid; gap: 12px; padding: clamp(24px, 5vw, 56px); border-radius: var(--kit-radius); }
+.demo-brand-head { border: 1px solid var(--kit-line); }
+.demo-brand-title, .demo-brand-h { color: var(--kit-ink); font: 700 clamp(1.6rem, 1.2rem + 2vw, 2.6rem)/1.1 var(--kit-font-display); }
+.demo-brand-h { font-size: 1.3rem; }
+.demo-brand-band {
+  background: #1E3A2B; --kit-ink: #FFFDF6; --kit-muted: #D3DCCB; --kit-accent: #FFFDF6; --kit-accent-ink: #1E3A2B; --kit-notice: #E8B84A;
+  --kit-line: rgba(255, 253, 246, .3); --kit-surface: #2A4A38; color: var(--kit-muted);
+}
+.demo-brand-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 8px; }
+.demo-brand-btn { display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border-radius: var(--kit-radius); background: var(--kit-accent); color: var(--kit-accent-ink); font-weight: 700; text-decoration: none; }

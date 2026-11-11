@@ -1,0 +1,3795 @@
+{
+ "starter-deposit": {
+  "device": "mobile",
+  "theme": "light",
+  "states": {
+   "mobile-light": {
+    "m": {
+     "theme": "light",
+     "vw": 390,
+     "docW": 390,
+     "overflowX": 0,
+     "pageH": 2622,
+     "statusHidden": true,
+     "statusText": "Loading secure checkout…",
+     "statusCls": "status",
+     "receiptHidden": false,
+     "name": "Starter website — 50% deposit",
+     "price": "$1,000",
+     "receipt": {
+      "l": 20,
+      "t": 400.1,
+      "w": 350,
+      "h": 166.7,
+      "r": 370
+     },
+     "card": {
+      "l": 20,
+      "t": 606.8,
+      "w": 350,
+      "h": 469.8,
+      "r": 370
+     },
+     "form": {
+      "l": 41,
+      "t": 658,
+      "w": 308,
+      "h": 401.6,
+      "r": 349
+     },
+     "iframe": {
+      "l": 37,
+      "t": 658,
+      "w": 316,
+      "h": 401.6,
+      "r": 353
+     },
+     "iframeCount": 2,
+     "clips": [
+      {
+       "el": "BODY.",
+       "ox": "clip",
+       "oy": "visible",
+       "contain": "none",
+       "maxH": "none",
+       "rect": {
+        "l": 0,
+        "t": 0,
+        "w": 390,
+        "h": 2621.6,
+        "r": 390
+       }
+      }
+     ],
+     "cardBg": "rgb(255, 252, 245)",
+     "bodyBg": "rgb(246, 240, 228)",
+     "order": [
+      "checkout-plan@400",
+      "card on-paper till-pay@607",
+      "stack till-side@1109"
+     ]
+    },
+    "inner": {
+     "iw": 316,
+     "ih": 402,
+     "sw": 316,
+     "sh": 402,
+     "bodyBg": "rgba(0, 0, 0, 0)",
+     "texts": [
+      "Pay securely with Pay with 000000000000",
+      "Email",
+      "Total due$1,000.00",
+      "Pay"
+     ],
+     "wide": 9
+    },
+    "files": [
+     "shots/checkout/new__starter-deposit__mobile-light__1.png"
+    ]
+   },
+   "mobile-dark": {
+    "m": {
+     "theme": "dark",
+     "vw": 390,
+     "docW": 390,
+     "overflowX": 0,
+     "pageH": 2716,
+     "statusHidden": true,
+     "statusText": "Loading secure checkout…",
+     "statusCls": "status",
+     "receiptHidden": false,
+     "name": "Starter website — 50% deposit",
+     "price": "$1,000",
+     "receipt": {
+      "l": 20,
+      "t": 400.1,
+      "w": 350,
+      "h": 166.7,
+      "r": 370
+     },
+     "card": {
+      "l": 20,
+      "t": 606.8,
+      "w": 350,
+      "h": 564.7,
+      "r": 370
+     },
+     "form": {
+      "l": 41,
+      "t": 658,
+      "w": 308,
+      "h": 496.5,
+      "r": 349
+     },
+     "iframe": {
+      "l": 37,
+      "t": 658,
+      "w": 316,
+      "h": 496.5,
+      "r": 353
+     },
+     "iframeCount": 2,
+     "clips": [
+      {
+       "el": "BODY.",
+       "ox": "clip",
+       "oy": "visible",
+       "contain": "none",
+       "maxH": "none",
+       "rect": {
+        "l": 0,
+        "t": 0,
+        "w": 390,
+        "h": 2716.5,
+        "r": 390
+       }
+      }
+     ],
+     "cardBg": "rgb(255, 252, 245)",
+     "bodyBg": "rgb(19, 23, 34)",
+     "order": [
+      "checkout-plan@400",
+      "card on-paper till-pay@607",
+      "stack till-side@1203"
+     ]
+    },
+    "files": [
+     "shots/checkout/new__starter-deposit__mobile-dark__1.png"
+    ]
+   },
+   "w360-dark": {
+    "m": {
+     "theme": "dark",
+     "vw": 360,
+     "docW": 360,
+     "overflowX": 0,
+     "pageH": 2712,
+     "statusHidden": true,
+     "statusText": "Loading secure checkout…",
+     "statusCls": "status",
+     "receiptHidden": false,
+     "name": "Starter website — 50% deposit",
+     "price": "$1,000",
+     "receipt": {
+      "l": 20,
+      "t": 396.2,
+      "w": 320,
+      "h": 166.3,
+      "r": 340
+     },
+     "card": {
+      "l": 20,
+      "t": 602.5,
+      "w": 320,
+      "h": 564.7,
+      "r": 340
+     },
+     "form": {
+      "l": 41,
+      "t": 653.7,
+      "w": 278,
+      "h": 496.5,
+      "r": 319
+     },
+     "iframe": {
+      "l": 37,
+      "t": 653.7,
+      "w": 286,
+      "h": 496.5,
+      "r": 323
+     },
+     "iframeCount": 2,
+     "clips": [
+      {
+       "el": "BODY.",
+       "ox": "clip",
+       "oy": "visible",
+       "contain": "none",
+       "maxH": "none",
+       "rect": {
+        "l": 0,
+        "t": 0,
+        "w": 360,
+        "h": 2712.2,
+        "r": 360
+       }
+      }
+     ],
+     "cardBg": "rgb(255, 252, 245)",
+     "bodyBg": "rgb(19, 23, 34)",
+     "order": [
+      "checkout-plan@396",
+      "card on-paper till-pay@603",
+      "stack till-side@1199"
+     ]
+    },
+    "inner": {
+     "iw": 286,
+     "ih": 496,
+     "sw": 286,
+     "sh": 496,
+     "bodyBg": "rgba(0, 0, 0, 0)",
+     "texts": [
+      "Pay securely with Pay with 000000000000",
+      "Email",
+      "Total due$1,000.00",
+      "Pay"
+     ],
+     "wide": 15
+    },
+    "files": [
+     "shots/checkout/new__starter-deposit__w360-dark__1.png"
+    ]
+   },
+   "w430-dark": {
+    "m": {
+     "theme": "dark",
+     "vw": 430,
+     "docW": 430,
+     "overflowX": 0,
+     "pageH": 2637,
+     "statusHidden": true,
+     "statusText": "Loading secure checkout…",
+     "statusCls": "status",
+     "receiptHidden": false,
+     "name": "Starter website — 50% deposit",
+     "price": "$1,000",
+     "receipt": {
+      "l": 21.5,
+      "t": 377.5,
+      "w": 387,
+      "h": 137.8,
+      "r": 408.5
+     },
+     "card": {
+      "l": 21.5,
+      "t": 555.3,
+      "w": 387,
+      "h": 564.7,
+      "r": 408.5
+     },
+     "form": {
+      "l": 42.5,
+      "t": 606.5,
+      "w": 345,
+      "h": 496.5,
+      "r": 387.5
+     },
+     "iframe": {
+      "l": 38.5,
+      "t": 606.5,
+      "w": 353,
+      "h": 496.5,
+      "r": 391.5
+     },
+     "iframeCount": 2,
+     "clips": [
+      {
+       "el": "BODY.",
+       "ox": "clip",
+       "oy": "visible",
+       "contain": "none",
+       "maxH": "none",
+       "rect": {
+        "l": 0,
+        "t": 0,
+        "w": 430,
+        "h": 2637,
+        "r": 430
+       }
+      }
+     ],
+     "cardBg": "rgb(255, 252, 245)",
+     "bodyBg": "rgb(19, 23, 34)",
+     "order": [
+      "checkout-plan@378",
+      "card on-paper till-pay@555",
+      "stack till-side@1152"
+     ]
+    },
+    "inner": {
+     "iw": 353,
+     "ih": 496,
+     "sw": 353,
+     "sh": 496,
+     "bodyBg": "rgba(0, 0, 0, 0)",
+     "texts": [
+      "Pay securely with Pay with 000000000000",
+      "Email",
+      "Total due$1,000.00",
+      "Pay"
+     ],
+     "wide": 9
+    },
+    "files": [
+     "shots/checkout/new__starter-deposit__w430-dark__1.png"
+    ]
+   },
+   "w320-dark": {
+    "m": {
+     "theme": "dark",
+     "vw": 320,
+     "docW": 320,
+     "overflowX": 0,
+     "pageH": 2811,
+     "statusHidden": true,
+     "statusText": "Loading secure checkout…",
+     "statusCls": "status",
+     "receiptHidden": false,
+     "name": "Starter website — 50% deposit",
+     "price": "$1,000",
+     "receipt": {
+      "l": 20,
+      "t": 433.6,
+      "w": 280,
+      "h": 181.2,
+      "r": 300
+     },
+     "card": {
+      "l": 20,
+      "t": 654.8,
+      "w": 280,
+      "h": 564.7,
+      "r": 300
+     },
+     "form": {
+      "l": 41,
+      "t": 706,
+      "w": 238,
+      "h": 496.5,
+      "r": 279
+     },
+     "iframe": {
+      "l": 37,
+      "t": 706,
+      "w": 246,
+      "h": 496.5,
+      "r": 283
+     },
+     "iframeCount": 2,
+     "clips": [
+      {
+       "el": "BODY.",
+       "ox": "clip",
+       "oy": "visible",
+       "contain": "none",
+       "maxH": "none",
+       "rect": {
+        "l": 0,
+        "t": 0,
+        "w": 320,
+        "h": 2811,
+        "r": 320
+       }
+      }
+     ],
+     "cardBg": "rgb(255, 252, 245)",
+     "bodyBg": "rgb(19, 23, 34)",
+     "order": [
+      "checkout-plan@434",
+      "card on-paper till-pay@655",
+      "stack till-side@1251"
+     ]
+    },
+    "inner": {
+     "iw": 246,
+     "ih": 496,
+     "sw": 246,
+     "sh": 496,
+     "bodyBg": "rgba(0, 0, 0, 0)",
+     "texts": [
+      "Pay securely with Pay with 000000000000",
+      "Email",
+      "Total due$1,000.00",
+      "Pay"
+     ],
+     "wide": 16
+    },
+    "files": [
+     "shots/checkout/new__starter-deposit__w320-dark__1.png",
+     "shots/checkout/new__starter-deposit__w320-dark__2.png"
+    ]
+   }
+  },
+  "loading": {
+   "theme": "light",
+   "vw": 390,
+   "docW": 390,
+   "overflowX": 0,
+   "pageH": 2931,
+   "statusHidden": false,
+   "statusText": "Loading secure checkout…",
+   "statusCls": "status",
+   "receiptHidden": false,
+   "name": "Starter website — 50% deposit",
+   "price": "$1,000",
+   "receipt": {
+    "l": 20,
+    "t": 399.8,
+    "w": 350,
+    "h": 166.7,
+    "r": 370
+   },
+   "card": {
+    "l": 20,
+    "t": 606.8,
+    "w": 350,
+    "h": 779.4,
+    "r": 370
+   },
+   "form": {
+    "l": 41,
+    "t": 685.2,
+    "w": 308,
+    "h": 684,
+    "r": 349
+   },
+   "iframe": {
+    "l": 37,
+    "t": 685.2,
+    "w": 316,
+    "h": 2,
+    "r": 353
+   },
+   "iframeCount": 1,
+   "clips": [
+    {
+     "el": "BODY.",
+     "ox": "clip",
+     "oy": "visible",
+     "contain": "none",
+     "maxH": "none",
+     "rect": {
+      "l": 0,
+      "t": 0,
+      "w": 390,
+      "h": 2931.2,
+      "r": 390
+     }
+    }
+   ],
+   "cardBg": "rgb(255, 252, 245)",
+   "bodyBg": "rgb(246, 240, 228)",
+   "order": [
+    "checkout-plan@400",
+    "card on-paper till-pay@607",
+    "stack till-side@1418"
+   ]
+  },
+  "server": {
+   "status": 200,
+   "acao": "http://localhost:8720",
+   "body": {
+    "plan": "starter-deposit",
+    "label": "Starter Website 50% Deposit",
+    "mode": "payment",
+    "hasSecret": true
+   }
+  },
+  "session_id": "cs_live_a0J6vZS0j5519GOc5gmTJQXdBx5Eru2JLMkO3AgI48kjAAFSrbiryD2FlB",
+  "msToMount": 2822,
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "You may test your Stripe.js integration over HTTP. However, live Stripe.js integrations must use HTTPS."
+   },
+   {
+    "t": "console.warning",
+    "text": "Origin trial controlled feature not enabled: 'tools'."
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   },
+   {
+    "t": "console.warning",
+    "text": "Origin trial controlled feature not enabled: 'tools'."
+   },
+   {
+    "t": "console.warning",
+    "text": "Origin trial controlled feature not enabled: 'tools'."
+   },
+   {
+    "t": "console.warning",
+    "text": "Origin trial controlled feature not enabled: 'tools'."
+   },
+   {
+    "t": "console.warning",
+    "text": "[.WebGL-0x6ec01a84e00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+   },
+   {
+    "t": "requestfailed",
+    "url": "https://41cd08bde6b6.w.hcaptcha.com/logo.png",
+    "err": "net::ERR_ABORTED"
+   },
+   {
+    "t": "requestfailed",
+    "url": "https://d80e8a676a73.w.hcaptcha.com/logo.png",
+    "err": "net::ERR_ABORTED"
+   },
+   {
+    "t": "console.warning",
+    "text": "[.WebGL-0x6ec057c4400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+   },
+   {
+    "t": "console.warning",
+    "text": "[.WebGL-0x6ec0c5a1800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+   },
+   {
+    "t": "console.warning",
+    "text": "[.WebGL-0x6ec0c5a8400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+   }
+  ],
+  "hosts": [
+   "js.stripe.com",
+   "plausible.io",
+   "knightwebstudio-checkout.onrender.com",
+   "merchant-ui-api.stripe.com",
+   "r.stripe.com",
+   "api.stripe.com",
+   "m.stripe.network",
+   "b.stripecdn.com",
+   "m.stripe.com",
+   "hcaptcha.com",
+   "static-na.payments-amazon.com",
+   "newassets.hcaptcha.com",
+   "352bedd84fb1.w.hcaptcha.com",
+   "apay-us.amazon.com",
+   "41cd08bde6b6.w.hcaptcha.com",
+   "api.hcaptcha.com",
+   "d80e8a676a73.w.hcaptcha.com",
+   "m.media-amazon.com"
+  ]
+ },
+ "business-deposit": {
+  "device": "desktop",
+  "theme": "dark",
+  "states": {
+   "desktop-dark": {
+    "m": {
+     "theme": "dark",
+     "vw": 1280,
+     "docW": 1280,
+     "overflowX": 0,
+     "pageH": 1692,
+     "statusHidden": true,
+     "statusText": "Loading secure checkout…",
+     "statusCls": "status",
+     "receiptHidden": false,
+     "name": "Business website — 50% deposit",
+     "price": "$2,000",
+     "receipt": {
+      "l": 770.7,
+      "t": 437.6,
+      "w": 461.3,
+      "h": 144.8,
+      "r": 1232
+     },
+     "card": {
+      "l": 48,
+      "t": 437.6,
+      "w": 645.9,
+      "h": 493.8,
+      "r": 693.9
+     },
+     "form": {
+      "l": 81,
+      "t": 500.8,
+      "w": 579.9,
+      "h": 401.6,
+      "r": 660.9
+     },
+     "iframe": {
+      "l": 77,
+      "t": 500.8,
+      "w": 587.9,
+      "h": 401.6,
+      "r": 664.9
+     },
+     "iframeCount": 2,
+     "clips": [
+      {
+       "el": "BODY.",
+       "ox": "clip",
+       "oy": "visible",
+       "contain": "none",
+       "maxH": "none",
+       "rect": {
+        "l": 0,
+        "t": 0,
+        "w": 1280,
+        "h": 1691.9,
+        "r": 1280
+       }
+      }
+     ],
+     "cardBg": "rgb(255, 252, 245)",
+     "bodyBg": "rgb(19, 23, 34)",
+     "order": [
+      "checkout-plan@438",
+      "card on-paper till-pay@438",
+      "stack till-side@622"
+     ]
+    },
+    "inner": {
+     "iw": 588,
+     "ih": 402,
+     "sw": 588,
+     "sh": 402,
+     "bodyBg": "rgba(0, 0, 0, 0)",
+     "texts": [
+      "Pay securely with Pay with 000000000000",
+      "Email",
+      "Total due$2,000.00",
+      "Pay"
+     ],
+     "wide": 28
+    },
+    "files": [
+     "shots/checkout/new__business-deposit__desktop-dark__1.png"
+    ]
+   },
+   "desktop-light": {
+    "m": {
+     "theme": "light",
+     "vw": 1280,
+     "docW": 1280,
+     "overflowX": 0,
+     "pageH": 1787,
+     "statusHidden": true,
+     "statusText": "Loading secure checkout…",
+     "statusCls": "status",
+     "receiptHidden": false,
+     "name": "Business website — 50% deposit",
+     "price": "$2,000",
+     "receipt": {
+      "l": 770.7,
+      "t": 437.6,
+      "w": 461.3,
+      "h": 144.8,
+      "r": 1232
+     },
+     "card": {
+      "l": 48,
+      "t": 437.6,
+      "w": 645.9,
+      "h": 588.7,
+      "r": 693.9
+     },
+     "form": {
+      "l": 81,
+      "t": 500.8,
+      "w": 579.9,
+      "h": 496.5,
+      "r": 660.9
+     },
+     "iframe": {
+      "l": 77,
+      "t": 500.8,
+      "w": 587.9,
+      "h": 496.5,
+      "r": 664.9
+     },
+     "iframeCount": 2,
+     "clips": [
+      {
+       "el": "BODY.",
+       "ox": "clip",
+       "oy": "visible",
+       "contain": "none",
+       "maxH": "none",
+       "rect": {
+        "l": 0,
+        "t": 0,
+        "w": 1280,
+        "h": 1786.7,
+        "r": 1280
+       }
+      }
+     ],
+     "cardBg": "rgb(255, 252, 245)",
+     "bodyBg": "rgb(246, 240, 228)",
+     "order": [
+      "checkout-plan@438",
+      "card on-paper till-pay@438",
+      "stack till-side@622"
+     ]
+    },
+    "files": [
+     "shots/checkout/new__business-deposit__desktop-light__1.png"
+    ]
+   },
+   "w390-light": {
+    "m": {
+     "theme": "light",
+     "vw": 390,
+     "docW": 390,
+     "overflowX": 0,
+     "pageH": 2716,
+     "statusHidden": true,
+     "statusText": "Loading secure checkout…",
+     "statusCls": "status",
+     "receiptHidden": false,
+     "name": "Business website — 50% deposit",
+     "price": "$2,000",
+     "receipt": {
+      "l": 20,
+      "t": 400.1,
+      "w": 350,
+      "h": 166.7,
+      "r": 370
+     },
+     "card": {
+      "l": 20,
+      "t": 606.8,
+      "w": 350,
+      "h": 564.7,
+      "r": 370
+     },
+     "form": {
+      "l": 41,
+      "t": 658,
+      "w": 308,
+      "h": 496.5,
+      "r": 349
+     },
+     "iframe": {
+      "l": 37,
+      "t": 658,
+      "w": 316,
+      "h": 496.5,
+      "r": 353
+     },
+     "iframeCount": 2,
+     "clips": [
+      {
+       "el": "BODY.",
+       "ox": "clip",
+       "oy": "visible",
+       "contain": "none",
+       "maxH": "none",
+       "rect": {
+        "l": 0,
+        "t": 0,
+        "w": 390,
+        "h": 2716.5,
+        "r": 390
+       }
+      }
+     ],
+     "cardBg": "rgb(255, 252, 245)",
+     "bodyBg": "rgb(246, 240, 228)",
+     "order": [
+      "checkout-plan@400",
+      "card on-paper till-pay@607",
+      "stack till-side@1203"
+     ]
+    },
+    "inner": {
+     "iw": 316,
+     "ih": 496,
+     "sw": 316,
+     "sh": 496,
+     "bodyBg": "rgba(0, 0, 0, 0)",
+     "texts": [
+      "Pay securely with Pay with 000000000000",
+      "Email",
+      "Total due$2,000.00",
+      "Pay"
+     ],
+     "wide": 9
+    },
+    "files": [
+     "shots/checkout/new__business-deposit__w390-light__1.png"
+    ]
+   },
+   "w820-light": {
+    "m": {
+     "theme": "light",
+     "vw": 820,
+     "docW": 820,
+     "overflowX": 0,
+     "pageH": 2236,
+     "statusHidden": true,
+     "statusText": "Loading secure checkout…",
+     "statusCls": "status",
+     "receiptHidden": false,
+     "name": "Business website — 50% deposit",
+     "price": "$2,000",
+     "receipt": {
+      "l": 41,
+      "t": 387.6,
+      "w": 738,
+      "h": 141.8,
+      "r": 779
+     },
+     "card": {
+      "l": 41,
+      "t": 569.4,
+      "w": 738,
+      "h": 573.9,
+      "r": 779
+     },
+     "form": {
+      "l": 66.6,
+      "t": 625.2,
+      "w": 686.8,
+      "h": 496.5,
+      "r": 753.4
+     },
+     "iframe": {
+      "l": 62.6,
+      "t": 625.2,
+      "w": 694.8,
+      "h": 496.5,
+      "r": 757.4
+     },
+     "iframeCount": 2,
+     "clips": [
+      {
+       "el": "BODY.",
+       "ox": "clip",
+       "oy": "visible",
+       "contain": "none",
+       "maxH": "none",
+       "rect": {
+        "l": 0,
+        "t": 0,
+        "w": 820,
+        "h": 2236.2,
+        "r": 820
+       }
+      }
+     ],
+     "cardBg": "rgb(255, 252, 245)",
+     "bodyBg": "rgb(246, 240, 228)",
+     "order": [
+      "checkout-plan@388",
+      "card on-paper till-pay@569",
+      "stack till-side@1175"
+     ]
+    },
+    "inner": {
+     "iw": 695,
+     "ih": 496,
+     "sw": 695,
+     "sh": 496,
+     "bodyBg": "rgba(0, 0, 0, 0)",
+     "texts": [
+      "Pay securely with Pay with 000000000000",
+      "Email",
+      "Total due$2,000.00",
+      "Pay"
+     ],
+     "wide": 18
+    },
+    "files": [
+     "shots/checkout/new__business-deposit__w820-light__1.png"
+    ]
+   },
+   "w1100-light": {
+    "m": {
+     "theme": "light",
+     "vw": 1100,
+     "docW": 1100,
+     "overflowX": 0,
+     "pageH": 1743,
+     "statusHidden": true,
+     "statusText": "Loading secure checkout…",
+     "statusCls": "status",
+     "receiptHidden": false,
+     "name": "Business website — 50% deposit",
+     "price": "$2,000",
+     "receipt": {
+      "l": 661.2,
+      "t": 424.8,
+      "w": 390.8,
+      "h": 174.8,
+      "r": 1052
+     },
+     "card": {
+      "l": 48,
+      "t": 424.8,
+      "w": 547.2,
+      "h": 588.7,
+      "r": 595.2
+     },
+     "form": {
+      "l": 81,
+      "t": 488,
+      "w": 481.2,
+      "h": 496.5,
+      "r": 562.2
+     },
+     "iframe": {
+      "l": 77,
+      "t": 488,
+      "w": 489.2,
+      "h": 496.5,
+      "r": 566.2
+     },
+     "iframeCount": 2,
+     "clips": [
+      {
+       "el": "BODY.",
+       "ox": "clip",
+       "oy": "visible",
+       "contain": "none",
+       "maxH": "none",
+       "rect": {
+        "l": 0,
+        "t": 0,
+        "w": 1100,
+        "h": 1742.7,
+        "r": 1100
+       }
+      }
+     ],
+     "cardBg": "rgb(255, 252, 245)",
+     "bodyBg": "rgb(246, 240, 228)",
+     "order": [
+      "checkout-plan@425",
+      "card on-paper till-pay@425",
+      "stack till-side@640"
+     ]
+    },
+    "inner": {
+     "iw": 489,
+     "ih": 496,
+     "sw": 489,
+     "sh": 496,
+     "bodyBg": "rgba(0, 0, 0, 0)",
+     "texts": [
+      "Pay securely with Pay with 000000000000",
+      "Email",
+      "Total due$2,000.00",
+      "Pay"
+     ],
+     "wide": 1
+    },
+    "files": [
+     "shots/checkout/new__business-deposit__w1100-light__1.png"
+    ]
+   },
+   "w1440-light": {
+    "m": {
+     "theme": "light",
+     "vw": 1440,
+     "docW": 1440,
+     "overflowX": 0,
+     "pageH": 1820,
+     "statusHidden": true,
+     "statusText": "Loading secure checkout…",
+     "statusCls": "status",
+     "receiptHidden": false,
+     "name": "Business website — 50% deposit",
+     "price": "$2,000",
+     "receipt": {
+      "l": 856.7,
+      "t": 445.9,
+      "w": 483.3,
+      "h": 144.8,
+      "r": 1340
+     },
+     "card": {
+      "l": 100,
+      "t": 445.9,
+      "w": 676.7,
+      "h": 588.7,
+      "r": 776.7
+     },
+     "form": {
+      "l": 133,
+      "t": 509.1,
+      "w": 610.7,
+      "h": 496.5,
+      "r": 743.7
+     },
+     "iframe": {
+      "l": 129,
+      "t": 509.1,
+      "w": 618.7,
+      "h": 496.5,
+      "r": 747.7
+     },
+     "iframeCount": 2,
+     "clips": [
+      {
+       "el": "BODY.",
+       "ox": "clip",
+       "oy": "visible",
+       "contain": "none",
+       "maxH": "none",
+       "rect": {
+        "l": 0,
+        "t": 0,
+        "w": 1440,
+        "h": 1820.3,
+        "r": 1440
+       }
+      }
+     ],
+     "cardBg": "rgb(255, 252, 245)",
+     "bodyBg": "rgb(246, 240, 228)",
+     "order": [
+      "checkout-plan@446",
+      "card on-paper till-pay@446",
+      "stack till-side@631"
+     ]
+    },
+    "inner": {
+     "iw": 619,
+     "ih": 496,
+     "sw": 619,
+     "sh": 496,
+     "bodyBg": "rgba(0, 0, 0, 0)",
+     "texts": [
+      "Pay securely with Pay with 000000000000",
+      "Email",
+      "Total due$2,000.00",
+      "Pay"
+     ],
+     "wide": 25
+    },
+    "files": [
+     "shots/checkout/new__business-deposit__w1440-light__1.png"
+    ]
+   },
+   "w1920-light": {
+    "m": {
+     "theme": "light",
+     "vw": 1920,
+     "docW": 1920,
+     "overflowX": 0,
+     "pageH": 1821,
+     "statusHidden": true,
+     "statusText": "Loading secure checkout…",
+     "statusCls": "status",
+     "receiptHidden": false,
+     "name": "Business website — 50% deposit",
+     "price": "$2,000",
+     "receipt": {
+      "l": 1096.7,
+      "t": 447,
+      "w": 483.3,
+      "h": 144.8,
+      "r": 1580
+     },
+     "card": {
+      "l": 340,
+      "t": 447,
+      "w": 676.7,
+      "h": 588.7,
+      "r": 1016.7
+     },
+     "form": {
+      "l": 373,
+      "t": 510.2,
+      "w": 610.7,
+      "h": 496.5,
+      "r": 983.7
+     },
+     "iframe": {
+      "l": 369,
+      "t": 510.2,
+      "w": 618.7,
+      "h": 496.5,
+      "r": 987.7
+     },
+     "iframeCount": 2,
+     "clips": [
+      {
+       "el": "BODY.",
+       "ox": "clip",
+       "oy": "visible",
+       "contain": "none",
+       "maxH": "none",
+       "rect": {
+        "l": 0,
+        "t": 0,
+        "w": 1920,
+        "h": 1821.5,
+        "r": 1920
+       }
+      }
+     ],
+     "cardBg": "rgb(255, 252, 245)",
+     "bodyBg": "rgb(246, 240, 228)",
+     "order": [
+      "checkout-plan@447",
+      "card on-paper till-pay@447",
+      "stack till-side@632"
+     ]
+    },
+    "inner": {
+     "iw": 619,
+     "ih": 496,
+     "sw": 619,
+     "sh": 496,
+     "bodyBg": "rgba(0, 0, 0, 0)",
+     "texts": [
+      "Pay securely with Pay with 000000000000",
+      "Email",
+      "Total due$2,000.00",
+      "Pay"
+     ],
+     "wide": 25
+    },
+    "files": [
+     "shots/checkout/new__business-deposit__w1920-light__1.png"
+    ]
+   }
+  },
+  "loading": {
+   "theme": "dark",
+   "vw": 1280,
+   "docW": 1280,
+   "overflowX": 0,
+   "pageH": 2001,
+   "statusHidden": false,
+   "statusText": "Loading secure checkout…",
+   "statusCls": "status",
+   "receiptHidden": false,
+   "name": "Business website — 50% deposit",
+   "price": "$2,000",
+   "receipt": {
+    "l": 770.7,
+    "t": 436.5,
+    "w": 461.3,
+    "h": 144.8,
+    "r": 1232
+   },
+   "card": {
+    "l": 48,
+    "t": 437.6,
+    "w": 645.9,
+    "h": 803.4,
+    "r": 693.9
+   },
+   "form": {
+    "l": 81,
+    "t": 527.9,
+    "w": 579.9,
+    "h": 684,
+    "r": 660.9
+   },
+   "iframe": {
+    "l": 77,
+    "t": 527.9,
+    "w": 587.9,
+    "h": 2,
+    "r": 664.9
+   },
+   "iframeCount": 1,
+   "clips": [
+    {
+     "el": "BODY.",
+     "ox": "clip",
+     "oy": "visible",
+     "contain": "none",
+     "maxH": "none",
+     "rect": {
+      "l": 0,
+      "t": 0,
+      "w": 1280,
+      "h": 2001.4,
+      "r": 1280
+     }
+    }
+   ],
+   "cardBg": "rgb(255, 252, 245)",
+   "bodyBg": "rgb(19, 23, 34)",
+   "order": [
+    "checkout-plan@437",
+    "card on-paper till-pay@438",
+    "stack till-side@622"
+   ]
+  },
+  "server": {
+   "status": 200,
+   "acao": "http://localhost:8720",
+   "body": {
+    "plan": "business-deposit",
+    "label": "Business Website 50% Deposit",
+    "mode": "payment",
+    "hasSecret": true
+   }
+  },
+  "session_id": "cs_live_a0ouKYQ42ZlM8Wncwfs9JZs0WiuvrjZwPOkh5N50xpaOOQQXnLkZRD0WCq",
+  "msToMount": 3332,
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "You may test your Stripe.js integration over HTTP. However, live Stripe.js integrations must use HTTPS."
+   },
+   {
+    "t": "console.warning",
+    "text": "Origin trial controlled feature not enabled: 'tools'."
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   },
+   {
+    "t": "console.warning",
+    "text": "Origin trial controlled feature not enabled: 'tools'."
+   },
+   {
+    "t": "console.warning",
+    "text": "Origin trial controlled feature not enabled: 'tools'."
+   },
+   {
+    "t": "console.warning",
+    "text": "Origin trial controlled feature not enabled: 'tools'."
+   },
+   {
+    "t": "requestfailed",
+    "url": "https://d9ea4a98f3db.w.hcaptcha.com/logo.png",
+    "err": "net::ERR_ABORTED"
+   },
+   {
+    "t": "requestfailed",
+    "url": "https://88a918721c70.w.hcaptcha.com/logo.png",
+    "err": "net::ERR_ABORTED"
+   }
+  ],
+  "hosts": [
+   "js.stripe.com",
+   "plausible.io",
+   "knightwebstudio-checkout.onrender.com",
+   "merchant-ui-api.stripe.com",
+   "r.stripe.com",
+   "api.stripe.com",
+   "m.stripe.network",
+   "b.stripecdn.com",
+   "m.stripe.com",
+   "static-na.payments-amazon.com",
+   "hcaptcha.com",
+   "newassets.hcaptcha.com",
+   "10d5419acb05.w.hcaptcha.com",
+   "apay-us.amazon.com",
+   "d9ea4a98f3db.w.hcaptcha.com",
+   "api.hcaptcha.com",
+   "88a918721c70.w.hcaptcha.com",
+   "m.media-amazon.com"
+  ]
+ },
+ "commerce-deposit": {
+  "device": "mobile",
+  "theme": "dark",
+  "states": {
+   "mobile-dark": {
+    "m": {
+     "theme": "dark",
+     "vw": 390,
+     "docW": 390,
+     "overflowX": 0,
+     "pageH": 2622,
+     "statusHidden": true,
+     "statusText": "Loading secure checkout…",
+     "statusCls": "status",
+     "receiptHidden": false,
+     "name": "Commerce website — 50% deposit",
+     "price": "$4,000",
+     "receipt": {
+      "l": 20,
+      "t": 400.1,
+      "w": 350,
+      "h": 166.7,
+      "r": 370
+     },
+     "card": {
+      "l": 20,
+      "t": 606.8,
+      "w": 350,
+      "h": 469.8,
+      "r": 370
+     },
+     "form": {
+      "l": 41,
+      "t": 658,
+      "w": 308,
+      "h": 401.6,
+      "r": 349
+     },
+     "iframe": {
+      "l": 37,
+      "t": 658,
+      "w": 316,
+      "h": 401.6,
+      "r": 353
+     },
+     "iframeCount": 2,
+     "clips": [
+      {
+       "el": "BODY.",
+       "ox": "clip",
+       "oy": "visible",
+       "contain": "none",
+       "maxH": "none",
+       "rect": {
+        "l": 0,
+        "t": 0,
+        "w": 390,
+        "h": 2621.6,
+        "r": 390
+       }
+      }
+     ],
+     "cardBg": "rgb(255, 252, 245)",
+     "bodyBg": "rgb(19, 23, 34)",
+     "order": [
+      "checkout-plan@400",
+      "card on-paper till-pay@607",
+      "stack till-side@1109"
+     ]
+    },
+    "inner": {
+     "iw": 316,
+     "ih": 402,
+     "sw": 316,
+     "sh": 402,
+     "bodyBg": "rgba(0, 0, 0, 0)",
+     "texts": [
+      "Pay securely with Pay with 000000000000",
+      "Email",
+      "Total due$4,000.00",
+      "Pay"
+     ],
+     "wide": 9
+    },
+    "files": [
+     "shots/checkout/new__commerce-deposit__mobile-dark__1.png"
+    ]
+   },
+   "mobile-light": {
+    "m": {
+     "theme": "light",
+     "vw": 390,
+     "docW": 390,
+     "overflowX": 0,
+     "pageH": 2716,
+     "statusHidden": true,
+     "statusText": "Loading secure checkout…",
+     "statusCls": "status",
+     "receiptHidden": false,
+     "name": "Commerce website — 50% deposit",
+     "price": "$4,000",
+     "receipt": {
+      "l": 20,
+      "t": 400.1,
+      "w": 350,
+      "h": 166.7,
+      "r": 370
+     },
+     "card": {
+      "l": 20,
+      "t": 606.8,
+      "w": 350,
+      "h": 564.7,
+      "r": 370
+     },
+     "form": {
+      "l": 41,
+      "t": 658,
+      "w": 308,
+      "h": 496.5,
+      "r": 349
+     },
+     "iframe": {
+      "l": 37,
+      "t": 658,
+      "w": 316,
+      "h": 496.5,
+      "r": 353
+     },
+     "iframeCount": 2,
+     "clips": [
+      {
+       "el": "BODY.",
+       "ox": "clip",
+       "oy": "visible",
+       "contain": "none",
+       "maxH": "none",
+       "rect": {
+        "l": 0,
+        "t": 0,
+        "w": 390,
+        "h": 2716.5,
+        "r": 390
+       }
+      }
+     ],
+     "cardBg": "rgb(255, 252, 245)",
+     "bodyBg": "rgb(246, 240, 228)",
+     "order": [
+      "checkout-plan@400",
+      "card on-paper till-pay@607",
+      "stack till-side@1203"
+     ]
+    },
+    "files": [
+     "shots/checkout/new__commerce-deposit__mobile-light__1.png"
+    ]
+   },
+   "w360-light": {
+    "m": {
+     "theme": "light",
+     "vw": 360,
+     "docW": 360,
+     "overflowX": 0,
+     "pageH": 2712,
+     "statusHidden": true,
+     "statusText": "Loading secure checkout…",
+     "statusCls": "status",
+     "receiptHidden": false,
+     "name": "Commerce website — 50% deposit",
+     "price": "$4,000",
+     "receipt": {
+      "l": 20,
+      "t": 396.2,
+      "w": 320,
+      "h": 166.3,
+      "r": 340
+     },
+     "card": {
+      "l": 20,
+      "t": 602.5,
+      "w": 320,
+      "h": 564.7,
+      "r": 340
+     },
+     "form": {
+      "l": 41,
+      "t": 653.7,
+      "w": 278,
+      "h": 496.5,
+      "r": 319
+     },
+     "iframe": {
+      "l": 37,
+      "t": 653.7,
+      "w": 286,
+      "h": 496.5,
+      "r": 323
+     },
+     "iframeCount": 2,
+     "clips": [
+      {
+       "el": "BODY.",
+       "ox": "clip",
+       "oy": "visible",
+       "contain": "none",
+       "maxH": "none",
+       "rect": {
+        "l": 0,
+        "t": 0,
+        "w": 360,
+        "h": 2712.2,
+        "r": 360
+       }
+      }
+     ],
+     "cardBg": "rgb(255, 252, 245)",
+     "bodyBg": "rgb(246, 240, 228)",
+     "order": [
+      "checkout-plan@396",
+      "card on-paper till-pay@603",
+      "stack till-side@1199"
+     ]
+    },
+    "inner": {
+     "iw": 286,
+     "ih": 496,
+     "sw": 286,
+     "sh": 496,
+     "bodyBg": "rgba(0, 0, 0, 0)",
+     "texts": [
+      "Pay securely with Pay with 000000000000",
+      "Email",
+      "Total due$4,000.00",
+      "Pay"
+     ],
+     "wide": 15
+    },
+    "files": [
+     "shots/checkout/new__commerce-deposit__w360-light__1.png"
+    ]
+   },
+   "w430-light": {
+    "m": {
+     "theme": "light",
+     "vw": 430,
+     "docW": 430,
+     "overflowX": 0,
+     "pageH": 2666,
+     "statusHidden": true,
+     "statusText": "Loading secure checkout…",
+     "statusCls": "status",
+     "receiptHidden": false,
+     "name": "Commerce website — 50% deposit",
+     "price": "$4,000",
+     "receipt": {
+      "l": 21.5,
+      "t": 377.5,
+      "w": 387,
+      "h": 167.2,
+      "r": 408.5
+     },
+     "card": {
+      "l": 21.5,
+      "t": 584.7,
+      "w": 387,
+      "h": 564.7,
+      "r": 408.5
+     },
+     "form": {
+      "l": 42.5,
+      "t": 635.9,
+      "w": 345,
+      "h": 496.5,
+      "r": 387.5
+     },
+     "iframe": {
+      "l": 38.5,
+      "t": 635.9,
+      "w": 353,
+      "h": 496.5,
+      "r": 391.5
+     },
+     "iframeCount": 2,
+     "clips": [
+      {
+       "el": "BODY.",
+       "ox": "clip",
+       "oy": "visible",
+       "contain": "none",
+       "maxH": "none",
+       "rect": {
+        "l": 0,
+        "t": 0,
+        "w": 430,
+        "h": 2666.4,
+        "r": 430
+       }
+      }
+     ],
+     "cardBg": "rgb(255, 252, 245)",
+     "bodyBg": "rgb(246, 240, 228)",
+     "order": [
+      "checkout-plan@378",
+      "card on-paper till-pay@585",
+      "stack till-side@1181"
+     ]
+    },
+    "inner": {
+     "iw": 353,
+     "ih": 496,
+     "sw": 353,
+     "sh": 496,
+     "bodyBg": "rgba(0, 0, 0, 0)",
+     "texts": [
+      "Pay securely with Pay with 000000000000",
+      "Email",
+      "Total due$4,000.00",
+      "Pay"
+     ],
+     "wide": 9
+    },
+    "files": [
+     "shots/checkout/new__commerce-deposit__w430-light__1.png"
+    ]
+   },
+   "w320-light": {
+    "m": {
+     "theme": "light",
+     "vw": 320,
+     "docW": 320,
+     "overflowX": 0,
+     "pageH": 2835,
+     "statusHidden": true,
+     "statusText": "Loading secure checkout…",
+     "statusCls": "status",
+     "receiptHidden": false,
+     "name": "Commerce website — 50% deposit",
+     "price": "$4,000",
+     "receipt": {
+      "l": 20,
+      "t": 433.6,
+      "w": 280,
+      "h": 205.2,
+      "r": 300
+     },
+     "card": {
+      "l": 20,
+      "t": 678.8,
+      "w": 280,
+      "h": 564.7,
+      "r": 300
+     },
+     "form": {
+      "l": 41,
+      "t": 730,
+      "w": 238,
+      "h": 496.5,
+      "r": 279
+     },
+     "iframe": {
+      "l": 37,
+      "t": 730,
+      "w": 246,
+      "h": 496.5,
+      "r": 283
+     },
+     "iframeCount": 2,
+     "clips": [
+      {
+       "el": "BODY.",
+       "ox": "clip",
+       "oy": "visible",
+       "contain": "none",
+       "maxH": "none",
+       "rect": {
+        "l": 0,
+        "t": 0,
+        "w": 320,
+        "h": 2835,
+        "r": 320
+       }
+      }
+     ],
+     "cardBg": "rgb(255, 252, 245)",
+     "bodyBg": "rgb(246, 240, 228)",
+     "order": [
+      "checkout-plan@434",
+      "card on-paper till-pay@679",
+      "stack till-side@1275"
+     ]
+    },
+    "inner": {
+     "iw": 246,
+     "ih": 496,
+     "sw": 246,
+     "sh": 496,
+     "bodyBg": "rgba(0, 0, 0, 0)",
+     "texts": [
+      "Pay securely with Pay with 000000000000",
+      "Email",
+      "Total due$4,000.00",
+      "Pay"
+     ],
+     "wide": 16
+    },
+    "files": [
+     "shots/checkout/new__commerce-deposit__w320-light__1.png",
+     "shots/checkout/new__commerce-deposit__w320-light__2.png"
+    ]
+   }
+  },
+  "loading": {
+   "theme": "dark",
+   "vw": 390,
+   "docW": 390,
+   "overflowX": 0,
+   "pageH": 2931,
+   "statusHidden": false,
+   "statusText": "Loading secure checkout…",
+   "statusCls": "status",
+   "receiptHidden": false,
+   "name": "Commerce website — 50% deposit",
+   "price": "$4,000",
+   "receipt": {
+    "l": 20,
+    "t": 399.9,
+    "w": 350,
+    "h": 166.7,
+    "r": 370
+   },
+   "card": {
+    "l": 20,
+    "t": 606.8,
+    "w": 350,
+    "h": 779.4,
+    "r": 370
+   },
+   "form": {
+    "l": 41,
+    "t": 685.2,
+    "w": 308,
+    "h": 684,
+    "r": 349
+   },
+   "iframe": {
+    "l": 37,
+    "t": 685.2,
+    "w": 316,
+    "h": 2,
+    "r": 353
+   },
+   "iframeCount": 1,
+   "clips": [
+    {
+     "el": "BODY.",
+     "ox": "clip",
+     "oy": "visible",
+     "contain": "none",
+     "maxH": "none",
+     "rect": {
+      "l": 0,
+      "t": 0,
+      "w": 390,
+      "h": 2931.2,
+      "r": 390
+     }
+    }
+   ],
+   "cardBg": "rgb(255, 252, 245)",
+   "bodyBg": "rgb(19, 23, 34)",
+   "order": [
+    "checkout-plan@400",
+    "card on-paper till-pay@607",
+    "stack till-side@1418"
+   ]
+  },
+  "server": {
+   "status": 200,
+   "acao": "http://localhost:8720",
+   "body": {
+    "plan": "commerce-deposit",
+    "label": "Commerce Website 50% Deposit",
+    "mode": "payment",
+    "hasSecret": true
+   }
+  },
+  "session_id": "cs_live_a0rsfoslGgpUwBcUHKeV1TRo2t8GtySjAsvdjM3CFq1pNjOD40N6qGhcAS",
+  "msToMount": 3784,
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "You may test your Stripe.js integration over HTTP. However, live Stripe.js integrations must use HTTPS."
+   },
+   {
+    "t": "console.warning",
+    "text": "Origin trial controlled feature not enabled: 'tools'."
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   },
+   {
+    "t": "console.warning",
+    "text": "Origin trial controlled feature not enabled: 'tools'."
+   },
+   {
+    "t": "console.warning",
+    "text": "Origin trial controlled feature not enabled: 'tools'."
+   },
+   {
+    "t": "console.warning",
+    "text": "Origin trial controlled feature not enabled: 'tools'."
+   },
+   {
+    "t": "requestfailed",
+    "url": "https://bb369e6dc77a.w.hcaptcha.com/logo.png",
+    "err": "net::ERR_ABORTED"
+   },
+   {
+    "t": "requestfailed",
+    "url": "https://a7a8df450798.w.hcaptcha.com/logo.png",
+    "err": "net::ERR_ABORTED"
+   }
+  ],
+  "hosts": [
+   "js.stripe.com",
+   "plausible.io",
+   "knightwebstudio-checkout.onrender.com",
+   "merchant-ui-api.stripe.com",
+   "r.stripe.com",
+   "api.stripe.com",
+   "m.stripe.network",
+   "b.stripecdn.com",
+   "m.stripe.com",
+   "static-na.payments-amazon.com",
+   "hcaptcha.com",
+   "a82615a4645c.w.hcaptcha.com",
+   "apay-us.amazon.com",
+   "m.media-amazon.com",
+   "newassets.hcaptcha.com",
+   "bb369e6dc77a.w.hcaptcha.com",
+   "api.hcaptcha.com",
+   "a7a8df450798.w.hcaptcha.com"
+  ]
+ },
+ "essential-care": {
+  "device": "desktop",
+  "theme": "light",
+  "states": {
+   "desktop-light": {
+    "m": {
+     "theme": "light",
+     "vw": 1280,
+     "docW": 1280,
+     "overflowX": 0,
+     "pageH": 1754,
+     "statusHidden": true,
+     "statusText": "Loading secure checkout…",
+     "statusCls": "status",
+     "receiptHidden": false,
+     "name": "Essential care plan",
+     "price": "$300/month",
+     "receipt": {
+      "l": 770.7,
+      "t": 437.6,
+      "w": 461.3,
+      "h": 144.8,
+      "r": 1232
+     },
+     "card": {
+      "l": 48,
+      "t": 437.6,
+      "w": 645.9,
+      "h": 555.9,
+      "r": 693.9
+     },
+     "form": {
+      "l": 81,
+      "t": 500.8,
+      "w": 579.9,
+      "h": 463.7,
+      "r": 660.9
+     },
+     "iframe": {
+      "l": 77,
+      "t": 500.8,
+      "w": 587.9,
+      "h": 463.7,
+      "r": 664.9
+     },
+     "iframeCount": 2,
+     "clips": [
+      {
+       "el": "BODY.",
+       "ox": "clip",
+       "oy": "visible",
+       "contain": "none",
+       "maxH": "none",
+       "rect": {
+        "l": 0,
+        "t": 0,
+        "w": 1280,
+        "h": 1753.9,
+        "r": 1280
+       }
+      }
+     ],
+     "cardBg": "rgb(255, 252, 245)",
+     "bodyBg": "rgb(246, 240, 228)",
+     "order": [
+      "checkout-plan@438",
+      "card on-paper till-pay@438",
+      "stack till-side@622"
+     ]
+    },
+    "inner": {
+     "iw": 588,
+     "ih": 464,
+     "sw": 588,
+     "sh": 464,
+     "bodyBg": "rgba(0, 0, 0, 0)",
+     "texts": [
+      "Pay securely with Pay with 000000000000",
+      "Email",
+      "Total$300.00monthly",
+      "Subscribe"
+     ],
+     "wide": 28
+    },
+    "files": [
+     "shots/checkout/new__essential-care__desktop-light__1.png"
+    ]
+   },
+   "desktop-dark": {
+    "m": {
+     "theme": "dark",
+     "vw": 1280,
+     "docW": 1280,
+     "overflowX": 0,
+     "pageH": 1787,
+     "statusHidden": true,
+     "statusText": "Loading secure checkout…",
+     "statusCls": "status",
+     "receiptHidden": false,
+     "name": "Essential care plan",
+     "price": "$300/month",
+     "receipt": {
+      "l": 770.7,
+      "t": 437.6,
+      "w": 461.3,
+      "h": 144.8,
+      "r": 1232
+     },
+     "card": {
+      "l": 48,
+      "t": 437.6,
+      "w": 645.9,
+      "h": 588.7,
+      "r": 693.9
+     },
+     "form": {
+      "l": 81,
+      "t": 500.8,
+      "w": 579.9,
+      "h": 496.5,
+      "r": 660.9
+     },
+     "iframe": {
+      "l": 77,
+      "t": 500.8,
+      "w": 587.9,
+      "h": 496.5,
+      "r": 664.9
+     },
+     "iframeCount": 2,
+     "clips": [
+      {
+       "el": "BODY.",
+       "ox": "clip",
+       "oy": "visible",
+       "contain": "none",
+       "maxH": "none",
+       "rect": {
+        "l": 0,
+        "t": 0,
+        "w": 1280,
+        "h": 1786.7,
+        "r": 1280
+       }
+      }
+     ],
+     "cardBg": "rgb(255, 252, 245)",
+     "bodyBg": "rgb(19, 23, 34)",
+     "order": [
+      "checkout-plan@438",
+      "card on-paper till-pay@438",
+      "stack till-side@622"
+     ]
+    },
+    "files": [
+     "shots/checkout/new__essential-care__desktop-dark__1.png"
+    ]
+   },
+   "w390-dark": {
+    "m": {
+     "theme": "dark",
+     "vw": 390,
+     "docW": 390,
+     "overflowX": 0,
+     "pageH": 2716,
+     "statusHidden": true,
+     "statusText": "Loading secure checkout…",
+     "statusCls": "status",
+     "receiptHidden": false,
+     "name": "Essential care plan",
+     "price": "$300/month",
+     "receipt": {
+      "l": 20,
+      "t": 400.1,
+      "w": 350,
+      "h": 166.7,
+      "r": 370
+     },
+     "card": {
+      "l": 20,
+      "t": 606.8,
+      "w": 350,
+      "h": 564.7,
+      "r": 370
+     },
+     "form": {
+      "l": 41,
+      "t": 658,
+      "w": 308,
+      "h": 496.5,
+      "r": 349
+     },
+     "iframe": {
+      "l": 37,
+      "t": 658,
+      "w": 316,
+      "h": 496.5,
+      "r": 353
+     },
+     "iframeCount": 2,
+     "clips": [
+      {
+       "el": "BODY.",
+       "ox": "clip",
+       "oy": "visible",
+       "contain": "none",
+       "maxH": "none",
+       "rect": {
+        "l": 0,
+        "t": 0,
+        "w": 390,
+        "h": 2716.5,
+        "r": 390
+       }
+      }
+     ],
+     "cardBg": "rgb(255, 252, 245)",
+     "bodyBg": "rgb(19, 23, 34)",
+     "order": [
+      "checkout-plan@400",
+      "card on-paper till-pay@607",
+      "stack till-side@1203"
+     ]
+    },
+    "inner": {
+     "iw": 316,
+     "ih": 496,
+     "sw": 316,
+     "sh": 496,
+     "bodyBg": "rgba(0, 0, 0, 0)",
+     "texts": [
+      "Pay securely with Pay with 000000000000",
+      "Email",
+      "Total$300.00monthly",
+      "Subscribe"
+     ],
+     "wide": 9
+    },
+    "files": [
+     "shots/checkout/new__essential-care__w390-dark__1.png"
+    ]
+   },
+   "w820-dark": {
+    "m": {
+     "theme": "dark",
+     "vw": 820,
+     "docW": 820,
+     "overflowX": 0,
+     "pageH": 2236,
+     "statusHidden": true,
+     "statusText": "Loading secure checkout…",
+     "statusCls": "status",
+     "receiptHidden": false,
+     "name": "Essential care plan",
+     "price": "$300/month",
+     "receipt": {
+      "l": 41,
+      "t": 387.6,
+      "w": 738,
+      "h": 141.8,
+      "r": 779
+     },
+     "card": {
+      "l": 41,
+      "t": 569.4,
+      "w": 738,
+      "h": 573.9,
+      "r": 779
+     },
+     "form": {
+      "l": 66.6,
+      "t": 625.2,
+      "w": 686.8,
+      "h": 496.5,
+      "r": 753.4
+     },
+     "iframe": {
+      "l": 62.6,
+      "t": 625.2,
+      "w": 694.8,
+      "h": 496.5,
+      "r": 757.4
+     },
+     "iframeCount": 2,
+     "clips": [
+      {
+       "el": "BODY.",
+       "ox": "clip",
+       "oy": "visible",
+       "contain": "none",
+       "maxH": "none",
+       "rect": {
+        "l": 0,
+        "t": 0,
+        "w": 820,
+        "h": 2236.2,
+        "r": 820
+       }
+      }
+     ],
+     "cardBg": "rgb(255, 252, 245)",
+     "bodyBg": "rgb(19, 23, 34)",
+     "order": [
+      "checkout-plan@388",
+      "card on-paper till-pay@569",
+      "stack till-side@1175"
+     ]
+    },
+    "inner": {
+     "iw": 695,
+     "ih": 496,
+     "sw": 695,
+     "sh": 496,
+     "bodyBg": "rgba(0, 0, 0, 0)",
+     "texts": [
+      "Pay securely with Pay with 000000000000",
+      "Email",
+      "Total$300.00monthly",
+      "Subscribe"
+     ],
+     "wide": 18
+    },
+    "files": [
+     "shots/checkout/new__essential-care__w820-dark__1.png"
+    ]
+   },
+   "w1100-dark": {
+    "m": {
+     "theme": "dark",
+     "vw": 1100,
+     "docW": 1100,
+     "overflowX": 0,
+     "pageH": 1743,
+     "statusHidden": true,
+     "statusText": "Loading secure checkout…",
+     "statusCls": "status",
+     "receiptHidden": false,
+     "name": "Essential care plan",
+     "price": "$300/month",
+     "receipt": {
+      "l": 661.2,
+      "t": 424.8,
+      "w": 390.8,
+      "h": 174.8,
+      "r": 1052
+     },
+     "card": {
+      "l": 48,
+      "t": 424.8,
+      "w": 547.2,
+      "h": 588.7,
+      "r": 595.2
+     },
+     "form": {
+      "l": 81,
+      "t": 488,
+      "w": 481.2,
+      "h": 496.5,
+      "r": 562.2
+     },
+     "iframe": {
+      "l": 77,
+      "t": 488,
+      "w": 489.2,
+      "h": 496.5,
+      "r": 566.2
+     },
+     "iframeCount": 2,
+     "clips": [
+      {
+       "el": "BODY.",
+       "ox": "clip",
+       "oy": "visible",
+       "contain": "none",
+       "maxH": "none",
+       "rect": {
+        "l": 0,
+        "t": 0,
+        "w": 1100,
+        "h": 1742.7,
+        "r": 1100
+       }
+      }
+     ],
+     "cardBg": "rgb(255, 252, 245)",
+     "bodyBg": "rgb(19, 23, 34)",
+     "order": [
+      "checkout-plan@425",
+      "card on-paper till-pay@425",
+      "stack till-side@640"
+     ]
+    },
+    "inner": {
+     "iw": 489,
+     "ih": 496,
+     "sw": 489,
+     "sh": 496,
+     "bodyBg": "rgba(0, 0, 0, 0)",
+     "texts": [
+      "Pay securely with Pay with 000000000000",
+      "Email",
+      "Total$300.00monthly",
+      "Subscribe"
+     ],
+     "wide": 1
+    },
+    "files": [
+     "shots/checkout/new__essential-care__w1100-dark__1.png"
+    ]
+   },
+   "w1440-dark": {
+    "m": {
+     "theme": "dark",
+     "vw": 1440,
+     "docW": 1440,
+     "overflowX": 0,
+     "pageH": 1820,
+     "statusHidden": true,
+     "statusText": "Loading secure checkout…",
+     "statusCls": "status",
+     "receiptHidden": false,
+     "name": "Essential care plan",
+     "price": "$300/month",
+     "receipt": {
+      "l": 856.7,
+      "t": 445.9,
+      "w": 483.3,
+      "h": 144.8,
+      "r": 1340
+     },
+     "card": {
+      "l": 100,
+      "t": 445.9,
+      "w": 676.7,
+      "h": 588.7,
+      "r": 776.7
+     },
+     "form": {
+      "l": 133,
+      "t": 509.1,
+      "w": 610.7,
+      "h": 496.5,
+      "r": 743.7
+     },
+     "iframe": {
+      "l": 129,
+      "t": 509.1,
+      "w": 618.7,
+      "h": 496.5,
+      "r": 747.7
+     },
+     "iframeCount": 2,
+     "clips": [
+      {
+       "el": "BODY.",
+       "ox": "clip",
+       "oy": "visible",
+       "contain": "none",
+       "maxH": "none",
+       "rect": {
+        "l": 0,
+        "t": 0,
+        "w": 1440,
+        "h": 1820.3,
+        "r": 1440
+       }
+      }
+     ],
+     "cardBg": "rgb(255, 252, 245)",
+     "bodyBg": "rgb(19, 23, 34)",
+     "order": [
+      "checkout-plan@446",
+      "card on-paper till-pay@446",
+      "stack till-side@631"
+     ]
+    },
+    "inner": {
+     "iw": 619,
+     "ih": 496,
+     "sw": 619,
+     "sh": 496,
+     "bodyBg": "rgba(0, 0, 0, 0)",
+     "texts": [
+      "Pay securely with Pay with 000000000000",
+      "Email",
+      "Total$300.00monthly",
+      "Subscribe"
+     ],
+     "wide": 25
+    },
+    "files": [
+     "shots/checkout/new__essential-care__w1440-dark__1.png"
+    ]
+   },
+   "w1920-dark": {
+    "m": {
+     "theme": "dark",
+     "vw": 1920,
+     "docW": 1920,
+     "overflowX": 0,
+     "pageH": 1821,
+     "statusHidden": true,
+     "statusText": "Loading secure checkout…",
+     "statusCls": "status",
+     "receiptHidden": false,
+     "name": "Essential care plan",
+     "price": "$300/month",
+     "receipt": {
+      "l": 1096.7,
+      "t": 447,
+      "w": 483.3,
+      "h": 144.8,
+      "r": 1580
+     },
+     "card": {
+      "l": 340,
+      "t": 447,
+      "w": 676.7,
+      "h": 588.7,
+      "r": 1016.7
+     },
+     "form": {
+      "l": 373,
+      "t": 510.2,
+      "w": 610.7,
+      "h": 496.5,
+      "r": 983.7
+     },
+     "iframe": {
+      "l": 369,
+      "t": 510.2,
+      "w": 618.7,
+      "h": 496.5,
+      "r": 987.7
+     },
+     "iframeCount": 2,
+     "clips": [
+      {
+       "el": "BODY.",
+       "ox": "clip",
+       "oy": "visible",
+       "contain": "none",
+       "maxH": "none",
+       "rect": {
+        "l": 0,
+        "t": 0,
+        "w": 1920,
+        "h": 1821.5,
+        "r": 1920
+       }
+      }
+     ],
+     "cardBg": "rgb(255, 252, 245)",
+     "bodyBg": "rgb(19, 23, 34)",
+     "order": [
+      "checkout-plan@447",
+      "card on-paper till-pay@447",
+      "stack till-side@632"
+     ]
+    },
+    "inner": {
+     "iw": 619,
+     "ih": 496,
+     "sw": 619,
+     "sh": 496,
+     "bodyBg": "rgba(0, 0, 0, 0)",
+     "texts": [
+      "Pay securely with Pay with 000000000000",
+      "Email",
+      "Total$300.00monthly",
+      "Subscribe"
+     ],
+     "wide": 25
+    },
+    "files": [
+     "shots/checkout/new__essential-care__w1920-dark__1.png"
+    ]
+   }
+  },
+  "loading": {
+   "theme": "light",
+   "vw": 1280,
+   "docW": 1280,
+   "overflowX": 0,
+   "pageH": 2001,
+   "statusHidden": false,
+   "statusText": "Loading secure checkout…",
+   "statusCls": "status",
+   "receiptHidden": false,
+   "name": "Essential care plan",
+   "price": "$300/month",
+   "receipt": {
+    "l": 770.7,
+    "t": 437.3,
+    "w": 461.3,
+    "h": 144.8,
+    "r": 1232
+   },
+   "card": {
+    "l": 48,
+    "t": 437.6,
+    "w": 645.9,
+    "h": 803.4,
+    "r": 693.9
+   },
+   "form": {
+    "l": 81,
+    "t": 527.9,
+    "w": 579.9,
+    "h": 684,
+    "r": 660.9
+   },
+   "iframe": {
+    "l": 77,
+    "t": 527.9,
+    "w": 587.9,
+    "h": 2,
+    "r": 664.9
+   },
+   "iframeCount": 1,
+   "clips": [
+    {
+     "el": "BODY.",
+     "ox": "clip",
+     "oy": "visible",
+     "contain": "none",
+     "maxH": "none",
+     "rect": {
+      "l": 0,
+      "t": 0,
+      "w": 1280,
+      "h": 2001.4,
+      "r": 1280
+     }
+    }
+   ],
+   "cardBg": "rgb(255, 252, 245)",
+   "bodyBg": "rgb(246, 240, 228)",
+   "order": [
+    "checkout-plan@437",
+    "card on-paper till-pay@438",
+    "stack till-side@622"
+   ]
+  },
+  "server": {
+   "status": 200,
+   "acao": "http://localhost:8720",
+   "body": {
+    "plan": "essential-care",
+    "label": "Essential Care Plan",
+    "mode": "subscription",
+    "hasSecret": true
+   }
+  },
+  "session_id": "cs_live_a0LQKOlCPqRvZeetHPoOcQKEJaZnnWOzUU5iJry7P1otvrAMgdLTKybRZW",
+  "msToMount": 3158,
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "You may test your Stripe.js integration over HTTP. However, live Stripe.js integrations must use HTTPS."
+   },
+   {
+    "t": "console.warning",
+    "text": "Origin trial controlled feature not enabled: 'tools'."
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   },
+   {
+    "t": "console.warning",
+    "text": "Origin trial controlled feature not enabled: 'tools'."
+   },
+   {
+    "t": "console.warning",
+    "text": "Origin trial controlled feature not enabled: 'tools'."
+   },
+   {
+    "t": "console.warning",
+    "text": "Origin trial controlled feature not enabled: 'tools'."
+   },
+   {
+    "t": "requestfailed",
+    "url": "https://80b528720d94.w.hcaptcha.com/logo.png",
+    "err": "net::ERR_ABORTED"
+   },
+   {
+    "t": "requestfailed",
+    "url": "https://b344a8dad89a.w.hcaptcha.com/logo.png",
+    "err": "net::ERR_ABORTED"
+   }
+  ],
+  "hosts": [
+   "js.stripe.com",
+   "plausible.io",
+   "knightwebstudio-checkout.onrender.com",
+   "merchant-ui-api.stripe.com",
+   "r.stripe.com",
+   "api.stripe.com",
+   "m.stripe.network",
+   "b.stripecdn.com",
+   "m.stripe.com",
+   "static-na.payments-amazon.com",
+   "apay-us.amazon.com",
+   "hcaptcha.com",
+   "m.media-amazon.com",
+   "newassets.hcaptcha.com",
+   "1e832dfa48da.w.hcaptcha.com",
+   "80b528720d94.w.hcaptcha.com",
+   "api.hcaptcha.com",
+   "b344a8dad89a.w.hcaptcha.com"
+  ]
+ },
+ "growth-care": {
+  "device": "mobile",
+  "theme": "light",
+  "states": {
+   "mobile-light": {
+    "m": {
+     "theme": "light",
+     "vw": 390,
+     "docW": 390,
+     "overflowX": 0,
+     "pageH": 2622,
+     "statusHidden": true,
+     "statusText": "Loading secure checkout…",
+     "statusCls": "status",
+     "receiptHidden": false,
+     "name": "Growth care plan",
+     "price": "$600/month",
+     "receipt": {
+      "l": 20,
+      "t": 400.1,
+      "w": 350,
+      "h": 166.7,
+      "r": 370
+     },
+     "card": {
+      "l": 20,
+      "t": 606.8,
+      "w": 350,
+      "h": 469.8,
+      "r": 370
+     },
+     "form": {
+      "l": 41,
+      "t": 658,
+      "w": 308,
+      "h": 401.6,
+      "r": 349
+     },
+     "iframe": {
+      "l": 37,
+      "t": 658,
+      "w": 316,
+      "h": 401.6,
+      "r": 353
+     },
+     "iframeCount": 2,
+     "clips": [
+      {
+       "el": "BODY.",
+       "ox": "clip",
+       "oy": "visible",
+       "contain": "none",
+       "maxH": "none",
+       "rect": {
+        "l": 0,
+        "t": 0,
+        "w": 390,
+        "h": 2621.6,
+        "r": 390
+       }
+      }
+     ],
+     "cardBg": "rgb(255, 252, 245)",
+     "bodyBg": "rgb(246, 240, 228)",
+     "order": [
+      "checkout-plan@400",
+      "card on-paper till-pay@607",
+      "stack till-side@1109"
+     ]
+    },
+    "inner": {
+     "iw": 316,
+     "ih": 402,
+     "sw": 316,
+     "sh": 402,
+     "bodyBg": "rgba(0, 0, 0, 0)",
+     "texts": [
+      "Pay securely with Pay with 000000000000",
+      "Email",
+      "Total$600.00monthly",
+      "Subscribe"
+     ],
+     "wide": 9
+    },
+    "files": [
+     "shots/checkout/new__growth-care__mobile-light__1.png"
+    ]
+   },
+   "mobile-dark": {
+    "m": {
+     "theme": "dark",
+     "vw": 390,
+     "docW": 390,
+     "overflowX": 0,
+     "pageH": 2716,
+     "statusHidden": true,
+     "statusText": "Loading secure checkout…",
+     "statusCls": "status",
+     "receiptHidden": false,
+     "name": "Growth care plan",
+     "price": "$600/month",
+     "receipt": {
+      "l": 20,
+      "t": 400.1,
+      "w": 350,
+      "h": 166.7,
+      "r": 370
+     },
+     "card": {
+      "l": 20,
+      "t": 606.8,
+      "w": 350,
+      "h": 564.7,
+      "r": 370
+     },
+     "form": {
+      "l": 41,
+      "t": 658,
+      "w": 308,
+      "h": 496.5,
+      "r": 349
+     },
+     "iframe": {
+      "l": 37,
+      "t": 658,
+      "w": 316,
+      "h": 496.5,
+      "r": 353
+     },
+     "iframeCount": 2,
+     "clips": [
+      {
+       "el": "BODY.",
+       "ox": "clip",
+       "oy": "visible",
+       "contain": "none",
+       "maxH": "none",
+       "rect": {
+        "l": 0,
+        "t": 0,
+        "w": 390,
+        "h": 2716.5,
+        "r": 390
+       }
+      }
+     ],
+     "cardBg": "rgb(255, 252, 245)",
+     "bodyBg": "rgb(19, 23, 34)",
+     "order": [
+      "checkout-plan@400",
+      "card on-paper till-pay@607",
+      "stack till-side@1203"
+     ]
+    },
+    "files": [
+     "shots/checkout/new__growth-care__mobile-dark__1.png"
+    ]
+   },
+   "w360-dark": {
+    "m": {
+     "theme": "dark",
+     "vw": 360,
+     "docW": 360,
+     "overflowX": 0,
+     "pageH": 2712,
+     "statusHidden": true,
+     "statusText": "Loading secure checkout…",
+     "statusCls": "status",
+     "receiptHidden": false,
+     "name": "Growth care plan",
+     "price": "$600/month",
+     "receipt": {
+      "l": 20,
+      "t": 396.2,
+      "w": 320,
+      "h": 166.3,
+      "r": 340
+     },
+     "card": {
+      "l": 20,
+      "t": 602.5,
+      "w": 320,
+      "h": 564.7,
+      "r": 340
+     },
+     "form": {
+      "l": 41,
+      "t": 653.7,
+      "w": 278,
+      "h": 496.5,
+      "r": 319
+     },
+     "iframe": {
+      "l": 37,
+      "t": 653.7,
+      "w": 286,
+      "h": 496.5,
+      "r": 323
+     },
+     "iframeCount": 2,
+     "clips": [
+      {
+       "el": "BODY.",
+       "ox": "clip",
+       "oy": "visible",
+       "contain": "none",
+       "maxH": "none",
+       "rect": {
+        "l": 0,
+        "t": 0,
+        "w": 360,
+        "h": 2712.2,
+        "r": 360
+       }
+      }
+     ],
+     "cardBg": "rgb(255, 252, 245)",
+     "bodyBg": "rgb(19, 23, 34)",
+     "order": [
+      "checkout-plan@396",
+      "card on-paper till-pay@603",
+      "stack till-side@1199"
+     ]
+    },
+    "inner": {
+     "iw": 286,
+     "ih": 496,
+     "sw": 286,
+     "sh": 496,
+     "bodyBg": "rgba(0, 0, 0, 0)",
+     "texts": [
+      "Pay securely with Pay with 000000000000",
+      "Email",
+      "Total$600.00monthly",
+      "Subscribe"
+     ],
+     "wide": 15
+    },
+    "files": [
+     "shots/checkout/new__growth-care__w360-dark__1.png"
+    ]
+   },
+   "w430-dark": {
+    "m": {
+     "theme": "dark",
+     "vw": 430,
+     "docW": 430,
+     "overflowX": 0,
+     "pageH": 2637,
+     "statusHidden": true,
+     "statusText": "Loading secure checkout…",
+     "statusCls": "status",
+     "receiptHidden": false,
+     "name": "Growth care plan",
+     "price": "$600/month",
+     "receipt": {
+      "l": 21.5,
+      "t": 377.5,
+      "w": 387,
+      "h": 137.8,
+      "r": 408.5
+     },
+     "card": {
+      "l": 21.5,
+      "t": 555.3,
+      "w": 387,
+      "h": 564.7,
+      "r": 408.5
+     },
+     "form": {
+      "l": 42.5,
+      "t": 606.5,
+      "w": 345,
+      "h": 496.5,
+      "r": 387.5
+     },
+     "iframe": {
+      "l": 38.5,
+      "t": 606.5,
+      "w": 353,
+      "h": 496.5,
+      "r": 391.5
+     },
+     "iframeCount": 2,
+     "clips": [
+      {
+       "el": "BODY.",
+       "ox": "clip",
+       "oy": "visible",
+       "contain": "none",
+       "maxH": "none",
+       "rect": {
+        "l": 0,
+        "t": 0,
+        "w": 430,
+        "h": 2637,
+        "r": 430
+       }
+      }
+     ],
+     "cardBg": "rgb(255, 252, 245)",
+     "bodyBg": "rgb(19, 23, 34)",
+     "order": [
+      "checkout-plan@378",
+      "card on-paper till-pay@555",
+      "stack till-side@1152"
+     ]
+    },
+    "inner": {
+     "iw": 353,
+     "ih": 496,
+     "sw": 353,
+     "sh": 496,
+     "bodyBg": "rgba(0, 0, 0, 0)",
+     "texts": [
+      "Pay securely with Pay with 000000000000",
+      "Email",
+      "Total$600.00monthly",
+      "Subscribe"
+     ],
+     "wide": 9
+    },
+    "files": [
+     "shots/checkout/new__growth-care__w430-dark__1.png"
+    ]
+   },
+   "w320-dark": {
+    "m": {
+     "theme": "dark",
+     "vw": 320,
+     "docW": 320,
+     "overflowX": 0,
+     "pageH": 2811,
+     "statusHidden": true,
+     "statusText": "Loading secure checkout…",
+     "statusCls": "status",
+     "receiptHidden": false,
+     "name": "Growth care plan",
+     "price": "$600/month",
+     "receipt": {
+      "l": 20,
+      "t": 433.6,
+      "w": 280,
+      "h": 181.2,
+      "r": 300
+     },
+     "card": {
+      "l": 20,
+      "t": 654.8,
+      "w": 280,
+      "h": 564.7,
+      "r": 300
+     },
+     "form": {
+      "l": 41,
+      "t": 706,
+      "w": 238,
+      "h": 496.5,
+      "r": 279
+     },
+     "iframe": {
+      "l": 37,
+      "t": 706,
+      "w": 246,
+      "h": 496.5,
+      "r": 283
+     },
+     "iframeCount": 2,
+     "clips": [
+      {
+       "el": "BODY.",
+       "ox": "clip",
+       "oy": "visible",
+       "contain": "none",
+       "maxH": "none",
+       "rect": {
+        "l": 0,
+        "t": 0,
+        "w": 320,
+        "h": 2811,
+        "r": 320
+       }
+      }
+     ],
+     "cardBg": "rgb(255, 252, 245)",
+     "bodyBg": "rgb(19, 23, 34)",
+     "order": [
+      "checkout-plan@434",
+      "card on-paper till-pay@655",
+      "stack till-side@1251"
+     ]
+    },
+    "inner": {
+     "iw": 246,
+     "ih": 496,
+     "sw": 246,
+     "sh": 496,
+     "bodyBg": "rgba(0, 0, 0, 0)",
+     "texts": [
+      "Pay securely with Pay with 000000000000",
+      "Email",
+      "Total$600.00monthly",
+      "Subscribe"
+     ],
+     "wide": 16
+    },
+    "files": [
+     "shots/checkout/new__growth-care__w320-dark__1.png",
+     "shots/checkout/new__growth-care__w320-dark__2.png"
+    ]
+   }
+  },
+  "loading": {
+   "theme": "light",
+   "vw": 390,
+   "docW": 390,
+   "overflowX": 0,
+   "pageH": 2931,
+   "statusHidden": false,
+   "statusText": "Loading secure checkout…",
+   "statusCls": "status",
+   "receiptHidden": false,
+   "name": "Growth care plan",
+   "price": "$600/month",
+   "receipt": {
+    "l": 20,
+    "t": 399.9,
+    "w": 350,
+    "h": 166.7,
+    "r": 370
+   },
+   "card": {
+    "l": 20,
+    "t": 606.8,
+    "w": 350,
+    "h": 779.4,
+    "r": 370
+   },
+   "form": {
+    "l": 41,
+    "t": 685.2,
+    "w": 308,
+    "h": 684,
+    "r": 349
+   },
+   "iframe": {
+    "l": 37,
+    "t": 685.2,
+    "w": 316,
+    "h": 2,
+    "r": 353
+   },
+   "iframeCount": 1,
+   "clips": [
+    {
+     "el": "BODY.",
+     "ox": "clip",
+     "oy": "visible",
+     "contain": "none",
+     "maxH": "none",
+     "rect": {
+      "l": 0,
+      "t": 0,
+      "w": 390,
+      "h": 2931.2,
+      "r": 390
+     }
+    }
+   ],
+   "cardBg": "rgb(255, 252, 245)",
+   "bodyBg": "rgb(246, 240, 228)",
+   "order": [
+    "checkout-plan@400",
+    "card on-paper till-pay@607",
+    "stack till-side@1418"
+   ]
+  },
+  "server": {
+   "status": 200,
+   "acao": "http://localhost:8720",
+   "body": {
+    "plan": "growth-care",
+    "label": "Growth Care Plan",
+    "mode": "subscription",
+    "hasSecret": true
+   }
+  },
+  "session_id": "cs_live_a06hoTXKduD65CXbFEKSjltzuhDk6eSRGXPXhpbwaTqRfNmuMiM0L4uZV6",
+  "msToMount": 3447,
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "You may test your Stripe.js integration over HTTP. However, live Stripe.js integrations must use HTTPS."
+   },
+   {
+    "t": "console.warning",
+    "text": "Origin trial controlled feature not enabled: 'tools'."
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   },
+   {
+    "t": "console.warning",
+    "text": "Origin trial controlled feature not enabled: 'tools'."
+   },
+   {
+    "t": "console.warning",
+    "text": "Origin trial controlled feature not enabled: 'tools'."
+   },
+   {
+    "t": "console.warning",
+    "text": "Origin trial controlled feature not enabled: 'tools'."
+   },
+   {
+    "t": "requestfailed",
+    "url": "https://904a342e4044.w.hcaptcha.com/logo.png",
+    "err": "net::ERR_ABORTED"
+   },
+   {
+    "t": "requestfailed",
+    "url": "https://e8c9747451cb.w.hcaptcha.com/logo.png",
+    "err": "net::ERR_ABORTED"
+   }
+  ],
+  "hosts": [
+   "js.stripe.com",
+   "plausible.io",
+   "knightwebstudio-checkout.onrender.com",
+   "merchant-ui-api.stripe.com",
+   "r.stripe.com",
+   "api.stripe.com",
+   "b.stripecdn.com",
+   "m.stripe.network",
+   "m.stripe.com",
+   "static-na.payments-amazon.com",
+   "hcaptcha.com",
+   "apay-us.amazon.com",
+   "newassets.hcaptcha.com",
+   "3d74f3f58dbc.w.hcaptcha.com",
+   "m.media-amazon.com",
+   "904a342e4044.w.hcaptcha.com",
+   "e8c9747451cb.w.hcaptcha.com",
+   "api.hcaptcha.com"
+  ]
+ },
+ "commerce-care": {
+  "device": "desktop",
+  "theme": "dark",
+  "states": {
+   "desktop-dark": {
+    "m": {
+     "theme": "dark",
+     "vw": 1280,
+     "docW": 1280,
+     "overflowX": 0,
+     "pageH": 1692,
+     "statusHidden": true,
+     "statusText": "Loading secure checkout…",
+     "statusCls": "status",
+     "receiptHidden": false,
+     "name": "Commerce care plan",
+     "price": "$1,000/month",
+     "receipt": {
+      "l": 770.7,
+      "t": 437.6,
+      "w": 461.3,
+      "h": 175.8,
+      "r": 1232
+     },
+     "card": {
+      "l": 48,
+      "t": 437.6,
+      "w": 645.9,
+      "h": 493.8,
+      "r": 693.9
+     },
+     "form": {
+      "l": 81,
+      "t": 500.8,
+      "w": 579.9,
+      "h": 401.6,
+      "r": 660.9
+     },
+     "iframe": {
+      "l": 77,
+      "t": 500.8,
+      "w": 587.9,
+      "h": 401.6,
+      "r": 664.9
+     },
+     "iframeCount": 2,
+     "clips": [
+      {
+       "el": "BODY.",
+       "ox": "clip",
+       "oy": "visible",
+       "contain": "none",
+       "maxH": "none",
+       "rect": {
+        "l": 0,
+        "t": 0,
+        "w": 1280,
+        "h": 1691.9,
+        "r": 1280
+       }
+      }
+     ],
+     "cardBg": "rgb(255, 252, 245)",
+     "bodyBg": "rgb(19, 23, 34)",
+     "order": [
+      "checkout-plan@438",
+      "card on-paper till-pay@438",
+      "stack till-side@653"
+     ]
+    },
+    "inner": {
+     "iw": 588,
+     "ih": 402,
+     "sw": 588,
+     "sh": 402,
+     "bodyBg": "rgba(0, 0, 0, 0)",
+     "texts": [
+      "Pay securely with Pay with 000000000000",
+      "Email",
+      "Total$1,000.00monthly",
+      "Subscribe"
+     ],
+     "wide": 28
+    },
+    "files": [
+     "shots/checkout/new__commerce-care__desktop-dark__1.png"
+    ]
+   },
+   "desktop-light": {
+    "m": {
+     "theme": "light",
+     "vw": 1280,
+     "docW": 1280,
+     "overflowX": 0,
+     "pageH": 1787,
+     "statusHidden": true,
+     "statusText": "Loading secure checkout…",
+     "statusCls": "status",
+     "receiptHidden": false,
+     "name": "Commerce care plan",
+     "price": "$1,000/month",
+     "receipt": {
+      "l": 770.7,
+      "t": 437.6,
+      "w": 461.3,
+      "h": 175.8,
+      "r": 1232
+     },
+     "card": {
+      "l": 48,
+      "t": 437.6,
+      "w": 645.9,
+      "h": 588.7,
+      "r": 693.9
+     },
+     "form": {
+      "l": 81,
+      "t": 500.8,
+      "w": 579.9,
+      "h": 496.5,
+      "r": 660.9
+     },
+     "iframe": {
+      "l": 77,
+      "t": 500.8,
+      "w": 587.9,
+      "h": 496.5,
+      "r": 664.9
+     },
+     "iframeCount": 2,
+     "clips": [
+      {
+       "el": "BODY.",
+       "ox": "clip",
+       "oy": "visible",
+       "contain": "none",
+       "maxH": "none",
+       "rect": {
+        "l": 0,
+        "t": 0,
+        "w": 1280,
+        "h": 1786.7,
+        "r": 1280
+       }
+      }
+     ],
+     "cardBg": "rgb(255, 252, 245)",
+     "bodyBg": "rgb(246, 240, 228)",
+     "order": [
+      "checkout-plan@438",
+      "card on-paper till-pay@438",
+      "stack till-side@653"
+     ]
+    },
+    "files": [
+     "shots/checkout/new__commerce-care__desktop-light__1.png"
+    ]
+   },
+   "w390-light": {
+    "m": {
+     "theme": "light",
+     "vw": 390,
+     "docW": 390,
+     "overflowX": 0,
+     "pageH": 2716,
+     "statusHidden": true,
+     "statusText": "Loading secure checkout…",
+     "statusCls": "status",
+     "receiptHidden": false,
+     "name": "Commerce care plan",
+     "price": "$1,000/month",
+     "receipt": {
+      "l": 20,
+      "t": 400.1,
+      "w": 350,
+      "h": 166.7,
+      "r": 370
+     },
+     "card": {
+      "l": 20,
+      "t": 606.8,
+      "w": 350,
+      "h": 564.7,
+      "r": 370
+     },
+     "form": {
+      "l": 41,
+      "t": 658,
+      "w": 308,
+      "h": 496.5,
+      "r": 349
+     },
+     "iframe": {
+      "l": 37,
+      "t": 658,
+      "w": 316,
+      "h": 496.5,
+      "r": 353
+     },
+     "iframeCount": 2,
+     "clips": [
+      {
+       "el": "BODY.",
+       "ox": "clip",
+       "oy": "visible",
+       "contain": "none",
+       "maxH": "none",
+       "rect": {
+        "l": 0,
+        "t": 0,
+        "w": 390,
+        "h": 2716.5,
+        "r": 390
+       }
+      }
+     ],
+     "cardBg": "rgb(255, 252, 245)",
+     "bodyBg": "rgb(246, 240, 228)",
+     "order": [
+      "checkout-plan@400",
+      "card on-paper till-pay@607",
+      "stack till-side@1203"
+     ]
+    },
+    "inner": {
+     "iw": 316,
+     "ih": 496,
+     "sw": 316,
+     "sh": 496,
+     "bodyBg": "rgba(0, 0, 0, 0)",
+     "texts": [
+      "Pay securely with Pay with 000000000000",
+      "Email",
+      "Total$1,000.00monthly",
+      "Subscribe"
+     ],
+     "wide": 9
+    },
+    "files": [
+     "shots/checkout/new__commerce-care__w390-light__1.png"
+    ]
+   },
+   "w820-light": {
+    "m": {
+     "theme": "light",
+     "vw": 820,
+     "docW": 820,
+     "overflowX": 0,
+     "pageH": 2236,
+     "statusHidden": true,
+     "statusText": "Loading secure checkout…",
+     "statusCls": "status",
+     "receiptHidden": false,
+     "name": "Commerce care plan",
+     "price": "$1,000/month",
+     "receipt": {
+      "l": 41,
+      "t": 387.6,
+      "w": 738,
+      "h": 141.8,
+      "r": 779
+     },
+     "card": {
+      "l": 41,
+      "t": 569.4,
+      "w": 738,
+      "h": 573.9,
+      "r": 779
+     },
+     "form": {
+      "l": 66.6,
+      "t": 625.2,
+      "w": 686.8,
+      "h": 496.5,
+      "r": 753.4
+     },
+     "iframe": {
+      "l": 62.6,
+      "t": 625.2,
+      "w": 694.8,
+      "h": 496.5,
+      "r": 757.4
+     },
+     "iframeCount": 2,
+     "clips": [
+      {
+       "el": "BODY.",
+       "ox": "clip",
+       "oy": "visible",
+       "contain": "none",
+       "maxH": "none",
+       "rect": {
+        "l": 0,
+        "t": 0,
+        "w": 820,
+        "h": 2236.2,
+        "r": 820
+       }
+      }
+     ],
+     "cardBg": "rgb(255, 252, 245)",
+     "bodyBg": "rgb(246, 240, 228)",
+     "order": [
+      "checkout-plan@388",
+      "card on-paper till-pay@569",
+      "stack till-side@1175"
+     ]
+    },
+    "inner": {
+     "iw": 695,
+     "ih": 496,
+     "sw": 695,
+     "sh": 496,
+     "bodyBg": "rgba(0, 0, 0, 0)",
+     "texts": [
+      "Pay securely with Pay with 000000000000",
+      "Email",
+      "Total$1,000.00monthly",
+      "Subscribe"
+     ],
+     "wide": 18
+    },
+    "files": [
+     "shots/checkout/new__commerce-care__w820-light__1.png"
+    ]
+   },
+   "w1100-light": {
+    "m": {
+     "theme": "light",
+     "vw": 1100,
+     "docW": 1100,
+     "overflowX": 0,
+     "pageH": 1743,
+     "statusHidden": true,
+     "statusText": "Loading secure checkout…",
+     "statusCls": "status",
+     "receiptHidden": false,
+     "name": "Commerce care plan",
+     "price": "$1,000/month",
+     "receipt": {
+      "l": 661.2,
+      "t": 424.8,
+      "w": 390.8,
+      "h": 174.8,
+      "r": 1052
+     },
+     "card": {
+      "l": 48,
+      "t": 424.8,
+      "w": 547.2,
+      "h": 588.7,
+      "r": 595.2
+     },
+     "form": {
+      "l": 81,
+      "t": 488,
+      "w": 481.2,
+      "h": 496.5,
+      "r": 562.2
+     },
+     "iframe": {
+      "l": 77,
+      "t": 488,
+      "w": 489.2,
+      "h": 496.5,
+      "r": 566.2
+     },
+     "iframeCount": 2,
+     "clips": [
+      {
+       "el": "BODY.",
+       "ox": "clip",
+       "oy": "visible",
+       "contain": "none",
+       "maxH": "none",
+       "rect": {
+        "l": 0,
+        "t": 0,
+        "w": 1100,
+        "h": 1742.7,
+        "r": 1100
+       }
+      }
+     ],
+     "cardBg": "rgb(255, 252, 245)",
+     "bodyBg": "rgb(246, 240, 228)",
+     "order": [
+      "checkout-plan@425",
+      "card on-paper till-pay@425",
+      "stack till-side@640"
+     ]
+    },
+    "inner": {
+     "iw": 489,
+     "ih": 496,
+     "sw": 489,
+     "sh": 496,
+     "bodyBg": "rgba(0, 0, 0, 0)",
+     "texts": [
+      "Pay securely with Pay with 000000000000",
+      "Email",
+      "Total$1,000.00monthly",
+      "Subscribe"
+     ],
+     "wide": 1
+    },
+    "files": [
+     "shots/checkout/new__commerce-care__w1100-light__1.png"
+    ]
+   },
+   "w1440-light": {
+    "m": {
+     "theme": "light",
+     "vw": 1440,
+     "docW": 1440,
+     "overflowX": 0,
+     "pageH": 1820,
+     "statusHidden": true,
+     "statusText": "Loading secure checkout…",
+     "statusCls": "status",
+     "receiptHidden": false,
+     "name": "Commerce care plan",
+     "price": "$1,000/month",
+     "receipt": {
+      "l": 856.7,
+      "t": 445.9,
+      "w": 483.3,
+      "h": 175.8,
+      "r": 1340
+     },
+     "card": {
+      "l": 100,
+      "t": 445.9,
+      "w": 676.7,
+      "h": 588.7,
+      "r": 776.7
+     },
+     "form": {
+      "l": 133,
+      "t": 509.1,
+      "w": 610.7,
+      "h": 496.5,
+      "r": 743.7
+     },
+     "iframe": {
+      "l": 129,
+      "t": 509.1,
+      "w": 618.7,
+      "h": 496.5,
+      "r": 747.7
+     },
+     "iframeCount": 2,
+     "clips": [
+      {
+       "el": "BODY.",
+       "ox": "clip",
+       "oy": "visible",
+       "contain": "none",
+       "maxH": "none",
+       "rect": {
+        "l": 0,
+        "t": 0,
+        "w": 1440,
+        "h": 1820.3,
+        "r": 1440
+       }
+      }
+     ],
+     "cardBg": "rgb(255, 252, 245)",
+     "bodyBg": "rgb(246, 240, 228)",
+     "order": [
+      "checkout-plan@446",
+      "card on-paper till-pay@446",
+      "stack till-side@662"
+     ]
+    },
+    "inner": {
+     "iw": 619,
+     "ih": 496,
+     "sw": 619,
+     "sh": 496,
+     "bodyBg": "rgba(0, 0, 0, 0)",
+     "texts": [
+      "Pay securely with Pay with 000000000000",
+      "Email",
+      "Total$1,000.00monthly",
+      "Subscribe"
+     ],
+     "wide": 25
+    },
+    "files": [
+     "shots/checkout/new__commerce-care__w1440-light__1.png"
+    ]
+   },
+   "w1920-light": {
+    "m": {
+     "theme": "light",
+     "vw": 1920,
+     "docW": 1920,
+     "overflowX": 0,
+     "pageH": 1821,
+     "statusHidden": true,
+     "statusText": "Loading secure checkout…",
+     "statusCls": "status",
+     "receiptHidden": false,
+     "name": "Commerce care plan",
+     "price": "$1,000/month",
+     "receipt": {
+      "l": 1096.7,
+      "t": 447,
+      "w": 483.3,
+      "h": 175.8,
+      "r": 1580
+     },
+     "card": {
+      "l": 340,
+      "t": 447,
+      "w": 676.7,
+      "h": 588.7,
+      "r": 1016.7
+     },
+     "form": {
+      "l": 373,
+      "t": 510.2,
+      "w": 610.7,
+      "h": 496.5,
+      "r": 983.7
+     },
+     "iframe": {
+      "l": 369,
+      "t": 510.2,
+      "w": 618.7,
+      "h": 496.5,
+      "r": 987.7
+     },
+     "iframeCount": 2,
+     "clips": [
+      {
+       "el": "BODY.",
+       "ox": "clip",
+       "oy": "visible",
+       "contain": "none",
+       "maxH": "none",
+       "rect": {
+        "l": 0,
+        "t": 0,
+        "w": 1920,
+        "h": 1821.5,
+        "r": 1920
+       }
+      }
+     ],
+     "cardBg": "rgb(255, 252, 245)",
+     "bodyBg": "rgb(246, 240, 228)",
+     "order": [
+      "checkout-plan@447",
+      "card on-paper till-pay@447",
+      "stack till-side@663"
+     ]
+    },
+    "inner": {
+     "iw": 619,
+     "ih": 496,
+     "sw": 619,
+     "sh": 496,
+     "bodyBg": "rgba(0, 0, 0, 0)",
+     "texts": [
+      "Pay securely with Pay with 000000000000",
+      "Email",
+      "Total$1,000.00monthly",
+      "Subscribe"
+     ],
+     "wide": 25
+    },
+    "files": [
+     "shots/checkout/new__commerce-care__w1920-light__1.png"
+    ]
+   }
+  },
+  "loading": {
+   "theme": "dark",
+   "vw": 1280,
+   "docW": 1280,
+   "overflowX": 0,
+   "pageH": 2001,
+   "statusHidden": false,
+   "statusText": "Loading secure checkout…",
+   "statusCls": "status",
+   "receiptHidden": false,
+   "name": "Commerce care plan",
+   "price": "$1,000/month",
+   "receipt": {
+    "l": 770.7,
+    "t": 437.5,
+    "w": 461.3,
+    "h": 175.8,
+    "r": 1232
+   },
+   "card": {
+    "l": 48,
+    "t": 437.6,
+    "w": 645.9,
+    "h": 803.4,
+    "r": 693.9
+   },
+   "form": {
+    "l": 81,
+    "t": 527.9,
+    "w": 579.9,
+    "h": 684,
+    "r": 660.9
+   },
+   "iframe": {
+    "l": 77,
+    "t": 527.9,
+    "w": 587.9,
+    "h": 2,
+    "r": 664.9
+   },
+   "iframeCount": 1,
+   "clips": [
+    {
+     "el": "BODY.",
+     "ox": "clip",
+     "oy": "visible",
+     "contain": "none",
+     "maxH": "none",
+     "rect": {
+      "l": 0,
+      "t": 0,
+      "w": 1280,
+      "h": 2001.4,
+      "r": 1280
+     }
+    }
+   ],
+   "cardBg": "rgb(255, 252, 245)",
+   "bodyBg": "rgb(19, 23, 34)",
+   "order": [
+    "checkout-plan@438",
+    "card on-paper till-pay@438",
+    "stack till-side@653"
+   ]
+  },
+  "server": {
+   "status": 200,
+   "acao": "http://localhost:8720",
+   "body": {
+    "plan": "commerce-care",
+    "label": "Commerce Care Plan",
+    "mode": "subscription",
+    "hasSecret": true
+   }
+  },
+  "session_id": "cs_live_a0JlwYTw1HUkLD3HBjbbz0JbnzxESSotyzmNSPFB0u4Wv7j3cU60ShcRok",
+  "msToMount": 5370,
+  "log": [
+   {
+    "t": "console.warning",
+    "text": "You may test your Stripe.js integration over HTTP. However, live Stripe.js integrations must use HTTPS."
+   },
+   {
+    "t": "console.warning",
+    "text": "Origin trial controlled feature not enabled: 'tools'."
+   },
+   {
+    "t": "console.warning",
+    "text": "Ignoring Event: localhost"
+   },
+   {
+    "t": "console.warning",
+    "text": "Origin trial controlled feature not enabled: 'tools'."
+   },
+   {
+    "t": "console.warning",
+    "text": "Origin trial controlled feature not enabled: 'tools'."
+   },
+   {
+    "t": "console.warning",
+    "text": "Origin trial controlled feature not enabled: 'tools'."
+   },
+   {
+    "t": "requestfailed",
+    "url": "https://76e19ea1f629.w.hcaptcha.com/logo.png",
+    "err": "net::ERR_ABORTED"
+   },
+   {
+    "t": "requestfailed",
+    "url": "https://16d8a6e43c7c.w.hcaptcha.com/logo.png",
+    "err": "net::ERR_ABORTED"
+   }
+  ],
+  "hosts": [
+   "js.stripe.com",
+   "plausible.io",
+   "knightwebstudio-checkout.onrender.com",
+   "merchant-ui-api.stripe.com",
+   "r.stripe.com",
+   "api.stripe.com",
+   "m.stripe.network",
+   "b.stripecdn.com",
+   "m.stripe.com",
+   "static-na.payments-amazon.com",
+   "hcaptcha.com",
+   "apay-us.amazon.com",
+   "e4e370f73f03.w.hcaptcha.com",
+   "m.media-amazon.com",
+   "newassets.hcaptcha.com",
+   "api.hcaptcha.com",
+   "76e19ea1f629.w.hcaptcha.com",
+   "16d8a6e43c7c.w.hcaptcha.com"
+  ]
+ }
+}

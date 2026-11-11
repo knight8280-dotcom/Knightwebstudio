@@ -1,0 +1,33 @@
+INFO  arc 1280: slow drag of 30px snaps back
+INFO  arc 1280: slow drag of 60px snaps back
+INFO  arc 1280: slow drag of 100px advances 1
+FAIL  arc: STALE DRAG - after a press whose release happened just outside the list, a button-less hover must not drag the carousel  {"movingDuringHover":true,"transformsChanged":true,"stillMovingAfter800msIdle":true,"onBefore":0,"onDuringHover":7}
+INFO  arc: after one more click elsewhere: moving=true on=7
+PASS  arc: drag released outside the stage settles  {"on":0}
+PASS  arc: 25 Next clicks in one task land right  {"start":0,"on":7,"want":7,"said":"Google profile & reviews, 8 of 9"}
+PASS  arc: 25 ArrowLeft return to start  {"on":0,"want":0}
+PASS  arc: arrow keys pressed mid-drag do not break state  {"on":2,"moving":false}
+PASS  arc: vertical wheel scrolls the page 200px; horizontal wheel leaves the carousel alone  {"on":2}
+PASS  arc: pen drag turns it  {"from":2,"on":4,"pointerTypes":["pen"]}
+PASS  arc: drag out and back, released on the link it started on, does not navigate  http://localhost:8730/kit/flat/demo.html
+INFO  arc: a click on the link with a 10px sideways wobble is swallowed as a drag (the link does NOT open)
+INFO  arc: Ctrl+click on the centred picture -> this tab NAVIGATES to http://localhost:8730/services/#seo, tabs 1 -> 1
+PASS  arc: no console errors  
+INFO  spot 1280: slow drag of 30px snaps back
+INFO  spot 1280: slow drag of 60px snaps back
+INFO  spot 1280: slow drag of 100px snaps back
+INFO  spot 1280: slow drag of 140px snaps back
+INFO  spot 1280: slow drag of 180px snaps back
+INFO  spot 1280: slow drag of 220px advances 1
+FAIL  spot: STALE DRAG - after a press whose release happened just outside the list, a button-less hover must not drag the carousel  {"movingDuringHover":true,"transformsChanged":true,"stillMovingAfter800msIdle":true,"onBefore":0,"onDuringHover":2}
+INFO  spot: after one more click elsewhere: moving=true on=2
+PASS  spot: drag released outside the stage settles  {"on":0}
+PASS  spot: 25 Next clicks in one task land right  {"start":0,"on":1,"want":1,"said":"Risen Health, 2 of 3"}
+PASS  spot: 25 ArrowLeft return to start  {"on":0,"want":0}
+PASS  spot: arrow keys pressed mid-drag do not break state  {"on":1,"moving":false}
+PASS  spot: vertical wheel scrolls the page 200px; horizontal wheel leaves the carousel alone  {"on":1}
+PASS  spot: pen drag turns it  {"from":1,"on":2,"pointerTypes":["pen"]}
+PASS  spot: drag out and back, released on the link it started on, does not navigate  http://localhost:8730/kit/flat/demo.html
+INFO  spot: a click on the link with a 10px sideways wobble is swallowed as a drag (the link does NOT open)
+INFO  spot: Ctrl+click on the centred picture -> this tab NAVIGATES to http://localhost:8730/work/, tabs 1 -> 1
+PASS  spot: no console errors  

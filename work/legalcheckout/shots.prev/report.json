@@ -1,0 +1,258 @@
+{
+  "privacy__mobile-light": {
+    "height": 4971,
+    "overflowX": 0,
+    "stops": 7,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "terms__mobile-light": {
+    "height": 5236,
+    "overflowX": 0,
+    "stops": 7,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "privacy__desktop-light": {
+    "height": 3470,
+    "overflowX": 0,
+    "stops": 5,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "terms__desktop-light": {
+    "height": 3650,
+    "overflowX": 0,
+    "stops": 5,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "privacy__laptop-light": {
+    "height": 3428,
+    "overflowX": 0,
+    "stops": 5,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "terms__laptop-light": {
+    "height": 3608,
+    "overflowX": 0,
+    "stops": 5,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "privacy__tablet-light": {
+    "height": 3781,
+    "overflowX": 0,
+    "stops": 4,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "terms__tablet-light": {
+    "height": 3961,
+    "overflowX": 0,
+    "stops": 4,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "privacy__desktop-dark": {
+    "height": 3470,
+    "overflowX": 0,
+    "stops": 5,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "terms__desktop-dark": {
+    "height": 3650,
+    "overflowX": 0,
+    "stops": 5,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "checkout__mobile-light": {
+    "height": 2110,
+    "overflowX": 0,
+    "stops": 3,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "checkout_success__mobile-light": {
+    "height": 2210,
+    "overflowX": 0,
+    "stops": 3,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "privacy__mobile-dark": {
+    "height": 4971,
+    "overflowX": 0,
+    "stops": 7,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "terms__mobile-dark": {
+    "height": 5236,
+    "overflowX": 0,
+    "stops": 7,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "checkout__mobile-dark": {
+    "height": 2110,
+    "overflowX": 0,
+    "stops": 3,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "checkout_success__mobile-dark": {
+    "height": 2210,
+    "overflowX": 0,
+    "stops": 3,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "privacy__small-light": {
+    "height": 5206,
+    "overflowX": 0,
+    "stops": 8,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "terms__small-light": {
+    "height": 5446,
+    "overflowX": 0,
+    "stops": 9,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "checkout__small-light": {
+    "height": 2106,
+    "overflowX": 0,
+    "stops": 4,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "checkout_success__small-light": {
+    "height": 2287,
+    "overflowX": 0,
+    "stops": 4,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "checkout__tablet-light": {
+    "height": 1604,
+    "overflowX": 0,
+    "stops": 2,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "checkout_success__tablet-light": {
+    "height": 1755,
+    "overflowX": 0,
+    "stops": 2,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "checkout__laptop-light": {
+    "height": 1375,
+    "overflowX": 0,
+    "stops": 2,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "checkout_success__laptop-light": {
+    "height": 1602,
+    "overflowX": 0,
+    "stops": 3,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "checkout__desktop-light": {
+    "height": 1408,
+    "overflowX": 0,
+    "stops": 2,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "checkout_success__desktop-light": {
+    "height": 1635,
+    "overflowX": 0,
+    "stops": 2,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "checkout__desktop-dark": {
+    "height": 1408,
+    "overflowX": 0,
+    "stops": 2,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "checkout_success__desktop-dark": {
+    "height": 1635,
+    "overflowX": 0,
+    "stops": 2,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "privacy__wide-light": {
+    "height": 3472,
+    "overflowX": 0,
+    "stops": 4,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "terms__wide-light": {
+    "height": 3652,
+    "overflowX": 0,
+    "stops": 4,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "checkout__wide-light": {
+    "height": 1409,
+    "overflowX": 0,
+    "stops": 2,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "checkout_success__wide-light": {
+    "height": 1637,
+    "overflowX": 0,
+    "stops": 2,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  }
+}

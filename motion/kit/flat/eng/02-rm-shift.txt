@@ -1,0 +1,6 @@
+390-reduce before {"live":false,"docH":10477,"arcH":3120,"spotH":1352,"workTop":3610,"items":9} after {"live":true,"docH":3315,"arcH":400,"spotH":491,"workTop":890,"items":9} CLS ["0.0000",[]]
+390-no-preference before {"live":false,"docH":3315,"arcH":400,"spotH":491,"workTop":890,"items":1} after {"live":true,"docH":3315,"arcH":400,"spotH":491,"workTop":890,"items":9} CLS ["0.0000",[]]
+390-no-preference-motionoff before {"live":false,"docH":3315,"arcH":400,"spotH":491,"workTop":890,"items":1} after {"live":true,"docH":3315,"arcH":400,"spotH":491,"workTop":890,"items":9} CLS ["0.0000",[]]
+1440-reduce before {"live":false,"docH":12435,"arcH":3552,"spotH":1664,"workTop":4126,"items":9} after {"live":true,"docH":4087,"arcH":448,"spotH":595,"workTop":1022,"items":9} CLS ["0.0000",[]]
+1440-no-preference before {"live":false,"docH":4087,"arcH":448,"spotH":595,"workTop":1022,"items":1} after {"live":true,"docH":4087,"arcH":448,"spotH":595,"workTop":1022,"items":9} CLS ["0.0000",[]]
+1440-no-preference-motionoff before {"live":false,"docH":4087,"arcH":448,"spotH":595,"workTop":1022,"items":1} after {"live":true,"docH":4087,"arcH":448,"spotH":595,"workTop":1022,"items":9} CLS ["0.0000",[]]

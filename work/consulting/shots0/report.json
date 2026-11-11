@@ -1,0 +1,18 @@
+{
+  "consulting__mobile-light": {
+    "height": 13921,
+    "overflowX": 0,
+    "stops": 19,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "consulting__desktop-light": {
+    "height": 9683,
+    "overflowX": 0,
+    "stops": 12,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  }
+}

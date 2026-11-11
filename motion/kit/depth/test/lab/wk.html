@@ -1,0 +1,22 @@
+<!doctype html><meta charset="utf-8"><title>lab</title>
+<style>
+body{margin:0;font:14px sans-serif;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:8px}
+.s{position:relative;height:280px;background:#eee;perspective:700px;font-size:250px}
+.s.o{overflow:hidden}
+.h{position:absolute;left:50%;top:50%;transform-style:preserve-3d;transform:translateZ(-250px) rotateX(-32deg) rotateY(20deg)}
+.h.sz{width:2px;height:2px}
+.c{position:absolute;bottom:0;left:-45px;width:90px;height:65px;background:#fc8;border:1px solid #333;transform-origin:bottom;transform:rotateY(var(--a)) translateZ(250px) rotateY(32deg)}
+.c.em{transform:rotateY(var(--a)) translateZ(1em) rotateY(32deg)}
+.c.ps::before{content:"";position:absolute;inset:14% 0 0;background:#8cf}
+p{position:absolute;margin:4px;font-size:12px;z-index:9}
+</style>
+<body>
+<script>
+const V = [['A plain', 's', 'h', 'c'], ['B overflow hidden', 's o', 'h', 'c'], ['C hub sized', 's o', 'h sz', 'c'], ['D em units', 's o', 'h', 'c em'], ['E pseudo', 's o', 'h', 'c ps'], ['F all', 's o', 'h', 'c em ps']];
+V.forEach(([name, s, h, c]) => {
+  const S = document.createElement('div'); S.className = s; S.innerHTML = '<p>' + name + '</p>';
+  const Hb = document.createElement('div'); Hb.className = h;
+  for (let i = 0; i < 24; i++) { const e = document.createElement('div'); e.className = c; e.style.cssText = '--a:' + i * 15 + 'deg'; Hb.append(e); }
+  S.append(Hb); document.body.append(S);
+});
+</script>

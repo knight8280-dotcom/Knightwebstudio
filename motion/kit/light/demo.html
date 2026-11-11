@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Motion kit demo: backgrounds, folder cards, bookmark cards</title>
+<script>
+  // Set the theme before first paint, so nobody sees a flash of the wrong
+  // one. Light is the default: a saved choice wins, otherwise a device set
+  // to dark gets the night theme. main.js still owns the toggle itself.
+  (function () {
+    var d = document.documentElement; d.classList.add('js');
+    // The header crest builds itself on the first page of a visit only
+    try { if (!sessionStorage.getItem('kws-crest')) { d.classList.add('crest-intro'); sessionStorage.setItem('kws-crest', '1'); } } catch (e) {}
+    try {
+      var t = localStorage.getItem('theme');
+      if (t !== 'dark' && t !== 'light') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      d.setAttribute('data-theme', t);
+    } catch (e) { /* private mode: the stylesheet follows the device instead */ }
+    // Scroll reveals hide blocks until main.js shows them. If that script has
+    // not started after four seconds (or the page has none), show everything.
+    setTimeout(function () { if (!window.kwsReady) d.classList.remove('js'); }, 4000);
+  })();
+</script>
+<!-- The folder stack keeps its place before cards.js runs; if that script has not arrived when the page has loaded, or after four seconds, the plain list shows -->
+<script>(function (d) { d.classList.add('kws-js'); function ok() { if (!(window.KWS && KWS.folders)) d.classList.remove('kws-js'); } addEventListener('load', ok); setTimeout(ok, 4000); })(document.documentElement);</script>
+<link rel="preload" href="/assets/fonts/fraunces-soft.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/figtree.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/styles.css">
+<link rel="stylesheet" href="motion.css">
+<link rel="stylesheet" href="shader.css">
+<link rel="stylesheet" href="cards.css">
+<style>
+/* Demo scaffolding only: none of this belongs to the kit. */
+.footer-links .kws-motion { margin-right: auto; }
+/* The same button again where it is easy to find: the top strip from 1100px, and the phone menu's sheet */
+.topbar .kws-motion { display: none; margin-left: auto; margin-right: 20px; border-color: transparent; background: none; }
+@media (min-width: 1100px) { .topbar .kws-motion:not([hidden]) { display: inline-flex; } }
+.nav-foot .kws-motion { place-self: center; }
+#pricing .kws-folders { align-self: start; }
+
+/* Another brand, as a client site would set it: thirteen variables, plus three for the backgrounds. */
+.demo-brand {
+  --kit-bg: #F4EFE1; --kit-surface: #FFFDF6; --kit-ink: #1E3A2B; --kit-muted: #4F6457; --kit-line: #CFC8AF;
+  --kit-accent: #1F6B45; --kit-accent-ink: #FFFDF6; --kit-notice: #B4532A; --kit-gilt: #E8B84A;
+  --kit-radius: 6px; --kit-shadow: 0 1px 0 rgba(30, 58, 43, .14), 0 14px 26px -18px rgba(30, 58, 43, .45);
+  --kit-font-display: Georgia, "Times New Roman", serif; --kit-font-body: "Trebuchet MS", "Lucida Sans", Verdana, sans-serif;
+  --kit-shader-1: #CFE3C4; --kit-shader-2: #FFFDF6; --kit-shader-3: #F3D9A0;
+  display: grid; gap: 24px; padding: clamp(16px, 4vw, 40px); border: 1px solid var(--kit-line); border-radius: 12px;
+  background: var(--kit-bg); color: var(--kit-muted); font-family: var(--kit-font-body);
+}
+:root[data-theme="dark"] .demo-brand {
+  --kit-bg: #121C16; --kit-surface: #1A2920; --kit-ink: #F1EAD6; --kit-muted: #A9B8AA; --kit-line: #2F4437;
+  --kit-accent: #8FD0A5; --kit-accent-ink: #10201A; --kit-notice: #F0A47E;
+  --kit-shadow: 0 1px 0 rgba(0, 0, 0, .5), 0 14px 26px -18px rgba(0, 0, 0, .8);
+  --kit-shader-1: #1F6B45; --kit-shader-2: #2A3B30; --kit-shader-3: #3A3320;
+}
+.demo-brand p { margin: 0; max-width: 34em; }
+.demo-brand-head, .demo-brand-band { display: grid; gap: 12px; padding: clamp(24px, 5vw, 56px); border-radius: var(--kit-radius); }
+.demo-brand-head { border: 1px solid var(--kit-line); }
+.demo-brand-title, .demo-brand-h { color: var(--kit-ink); font: 700 clamp(1.6rem, 1.2rem + 2vw, 2.6rem)/1.1 var(--kit-font-display); }
+.demo-brand-h { font-size: 1.3rem; }
+.demo-brand-band {
+  background: #1E3A2B; --kit-ink: #FFFDF6; --kit-muted: #D3DCCB; --kit-accent: #FFFDF6; --kit-accent-ink: #1E3A2B; --kit-notice: #E8B84A;
+  --kit-line: rgba(255, 253, 246, .3); --kit-surface: #2A4A38; color: var(--kit-muted);
+}
+.demo-brand-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 8px; }
+.demo-brand-btn { display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border-radius: var(--kit-radius); background: var(--kit-accent); color: var(--kit-accent-ink); font-weight: 700; text-decoration: none; }
+</style>
+</head>
+<body data-page="kit-demo">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ===================== TOP STRIP ===================== -->
+<div class="topbar on-ink">
+  <div class="container topbar-inner">
+    <p class="topbar-place">
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+      <span><span class="topbar-more">Based in </span>Baton Rouge<span class="topbar-state">, Louisiana</span><span class="topbar-long"> · We meet in person anywhere in Greater Baton Rouge</span></span>
+    </p>
+    <button class="kws-motion" data-kws="motion" type="button" hidden><svg class="kws-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg><svg class="kws-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg><span class="kws-motion-label"></span></button>
+    <a class="topbar-tel" href="tel:+12252550837">
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
+      <span class="sr-only">Call </span>(225) 255-0837
+    </a>
+  </div>
+</div>
+<!-- ===================== HEADER ===================== -->
+<header class="site-header" id="site-header">
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="KnightWebstudio home">
+      <!-- art:crest-header --><svg class="crest" viewBox="0 0 120 120" aria-hidden="true" style="--t1:#DCE3FF;--t2:#B9C7FF;--t3:#8FA5FF;--t4:#5C77EC;--t5:#2C46C4;--ink:#161B2C;--accent:#F0C369;--rim:#2C46C4;--rim2:#B9C7FF;--glow:#8FA5FF;--field1:#24306A;--field2:#161B2C;--ribbon:#1B2C84;--ribbon2:#14205E;--steel1:#FBF5E6;--steel2:#CFC7B4;--steel3:#8E8A80;--letter:#FFFBF2"><defs><linearGradient id="ch-fld" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--field1)"/><stop offset="1" stop-color="var(--field2)"/></linearGradient><radialGradient id="ch-glow" cx=".5" cy=".42" r=".5"><stop offset="0" stop-color="var(--glow)" stop-opacity=".35"/><stop offset="1" stop-color="var(--glow)" stop-opacity="0"/></radialGradient><linearGradient id="ch-gl" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".5"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="ch-in"><path d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z"/></clipPath><clipPath id="ch-out"><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z"/></clipPath></defs><g class="a-rim"><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z" fill="var(--rim)"/><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z" fill="none" stroke="var(--rim2)" stroke-opacity=".55" stroke-width="1.2"/><path class="a-field" d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z" fill="url(#ch-fld)"/></g><g clip-path="url(#ch-in)"><circle class="a-field" cx="60" cy="50" r="42" fill="url(#ch-glow)"/><g transform="translate(22 22) scale(.86)" stroke-linejoin="round"><polygon class="facet" style="--i:0;--dx:-8.0px;--dy:-6.4px" fill="var(--t2)" points="54,4 61,15 46,12"/><polygon class="facet" style="--i:1;--dx:-1.6px;--dy:6.4px" fill="var(--t1)" points="54,4 46,12 50,9"/><polygon class="facet" style="--i:2;--dx:4.8px;--dy:4.8px" fill="var(--t3)" points="37,15 46,12 61,15 63,24 35,29"/><polygon class="facet" style="--i:3;--dx:-6.4px;--dy:3.2px" fill="var(--t1)" points="37,15 24,27 35,29"/><polygon class="facet" style="--i:4;--dx:0.0px;--dy:1.6px" fill="var(--t2)" points="24,27 13,41 24,46 35,29"/><polygon class="facet" style="--i:5;--dx:6.4px;--dy:0.0px" fill="var(--t1)" points="13,41 8,49 12,56 23,58 24,46"/><polygon class="facet" style="--i:6;--dx:-4.8px;--dy:-1.6px" fill="var(--t3)" points="35,29 24,46 50,37"/><polygon class="facet" style="--i:7;--dx:1.6px;--dy:-3.2px" fill="var(--t4)" points="35,29 50,37 63,24"/><polygon class="facet" style="--i:8;--dx:8.0px;--dy:-4.8px" fill="var(--t4)" points="24,46 23,58 42,54 50,37"/><polygon class="facet" style="--i:9;--dx:-3.2px;--dy:-6.4px" fill="var(--t3)" points="50,37 42,54 38,63 63,63 65,43"/><polygon class="facet" style="--i:10;--dx:3.2px;--dy:6.4px" fill="var(--t4)" points="50,37 65,43 63,24"/><polygon class="facet" style="--i:11;--dx:-8.0px;--dy:4.8px" fill="var(--t3)" points="38,63 31,80 26,112 53,112 63,63"/><polygon class="facet" style="--i:12;--dx:-1.6px;--dy:3.2px" fill="var(--t4)" points="63,63 53,112 78,112 72,80"/><polygon class="facet" style="--i:13;--dx:4.8px;--dy:1.6px" fill="var(--t5)" points="61,15 67,16 72,22 69,26 77,32 73,36 79,44 74,48 79,57 73,61 76,70 72,80 63,63 65,43 63,24"/><path class="eye" d="M30 27Q35 24 40 27Q35 30 30 27Z" fill="var(--ink)"/><path d="M12 46L16 45" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round"/></g></g><path class="a-line" pathLength="1" d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z" fill="none" stroke="var(--accent)" stroke-opacity=".9" stroke-width="1"/><circle class="rivet" style="--i:0" cx="24" cy="20" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:1" cx="42" cy="15.5" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:2" cx="60" cy="11" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:3" cx="78" cy="15.5" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:4" cx="96" cy="20" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:5" cx="100" cy="44" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:6" cx="20" cy="44" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:7" cx="94" cy="76" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:8" cx="26" cy="76" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:9" cx="79" cy="97" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:10" cx="41" cy="97" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><g clip-path="url(#ch-out)"><g transform="rotate(20 60 60)"><rect class="a-glint" x="-60" y="-30" width="16" height="180" fill="url(#ch-gl)"/></g></g></svg><!-- /art:crest-header -->
+      <span class="brand-name">KnightWebstudio</span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Main">
+      <div class="nav-inner">
+        <ul class="nav-links" role="list">
+          <li><a href="/services/">Services</a></li>
+          <li><a href="/consulting/">Consulting</a></li>
+          <li><a href="/work/">Work</a></li>
+          <li><a href="/process/">Process</a></li>
+          <li><a href="/pricing/">Pricing</a></li>
+          <li><a href="/faq/">FAQ</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+
+        <!-- Phone menu only: hidden on desktop -->
+        <div class="nav-foot">
+          <a class="btn btn-primary btn-block" href="/contact/">Start your project</a>
+          <a class="btn btn-block" href="tel:+12252550837">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
+            Call (225) 255-0837
+          </a>
+          <a class="nav-mail" href="mailto:knightwebstudio1@gmail.com">knightwebstudio1@gmail.com</a>
+          <button class="kws-motion" data-kws="motion" type="button" hidden><svg class="kws-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg><svg class="kws-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg><span class="kws-motion-label"></span></button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="header-actions">
+      <!-- From 1280px, and only once the top strip (which has the number) has scrolled away -->
+      <a class="header-tel" href="tel:+12252550837">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
+        <span class="sr-only">Call </span>(225) 255-0837
+      </a>
+      <button class="icon-btn" id="theme-toggle" type="button"
+              aria-label="Switch to dark theme" title="Toggle theme">
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>
+      </button>
+      <a class="btn btn-primary btn-sm header-cta" href="/contact/" data-booking>Book a free call</a>
+      <button class="icon-btn nav-toggle" id="nav-toggle" type="button"
+              aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+        <span class="burger" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ===================== 1. FIRST SCREEN, WITH THE "WASH" BACKGROUND =====================
+       The host takes class kws-shader-host; the layer is its first child. -->
+  <section class="page-head kws-shader-host" id="top">
+    <div class="kws-shader" data-kws="shader" data-shader="wash" aria-hidden="true"></div>
+    <div class="container page-head-split">
+      <div>
+        <p class="eyebrow">Web studio &amp; consulting · Baton Rouge, LA</p>
+        <h1><span class="l">More customers,</span> <span class="l">fewer missed calls,</span> <span class="l"><span class="mark">hours back</span></span> <span class="l">every week</span></h1>
+        <p class="lede">We build fast, modern websites, then set up the systems behind them: Google reviews, missed-call text-back, online booking and automatic follow-up. One local partner for getting found, getting chosen and getting your evenings back.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary btn-lg" href="/contact/" data-booking>Book a free 30-minute call</a>
+          <a class="btn btn-lg" href="#process">See how it works</a>
+        </div>
+        <a class="price-strip" href="#pricing">
+          <span class="price-strip-label">Websites</span>
+          <span class="price-strip-nums"><b>$1,000</b><b>$2,000</b><b>$4,000</b><b>$8,000</b></span>
+          <span class="price-strip-note">Four fixed packages</span>
+        </a>
+      </div>
+      <div class="page-head-aside wide-only"><svg class="seal" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><defs><path id="sl-arc" d="M60 60m-42 0a42 42 0 1 1 84 0a42 42 0 1 1-84 0"/></defs><circle cx="60" cy="60" r="58" fill="var(--card)"/><circle cx="60" cy="60" r="54.5" fill="none" stroke="var(--brick)" stroke-width="2"/><circle cx="60" cy="60" r="31" fill="none" stroke="var(--brick)" stroke-width="1"/><text font-size="7.6"><textPath href="#sl-arc" textLength="258" lengthAdjust="spacing">PUBLISHED UP FRONT · CONFIRMED IN WRITING ·</textPath></text><text class="seal-big" font-size="15.5" x="60" y="58" text-anchor="middle">Fixed</text><text class="seal-big" font-size="15.5" x="60" y="74" text-anchor="middle">prices</text></svg></div>
+    </div>
+  </section>
+
+  <!-- ===================== 2. BOOKMARK CARDS: THE THREE SERVICE FAMILIES ===================== -->
+  <section class="section section-first" id="services">
+    <div class="container">
+      <header class="section-head section-head-split">
+        <div>
+          <p class="eyebrow">What we do</p>
+          <h2>Your website, and the systems behind it</h2>
+        </div>
+        <p class="section-sub">Pick a single service or hand us the whole thing. Some clients start with a new site, others with a Growth Audit and the one automation that saves them the most time.</p>
+      </header>
+
+      <ul class="kws-marks" role="list">
+        <li class="kws-mark kws-link">
+          <p class="kws-label">Built for you</p>
+          <div class="kws-mark-art"><span class="kws-shader" data-kws="shader" data-shader="ribbon" data-tone="1" aria-hidden="true"></span></div>
+          <h3><a href="/services/">Website design &amp; build<svg class="kws-go" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a></h3>
+          <p class="kws-mark-price"><span class="kws-nw">$1,000, $2,000</span> <span class="kws-nw">or $4,000</span></p>
+          <p>A custom-designed marketing site built from scratch.</p>
+        </li>
+        <li class="kws-mark kws-link">
+          <p class="kws-label">Runs while you work</p>
+          <div class="kws-mark-art"><span class="kws-shader" data-kws="shader" data-shader="ribbon" data-tone="2" aria-hidden="true"></span></div>
+          <h3><a href="/consulting/#how">Automation<svg class="kws-go" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a></h3>
+          <p class="kws-mark-price"><span class="kws-nw">$750 or $1,500</span> <span class="kws-nw">per setup</span></p>
+          <p>Missed calls get a text back, customers book themselves, quotes follow up on their own.</p>
+        </li>
+        <li class="kws-mark kws-link">
+          <p class="kws-label">A clear plan</p>
+          <div class="kws-mark-art"><span class="kws-shader" data-kws="shader" data-shader="ribbon" data-tone="3" aria-hidden="true"></span></div>
+          <h3><a href="/consulting/">Growth consulting<svg class="kws-go" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a></h3>
+          <p class="kws-mark-price"><span class="kws-nw">$350 audit ·</span> <span class="kws-nw">$500 or $1,000/mo</span></p>
+          <p>A clear plan for getting more customers online.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===================== 3. FOLDER CARDS: THE FOUR STEPS =====================
+       A plain list; no script. The first folder is a link (arrow chip) and carries the ribbon art. -->
+  <section class="section section-sand" id="process">
+    <div class="container">
+      <header class="section-head">
+        <p class="eyebrow">How it works</p>
+        <h2>Four steps, no surprises</h2>
+        <p class="section-sub">You'll always know what's happening, what's next, and <a href="/pricing/">what it costs</a>.</p>
+      </header>
+
+      <ol class="kws-folders" role="list">
+        <li class="kws-folder kws-link">
+          <p class="kws-folder-tab" aria-hidden="true"><span class="kws-folder-no">01</span></p>
+          <div class="kws-folder-body">
+            <div class="kws-folder-art"><span class="kws-shader" data-kws="shader" data-shader="ribbon" data-tone="1" aria-hidden="true"></span></div>
+            <p class="kws-label">Free · 30 minutes</p>
+            <h3><a href="/contact/" data-booking>Discovery call<svg class="kws-go" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a></h3>
+            <p>A call about your business, your customers and what the site needs to achieve. You leave with a plan whether or not you hire us.</p>
+          </div>
+        </li>
+        <li class="kws-folder">
+          <p class="kws-folder-tab" aria-hidden="true"><span class="kws-folder-no">02</span></p>
+          <div class="kws-folder-body">
+            <p class="kws-label">Fixed quote</p>
+            <h3>Proposal &amp; design</h3>
+            <p>A fixed quote and timeline, then design concepts for your key pages. We refine the design with you.</p>
+          </div>
+        </li>
+        <li class="kws-folder">
+          <p class="kws-folder-tab" aria-hidden="true"><span class="kws-folder-no">03</span></p>
+          <div class="kws-folder-body">
+            <p class="kws-label">Private staging link</p>
+            <h3>Build &amp; review</h3>
+            <p>We build on a private staging link you can check any time, with weekly progress notes.</p>
+          </div>
+        </li>
+        <li class="kws-folder">
+          <p class="kws-folder-tab" aria-hidden="true"><span class="kws-folder-no">04</span></p>
+          <div class="kws-folder-body">
+            <p class="kws-label">In your name</p>
+            <h3>Launch &amp; support</h3>
+            <p>We set up your domain (IONOS) and hosting (Netlify) in your name, plus analytics and redirects. After launch, a walkthrough video and free support.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===================== 4. THE FOLDER STACK: THE FOUR PACKAGES =====================
+       With cards.js: a tab for each folder, the chosen one in front. Without it: four folders, one under the other.
+       The stack asks its own width: under 600px an index of tabs over the folder, from 600px a row of tabs joined to it. -->
+  <section class="section" id="pricing">
+    <div class="container split">
+      <header class="section-head">
+        <p class="eyebrow">Websites</p>
+        <h2>Four packages. Pick the one that fits.</h2>
+        <p class="section-sub">Every price is fixed and confirmed in writing before any work begins: 50% to start, 50% at launch.</p>
+        <p class="section-more"><a class="more-link" href="/pricing/">Compare the packages side by side<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a></p>
+      </header>
+
+      <div class="kws-folders kws-folders--stack" data-kws="folders" data-label="Website packages">
+        <article class="kws-folder" id="pkg-onepage">
+          <h3 class="kws-folder-tab">One-page <b>$1,000</b></h3>
+          <div class="kws-folder-body">
+            <p class="kws-folder-price">$1,000</p>
+            <p>Or $500 down, then about $167/mo for 3 months</p>
+            <dl>
+              <div><dt class="kws-label">What it is</dt><dd>One polished page: who you are, what you offer and how to reach you.</dd></div>
+              <div><dt class="kws-label">Live in</dt><dd>As little as 7 days</dd></div>
+              <div><dt class="kws-label">Size</dt><dd>1 page</dd></div>
+              <div><dt class="kws-label">Design</dt><dd>Custom design, 1 revision round</dd></div>
+              <div><dt class="kws-label">Included</dt><dd>Copy editing and polish (you supply the text)</dd><dd>Contact form</dd><dd>Mobile &amp; SEO basics</dd></div>
+              <div><dt class="kws-label">Support</dt><dd>14 days</dd></div>
+            </dl>
+            <div class="btn-row">
+              <a class="btn" href="/contact/?package=onepage">Start a one-page site</a>
+              <a class="btn btn-quiet" href="/contact/" data-booking>Or book the free call first</a>
+            </div>
+          </div>
+        </article>
+        <article class="kws-folder" id="pkg-starter">
+          <h3 class="kws-folder-tab">Starter <b>$2,000</b></h3>
+          <div class="kws-folder-body">
+            <p class="kws-folder-price">$2,000</p>
+            <p>Or $1,000 down, then about $333/mo for 3 months</p>
+            <dl>
+              <div><dt class="kws-label">What it is</dt><dd>An information website: who you are, what you offer and how to reach you.</dd></div>
+              <div><dt class="kws-label">Live in</dt><dd>As little as <span class="nowrap">7–10 days</span></dd></div>
+              <div><dt class="kws-label">Size</dt><dd>Up to 5 pages</dd></div>
+              <div><dt class="kws-label">Design</dt><dd>Custom design, 1 revision round</dd></div>
+              <div><dt class="kws-label">Included</dt><dd>Copy editing and polish (you supply the text)</dd><dd>Contact form</dd><dd>Mobile &amp; SEO basics</dd></div>
+              <div><dt class="kws-label">Support</dt><dd>30 days</dd></div>
+            </dl>
+            <div class="btn-row">
+              <a class="btn" href="/checkout/?plan=starter-deposit">Pay 50% deposit —&nbsp;$1,000</a>
+              <a class="btn btn-quiet" href="/contact/?package=starter">Or send an enquiry first</a>
+            </div>
+          </div>
+        </article>
+        <article class="kws-folder" id="pkg-business">
+          <h3 class="kws-folder-tab">Business <b>$4,000</b></h3>
+          <div class="kws-folder-body">
+            <p class="kws-folder-price">$4,000 <span class="popular">Most popular</span></p>
+            <p>Or $2,000 down, then about $667/mo for 3 months</p>
+            <dl>
+              <div><dt class="kws-label">What it is</dt><dd>The full marketing site most growing businesses need.</dd></div>
+              <div><dt class="kws-label">Live in</dt><dd>2–4 weeks</dd></div>
+              <div><dt class="kws-label">Size</dt><dd>Up to 10 pages</dd></div>
+              <div><dt class="kws-label">Design</dt><dd>Up to 3 design rounds, plus a final tweaks round</dd></div>
+              <div><dt class="kws-label">Included</dt><dd>Copywriting: we draft, you edit</dd><dd>Blog or news section</dd><dd>Analytics &amp; tracking setup</dd><dd>Local SEO configuration</dd></div>
+              <div><dt class="kws-label">Support</dt><dd>90 days</dd></div>
+            </dl>
+            <div class="btn-row">
+              <a class="btn btn-primary" href="/checkout/?plan=business-deposit">Pay 50% deposit —&nbsp;$2,000</a>
+              <a class="btn btn-quiet" href="/contact/?package=business">Or send an enquiry first</a>
+            </div>
+          </div>
+        </article>
+        <article class="kws-folder" id="pkg-commerce">
+          <h3 class="kws-folder-tab">Commerce <b>$8,000</b></h3>
+          <div class="kws-folder-body">
+            <p class="kws-folder-price">$8,000</p>
+            <p>Or $4,000 down, then about $1,333/mo for 3 months</p>
+            <dl>
+              <div><dt class="kws-label">What it is</dt><dd>Sell online, with the operations side set up properly.</dd></div>
+              <div><dt class="kws-label">Live in</dt><dd>4–6 weeks</dd></div>
+              <div><dt class="kws-label">Size</dt><dd>Full store build</dd></div>
+              <div><dt class="kws-label">Design</dt><dd>Up to 3 design rounds, plus a final tweaks round</dd></div>
+              <div><dt class="kws-label">Included</dt><dd>Payments, shipping &amp; tax</dd><dd>Product import</dd><dd>Email &amp; abandoned cart flows</dd><dd>Team training session</dd></div>
+              <div><dt class="kws-label">Support</dt><dd>6 months</dd></div>
+            </dl>
+            <div class="btn-row">
+              <a class="btn" href="/checkout/?plan=commerce-deposit">Pay 50% deposit —&nbsp;$4,000</a>
+              <a class="btn btn-quiet" href="/contact/?package=commerce">Or send an enquiry first</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 5. PROOF: THE SAME KIT WITH ANOTHER BRAND'S VARIABLES =====================
+       Nothing in here uses a site class or a site token: only kit classes and the thirteen --kit-* variables
+       (plus three for the backgrounds), set once on .demo-brand in this page's <style>. -->
+  <section class="section section-sand" id="other-brand" aria-labelledby="other-brand-title">
+    <div class="container">
+      <header class="section-head">
+        <p class="eyebrow">For client builds</p>
+        <h2 id="other-brand-title">The same parts in another shop's colours</h2>
+        <p class="section-sub">Set the kit's variables once and every component follows: paper, ink, accent, notice, gilt, radius, shadow and two fonts. Everything in the frame below is a placeholder.</p>
+      </header>
+
+      <div class="demo-brand">
+        <div class="demo-brand-head kws-shader-host">
+          <div class="kws-shader" data-kws="shader" data-shader="wash" aria-hidden="true"></div>
+          <p class="kws-label">Example · [your bakery]</p>
+          <p class="demo-brand-title">[Your headline, in your own typeface]</p>
+          <p>[One or two lines about the shop. The light behind this panel is the "wash" background in this brand's colours.]</p>
+        </div>
+
+        <ul class="kws-marks" role="list">
+          <li class="kws-mark kws-link">
+            <p class="kws-label">Example</p>
+            <div class="kws-mark-art"><span class="kws-shader" data-kws="shader" data-shader="ribbon" data-tone="1" aria-hidden="true"></span></div>
+            <h3><a href="#other-brand">[First service]<svg class="kws-go" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a></h3>
+            <p class="kws-mark-price">[Its fixed price]</p>
+            <p>[One line about it.]</p>
+          </li>
+          <li class="kws-mark kws-link">
+            <p class="kws-label">Example</p>
+            <div class="kws-mark-art"><span class="kws-shader" data-kws="shader" data-shader="ribbon" data-tone="2" aria-hidden="true"></span></div>
+            <h3><a href="#other-brand">[Second service]<svg class="kws-go" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a></h3>
+            <p class="kws-mark-price">[Its fixed price]</p>
+            <p>[One line about it.]</p>
+          </li>
+          <li class="kws-mark kws-link">
+            <p class="kws-label">Example</p>
+            <div class="kws-mark-art"><span class="kws-shader" data-kws="shader" data-shader="ribbon" data-tone="3" aria-hidden="true"></span></div>
+            <h3><a href="#other-brand">[Third service]<svg class="kws-go" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a></h3>
+            <p class="kws-mark-price">[Its fixed price]</p>
+            <p>[One line about it.]</p>
+          </li>
+        </ul>
+
+        <!-- kws-folders--phone: a row from 760px, the tabbed stack below it -->
+        <div class="kws-folders kws-folders--stack kws-folders--phone" data-kws="folders" data-label="Example steps">
+          <article class="kws-folder">
+            <h3 class="kws-folder-tab"><span class="kws-folder-no">01</span></h3>
+            <div class="kws-folder-body"><p class="kws-label">Example</p><p class="demo-brand-h">[First step]</p><p>[What happens, in a sentence or two.]</p></div>
+          </article>
+          <article class="kws-folder">
+            <h3 class="kws-folder-tab"><span class="kws-folder-no">02</span></h3>
+            <div class="kws-folder-body"><p class="kws-label">Example</p><p class="demo-brand-h">[Second step]</p><p>[What happens, in a sentence or two.]</p></div>
+          </article>
+          <article class="kws-folder">
+            <h3 class="kws-folder-tab"><span class="kws-folder-no">03</span></h3>
+            <div class="kws-folder-body"><p class="kws-label">Example</p><p class="demo-brand-h">[Third step]</p><p>[What happens, in a sentence or two.]</p></div>
+          </article>
+          <article class="kws-folder">
+            <h3 class="kws-folder-tab"><span class="kws-folder-no">04</span></h3>
+            <div class="kws-folder-body"><p class="kws-label">Example</p><p class="demo-brand-h">[Fourth step]</p><p>[What happens, in a sentence or two.]</p></div>
+          </article>
+        </div>
+
+        <div class="demo-brand-band kws-shader-host">
+          <div class="kws-shader" data-kws="shader" data-shader="band" aria-hidden="true"></div>
+          <p class="kws-label">Example</p>
+          <p class="demo-brand-title">[Your closing line.]</p>
+          <p>[The "band" background takes its folds from this block's own colour and its glints from the gilt variable.]</p>
+          <p class="demo-brand-row"><a class="demo-brand-btn" href="#other-brand">[Your main button]</a>
+            <button class="kws-motion" data-kws="motion" type="button" hidden><svg class="kws-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg><svg class="kws-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 6. CLOSING BAND, WITH THE "BAND" BACKGROUND ===================== -->
+  <section class="cta-band on-blue kws-shader-host">
+    <div class="kws-shader" data-kws="shader" data-shader="band" aria-hidden="true"></div>
+    <div class="container cta-inner">
+      <div class="cta-copy">
+        <p class="eyebrow">Free · 30 minutes · no pitch</p>
+        <h2>Still deciding? Book the free call.</h2>
+        <p>Thirty minutes, no pitch. You'll get a clear view of what your website and your systems need, and what it should cost — even if you do it yourself.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary btn-lg" href="/contact/" data-booking>Book a discovery call</a>
+          <a class="btn btn-lg" href="/contact/">Send an enquiry</a>
+        </div>
+      </div>
+      <!-- Decorative: the same facts as the paragraph, drawn as an appointment card -->
+      <div class="appt on-paper" aria-hidden="true">
+        <p class="appt-head"><span>Appointment card</span><span>No. 01</span></p>
+        <p class="appt-title">Discovery call</p>
+        <dl class="appt-lines">
+          <div><dt>Cost</dt><dd>Free</dd></div>
+          <div><dt>Length</dt><dd>30 minutes</dd></div>
+          <div><dt>Sales pitch</dt><dd>None</dd></div>
+          <div><dt>Where</dt><dd>A call, or in person</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Phones and tablets: the header button is hidden there, so this bar keeps
+     a call and a booking one thumb-tap away. main.js shows it after the first
+     screen and hides it over the footer. -->
+<div class="mobile-cta" id="mobile-cta" hidden>
+  <div class="mobile-cta-inner">
+    <a class="btn" href="tel:+12252550837" aria-label="Call (225) 255-0837">
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
+      Call
+    </a>
+    <a class="btn btn-primary" href="/contact/" data-booking>Free 30-min call<span> · no pitch</span></a>
+  </div>
+</div>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer on-ink">
+  <!-- Baton Rouge on the horizon: the Capitol tower, downtown and the river bridge. After dark the windows and bridge lamps are lit (.sky-lit). -->
+  <svg class="footer-skyline" viewBox="0 0 1440 120" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+    <path d="M0 120V102Q26 88 58 99Q92 84 128 100Q150 93 176 104V120Z"/>
+    <path d="M180 120V86h38v34ZM222 120V72h34v48ZM268 120V84h124v36ZM296 86V68h68v18ZM314 70V24h32v46ZM319 26V13h22v13ZM324 15V6h12v9ZM327 7l3-7 3 7Z"/>
+    <path d="M420 120V66h48v54ZM474 120V48h44v72ZM522 120V78h56v42ZM582 120V58h38v62ZM624 120V88h60v32ZM690 120V70h46v50ZM740 120V94h70v26Z"/>
+    <path d="M818 120V108Q836 98 852 107V120Z"/>
+    <g fill="none" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M880 93L960 78L1040 38L1090 72L1140 80L1190 72L1240 38L1320 78L1400 93"/>
+      <path d="M960 78V93M1040 38V93M1090 72V93M1140 80V93M1190 72V93M1240 38V93M1320 78V93"/>
+      <path d="M960 93L1040 38L1090 93L1140 80L1190 93L1240 38L1320 93M1000 58V93M1280 58V93"/>
+    </g>
+    <path d="M856 91h568v5H856ZM1033 94h14v26h-14ZM1233 94h14v26h-14ZM956 94h8v26h-8ZM1316 94h8v26h-8Z"/>
+    <path d="M1396 120V104Q1414 92 1440 100V120Z"/>
+    <path d="M0 114h1440v6H0Z"/>
+    <path class="sky-lit" d="M190 96h4v5h-4ZM230 80h4v5h-4ZM242 94h4v5h-4ZM282 94h4v5h-4ZM306 75h4v5h-4ZM350 75h4v5h-4ZM372 98h4v5h-4ZM326 34h4v5h-4ZM334 34h4v5h-4ZM326 47h4v5h-4ZM334 59h4v5h-4ZM430 76h4v5h-4ZM448 92h4v5h-4ZM484 58h4v5h-4ZM500 58h4v5h-4ZM484 76h4v5h-4ZM500 94h4v5h-4ZM536 88h4v5h-4ZM560 102h4v5h-4ZM592 68h4v5h-4ZM604 86h4v5h-4ZM640 98h4v5h-4ZM664 98h4v5h-4ZM700 80h4v5h-4ZM720 96h4v5h-4ZM760 102h4v5h-4ZM790 102h4v5h-4ZM1038 31h5v5h-5ZM1238 31h5v5h-5ZM959 73h3v3h-3ZM1089 67h3v3h-3ZM1139 75h3v3h-3ZM1189 67h3v3h-3ZM1319 73h3v3h-3Z"/>
+  </svg>
+
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="brand" href="/">
+        <!-- art:crest-footer --><svg class="crest" viewBox="0 0 120 120" aria-hidden="true" style="--t1:#DCE3FF;--t2:#B9C7FF;--t3:#8FA5FF;--t4:#5C77EC;--t5:#2C46C4;--ink:#161B2C;--accent:#F0C369;--rim:#2C46C4;--rim2:#B9C7FF;--glow:#8FA5FF;--field1:#24306A;--field2:#161B2C;--ribbon:#1B2C84;--ribbon2:#14205E;--steel1:#FBF5E6;--steel2:#CFC7B4;--steel3:#8E8A80;--letter:#FFFBF2"><defs><linearGradient id="cf-fld" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--field1)"/><stop offset="1" stop-color="var(--field2)"/></linearGradient><radialGradient id="cf-glow" cx=".5" cy=".42" r=".5"><stop offset="0" stop-color="var(--glow)" stop-opacity=".35"/><stop offset="1" stop-color="var(--glow)" stop-opacity="0"/></radialGradient><linearGradient id="cf-gl" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".5"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="cf-in"><path d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z"/></clipPath><clipPath id="cf-out"><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z"/></clipPath></defs><g class="a-rim"><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z" fill="var(--rim)"/><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z" fill="none" stroke="var(--rim2)" stroke-opacity=".55" stroke-width="1.2"/><path class="a-field" d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z" fill="url(#cf-fld)"/></g><g clip-path="url(#cf-in)"><circle class="a-field" cx="60" cy="50" r="42" fill="url(#cf-glow)"/><g transform="translate(22 22) scale(.86)" stroke-linejoin="round"><polygon class="facet" style="--i:0;--dx:-8.0px;--dy:-6.4px" fill="var(--t2)" points="54,4 61,15 46,12"/><polygon class="facet" style="--i:1;--dx:-1.6px;--dy:6.4px" fill="var(--t1)" points="54,4 46,12 50,9"/><polygon class="facet" style="--i:2;--dx:4.8px;--dy:4.8px" fill="var(--t3)" points="37,15 46,12 61,15 63,24 35,29"/><polygon class="facet" style="--i:3;--dx:-6.4px;--dy:3.2px" fill="var(--t1)" points="37,15 24,27 35,29"/><polygon class="facet" style="--i:4;--dx:0.0px;--dy:1.6px" fill="var(--t2)" points="24,27 13,41 24,46 35,29"/><polygon class="facet" style="--i:5;--dx:6.4px;--dy:0.0px" fill="var(--t1)" points="13,41 8,49 12,56 23,58 24,46"/><polygon class="facet" style="--i:6;--dx:-4.8px;--dy:-1.6px" fill="var(--t3)" points="35,29 24,46 50,37"/><polygon class="facet" style="--i:7;--dx:1.6px;--dy:-3.2px" fill="var(--t4)" points="35,29 50,37 63,24"/><polygon class="facet" style="--i:8;--dx:8.0px;--dy:-4.8px" fill="var(--t4)" points="24,46 23,58 42,54 50,37"/><polygon class="facet" style="--i:9;--dx:-3.2px;--dy:-6.4px" fill="var(--t3)" points="50,37 42,54 38,63 63,63 65,43"/><polygon class="facet" style="--i:10;--dx:3.2px;--dy:6.4px" fill="var(--t4)" points="50,37 65,43 63,24"/><polygon class="facet" style="--i:11;--dx:-8.0px;--dy:4.8px" fill="var(--t3)" points="38,63 31,80 26,112 53,112 63,63"/><polygon class="facet" style="--i:12;--dx:-1.6px;--dy:3.2px" fill="var(--t4)" points="63,63 53,112 78,112 72,80"/><polygon class="facet" style="--i:13;--dx:4.8px;--dy:1.6px" fill="var(--t5)" points="61,15 67,16 72,22 69,26 77,32 73,36 79,44 74,48 79,57 73,61 76,70 72,80 63,63 65,43 63,24"/><path class="eye" d="M30 27Q35 24 40 27Q35 30 30 27Z" fill="var(--ink)"/><path d="M12 46L16 45" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round"/></g></g><path class="a-line" pathLength="1" d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z" fill="none" stroke="var(--accent)" stroke-opacity=".9" stroke-width="1"/><circle class="rivet" style="--i:0" cx="24" cy="20" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:1" cx="42" cy="15.5" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:2" cx="60" cy="11" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:3" cx="78" cy="15.5" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:4" cx="96" cy="20" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:5" cx="100" cy="44" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:6" cx="20" cy="44" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:7" cx="94" cy="76" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:8" cx="26" cy="76" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:9" cx="79" cy="97" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:10" cx="41" cy="97" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><g clip-path="url(#cf-out)"><g transform="rotate(20 60 60)"><rect class="a-glint" x="-60" y="-30" width="16" height="180" fill="url(#cf-gl)"/></g></g></svg><!-- /art:crest-footer -->
+        <span class="brand-name">KnightWebstudio</span>
+      </a>
+      <p>Websites, automation and consulting for local businesses that need to be found, trusted and chosen.</p>
+      <p class="footer-loc">Based in Baton Rouge, Louisiana. Working with clients anywhere.</p>
+    </div>
+
+    <nav class="footer-col" aria-label="Services">
+      <p class="footer-title">Services</p>
+      <a href="/services/">Website design</a>
+      <a href="/consulting/">Consulting &amp; automation</a>
+      <a href="/services/">E-commerce</a>
+      <a href="/services/">SEO</a>
+      <a href="/services/">Care plans</a>
+    </nav>
+
+    <nav class="footer-col" aria-label="Company">
+      <p class="footer-title">Company</p>
+      <a href="/about/">About</a>
+      <a href="/work/">Our work</a>
+      <a href="/process/">Process</a>
+      <a href="/pricing/">Pricing</a>
+      <a href="/faq/">FAQ</a>
+    </nav>
+
+    <nav class="footer-col" aria-label="Areas we serve">
+      <p class="footer-title">Areas we serve</p>
+      <a href="/web-design-baton-rouge/">Baton Rouge</a>
+      <a href="/web-design-gonzales/">Gonzales</a>
+      <a href="/web-design-prairieville/">Prairieville</a>
+      <a href="/web-design-denham-springs/">Denham Springs</a>
+      <span class="footer-place">Zachary</span>
+      <span class="footer-place">Central</span>
+      <span class="footer-place">Baker</span>
+    </nav>
+
+    <nav class="footer-col" aria-label="Contact">
+      <p class="footer-title">Contact</p>
+      <a href="mailto:knightwebstudio1@gmail.com"><span>knightwebstudio1@<wbr>gmail.com</span></a>
+      <a href="tel:+12252550837">(225) 255-0837</a>
+      <a href="/contact/">Start a project</a>
+    </nav>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>&copy; <span id="year">2026</span> KnightWebstudio. All rights reserved.</p>
+    <p class="footer-links"><button class="kws-motion" data-kws="motion" type="button" hidden><svg class="kws-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg><svg class="kws-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg><span class="kws-motion-label"></span></button><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="#top">Back to top ↑</a></p>
+  </div>
+</footer>
+<script src="/assets/js/main.js" defer></script>
+<script src="motion.js" defer></script>
+<script src="shader.js" defer></script>
+<script src="cards.js" defer></script>
+</body>
+</html>

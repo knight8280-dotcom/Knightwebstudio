@@ -1,0 +1,41 @@
+/ | Website design & build                           name wraps@-  price under@320-1920  stub@-  noleader@-
+/ | Automation                                       name wraps@-  price under@320-1920  stub@-  noleader@-
+/ | Growth consulting                                name wraps@-  price under@320-1920  stub@-  noleader@-  PRICE-WRAPS@320-330
+/services/ | Redesigns & rescues                     name wraps@-  price under@320-590  stub@-  noleader@980-990
+/services/ | E-commerce stores                       name wraps@320  price under@-  stub@-  noleader@320-350
+/services/ | Brand & identity                        name wraps@-  price under@-  stub@-  noleader@320
+/services/ | SEO & performance                       name wraps@-  price under@320-590  stub@-  noleader@-
+/services/ | Growth consulting                       name wraps@-  price under@320-590  stub@-  noleader@-  PRICE-WRAPS@320-350
+/services/ | Google profile & reviews                name wraps@320-350  price under@-  stub@-  noleader@320-370
+/consulting/ | Free online check                     name wraps@-  price under@-  stub@-  noleader@320-340
+/consulting/ | Growth Audit                          name wraps@-  price under@-  stub@-  noleader@-
+/consulting/ | Strategy session                      name wraps@-  price under@-  stub@-  noleader@-
+/consulting/ | Google profile & reviews              name wraps@320  price under@-  stub@-  noleader@320-350
+/consulting/ | Missed-call text-back                 name wraps@-  price under@-  stub@-  noleader@320
+/consulting/ | Online booking & reminders            name wraps@320-350  price under@-  stub@-  noleader@320-380
+/consulting/ | Lead follow-up system                 name wraps@320  price under@-  stub@-  noleader@320-350
+/consulting/ | Custom automation                     name wraps@-  price under@-  stub@-  noleader@320
+/consulting/ | Advisor plan                          name wraps@-  price under@-  stub@-  noleader@-
+/consulting/ | Partner plan                          name wraps@-  price under@-  stub@-  noleader@1200-1260
+/pricing/ | Brand identity                           name wraps@-  price under@-  stub@-  noleader@-
+/pricing/ | Booking & scheduling setup               name wraps@320-350  price under@-  stub@-  noleader@320-380
+/pricing/ | CRM & calendar sync                      name wraps@-  price under@-  stub@-  noleader@320
+/pricing/ | Growth Audit & action plan               name wraps@320-350  price under@-  stub@-  noleader@320-370,760-780
+/pricing/ | Strategy session                         name wraps@-  price under@-  stub@-  noleader@-
+/pricing/ | Google profile & reviews                 name wraps@320  price under@-  stub@-  noleader@320-350
+/pricing/ | Missed-call text-back                    name wraps@-  price under@-  stub@-  noleader@320
+/pricing/ | Lead follow-up system                    name wraps@320  price under@-  stub@-  noleader@320-350
+/pricing/ | Custom automation workflow               name wraps@320-390,760-820  price under@-  stub@-  noleader@320-420,760-890
+/pricing/ | Advisor plan                             name wraps@-  price under@-  stub@-  noleader@-
+/pricing/ | Partner plan                             name wraps@-  price under@-  stub@-  noleader@-
+/start/ | Website design & build                     name wraps@-  price under@320-1270  stub@-  noleader@-
+/start/ | E-commerce stores                          name wraps@-  price under@-  stub@-  noleader@320
+/start/ | SEO & performance                          name wraps@-  price under@320-1270  stub@-  noleader@-
+/start/ | Care & maintenance                         name wraps@-  price under@320-1270  stub@-  noleader@-  PRICE-WRAPS@320-330
+/start/ | Redesigns & rescues                        name wraps@-  price under@320-1270  stub@-  noleader@-
+/start/ | Brand & identity                           name wraps@-  price under@-  stub@-  noleader@-
+/start/ | Growth consulting                          name wraps@-  price under@320-1270  stub@-  noleader@-  PRICE-WRAPS@320-330
+/start/ | Google profile & reviews                   name wraps@320  price under@-  stub@-  noleader@320-350
+/start/ | Automation                                 name wraps@-  price under@320-1270  stub@-  noleader@-
+/start/ | Website add-ons                            name wraps@320-340  price under@-  stub@-  noleader@-
+/start/ | Launch bundle                              name wraps@-  price under@-  stub@-  noleader@-

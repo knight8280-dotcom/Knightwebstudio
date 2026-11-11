@@ -1,0 +1,26 @@
+{
+  "home__laptop-light": {
+    "height": 8638,
+    "overflowX": 0,
+    "stops": 12,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "home__desktop-light": {
+    "height": 8822,
+    "overflowX": 0,
+    "stops": 11,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "home__tablet-light": {
+    "height": 10463,
+    "overflowX": 0,
+    "stops": 11,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  }
+}

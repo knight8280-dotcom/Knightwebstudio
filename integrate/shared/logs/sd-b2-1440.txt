@@ -1,0 +1,521 @@
+home__1440__light: page 9198 -> 9198px, 10 band(s) changed
+  [1] header#site-header.site-header  (72 -> 72px)  29 change(s), 19 width-only
+      STYLE a "Services"::after: pseudo30: 12px -> 8px
+      MOVE li: at 82.2,0 -> 74.2,0 in its parent
+      STYLE a "Consulting"::after: pseudo30: 12px -> 8px
+      STYLE a "Work"::after: pseudo30: 12px -> 8px
+      STYLE a "Process"::after: pseudo30: 12px -> 8px
+      STYLE a "Pricing"::after: pseudo30: 12px -> 8px
+      STYLE a "FAQ"::after: pseudo30: 12px -> 8px
+      STYLE a "About"::after: pseudo30: 12px -> 8px
+      STYLE a "Contact"::after: pseudo30: 12px -> 8px
+      STYLE a.btn.btn-primary.btn-sm "Book a free call": whiteSpace: normal -> nowrap
+  [2] section#top.page-head.hero  (817.4 -> 817.4px)  7 change(s), 3 width-only
+      STYLE span.mark "hours back"::after: pseudo32: auto -> -1
+      MOVE span.price-strip-note "Four fixed packages": at 461.3,10 -> 449.3,10 in its parent
+      STYLE li.thread-note.thread-missed.seq "Missed call": position: static -> relative
+      STYLE li.thread-note.seq "Sent on its own, within a ": position: static -> relative
+  [3] section#services.section  (1223.6 -> 1223.6px)  1 change(s)
+      COUNT 41 -> 38 elements
+  [4] section#automation.section.section-sand  (2265.8 -> 2265.8px)  2 change(s)
+      STYLE li.thread-note.thread-missed "Missed call": position: static -> relative
+      STYLE li.thread-note.seq "Sent on its own, within a ": position: static -> relative
+  [5] section#work.section.section-tight  (732.6 -> 732.6px)  1 change(s)
+      COUNT 41 -> 44 elements
+  [6] section#process.section.section-sand  (1008.5 -> 1008.5px)  4 change(s)
+      STYLE span.steps-no "01": whiteSpace: normal -> nowrap
+      STYLE span.steps-no "02": whiteSpace: normal -> nowrap
+      STYLE span.steps-no "03": whiteSpace: normal -> nowrap
+      STYLE span.steps-no "04": whiteSpace: normal -> nowrap
+  [7] section#pricing.section  (1148.5 -> 1148.5px)  1 change(s)
+      COUNT 49 -> 53 elements
+  [8] section#about.section.section-tight.section-sand  (735.3 -> 735.3px)  10 change(s)
+      SIZE ul.pills " ": 480x72 -> 480x80
+      STYLE ul.pills " ": display: flex -> block
+      STYLE li "Baton Rouge": display: list-item -> inline-flex
+      STYLE li "Gonzales": display: list-item -> inline-flex
+      STYLE li "Prairieville": display: list-item -> inline-flex
+      MOVE li "Denham Springs": at 316.3,0 -> 0,40 in its parent
+      STYLE li "Denham Springs": display: list-item -> inline-flex
+      STYLE li "Zachary": display: list-item -> inline-flex
+      STYLE li "Central": display: list-item -> inline-flex
+      STYLE li "Baker": display: list-item -> inline-flex
+  [9] section.cta-band.on-blue  (612.4 -> 612.4px)  18 change(s), 8 width-only
+      MOVE div.appt.on-paper.wide-only "   ": at 980.5,0 -> 904,0 in its parent
+      MOVE span "No. 01": at 163.7,0 -> 240.2,0 in its parent
+      STYLE div::after: pseudo27: 132.562px -> 209.078px
+      MOVE dd "Free": at 181,8 -> 257.5,8 in its parent
+      STYLE div::after: pseudo27: 70.5938px -> 147.109px
+      MOVE dd "30 minutes": at 134.6,8 -> 211.1,8 in its parent
+      STYLE div::after: pseudo27: 83.7812px -> 160.297px
+      MOVE dd "None": at 174.3,8 -> 250.9,8 in its parent
+      STYLE div::after: pseudo27: 23.9062px -> 100.422px
+      MOVE dd "A call, or in person": at 85,8 -> 161.5,8 in its parent
+  [10] footer.site-footer.on-ink  (537.8 -> 537.8px)  1 change(s)
+      COUNT 44 -> 45 elements
+services__1440__light: page 4203 -> 4203px, 5 band(s) changed
+  [1] header#site-header.site-header  (72 -> 72px)  29 change(s), 19 width-only
+      STYLE a "Services"::after: pseudo30: 12px -> 8px
+      MOVE li: at 82.2,0 -> 74.2,0 in its parent
+      STYLE a "Consulting"::after: pseudo30: 12px -> 8px
+      STYLE a "Work"::after: pseudo30: 12px -> 8px
+      STYLE a "Process"::after: pseudo30: 12px -> 8px
+      STYLE a "Pricing"::after: pseudo30: 12px -> 8px
+      STYLE a "FAQ"::after: pseudo30: 12px -> 8px
+      STYLE a "About"::after: pseudo30: 12px -> 8px
+      STYLE a "Contact"::after: pseudo30: 12px -> 8px
+      STYLE a.btn.btn-primary.btn-sm "Book a free call": whiteSpace: normal -> nowrap
+  [2] section.page-head  (451.8 -> 451.8px)  5 change(s), 3 width-only
+      STYLE span.mark "one roof"::after: pseudo32: auto -> -1
+      MOVE span.price-strip-note "All nine services, priced": at 461.3,10 -> 449.3,10 in its parent
+  [5] section#win.section  (1089.3 -> 1089.3px)  2 change(s)
+      STYLE li.thread-note.thread-missed.seq "Missed call": position: static -> relative
+      STYLE li.thread-note.seq "Sent on its own": position: static -> relative
+  [6] section.cta-band.on-blue  (612.4 -> 612.4px)  18 change(s), 8 width-only
+      MOVE div.appt.on-paper.wide-only "   ": at 980.5,0 -> 904,0 in its parent
+      MOVE span "No. 01": at 163.7,0 -> 240.2,0 in its parent
+      STYLE div::after: pseudo27: 132.562px -> 209.078px
+      MOVE dd "Free": at 181,8 -> 257.5,8 in its parent
+      STYLE div::after: pseudo27: 70.5938px -> 147.109px
+      MOVE dd "30 minutes": at 134.6,8 -> 211.1,8 in its parent
+      STYLE div::after: pseudo27: 83.7812px -> 160.297px
+      MOVE dd "None": at 174.3,8 -> 250.9,8 in its parent
+      STYLE div::after: pseudo27: 23.9062px -> 100.422px
+      MOVE dd "A call, or in person": at 85,8 -> 161.5,8 in its parent
+  [7] footer.site-footer.on-ink  (537.8 -> 537.8px)  1 change(s)
+      COUNT 44 -> 45 elements
+consulting__1440__light: page 9978 -> 9978px, 6 band(s) changed
+  [1] header#site-header.site-header  (72 -> 72px)  29 change(s), 19 width-only
+      STYLE a "Services"::after: pseudo30: 12px -> 8px
+      MOVE li: at 82.2,0 -> 74.2,0 in its parent
+      STYLE a "Consulting"::after: pseudo30: 12px -> 8px
+      STYLE a "Work"::after: pseudo30: 12px -> 8px
+      STYLE a "Process"::after: pseudo30: 12px -> 8px
+      STYLE a "Pricing"::after: pseudo30: 12px -> 8px
+      STYLE a "FAQ"::after: pseudo30: 12px -> 8px
+      STYLE a "About"::after: pseudo30: 12px -> 8px
+      STYLE a "Contact"::after: pseudo30: 12px -> 8px
+      STYLE a.btn.btn-primary.btn-sm "Book a free call": whiteSpace: normal -> nowrap
+  [2] section.page-head  (515.7 -> 515.7px)  5 change(s), 3 width-only
+      STYLE span.mark "less busywork"::after: pseudo32: auto -> -1
+      MOVE span.price-strip-note "Fixed, published prices": at 308.7,10 -> 296.7,10 in its parent
+  [5] section#calculator.section  (1232.8 -> 1232.8px)  1 change(s)
+      STYLE small "/month": textAlign: start -> left
+  [6] section#process.section.section-sand  (2999.5 -> 2999.5px)  13 change(s), 8 width-only
+      STYLE span.steps-no "01": whiteSpace: normal -> nowrap
+      STYLE span.steps-no "02": whiteSpace: normal -> nowrap
+      STYLE span.steps-no "03": whiteSpace: normal -> nowrap
+      STYLE span.steps-no "04": whiteSpace: normal -> nowrap
+      MOVE span.payplan-seg "month 1": at 250,0 -> 262,0 in its parent
+  [8] section.cta-band.on-blue  (622.8 -> 622.8px)  21 change(s), 11 width-only
+      MOVE div.appt.on-paper.wide-only "   ": at 980.5,5.2 -> 904,5.2 in its parent
+      MOVE span "No. 01": at 163.7,0 -> 240.2,0 in its parent
+      STYLE div::after: pseudo27: 132.562px -> 209.078px
+      MOVE dd "Free": at 181,8 -> 257.5,8 in its parent
+      STYLE div::after: pseudo27: 70.5938px -> 147.109px
+      MOVE dd "30 minutes": at 134.6,8 -> 211.1,8 in its parent
+      STYLE div::after: pseudo27: 83.7812px -> 160.297px
+      MOVE dd "None": at 174.3,8 -> 250.9,8 in its parent
+      STYLE div::after: pseudo27: 23.9062px -> 100.422px
+      MOVE dd "A call, or in person": at 85,8 -> 161.5,8 in its parent
+  [9] footer.site-footer.on-ink  (537.8 -> 537.8px)  1 change(s)
+      COUNT 44 -> 45 elements
+work__1440__light: page 3456 -> 3456px, 3 band(s) changed
+  [1] header#site-header.site-header  (72 -> 72px)  29 change(s), 19 width-only
+      STYLE a "Services"::after: pseudo30: 12px -> 8px
+      MOVE li: at 82.2,0 -> 74.2,0 in its parent
+      STYLE a "Consulting"::after: pseudo30: 12px -> 8px
+      STYLE a "Work"::after: pseudo30: 12px -> 8px
+      STYLE a "Process"::after: pseudo30: 12px -> 8px
+      STYLE a "Pricing"::after: pseudo30: 12px -> 8px
+      STYLE a "FAQ"::after: pseudo30: 12px -> 8px
+      STYLE a "About"::after: pseudo30: 12px -> 8px
+      STYLE a "Contact"::after: pseudo30: 12px -> 8px
+      STYLE a.btn.btn-primary.btn-sm "Book a free call": whiteSpace: normal -> nowrap
+  [6] section.cta-band.on-blue  (612.4 -> 612.4px)  18 change(s), 8 width-only
+      MOVE div.appt.on-paper.wide-only "   ": at 980.5,0 -> 904,0 in its parent
+      MOVE span "No. 01": at 163.7,0 -> 240.2,0 in its parent
+      STYLE div::after: pseudo27: 132.562px -> 209.078px
+      MOVE dd "Free": at 181,8 -> 257.5,8 in its parent
+      STYLE div::after: pseudo27: 70.5938px -> 147.109px
+      MOVE dd "30 minutes": at 134.6,8 -> 211.1,8 in its parent
+      STYLE div::after: pseudo27: 83.7812px -> 160.297px
+      MOVE dd "None": at 174.3,8 -> 250.9,8 in its parent
+      STYLE div::after: pseudo27: 23.9062px -> 100.422px
+      MOVE dd "A call, or in person": at 85,8 -> 161.5,8 in its parent
+  [7] footer.site-footer.on-ink  (537.8 -> 537.8px)  1 change(s)
+      COUNT 44 -> 45 elements
+process__1440__light: page 2709 -> 2709px, 5 band(s) changed
+  [1] header#site-header.site-header  (72 -> 72px)  29 change(s), 19 width-only
+      STYLE a "Services"::after: pseudo30: 12px -> 8px
+      MOVE li: at 82.2,0 -> 74.2,0 in its parent
+      STYLE a "Consulting"::after: pseudo30: 12px -> 8px
+      STYLE a "Work"::after: pseudo30: 12px -> 8px
+      STYLE a "Process"::after: pseudo30: 12px -> 8px
+      STYLE a "Pricing"::after: pseudo30: 12px -> 8px
+      STYLE a "FAQ"::after: pseudo30: 12px -> 8px
+      STYLE a "About"::after: pseudo30: 12px -> 8px
+      STYLE a "Contact"::after: pseudo30: 12px -> 8px
+      STYLE a.btn.btn-primary.btn-sm "Book a free call": whiteSpace: normal -> nowrap
+  [2] section.page-head  (383.8 -> 383.8px)  1 change(s)
+      STYLE span.mark "no surprises"::after: pseudo32: auto -> -1
+  [3] section#process.section.section-first  (1059.3 -> 1059.3px)  4 change(s)
+      STYLE span.steps-no "01": whiteSpace: normal -> nowrap
+      STYLE span.steps-no "02": whiteSpace: normal -> nowrap
+      STYLE span.steps-no "03": whiteSpace: normal -> nowrap
+      STYLE span.steps-no "04": whiteSpace: normal -> nowrap
+  [4] section.cta-band.on-blue  (612.4 -> 612.4px)  18 change(s), 8 width-only
+      MOVE div.appt.on-paper.wide-only "   ": at 980.5,0 -> 904,0 in its parent
+      MOVE span "No. 01": at 163.7,0 -> 240.2,0 in its parent
+      STYLE div::after: pseudo27: 132.562px -> 209.078px
+      MOVE dd "Free": at 181,8 -> 257.5,8 in its parent
+      STYLE div::after: pseudo27: 70.5938px -> 147.109px
+      MOVE dd "30 minutes": at 134.6,8 -> 211.1,8 in its parent
+      STYLE div::after: pseudo27: 83.7812px -> 160.297px
+      MOVE dd "None": at 174.3,8 -> 250.9,8 in its parent
+      STYLE div::after: pseudo27: 23.9062px -> 100.422px
+      MOVE dd "A call, or in person": at 85,8 -> 161.5,8 in its parent
+  [5] footer.site-footer.on-ink  (537.8 -> 537.8px)  1 change(s)
+      COUNT 44 -> 45 elements
+pricing__1440__light: page 5988 -> 5988px, 4 band(s) changed
+  [1] header#site-header.site-header  (72 -> 72px)  29 change(s), 19 width-only
+      STYLE a "Services"::after: pseudo30: 12px -> 8px
+      MOVE li: at 82.2,0 -> 74.2,0 in its parent
+      STYLE a "Consulting"::after: pseudo30: 12px -> 8px
+      STYLE a "Work"::after: pseudo30: 12px -> 8px
+      STYLE a "Process"::after: pseudo30: 12px -> 8px
+      STYLE a "Pricing"::after: pseudo30: 12px -> 8px
+      STYLE a "FAQ"::after: pseudo30: 12px -> 8px
+      STYLE a "About"::after: pseudo30: 12px -> 8px
+      STYLE a "Contact"::after: pseudo30: 12px -> 8px
+      STYLE a.btn.btn-primary.btn-sm "Book a free call": whiteSpace: normal -> nowrap
+  [2] section.page-head  (516.1 -> 516.1px)  1 change(s)
+      STYLE span.mark "up front"::after: pseudo32: auto -> -1
+  [6] section.cta-band.on-blue  (612.4 -> 612.4px)  18 change(s), 8 width-only
+      MOVE div.appt.on-paper.wide-only "   ": at 980.5,0 -> 904,0 in its parent
+      MOVE span "No. 01": at 163.7,0 -> 240.2,0 in its parent
+      STYLE div::after: pseudo27: 132.562px -> 209.078px
+      MOVE dd "Free": at 181,8 -> 257.5,8 in its parent
+      STYLE div::after: pseudo27: 70.5938px -> 147.109px
+      MOVE dd "30 minutes": at 134.6,8 -> 211.1,8 in its parent
+      STYLE div::after: pseudo27: 83.7812px -> 160.297px
+      MOVE dd "None": at 174.3,8 -> 250.9,8 in its parent
+      STYLE div::after: pseudo27: 23.9062px -> 100.422px
+      MOVE dd "A call, or in person": at 85,8 -> 161.5,8 in its parent
+  [7] footer.site-footer.on-ink  (537.8 -> 537.8px)  1 change(s)
+      COUNT 44 -> 45 elements
+faq__1440__light: page 3036 -> 3009px, 4 band(s) changed
+  [1] header#site-header.site-header  (72 -> 72px)  29 change(s), 19 width-only
+      STYLE a "Services"::after: pseudo30: 12px -> 8px
+      MOVE li: at 82.2,0 -> 74.2,0 in its parent
+      STYLE a "Consulting"::after: pseudo30: 12px -> 8px
+      STYLE a "Work"::after: pseudo30: 12px -> 8px
+      STYLE a "Process"::after: pseudo30: 12px -> 8px
+      STYLE a "Pricing"::after: pseudo30: 12px -> 8px
+      STYLE a "FAQ"::after: pseudo30: 12px -> 8px
+      STYLE a "About"::after: pseudo30: 12px -> 8px
+      STYLE a "Contact"::after: pseudo30: 12px -> 8px
+      STYLE a.btn.btn-primary.btn-sm "Book a free call": whiteSpace: normal -> nowrap
+  [3] section#faq.section.section-first  (1528.3 -> 1501.1px)  39 change(s), 14 width-only
+      SIZE section.section.section-first " ": 1440x1528.3 -> 1440x1501.1
+      SIZE div.container.split.split-sticky "  ": 1240x1344.3 -> 1240x1317.1
+      SIZE div.faq-groups "    ": 738.2x1344.3 -> 738.2x1317.1
+      SIZE section.faq-group "  ": 738.2x442.9 -> 738.2x415.7
+      SIZE div.faq "    ": 736x391.7 -> 736x364.5
+      SIZE details.faq-item "  ": 736x217.6 -> 736x190.4
+      SIZE div.faq-body: 527x159.9 -> 578x132.8
+      SIZE p "A one-page site can be liv": 527x135.9 -> 578x108.8
+      MOVE details.faq-item "  ": at 0,218.6 -> 0,191.4 in its parent
+      SIZE div.faq-body: 527x159.9 -> 578x132.8
+      SIZE p "Your logo if you have one,": 527x135.9 -> 578x108.8
+      SIZE div.faq-body: 527x241.5 -> 578x214.3
+      ... 13 more
+  [4] section.cta-band.on-blue  (612.4 -> 612.4px)  18 change(s), 8 width-only
+      MOVE div.appt.on-paper.wide-only "   ": at 980.5,0 -> 904,0 in its parent
+      MOVE span "No. 01": at 163.7,0 -> 240.2,0 in its parent
+      STYLE div::after: pseudo27: 132.562px -> 209.078px
+      MOVE dd "Free": at 181,8 -> 257.5,8 in its parent
+      STYLE div::after: pseudo27: 70.5938px -> 147.109px
+      MOVE dd "30 minutes": at 134.6,8 -> 211.1,8 in its parent
+      STYLE div::after: pseudo27: 83.7812px -> 160.297px
+      MOVE dd "None": at 174.3,8 -> 250.9,8 in its parent
+      STYLE div::after: pseudo27: 23.9062px -> 100.422px
+      MOVE dd "A call, or in person": at 85,8 -> 161.5,8 in its parent
+  [5] footer.site-footer.on-ink  (537.8 -> 537.8px)  1 change(s)
+      COUNT 44 -> 45 elements
+contact__1440__light: page 2253 -> 2253px, 3 band(s) changed
+  [1] header#site-header.site-header  (72 -> 72px)  29 change(s), 19 width-only
+      STYLE a "Services"::after: pseudo30: 12px -> 8px
+      MOVE li: at 82.2,0 -> 74.2,0 in its parent
+      STYLE a "Consulting"::after: pseudo30: 12px -> 8px
+      STYLE a "Work"::after: pseudo30: 12px -> 8px
+      STYLE a "Process"::after: pseudo30: 12px -> 8px
+      STYLE a "Pricing"::after: pseudo30: 12px -> 8px
+      STYLE a "FAQ"::after: pseudo30: 12px -> 8px
+      STYLE a "About"::after: pseudo30: 12px -> 8px
+      STYLE a "Contact"::after: pseudo30: 12px -> 8px
+      STYLE a.btn.btn-primary.btn-sm "Book a free call": whiteSpace: normal -> nowrap
+  [3] section#contact.section.section-first  (1151.3 -> 1151.3px)  3 change(s)
+      STYLE span.steps-no "01": whiteSpace: normal -> nowrap
+      STYLE span.steps-no "02": whiteSpace: normal -> nowrap
+      STYLE span.steps-no "03": whiteSpace: normal -> nowrap
+  [4] footer.site-footer.on-ink  (537.8 -> 537.8px)  1 change(s)
+      COUNT 44 -> 45 elements
+about__1440__light: page 3755 -> 3755px, 4 band(s) changed
+  [1] header#site-header.site-header  (72 -> 72px)  29 change(s), 19 width-only
+      STYLE a "Services"::after: pseudo30: 12px -> 8px
+      MOVE li: at 82.2,0 -> 74.2,0 in its parent
+      STYLE a "Consulting"::after: pseudo30: 12px -> 8px
+      STYLE a "Work"::after: pseudo30: 12px -> 8px
+      STYLE a "Process"::after: pseudo30: 12px -> 8px
+      STYLE a "Pricing"::after: pseudo30: 12px -> 8px
+      STYLE a "FAQ"::after: pseudo30: 12px -> 8px
+      STYLE a "About"::after: pseudo30: 12px -> 8px
+      STYLE a "Contact"::after: pseudo30: 12px -> 8px
+      STYLE a.btn.btn-primary.btn-sm "Book a free call": whiteSpace: normal -> nowrap
+  [2] section.page-head  (554.4 -> 554.4px)  1 change(s)
+      STYLE span.mark "Christian"::after: pseudo32: auto -> -1
+  [5] section.cta-band.on-blue  (612.4 -> 612.4px)  18 change(s), 8 width-only
+      MOVE div.appt.on-paper.wide-only "   ": at 980.5,0 -> 904,0 in its parent
+      MOVE span "No. 01": at 163.7,0 -> 240.2,0 in its parent
+      STYLE div::after: pseudo27: 132.562px -> 209.078px
+      MOVE dd "Free": at 181,8 -> 257.5,8 in its parent
+      STYLE div::after: pseudo27: 70.5938px -> 147.109px
+      MOVE dd "30 minutes": at 134.6,8 -> 211.1,8 in its parent
+      STYLE div::after: pseudo27: 83.7812px -> 160.297px
+      MOVE dd "None": at 174.3,8 -> 250.9,8 in its parent
+      STYLE div::after: pseudo27: 23.9062px -> 100.422px
+      MOVE dd "A call, or in person": at 85,8 -> 161.5,8 in its parent
+  [6] footer.site-footer.on-ink  (537.8 -> 537.8px)  1 change(s)
+      COUNT 44 -> 45 elements
+start__1440__light: page 4647 -> 4647px, 4 band(s) changed
+  [2] section.page-head  (669.6 -> 669.6px)  5 change(s), 3 width-only
+      STYLE span.mark "customers"::after: pseudo32: auto -> -1
+      MOVE span.price-strip-note "Four fixed packages": at 461.3,10 -> 449.3,10 in its parent
+  [5] section#pricing.section.section-tight  (919 -> 919px)  1 change(s)
+      COUNT 57 -> 61 elements
+  [6] section#process.section.section-tight.section-sand  (597.1 -> 597.1px)  4 change(s)
+      STYLE span.steps-no "01": whiteSpace: normal -> nowrap
+      STYLE span.steps-no "02": whiteSpace: normal -> nowrap
+      STYLE span.steps-no "03": whiteSpace: normal -> nowrap
+      STYLE span.steps-no "04": whiteSpace: normal -> nowrap
+  [7] section#contact.cta-band.on-blue  (621 -> 621px)  18 change(s), 8 width-only
+      MOVE div.appt.on-paper.wide-only "   ": at 980.5,4.3 -> 904,4.3 in its parent
+      MOVE span "No. 01": at 163.7,0 -> 240.2,0 in its parent
+      STYLE div::after: pseudo27: 132.562px -> 209.078px
+      MOVE dd "Free": at 181,8 -> 257.5,8 in its parent
+      STYLE div::after: pseudo27: 70.5938px -> 147.109px
+      MOVE dd "30 minutes": at 134.6,8 -> 211.1,8 in its parent
+      STYLE div::after: pseudo27: 83.7812px -> 160.297px
+      MOVE dd "None": at 174.3,8 -> 250.9,8 in its parent
+      STYLE div::after: pseudo27: 23.9062px -> 100.422px
+      MOVE dd "A call, or in person": at 85,8 -> 161.5,8 in its parent
+web-design-baton-rouge__1440__light: page 5734 -> 5734px, 7 band(s) changed
+  [1] header#site-header.site-header  (72 -> 72px)  29 change(s), 19 width-only
+      STYLE a "Services"::after: pseudo30: 12px -> 8px
+      MOVE li: at 82.2,0 -> 74.2,0 in its parent
+      STYLE a "Consulting"::after: pseudo30: 12px -> 8px
+      STYLE a "Work"::after: pseudo30: 12px -> 8px
+      STYLE a "Process"::after: pseudo30: 12px -> 8px
+      STYLE a "Pricing"::after: pseudo30: 12px -> 8px
+      STYLE a "FAQ"::after: pseudo30: 12px -> 8px
+      STYLE a "About"::after: pseudo30: 12px -> 8px
+      STYLE a "Contact"::after: pseudo30: 12px -> 8px
+      STYLE a.btn.btn-primary.btn-sm "Book a free call": whiteSpace: normal -> nowrap
+  [2] section.page-head  (497.5 -> 497.5px)  2 change(s), 2 width-only
+  [4] section#pricing.section.section-sand  (1072.4 -> 1072.4px)  1 change(s)
+      COUNT 45 -> 49 elements
+  [5] section#what-we-build.section  (1089.2 -> 1089.2px)  3 change(s)
+      STYLE span.steps-no "01": whiteSpace: normal -> nowrap
+      STYLE span.steps-no "02": whiteSpace: normal -> nowrap
+      STYLE span.steps-no "03": whiteSpace: normal -> nowrap
+  [6] section#local-work.section.section-sand  (944.5 -> 944.5px)  1 change(s)
+      COUNT 28 -> 29 elements
+  [8] section.cta-band.on-blue  (612.4 -> 612.4px)  18 change(s), 8 width-only
+      MOVE div.appt.on-paper.wide-only "   ": at 980.5,0 -> 904,0 in its parent
+      MOVE span "No. 01": at 163.7,0 -> 240.2,0 in its parent
+      STYLE div::after: pseudo27: 132.562px -> 209.078px
+      MOVE dd "Free": at 181,8 -> 257.5,8 in its parent
+      STYLE div::after: pseudo27: 70.5938px -> 147.109px
+      MOVE dd "30 minutes": at 134.6,8 -> 211.1,8 in its parent
+      STYLE div::after: pseudo27: 83.7812px -> 160.297px
+      MOVE dd "None": at 174.3,8 -> 250.9,8 in its parent
+      STYLE div::after: pseudo27: 23.9062px -> 100.422px
+      MOVE dd "A call, or in person": at 85,8 -> 161.5,8 in its parent
+  [9] footer.site-footer.on-ink  (537.8 -> 537.8px)  1 change(s)
+      COUNT 44 -> 45 elements
+web-design-denham-springs__1440__light: page 5663 -> 5663px, 7 band(s) changed
+  [1] header#site-header.site-header  (72 -> 72px)  29 change(s), 19 width-only
+      STYLE a "Services"::after: pseudo30: 12px -> 8px
+      MOVE li: at 82.2,0 -> 74.2,0 in its parent
+      STYLE a "Consulting"::after: pseudo30: 12px -> 8px
+      STYLE a "Work"::after: pseudo30: 12px -> 8px
+      STYLE a "Process"::after: pseudo30: 12px -> 8px
+      STYLE a "Pricing"::after: pseudo30: 12px -> 8px
+      STYLE a "FAQ"::after: pseudo30: 12px -> 8px
+      STYLE a "About"::after: pseudo30: 12px -> 8px
+      STYLE a "Contact"::after: pseudo30: 12px -> 8px
+      STYLE a.btn.btn-primary.btn-sm "Book a free call": whiteSpace: normal -> nowrap
+  [2] section.page-head  (497.5 -> 497.5px)  2 change(s), 2 width-only
+  [4] section#pricing.section.section-sand  (1063 -> 1063px)  1 change(s)
+      COUNT 45 -> 49 elements
+  [5] section#what-we-build.section  (1021.7 -> 1021.7px)  3 change(s)
+      STYLE span.steps-no "01": whiteSpace: normal -> nowrap
+      STYLE span.steps-no "02": whiteSpace: normal -> nowrap
+      STYLE span.steps-no "03": whiteSpace: normal -> nowrap
+  [6] section#local-work.section.section-sand  (910.3 -> 910.3px)  1 change(s)
+      COUNT 27 -> 28 elements
+  [8] section.cta-band.on-blue  (658.2 -> 658.2px)  21 change(s), 11 width-only
+      MOVE div.appt.on-paper.wide-only "   ": at 980.5,22.9 -> 904,22.9 in its parent
+      MOVE span "No. 01": at 163.7,0 -> 240.2,0 in its parent
+      STYLE div::after: pseudo27: 132.562px -> 209.078px
+      MOVE dd "Free": at 181,8 -> 257.5,8 in its parent
+      STYLE div::after: pseudo27: 70.5938px -> 147.109px
+      MOVE dd "30 minutes": at 134.6,8 -> 211.1,8 in its parent
+      STYLE div::after: pseudo27: 83.7812px -> 160.297px
+      MOVE dd "None": at 174.3,8 -> 250.9,8 in its parent
+      STYLE div::after: pseudo27: 23.9062px -> 100.422px
+      MOVE dd "A call, or in person": at 85,8 -> 161.5,8 in its parent
+  [9] footer.site-footer.on-ink  (537.8 -> 537.8px)  1 change(s)
+      COUNT 44 -> 45 elements
+web-design-gonzales__1440__light: page 5554 -> 5554px, 7 band(s) changed
+  [1] header#site-header.site-header  (72 -> 72px)  29 change(s), 19 width-only
+      STYLE a "Services"::after: pseudo30: 12px -> 8px
+      MOVE li: at 82.2,0 -> 74.2,0 in its parent
+      STYLE a "Consulting"::after: pseudo30: 12px -> 8px
+      STYLE a "Work"::after: pseudo30: 12px -> 8px
+      STYLE a "Process"::after: pseudo30: 12px -> 8px
+      STYLE a "Pricing"::after: pseudo30: 12px -> 8px
+      STYLE a "FAQ"::after: pseudo30: 12px -> 8px
+      STYLE a "About"::after: pseudo30: 12px -> 8px
+      STYLE a "Contact"::after: pseudo30: 12px -> 8px
+      STYLE a.btn.btn-primary.btn-sm "Book a free call": whiteSpace: normal -> nowrap
+  [2] section.page-head  (497.5 -> 497.5px)  2 change(s), 2 width-only
+  [4] section#pricing.section.section-sand  (1072.4 -> 1072.4px)  1 change(s)
+      COUNT 45 -> 49 elements
+  [5] section#what-we-build.section  (994.5 -> 994.5px)  3 change(s)
+      STYLE span.steps-no "01": whiteSpace: normal -> nowrap
+      STYLE span.steps-no "02": whiteSpace: normal -> nowrap
+      STYLE span.steps-no "03": whiteSpace: normal -> nowrap
+  [6] section#local-work.section.section-sand  (889.2 -> 889.2px)  1 change(s)
+      COUNT 27 -> 28 elements
+  [8] section.cta-band.on-blue  (612.4 -> 612.4px)  18 change(s), 8 width-only
+      MOVE div.appt.on-paper.wide-only "   ": at 980.5,0 -> 904,0 in its parent
+      MOVE span "No. 01": at 163.7,0 -> 240.2,0 in its parent
+      STYLE div::after: pseudo27: 132.562px -> 209.078px
+      MOVE dd "Free": at 181,8 -> 257.5,8 in its parent
+      STYLE div::after: pseudo27: 70.5938px -> 147.109px
+      MOVE dd "30 minutes": at 134.6,8 -> 211.1,8 in its parent
+      STYLE div::after: pseudo27: 83.7812px -> 160.297px
+      MOVE dd "None": at 174.3,8 -> 250.9,8 in its parent
+      STYLE div::after: pseudo27: 23.9062px -> 100.422px
+      MOVE dd "A call, or in person": at 85,8 -> 161.5,8 in its parent
+  [9] footer.site-footer.on-ink  (537.8 -> 537.8px)  1 change(s)
+      COUNT 44 -> 45 elements
+web-design-prairieville__1440__light: page 5670 -> 5716px, 7 band(s) changed
+  [1] header#site-header.site-header  (72 -> 72px)  29 change(s), 19 width-only
+      STYLE a "Services"::after: pseudo30: 12px -> 8px
+      MOVE li: at 82.2,0 -> 74.2,0 in its parent
+      STYLE a "Consulting"::after: pseudo30: 12px -> 8px
+      STYLE a "Work"::after: pseudo30: 12px -> 8px
+      STYLE a "Process"::after: pseudo30: 12px -> 8px
+      STYLE a "Pricing"::after: pseudo30: 12px -> 8px
+      STYLE a "FAQ"::after: pseudo30: 12px -> 8px
+      STYLE a "About"::after: pseudo30: 12px -> 8px
+      STYLE a "Contact"::after: pseudo30: 12px -> 8px
+      STYLE a.btn.btn-primary.btn-sm "Book a free call": whiteSpace: normal -> nowrap
+  [2] section.page-head  (497.5 -> 497.5px)  2 change(s), 2 width-only
+  [4] section#pricing.section.section-sand  (1072.4 -> 1072.4px)  1 change(s)
+      COUNT 45 -> 49 elements
+  [5] section#what-we-build.section  (1055.4 -> 1055.4px)  3 change(s)
+      STYLE span.steps-no "01": whiteSpace: normal -> nowrap
+      STYLE span.steps-no "02": whiteSpace: normal -> nowrap
+      STYLE span.steps-no "03": whiteSpace: normal -> nowrap
+  [6] section#local-work.section.section-sand  (944.5 -> 944.5px)  1 change(s)
+      COUNT 28 -> 29 elements
+  [8] section.cta-band.on-blue  (612.4 -> 658.2px)  24 change(s), 9 width-only
+      SIZE section.cta-band.on-blue " ": 1440x612.4 -> 1440x658.2
+      SIZE div.container.cta-inner "  ": 1240x300.4 -> 1240x346.2
+      SIZE div.cta-copy "    ": 892.6x293.2 -> 824x346.2
+      MOVE div.cta-copy "    ": at 0,3.6 -> 0,0 in its parent
+      SIZE h2 "Grow your Prairieville bus": 892.6x53 -> 824x106
+      MOVE p "Thirty minutes, no pitch. ": at 0,69 -> 0,122 in its parent
+      MOVE span "No. 01": at 163.7,0 -> 240.2,0 in its parent
+      STYLE div::after: pseudo27: 132.562px -> 209.078px
+      MOVE dd "Free": at 181,8 -> 257.5,8 in its parent
+      STYLE div::after: pseudo27: 70.5938px -> 147.109px
+      MOVE dd "30 minutes": at 134.6,8 -> 211.1,8 in its parent
+      STYLE div::after: pseudo27: 83.7812px -> 160.297px
+      ... 3 more
+  [9] footer.site-footer.on-ink  (537.8 -> 537.8px)  1 change(s)
+      COUNT 44 -> 45 elements
+privacy__1440__light: page 3470 -> 3470px, 2 band(s) changed
+  [1] header#site-header.site-header  (72 -> 72px)  29 change(s), 19 width-only
+      STYLE a "Services"::after: pseudo30: 12px -> 8px
+      MOVE li: at 82.2,0 -> 74.2,0 in its parent
+      STYLE a "Consulting"::after: pseudo30: 12px -> 8px
+      STYLE a "Work"::after: pseudo30: 12px -> 8px
+      STYLE a "Process"::after: pseudo30: 12px -> 8px
+      STYLE a "Pricing"::after: pseudo30: 12px -> 8px
+      STYLE a "FAQ"::after: pseudo30: 12px -> 8px
+      STYLE a "About"::after: pseudo30: 12px -> 8px
+      STYLE a "Contact"::after: pseudo30: 12px -> 8px
+      STYLE a.btn.btn-primary.btn-sm "Book a free call": whiteSpace: normal -> nowrap
+  [4] footer.site-footer.on-ink  (537.8 -> 537.8px)  1 change(s)
+      COUNT 44 -> 45 elements
+terms__1440__light: page 3650 -> 3650px, 2 band(s) changed
+  [1] header#site-header.site-header  (72 -> 72px)  29 change(s), 19 width-only
+      STYLE a "Services"::after: pseudo30: 12px -> 8px
+      MOVE li: at 82.2,0 -> 74.2,0 in its parent
+      STYLE a "Consulting"::after: pseudo30: 12px -> 8px
+      STYLE a "Work"::after: pseudo30: 12px -> 8px
+      STYLE a "Process"::after: pseudo30: 12px -> 8px
+      STYLE a "Pricing"::after: pseudo30: 12px -> 8px
+      STYLE a "FAQ"::after: pseudo30: 12px -> 8px
+      STYLE a "About"::after: pseudo30: 12px -> 8px
+      STYLE a "Contact"::after: pseudo30: 12px -> 8px
+      STYLE a.btn.btn-primary.btn-sm "Book a free call": whiteSpace: normal -> nowrap
+  [4] footer.site-footer.on-ink  (537.8 -> 537.8px)  1 change(s)
+      COUNT 44 -> 45 elements
+checkout__1440__light: page 1493 -> 1493px, 2 band(s) changed
+  [1] header#site-header.site-header  (72 -> 72px)  30 change(s), 19 width-only
+      SHOWN div.scroll-progress: shown -> hidden
+      STYLE a "Services"::after: pseudo30: 12px -> 8px
+      MOVE li: at 82.2,0 -> 74.2,0 in its parent
+      STYLE a "Consulting"::after: pseudo30: 12px -> 8px
+      STYLE a "Work"::after: pseudo30: 12px -> 8px
+      STYLE a "Process"::after: pseudo30: 12px -> 8px
+      STYLE a "Pricing"::after: pseudo30: 12px -> 8px
+      STYLE a "FAQ"::after: pseudo30: 12px -> 8px
+      STYLE a "About"::after: pseudo30: 12px -> 8px
+      STYLE a "Contact"::after: pseudo30: 12px -> 8px
+      STYLE a.btn.btn-primary.btn-sm "Book a free call": whiteSpace: normal -> nowrap
+  [4] footer.site-footer.on-ink  (537.8 -> 537.8px)  1 change(s)
+      COUNT 44 -> 45 elements
+checkout_success__1440__light: page 1635 -> 1635px, 3 band(s) changed
+  [1] header#site-header.site-header  (72 -> 72px)  30 change(s), 19 width-only
+      SHOWN div.scroll-progress: shown -> hidden
+      STYLE a "Services"::after: pseudo30: 12px -> 8px
+      MOVE li: at 82.2,0 -> 74.2,0 in its parent
+      STYLE a "Consulting"::after: pseudo30: 12px -> 8px
+      STYLE a "Work"::after: pseudo30: 12px -> 8px
+      STYLE a "Process"::after: pseudo30: 12px -> 8px
+      STYLE a "Pricing"::after: pseudo30: 12px -> 8px
+      STYLE a "FAQ"::after: pseudo30: 12px -> 8px
+      STYLE a "About"::after: pseudo30: 12px -> 8px
+      STYLE a "Contact"::after: pseudo30: 12px -> 8px
+      STYLE a.btn.btn-primary.btn-sm "Book a free call": whiteSpace: normal -> nowrap
+  [3] section#checkout-success.section.section-first  (587.8 -> 587.8px)  8 change(s)
+      STYLE span.steps-no: whiteSpace: normal -> nowrap
+      STYLE span.steps-no::before: whiteSpace: normal -> nowrap
+      STYLE span.steps-no: whiteSpace: normal -> nowrap
+      STYLE span.steps-no::before: whiteSpace: normal -> nowrap
+      STYLE span.steps-no: whiteSpace: normal -> nowrap
+      STYLE span.steps-no::before: whiteSpace: normal -> nowrap
+      STYLE span.steps-no: whiteSpace: normal -> nowrap
+      STYLE span.steps-no::before: whiteSpace: normal -> nowrap
+  [4] footer.site-footer.on-ink  (537.8 -> 537.8px)  1 change(s)
+      COUNT 44 -> 45 elements
+404.html__1440__light: page 1062 -> 1062px, 0 band(s) changed
+
+85 changed band(s) in all

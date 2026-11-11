@@ -1,0 +1,14 @@
+viewport 390x844 at 3x, CPU throttled 4x, 3 passes of 3s each way, load 8.1
+first screen (wash) | on                       frames  541  median 16.7  p95  16.8  worst   16.8  over 50ms  0  draws/s  10  kit callback p95 1.0 worst 4.6ms
+first screen (wash) | off                      frames  537  median 16.7  p95  16.8  worst   50.0  over 50ms  0  draws/s   0
+bookmark cards (ribbons) | on                  frames  496  median 16.7  p95  16.8  worst  100.0  over 50ms  7  draws/s  51  kit callback p95 4.5 worst 31.7ms
+bookmark cards (ribbons) | off                 frames  531  median 16.7  p95  16.8  worst   83.3  over 50ms  2  draws/s   0
+step folders (one ribbon strip) | on           frames  480  median 16.7  p95  16.8  worst  300.1  over 50ms  5  draws/s  26  kit callback p95 2.1 worst 11.5ms
+step folders (one ribbon strip) | off          frames  527  median 16.7  p95  16.8  worst  100.0  over 50ms  1  draws/s   0
+folder stack (no canvas) | on                  frames  538  median 16.7  p95  16.8  worst   33.3  over 50ms  0  draws/s   0
+folder stack (no canvas) | off                 frames  541  median 16.7  p95  16.8  worst   33.3  over 50ms  0  draws/s   0
+second brand (wash, ribbons, band) | on        frames  415  median 16.7  p95  50.0  worst  266.7  over 50ms 18  draws/s  38  kit callback p95 3.2 worst 18.4ms
+second brand (wash, ribbons, band) | off       frames  536  median 16.7  p95  16.8  worst   33.5  over 50ms  0  draws/s   0
+closing band (band, glints) | on               frames  514  median 16.7  p95  16.8  worst  183.3  over 50ms  2  draws/s  30  kit callback p95 3.0 worst 22.0ms
+closing band (band, glints) | off              frames  521  median 16.7  p95  16.8  worst  100.0  over 50ms  3  draws/s   0
+load after 13.6

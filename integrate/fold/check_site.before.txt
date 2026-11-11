@@ -1,0 +1,57 @@
+WARN  404.html: an inline <script> differs from the baseline (fine only for the theme/first-paint snippet; say why)
+WARN  404.html: extra stylesheet linked: /assets/css/pages/notfound.css (allowed only while pages are being built; the finished site has one stylesheet)
+WARN  about/index.html: an inline <script> differs from the baseline (fine only for the theme/first-paint snippet; say why)
+WARN  about/index.html: extra stylesheet linked: /assets/css/pages/about.css (allowed only while pages are being built; the finished site has one stylesheet)
+WARN  checkout/index.html: the first-paint <script> in the head differs from the baseline (fine if it only changes the default theme)
+WARN  checkout/index.html: extra stylesheet linked: /assets/css/pages/checkout.css (allowed only while pages are being built; the finished site has one stylesheet)
+WARN  checkout/success/index.html: the first-paint <script> in the head differs from the baseline (fine if it only changes the default theme)
+WARN  checkout/success/index.html: extra stylesheet linked: /assets/css/pages/checkout-success.css (allowed only while pages are being built; the finished site has one stylesheet)
+WARN  consulting/index.html: an inline <script> differs from the baseline (fine only for the theme/first-paint snippet; say why)
+WARN  consulting/index.html: extra stylesheet linked: /assets/css/pages/consulting.css (allowed only while pages are being built; the finished site has one stylesheet)
+WARN  contact/index.html: an inline <script> differs from the baseline (fine only for the theme/first-paint snippet; say why)
+WARN  contact/index.html: extra stylesheet linked: /assets/css/pages/contact.css (allowed only while pages are being built; the finished site has one stylesheet)
+WARN  faq/index.html: an inline <script> differs from the baseline (fine only for the theme/first-paint snippet; say why)
+WARN  faq/index.html: extra stylesheet linked: /assets/css/pages/faq.css (allowed only while pages are being built; the finished site has one stylesheet)
+WARN  index.html: an inline <script> differs from the baseline (fine only for the theme/first-paint snippet; say why)
+WARN  index.html: extra stylesheet linked: /assets/css/pages/home.css (allowed only while pages are being built; the finished site has one stylesheet)
+WARN  pricing/index.html: an inline <script> differs from the baseline (fine only for the theme/first-paint snippet; say why)
+WARN  pricing/index.html: extra stylesheet linked: /assets/css/pages/pricing.css (allowed only while pages are being built; the finished site has one stylesheet)
+WARN  privacy/index.html: an inline <script> differs from the baseline (fine only for the theme/first-paint snippet; say why)
+WARN  privacy/index.html: extra stylesheet linked: /assets/css/pages/privacy.css (allowed only while pages are being built; the finished site has one stylesheet)
+WARN  process/index.html: an inline <script> differs from the baseline (fine only for the theme/first-paint snippet; say why)
+WARN  process/index.html: extra stylesheet linked: /assets/css/pages/process.css (allowed only while pages are being built; the finished site has one stylesheet)
+WARN  services/index.html: an inline <script> differs from the baseline (fine only for the theme/first-paint snippet; say why)
+WARN  services/index.html: extra stylesheet linked: /assets/css/pages/services.css (allowed only while pages are being built; the finished site has one stylesheet)
+WARN  start/index.html: an inline <script> differs from the baseline (fine only for the theme/first-paint snippet; say why)
+WARN  start/index.html: extra stylesheet linked: /assets/css/pages/start.css (allowed only while pages are being built; the finished site has one stylesheet)
+WARN  terms/index.html: an inline <script> differs from the baseline (fine only for the theme/first-paint snippet; say why)
+WARN  terms/index.html: extra stylesheet linked: /assets/css/pages/terms.css (allowed only while pages are being built; the finished site has one stylesheet)
+WARN  web-design-baton-rouge/index.html: an inline <script> differs from the baseline (fine only for the theme/first-paint snippet; say why)
+WARN  web-design-baton-rouge/index.html: extra stylesheet linked: /assets/css/pages/city.css (allowed only while pages are being built; the finished site has one stylesheet)
+WARN  web-design-denham-springs/index.html: an inline <script> differs from the baseline (fine only for the theme/first-paint snippet; say why)
+WARN  web-design-denham-springs/index.html: extra stylesheet linked: /assets/css/pages/city.css (allowed only while pages are being built; the finished site has one stylesheet)
+WARN  web-design-gonzales/index.html: an inline <script> differs from the baseline (fine only for the theme/first-paint snippet; say why)
+WARN  web-design-gonzales/index.html: extra stylesheet linked: /assets/css/pages/city.css (allowed only while pages are being built; the finished site has one stylesheet)
+WARN  web-design-prairieville/index.html: an inline <script> differs from the baseline (fine only for the theme/first-paint snippet; say why)
+WARN  web-design-prairieville/index.html: extra stylesheet linked: /assets/css/pages/city.css (allowed only while pages are being built; the finished site has one stylesheet)
+WARN  work/index.html: an inline <script> differs from the baseline (fine only for the theme/first-paint snippet; say why)
+WARN  work/index.html: extra stylesheet linked: /assets/css/pages/work.css (allowed only while pages are being built; the finished site has one stylesheet)
+INFO  404.html: 0 of 3 baseline sentences are reworded or removed
+INFO  about/index.html: 11 of 32 baseline sentences are reworded or removed
+INFO  consulting/index.html: prices new to this page (valid elsewhere on the site): $2,000
+INFO  consulting/index.html: 44 of 90 baseline sentences are reworded or removed
+INFO  contact/index.html: 8 of 15 baseline sentences are reworded or removed
+INFO  faq/index.html: 2 of 59 baseline sentences are reworded or removed
+INFO  index.html: 17 of 40 baseline sentences are reworded or removed
+INFO  pricing/index.html: prices new to this page (valid elsewhere on the site): $125,, $300,
+INFO  pricing/index.html: 25 of 36 baseline sentences are reworded or removed
+INFO  process/index.html: 9 of 13 baseline sentences are reworded or removed
+INFO  services/index.html: 12 of 21 baseline sentences are reworded or removed
+INFO  start/index.html: 11 of 29 baseline sentences are reworded or removed
+INFO  web-design-baton-rouge/index.html: 9 of 42 baseline sentences are reworded or removed
+INFO  web-design-denham-springs/index.html: 10 of 45 baseline sentences are reworded or removed
+INFO  web-design-gonzales/index.html: 10 of 37 baseline sentences are reworded or removed
+INFO  web-design-prairieville/index.html: 9 of 45 baseline sentences are reworded or removed
+INFO  work/index.html: 9 of 13 baseline sentences are reworded or removed
+
+0 FAIL, 38 WARN, 17 INFO across 19 pages

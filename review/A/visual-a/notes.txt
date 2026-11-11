@@ -1,0 +1,151 @@
+NOTES (visual-a reviewer) - running log
+== seen OK / candidates ==
+[small-light 360, all 5 pages viewed] nothing broken. first screens OK (headline+CTA+prices). stamp overlaps ticket corner by design.
+[mobile-dark 390 consulting, services, pricing sheets 3-4 viewed] OK. 
+CAND-A pricing dark: Launch bundle receipt stays CREAM on dark sand band (light box on dark) while consulting calculator "Your estimate" receipt is dark card. check desktop-dark.
+[desktop-light 1440 home 01-12 viewed] 
+CAND-B home 1440 stop06: after timeline "4 hours a week, back" big gap ~200px sand below links before band end (y 210->394)? check. 
+CAND-C home 1440 hero: phone mock overlaps shop scene, caption "EXAMPLE / WHAT YOUR CALLER SEES" right of phone under scene. OK-ish. hero bottom: 100px gap below price strip then facts shelf cut by fold (fine).
+[desktop-light start 01-06] ok. price board subtitle "50% to start, 50% at launch." right. 
+[desktop-light pricing 01-07] 
+CAND-D pricing 1440 Care plans section head: lede (4 lines) starts ABOVE eyebrow (y557 vs 590) bottom aligned. minor.
+[desktop-light consulting 01-13]
+CAND-E consulting 1440 hero: right half EMPTY (x 840-1340) whole first screen; contents list 736px wide. hole.
+CAND-F consulting: sections "What each automation does" and "What could this be worth" have NO eyebrow; others do. minor inconsistency.
+CAND-G consulting booking mock: tick row "Reminder set for the day before" text x=538 vs numbered rows x=545 (7px misaligned). minor.
+CAND-H consulting calculator CTA "Check my real numbers / in a Growth Audit" 2-line button at 1440.
+[desktop-light services 01-05]
+CAND-I services 1440: "Care & maintenance" h2 has price tag INLINE to right of heading; "Website design & build" and "Automation" have tag BELOW heading. inconsistent.
+CAND-J services: "Growth consulting" accordion OPEN by default (x icon), all others closed. check markup (details open?).
+CAND-K services 1440: board bottom y195 -> next eyebrow y259: only 64px between board and "Build your website" (tight vs 128 elsewhere)
+[mobile-light 390 home 1-4, start 1-3, pricing 1-3 viewed]
+first screens at 390x664 OK on home/start/pricing (headline, CTA, price strip all above y=664).
+CAND-L start phone (360/390): "NO SURPRISES" stamp bottom ~4px from scalloped closing band (touching). measure.
+CAND-M home phone: tilted business card bottom ~25px from scallop of closing band. measure.
+CAND-N pricing phone: "Start the Launch bundle" button spans x26-364, other buttons 20-370 (6px inset). measure.
+[mobile-light 390 pricing 4, consulting 1-5 viewed] consulting first screen OK (h1, 2 CTAs, setups strip at y~610).
+CAND-O consulting 390 Launch bundle receipt: "Starter website, up to 5 / pages" -> "pages" orphan on 2nd line, leader shrinks to 3 dots. (consulting__mobile-light__sheet4 col3)
+CAND-P consulting 390: calculator inputs are flat on paper (no card) fine.
+[mobile-light 390 services 1-2 viewed] first screen OK (h1 4 lines, CTA y480, price strip y567, "All nine services" y598).
+CAND-Q services 390: "Compare the website packages" button is content width (281px) left aligned; every other lone button on phones is full width (Start the Launch bundle, Ask about care plans, Get a quote). check DOM/css.
+CAND-J again: Growth consulting open by default on phone too (x icon).
+TODO: re-view mobile-dark home 1-4, start 1-3, pricing 1-2 (no notes kept). Then tablet, laptop, desktop-dark, wide sheets; then breakpoints.
+[mobile-dark home 1-4 re-viewed] finished design; sand bands read; business card stays cream (on-paper, deliberate), ticket is dark card. No light box defects. OK.
+[mobile-dark start 1-3, pricing 1-2 re-viewed] OK, finished. (start dark hero fine; pricing cards fine)
+CAND-R pricing 390: is the "STANDARD 50% to start / 50% at launch" bar missing on phone? (after ticks comes "PAYMENT PLAN, SHOWN ON STARTER" directly). check DOM.
+CAND-L confirm: start 390 dark+light "NO SURPRISES" stamp bottom edge touches the closing band scallops.
+footer/closing-band issues: SKIP (being replaced).
+NEXT: tablet sheets (sheets/tablet-light/*), laptop, desktop-dark, wide.
+[tablet-light 820 home s01-s05, start s01 viewed] home tablet fine: h1 4 lines ("hours back" / "every week" short lines, acceptable), timeline vignette-left text-right OK, board 2x2 OK, business card OK.
+CAND-S start 820 stop2: 2-col price list: right column "BEYOND YOUR WEBSITE" top rule not visible / first rows not level with left col (left row y111, right y115)? crop start__tablet-light__02.png top to verify.
+CAND-S confirmed visually (crop_start_tablet_02.png): both rules present; first-row titles 4px off between the two columns (stacked pl-long row vs inline row). measure in DOM. minor.
+[tablet start s02, pricing s01-s02 viewed] start 820 board 2x2 OK; ticket 2x2 OK; stamp ~8px above scallops at 820.
+pricing 820: STANDARD bar present at 820. cards 2x2 fine. contents card w/ leaders fine.
+CAND-T pricing 1440 + 820 Add-ons "CRM & calendar sync" description ends with one-word last line "lost." (pricing__desktop-light__03.png, pricing__tablet-light__04.png). minor orphan.
+[tablet pricing s03-s04, consulting s01-s02 viewed] pricing 820 care table OK (table layout w/ buttons), receipt tilted (1 tilt) fine. consulting 820 hero OK, ledger OK, 200 fig OK, figure+legend side by side OK.
+CAND-G seen again at 820 (tick row text 7px left of numbered rows in booking mock).
+[tablet consulting s03-s04 viewed] calculator 820: 2-col fields aligned at bottom OK; receipt centred in card OK; steps OK.
+[tablet consulting s05-s06, services s01-s02 viewed] consulting bundle panel 820 OK. services 820: CAND-I confirmed at 820 too (Care & maintenance tag inline right of h2; Website design & build + Automation tag below h2 although room). CAND-J at 820 too. CAND-K: board bottom->"BUILD YOUR WEBSITE" eyebrow 49px at 820.
+tablet remaining unviewed: services s03, start s03, home s06 (footers).
+NEXT: laptop sheets.
+[laptop 1280 home s01-s05 viewed] first screen 1280x800 OK: h1, 2 CTAs, price strip y670, phone mock bottom y770 inside fold; nothing collides. Timeline, prints, ticket, board 4-across all OK.
+CAND-B at 1280: after "How each automation works" link (y~1418 in sheet) ~170px sand to band end; expected 115. measure.
+[laptop home s06, start s01-s03 viewed] start 1280x800 first screen OK (h1, CTAs, strip y628, facts shelf y733). ticket 4-across OK. 
+CAND-U start: section heads inconsistent on one page: "Nine services, one studio" + "Recent projects" have NO eyebrow; "Four steps" has eyebrow HOW IT WORKS; board has PRICING AT A GLANCE. (home's Recent projects has eyebrow SELECTED WORK + split head). minor.
+[laptop pricing s01-s04 viewed] pricing 1280x800 first screen OK (h1, CTA, contents card w/ prices, round "Fixed prices" stamp on card corner). spec table OK; how-you-pay/add-ons 2 col OK; receipt OK; care table OK.
+CAND-D at 1280: Care plans split head is bottom-aligned; 5-line lede taller than eyebrow+h2 so eyebrow sits 65px below the lede's first line (eyebrow y1044 vs lede y979 in sheet s03). minor.
+CAND-T also 1280 ("lost." orphan). Partner plan desc breaks "hands-/on work a month." at 1280 (pricing__laptop-light__04).
+[laptop consulting s01-s06 viewed] 1280x800 first screen: h1, 2 CTAs, setups strip y593, contents list begins y680. 
+CAND-E confirmed 1280: right 45% of hero (x 700-1232, y 140-1000) is blank paper; contents list capped 736px. No picture in first screen of the page that sells the automations.
+CAND-F confirmed (no eyebrow on "What each automation does" and "What could this be worth"; others WHY AUTOMATE / HOW WE WORK TOGETHER / QUESTIONS).
+CAND-H 1280 two-line button in calculator receipt.
+orphans 1280: Advisor tick "Email support, replies within 1 business / day".
+figures 3-col (title | mock | legend) OK. calculator form+receipt equal height OK. sticky left head in steps OK. bundle panel OK.
+[laptop services s01-s02 viewed] 1280x800 first screen OK (h1 2 lines, CTA, strip y561, board top y615).
+CAND-K 1280: board bottom y1080 -> eyebrow y1145 = 65px (other section gaps ~115-128). measure section paddings on services.
+CAND-I confirmed 1280: Care h2 + tag inline (same row), Website/Automation h2 then tag under.
+CAND-J confirmed 1280: Growth consulting row open (x), others +.
+unviewed laptop: services s03, start s04, home s07, pricing s05, consulting s07 (footer/closing band = accepted area).
+NEXT: desktop-dark sheets, wide sheets, then DOM measurements + breakpoint sweeps.
+[desktop-dark home s01-s03 viewed] dark hero finished (night scene, lit windows), vignettes have visible borders, prints fine. No light-box defects.
+CAND-B dark 1440: timeline band top pad 137 (band start->eyebrow), bottom: last link y1110 -> band end y1306 = 196. ~60-70px extra at the bottom. measure .timeline margin/padding.
+[desktop-dark home s04-s05, pricing s01-s02 viewed] all finished. spec table dark: Business column raised card reads; payment bars read (cream/ dark wells).
+CAND-A: pricing dark 1440: Launch bundle receipt cream on dark sand (check if .on-paper in markup => deliberate; compare calculator receipt on consulting dark).
+CAND-A DROPPED: pricing receipt has class "receipt tilt on-paper" on purpose (comment in markup). Not a defect.
+[desktop-dark pricing s03 viewed] care table dark OK, card OK.
+[desktop-dark consulting s01-s04 viewed] dark finished; phone mock on dark sand readable; ledger fine. 
+CAND-W consulting dark: calculator receipt same fill as its panel; torn edge reads as row of dots? crop_calc_receipt_dark_light.png to verify.
+orphans 1440: "…not a real / list." (lead follow-up caption), "…not a / real screen." fine.
+CAND-W: receipt in calculator is same colour as its panel in BOTH themes (crop_calc_receipt_dark_light.png); torn edge only visible via shadow; weak but consistent. low-priority minor.
+[desktop-dark consulting s05-s06 viewed] OK. Advisor/Partner at 1440: fine. Orphans: "Replies to every review within 2 business / days", "Email support, replies within 1 business / day" (1440 + 1280) in Advisor ticks.
+[desktop-dark services s01-s02 viewed] dark finished. Growth consulting open (CAND-J). CAND-I, CAND-K same in dark.
+remaining to view: desktop-dark start s01-s03; wide all; then measurements.
+[desktop-dark start s01-s02 viewed] finished. 
+CAND-X start 1440 board Commerce: "...live in 4–6 weeks, 6 / months of support." number split from unit (start__desktop-dark__04 / desktop-light__04). minor. check other widths w/ script for digit-at-line-end.
+NEXT: wide sheets.
+[wide-light 1920 home s01-s03 viewed] 1240 container centred, hero composed, nothing collides. CAND-B visible at 1920 too (~198px below last link vs ~136 top).
+[wide-light home s04-s05 viewed] OK (board, business card, closing band full-bleed).
+[wide-light start s01-s02 viewed] OK composed. CAND-X at 1920 too ("4–6 weeks, 6 / months of support.").
+CAND-Y start: sections look tighter than other pages (Recent projects band bottom ~92px; last "Four steps" band: stamp ~47px above scallops at 1920). Measure section paddings start vs home (is it section-tight on purpose?).
+[wide-light pricing s01-s02 viewed] OK. hyphen break "hands-/on work a month" in Partner plan row at 1440+1920 (pricing consulting list). Column bottoms of the two price lists uneven by 20px (minor, natural).
+CAND-D at 1920 too.
+[wide-light consulting s01, services s01 viewed]
+CAND-E confirmed 1920: consulting hero right 40% blank for whole 1080 screen; pricing puts "On this page" in a card at right instead. Decide: minor (first-screen minimum met) + top lift for page.
+CAND-Z services 1280-1920 "Website design & build" split: right column (4 accordion rows, ~220px) vs left (~400px): hole under accordion ~170px. minor.
+CAND-AA services board: bottom rules of the two columns 6px apart (left y891, right y897 in wide sheet). measure.
+[wide rest (consulting 03-11, pricing 05-07, services 03-05, start 05) viewed as half-scale grids sheets/wide_rest_1..4.png] nothing broken; same layout as 1440 in 1240 container.
+[ALL shoot.js images now viewed: rest_dark/rest_laptop/rest_tablet grids = closing bands + footers, fine, out of scope]
+NEXT: DOM measurements (scripts/measure.js) for candidates B,D,E,F,G,H,I,J,K,L,M,N,O,Q,R,S,T,X,Y,Z,AA; then breakpoint sweep sheets.
+[measure.js sections] CAND-B DROPPED (home automation band lastGap 161 vs padB 128: only ~33px extra). 
+CAND-L CONFIRM: start@390 process section lastGap=5px (stamp bottom to section end), @1440 = 50px. home@390 process stamp lastGap 35, about card 28.
+CAND-F/U CONFIRM: eyebrow NONE on start #offer + #work, consulting #how + #calculator; every other section on the 5 pages has one.
+CAND-K: services section-first padT=32 (board under hero), "Build your website" chapter starts via space-above inside same section.
+negative lastGap on faq sections = closed <details> artifact, ignore.
+[measure2.js results]
+L CONFIRMED: /start/ "NO SURPRISES" stamp bottom to closing-band scallop top: 0.9px @360, 1.4px @390, 1.3px @600, 8.7px @820, 37.5 @1280, 46.6 @1440. (#process is .section-tight; stamp hangs 24px under ticket; scallops rise 16px above band). crop crops/L_start_390_stamp.png
+M: home@390 business card bottom 15px above scallops (30.7 to band top). tight, fold into L.
+N DROPPED (bundle button = receipt width by design). R DROPPED (payplan-std hidden on phone by design).
+Q CONFIRMED: services@390 "Compare the website packages" x=20 w=281.6 h=52 parent .svc-lead.stack (not .btn-row); all other main buttons on 5 pages at 390 fill their container (350/308/302).
+G CONFIRMED: consulting booking mock: tick row text x=538.6 vs numbered rows 545.4 @1440 (77.3 vs 84 @390): 6.8px; icon 17.3 wide vs marker 24.
+H: calc CTA "Check my real numbers in a Growth Audit" 2 lines (h 64.4) at 360,390 and 980-1920; 1 line 600-820. home@390 "Full pricing, consulting and care plans" 2 lines (h 64.4).
+[measure3.js results]
+I CONFIRMED: services Care tag beside h2 (tag.y 1742 < h2.b 1788 @1440; same 820,1280); website-design + automation tag under h2.
+K: board bottom -> "Build your website" eyebrow = 41px @820, 56px @1280/1440; other two chapters open a new band (padT 90-128 + previous padB).
+Z CONFIRMED: services build split: lead h=421, accordion h=240 -> 181px hole under accordion @1280/1440.
+AA: service menu columns: last row bottoms 967.1 vs 973.3 @1440 (6.2px), 950.5 vs 956.7 @1280.
+D CONFIRMED: pricing #care head align-items:end -> lede top 40px ABOVE eyebrow @1440, 72px above @1280; #consulting head on same page align-items:start (lede top = eyebrow top).
+E: consulting hero no aside; toc 736px wide, 448px empty right @1280, 504 @1440/1920; toc top y=671 @1280x800.
+S: start #offer two lists 760-1279: left first row pl-long stacked, right inline: name tops 4px apart, descriptions 24px apart; aligned at 1280. trivial.
+O: consulting@390 receipt row1 h=64.5 (2 lines) dots 16px.
+NEXT: view crops L,G,O; orphan/wrap script across widths; breakpoint sweep sheets.
+[wraps.js -> wraps.txt, 11 widths 360..1920] NO h1/h2 orphan or broken headline on any of the 5 pages. Only: h3 "Custom automation / workflow" pricing @360,390,760,820; "Lead follow-up / system" consulting @360,1100.
+BTN-2LINE: consulting "Check my real numbers / in a Growth Audit" @360,390,430,980-1920; home "Full pricing, consulting / and care plans" @360,390.
+number/unit splits in objects: consulting receipt "up to 5 / pages" @390 (crop crops/O_consulting_390_receipt.png, 4-dot leader); start board "4–6 weeks, 6 / months of support." @1440,1920 (seen in start__desktop-light__04.png); pricing care card link "10 / days' written notice" @390,760,1280,1440,1920. rest = running copy, natural.
+crops/_LGO.png viewed: L stamp sits ON the scallops @390 (confirmed), G tick row 7px left (confirmed), O receipt orphan (confirmed).
+NEXT: breakpoints capture (scripts/bp.js) + overlap sweep (scripts/overlaps.js).
+[bpsheets/_first_600_a/b viewed: home,start,pricing,consulting first screens at 580/600/620] fine except:
+CAND-BB consulting @600 exactly: hero btn-row wraps: two buttons stacked at CONTENT width (277 + 257 > 540 inner) whereas 580 = full-width stack, 620 = side by side. find exact range with script. trivial/minor.
+[bpsheets/_first_760_a, _first_980_a viewed (home+start 740/760/780, 960/980/1000)] OK. home hero at 980: phone 43px right of secondary button (no overlap); caption wraps to 3 short lines beside phone at 980/1000 (tight but clean).
+[bpsheets _first_980_b, _first_1100_a, _first_1100_b, _first_1280_a viewed] all first screens OK at 960-1300 for home/start/pricing/consulting. Home hero 1080-1300: phone clear of buttons, caption fits. Pricing: contents card + stamp fine. Consulting 1000-1120: right ~40% of first screen blank (CAND-E), toc capped.
+Remaining to view: _first_760_b, _first_1280_b, _first_services_a/b, then section sheets at switching widths.
+[bpsheets _first_services_a/b viewed] services first screens 580..1300 OK. Service menu board is ONE column until 1279 and two columns from 1280 (1260 one col w/ ~1100px leaders; fine).
+NEXT: section sheets: pricing spec 760/1100, pricing care 760, home pricing 760/1100, consulting ledger 760/980, calculator 980, how 760/980, start offer/pricing/process 760/1100, services build/win 760/980.
+[bpsheets 760__pricing__spec, 1100__pricing__spec viewed] 740: 1 col cards; 760/780: 2x2 cards OK; 1080: 2x2 cards; 1100/1120: one spec table. At 1100 exactly Commerce head note wraps to 3 lines ("Or $4,000 down, / then about / $1,333/mo for 3 months") vs 2 in other columns; buttons tight. check with overlaps.js (text clipped/overflowing its box) across 360..1920 step 20.
+[overlaps.js -> overlaps.txt: 79 widths 360..1920 step 20, 5 pages, light] No real text-on-text overlap, no object (phone/stamp) over text, no text leaving a button/pill/cell. All 54 hits are false positives: tight headline leading (line boxes), visually-hidden table headers in stacked tables, spec-price placed by grid in card mode, big "4" numeral line box. (verify hidden th at 1000px below)
+[crops/_spec.png viewed] spec cards at 380 and 1000 are clean: overlap hits = clipped thead (false positive). Spec table 1100-1279: buttons drop to 15px/8px padding on purpose; Commerce note 3 lines only 1100-1119 (not reported).
+NEXT view: 760__pricing__care, 760/980__consulting__ledger, 980__consulting__calculator, 760/1100__home__pricing, 980__home__automation, 760__start__offer, 1100__start__process, 980__services__build/win, 600__consulting__bundle.
+[bp section captures: first run had un-revealed (blank) blocks = capture artifact; bp2 forced opacity; bp3 adds .visible to every .reveal so bars/seq show]
+[_sec_A viewed (bp2): pricing care 740 stacked OK; 760/780 table: "What you get" column only ~170px -> 6-7 line cells, cramped but clean; consulting ledger 740 stacked OK, 760/780 table OK (bars missing = artifact, recheck in bp3)]
+[_ledger760_crop (bp3) viewed: ledger bars present at 740/760/780 - earlier absence was artifact] [_sec_B viewed: consulting ledger + calculator at 960/980/1000 OK: split head 3-line h2, calculator stacked w/ centred receipt, field rows bottom-aligned]
+[_sec_C viewed: home price board 740 (1 col), 760/780 (2x2), 1080 (2x2), 1100/1120 (4 across)] OK except:
+CAND-CC home board 4-across at 1100/1120: plan note wraps 2 lines in One-page but 3 lines in the other three columns -> the description under it starts 20px lower in 3 of 4 columns (uneven row). measure range.
+CAND-CC CONFIRMED (chk3.js): home + start price board, 4-across, 1100-1179px: .tier-plan is 45px (2 lines) in One-page, 68px (3 lines) in Starter/Business/Commerce -> description top 22px lower in 3 of 4 columns (home 6504 vs 6526 @1100). Level from 1180. minor.
+[_sec_E viewed: start offer 740/760/780 + process ticket 1080/1100/1120 and 740/760/780] OK. L visible again: stamp on/near scallops at 740-780.
+[_sec_F viewed: services build + win at 960/980/1000] OK. 960: accordion capped ~46rem under lead (blank right, fine). 980+: split; hole under accordion (CAND-Z) visible at 980/1000 too (lead 320px tall vs accordion 165px).
+[_sec_G viewed: home automation 960/980/1000, consulting bundle 580/600/620, home process 960/980/1000] all OK.
+BREAKPOINT REVIEW DONE. Remaining: (b) first screen at 390x664 + sticky bar, (c) anchors under sticky header, (e) image sharpness/aspect. Then write up.
+[chk4.js] First screen: 390x664 all five pages have h1 + primary button + price above the fold (home strip bottom 648, start 623, consulting 652, services 610, pricing btn 493 + contents card). 1280x800 all OK (strip bottoms 583-692). 360x640: home price strip bottom 659 (>640 by 19px: second line "Four fixed packages" cut), not in required sizes. Sticky phone bar hidden at top (translateY 76px), shows after scroll (69px, solid bg). In-page anchors: none land under the sticky header (390 + 1440). Images: only 3 project jpgs on home/start, 1200x600/630 shown at 364x205 (desktop) / 117x66 (phone rows): sharp, cover-cropped ~6% sides, never stretched; oversized for phone thumbnails (perf, not my dimension).
+[chk5/chk6 audits] radii/shadows/type identical per component across the 5 pages and both themes (card 22, ticket/print/bizcard 14, receipt 4, board/panel 32, btn 14, h2 50px@1440, lede 21px). Only inconsistency = missing eyebrows (start #offer #work; consulting #how #calculator) + services tag placement + pricing #care head alignment (styles.css:232 align-items:end; :1380 override only for #consulting).
+READY TO WRITE UP.
+[wk.js] WebKit and Firefox engines not installed -> could not check Safari rendering.
+FINAL: 0 blockers, 1 major (VA-01 start stamp on scallops), 10 minors (VA-02..VA-11). Scores: home 90, start 87, pricing 91, consulting 85, services 84.

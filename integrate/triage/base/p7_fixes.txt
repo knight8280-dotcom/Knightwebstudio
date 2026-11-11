@@ -1,0 +1,76 @@
+NOW           /pricing/ | two-line button at: 1100,1100s,1110,1110s,1120,1120s,1130,1130s,1140,1140s,1280,1280s,1290,1290s | worst overflow px: 0 | header taller than 72 at: never
+FIX           /pricing/ | two-line button at: never | worst overflow px: 0 | header taller than 72 at: never
+FIX           / | two-line button at: never | worst overflow px: 0 | header taller than 72 at: never
+NOW + spacing /pricing/ | two-line button at: 1100,1100s,1110,1110s,1120,1120s,1130,1130s,1140,1140s,1150,1150s,1160,1160s,1170,1170s,1180,1180s,1190,1190s,1200,1200s,1210,1210s,1220,1220s,1230,1230s,1240,1240s,1250,1250s,1260,1260s,1270,1270s,1280,1280s,1290,1290s,1300,1300s,1310,1310s,1320,1320s,1330,1330s,1340,1340s,1350,1350s,1360,1360s,1370,1370s,1380,1380s,1390,1390s,1400,1400s | worst overflow px: 114 | header taller than 72 at: 1100:hdr108,1100s:hdr108,1110:hdr108,1110s:hdr108,1120:hdr108,1120s:hdr108,1130:hdr108,1130s:hdr108,1140:hdr108,1140s:hdr108,1150:hdr108,1150s:hdr108,1160:hdr108,1160s:hdr108,1170:hdr108,1170s:hdr108,1180:hdr108,1180s:hdr108,1190:hdr108,1190s:hdr108,1200:hdr108,1200s:hdr108,1210:hdr108,1210s:hdr108,1220:hdr108,1220s:hdr108,1230:hdr86,1230s:hdr86,1240:hdr86,1240s:hdr86,1280:hdr108,1280s:hdr108,1290:hdr108,1290s:hdr108,1300:hdr108,1300s:hdr108,1310:hdr108,1310s:hdr108,1320:hdr108,1320s:hdr108,1330:hdr108,1330s:hdr108,1340:hdr108,1340s:hdr108,1350:hdr108,1350s:hdr108,1360:hdr108,1360s:hdr108,1370:hdr108,1370s:hdr108,1380:hdr108,1380s:hdr108,1390:hdr108,1390s:hdr108,1400:hdr108,1400s:hdr108
+FIX + spacing /pricing/ | two-line button at: never | worst overflow px: 149 | header taller than 72 at: never
+FIX+wrap+spc  /pricing/ | two-line button at: never | worst overflow px: 0 | header taller than 72 at: 1100:hdr92,1100s:hdr92,1110:hdr92,1110s:hdr92,1120:hdr92,1120s:hdr92,1130:hdr92,1130s:hdr92,1140:hdr92,1140s:hdr92,1150:hdr92,1150s:hdr92,1160:hdr92,1160s:hdr92,1170:hdr92,1170s:hdr92,1180:hdr92,1180s:hdr92,1190:hdr92,1190s:hdr92,1200:hdr92,1200s:hdr92,1210:hdr92,1210s:hdr92,1220:hdr92,1220s:hdr92,1230:hdr92,1230s:hdr92,1240:hdr92,1240s:hdr92,1280:hdr92,1280s:hdr92,1290:hdr92,1290s:hdr92,1300:hdr92,1300s:hdr92,1310:hdr92,1310s:hdr92,1320:hdr92,1320s:hdr92,1330:hdr92,1330s:hdr92,1340:hdr92,1340s:hdr92,1350:hdr92,1350s:hdr92,1360:hdr92,1360s:hdr92,1370:hdr92,1370s:hdr92,1380:hdr92,1380s:hdr92,1390:hdr92,1390s:hdr92,1400:hdr92,1400s:hdr92
+FIX+wrap      /pricing/ | two-line button at: never | worst overflow px: 0 | header taller than 72 at: never
+FIX+wrap 125% /pricing/ | two-line button at: never | worst overflow px: 0 | header taller than 72 at: 1100:hdr98,1100s:hdr98,1110:hdr98,1110s:hdr98,1120:hdr98,1120s:hdr98,1130:hdr98,1130s:hdr98,1140:hdr98,1140s:hdr98,1150:hdr98,1150s:hdr98,1160:hdr98,1160s:hdr98,1170:hdr98,1170s:hdr98,1180:hdr98,1180s:hdr98,1190:hdr98,1190s:hdr98,1200:hdr98,1200s:hdr98,1210:hdr98,1210s:hdr98,1220:hdr98,1220s:hdr98,1230:hdr98,1230s:hdr98,1240:hdr98,1240s:hdr98,1250:hdr98,1250s:hdr98,1280:hdr98,1280s:hdr98,1290:hdr98,1290s:hdr98,1300:hdr98,1300s:hdr98,1310:hdr98,1310s:hdr98,1320:hdr98,1320s:hdr98,1330:hdr98,1330s:hdr98,1340:hdr98,1340s:hdr98,1350:hdr98,1350s:hdr98,1360:hdr98,1360s:hdr98,1370:hdr98,1370s:hdr98,1380:hdr98,1380s:hdr98,1390:hdr98,1390s:hdr98,1400:hdr98,1400s:hdr98
+current item underline vs its text (left,right deltas): {"padL":"8px","afterLeft":"8px","afterRight":"8px","w":63}
+
+price strip NOW 
+  /@380 over13 rows1 linkW340 h79
+  /@390 over3 rows1 linkW350 h79
+  /@1280 over-201 rows1 linkW646 h44
+  /web-design-baton-rouge/@380 over13 rows1 linkW340 h79
+  /web-design-baton-rouge/@390 over3 rows1 linkW350 h79
+  /web-design-baton-rouge/@1280 over-108 rows1 linkW554 h53
+  /start/@380 over13 rows1 linkW340 h79
+  /start/@390 over3 rows1 linkW350 h79
+  /start/@1280 over-246 rows1 linkW691 h44
+  /consulting/@390 over-57 rows1 linkW350 h53
+  /consulting/@1280 over-891 rows1 linkW1184 h44
+
+price strip FIX 
+  /@390 over-33 rows1 linkW350 h79
+  /@1280 over-213 rows1 linkW602 h44
+  /web-design-baton-rouge/@390 over-33 rows1 linkW350 h79
+  /web-design-baton-rouge/@1280 over-120 rows1 linkW554 h53
+  /start/@390 over-33 rows1 linkW350 h79
+  /start/@1280 over-258 rows1 linkW602 h44
+  /consulting/@390 over-85 rows1 linkW350 h53
+  /consulting/@1280 over-903 rows1 linkW468 h44
+
+price strip FIX + WCAG spacing 
+  /@360 over-76 rows2 linkW320 h110
+  /@380 over-58 rows2 linkW340 h119
+  /@390 over-68 rows2 linkW350 h119
+  /@393 over-71 rows2 linkW353 h119
+  /@1280 over-158 rows1 linkW646 h59
+  /web-design-baton-rouge/@360 over-76 rows2 linkW320 h110
+  /web-design-baton-rouge/@380 over-58 rows2 linkW340 h119
+  /web-design-baton-rouge/@390 over-68 rows2 linkW350 h119
+  /web-design-baton-rouge/@393 over-71 rows2 linkW353 h119
+  /web-design-baton-rouge/@1280 over-66 rows1 linkW554 h59
+  /start/@360 over-76 rows2 linkW320 h110
+  /start/@380 over-58 rows2 linkW340 h119
+  /start/@390 over-68 rows2 linkW350 h119
+  /start/@393 over-71 rows2 linkW353 h119
+  /start/@1280 over-203 rows1 linkW691 h59
+  /consulting/@390 over-53 rows1 linkW350 h59
+  /consulting/@1280 over-871 rows1 linkW546 h44
+
+price strip NOW + WCAG spacing 
+  /@360 over9 rows1 linkW320 h82
+  /@380 over68 rows1 linkW340 h87
+  /@390 over58 rows1 linkW350 h87
+  /@393 over55 rows1 linkW353 h87
+  /@430 over21 rows1 linkW387 h87
+  /@1280 over-146 rows1 linkW646 h59
+  /web-design-baton-rouge/@360 over9 rows1 linkW320 h82
+  /web-design-baton-rouge/@380 over68 rows1 linkW340 h87
+  /web-design-baton-rouge/@390 over58 rows1 linkW350 h87
+  /web-design-baton-rouge/@393 over55 rows1 linkW353 h87
+  /web-design-baton-rouge/@430 over21 rows1 linkW387 h87
+  /web-design-baton-rouge/@1280 over-54 rows1 linkW554 h59
+  /start/@360 over9 rows1 linkW320 h82
+  /start/@380 over68 rows1 linkW340 h87
+  /start/@390 over58 rows1 linkW350 h87
+  /start/@393 over55 rows1 linkW353 h87
+  /start/@430 over21 rows1 linkW387 h87
+  /start/@1280 over-191 rows1 linkW691 h59
+  /consulting/@390 over-25 rows1 linkW350 h59
+  /consulting/@1280 over-859 rows1 linkW1184 h44
+
+print hover with translate: 0px -4px
+btn :hover:active transform: matrix(1, 0, 0, 1, 0, 1)

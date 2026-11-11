@@ -1,0 +1,820 @@
+{
+ "new": {
+  "/": {
+   "http": 200,
+   "reqs": [
+    "GET https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js",
+    "  -> 200"
+   ],
+   "cons": [
+    "Ignoring Event: localhost"
+   ],
+   "st": {
+    "fn": "function",
+    "hasMain": true,
+    "tags": [
+     "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js async"
+    ],
+    "stubQ": null
+   },
+   "third": [
+    "plausible.io",
+    "knightwebstudio-checkout.onrender.com"
+   ]
+  },
+  "/services/": {
+   "http": 200,
+   "reqs": [
+    "GET https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js",
+    "  -> 200"
+   ],
+   "cons": [
+    "Ignoring Event: localhost"
+   ],
+   "st": {
+    "fn": "function",
+    "hasMain": true,
+    "tags": [
+     "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js async"
+    ],
+    "stubQ": null
+   },
+   "third": [
+    "plausible.io"
+   ]
+  },
+  "/consulting/": {
+   "http": 200,
+   "reqs": [
+    "GET https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js",
+    "  -> 200"
+   ],
+   "cons": [
+    "Ignoring Event: localhost"
+   ],
+   "st": {
+    "fn": "function",
+    "hasMain": true,
+    "tags": [
+     "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js async"
+    ],
+    "stubQ": null
+   },
+   "third": [
+    "plausible.io"
+   ]
+  },
+  "/work/": {
+   "http": 200,
+   "reqs": [
+    "GET https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js",
+    "  -> 200"
+   ],
+   "cons": [
+    "Ignoring Event: localhost"
+   ],
+   "st": {
+    "fn": "function",
+    "hasMain": true,
+    "tags": [
+     "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js async"
+    ],
+    "stubQ": null
+   },
+   "third": [
+    "plausible.io"
+   ]
+  },
+  "/process/": {
+   "http": 200,
+   "reqs": [
+    "GET https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js",
+    "  -> 200"
+   ],
+   "cons": [
+    "Ignoring Event: localhost"
+   ],
+   "st": {
+    "fn": "function",
+    "hasMain": true,
+    "tags": [
+     "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js async"
+    ],
+    "stubQ": null
+   },
+   "third": [
+    "plausible.io"
+   ]
+  },
+  "/pricing/": {
+   "http": 200,
+   "reqs": [
+    "GET https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js",
+    "  -> 200"
+   ],
+   "cons": [
+    "Ignoring Event: localhost"
+   ],
+   "st": {
+    "fn": "function",
+    "hasMain": true,
+    "tags": [
+     "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js async"
+    ],
+    "stubQ": null
+   },
+   "third": [
+    "plausible.io",
+    "knightwebstudio-checkout.onrender.com"
+   ]
+  },
+  "/faq/": {
+   "http": 200,
+   "reqs": [
+    "GET https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js",
+    "  -> 200"
+   ],
+   "cons": [
+    "Ignoring Event: localhost"
+   ],
+   "st": {
+    "fn": "function",
+    "hasMain": true,
+    "tags": [
+     "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js async"
+    ],
+    "stubQ": null
+   },
+   "third": [
+    "plausible.io"
+   ]
+  },
+  "/contact/": {
+   "http": 200,
+   "reqs": [
+    "GET https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js",
+    "  -> 200"
+   ],
+   "cons": [
+    "Ignoring Event: localhost"
+   ],
+   "st": {
+    "fn": "function",
+    "hasMain": true,
+    "tags": [
+     "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js async"
+    ],
+    "stubQ": null
+   },
+   "third": [
+    "plausible.io"
+   ]
+  },
+  "/about/": {
+   "http": 200,
+   "reqs": [
+    "GET https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js",
+    "  -> 200"
+   ],
+   "cons": [
+    "Ignoring Event: localhost"
+   ],
+   "st": {
+    "fn": "function",
+    "hasMain": true,
+    "tags": [
+     "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js async"
+    ],
+    "stubQ": null
+   },
+   "third": [
+    "plausible.io"
+   ]
+  },
+  "/start/": {
+   "http": 200,
+   "reqs": [
+    "GET https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js",
+    "  -> 200"
+   ],
+   "cons": [
+    "Ignoring Event: localhost"
+   ],
+   "st": {
+    "fn": "function",
+    "hasMain": true,
+    "tags": [
+     "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js async"
+    ],
+    "stubQ": null
+   },
+   "third": [
+    "plausible.io"
+   ]
+  },
+  "/web-design-baton-rouge/": {
+   "http": 200,
+   "reqs": [
+    "GET https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js",
+    "  -> 200"
+   ],
+   "cons": [
+    "Ignoring Event: localhost"
+   ],
+   "st": {
+    "fn": "function",
+    "hasMain": true,
+    "tags": [
+     "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js async"
+    ],
+    "stubQ": null
+   },
+   "third": [
+    "plausible.io"
+   ]
+  },
+  "/web-design-denham-springs/": {
+   "http": 200,
+   "reqs": [
+    "GET https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js",
+    "  -> 200"
+   ],
+   "cons": [
+    "Ignoring Event: localhost"
+   ],
+   "st": {
+    "fn": "function",
+    "hasMain": true,
+    "tags": [
+     "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js async"
+    ],
+    "stubQ": null
+   },
+   "third": [
+    "plausible.io"
+   ]
+  },
+  "/web-design-gonzales/": {
+   "http": 200,
+   "reqs": [
+    "GET https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js",
+    "  -> 200"
+   ],
+   "cons": [
+    "Ignoring Event: localhost"
+   ],
+   "st": {
+    "fn": "function",
+    "hasMain": true,
+    "tags": [
+     "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js async"
+    ],
+    "stubQ": null
+   },
+   "third": [
+    "plausible.io"
+   ]
+  },
+  "/web-design-prairieville/": {
+   "http": 200,
+   "reqs": [
+    "GET https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js",
+    "  -> 200"
+   ],
+   "cons": [
+    "Ignoring Event: localhost"
+   ],
+   "st": {
+    "fn": "function",
+    "hasMain": true,
+    "tags": [
+     "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js async"
+    ],
+    "stubQ": null
+   },
+   "third": [
+    "plausible.io"
+   ]
+  },
+  "/privacy/": {
+   "http": 200,
+   "reqs": [
+    "GET https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js",
+    "  -> 200"
+   ],
+   "cons": [
+    "Ignoring Event: localhost"
+   ],
+   "st": {
+    "fn": "function",
+    "hasMain": true,
+    "tags": [
+     "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js async"
+    ],
+    "stubQ": null
+   },
+   "third": [
+    "plausible.io"
+   ]
+  },
+  "/terms/": {
+   "http": 200,
+   "reqs": [
+    "GET https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js",
+    "  -> 200"
+   ],
+   "cons": [
+    "Ignoring Event: localhost"
+   ],
+   "st": {
+    "fn": "function",
+    "hasMain": true,
+    "tags": [
+     "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js async"
+    ],
+    "stubQ": null
+   },
+   "third": [
+    "plausible.io"
+   ]
+  },
+  "/checkout/": {
+   "http": 200,
+   "reqs": [
+    "GET https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js",
+    "  -> 200"
+   ],
+   "cons": [
+    "Ignoring Event: localhost"
+   ],
+   "st": {
+    "fn": "function",
+    "hasMain": true,
+    "tags": [
+     "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js async"
+    ],
+    "stubQ": null
+   },
+   "third": [
+    "js.stripe.com",
+    "plausible.io"
+   ]
+  },
+  "/checkout/success/": {
+   "http": 200,
+   "reqs": [
+    "GET https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js",
+    "  -> 200"
+   ],
+   "cons": [
+    "Ignoring Event: localhost"
+   ],
+   "st": {
+    "fn": "function",
+    "hasMain": true,
+    "tags": [
+     "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js async"
+    ],
+    "stubQ": null
+   },
+   "third": [
+    "plausible.io"
+   ]
+  },
+  "/404.html": {
+   "http": 200,
+   "reqs": [],
+   "cons": [],
+   "st": {
+    "fn": "undefined",
+    "hasMain": false,
+    "tags": [],
+    "stubQ": null
+   },
+   "third": []
+  },
+  "/no/such/deep/path/": {
+   "http": 404,
+   "reqs": [],
+   "cons": [],
+   "st": {
+    "fn": "undefined",
+    "hasMain": false,
+    "tags": [],
+    "stubQ": null
+   },
+   "third": []
+  }
+ },
+ "baseline": {
+  "/": {
+   "http": 200,
+   "reqs": [
+    "GET https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js",
+    "  -> 200"
+   ],
+   "cons": [
+    "Ignoring Event: localhost"
+   ],
+   "st": {
+    "fn": "function",
+    "hasMain": true,
+    "tags": [
+     "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js async"
+    ],
+    "stubQ": null
+   },
+   "third": [
+    "plausible.io",
+    "knightwebstudio-checkout.onrender.com"
+   ]
+  },
+  "/services/": {
+   "http": 200,
+   "reqs": [
+    "GET https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js",
+    "  -> 200"
+   ],
+   "cons": [
+    "Ignoring Event: localhost"
+   ],
+   "st": {
+    "fn": "function",
+    "hasMain": true,
+    "tags": [
+     "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js async"
+    ],
+    "stubQ": null
+   },
+   "third": [
+    "plausible.io"
+   ]
+  },
+  "/consulting/": {
+   "http": 200,
+   "reqs": [
+    "GET https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js",
+    "  -> 200"
+   ],
+   "cons": [
+    "Ignoring Event: localhost"
+   ],
+   "st": {
+    "fn": "function",
+    "hasMain": true,
+    "tags": [
+     "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js async"
+    ],
+    "stubQ": null
+   },
+   "third": [
+    "plausible.io"
+   ]
+  },
+  "/work/": {
+   "http": 200,
+   "reqs": [
+    "GET https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js",
+    "  -> 200"
+   ],
+   "cons": [
+    "Ignoring Event: localhost"
+   ],
+   "st": {
+    "fn": "function",
+    "hasMain": true,
+    "tags": [
+     "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js async"
+    ],
+    "stubQ": null
+   },
+   "third": [
+    "plausible.io"
+   ]
+  },
+  "/process/": {
+   "http": 200,
+   "reqs": [
+    "GET https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js",
+    "  -> 200"
+   ],
+   "cons": [
+    "Ignoring Event: localhost"
+   ],
+   "st": {
+    "fn": "function",
+    "hasMain": true,
+    "tags": [
+     "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js async"
+    ],
+    "stubQ": null
+   },
+   "third": [
+    "plausible.io"
+   ]
+  },
+  "/pricing/": {
+   "http": 200,
+   "reqs": [
+    "GET https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js",
+    "  -> 200"
+   ],
+   "cons": [
+    "Ignoring Event: localhost"
+   ],
+   "st": {
+    "fn": "function",
+    "hasMain": true,
+    "tags": [
+     "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js async"
+    ],
+    "stubQ": null
+   },
+   "third": [
+    "plausible.io",
+    "knightwebstudio-checkout.onrender.com"
+   ]
+  },
+  "/faq/": {
+   "http": 200,
+   "reqs": [
+    "GET https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js",
+    "  -> 200"
+   ],
+   "cons": [
+    "Ignoring Event: localhost"
+   ],
+   "st": {
+    "fn": "function",
+    "hasMain": true,
+    "tags": [
+     "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js async"
+    ],
+    "stubQ": null
+   },
+   "third": [
+    "plausible.io"
+   ]
+  },
+  "/contact/": {
+   "http": 200,
+   "reqs": [
+    "GET https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js",
+    "  -> 200"
+   ],
+   "cons": [
+    "Ignoring Event: localhost"
+   ],
+   "st": {
+    "fn": "function",
+    "hasMain": true,
+    "tags": [
+     "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js async"
+    ],
+    "stubQ": null
+   },
+   "third": [
+    "plausible.io",
+    "js.hcaptcha.com",
+    "556da478c931.w.hcaptcha.com",
+    "newassets.hcaptcha.com",
+    "0872c2e106b6.w.hcaptcha.com"
+   ]
+  },
+  "/about/": {
+   "http": 200,
+   "reqs": [
+    "GET https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js",
+    "  -> 200"
+   ],
+   "cons": [
+    "Ignoring Event: localhost"
+   ],
+   "st": {
+    "fn": "function",
+    "hasMain": true,
+    "tags": [
+     "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js async"
+    ],
+    "stubQ": null
+   },
+   "third": [
+    "plausible.io"
+   ]
+  },
+  "/start/": {
+   "http": 200,
+   "reqs": [
+    "GET https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js",
+    "  -> 200"
+   ],
+   "cons": [
+    "Ignoring Event: localhost"
+   ],
+   "st": {
+    "fn": "function",
+    "hasMain": true,
+    "tags": [
+     "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js async"
+    ],
+    "stubQ": null
+   },
+   "third": [
+    "plausible.io"
+   ]
+  },
+  "/web-design-baton-rouge/": {
+   "http": 200,
+   "reqs": [
+    "GET https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js",
+    "  -> 200"
+   ],
+   "cons": [
+    "Ignoring Event: localhost"
+   ],
+   "st": {
+    "fn": "function",
+    "hasMain": true,
+    "tags": [
+     "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js async"
+    ],
+    "stubQ": null
+   },
+   "third": [
+    "plausible.io"
+   ]
+  },
+  "/web-design-denham-springs/": {
+   "http": 200,
+   "reqs": [
+    "GET https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js",
+    "  -> 200"
+   ],
+   "cons": [
+    "Ignoring Event: localhost"
+   ],
+   "st": {
+    "fn": "function",
+    "hasMain": true,
+    "tags": [
+     "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js async"
+    ],
+    "stubQ": null
+   },
+   "third": [
+    "plausible.io"
+   ]
+  },
+  "/web-design-gonzales/": {
+   "http": 200,
+   "reqs": [
+    "GET https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js",
+    "  -> 200"
+   ],
+   "cons": [
+    "Ignoring Event: localhost"
+   ],
+   "st": {
+    "fn": "function",
+    "hasMain": true,
+    "tags": [
+     "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js async"
+    ],
+    "stubQ": null
+   },
+   "third": [
+    "plausible.io"
+   ]
+  },
+  "/web-design-prairieville/": {
+   "http": 200,
+   "reqs": [
+    "GET https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js",
+    "  -> 200"
+   ],
+   "cons": [
+    "Ignoring Event: localhost"
+   ],
+   "st": {
+    "fn": "function",
+    "hasMain": true,
+    "tags": [
+     "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js async"
+    ],
+    "stubQ": null
+   },
+   "third": [
+    "plausible.io"
+   ]
+  },
+  "/privacy/": {
+   "http": 200,
+   "reqs": [
+    "GET https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js",
+    "  -> 200"
+   ],
+   "cons": [
+    "Ignoring Event: localhost"
+   ],
+   "st": {
+    "fn": "function",
+    "hasMain": true,
+    "tags": [
+     "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js async"
+    ],
+    "stubQ": null
+   },
+   "third": [
+    "plausible.io"
+   ]
+  },
+  "/terms/": {
+   "http": 200,
+   "reqs": [
+    "GET https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js",
+    "  -> 200"
+   ],
+   "cons": [
+    "Ignoring Event: localhost"
+   ],
+   "st": {
+    "fn": "function",
+    "hasMain": true,
+    "tags": [
+     "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js async"
+    ],
+    "stubQ": null
+   },
+   "third": [
+    "plausible.io"
+   ]
+  },
+  "/checkout/": {
+   "http": 200,
+   "reqs": [
+    "GET https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js",
+    "  -> 200"
+   ],
+   "cons": [
+    "Ignoring Event: localhost"
+   ],
+   "st": {
+    "fn": "function",
+    "hasMain": true,
+    "tags": [
+     "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js async"
+    ],
+    "stubQ": null
+   },
+   "third": [
+    "js.stripe.com",
+    "plausible.io"
+   ]
+  },
+  "/checkout/success/": {
+   "http": 200,
+   "reqs": [
+    "GET https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js",
+    "  -> 200"
+   ],
+   "cons": [
+    "Ignoring Event: localhost"
+   ],
+   "st": {
+    "fn": "function",
+    "hasMain": true,
+    "tags": [
+     "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js async"
+    ],
+    "stubQ": null
+   },
+   "third": [
+    "plausible.io"
+   ]
+  },
+  "/404.html": {
+   "http": 200,
+   "reqs": [],
+   "cons": [],
+   "st": {
+    "fn": "undefined",
+    "hasMain": false,
+    "tags": [],
+    "stubQ": null
+   },
+   "third": []
+  },
+  "/no/such/deep/path/": {
+   "http": 404,
+   "reqs": [],
+   "cons": [],
+   "st": {
+    "fn": "undefined",
+    "hasMain": false,
+    "tags": [],
+    "stubQ": null
+   },
+   "third": []
+  }
+ }
+}

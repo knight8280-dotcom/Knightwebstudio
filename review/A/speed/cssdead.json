@@ -1,0 +1,205 @@
+{
+ "total": 1265,
+ "dead": [
+  {
+   "s": ".help",
+   "q": ".help",
+   "m": false,
+   "err": null,
+   "ctx": "",
+   "pages": []
+  },
+  {
+   "s": ".section:not(.section-sand) + .section:not(.section-sand)",
+   "q": ".section:not(.section-sand) + .section:not(.section-sand)",
+   "m": false,
+   "err": null,
+   "ctx": "",
+   "pages": []
+  },
+  {
+   "s": ".section-sand + .section-sand",
+   "q": ".section-sand + .section-sand",
+   "m": false,
+   "err": null,
+   "ctx": "",
+   "pages": []
+  },
+  {
+   "s": ".grid-4",
+   "q": ".grid-4",
+   "m": false,
+   "err": null,
+   "ctx": "(min-width: 760px)",
+   "pages": []
+  },
+  {
+   "s": ".grid-4",
+   "q": ".grid-4",
+   "m": false,
+   "err": null,
+   "ctx": "(min-width: 1100px)",
+   "pages": []
+  },
+  {
+   "s": ".chip :active + span",
+   "q": ".chip  + span",
+   "m": false,
+   "err": null,
+   "ctx": "",
+   "pages": []
+  },
+  {
+   "s": ".btn[disabled]",
+   "q": ".btn[disabled]",
+   "m": false,
+   "err": null,
+   "ctx": "",
+   "pages": []
+  },
+  {
+   "s": ".prose > h3",
+   "q": ".prose > h3",
+   "m": false,
+   "err": null,
+   "ctx": "",
+   "pages": []
+  },
+  {
+   "s": ".spec .is-popular + tr",
+   "q": ".spec  + tr",
+   "m": false,
+   "err": null,
+   "ctx": "(grid-template-rows: subgrid) / (min-width: 1100px)",
+   "pages": []
+  },
+  {
+   "s": ".bubble-link",
+   "q": ".bubble-link",
+   "m": false,
+   "err": null,
+   "ctx": "",
+   "pages": []
+  },
+  {
+   "s": ".help",
+   "q": ".help",
+   "m": false,
+   "err": null,
+   "ctx": "",
+   "pages": []
+  },
+  {
+   "s": ".chip :checked + span",
+   "q": ".chip  + span",
+   "m": false,
+   "err": null,
+   "ctx": "",
+   "pages": []
+  },
+  {
+   "s": ".chip :checked + span::before",
+   "q": ".chip  + span",
+   "m": false,
+   "err": null,
+   "ctx": "",
+   "pages": []
+  },
+  {
+   "s": ".chip :focus-visible + span",
+   "q": ".chip  + span",
+   "m": false,
+   "err": null,
+   "ctx": "",
+   "pages": []
+  },
+  {
+   "s": ".chip :checked + span",
+   "q": ".chip  + span",
+   "m": false,
+   "err": null,
+   "ctx": "(forced-colors: active)",
+   "pages": []
+  },
+  {
+   "s": "[data-page=\"home\"] .quote-grid",
+   "q": "[data-page=\"home\"] .quote-grid",
+   "m": false,
+   "err": null,
+   "ctx": "",
+   "pages": []
+  },
+  {
+   "s": "[data-page=\"home\"] .quote",
+   "q": "[data-page=\"home\"] .quote",
+   "m": false,
+   "err": null,
+   "ctx": "",
+   "pages": []
+  },
+  {
+   "s": "[data-page=\"home\"] .quote blockquote",
+   "q": "[data-page=\"home\"] .quote blockquote",
+   "m": false,
+   "err": null,
+   "ctx": "",
+   "pages": []
+  },
+  {
+   "s": "[data-page=\"home\"] .quote p",
+   "q": "[data-page=\"home\"] .quote p",
+   "m": false,
+   "err": null,
+   "ctx": "",
+   "pages": []
+  },
+  {
+   "s": "[data-page=\"home\"] .quote figcaption",
+   "q": "[data-page=\"home\"] .quote figcaption",
+   "m": false,
+   "err": null,
+   "ctx": "",
+   "pages": []
+  },
+  {
+   "s": "[data-page=\"home\"] .quote-grid",
+   "q": "[data-page=\"home\"] .quote-grid",
+   "m": false,
+   "err": null,
+   "ctx": "(min-width: 760px)",
+   "pages": []
+  },
+  {
+   "s": "[data-page=\"faq\"] .faq-item ~ [open] .faq-body",
+   "q": "[data-page=\"faq\"] .faq-item ~  .faq-body",
+   "m": false,
+   "err": null,
+   "ctx": "",
+   "pages": []
+  },
+  {
+   "s": "[data-page=\"checkout\"] .till-pay:has(noscript > p) #checkout-status",
+   "q": "[data-page=\"checkout\"] .till-pay:has(noscript > p) #checkout-status",
+   "m": false,
+   "err": null,
+   "ctx": "selector(:has(a))",
+   "pages": []
+  },
+  {
+   "s": "[data-page=\"checkout\"] .till-pay:not(:has(noscript > p)):has(#checkout-status:not([hidden], .error))",
+   "q": "[data-page=\"checkout\"] .till-pay:not(:has(noscript > p)):has(#checkout-status:not(, ))",
+   "m": null,
+   "err": "SyntaxError: Failed to execute 'querySelector' on 'Document': '[data-page=\"check",
+   "ctx": "selector(:has(a))",
+   "pages": []
+  },
+  {
+   "s": "[data-page=\"checkout-success\"]:not(:has(#success-retry:not([hidden]))) .page-head h1",
+   "q": "[data-page=\"checkout-success\"]:not(:has(#success-retry)) .page-head h1",
+   "m": false,
+   "err": null,
+   "ctx": "selector(:has(a)) / (min-width: 600px) and (max-width: 979.98px)",
+   "pages": []
+  }
+ ]
+}

@@ -1,0 +1,90 @@
+dark | .bizcard | on-paper sand | radius=14px shadow=c 0px 2px 6px 0px, c 0px 30px 60px -26px, c 0px 30px 60px -3 border=1px fs=17px fw=400 h=- bg=rgb(255, 252, 245)  => home
+dark | .board | on-blue  | radius=32px shadow=c 0px 2px 6px 0px, c 0px 30px 60px -26px, c 0px 30px 60px -3 border=0px fs=17px fw=400 h=- bg=rgb(27, 42, 120)  => home,start
+dark | .card |  | radius=22px shadow=c 0px 1px 2px 0px, c 0px 6px 18px -12px border=1px fs=17px fw=400 h=- bg=rgb(29, 35, 51)  => pricing
+dark | .eyebrow |  | radius=0px shadow=none border=0px fs=13px fw=800 h=- bg=rgba(0, 0, 0, 0)  => home,start,pricing,consulting,services
+dark | .eyebrow | on-blue  | radius=0px shadow=none border=0px fs=13px fw=800 h=- bg=rgba(0, 0, 0, 0)  => home,start,services
+dark | .eyebrow | sand | radius=0px shadow=none border=0px fs=13px fw=800 h=- bg=rgba(0, 0, 0, 0)  => home,start,pricing,consulting,services
+dark | .flag |  | radius=999px shadow=none border=0px fs=12px fw=700 h=- bg=rgb(42, 50, 73)  => home
+dark | .flag |  | radius=999px shadow=none border=0px fs=12px fw=700 h=- bg=rgb(58, 35, 32)  => consulting
+dark | .flag | sand | radius=999px shadow=none border=0px fs=12px fw=700 h=- bg=rgb(42, 50, 73)  => home
+dark | .flag | sand | radius=999px shadow=none border=0px fs=12px fw=700 h=- bg=rgb(58, 35, 32)  => home
+dark | .lede |  | radius=0px shadow=none border=0px fs=21px fw=400 h=- bg=rgba(0, 0, 0, 0)  => home,start,pricing,consulting,services
+dark | .panel |  | radius=32px shadow=c 0px 2px 4px 0px, c 0px 18px 40px -22px border=1px fs=17px fw=400 h=- bg=rgb(29, 35, 51)  => consulting
+dark | .panel | on-blue  | radius=32px shadow=c 0px 2px 6px 0px, c 0px 30px 60px -26px, c 0px 30px 60px -3 border=0px fs=17px fw=400 h=- bg=rgb(27, 42, 120)  => services
+dark | .panel | on-blue sand | radius=32px shadow=c 0px 2px 6px 0px, c 0px 30px 60px -26px, c 0px 30px 60px -3 border=0px fs=17px fw=400 h=- bg=rgb(27, 42, 120)  => consulting
+dark | .phone |  | radius=0px shadow=none border=0px fs=17px fw=400 h=- bg=rgba(0, 0, 0, 0)  => home,services
+dark | .phone | sand | radius=0px shadow=none border=0px fs=17px fw=400 h=- bg=rgba(0, 0, 0, 0)  => consulting
+dark | .pill | sand | radius=999px shadow=none border=0px fs=12px fw=700 h=- bg=rgb(42, 50, 73)  => home,consulting
+dark | .pill | sand | radius=999px shadow=none border=0px fs=12px fw=700 h=- bg=rgb(58, 35, 32)  => home,consulting
+dark | .print |  | radius=14px shadow=c 0px 2px 4px 0px, c 0px 18px 40px -22px border=1px fs=17px fw=400 h=- bg=rgb(29, 35, 51)  => home
+dark | .print | sand | radius=14px shadow=c 0px 2px 4px 0px, c 0px 18px 40px -22px border=1px fs=17px fw=400 h=- bg=rgb(29, 35, 51)  => start
+dark | .receipt |  | radius=4px shadow=c 0px 2px 4px 0px, c 0px 18px 40px -22px border=1px fs=15px fw=400 h=- bg=rgb(29, 35, 51)  => consulting
+dark | .receipt | on-blue on-paper sand | radius=4px shadow=c 0px 2px 4px 0px, c 0px 18px 40px -22px border=1px fs=15px fw=400 h=- bg=rgb(255, 252, 245)  => consulting
+dark | .receipt | on-paper sand | radius=4px shadow=c 0px 2px 4px 0px, c 0px 18px 40px -22px border=1px fs=15px fw=400 h=- bg=rgb(255, 252, 245)  => pricing
+dark | .section-sub, .section-head p:not(.eyebrow) |  | radius=0px shadow=none border=0px fs=21px fw=400 h=- bg=rgba(0, 0, 0, 0)  => home,start,pricing,consulting
+dark | .section-sub, .section-head p:not(.eyebrow) | sand | radius=0px shadow=none border=0px fs=17px fw=400 h=- bg=rgba(0, 0, 0, 0)  => home
+dark | .section-sub, .section-head p:not(.eyebrow) | sand | radius=0px shadow=none border=0px fs=21px fw=400 h=- bg=rgba(0, 0, 0, 0)  => home,start,pricing,consulting
+dark | .stamp | sand | radius=8px shadow=none border=2px fs=12px fw=800 h=- bg=rgb(29, 35, 51)  => home,start
+dark | .tag |  | radius=8px shadow=none border=1px fs=17px fw=600 h=- bg=rgb(29, 35, 51)  => services
+dark | .tag | sand | radius=8px shadow=none border=1px fs=17px fw=600 h=- bg=rgb(29, 35, 51)  => consulting,services
+dark | .ticket | sand | radius=14px shadow=c 0px 2px 4px 0px, c 0px 18px 40px -22px border=1px fs=17px fw=400 h=- bg=rgb(29, 35, 51)  => home,start
+dark | a.btn.btn-primary.btn-lg |  | radius=14px shadow=c 0px -2px 0px 0px inset, c 0px 1px 2px 0px, c 0px 6px 18px  border=1px fs=17px fw=700 h=56 bg=rgb(157, 176, 255)  => home,start,pricing,consulting,services
+dark | a.btn.btn-primary.btn-lg | on-blue  | radius=14px shadow=c 0px -2px 0px 0px inset, c 0px 1px 2px 0px, c 0px 6px 18px  border=1px fs=17px fw=700 h=56 bg=rgb(255, 251, 242)  => home,start,pricing,consulting,services
+dark | a.btn.btn-primary:not(.btn-lg) |  | radius=14px shadow=c 0px -2px 0px 0px inset, c 0px 1px 2px 0px, c 0px 6px 18px  border=1px fs=16px fw=700 h=52 bg=rgb(157, 176, 255)  => pricing
+dark | a.btn.btn-primary:not(.btn-lg) |  | radius=14px shadow=c 0px -2px 0px 0px inset, c 0px 1px 2px 0px, c 0px 6px 18px  border=1px fs=16px fw=700 h=64 bg=rgb(157, 176, 255)  => consulting
+dark | a.btn.btn-primary:not(.btn-lg) | on-blue  | radius=14px shadow=c 0px -2px 0px 0px inset, c 0px 1px 2px 0px, c 0px 6px 18px  border=1px fs=16px fw=700 h=52 bg=rgb(255, 251, 242)  => home,start
+dark | a.btn.btn-primary:not(.btn-lg) | on-blue sand | radius=14px shadow=c 0px -2px 0px 0px inset, c 0px 1px 2px 0px, c 0px 6px 18px  border=1px fs=16px fw=700 h=52 bg=rgb(255, 251, 242)  => consulting
+dark | a.btn.btn-primary:not(.btn-lg) | sand | radius=14px shadow=c 0px -2px 0px 0px inset, c 0px 1px 2px 0px, c 0px 6px 18px  border=1px fs=16px fw=700 h=52 bg=rgb(157, 176, 255)  => pricing,consulting
+dark | a.btn:not(.btn-primary):not(.btn-lg) |  | radius=14px shadow=c 0px -2px 0px 0px inset, c 0px 1px 2px 0px, c 0px 6px 18px  border=1px fs=15px fw=700 h=44 bg=rgb(29, 35, 51)  => pricing
+dark | a.btn:not(.btn-primary):not(.btn-lg) |  | radius=14px shadow=c 0px -2px 0px 0px inset, c 0px 1px 2px 0px, c 0px 6px 18px  border=1px fs=16px fw=700 h=52 bg=rgb(29, 35, 51)  => pricing,services
+dark | a.btn:not(.btn-primary):not(.btn-lg) |  | radius=14px shadow=none border=1px fs=16px fw=600 h=44 bg=rgba(0, 0, 0, 0)  => pricing
+dark | a.btn:not(.btn-primary):not(.btn-lg) | sand | radius=14px shadow=c 0px -2px 0px 0px inset, c 0px 1px 2px 0px, c 0px 6px 18px  border=1px fs=16px fw=700 h=52 bg=rgb(29, 35, 51)  => pricing
+dark | a.btn:not(.btn-primary):not(.btn-lg) | sand | radius=14px shadow=none border=1px fs=16px fw=600 h=52 bg=rgba(0, 0, 0, 0)  => pricing
+dark | main section > .container h2:not(.eyebrow):not(.title):not(.h3) |  | radius=0px shadow=none border=0px fs=50px fw=600 h=- bg=rgba(0, 0, 0, 0)  => home,start,pricing,consulting
+dark | main section > .container h2:not(.eyebrow):not(.title):not(.h3) | on-blue  | radius=0px shadow=none border=0px fs=50px fw=600 h=- bg=rgba(0, 0, 0, 0)  => home,start,pricing,consulting,services
+dark | main section > .container h2:not(.eyebrow):not(.title):not(.h3) | sand | radius=0px shadow=none border=0px fs=50px fw=600 h=- bg=rgba(0, 0, 0, 0)  => home,start,pricing,consulting
+light | .bizcard | on-paper sand | radius=14px shadow=c 0px 2px 6px 0px, c 0px 30px 60px -26px, c 0px 30px 60px -3 border=1px fs=17px fw=400 h=- bg=rgb(255, 252, 245)  => home
+light | .board | on-blue  | radius=32px shadow=c 0px 2px 6px 0px, c 0px 30px 60px -26px, c 0px 30px 60px -3 border=0px fs=17px fw=400 h=- bg=rgb(36, 56, 159)  => home,start
+light | .card |  | radius=22px shadow=c 0px 1px 2px 0px, c 0px 6px 18px -12px border=1px fs=17px fw=400 h=- bg=rgb(255, 252, 245)  => pricing
+light | .eyebrow |  | radius=0px shadow=none border=0px fs=13px fw=800 h=- bg=rgba(0, 0, 0, 0)  => home,start,pricing,consulting,services
+light | .eyebrow | on-blue  | radius=0px shadow=none border=0px fs=13px fw=800 h=- bg=rgba(0, 0, 0, 0)  => home,start,services
+light | .eyebrow | sand | radius=0px shadow=none border=0px fs=13px fw=800 h=- bg=rgba(0, 0, 0, 0)  => home,start,pricing,consulting,services
+light | .flag |  | radius=999px shadow=none border=0px fs=12px fw=700 h=- bg=rgb(228, 217, 195)  => home
+light | .flag |  | radius=999px shadow=none border=0px fs=12px fw=700 h=- bg=rgb(245, 221, 210)  => consulting
+light | .flag | sand | radius=999px shadow=none border=0px fs=12px fw=700 h=- bg=rgb(228, 217, 195)  => home
+light | .flag | sand | radius=999px shadow=none border=0px fs=12px fw=700 h=- bg=rgb(245, 221, 210)  => home
+light | .lede |  | radius=0px shadow=none border=0px fs=21px fw=400 h=- bg=rgba(0, 0, 0, 0)  => home,start,pricing,consulting,services
+light | .panel |  | radius=32px shadow=c 0px 2px 4px 0px, c 0px 18px 40px -22px border=1px fs=17px fw=400 h=- bg=rgb(255, 252, 245)  => consulting
+light | .panel | on-blue  | radius=32px shadow=c 0px 2px 6px 0px, c 0px 30px 60px -26px, c 0px 30px 60px -3 border=0px fs=17px fw=400 h=- bg=rgb(36, 56, 159)  => services
+light | .panel | on-blue sand | radius=32px shadow=c 0px 2px 6px 0px, c 0px 30px 60px -26px, c 0px 30px 60px -3 border=0px fs=17px fw=400 h=- bg=rgb(36, 56, 159)  => consulting
+light | .phone |  | radius=0px shadow=none border=0px fs=17px fw=400 h=- bg=rgba(0, 0, 0, 0)  => home,services
+light | .phone | sand | radius=0px shadow=none border=0px fs=17px fw=400 h=- bg=rgba(0, 0, 0, 0)  => consulting
+light | .pill | sand | radius=999px shadow=none border=0px fs=12px fw=700 h=- bg=rgb(228, 217, 195)  => home,consulting
+light | .pill | sand | radius=999px shadow=none border=0px fs=12px fw=700 h=- bg=rgb(245, 221, 210)  => home,consulting
+light | .print |  | radius=14px shadow=c 0px 2px 4px 0px, c 0px 18px 40px -22px border=1px fs=17px fw=400 h=- bg=rgb(255, 252, 245)  => home
+light | .print | sand | radius=14px shadow=c 0px 2px 4px 0px, c 0px 18px 40px -22px border=1px fs=17px fw=400 h=- bg=rgb(255, 252, 245)  => start
+light | .receipt |  | radius=4px shadow=c 0px 2px 4px 0px, c 0px 18px 40px -22px border=1px fs=15px fw=400 h=- bg=rgb(255, 252, 245)  => consulting
+light | .receipt | on-blue on-paper sand | radius=4px shadow=c 0px 2px 4px 0px, c 0px 18px 40px -22px border=1px fs=15px fw=400 h=- bg=rgb(255, 252, 245)  => consulting
+light | .receipt | on-paper sand | radius=4px shadow=c 0px 2px 4px 0px, c 0px 18px 40px -22px border=1px fs=15px fw=400 h=- bg=rgb(255, 252, 245)  => pricing
+light | .section-sub, .section-head p:not(.eyebrow) |  | radius=0px shadow=none border=0px fs=21px fw=400 h=- bg=rgba(0, 0, 0, 0)  => home,start,pricing,consulting
+light | .section-sub, .section-head p:not(.eyebrow) | sand | radius=0px shadow=none border=0px fs=17px fw=400 h=- bg=rgba(0, 0, 0, 0)  => home
+light | .section-sub, .section-head p:not(.eyebrow) | sand | radius=0px shadow=none border=0px fs=21px fw=400 h=- bg=rgba(0, 0, 0, 0)  => home,start,pricing,consulting
+light | .stamp | sand | radius=8px shadow=none border=2px fs=12px fw=800 h=- bg=rgb(255, 252, 245)  => home,start
+light | .tag |  | radius=8px shadow=none border=1px fs=17px fw=600 h=- bg=rgb(255, 252, 245)  => services
+light | .tag | sand | radius=8px shadow=none border=1px fs=17px fw=600 h=- bg=rgb(255, 252, 245)  => consulting,services
+light | .ticket | sand | radius=14px shadow=c 0px 2px 4px 0px, c 0px 18px 40px -22px border=1px fs=17px fw=400 h=- bg=rgb(255, 252, 245)  => home,start
+light | a.btn.btn-primary.btn-lg |  | radius=14px shadow=c 0px -2px 0px 0px inset, c 0px 1px 2px 0px, c 0px 6px 18px  border=1px fs=17px fw=700 h=56 bg=rgb(44, 70, 196)  => home,start,pricing,consulting,services
+light | a.btn.btn-primary.btn-lg | on-blue  | radius=14px shadow=c 0px -2px 0px 0px inset, c 0px 1px 2px 0px, c 0px 6px 18px  border=1px fs=17px fw=700 h=56 bg=rgb(255, 251, 242)  => home,start,pricing,consulting,services
+light | a.btn.btn-primary:not(.btn-lg) |  | radius=14px shadow=c 0px -2px 0px 0px inset, c 0px 1px 2px 0px, c 0px 6px 18px  border=1px fs=16px fw=700 h=52 bg=rgb(44, 70, 196)  => pricing
+light | a.btn.btn-primary:not(.btn-lg) |  | radius=14px shadow=c 0px -2px 0px 0px inset, c 0px 1px 2px 0px, c 0px 6px 18px  border=1px fs=16px fw=700 h=64 bg=rgb(44, 70, 196)  => consulting
+light | a.btn.btn-primary:not(.btn-lg) | on-blue  | radius=14px shadow=c 0px -2px 0px 0px inset, c 0px 1px 2px 0px, c 0px 6px 18px  border=1px fs=16px fw=700 h=52 bg=rgb(255, 251, 242)  => home,start
+light | a.btn.btn-primary:not(.btn-lg) | on-blue sand | radius=14px shadow=c 0px -2px 0px 0px inset, c 0px 1px 2px 0px, c 0px 6px 18px  border=1px fs=16px fw=700 h=52 bg=rgb(255, 251, 242)  => consulting
+light | a.btn.btn-primary:not(.btn-lg) | sand | radius=14px shadow=c 0px -2px 0px 0px inset, c 0px 1px 2px 0px, c 0px 6px 18px  border=1px fs=16px fw=700 h=52 bg=rgb(44, 70, 196)  => pricing,consulting
+light | a.btn:not(.btn-primary):not(.btn-lg) |  | radius=14px shadow=c 0px -2px 0px 0px inset, c 0px 1px 2px 0px, c 0px 6px 18px  border=1px fs=15px fw=700 h=44 bg=rgb(255, 252, 245)  => pricing
+light | a.btn:not(.btn-primary):not(.btn-lg) |  | radius=14px shadow=c 0px -2px 0px 0px inset, c 0px 1px 2px 0px, c 0px 6px 18px  border=1px fs=16px fw=700 h=52 bg=rgb(255, 252, 245)  => pricing,services
+light | a.btn:not(.btn-primary):not(.btn-lg) |  | radius=14px shadow=none border=1px fs=16px fw=600 h=44 bg=rgba(0, 0, 0, 0)  => pricing
+light | a.btn:not(.btn-primary):not(.btn-lg) | sand | radius=14px shadow=c 0px -2px 0px 0px inset, c 0px 1px 2px 0px, c 0px 6px 18px  border=1px fs=16px fw=700 h=52 bg=rgb(255, 252, 245)  => pricing
+light | a.btn:not(.btn-primary):not(.btn-lg) | sand | radius=14px shadow=none border=1px fs=16px fw=600 h=52 bg=rgba(0, 0, 0, 0)  => pricing
+light | main section > .container h2:not(.eyebrow):not(.title):not(.h3) |  | radius=0px shadow=none border=0px fs=50px fw=600 h=- bg=rgba(0, 0, 0, 0)  => home,start,pricing,consulting
+light | main section > .container h2:not(.eyebrow):not(.title):not(.h3) | on-blue  | radius=0px shadow=none border=0px fs=50px fw=600 h=- bg=rgba(0, 0, 0, 0)  => home,start,pricing,consulting,services
+light | main section > .container h2:not(.eyebrow):not(.title):not(.h3) | sand | radius=0px shadow=none border=0px fs=50px fw=600 h=- bg=rgba(0, 0, 0, 0)  => home,start,pricing,consulting

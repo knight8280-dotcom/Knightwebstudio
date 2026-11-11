@@ -1,0 +1,293 @@
+{
+  "home__390__dark": {
+    "heightA": 11912,
+    "heightB": 11912,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "services__390__dark": {
+    "heightA": 5700,
+    "heightB": 5700,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "consulting__390__dark": {
+    "heightA": 13936,
+    "heightB": 13936,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "work__390__dark": {
+    "heightA": 4459,
+    "heightB": 4459,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "process__390__dark": {
+    "heightA": 3315,
+    "heightB": 3315,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "pricing__390__dark": {
+    "heightA": 10378,
+    "heightB": 10378,
+    "differingPixels": 20,
+    "percent": 0.0005,
+    "bbox": [
+      273,
+      5816,
+      289,
+      5818
+    ]
+  },
+  "faq__390__dark": {
+    "heightA": 3663,
+    "heightB": 3663,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "contact__390__dark": {
+    "heightA": 3702,
+    "heightB": 3702,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "about__390__dark": {
+    "heightA": 5158,
+    "heightB": 5158,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "start__390__dark": {
+    "heightA": 6134,
+    "heightB": 6134,
+    "differingPixels": 62,
+    "percent": 0.0026,
+    "bbox": [
+      163,
+      6025,
+      175,
+      6033
+    ]
+  },
+  "web-design-baton-rouge__390__dark": {
+    "heightA": 7416,
+    "heightB": 7416,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "web-design-denham-springs__390__dark": {
+    "heightA": 7210,
+    "heightB": 7210,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "web-design-gonzales__390__dark": {
+    "heightA": 7362,
+    "heightB": 7362,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "web-design-prairieville__390__dark": {
+    "heightA": 7360,
+    "heightB": 7360,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "privacy__390__dark": {
+    "heightA": 4971,
+    "heightB": 4971,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "terms__390__dark": {
+    "heightA": 5236,
+    "heightB": 5236,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "checkout__390__dark": {
+    "heightA": 2149,
+    "heightB": 2149,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "checkout_success__390__dark": {
+    "heightA": 2218,
+    "heightB": 2218,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "404.html__390__dark": {
+    "heightA": 1239,
+    "heightB": 1239,
+    "differingPixels": 62,
+    "percent": 0.0128,
+    "bbox": [
+      163,
+      1130,
+      175,
+      1138
+    ]
+  },
+  "home__1440__dark": {
+    "heightA": 9220,
+    "heightB": 9220,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "services__1440__dark": {
+    "heightA": 4262,
+    "heightB": 4262,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "consulting__1440__dark": {
+    "heightA": 10045,
+    "heightB": 10045,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "work__1440__dark": {
+    "heightA": 3488,
+    "heightB": 3488,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "process__1440__dark": {
+    "heightA": 2709,
+    "heightB": 2709,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "pricing__1440__dark": {
+    "heightA": 5988,
+    "heightB": 5988,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "faq__1440__dark": {
+    "heightA": 3036,
+    "heightB": 3036,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "contact__1440__dark": {
+    "heightA": 2253,
+    "heightB": 2253,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "about__1440__dark": {
+    "heightA": 3836,
+    "heightB": 3836,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "start__1440__dark": {
+    "heightA": 4663,
+    "heightB": 4663,
+    "differingPixels": 62,
+    "percent": 0.0009,
+    "bbox": [
+      786,
+      4606,
+      798,
+      4614
+    ]
+  },
+  "web-design-baton-rouge__1440__dark": {
+    "heightA": 5760,
+    "heightB": 5760,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "web-design-denham-springs__1440__dark": {
+    "heightA": 5727,
+    "heightB": 5727,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "web-design-gonzales__1440__dark": {
+    "heightA": 5580,
+    "heightB": 5580,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "web-design-prairieville__1440__dark": {
+    "heightA": 5670,
+    "heightB": 5670,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "privacy__1440__dark": {
+    "heightA": 3551,
+    "heightB": 3551,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "terms__1440__dark": {
+    "heightA": 3840,
+    "heightB": 3840,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "checkout__1440__dark": {
+    "heightA": 1493,
+    "heightB": 1493,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "checkout_success__1440__dark": {
+    "heightA": 1635,
+    "heightB": 1635,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "404.html__1440__dark": {
+    "heightA": 1062,
+    "heightB": 1062,
+    "differingPixels": 7278,
+    "percent": 0.4759,
+    "bbox": [
+      665,
+      461,
+      1205,
+      1013
+    ]
+  }
+}

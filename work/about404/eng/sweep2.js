@@ -1,0 +1,21 @@
+const { chromium } = require('playwright');
+(async () => { const b = await chromium.launch();
+  const ctx = await b.newContext({ viewport: { width: 360, height: 900 }, reducedMotion: 'reduce' }); await ctx.route(/plausible|calendly/, r => r.abort());
+  const p = await ctx.newPage(); await p.goto('http://localhost:8720/about/', { waitUntil: 'load' }); await p.evaluate(() => document.fonts.ready); await p.waitForTimeout(400);
+  const rows = [];
+  for (let w = 360; w <= 1920; w += 10) { await p.setViewportSize({ width: w, height: 900 }); await p.waitForTimeout(40);
+    rows.push(await p.evaluate(() => { const lines = el => { if (!el) return 0; const r = document.createRange(); r.selectNodeContents(el); return new Set([...r.getClientRects()].map(x => Math.round(x.top))).size; };
+      const cta = document.querySelector('.header-cta'); const ctaVis = cta && getComputedStyle(cta).display !== 'none';
+      const h2s = [...document.querySelectorAll('.notes h2')].map(lines); const notes = document.querySelector('.notes'); const ul1 = document.querySelector('.projects').getBoundingClientRect().top, ul2 = document.querySelector('.towns').getBoundingClientRect().top; const p1 = document.querySelector('.notes > div > p').getBoundingClientRect().bottom;
+      const hw = document.querySelector('.section-sand h2'); const name = [...document.querySelectorAll('.terms .pl-name')].map(lines);
+      return { w: innerWidth, tag: lines(document.querySelector('.bizcard-top span')), cta: ctaVis ? lines(cta) : '-', h1: lines(document.querySelector('h1')), noteH2: h2s.join('/'), listsAligned: Math.abs(ul1 - ul2) < 1, gapUnderWorkLine: Math.round(ul1 - p1), termNames: name.join(''), email: lines(document.querySelector('.bizcard-lines a[href^=mailto]')), cardW: Math.round(document.querySelector('.bizcard').offsetWidth) }; })); }
+  const runs = (key, pred) => { const out = []; let s = null, prev = null; for (const r of rows) { if (pred(r[key])) { if (s === null) s = r.w; prev = r.w; } else if (s !== null) { out.push(s + '–' + prev); s = null; } } if (s !== null) out.push(s + '–' + prev); return out.join(', ') || 'never'; };
+  console.log('card tagline on 2+ lines at widths:', runs('tag', v => v > 1));
+  console.log('header button on 2 lines at widths:', runs('cta', v => v !== '-' && v > 1));
+  console.log('h1 lines >3 at:', runs('h1', v => v > 3), '| h1 lines by width sample:', rows.filter(r => [360, 390, 600, 760, 980, 1100, 1440].includes(r.w)).map(r => r.w + ':' + r.h1).join(' '));
+  console.log('email wraps at:', runs('email', v => v > 1));
+  console.log('lists not on one line (>=760) at:', rows.filter(r => r.w >= 760 && !r.listsAligned).map(r => r.w).join(',') || 'never');
+  console.log('gap under "Work you can visit" line (px) by width:', rows.filter(r => r.w % 100 === 0 || [360, 390, 760, 820, 980, 1280, 1440].includes(r.w)).map(r => r.w + ':' + r.gapUnderWorkLine + '(' + r.noteH2 + ')').join(' '));
+  console.log('term names lines by width:', rows.filter(r => [360, 390, 760, 800, 900, 980, 1100, 1280, 1440].includes(r.w)).map(r => r.w + ':' + r.termNames).join(' '));
+  console.log('card width:', rows.filter(r => [360, 390, 600, 760, 980, 1040, 1100, 1280, 1440].includes(r.w)).map(r => r.w + ':' + r.cardW).join(' '));
+  await b.close(); })();

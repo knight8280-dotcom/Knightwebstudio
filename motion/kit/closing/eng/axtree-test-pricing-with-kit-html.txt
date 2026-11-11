@@ -1,0 +1,131 @@
+region "Still deciding? Book the free call."
+  · THE DISCOVERY CALL
+  heading "Still deciding? Book the free call." [level=2]
+    · Still deciding? Book the free call.
+  paragraph
+    · You'll get a clear view of what your website and your systems need, an
+  · APPOINTMENT CARD
+  · NO. 01
+  paragraph
+    · Discovery call
+  DescriptionList
+    term "Cost"
+      · Cost
+    definition
+      · Free
+    term "Length"
+      · Length
+    definition
+      · 30 minutes
+    term "Sales pitch"
+      · Sales pitch
+    definition
+      · None
+    term "Where"
+      · Where
+    definition
+      · A call, or in person
+  link "Book a free 30-minute call" [focusable=true]
+    · Book a free 30-minute call
+  link "Send an enquiry" [focusable=true]
+    · Send an enquiry
+  paragraph
+    · Or call 
+    link "(225) 255-0837" [focusable=true]
+      · (225) 255-0837
+contentinfo
+  link "KnightWebstudio" [focusable=true]
+    · KnightWebstudio
+  paragraph
+    · Websites, automation and consulting for local businesses that need to 
+  paragraph
+    strong
+      · Based in Baton Rouge, Louisiana. Working with clients anywhere.
+  navigation "Contact"
+    paragraph
+      · CONTACT
+    list
+      listitem [level=1]
+        link "(225) 255-0837" [focusable=true]
+          · (225) 255-0837
+      listitem [level=1]
+        · Mon–Fri, 9am–6pm Central Time
+      listitem [level=1]
+        link "knightwebstudio1@gmail.com" [focusable=true]
+          · knightwebstudio1@gmail.com
+      listitem [level=1]
+        link "Start a project" [focusable=true]
+          · Start a project
+  navigation "Services"
+    paragraph
+      · SERVICES
+    list
+      listitem [level=1]
+        link "Website design" [focusable=true]
+          · Website design
+      listitem [level=1]
+        link "Consulting & automation" [focusable=true]
+          · Consulting & automation
+      listitem [level=1]
+        link "E-commerce" [focusable=true]
+          · E-commerce
+      listitem [level=1]
+        link "SEO" [focusable=true]
+          · SEO
+      listitem [level=1]
+        link "Care plans" [focusable=true]
+          · Care plans
+  navigation "Company"
+    paragraph
+      · COMPANY
+    list
+      listitem [level=1]
+        link "About" [focusable=true]
+          · About
+      listitem [level=1]
+        link "Our work" [focusable=true]
+          · Our work
+      listitem [level=1]
+        link "Process" [focusable=true]
+          · Process
+      listitem [level=1]
+        link "Pricing" [focusable=true]
+          · Pricing
+      listitem [level=1]
+        link "FAQ" [focusable=true]
+          · FAQ
+  navigation "Areas we serve"
+    paragraph
+      · AREAS WE SERVE
+    list
+      listitem [level=1]
+        link "Baton Rouge" [focusable=true]
+          · Baton Rouge
+      listitem [level=1]
+        link "Gonzales" [focusable=true]
+          · Gonzales
+      listitem [level=1]
+        link "Prairieville" [focusable=true]
+          · Prairieville
+      listitem [level=1]
+        link "Denham Springs" [focusable=true]
+          · Denham Springs
+      listitem [level=1]
+        · Zachary
+      listitem [level=1]
+        · Central
+      listitem [level=1]
+        · Baker
+  paragraph
+    · Thanks for stopping by. We reply within one business day.
+  paragraph
+    · © 
+      · 2026
+    ·  KnightWebstudio. All rights reserved.
+  button "Pause background motion" [focusable=true]
+  link "Privacy" [focusable=true]
+    · Privacy
+  link "Terms" [focusable=true]
+    · Terms
+  link "Back to top ↑" [focusable=true]
+    · Back to top ↑

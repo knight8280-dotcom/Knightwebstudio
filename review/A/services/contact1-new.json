@@ -1,0 +1,1412 @@
+{
+ "w360-light": {
+  "atLoad": {
+   "scrollY": 0,
+   "slot": {
+    "l": 41,
+    "t": 1587.3,
+    "w": 250.2,
+    "h": 70.2,
+    "r": 291.2
+   },
+   "slotTheme": null,
+   "slotTransform": "matrix(0.9, 0, 0, 0.9, 0, 0)",
+   "iframe": null,
+   "iframeTitle": null,
+   "iframeSrc": null,
+   "textarea": false,
+   "form": {
+    "l": 20,
+    "t": 589.5,
+    "w": 320,
+    "h": 1231.3,
+    "r": 340
+   },
+   "formInnerRight": 319,
+   "submit": {
+    "l": 41,
+    "t": 1681.3,
+    "w": 278,
+    "h": 56,
+    "r": 319
+   },
+   "pageH": 3798,
+   "overflowX": 0,
+   "hcScripts": []
+  },
+  "beforeWidget": {
+   "scrollY": 976,
+   "slot": {
+    "l": 41,
+    "t": 1587.3,
+    "w": 250.2,
+    "h": 70.2,
+    "r": 291.2
+   },
+   "slotTheme": "light",
+   "slotTransform": "matrix(0.9, 0, 0, 0.9, 0, 0)",
+   "iframe": null,
+   "iframeTitle": null,
+   "iframeSrc": null,
+   "textarea": false,
+   "form": {
+    "l": 20,
+    "t": 589.5,
+    "w": 320,
+    "h": 1231.3,
+    "r": 340
+   },
+   "formInnerRight": 319,
+   "submit": {
+    "l": 41,
+    "t": 1681.3,
+    "w": 278,
+    "h": 56,
+    "r": 319
+   },
+   "pageH": 3798,
+   "overflowX": 0,
+   "hcScripts": [
+    "https://js.hcaptcha.com/1/api.js?recaptchacompat=off"
+   ]
+  },
+  "widgetMs": 386,
+  "afterWidget": {
+   "scrollY": 1126,
+   "slot": {
+    "l": 41,
+    "t": 1587.3,
+    "w": 250.2,
+    "h": 70.2,
+    "r": 291.2
+   },
+   "slotTheme": "light",
+   "slotTransform": "matrix(0.9, 0, 0, 0.9, 0, 0)",
+   "iframe": {
+    "l": 41,
+    "t": 1587.3,
+    "w": 271.8,
+    "h": 68.4,
+    "r": 312.8
+   },
+   "iframeTitle": "Widget containing checkbox for hCaptcha security challenge",
+   "iframeSrc": "https://newassets.hcaptcha.com/captcha/v1/b7cb55144cfb1f79ab8b18a24ea5786dc178370e/static/hcaptcha.html#frame=checkbox&id=0yfngzu3udlq&host=localhost&sentry=tru",
+   "textarea": true,
+   "form": {
+    "l": 20,
+    "t": 589.5,
+    "w": 320,
+    "h": 1231.3,
+    "r": 340
+   },
+   "formInnerRight": 319,
+   "submit": {
+    "l": 41,
+    "t": 1681.3,
+    "w": 278,
+    "h": 56,
+    "r": 319
+   },
+   "pageH": 3798,
+   "overflowX": 0,
+   "hcScripts": [
+    "https://js.hcaptcha.com/1/api.js?recaptchacompat=off"
+   ]
+  },
+  "cls": [],
+  "widget": {
+   "text": "I am human Privacy - Terms Warning: localhost detected. Please use a valid host.",
+   "bg": "rgb(250, 250, 250)",
+   "warn": null,
+   "w": 302,
+   "h": 76
+  },
+  "log": [
+   {
+    "t": "console.error",
+    "text": "Warning: localhost detected. Please use a valid host."
+   },
+   {
+    "t": "requestfailed",
+    "url": "https://a7ebcf91b146.w.hcaptcha.com/logo.png",
+    "err": "net::ERR_ABORTED"
+   }
+  ],
+  "hosts": [
+   "plausible.io",
+   "js.hcaptcha.com",
+   "cd95b884dadd.w.hcaptcha.com",
+   "newassets.hcaptcha.com",
+   "a7ebcf91b146.w.hcaptcha.com"
+  ]
+ },
+ "w360-dark": {
+  "atLoad": {
+   "scrollY": 0,
+   "slot": {
+    "l": 41,
+    "t": 1587.3,
+    "w": 250.2,
+    "h": 70.2,
+    "r": 291.2
+   },
+   "slotTheme": null,
+   "slotTransform": "matrix(0.9, 0, 0, 0.9, 0, 0)",
+   "iframe": null,
+   "iframeTitle": null,
+   "iframeSrc": null,
+   "textarea": false,
+   "form": {
+    "l": 20,
+    "t": 589.5,
+    "w": 320,
+    "h": 1231.3,
+    "r": 340
+   },
+   "formInnerRight": 319,
+   "submit": {
+    "l": 41,
+    "t": 1681.3,
+    "w": 278,
+    "h": 56,
+    "r": 319
+   },
+   "pageH": 3798,
+   "overflowX": 0,
+   "hcScripts": []
+  },
+  "beforeWidget": {
+   "scrollY": 999,
+   "slot": {
+    "l": 41,
+    "t": 1587.3,
+    "w": 250.2,
+    "h": 70.2,
+    "r": 291.2
+   },
+   "slotTheme": "dark",
+   "slotTransform": "matrix(0.9, 0, 0, 0.9, 0, 0)",
+   "iframe": null,
+   "iframeTitle": null,
+   "iframeSrc": null,
+   "textarea": false,
+   "form": {
+    "l": 20,
+    "t": 589.5,
+    "w": 320,
+    "h": 1231.3,
+    "r": 340
+   },
+   "formInnerRight": 319,
+   "submit": {
+    "l": 41,
+    "t": 1681.3,
+    "w": 278,
+    "h": 56,
+    "r": 319
+   },
+   "pageH": 3798,
+   "overflowX": 0,
+   "hcScripts": [
+    "https://js.hcaptcha.com/1/api.js?recaptchacompat=off"
+   ]
+  },
+  "widgetMs": 233,
+  "afterWidget": {
+   "scrollY": 1126,
+   "slot": {
+    "l": 41,
+    "t": 1587.3,
+    "w": 250.2,
+    "h": 70.2,
+    "r": 291.2
+   },
+   "slotTheme": "dark",
+   "slotTransform": "matrix(0.9, 0, 0, 0.9, 0, 0)",
+   "iframe": {
+    "l": 41,
+    "t": 1587.3,
+    "w": 271.8,
+    "h": 68.4,
+    "r": 312.8
+   },
+   "iframeTitle": "Widget containing checkbox for hCaptcha security challenge",
+   "iframeSrc": "https://newassets.hcaptcha.com/captcha/v1/b7cb55144cfb1f79ab8b18a24ea5786dc178370e/static/hcaptcha.html#frame=checkbox&id=0854q3nseu33&host=localhost&sentry=tru",
+   "textarea": true,
+   "form": {
+    "l": 20,
+    "t": 589.5,
+    "w": 320,
+    "h": 1231.3,
+    "r": 340
+   },
+   "formInnerRight": 319,
+   "submit": {
+    "l": 41,
+    "t": 1681.3,
+    "w": 278,
+    "h": 56,
+    "r": 319
+   },
+   "pageH": 3798,
+   "overflowX": 0,
+   "hcScripts": [
+    "https://js.hcaptcha.com/1/api.js?recaptchacompat=off"
+   ]
+  },
+  "cls": [],
+  "widget": {
+   "text": "I am human Privacy - Terms Warning: localhost detected. Please use a valid host.",
+   "bg": "rgb(51, 51, 51)",
+   "warn": null,
+   "w": 302,
+   "h": 76
+  },
+  "log": [
+   {
+    "t": "console.error",
+    "text": "Warning: localhost detected. Please use a valid host."
+   },
+   {
+    "t": "requestfailed",
+    "url": "https://d54cecae612c.w.hcaptcha.com/logo.png",
+    "err": "net::ERR_ABORTED"
+   }
+  ],
+  "hosts": [
+   "plausible.io",
+   "js.hcaptcha.com",
+   "833e6aa25cd.w.hcaptcha.com",
+   "newassets.hcaptcha.com",
+   "d54cecae612c.w.hcaptcha.com"
+  ]
+ },
+ "w390-light": {
+  "atLoad": {
+   "scrollY": 0,
+   "slot": {
+    "l": 41,
+    "t": 1542.2,
+    "w": 308,
+    "h": 78,
+    "r": 349
+   },
+   "slotTheme": null,
+   "slotTransform": "none",
+   "iframe": null,
+   "iframeTitle": null,
+   "iframeSrc": null,
+   "textarea": false,
+   "form": {
+    "l": 20,
+    "t": 596.4,
+    "w": 350,
+    "h": 1179.3,
+    "r": 370
+   },
+   "formInnerRight": 349,
+   "submit": {
+    "l": 41,
+    "t": 1636.2,
+    "w": 308,
+    "h": 56,
+    "r": 349
+   },
+   "pageH": 3702,
+   "overflowX": 0,
+   "hcScripts": []
+  },
+  "beforeWidget": {
+   "scrollY": 929,
+   "slot": {
+    "l": 41,
+    "t": 1542.2,
+    "w": 308,
+    "h": 78,
+    "r": 349
+   },
+   "slotTheme": "light",
+   "slotTransform": "none",
+   "iframe": null,
+   "iframeTitle": null,
+   "iframeSrc": null,
+   "textarea": false,
+   "form": {
+    "l": 20,
+    "t": 596.4,
+    "w": 350,
+    "h": 1179.3,
+    "r": 370
+   },
+   "formInnerRight": 349,
+   "submit": {
+    "l": 41,
+    "t": 1636.2,
+    "w": 308,
+    "h": 56,
+    "r": 349
+   },
+   "pageH": 3702,
+   "overflowX": 0,
+   "hcScripts": [
+    "https://js.hcaptcha.com/1/api.js?recaptchacompat=off"
+   ]
+  },
+  "widgetMs": 200,
+  "afterWidget": {
+   "scrollY": 1029,
+   "slot": {
+    "l": 41,
+    "t": 1542.2,
+    "w": 308,
+    "h": 78,
+    "r": 349
+   },
+   "slotTheme": "light",
+   "slotTransform": "none",
+   "iframe": {
+    "l": 41,
+    "t": 1542.2,
+    "w": 302,
+    "h": 76,
+    "r": 343
+   },
+   "iframeTitle": "Widget containing checkbox for hCaptcha security challenge",
+   "iframeSrc": "https://newassets.hcaptcha.com/captcha/v1/b7cb55144cfb1f79ab8b18a24ea5786dc178370e/static/hcaptcha.html#frame=checkbox&id=0nmokczc5sm&host=localhost&sentry=true",
+   "textarea": true,
+   "form": {
+    "l": 20,
+    "t": 596.4,
+    "w": 350,
+    "h": 1179.3,
+    "r": 370
+   },
+   "formInnerRight": 349,
+   "submit": {
+    "l": 41,
+    "t": 1636.2,
+    "w": 308,
+    "h": 56,
+    "r": 349
+   },
+   "pageH": 3702,
+   "overflowX": 0,
+   "hcScripts": [
+    "https://js.hcaptcha.com/1/api.js?recaptchacompat=off"
+   ]
+  },
+  "cls": [],
+  "widget": {
+   "text": "I am human Privacy - Terms Warning: localhost detected. Please use a valid host.",
+   "bg": "rgb(250, 250, 250)",
+   "warn": null,
+   "w": 302,
+   "h": 76
+  },
+  "log": [
+   {
+    "t": "console.error",
+    "text": "Warning: localhost detected. Please use a valid host."
+   },
+   {
+    "t": "requestfailed",
+    "url": "https://2f5c754f6be4.w.hcaptcha.com/logo.png",
+    "err": "net::ERR_ABORTED"
+   }
+  ],
+  "hosts": [
+   "plausible.io",
+   "js.hcaptcha.com",
+   "newassets.hcaptcha.com",
+   "5a3a45267f69.w.hcaptcha.com",
+   "2f5c754f6be4.w.hcaptcha.com"
+  ]
+ },
+ "w390-dark": {
+  "atLoad": {
+   "scrollY": 0,
+   "slot": {
+    "l": 41,
+    "t": 1542.2,
+    "w": 308,
+    "h": 78,
+    "r": 349
+   },
+   "slotTheme": null,
+   "slotTransform": "none",
+   "iframe": null,
+   "iframeTitle": null,
+   "iframeSrc": null,
+   "textarea": false,
+   "form": {
+    "l": 20,
+    "t": 596.4,
+    "w": 350,
+    "h": 1179.3,
+    "r": 370
+   },
+   "formInnerRight": 349,
+   "submit": {
+    "l": 41,
+    "t": 1636.2,
+    "w": 308,
+    "h": 56,
+    "r": 349
+   },
+   "pageH": 3702,
+   "overflowX": 0,
+   "hcScripts": []
+  },
+  "beforeWidget": {
+   "scrollY": 929,
+   "slot": {
+    "l": 41,
+    "t": 1542.2,
+    "w": 308,
+    "h": 78,
+    "r": 349
+   },
+   "slotTheme": "dark",
+   "slotTransform": "none",
+   "iframe": null,
+   "iframeTitle": null,
+   "iframeSrc": null,
+   "textarea": false,
+   "form": {
+    "l": 20,
+    "t": 596.4,
+    "w": 350,
+    "h": 1179.3,
+    "r": 370
+   },
+   "formInnerRight": 349,
+   "submit": {
+    "l": 41,
+    "t": 1636.2,
+    "w": 308,
+    "h": 56,
+    "r": 349
+   },
+   "pageH": 3702,
+   "overflowX": 0,
+   "hcScripts": [
+    "https://js.hcaptcha.com/1/api.js?recaptchacompat=off"
+   ]
+  },
+  "widgetMs": 217,
+  "afterWidget": {
+   "scrollY": 1029,
+   "slot": {
+    "l": 41,
+    "t": 1542.2,
+    "w": 308,
+    "h": 78,
+    "r": 349
+   },
+   "slotTheme": "dark",
+   "slotTransform": "none",
+   "iframe": {
+    "l": 41,
+    "t": 1542.2,
+    "w": 302,
+    "h": 76,
+    "r": 343
+   },
+   "iframeTitle": "Widget containing checkbox for hCaptcha security challenge",
+   "iframeSrc": "https://newassets.hcaptcha.com/captcha/v1/b7cb55144cfb1f79ab8b18a24ea5786dc178370e/static/hcaptcha.html#frame=checkbox&id=0m6i5ks5wznj&host=localhost&sentry=tru",
+   "textarea": true,
+   "form": {
+    "l": 20,
+    "t": 596.4,
+    "w": 350,
+    "h": 1179.3,
+    "r": 370
+   },
+   "formInnerRight": 349,
+   "submit": {
+    "l": 41,
+    "t": 1636.2,
+    "w": 308,
+    "h": 56,
+    "r": 349
+   },
+   "pageH": 3702,
+   "overflowX": 0,
+   "hcScripts": [
+    "https://js.hcaptcha.com/1/api.js?recaptchacompat=off"
+   ]
+  },
+  "cls": [],
+  "widget": {
+   "text": "I am human Privacy - Terms Warning: localhost detected. Please use a valid host.",
+   "bg": "rgb(51, 51, 51)",
+   "warn": null,
+   "w": 302,
+   "h": 76
+  },
+  "log": [
+   {
+    "t": "console.error",
+    "text": "Warning: localhost detected. Please use a valid host."
+   },
+   {
+    "t": "requestfailed",
+    "url": "https://a3a3388d4935.w.hcaptcha.com/logo.png",
+    "err": "net::ERR_ABORTED"
+   }
+  ],
+  "hosts": [
+   "plausible.io",
+   "js.hcaptcha.com",
+   "newassets.hcaptcha.com",
+   "62829bb8aed4.w.hcaptcha.com",
+   "a3a3388d4935.w.hcaptcha.com"
+  ]
+ },
+ "w320-light": {
+  "atLoad": {
+   "scrollY": 0,
+   "slot": {
+    "l": 41,
+    "t": 1662.1,
+    "w": 214.2,
+    "h": 70.2,
+    "r": 255.2
+   },
+   "slotTheme": null,
+   "slotTransform": "matrix(0.9, 0, 0, 0.9, 0, 0)",
+   "iframe": null,
+   "iframeTitle": null,
+   "iframeSrc": null,
+   "textarea": false,
+   "form": {
+    "l": 20,
+    "t": 616.3,
+    "w": 280,
+    "h": 1301.8,
+    "r": 300
+   },
+   "formInnerRight": 279,
+   "submit": {
+    "l": 41,
+    "t": 1756.1,
+    "w": 238,
+    "h": 56,
+    "r": 279
+   },
+   "pageH": 3967,
+   "overflowX": 0,
+   "hcScripts": []
+  },
+  "beforeWidget": {
+   "scrollY": 1086,
+   "slot": {
+    "l": 41,
+    "t": 1662.1,
+    "w": 214.2,
+    "h": 70.2,
+    "r": 255.2
+   },
+   "slotTheme": "light",
+   "slotTransform": "matrix(0.9, 0, 0, 0.9, 0, 0)",
+   "iframe": null,
+   "iframeTitle": null,
+   "iframeSrc": null,
+   "textarea": false,
+   "form": {
+    "l": 20,
+    "t": 616.3,
+    "w": 280,
+    "h": 1301.8,
+    "r": 300
+   },
+   "formInnerRight": 279,
+   "submit": {
+    "l": 41,
+    "t": 1756.1,
+    "w": 238,
+    "h": 56,
+    "r": 279
+   },
+   "pageH": 3967,
+   "overflowX": 0,
+   "hcScripts": [
+    "https://js.hcaptcha.com/1/api.js?recaptchacompat=off"
+   ]
+  },
+  "widgetMs": 323,
+  "afterWidget": {
+   "scrollY": 1251,
+   "slot": {
+    "l": 41,
+    "t": 1662.1,
+    "w": 214.2,
+    "h": 70.2,
+    "r": 255.2
+   },
+   "slotTheme": "light",
+   "slotTransform": "matrix(0.9, 0, 0, 0.9, 0, 0)",
+   "iframe": {
+    "l": 41,
+    "t": 1662.1,
+    "w": 271.8,
+    "h": 68.4,
+    "r": 312.8
+   },
+   "iframeTitle": "Widget containing checkbox for hCaptcha security challenge",
+   "iframeSrc": "https://newassets.hcaptcha.com/captcha/v1/b7cb55144cfb1f79ab8b18a24ea5786dc178370e/static/hcaptcha.html#frame=checkbox&id=0zvujeil3nys&host=localhost&sentry=tru",
+   "textarea": true,
+   "form": {
+    "l": 20,
+    "t": 616.3,
+    "w": 280,
+    "h": 1301.8,
+    "r": 300
+   },
+   "formInnerRight": 279,
+   "submit": {
+    "l": 41,
+    "t": 1756.1,
+    "w": 238,
+    "h": 56,
+    "r": 279
+   },
+   "pageH": 3967,
+   "overflowX": 0,
+   "hcScripts": [
+    "https://js.hcaptcha.com/1/api.js?recaptchacompat=off"
+   ]
+  },
+  "cls": [],
+  "widget": {
+   "text": "I am human Privacy - Terms Warning: localhost detected. Please use a valid host.",
+   "bg": "rgb(250, 250, 250)",
+   "warn": null,
+   "w": 302,
+   "h": 76
+  },
+  "log": [
+   {
+    "t": "console.error",
+    "text": "Warning: localhost detected. Please use a valid host."
+   },
+   {
+    "t": "requestfailed",
+    "url": "https://2bd1e626cca7.w.hcaptcha.com/logo.png",
+    "err": "net::ERR_ABORTED"
+   }
+  ],
+  "hosts": [
+   "plausible.io",
+   "js.hcaptcha.com",
+   "newassets.hcaptcha.com",
+   "9ee230d7c437.w.hcaptcha.com",
+   "2bd1e626cca7.w.hcaptcha.com"
+  ]
+ },
+ "w320-dark": {
+  "atLoad": {
+   "scrollY": 0,
+   "slot": {
+    "l": 41,
+    "t": 1662.1,
+    "w": 214.2,
+    "h": 70.2,
+    "r": 255.2
+   },
+   "slotTheme": null,
+   "slotTransform": "matrix(0.9, 0, 0, 0.9, 0, 0)",
+   "iframe": null,
+   "iframeTitle": null,
+   "iframeSrc": null,
+   "textarea": false,
+   "form": {
+    "l": 20,
+    "t": 616.3,
+    "w": 280,
+    "h": 1301.8,
+    "r": 300
+   },
+   "formInnerRight": 279,
+   "submit": {
+    "l": 41,
+    "t": 1756.1,
+    "w": 238,
+    "h": 56,
+    "r": 279
+   },
+   "pageH": 3967,
+   "overflowX": 0,
+   "hcScripts": []
+  },
+  "beforeWidget": {
+   "scrollY": 1058,
+   "slot": {
+    "l": 41,
+    "t": 1662.1,
+    "w": 214.2,
+    "h": 70.2,
+    "r": 255.2
+   },
+   "slotTheme": "dark",
+   "slotTransform": "matrix(0.9, 0, 0, 0.9, 0, 0)",
+   "iframe": null,
+   "iframeTitle": null,
+   "iframeSrc": null,
+   "textarea": false,
+   "form": {
+    "l": 20,
+    "t": 616.3,
+    "w": 280,
+    "h": 1301.8,
+    "r": 300
+   },
+   "formInnerRight": 279,
+   "submit": {
+    "l": 41,
+    "t": 1756.1,
+    "w": 238,
+    "h": 56,
+    "r": 279
+   },
+   "pageH": 3967,
+   "overflowX": 0,
+   "hcScripts": [
+    "https://js.hcaptcha.com/1/api.js?recaptchacompat=off"
+   ]
+  },
+  "widgetMs": 553,
+  "afterWidget": {
+   "scrollY": 1251,
+   "slot": {
+    "l": 41,
+    "t": 1662.1,
+    "w": 214.2,
+    "h": 70.2,
+    "r": 255.2
+   },
+   "slotTheme": "dark",
+   "slotTransform": "matrix(0.9, 0, 0, 0.9, 0, 0)",
+   "iframe": {
+    "l": 41,
+    "t": 1662.1,
+    "w": 271.8,
+    "h": 68.4,
+    "r": 312.8
+   },
+   "iframeTitle": "Widget containing checkbox for hCaptcha security challenge",
+   "iframeSrc": "https://newassets.hcaptcha.com/captcha/v1/b7cb55144cfb1f79ab8b18a24ea5786dc178370e/static/hcaptcha.html#frame=checkbox&id=01wuuvrq1p35&host=localhost&sentry=tru",
+   "textarea": true,
+   "form": {
+    "l": 20,
+    "t": 616.3,
+    "w": 280,
+    "h": 1301.8,
+    "r": 300
+   },
+   "formInnerRight": 279,
+   "submit": {
+    "l": 41,
+    "t": 1756.1,
+    "w": 238,
+    "h": 56,
+    "r": 279
+   },
+   "pageH": 3967,
+   "overflowX": 0,
+   "hcScripts": [
+    "https://js.hcaptcha.com/1/api.js?recaptchacompat=off"
+   ]
+  },
+  "cls": [],
+  "widget": {
+   "text": "I am human Privacy - Terms Warning: localhost detected. Please use a valid host.",
+   "bg": "rgb(51, 51, 51)",
+   "warn": null,
+   "w": 302,
+   "h": 76
+  },
+  "log": [
+   {
+    "t": "console.error",
+    "text": "Warning: localhost detected. Please use a valid host."
+   },
+   {
+    "t": "requestfailed",
+    "url": "https://be2ae208a7f3.w.hcaptcha.com/logo.png",
+    "err": "net::ERR_ABORTED"
+   }
+  ],
+  "hosts": [
+   "plausible.io",
+   "js.hcaptcha.com",
+   "99638e42f811.w.hcaptcha.com",
+   "newassets.hcaptcha.com",
+   "be2ae208a7f3.w.hcaptcha.com"
+  ]
+ },
+ "w1280-light": {
+  "atLoad": {
+   "scrollY": 0,
+   "slot": {
+    "l": 81,
+    "t": 1216.9,
+    "w": 579.9,
+    "h": 78,
+    "r": 660.9
+   },
+   "slotTheme": null,
+   "slotTransform": "none",
+   "iframe": null,
+   "iframeTitle": null,
+   "iframeSrc": null,
+   "textarea": false,
+   "form": {
+    "l": 48,
+    "t": 483.1,
+    "w": 645.9,
+    "h": 967.3,
+    "r": 693.9
+   },
+   "formInnerRight": 660.9,
+   "submit": {
+    "l": 81,
+    "t": 1310.9,
+    "w": 579.9,
+    "h": 56,
+    "r": 660.9
+   },
+   "pageH": 2211,
+   "overflowX": 0,
+   "hcScripts": []
+  },
+  "beforeWidget": {
+   "scrollY": 662,
+   "slot": {
+    "l": 81,
+    "t": 1216.9,
+    "w": 579.9,
+    "h": 78,
+    "r": 660.9
+   },
+   "slotTheme": "light",
+   "slotTransform": "none",
+   "iframe": null,
+   "iframeTitle": null,
+   "iframeSrc": null,
+   "textarea": false,
+   "form": {
+    "l": 48,
+    "t": 483.1,
+    "w": 645.9,
+    "h": 967.3,
+    "r": 693.9
+   },
+   "formInnerRight": 660.9,
+   "submit": {
+    "l": 81,
+    "t": 1310.9,
+    "w": 579.9,
+    "h": 56,
+    "r": 660.9
+   },
+   "pageH": 2211,
+   "overflowX": 0,
+   "hcScripts": [
+    "https://js.hcaptcha.com/1/api.js?recaptchacompat=off"
+   ]
+  },
+  "widgetMs": 268,
+  "afterWidget": {
+   "scrollY": 692,
+   "slot": {
+    "l": 81,
+    "t": 1216.9,
+    "w": 579.9,
+    "h": 78,
+    "r": 660.9
+   },
+   "slotTheme": "light",
+   "slotTransform": "none",
+   "iframe": {
+    "l": 81,
+    "t": 1216.9,
+    "w": 302,
+    "h": 76,
+    "r": 383
+   },
+   "iframeTitle": "Widget containing checkbox for hCaptcha security challenge",
+   "iframeSrc": "https://newassets.hcaptcha.com/captcha/v1/b7cb55144cfb1f79ab8b18a24ea5786dc178370e/static/hcaptcha.html#frame=checkbox&id=0g2qazzi8mxa&host=localhost&sentry=tru",
+   "textarea": true,
+   "form": {
+    "l": 48,
+    "t": 483.1,
+    "w": 645.9,
+    "h": 967.3,
+    "r": 693.9
+   },
+   "formInnerRight": 660.9,
+   "submit": {
+    "l": 81,
+    "t": 1310.9,
+    "w": 579.9,
+    "h": 56,
+    "r": 660.9
+   },
+   "pageH": 2211,
+   "overflowX": 0,
+   "hcScripts": [
+    "https://js.hcaptcha.com/1/api.js?recaptchacompat=off"
+   ]
+  },
+  "cls": [],
+  "widget": {
+   "text": "I am human Privacy - Terms Warning: localhost detected. Please use a valid host.",
+   "bg": "rgb(250, 250, 250)",
+   "warn": null,
+   "w": 302,
+   "h": 76
+  },
+  "log": [
+   {
+    "t": "console.error",
+    "text": "Warning: localhost detected. Please use a valid host."
+   },
+   {
+    "t": "requestfailed",
+    "url": "https://8214fd297680.w.hcaptcha.com/logo.png",
+    "err": "net::ERR_ABORTED"
+   }
+  ],
+  "hosts": [
+   "plausible.io",
+   "js.hcaptcha.com",
+   "newassets.hcaptcha.com",
+   "1acb908a3b43.w.hcaptcha.com",
+   "8214fd297680.w.hcaptcha.com"
+  ]
+ },
+ "w1280-dark": {
+  "atLoad": {
+   "scrollY": 0,
+   "slot": {
+    "l": 81,
+    "t": 1216.9,
+    "w": 579.9,
+    "h": 78,
+    "r": 660.9
+   },
+   "slotTheme": null,
+   "slotTransform": "none",
+   "iframe": null,
+   "iframeTitle": null,
+   "iframeSrc": null,
+   "textarea": false,
+   "form": {
+    "l": 48,
+    "t": 483.1,
+    "w": 645.9,
+    "h": 967.3,
+    "r": 693.9
+   },
+   "formInnerRight": 660.9,
+   "submit": {
+    "l": 81,
+    "t": 1310.9,
+    "w": 579.9,
+    "h": 56,
+    "r": 660.9
+   },
+   "pageH": 2211,
+   "overflowX": 0,
+   "hcScripts": []
+  },
+  "beforeWidget": {
+   "scrollY": 662,
+   "slot": {
+    "l": 81,
+    "t": 1216.9,
+    "w": 579.9,
+    "h": 78,
+    "r": 660.9
+   },
+   "slotTheme": "dark",
+   "slotTransform": "none",
+   "iframe": null,
+   "iframeTitle": null,
+   "iframeSrc": null,
+   "textarea": false,
+   "form": {
+    "l": 48,
+    "t": 483.1,
+    "w": 645.9,
+    "h": 967.3,
+    "r": 693.9
+   },
+   "formInnerRight": 660.9,
+   "submit": {
+    "l": 81,
+    "t": 1310.9,
+    "w": 579.9,
+    "h": 56,
+    "r": 660.9
+   },
+   "pageH": 2211,
+   "overflowX": 0,
+   "hcScripts": [
+    "https://js.hcaptcha.com/1/api.js?recaptchacompat=off"
+   ]
+  },
+  "widgetMs": 291,
+  "afterWidget": {
+   "scrollY": 692,
+   "slot": {
+    "l": 81,
+    "t": 1216.9,
+    "w": 579.9,
+    "h": 78,
+    "r": 660.9
+   },
+   "slotTheme": "dark",
+   "slotTransform": "none",
+   "iframe": {
+    "l": 81,
+    "t": 1216.9,
+    "w": 302,
+    "h": 76,
+    "r": 383
+   },
+   "iframeTitle": "Widget containing checkbox for hCaptcha security challenge",
+   "iframeSrc": "https://newassets.hcaptcha.com/captcha/v1/b7cb55144cfb1f79ab8b18a24ea5786dc178370e/static/hcaptcha.html#frame=checkbox&id=0l8toi68nkzc&host=localhost&sentry=tru",
+   "textarea": true,
+   "form": {
+    "l": 48,
+    "t": 483.1,
+    "w": 645.9,
+    "h": 967.3,
+    "r": 693.9
+   },
+   "formInnerRight": 660.9,
+   "submit": {
+    "l": 81,
+    "t": 1310.9,
+    "w": 579.9,
+    "h": 56,
+    "r": 660.9
+   },
+   "pageH": 2211,
+   "overflowX": 0,
+   "hcScripts": [
+    "https://js.hcaptcha.com/1/api.js?recaptchacompat=off"
+   ]
+  },
+  "cls": [],
+  "widget": {
+   "text": "I am human Privacy - Terms Warning: localhost detected. Please use a valid host.",
+   "bg": "rgb(51, 51, 51)",
+   "warn": null,
+   "w": 302,
+   "h": 76
+  },
+  "log": [
+   {
+    "t": "console.error",
+    "text": "Warning: localhost detected. Please use a valid host."
+   },
+   {
+    "t": "requestfailed",
+    "url": "https://7c3d5c7a4c4c.w.hcaptcha.com/logo.png",
+    "err": "net::ERR_ABORTED"
+   }
+  ],
+  "hosts": [
+   "plausible.io",
+   "js.hcaptcha.com",
+   "newassets.hcaptcha.com",
+   "db31f3e30603.w.hcaptcha.com",
+   "7c3d5c7a4c4c.w.hcaptcha.com"
+  ]
+ },
+ "w820-light": {
+  "atLoad": {
+   "scrollY": 0,
+   "slot": {
+    "l": 66.6,
+    "t": 1371.5,
+    "w": 686.8,
+    "h": 78,
+    "r": 753.4
+   },
+   "slotTheme": null,
+   "slotTransform": "none",
+   "iframe": null,
+   "iframeTitle": null,
+   "iframeSrc": null,
+   "textarea": false,
+   "form": {
+    "l": 41,
+    "t": 637.7,
+    "w": 738,
+    "h": 967.3,
+    "r": 779
+   },
+   "formInnerRight": 753.4,
+   "submit": {
+    "l": 66.6,
+    "t": 1465.5,
+    "w": 686.8,
+    "h": 56,
+    "r": 753.4
+   },
+   "pageH": 3088,
+   "overflowX": 0,
+   "hcScripts": []
+  },
+  "beforeWidget": {
+   "scrollY": 684,
+   "slot": {
+    "l": 66.6,
+    "t": 1371.5,
+    "w": 686.8,
+    "h": 78,
+    "r": 753.4
+   },
+   "slotTheme": "light",
+   "slotTransform": "none",
+   "iframe": null,
+   "iframeTitle": null,
+   "iframeSrc": null,
+   "textarea": false,
+   "form": {
+    "l": 41,
+    "t": 637.7,
+    "w": 738,
+    "h": 967.3,
+    "r": 779
+   },
+   "formInnerRight": 753.4,
+   "submit": {
+    "l": 66.6,
+    "t": 1465.5,
+    "w": 686.8,
+    "h": 56,
+    "r": 753.4
+   },
+   "pageH": 3088,
+   "overflowX": 0,
+   "hcScripts": [
+    "https://js.hcaptcha.com/1/api.js?recaptchacompat=off"
+   ]
+  },
+  "widgetMs": 383,
+  "afterWidget": {
+   "scrollY": 730,
+   "slot": {
+    "l": 66.6,
+    "t": 1371.5,
+    "w": 686.8,
+    "h": 78,
+    "r": 753.4
+   },
+   "slotTheme": "light",
+   "slotTransform": "none",
+   "iframe": {
+    "l": 66.6,
+    "t": 1371.5,
+    "w": 302,
+    "h": 76,
+    "r": 368.6
+   },
+   "iframeTitle": "Widget containing checkbox for hCaptcha security challenge",
+   "iframeSrc": "https://newassets.hcaptcha.com/captcha/v1/b7cb55144cfb1f79ab8b18a24ea5786dc178370e/static/hcaptcha.html#frame=checkbox&id=0iq9grr3uq3m&host=localhost&sentry=tru",
+   "textarea": true,
+   "form": {
+    "l": 41,
+    "t": 637.7,
+    "w": 738,
+    "h": 967.3,
+    "r": 779
+   },
+   "formInnerRight": 753.4,
+   "submit": {
+    "l": 66.6,
+    "t": 1465.5,
+    "w": 686.8,
+    "h": 56,
+    "r": 753.4
+   },
+   "pageH": 3088,
+   "overflowX": 0,
+   "hcScripts": [
+    "https://js.hcaptcha.com/1/api.js?recaptchacompat=off"
+   ]
+  },
+  "cls": [],
+  "widget": {
+   "text": "I am human Privacy - Terms Warning: localhost detected. Please use a valid host.",
+   "bg": "rgb(250, 250, 250)",
+   "warn": null,
+   "w": 302,
+   "h": 76
+  },
+  "log": [
+   {
+    "t": "console.error",
+    "text": "Warning: localhost detected. Please use a valid host."
+   },
+   {
+    "t": "requestfailed",
+    "url": "https://c801f1c0275e.w.hcaptcha.com/logo.png",
+    "err": "net::ERR_ABORTED"
+   }
+  ],
+  "hosts": [
+   "plausible.io",
+   "js.hcaptcha.com",
+   "70017c942f19.w.hcaptcha.com",
+   "newassets.hcaptcha.com",
+   "c801f1c0275e.w.hcaptcha.com"
+  ]
+ },
+ "w820-dark": {
+  "atLoad": {
+   "scrollY": 0,
+   "slot": {
+    "l": 66.6,
+    "t": 1371.5,
+    "w": 686.8,
+    "h": 78,
+    "r": 753.4
+   },
+   "slotTheme": null,
+   "slotTransform": "none",
+   "iframe": null,
+   "iframeTitle": null,
+   "iframeSrc": null,
+   "textarea": false,
+   "form": {
+    "l": 41,
+    "t": 637.7,
+    "w": 738,
+    "h": 967.3,
+    "r": 779
+   },
+   "formInnerRight": 753.4,
+   "submit": {
+    "l": 66.6,
+    "t": 1465.5,
+    "w": 686.8,
+    "h": 56,
+    "r": 753.4
+   },
+   "pageH": 3088,
+   "overflowX": 0,
+   "hcScripts": []
+  },
+  "beforeWidget": {
+   "scrollY": 710,
+   "slot": {
+    "l": 66.6,
+    "t": 1371.5,
+    "w": 686.8,
+    "h": 78,
+    "r": 753.4
+   },
+   "slotTheme": "dark",
+   "slotTransform": "none",
+   "iframe": null,
+   "iframeTitle": null,
+   "iframeSrc": null,
+   "textarea": false,
+   "form": {
+    "l": 41,
+    "t": 637.7,
+    "w": 738,
+    "h": 967.3,
+    "r": 779
+   },
+   "formInnerRight": 753.4,
+   "submit": {
+    "l": 66.6,
+    "t": 1465.5,
+    "w": 686.8,
+    "h": 56,
+    "r": 753.4
+   },
+   "pageH": 3088,
+   "overflowX": 0,
+   "hcScripts": [
+    "https://js.hcaptcha.com/1/api.js?recaptchacompat=off"
+   ]
+  },
+  "widgetMs": 298,
+  "afterWidget": {
+   "scrollY": 730,
+   "slot": {
+    "l": 66.6,
+    "t": 1371.5,
+    "w": 686.8,
+    "h": 78,
+    "r": 753.4
+   },
+   "slotTheme": "dark",
+   "slotTransform": "none",
+   "iframe": {
+    "l": 66.6,
+    "t": 1371.5,
+    "w": 302,
+    "h": 76,
+    "r": 368.6
+   },
+   "iframeTitle": "Widget containing checkbox for hCaptcha security challenge",
+   "iframeSrc": "https://newassets.hcaptcha.com/captcha/v1/b7cb55144cfb1f79ab8b18a24ea5786dc178370e/static/hcaptcha.html#frame=checkbox&id=0m0rbu5nvlq&host=localhost&sentry=true",
+   "textarea": true,
+   "form": {
+    "l": 41,
+    "t": 637.7,
+    "w": 738,
+    "h": 967.3,
+    "r": 779
+   },
+   "formInnerRight": 753.4,
+   "submit": {
+    "l": 66.6,
+    "t": 1465.5,
+    "w": 686.8,
+    "h": 56,
+    "r": 753.4
+   },
+   "pageH": 3088,
+   "overflowX": 0,
+   "hcScripts": [
+    "https://js.hcaptcha.com/1/api.js?recaptchacompat=off"
+   ]
+  },
+  "cls": [],
+  "widget": {
+   "text": "I am human Privacy - Terms Warning: localhost detected. Please use a valid host.",
+   "bg": "rgb(51, 51, 51)",
+   "warn": null,
+   "w": 302,
+   "h": 76
+  },
+  "log": [
+   {
+    "t": "console.error",
+    "text": "Warning: localhost detected. Please use a valid host."
+   },
+   {
+    "t": "requestfailed",
+    "url": "https://e75211481f32.w.hcaptcha.com/logo.png",
+    "err": "net::ERR_ABORTED"
+   }
+  ],
+  "hosts": [
+   "plausible.io",
+   "js.hcaptcha.com",
+   "newassets.hcaptcha.com",
+   "e75211481f32.w.hcaptcha.com",
+   "a1e032eba8a1.w.hcaptcha.com"
+  ]
+ }
+}

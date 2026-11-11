@@ -1,0 +1,2 @@
+/* KWS motion kit: spotlight carousel. Framed cards in a row, the middle one lit; drag, swipe, arrows, dots and arrow keys move it.
+   Starts on [data-kws="spotlight"], or: const off = KWS.spotlight.mount(el, { start: 0, loop: true, noun: 'project' }); off(); See NOTES.md */

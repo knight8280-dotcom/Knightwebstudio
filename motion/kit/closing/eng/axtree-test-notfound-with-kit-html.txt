@@ -1,0 +1,13 @@
+contentinfo
+  link "(225) 255-0837" [focusable=true]
+    · (225) 255-0837
+  link "knightwebstudio1@gmail.com" [focusable=true]
+    · knightwebstudio1@gmail.com
+  paragraph
+    · KnightWebstudio · Based in Baton Rouge, Louisiana
+  link "Home" [focusable=true]
+    · Home
+  link "Privacy" [focusable=true]
+    · Privacy
+  link "Terms" [focusable=true]
+    · Terms

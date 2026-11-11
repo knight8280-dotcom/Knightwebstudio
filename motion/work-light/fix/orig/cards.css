@@ -1,0 +1,80 @@
+/* KnightWebstudio motion kit: folder cards and bookmark cards. HTML and CSS; only the folder stack needs cards.js.
+   Theme: the --kit-* variables, each falling back to this site's token. Markup: NOTES.md. */
+.kws-folders, .kws-marks, .kws-folder, .kws-mark {
+  --kws-f: var(--kit-surface, var(--card)); --kws-b: var(--kit-bg, var(--paper)); --kws-i: var(--kit-ink, var(--ink)); --kws-m: var(--kit-muted, var(--ink-3));
+  --kws-e: 1px solid var(--kit-line, var(--line-2)); --kws-r: var(--kit-radius, var(--r-lg)); --kws-p: var(--pad, 24px);
+}
+.kws-folders, .kws-marks { display: grid; gap: var(--gap, 24px); margin: 0; padding: 0; list-style: none; }
+.kws-folder, .kws-mark { position: relative; isolation: isolate; display: flex; flex-direction: column; color: var(--kws-m); font: 400 var(--fs-sm, .9375rem)/1.5 var(--kit-font-body, var(--font-text)); }
+:is(.kws-folder, .kws-mark) :is(p, dl, dd) { margin: 0; }
+.kws-folder-no, .kws-folder-tab b, .kws-folder-price, .kws-folder-body h3, .kws-mark h3, .kws-mark-price {
+  margin: 0; color: var(--kws-i); font: 600 var(--fs-h4, 1.1875rem)/1.15 var(--kit-font-display, var(--font-display)); font-variation-settings: "SOFT" 100;
+}
+.kws-label { color: var(--kws-m); font-size: var(--fs-label, .8125rem); font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+/* .kws-link: the whole card is its heading's link */
+.kws-link h3 a { color: inherit; text-decoration: none; outline: 0; }
+.kws-link h3 a::after { content: ""; position: absolute; inset: 0; z-index: 2; border-radius: var(--kws-r); }
+.kws-link h3 a:focus-visible::after { outline: 3px solid var(--kit-accent, var(--focus)); outline-offset: 3px; }
+.kws-go {
+  position: absolute; right: 14px; top: 14px; box-sizing: border-box; width: 36px; height: 36px; padding: 8px; border: var(--kws-e); border-radius: 50%;
+  background: var(--kws-f); fill: none; stroke: var(--kit-accent, var(--blue)); stroke-width: 2.2; stroke-linecap: round;
+}
+.kws-link, .kws-go { transition: transform .2s; }
+.kws-link:active { transform: translateY(1px); }
+@media (hover: hover) {
+  .kws-link:hover { transform: translateY(-3px); }
+  .kws-link:hover .kws-go { transform: translateX(4px); }
+}
+
+/* Folder cards */
+@media (min-width: 760px) { .kws-folders { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1100px) { .kws-folders { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.kws-folder-tab {
+  position: relative; z-index: 1; align-self: flex-start; min-width: 5rem; min-height: 44px; margin: 0 0 -1px; padding: 9px 18px 7px;
+  border: var(--kws-e); border-bottom: 0; border-radius: calc(var(--kws-r) * .55) calc(var(--kws-r) * .55) 0 0;
+  background: var(--kws-f); color: var(--kws-i); font: 700 clamp(12.5px, 3.4vw, 15px)/1.25 var(--kit-font-body, var(--font-text)); text-align: left;
+}
+.kws-folder-tab b { display: block; color: inherit; font-size: clamp(15px, 4.4vw, 19px); }
+.kws-folder-no { color: var(--kit-notice, var(--brick)); font-size: var(--fs-title, 1.75rem); }
+.kws-folder-tab::after { content: ""; position: absolute; left: 100%; bottom: 0; width: 12px; height: 12px; background: radial-gradient(circle at 100% 0, transparent 11px, var(--kit-line, var(--line-2)) 11.5px 12px, var(--kws-f) 12.5px); }
+.kws-folder-body::before { content: ""; position: absolute; z-index: -1; inset: -6px 10px auto; height: 12px; border: var(--kws-e); border-radius: 6px 6px 0 0; background: var(--kws-b); }
+.kws-folder-body {
+  position: relative; flex: 1; display: grid; align-content: start; gap: 10px; padding: var(--kws-p);
+  border: var(--kws-e); border-radius: 0 var(--kws-r) var(--kws-r); background: var(--kws-f); box-shadow: var(--kit-shadow, var(--shadow-1));
+}
+.kws-folder-body h3 { font-size: var(--fs-h3, 1.4rem); }
+.kws-folder-price { font-size: var(--fs-price, 2.75rem); line-height: 1; }
+.kws-folder-art { position: relative; overflow: hidden; height: 84px; margin: calc(var(--kws-p) * -1) calc(var(--kws-p) * -1) 6px; border-bottom: var(--kws-e); border-radius: 0 var(--kws-r) 0 0; }
+.kws-folder dl > div { display: grid; grid-template-columns: 6.5em minmax(0, 1fr); column-gap: 12px; padding: 10px 0; border-top: 1px dashed var(--kit-line, var(--line-2)); }
+.kws-folder dd { grid-column: 2; color: var(--kws-i); }
+
+/* The stack. --kws-1 is on when stacked, --kws-0 when it is a plain list */
+.kws-folders--stack { --kws-1: ; --kws-0: initial; gap: var(--kws-0, var(--gap, 24px)) var(--kws-1, 0px); }
+.kws-folders--stack:not(.kws-folders--phone) { grid-template-columns: minmax(0, 1fr); }
+.js .kws-folders--stack[data-kws], .kws-folders--stack.is-live { --kws-1: initial; --kws-0: ; }
+@media (min-width: 760px) { .kws-folders--phone.kws-folders--phone[data-kws] { --kws-1: ; --kws-0: initial; } }
+.kws-folders--stack > .kws-folder { grid-area: var(--kws-1, 2 / 1); visibility: var(--kws-1, hidden); }
+.kws-folders--stack:not(.is-live) > :first-child, .kws-folders--stack > .is-front { visibility: visible; }
+.kws-folders--stack .kws-folder-tab::after, .is-live > .kws-folder > .kws-folder-tab { display: none; }
+.kws-folders--stack .kws-folder-body { border-radius: var(--kws-0, 0 var(--kws-r) var(--kws-r)) var(--kws-1, 0 0 var(--kws-r) var(--kws-r)); }
+.kws-folders-tabs { grid-area: 1 / 1; display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 3px; }
+.kws-folders-tabs > * { align-self: end; min-width: 0; padding-inline: 5px; box-shadow: inset 0 3px var(--kws-i); cursor: pointer; }
+.kws-folders-tabs [aria-selected="false"] { margin: 0; border-bottom: var(--kws-e); background: var(--kws-b); box-shadow: none; color: var(--kws-m); }
+.is-moved > .is-front > .kws-folder-body > * { animation: kws-front .28s both; }
+@keyframes kws-front { from { opacity: 0; transform: translateY(8px); } }
+@media (prefers-reduced-motion: reduce) { .kws-folder-body > *, .kws-link, .kws-go { animation: none; transition: none; } }
+[data-motion="off"] .kws-folder-body > * { animation: none; }
+
+/* Bookmark cards */
+@media (min-width: 760px) { .kws-marks { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.kws-mark { gap: 8px; padding: 20px; border: var(--kws-e); border-radius: var(--kws-r); background: var(--kws-f); box-shadow: var(--kit-shadow, var(--shadow-1)); }
+.kws-mark::before { content: ""; position: absolute; top: -7px; right: 26px; width: 26px; height: 46px; background: var(--kit-notice, var(--brick)); clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 76%, 0 100%); }
+.kws-mark .kws-label { padding-right: 48px; }
+.kws-mark-art { position: relative; overflow: hidden; aspect-ratio: 16 / 7; margin-bottom: 10px; border: var(--kws-e); border-radius: calc(var(--kws-r) * .55); }
+.kws-mark h3 { font-size: var(--fs-title, 1.75rem); }
+.kws-mark > :last-child { padding-right: 40px; }
+.kws-mark .kws-go { top: auto; bottom: 16px; }
+@media (min-width: 760px) {
+  .kws-mark-art { aspect-ratio: 4 / 3; }
+  @supports (grid-template-rows: subgrid) { .kws-mark { display: grid; grid-row: span 5; grid-template-rows: subgrid; } }
+}

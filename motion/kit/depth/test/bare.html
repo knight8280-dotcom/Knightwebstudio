@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Kit on a bare page: no site stylesheet, no site script</title>
+<!-- The one line a client page puts in its head: it holds each carousel's space until its script runs, for at most four seconds -->
+<script>document.documentElement.classList.add('kws-hold'); setTimeout(function () { document.documentElement.classList.remove('kws-hold'); }, 4000);</script>
+<link rel="stylesheet" href="../cylinder.css">
+<link rel="stylesheet" href="../ring.css">
+<style>
+/* Everything a client site would supply: a small reset (as a utility framework's base layer does), fonts, and the kit variables. */
+*, *::before, *::after { box-sizing: border-box; }
+h1, h2, h3, p { margin: 0; font-size: inherit; font-weight: inherit; }
+body { margin: 0; background: #FBF4E9; color: #4B3B33; font: 16px/1.6 "Avenir Next", "Segoe UI", system-ui, sans-serif; overflow-x: clip; }
+:root {
+  --kit-bg: #FBF4E9; --kit-surface: #FFFFFF; --kit-ink: #2B1D17; --kit-muted: #5E4B42; --kit-line: #D9C7B3;
+  --kit-accent: #7A2E1D; --kit-accent-ink: #FFF6E6; --kit-notice: #A2542A; --kit-gilt: #E9B872;
+  --kit-radius: 18px; --kit-font-display: "Rockwell", "Roboto Slab", "Georgia", serif; --kit-font-body: "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --kit-shadow: 0 1px 0 rgba(43, 29, 23, .25), 0 14px 26px -16px rgba(43, 29, 23, .55);
+  --kws-bleed: 20px; /* this page's side padding: how far the ring may run past its column */
+}
+main { padding: 48px 0 96px; }
+.wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+h1 { margin-bottom: 40px; color: var(--kit-ink); font: 700 clamp(2rem, 6vw, 3.25rem)/1.05 var(--kit-font-display); }
+h2 { margin: 72px 0 32px; color: var(--kit-ink); font: 700 clamp(1.6rem, 4vw, 2.25rem)/1.1 var(--kit-font-display); }
+/* The client's own pictures go in the art slot; here, plain placeholders */
+.pic { width: 100%; height: 9rem; border-radius: 10px; background: repeating-linear-gradient(135deg, #F3E6D4 0 12px, #FBF4E9 12px 24px); }
+.kws-cyl-card a { color: var(--kit-accent); font-weight: 700; }
+</style>
+</head>
+<body>
+<main>
+  <div class="wrap"><h1>The kit on a bare page</h1></div>
+  <section class="kws-cyl" data-kws="cylinder" data-noun="step" aria-label="How it works, step by step">
+    <ol class="kws-cyl-track">
+      <li class="kws-cyl-card">
+        <p class="kws-cyl-tag"><b aria-hidden="true">1</b><span>Missed-call text-back <strong>$750 setup</strong></span></p>
+        <h3 class="kws-cyl-title">You can't pick up.</h3>
+        <div class="kws-cyl-art">
+          <span class="kws-cyl-eg">Example</span>
+          <div class="pic"></div>
+        </div>
+        <p class="kws-cyl-text">You're on a job, up a ladder or with a customer. The phone rings out. <a href="#step-1">More on step 1</a></p>
+      </li>
+      <li class="kws-cyl-card">
+        <p class="kws-cyl-tag"><b aria-hidden="true">2</b><span>Missed-call text-back <strong>Same setup as step 1</strong></span></p>
+        <h3 class="kws-cyl-title">Within a minute, they get a text.</h3>
+        <div class="kws-cyl-art">
+          <span class="kws-cyl-eg">Example</span>
+          <div class="pic"></div>
+        </div>
+        <p class="kws-cyl-text">The caller gets a text from your business number asking what they need. Their reply lands on your phone, so you call back knowing the job. <a href="#step-2">More on step 2</a></p>
+      </li>
+      <li class="kws-cyl-card">
+        <p class="kws-cyl-tag"><b aria-hidden="true">3</b><span>Online booking &amp; reminders <strong>$750 setup</strong></span></p>
+        <h3 class="kws-cyl-title">They pick a time. It's on your calendar.</h3>
+        <div class="kws-cyl-art">
+          <span class="kws-cyl-eg">Example</span>
+          <div class="pic"></div>
+        </div>
+        <p class="kws-cyl-text">Customers pick a time on your site or Google profile, with no double bookings. Confirmations and reminders go out on their own. <a href="#step-3">More on step 3</a></p>
+      </li>
+      <li class="kws-cyl-card">
+        <p class="kws-cyl-tag"><b aria-hidden="true">4</b><span>Lead follow-up system <strong>$1,500 setup</strong></span></p>
+        <h3 class="kws-cyl-title">The quote went quiet? It follows up for you.</h3>
+        <div class="kws-cyl-art">
+          <span class="kws-cyl-eg">Example</span>
+          <div class="pic"></div>
+        </div>
+        <p class="kws-cyl-text">Every enquiry is saved to one list automatically. Quiet quotes get a friendly follow-up after 2 days and a week. <a href="#step-4">More on step 4</a></p>
+      </li>
+      <li class="kws-cyl-card">
+        <p class="kws-cyl-tag"><b aria-hidden="true">5</b><span>Lead follow-up system <strong>Same setup as step 4</strong></span></p>
+        <h3 class="kws-cyl-title">Job done. The review request sends itself.</h3>
+        <div class="kws-cyl-art">
+          <span class="kws-cyl-eg">Example</span>
+          <div class="pic"></div>
+        </div>
+        <p class="kws-cyl-text">Finished jobs get a review request with your Google link. <a href="#step-5">More on step 5</a></p>
+      </li>
+    </ol>
+  </section>
+  <div class="wrap">
+  <h2>The card file</h2>
+  <div class="kws-ring" data-kws="ring">
+    <div class="kws-ring-stage" aria-hidden="true"></div>
+    <div class="kws-ring-lists">
+      <div class="kws-ring-group">
+        <h3 class="kws-ring-name">One-page</h3>
+        <p class="kws-ring-price">$1,000</p>
+        <ul>
+          <li>1 page</li>
+          <li>Custom design</li>
+          <li>1 revision round</li>
+          <li data-short="Copy editing and polish">Copy editing and polish (you supply the text)</li>
+          <li>Contact form</li>
+          <li>Mobile &amp; SEO basics</li>
+          <li>14 days of support</li>
+        </ul>
+      </div>
+      <div class="kws-ring-group">
+        <h3 class="kws-ring-name">Starter</h3>
+        <p class="kws-ring-price">$2,000</p>
+        <ul>
+          <li>Up to 5 pages</li>
+          <li>Custom design</li>
+          <li>1 revision round</li>
+          <li data-short="Copy editing and polish">Copy editing and polish (you supply the text)</li>
+          <li>Contact form</li>
+          <li>Mobile &amp; SEO basics</li>
+          <li>30 days of support</li>
+        </ul>
+      </div>
+      <div class="kws-ring-group">
+        <h3 class="kws-ring-name">Business</h3>
+        <p class="kws-ring-price">$4,000</p>
+        <ul>
+          <li>Up to 10 pages</li>
+          <li>Up to 3 design rounds</li>
+          <li>Plus a final tweaks round</li>
+          <li data-short="Copywriting">Copywriting: we draft, you edit</li>
+          <li>Blog or news section</li>
+          <li>Analytics &amp; tracking setup</li>
+          <li>Local SEO configuration</li>
+          <li>90 days of support</li>
+        </ul>
+      </div>
+      <div class="kws-ring-group">
+        <h3 class="kws-ring-name">Commerce</h3>
+        <p class="kws-ring-price">$8,000</p>
+        <ul>
+          <li>Full store build</li>
+          <li>Up to 3 design rounds</li>
+          <li>Plus a final tweaks round</li>
+          <li>Payments, shipping &amp; tax</li>
+          <li>Product import</li>
+          <li>Email &amp; abandoned cart flows</li>
+          <li>Team training session</li>
+          <li>6 months of support</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  </div>
+</main>
+<script src="../cylinder.js" defer></script>
+<script src="../ring.js" defer></script>
+</body>
+</html>

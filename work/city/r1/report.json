@@ -1,0 +1,18 @@
+{
+  "web-design-baton-rouge__mobile-light": {
+    "height": 7769,
+    "overflowX": 0,
+    "stops": 11,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "web-design-baton-rouge__desktop-light": {
+    "height": 6042,
+    "overflowX": 0,
+    "stops": 8,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  }
+}

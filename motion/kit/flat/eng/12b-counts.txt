@@ -1,0 +1,36 @@
+PASS  360: arc with 1 item(s)  {"controls":3,"controlRows":1,"controlRowH":44,"visiblePictures":1,"next":[0,0],"prev":[0,0],"h":400,"over":[],"sx":0}
+PASS  360: arc with 2 item(s)  {"controls":4,"controlRows":1,"controlRowH":44,"visiblePictures":2,"next":[1,0,1],"prev":[0,1],"h":400,"over":[],"sx":0}
+PASS  360: arc with 3 item(s)  {"controls":5,"controlRows":1,"controlRowH":44,"visiblePictures":3,"next":[1,2,0,1],"prev":[0,2],"h":400,"over":[],"sx":0}
+PASS  360: arc with 4 item(s)  {"controls":6,"controlRows":1,"controlRowH":44,"visiblePictures":3,"next":[1,2,3,0,1],"prev":[0,3],"h":400,"over":[],"sx":0}
+PASS  360: arc with 30 item(s)  {"controls":32,"controlRows":3,"controlRowH":132,"visiblePictures":3,"next":[1,2,3,4,5],"prev":[4,3],"h":488,"over":[],"sx":0}
+PASS  360: arc with 9 item(s) loop:false  {"controls":11,"controlRows":1,"controlRowH":44,"visiblePictures":3,"next":[1,2,3,4,5],"prev":[4,3],"h":400,"over":[],"sx":0}
+PASS  360: spotlight with 1 item(s)  {"controls":0,"controlRows":0,"controlRowH":0,"visiblePictures":1,"next":[],"prev":[],"h":434,"over":[],"sx":0}
+PASS  360: spotlight with 2 item(s)  {"controls":4,"controlRows":1,"controlRowH":44,"visiblePictures":2,"next":[1,0,1],"prev":[0,1],"h":494,"over":[],"sx":0}
+PASS  360: spotlight with 4 item(s)  {"controls":6,"controlRows":1,"controlRowH":44,"visiblePictures":3,"next":[1,2,3,0,1],"prev":[0,3],"h":494,"over":[],"sx":0}
+PASS  360: spotlight with 12 item(s)  {"controls":14,"controlRows":2,"controlRowH":88,"visiblePictures":3,"next":[1,2,3,4,5],"prev":[4,3],"h":538,"over":[],"sx":0}
+PASS  360: spotlight with 5 item(s) loop:false  {"controls":7,"controlRows":1,"controlRowH":44,"visiblePictures":3,"next":[1,2,3,4,0],"prev":[4,3],"h":494,"over":[],"sx":0}
+PASS  360: no console errors  
+PASS  390: arc with 1 item(s)  {"controls":3,"controlRows":1,"controlRowH":44,"visiblePictures":1,"next":[0,0],"prev":[0,0],"h":400,"over":[],"sx":0}
+PASS  390: arc with 2 item(s)  {"controls":4,"controlRows":1,"controlRowH":44,"visiblePictures":2,"next":[1,0,1],"prev":[0,1],"h":400,"over":[],"sx":0}
+PASS  390: arc with 3 item(s)  {"controls":5,"controlRows":1,"controlRowH":44,"visiblePictures":3,"next":[1,2,0,1],"prev":[0,2],"h":400,"over":[],"sx":0}
+PASS  390: arc with 4 item(s)  {"controls":6,"controlRows":1,"controlRowH":44,"visiblePictures":3,"next":[1,2,3,0,1],"prev":[0,3],"h":400,"over":[],"sx":0}
+PASS  390: arc with 30 item(s)  {"controls":32,"controlRows":3,"controlRowH":132,"visiblePictures":3,"next":[1,2,3,4,5],"prev":[4,3],"h":488,"over":[],"sx":0}
+PASS  390: arc with 9 item(s) loop:false  {"controls":11,"controlRows":1,"controlRowH":44,"visiblePictures":3,"next":[1,2,3,4,5],"prev":[4,3],"h":400,"over":[],"sx":0}
+PASS  390: spotlight with 1 item(s)  {"controls":0,"controlRows":0,"controlRowH":0,"visiblePictures":1,"next":[],"prev":[],"h":431,"over":[],"sx":0}
+PASS  390: spotlight with 2 item(s)  {"controls":4,"controlRows":1,"controlRowH":44,"visiblePictures":2,"next":[1,0,1],"prev":[0,1],"h":491,"over":[],"sx":0}
+PASS  390: spotlight with 4 item(s)  {"controls":6,"controlRows":1,"controlRowH":44,"visiblePictures":3,"next":[1,2,3,0,1],"prev":[0,3],"h":491,"over":[],"sx":0}
+PASS  390: spotlight with 12 item(s)  {"controls":14,"controlRows":2,"controlRowH":88,"visiblePictures":3,"next":[1,2,3,4,5],"prev":[4,3],"h":535,"over":[],"sx":0}
+PASS  390: spotlight with 5 item(s) loop:false  {"controls":7,"controlRows":1,"controlRowH":44,"visiblePictures":3,"next":[1,2,3,4,0],"prev":[4,3],"h":491,"over":[],"sx":0}
+PASS  390: no console errors  
+PASS  1280: arc with 1 item(s)  {"controls":3,"controlRows":1,"controlRowH":44,"visiblePictures":1,"next":[0,0],"prev":[0,0],"h":448,"over":[],"sx":0}
+PASS  1280: arc with 2 item(s)  {"controls":4,"controlRows":1,"controlRowH":44,"visiblePictures":2,"next":[1,0,1],"prev":[0,1],"h":448,"over":[],"sx":0}
+PASS  1280: arc with 3 item(s)  {"controls":5,"controlRows":1,"controlRowH":44,"visiblePictures":3,"next":[1,2,0,1],"prev":[0,2],"h":448,"over":[],"sx":0}
+PASS  1280: arc with 4 item(s)  {"controls":6,"controlRows":1,"controlRowH":44,"visiblePictures":3,"next":[1,2,3,0,1],"prev":[0,3],"h":448,"over":[],"sx":0}
+PASS  1280: arc with 30 item(s)  {"controls":32,"controlRows":1,"controlRowH":44,"visiblePictures":9,"next":[1,2,3,4,5],"prev":[4,3],"h":448,"over":[],"sx":0}
+PASS  1280: arc with 9 item(s) loop:false  {"controls":11,"controlRows":1,"controlRowH":44,"visiblePictures":8,"next":[1,2,3,4,5],"prev":[4,3],"h":448,"over":[],"sx":0}
+PASS  1280: spotlight with 1 item(s)  {"controls":0,"controlRows":0,"controlRowH":0,"visiblePictures":1,"next":[],"prev":[],"h":526,"over":[],"sx":0}
+PASS  1280: spotlight with 2 item(s)  {"controls":4,"controlRows":1,"controlRowH":44,"visiblePictures":2,"next":[1,0,1],"prev":[0,1],"h":586,"over":[],"sx":0}
+PASS  1280: spotlight with 4 item(s)  {"controls":6,"controlRows":1,"controlRowH":44,"visiblePictures":3,"next":[1,2,3,0,1],"prev":[0,3],"h":586,"over":[],"sx":0}
+PASS  1280: spotlight with 12 item(s)  {"controls":14,"controlRows":1,"controlRowH":44,"visiblePictures":3,"next":[1,2,3,4,5],"prev":[4,3],"h":586,"over":[],"sx":0}
+PASS  1280: spotlight with 5 item(s) loop:false  {"controls":7,"controlRows":1,"controlRowH":44,"visiblePictures":3,"next":[1,2,3,4,0],"prev":[4,3],"h":586,"over":[],"sx":0}
+PASS  1280: no console errors  

@@ -1,0 +1,42 @@
+4x arc next: 36 frames  median 16.7ms  p95 16.7ms  worst 16.8ms  >20ms: 0  >33.4ms: 0  first3: 17/17/17
+            36 frames  median 16.7ms  p95 16.7ms  worst 16.7ms  >20ms: 0  >33.4ms: 0  first3: 17/17/17
+            36 frames  median 16.7ms  p95 16.7ms  worst 16.8ms  >20ms: 0  >33.4ms: 0  first3: 17/17/17
+            36 frames  median 16.7ms  p95 16.7ms  worst 16.8ms  >20ms: 0  >33.4ms: 0  first3: 17/17/17
+      pooled: 144 frames median 16.7 p95 16.7 p99 16.8 worst 16.8  >33.4: 0
+4x arc drag: 122 frames  median 16.7ms  p95 16.8ms  worst 16.8ms  >20ms: 0  >33.4ms: 0  first3: 17/17/17
+            122 frames  median 16.7ms  p95 16.7ms  worst 16.8ms  >20ms: 0  >33.4ms: 0  first3: 17/17/17
+            122 frames  median 16.7ms  p95 16.7ms  worst 16.8ms  >20ms: 0  >33.4ms: 0  first3: 17/17/17
+            122 frames  median 16.7ms  p95 16.7ms  worst 16.8ms  >20ms: 0  >33.4ms: 0  first3: 17/17/17
+      pooled: 488 frames median 16.7 p95 16.7 p99 16.8 worst 16.8  >33.4: 0
+   trace arc (4x): FireAnimationFrame {"count":113,"totalMs":74.9,"maxMs":2.12}  Layout {"count":11,"totalMs":12.5,"maxMs":2.02}  forced(with JS stack) 0  rAF callbacks containing a Layout: 0  style recalcs forced inside rAF: 0  UpdateLayoutTree {"count":113,"totalMs":100.3,"maxMs":6.76}  Paint {"count":119,"totalMs":101.2,"maxMs":5.76}  PrePaint {"count":175,"totalMs":79.9,"maxMs":2.15} Layerize {"count":161,"totalMs":130.1,"maxMs":3.28} EventDispatch {"count":105,"totalMs":41.4,"maxMs":4.74}
+4x spot next: 36 frames  median 16.7ms  p95 16.8ms  worst 16.8ms  >20ms: 0  >33.4ms: 0  first3: 17/17/17
+            36 frames  median 16.7ms  p95 16.7ms  worst 16.7ms  >20ms: 0  >33.4ms: 0  first3: 17/17/17
+            36 frames  median 16.7ms  p95 16.8ms  worst 16.8ms  >20ms: 0  >33.4ms: 0  first3: 17/17/17
+            36 frames  median 16.7ms  p95 16.8ms  worst 16.8ms  >20ms: 0  >33.4ms: 0  first3: 17/17/17
+      pooled: 144 frames median 16.7 p95 16.7 p99 16.8 worst 16.8  >33.4: 0
+4x spot drag: 119 frames  median 16.7ms  p95 16.8ms  worst 16.8ms  >20ms: 0  >33.4ms: 0  first3: 17/17/17
+            119 frames  median 16.7ms  p95 16.8ms  worst 16.8ms  >20ms: 0  >33.4ms: 0  first3: 17/17/17
+            119 frames  median 16.7ms  p95 16.7ms  worst 33.4ms  >20ms: 1  >33.4ms: 0  first3: 17/17/17
+            119 frames  median 16.7ms  p95 16.8ms  worst 16.8ms  >20ms: 0  >33.4ms: 0  first3: 17/17/17
+      pooled: 476 frames median 16.7 p95 16.8 p99 16.8 worst 33.4  >33.4: 0
+   trace spot (4x): FireAnimationFrame {"count":111,"totalMs":50.6,"maxMs":3.85}  Layout {"count":10,"totalMs":13.2,"maxMs":3.53}  forced(with JS stack) 0  rAF callbacks containing a Layout: 0  style recalcs forced inside rAF: 0  UpdateLayoutTree {"count":109,"totalMs":72.6,"maxMs":9.51}  Paint {"count":61,"totalMs":32.1,"maxMs":1.82}  PrePaint {"count":172,"totalMs":60.8,"maxMs":3.18} Layerize {"count":159,"totalMs":80.4,"maxMs":5.77} EventDispatch {"count":105,"totalMs":29,"maxMs":3.89}
+6x arc next: 36 frames  median 16.7ms  p95 16.8ms  worst 16.8ms  >20ms: 0  >33.4ms: 0  first3: 17/17/17
+            35 frames  median 16.7ms  p95 16.8ms  worst 33.4ms  >20ms: 1  >33.4ms: 0  first3: 17/17/17
+            36 frames  median 16.7ms  p95 16.7ms  worst 16.7ms  >20ms: 0  >33.4ms: 0  first3: 17/17/17
+            35 frames  median 16.7ms  p95 16.8ms  worst 33.4ms  >20ms: 1  >33.4ms: 0  first3: 17/17/17
+      pooled: 142 frames median 16.7 p95 16.7 p99 33.4 worst 33.4  >33.4: 0
+6x arc drag: 122 frames  median 16.7ms  p95 16.7ms  worst 16.8ms  >20ms: 0  >33.4ms: 0  first3: 17/17/17
+            122 frames  median 16.7ms  p95 16.7ms  worst 16.8ms  >20ms: 0  >33.4ms: 0  first3: 17/17/17
+            123 frames  median 16.7ms  p95 16.7ms  worst 16.8ms  >20ms: 0  >33.4ms: 0  first3: 17/17/17
+            123 frames  median 16.7ms  p95 16.8ms  worst 33.3ms  >20ms: 2  >33.4ms: 0  first3: 17/17/17
+      pooled: 490 frames median 16.7 p95 16.7 p99 16.8 worst 33.3  >33.4: 0
+6x spot next: 36 frames  median 16.7ms  p95 16.7ms  worst 16.7ms  >20ms: 0  >33.4ms: 0  first3: 17/17/17
+            36 frames  median 16.7ms  p95 16.8ms  worst 33.3ms  >20ms: 1  >33.4ms: 0  first3: 17/17/17
+            36 frames  median 16.7ms  p95 16.7ms  worst 16.8ms  >20ms: 0  >33.4ms: 0  first3: 17/17/17
+            36 frames  median 16.7ms  p95 16.8ms  worst 16.8ms  >20ms: 0  >33.4ms: 0  first3: 17/17/17
+      pooled: 144 frames median 16.7 p95 16.8 p99 16.8 worst 33.3  >33.4: 0
+6x spot drag: 122 frames  median 16.7ms  p95 16.8ms  worst 16.8ms  >20ms: 0  >33.4ms: 0  first3: 17/17/17
+            120 frames  median 16.7ms  p95 16.7ms  worst 33.4ms  >20ms: 1  >33.4ms: 1  first3: 17/17/17
+            119 frames  median 16.7ms  p95 16.7ms  worst 16.8ms  >20ms: 0  >33.4ms: 0  first3: 17/17/17
+            126 frames  median 16.7ms  p95 16.8ms  worst 16.8ms  >20ms: 0  >33.4ms: 0  first3: 17/17/17
+      pooled: 487 frames median 16.7 p95 16.7 p99 16.8 worst 33.4  >33.4: 1

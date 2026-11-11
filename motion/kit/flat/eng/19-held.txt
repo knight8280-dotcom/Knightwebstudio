@@ -1,0 +1,2 @@
+40 widths; mismatches or captions over the held height: 1
+   [360,"held",[400,494,400,494],"live",[400,494,400,494],"caption need vs held",["186/200","251/236 (first item)","186/200","251/236 (first item)"]]

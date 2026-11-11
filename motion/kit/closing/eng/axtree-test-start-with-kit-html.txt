@@ -1,0 +1,51 @@
+region "Tell us about your business."
+  · THE DISCOVERY CALL
+  heading "Tell us about your business." [level=2]
+    · Tell us about your business.
+  paragraph
+    · You leave with a plan for your website and your systems, and the fixed
+  · APPOINTMENT CARD
+  · NO. 01
+  paragraph
+    · Discovery call
+  DescriptionList
+    term "Cost"
+      · Cost
+    definition
+      · Free
+    term "Length"
+      · Length
+    definition
+      · 30 minutes
+    term "Sales pitch"
+      · Sales pitch
+    definition
+      · None
+    term "Where"
+      · Where
+    definition
+      · A call, or in person
+  link "Book a free 30-minute call" [focusable=true]
+    · Book a free 30-minute call
+  link "Send an enquiry" [focusable=true]
+    · Send an enquiry
+  paragraph
+    · Or call 
+    link "(225) 255-0837" [focusable=true]
+      · (225) 255-0837
+contentinfo
+  link "(225) 255-0837" [focusable=true]
+    · (225) 255-0837
+  link "knightwebstudio1@gmail.com" [focusable=true]
+    · knightwebstudio1@gmail.com
+  paragraph
+    · © 
+      · 2026
+    ·  KnightWebstudio · Based in Baton Rouge, Louisiana
+  button "Pause background motion" [focusable=true]
+  link "Full website" [focusable=true]
+    · Full website
+  link "Privacy" [focusable=true]
+    · Privacy
+  link "Terms" [focusable=true]
+    · Terms

@@ -1,0 +1,56 @@
+brand2-band-1440-dark: frames 24 (changed 23), px behind text 811,968, below AA 0 (0.0000%)
+    worst pixel (normal text) 5.04:1  [kws-label "Example" rgb(211, 220, 203) frame 1]   worst 3x3 mean 5.14:1 [Example]
+brand2-band-1440-light: frames 24 (changed 23), px behind text 811,968, below AA 0 (0.0000%)
+    worst pixel (normal text) 5.04:1  [P "[The "band" background takes" rgb(211, 220, 203) frame 1]   worst 3x3 mean 5.14:1 [[The "band" background takes]
+brand2-band-390-dark: frames 24 (changed 23), px behind text 2,391,744, below AA 0 (0.0000%)
+    worst pixel (normal text) 5.04:1  [P "[The "band" background takes" rgb(211, 220, 203) frame 2]   worst 3x3 mean 5.08:1 [[The "band" background takes]
+brand2-band-390-light: frames 24 (changed 23), px behind text 2,391,744, below AA 0 (0.0000%)
+    worst pixel (normal text) 5.04:1  [P "[The "band" background takes" rgb(211, 220, 203) frame 2]   worst 3x3 mean 5.07:1 [Example]
+brand2-wash-1440-dark: frames 24 (changed 23), px behind text 1,187,040, below AA 0 (0.0000%)
+    worst pixel (normal text) 5.25:1  [kws-label "Example · [your bakery]" rgb(169, 184, 170) frame 21]   worst 3x3 mean 5.55:1 [Example · [your bakery]]
+brand2-wash-1440-light: frames 24 (changed 23), px behind text 1,187,040, below AA 0 (0.0000%)
+    worst pixel (normal text) 4.66:1  [kws-label "Example · [your bakery]" rgb(79, 100, 87) frame 15]   worst 3x3 mean 4.79:1 [[One or two lines about the ]
+brand2-wash-390-dark: frames 24 (changed 23), px behind text 3,016,848, below AA 0 (0.0000%)
+    worst pixel (normal text) 5.31:1  [P "[One or two lines about the " rgb(169, 184, 170) frame 14]   worst 3x3 mean 5.53:1 [[One or two lines about the ]
+brand2-wash-390-light: frames 24 (changed 23), px behind text 3,016,848, below AA 0 (0.0000%)
+    worst pixel (normal text) 4.60:1  [P "[One or two lines about the " rgb(79, 100, 87) frame 18]   worst 3x3 mean 4.73:1 [[One or two lines about the ]
+brand3-band-1440-dark: frames 24 (changed 23), px behind text 812,112, below AA 0 (0.0000%)
+    worst pixel (normal text) 4.58:1  [P "[The folds behind these word" rgb(240, 226, 196) frame 0]   worst 3x3 mean 4.69:1 [[The folds behind these word]
+brand3-band-1440-light: frames 24 (changed 23), px behind text 812,112, below AA 0 (0.0000%)
+    worst pixel (normal text) 4.58:1  [P "[The folds behind these word" rgb(240, 226, 196) frame 0]   worst 3x3 mean 4.69:1 [[The folds behind these word]
+brand3-band-390-dark: frames 24 (changed 23), px behind text 2,744,256, below AA 0 (0.0000%)
+    worst pixel (normal text) 4.58:1  [kws-label "Example" rgb(240, 226, 196) frame 0]   worst 3x3 mean 4.63:1 [[The folds behind these word]
+brand3-band-390-light: frames 24 (changed 23), px behind text 2,744,256, below AA 0 (0.0000%)
+    worst pixel (normal text) 4.58:1  [kws-label "Example" rgb(240, 226, 196) frame 0]   worst 3x3 mean 4.62:1 [[The folds behind these word]
+brand3-gradient-still-1440-dark: frames 24 (changed 0), px behind text 913,968, below AA 0 (0.0000%)
+    worst pixel (normal text) 5.39:1  [kws-label "Example" rgb(240, 226, 196) frame 0]   worst 3x3 mean 5.55:1 [Example]
+brand3-gradient-still-1440-light: frames 24 (changed 0), px behind text 913,968, below AA 0 (0.0000%)
+    worst pixel (normal text) 5.39:1  [kws-label "Example" rgb(240, 226, 196) frame 0]   worst 3x3 mean 5.55:1 [Example]
+brand3-gradient-still-390-dark: frames 24 (changed 2), px behind text 2,623,080, below AA 0 (0.0000%)
+    worst pixel (normal text) 5.82:1  [kws-label "Example" rgb(240, 226, 196) frame 0]   worst 3x3 mean 5.96:1 [Example]
+brand3-gradient-still-390-light: frames 24 (changed 2), px behind text 2,623,080, below AA 0 (0.0000%)
+    worst pixel (normal text) 5.82:1  [kws-label "Example" rgb(240, 226, 196) frame 0]   worst 3x3 mean 5.96:1 [Example]
+brand3-wash-1440-dark: frames 24 (changed 23), px behind text 2,286,984, below AA 0 (0.0000%)
+    worst pixel (normal text) 5.36:1  [P "[This page loads none of Kni" rgb(185, 175, 153) frame 6]   worst 3x3 mean 5.64:1 [Example · [your barber shop]]
+brand3-wash-1440-light: frames 24 (changed 23), px behind text 2,286,984, below AA 0 (0.0000%)
+    worst pixel (normal text) 4.84:1  [P "[This page loads none of Kni" rgb(93, 87, 75) frame 16]   worst 3x3 mean 5.04:1 [[This page loads none of Kni]
+brand3-wash-390-dark: frames 24 (changed 23), px behind text 5,611,488, below AA 0 (0.0000%)
+    worst pixel (normal text) 5.36:1  [P "[This page loads none of Kni" rgb(185, 175, 153) frame 16]   worst 3x3 mean 5.58:1 [Example · [your barber shop]]
+brand3-wash-390-light: frames 24 (changed 23), px behind text 5,611,488, below AA 0 (0.0000%)
+    worst pixel (normal text) 4.81:1  [P "[This page loads none of Kni" rgb(93, 87, 75) frame 3]   worst 3x3 mean 4.96:1 [[This page loads none of Kni]
+site-band-gold-1440-dark: frames 24 (changed 23), px behind text 2,765,256, below AA 0 (0.0000%)
+    worst pixel (normal text) 5.56:1  [SPAN "Appointment card" rgb(95, 102, 120) frame 0]   worst 3x3 mean 5.56:1 [Appointment card]
+site-band-gold-1440-light: frames 24 (changed 23), px behind text 2,765,256, below AA 0 (0.0000%)
+    worst pixel (normal text) 5.56:1  [SPAN "Appointment card" rgb(95, 102, 120) frame 0]   worst 3x3 mean 5.56:1 [Appointment card]
+site-band-gold-390-dark: frames 24 (changed 23), px behind text 6,886,560, below AA 0 (0.0000%)
+    worst pixel (normal text) 4.59:1  [eyebrow "Free · 30 minutes · no pitch" rgb(240, 195, 105) frame 12]   worst 3x3 mean 4.63:1 [Free · 30 minutes · no pitch]
+site-band-gold-390-light: frames 24 (changed 23), px behind text 6,886,560, below AA 0 (0.0000%)
+    worst pixel (normal text) 4.58:1  [eyebrow "Free · 30 minutes · no pitch" rgb(240, 195, 105) frame 2]   worst 3x3 mean 4.63:1 [Free · 30 minutes · no pitch]
+site-wash-1440-dark: frames 24 (changed 23), px behind text 6,301,824, below AA 0 (0.0000%)
+    worst pixel (normal text) 6.16:1  [eyebrow "Web studio & consulting · Ba" rgb(240, 144, 122) frame 10]   worst 3x3 mean 6.29:1 [Websites]
+site-wash-1440-light: frames 24 (changed 23), px behind text 6,301,824, below AA 0 (0.0000%)
+    worst pixel (normal text) 4.97:1  [price-strip-label "Websites" rgb(95, 102, 120) frame 2]   worst 3x3 mean 5.01:1 [Websites]
+site-wash-390-dark: frames 24 (changed 23), px behind text 11,499,744, below AA 0 (0.0000%)
+    worst pixel (normal text) 6.04:1  [price-strip-label "Websites" rgb(158, 154, 144) frame 13]   worst 3x3 mean 6.09:1 [Websites]
+site-wash-390-light: frames 24 (changed 23), px behind text 11,499,744, below AA 0 (0.0000%)
+    worst pixel (normal text) 4.93:1  [price-strip-label "Websites" rgb(95, 102, 120) frame 13]   worst 3x3 mean 4.96:1 [Websites]

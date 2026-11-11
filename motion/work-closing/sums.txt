@@ -1,0 +1,2 @@
+cc452d77369dfe7d66575c216e1859b7  kit/closing/demo.html
+9d9af88508bc889a46a460ea7aa7b938  kit/closing/portable.html

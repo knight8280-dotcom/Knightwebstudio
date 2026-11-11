@@ -1,0 +1,1182 @@
+{
+ "new / 390": {
+  "firstView": {
+   "n": 5,
+   "raw": 307393,
+   "tx": 136639,
+   "by": {
+    "document": {
+     "n": 1,
+     "raw": 73860,
+     "tx": 17358
+    },
+    "font": {
+     "n": 2,
+     "raw": 82588,
+     "tx": 82588
+    },
+    "stylesheet": {
+     "n": 1,
+     "raw": 128690,
+     "tx": 29169
+    },
+    "script": {
+     "n": 1,
+     "raw": 22255,
+     "tx": 7524
+    }
+   }
+  },
+  "afterScroll": {
+   "n": 8,
+   "raw": 478336,
+   "tx": 307582
+  },
+  "lazy": [
+   "/assets/img/work-smilyssoftwash.jpg 80883",
+   "/assets/img/work-risenhealthco.jpg 51726",
+   "/assets/img/work-corbelbooks.jpg 38334"
+  ],
+  "list": [
+   "document / raw=73860 tx=17358",
+   "font /assets/fonts/figtree.woff2 raw=20156 tx=20156",
+   "font /assets/fonts/fraunces-soft.woff2 raw=62432 tx=62432",
+   "stylesheet /assets/css/styles.css raw=128690 tx=29169",
+   "script /assets/js/main.js raw=22255 tx=7524"
+  ],
+  "third": [
+   "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js",
+   "https://knightwebstudio-checkout.onrender.com/healthz"
+  ]
+ },
+ "new / 1280": {
+  "firstView": {
+   "n": 5,
+   "raw": 307393,
+   "tx": 136639,
+   "by": {
+    "document": {
+     "n": 1,
+     "raw": 73860,
+     "tx": 17358
+    },
+    "stylesheet": {
+     "n": 1,
+     "raw": 128690,
+     "tx": 29169
+    },
+    "font": {
+     "n": 2,
+     "raw": 82588,
+     "tx": 82588
+    },
+    "script": {
+     "n": 1,
+     "raw": 22255,
+     "tx": 7524
+    }
+   }
+  },
+  "afterScroll": {
+   "n": 8,
+   "raw": 478336,
+   "tx": 307582
+  },
+  "lazy": [
+   "/assets/img/work-smilyssoftwash.jpg 80883",
+   "/assets/img/work-corbelbooks.jpg 38334",
+   "/assets/img/work-risenhealthco.jpg 51726"
+  ],
+  "list": [
+   "document / raw=73860 tx=17358",
+   "stylesheet /assets/css/styles.css raw=128690 tx=29169",
+   "font /assets/fonts/figtree.woff2 raw=20156 tx=20156",
+   "font /assets/fonts/fraunces-soft.woff2 raw=62432 tx=62432",
+   "script /assets/js/main.js raw=22255 tx=7524"
+  ],
+  "third": [
+   "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js",
+   "https://knightwebstudio-checkout.onrender.com/healthz"
+  ]
+ },
+ "new /start/ 390": {
+  "firstView": {
+   "n": 8,
+   "raw": 453637,
+   "tx": 302804,
+   "by": {
+    "document": {
+     "n": 1,
+     "raw": 49161,
+     "tx": 12580
+    },
+    "font": {
+     "n": 2,
+     "raw": 82588,
+     "tx": 82588
+    },
+    "stylesheet": {
+     "n": 1,
+     "raw": 128690,
+     "tx": 29169
+    },
+    "script": {
+     "n": 1,
+     "raw": 22255,
+     "tx": 7524
+    },
+    "image": {
+     "n": 3,
+     "raw": 170943,
+     "tx": 170943
+    }
+   }
+  },
+  "afterScroll": {
+   "n": 8,
+   "raw": 453637,
+   "tx": 302804
+  },
+  "lazy": [],
+  "list": [
+   "document /start/ raw=49161 tx=12580",
+   "font /assets/fonts/fraunces-soft.woff2 raw=62432 tx=62432",
+   "stylesheet /assets/css/styles.css raw=128690 tx=29169",
+   "font /assets/fonts/figtree.woff2 raw=20156 tx=20156",
+   "script /assets/js/main.js raw=22255 tx=7524",
+   "image /assets/img/work-smilyssoftwash.jpg raw=80883 tx=80883",
+   "image /assets/img/work-corbelbooks.jpg raw=38334 tx=38334",
+   "image /assets/img/work-risenhealthco.jpg raw=51726 tx=51726"
+  ],
+  "third": [
+   "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js"
+  ]
+ },
+ "new /start/ 1280": {
+  "firstView": {
+   "n": 8,
+   "raw": 453637,
+   "tx": 302804,
+   "by": {
+    "document": {
+     "n": 1,
+     "raw": 49161,
+     "tx": 12580
+    },
+    "font": {
+     "n": 2,
+     "raw": 82588,
+     "tx": 82588
+    },
+    "stylesheet": {
+     "n": 1,
+     "raw": 128690,
+     "tx": 29169
+    },
+    "script": {
+     "n": 1,
+     "raw": 22255,
+     "tx": 7524
+    },
+    "image": {
+     "n": 3,
+     "raw": 170943,
+     "tx": 170943
+    }
+   }
+  },
+  "afterScroll": {
+   "n": 8,
+   "raw": 453637,
+   "tx": 302804
+  },
+  "lazy": [],
+  "list": [
+   "document /start/ raw=49161 tx=12580",
+   "font /assets/fonts/fraunces-soft.woff2 raw=62432 tx=62432",
+   "stylesheet /assets/css/styles.css raw=128690 tx=29169",
+   "font /assets/fonts/figtree.woff2 raw=20156 tx=20156",
+   "script /assets/js/main.js raw=22255 tx=7524",
+   "image /assets/img/work-smilyssoftwash.jpg raw=80883 tx=80883",
+   "image /assets/img/work-risenhealthco.jpg raw=51726 tx=51726",
+   "image /assets/img/work-corbelbooks.jpg raw=38334 tx=38334"
+  ],
+  "third": [
+   "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js"
+  ]
+ },
+ "new /pricing/ 390": {
+  "firstView": {
+   "n": 5,
+   "raw": 289642,
+   "tx": 132300,
+   "by": {
+    "document": {
+     "n": 1,
+     "raw": 56109,
+     "tx": 13019
+    },
+    "font": {
+     "n": 2,
+     "raw": 82588,
+     "tx": 82588
+    },
+    "stylesheet": {
+     "n": 1,
+     "raw": 128690,
+     "tx": 29169
+    },
+    "script": {
+     "n": 1,
+     "raw": 22255,
+     "tx": 7524
+    }
+   }
+  },
+  "afterScroll": {
+   "n": 5,
+   "raw": 289642,
+   "tx": 132300
+  },
+  "lazy": [],
+  "list": [
+   "document /pricing/ raw=56109 tx=13019",
+   "font /assets/fonts/fraunces-soft.woff2 raw=62432 tx=62432",
+   "stylesheet /assets/css/styles.css raw=128690 tx=29169",
+   "font /assets/fonts/figtree.woff2 raw=20156 tx=20156",
+   "script /assets/js/main.js raw=22255 tx=7524"
+  ],
+  "third": [
+   "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js",
+   "https://knightwebstudio-checkout.onrender.com/healthz"
+  ]
+ },
+ "new /pricing/ 1280": {
+  "firstView": {
+   "n": 5,
+   "raw": 289642,
+   "tx": 132300,
+   "by": {
+    "document": {
+     "n": 1,
+     "raw": 56109,
+     "tx": 13019
+    },
+    "stylesheet": {
+     "n": 1,
+     "raw": 128690,
+     "tx": 29169
+    },
+    "font": {
+     "n": 2,
+     "raw": 82588,
+     "tx": 82588
+    },
+    "script": {
+     "n": 1,
+     "raw": 22255,
+     "tx": 7524
+    }
+   }
+  },
+  "afterScroll": {
+   "n": 5,
+   "raw": 289642,
+   "tx": 132300
+  },
+  "lazy": [],
+  "list": [
+   "document /pricing/ raw=56109 tx=13019",
+   "stylesheet /assets/css/styles.css raw=128690 tx=29169",
+   "font /assets/fonts/fraunces-soft.woff2 raw=62432 tx=62432",
+   "font /assets/fonts/figtree.woff2 raw=20156 tx=20156",
+   "script /assets/js/main.js raw=22255 tx=7524"
+  ],
+  "third": [
+   "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js",
+   "https://knightwebstudio-checkout.onrender.com/healthz"
+  ]
+ },
+ "new /consulting/ 390": {
+  "firstView": {
+   "n": 6,
+   "raw": 303818,
+   "tx": 137177,
+   "by": {
+    "document": {
+     "n": 1,
+     "raw": 67953,
+     "tx": 16927
+    },
+    "stylesheet": {
+     "n": 1,
+     "raw": 128690,
+     "tx": 29169
+    },
+    "font": {
+     "n": 2,
+     "raw": 82588,
+     "tx": 82588
+    },
+    "script": {
+     "n": 2,
+     "raw": 24587,
+     "tx": 8493
+    }
+   }
+  },
+  "afterScroll": {
+   "n": 6,
+   "raw": 303818,
+   "tx": 137177
+  },
+  "lazy": [],
+  "list": [
+   "document /consulting/ raw=67953 tx=16927",
+   "stylesheet /assets/css/styles.css raw=128690 tx=29169",
+   "font /assets/fonts/fraunces-soft.woff2 raw=62432 tx=62432",
+   "script /assets/js/calculator.js raw=2332 tx=969",
+   "script /assets/js/main.js raw=22255 tx=7524",
+   "font /assets/fonts/figtree.woff2 raw=20156 tx=20156"
+  ],
+  "third": [
+   "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js"
+  ]
+ },
+ "new /consulting/ 1280": {
+  "firstView": {
+   "n": 6,
+   "raw": 303818,
+   "tx": 137177,
+   "by": {
+    "document": {
+     "n": 1,
+     "raw": 67953,
+     "tx": 16927
+    },
+    "font": {
+     "n": 2,
+     "raw": 82588,
+     "tx": 82588
+    },
+    "stylesheet": {
+     "n": 1,
+     "raw": 128690,
+     "tx": 29169
+    },
+    "script": {
+     "n": 2,
+     "raw": 24587,
+     "tx": 8493
+    }
+   }
+  },
+  "afterScroll": {
+   "n": 6,
+   "raw": 303818,
+   "tx": 137177
+  },
+  "lazy": [],
+  "list": [
+   "document /consulting/ raw=67953 tx=16927",
+   "font /assets/fonts/fraunces-soft.woff2 raw=62432 tx=62432",
+   "stylesheet /assets/css/styles.css raw=128690 tx=29169",
+   "font /assets/fonts/figtree.woff2 raw=20156 tx=20156",
+   "script /assets/js/main.js raw=22255 tx=7524",
+   "script /assets/js/calculator.js raw=2332 tx=969"
+  ],
+  "third": [
+   "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js"
+  ]
+ },
+ "new /contact/ 390": {
+  "firstView": {
+   "n": 5,
+   "raw": 273634,
+   "tx": 128662,
+   "by": {
+    "document": {
+     "n": 1,
+     "raw": 40101,
+     "tx": 9381
+    },
+    "font": {
+     "n": 2,
+     "raw": 82588,
+     "tx": 82588
+    },
+    "stylesheet": {
+     "n": 1,
+     "raw": 128690,
+     "tx": 29169
+    },
+    "script": {
+     "n": 1,
+     "raw": 22255,
+     "tx": 7524
+    }
+   }
+  },
+  "afterScroll": {
+   "n": 5,
+   "raw": 273634,
+   "tx": 128662
+  },
+  "lazy": [],
+  "list": [
+   "document /contact/ raw=40101 tx=9381",
+   "font /assets/fonts/fraunces-soft.woff2 raw=62432 tx=62432",
+   "stylesheet /assets/css/styles.css raw=128690 tx=29169",
+   "font /assets/fonts/figtree.woff2 raw=20156 tx=20156",
+   "script /assets/js/main.js raw=22255 tx=7524"
+  ],
+  "third": [
+   "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js",
+   "https://js.hcaptcha.com/1/api.js?recaptchacompat=off"
+  ]
+ },
+ "new /contact/ 1280": {
+  "firstView": {
+   "n": 5,
+   "raw": 273634,
+   "tx": 128662,
+   "by": {
+    "document": {
+     "n": 1,
+     "raw": 40101,
+     "tx": 9381
+    },
+    "font": {
+     "n": 2,
+     "raw": 82588,
+     "tx": 82588
+    },
+    "stylesheet": {
+     "n": 1,
+     "raw": 128690,
+     "tx": 29169
+    },
+    "script": {
+     "n": 1,
+     "raw": 22255,
+     "tx": 7524
+    }
+   }
+  },
+  "afterScroll": {
+   "n": 5,
+   "raw": 273634,
+   "tx": 128662
+  },
+  "lazy": [],
+  "list": [
+   "document /contact/ raw=40101 tx=9381",
+   "font /assets/fonts/fraunces-soft.woff2 raw=62432 tx=62432",
+   "stylesheet /assets/css/styles.css raw=128690 tx=29169",
+   "font /assets/fonts/figtree.woff2 raw=20156 tx=20156",
+   "script /assets/js/main.js raw=22255 tx=7524"
+  ],
+  "third": [
+   "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js",
+   "https://js.hcaptcha.com/1/api.js?recaptchacompat=off"
+  ]
+ },
+ "new /work/ 390": {
+  "firstView": {
+   "n": 8,
+   "raw": 443821,
+   "tx": 299359,
+   "by": {
+    "document": {
+     "n": 1,
+     "raw": 39345,
+     "tx": 9135
+    },
+    "stylesheet": {
+     "n": 1,
+     "raw": 128690,
+     "tx": 29169
+    },
+    "image": {
+     "n": 3,
+     "raw": 170943,
+     "tx": 170943
+    },
+    "font": {
+     "n": 2,
+     "raw": 82588,
+     "tx": 82588
+    },
+    "script": {
+     "n": 1,
+     "raw": 22255,
+     "tx": 7524
+    }
+   }
+  },
+  "afterScroll": {
+   "n": 8,
+   "raw": 443821,
+   "tx": 299359
+  },
+  "lazy": [],
+  "list": [
+   "document /work/ raw=39345 tx=9135",
+   "stylesheet /assets/css/styles.css raw=128690 tx=29169",
+   "image /assets/img/work-smilyssoftwash.jpg raw=80883 tx=80883",
+   "font /assets/fonts/figtree.woff2 raw=20156 tx=20156",
+   "font /assets/fonts/fraunces-soft.woff2 raw=62432 tx=62432",
+   "script /assets/js/main.js raw=22255 tx=7524",
+   "image /assets/img/work-risenhealthco.jpg raw=51726 tx=51726",
+   "image /assets/img/work-corbelbooks.jpg raw=38334 tx=38334"
+  ],
+  "third": [
+   "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js"
+  ]
+ },
+ "new /work/ 1280": {
+  "firstView": {
+   "n": 8,
+   "raw": 443821,
+   "tx": 299359,
+   "by": {
+    "document": {
+     "n": 1,
+     "raw": 39345,
+     "tx": 9135
+    },
+    "font": {
+     "n": 2,
+     "raw": 82588,
+     "tx": 82588
+    },
+    "stylesheet": {
+     "n": 1,
+     "raw": 128690,
+     "tx": 29169
+    },
+    "image": {
+     "n": 3,
+     "raw": 170943,
+     "tx": 170943
+    },
+    "script": {
+     "n": 1,
+     "raw": 22255,
+     "tx": 7524
+    }
+   }
+  },
+  "afterScroll": {
+   "n": 8,
+   "raw": 443821,
+   "tx": 299359
+  },
+  "lazy": [],
+  "list": [
+   "document /work/ raw=39345 tx=9135",
+   "font /assets/fonts/fraunces-soft.woff2 raw=62432 tx=62432",
+   "stylesheet /assets/css/styles.css raw=128690 tx=29169",
+   "font /assets/fonts/figtree.woff2 raw=20156 tx=20156",
+   "image /assets/img/work-smilyssoftwash.jpg raw=80883 tx=80883",
+   "script /assets/js/main.js raw=22255 tx=7524",
+   "image /assets/img/work-risenhealthco.jpg raw=51726 tx=51726",
+   "image /assets/img/work-corbelbooks.jpg raw=38334 tx=38334"
+  ],
+  "third": [
+   "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js"
+  ]
+ },
+ "old / 390": {
+  "firstView": {
+   "n": 8,
+   "raw": 466655,
+   "tx": 359935,
+   "by": {
+    "document": {
+     "n": 1,
+     "raw": 51502,
+     "tx": 10309
+    },
+    "stylesheet": {
+     "n": 1,
+     "raw": 67625,
+     "tx": 15966
+    },
+    "font": {
+     "n": 2,
+     "raw": 155888,
+     "tx": 155888
+    },
+    "script": {
+     "n": 1,
+     "raw": 20697,
+     "tx": 6829
+    },
+    "image": {
+     "n": 3,
+     "raw": 170943,
+     "tx": 170943
+    }
+   }
+  },
+  "afterScroll": {
+   "n": 8,
+   "raw": 466655,
+   "tx": 359935
+  },
+  "lazy": [],
+  "list": [
+   "document / raw=51502 tx=10309",
+   "stylesheet /assets/css/styles.css raw=67625 tx=15966",
+   "font /assets/fonts/manrope.woff2 raw=24576 tx=24576",
+   "script /assets/js/main.js raw=20697 tx=6829",
+   "font /assets/fonts/bricolage-grotesque.woff2 raw=131312 tx=131312",
+   "image /assets/img/work-smilyssoftwash.jpg raw=80883 tx=80883",
+   "image /assets/img/work-risenhealthco.jpg raw=51726 tx=51726",
+   "image /assets/img/work-corbelbooks.jpg raw=38334 tx=38334"
+  ],
+  "third": [
+   "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js",
+   "https://knightwebstudio-checkout.onrender.com/healthz"
+  ]
+ },
+ "old / 1280": {
+  "firstView": {
+   "n": 8,
+   "raw": 466655,
+   "tx": 359935,
+   "by": {
+    "stylesheet": {
+     "n": 1,
+     "raw": 67625,
+     "tx": 15966
+    },
+    "document": {
+     "n": 1,
+     "raw": 51502,
+     "tx": 10309
+    },
+    "font": {
+     "n": 2,
+     "raw": 155888,
+     "tx": 155888
+    },
+    "script": {
+     "n": 1,
+     "raw": 20697,
+     "tx": 6829
+    },
+    "image": {
+     "n": 3,
+     "raw": 170943,
+     "tx": 170943
+    }
+   }
+  },
+  "afterScroll": {
+   "n": 8,
+   "raw": 466655,
+   "tx": 359935
+  },
+  "lazy": [],
+  "list": [
+   "stylesheet /assets/css/styles.css raw=67625 tx=15966",
+   "document / raw=51502 tx=10309",
+   "font /assets/fonts/manrope.woff2 raw=24576 tx=24576",
+   "script /assets/js/main.js raw=20697 tx=6829",
+   "font /assets/fonts/bricolage-grotesque.woff2 raw=131312 tx=131312",
+   "image /assets/img/work-risenhealthco.jpg raw=51726 tx=51726",
+   "image /assets/img/work-corbelbooks.jpg raw=38334 tx=38334",
+   "image /assets/img/work-smilyssoftwash.jpg raw=80883 tx=80883"
+  ],
+  "third": [
+   "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js",
+   "https://knightwebstudio-checkout.onrender.com/healthz"
+  ]
+ },
+ "old /start/ 390": {
+  "firstView": {
+   "n": 5,
+   "raw": 300690,
+   "tx": 188420,
+   "by": {
+    "document": {
+     "n": 1,
+     "raw": 56480,
+     "tx": 9737
+    },
+    "font": {
+     "n": 2,
+     "raw": 155888,
+     "tx": 155888
+    },
+    "stylesheet": {
+     "n": 1,
+     "raw": 67625,
+     "tx": 15966
+    },
+    "script": {
+     "n": 1,
+     "raw": 20697,
+     "tx": 6829
+    }
+   }
+  },
+  "afterScroll": {
+   "n": 8,
+   "raw": 471633,
+   "tx": 359363
+  },
+  "lazy": [
+   "/assets/img/work-risenhealthco.jpg 51726",
+   "/assets/img/work-corbelbooks.jpg 38334",
+   "/assets/img/work-smilyssoftwash.jpg 80883"
+  ],
+  "list": [
+   "document /start/ raw=56480 tx=9737",
+   "font /assets/fonts/bricolage-grotesque.woff2 raw=131312 tx=131312",
+   "font /assets/fonts/manrope.woff2 raw=24576 tx=24576",
+   "stylesheet /assets/css/styles.css raw=67625 tx=15966",
+   "script /assets/js/main.js raw=20697 tx=6829"
+  ],
+  "third": [
+   "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js"
+  ]
+ },
+ "old /start/ 1280": {
+  "firstView": {
+   "n": 8,
+   "raw": 471633,
+   "tx": 359363,
+   "by": {
+    "document": {
+     "n": 1,
+     "raw": 56480,
+     "tx": 9737
+    },
+    "stylesheet": {
+     "n": 1,
+     "raw": 67625,
+     "tx": 15966
+    },
+    "font": {
+     "n": 2,
+     "raw": 155888,
+     "tx": 155888
+    },
+    "script": {
+     "n": 1,
+     "raw": 20697,
+     "tx": 6829
+    },
+    "image": {
+     "n": 3,
+     "raw": 170943,
+     "tx": 170943
+    }
+   }
+  },
+  "afterScroll": {
+   "n": 8,
+   "raw": 471633,
+   "tx": 359363
+  },
+  "lazy": [],
+  "list": [
+   "document /start/ raw=56480 tx=9737",
+   "stylesheet /assets/css/styles.css raw=67625 tx=15966",
+   "font /assets/fonts/bricolage-grotesque.woff2 raw=131312 tx=131312",
+   "font /assets/fonts/manrope.woff2 raw=24576 tx=24576",
+   "script /assets/js/main.js raw=20697 tx=6829",
+   "image /assets/img/work-corbelbooks.jpg raw=38334 tx=38334",
+   "image /assets/img/work-risenhealthco.jpg raw=51726 tx=51726",
+   "image /assets/img/work-smilyssoftwash.jpg raw=80883 tx=80883"
+  ],
+  "third": [
+   "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js"
+  ]
+ },
+ "old /pricing/ 390": {
+  "firstView": {
+   "n": 5,
+   "raw": 287923,
+   "tx": 187887,
+   "by": {
+    "document": {
+     "n": 1,
+     "raw": 43713,
+     "tx": 9204
+    },
+    "stylesheet": {
+     "n": 1,
+     "raw": 67625,
+     "tx": 15966
+    },
+    "script": {
+     "n": 1,
+     "raw": 20697,
+     "tx": 6829
+    },
+    "font": {
+     "n": 2,
+     "raw": 155888,
+     "tx": 155888
+    }
+   }
+  },
+  "afterScroll": {
+   "n": 5,
+   "raw": 287923,
+   "tx": 187887
+  },
+  "lazy": [],
+  "list": [
+   "document /pricing/ raw=43713 tx=9204",
+   "stylesheet /assets/css/styles.css raw=67625 tx=15966",
+   "script /assets/js/main.js raw=20697 tx=6829",
+   "font /assets/fonts/bricolage-grotesque.woff2 raw=131312 tx=131312",
+   "font /assets/fonts/manrope.woff2 raw=24576 tx=24576"
+  ],
+  "third": [
+   "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js",
+   "https://knightwebstudio-checkout.onrender.com/healthz"
+  ]
+ },
+ "old /pricing/ 1280": {
+  "firstView": {
+   "n": 5,
+   "raw": 287923,
+   "tx": 187887,
+   "by": {
+    "document": {
+     "n": 1,
+     "raw": 43713,
+     "tx": 9204
+    },
+    "font": {
+     "n": 2,
+     "raw": 155888,
+     "tx": 155888
+    },
+    "stylesheet": {
+     "n": 1,
+     "raw": 67625,
+     "tx": 15966
+    },
+    "script": {
+     "n": 1,
+     "raw": 20697,
+     "tx": 6829
+    }
+   }
+  },
+  "afterScroll": {
+   "n": 5,
+   "raw": 287923,
+   "tx": 187887
+  },
+  "lazy": [],
+  "list": [
+   "document /pricing/ raw=43713 tx=9204",
+   "font /assets/fonts/manrope.woff2 raw=24576 tx=24576",
+   "stylesheet /assets/css/styles.css raw=67625 tx=15966",
+   "script /assets/js/main.js raw=20697 tx=6829",
+   "font /assets/fonts/bricolage-grotesque.woff2 raw=131312 tx=131312"
+  ],
+  "third": [
+   "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js",
+   "https://knightwebstudio-checkout.onrender.com/healthz"
+  ]
+ },
+ "old /consulting/ 390": {
+  "firstView": {
+   "n": 6,
+   "raw": 302905,
+   "tx": 192760,
+   "by": {
+    "document": {
+     "n": 1,
+     "raw": 56363,
+     "tx": 13108
+    },
+    "stylesheet": {
+     "n": 1,
+     "raw": 67625,
+     "tx": 15966
+    },
+    "font": {
+     "n": 2,
+     "raw": 155888,
+     "tx": 155888
+    },
+    "script": {
+     "n": 2,
+     "raw": 23029,
+     "tx": 7798
+    }
+   }
+  },
+  "afterScroll": {
+   "n": 6,
+   "raw": 302905,
+   "tx": 192760
+  },
+  "lazy": [],
+  "list": [
+   "document /consulting/ raw=56363 tx=13108",
+   "stylesheet /assets/css/styles.css raw=67625 tx=15966",
+   "font /assets/fonts/manrope.woff2 raw=24576 tx=24576",
+   "font /assets/fonts/bricolage-grotesque.woff2 raw=131312 tx=131312",
+   "script /assets/js/calculator.js raw=2332 tx=969",
+   "script /assets/js/main.js raw=20697 tx=6829"
+  ],
+  "third": [
+   "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js"
+  ]
+ },
+ "old /consulting/ 1280": {
+  "firstView": {
+   "n": 6,
+   "raw": 302905,
+   "tx": 192760,
+   "by": {
+    "document": {
+     "n": 1,
+     "raw": 56363,
+     "tx": 13108
+    },
+    "stylesheet": {
+     "n": 1,
+     "raw": 67625,
+     "tx": 15966
+    },
+    "font": {
+     "n": 2,
+     "raw": 155888,
+     "tx": 155888
+    },
+    "script": {
+     "n": 2,
+     "raw": 23029,
+     "tx": 7798
+    }
+   }
+  },
+  "afterScroll": {
+   "n": 6,
+   "raw": 302905,
+   "tx": 192760
+  },
+  "lazy": [],
+  "list": [
+   "document /consulting/ raw=56363 tx=13108",
+   "stylesheet /assets/css/styles.css raw=67625 tx=15966",
+   "font /assets/fonts/bricolage-grotesque.woff2 raw=131312 tx=131312",
+   "font /assets/fonts/manrope.woff2 raw=24576 tx=24576",
+   "script /assets/js/calculator.js raw=2332 tx=969",
+   "script /assets/js/main.js raw=20697 tx=6829"
+  ],
+  "third": [
+   "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js"
+  ]
+ },
+ "old /contact/ 390": {
+  "firstView": {
+   "n": 5,
+   "raw": 283678,
+   "tx": 187319,
+   "by": {
+    "document": {
+     "n": 1,
+     "raw": 39468,
+     "tx": 8636
+    },
+    "font": {
+     "n": 2,
+     "raw": 155888,
+     "tx": 155888
+    },
+    "stylesheet": {
+     "n": 1,
+     "raw": 67625,
+     "tx": 15966
+    },
+    "script": {
+     "n": 1,
+     "raw": 20697,
+     "tx": 6829
+    }
+   }
+  },
+  "afterScroll": {
+   "n": 5,
+   "raw": 283678,
+   "tx": 187319
+  },
+  "lazy": [],
+  "list": [
+   "document /contact/ raw=39468 tx=8636",
+   "font /assets/fonts/bricolage-grotesque.woff2 raw=131312 tx=131312",
+   "stylesheet /assets/css/styles.css raw=67625 tx=15966",
+   "font /assets/fonts/manrope.woff2 raw=24576 tx=24576",
+   "script /assets/js/main.js raw=20697 tx=6829"
+  ],
+  "third": [
+   "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js",
+   "https://js.hcaptcha.com/1/api.js?recaptchacompat=off"
+  ]
+ },
+ "old /contact/ 1280": {
+  "firstView": {
+   "n": 5,
+   "raw": 283678,
+   "tx": 187319,
+   "by": {
+    "document": {
+     "n": 1,
+     "raw": 39468,
+     "tx": 8636
+    },
+    "font": {
+     "n": 2,
+     "raw": 155888,
+     "tx": 155888
+    },
+    "stylesheet": {
+     "n": 1,
+     "raw": 67625,
+     "tx": 15966
+    },
+    "script": {
+     "n": 1,
+     "raw": 20697,
+     "tx": 6829
+    }
+   }
+  },
+  "afterScroll": {
+   "n": 5,
+   "raw": 283678,
+   "tx": 187319
+  },
+  "lazy": [],
+  "list": [
+   "document /contact/ raw=39468 tx=8636",
+   "font /assets/fonts/bricolage-grotesque.woff2 raw=131312 tx=131312",
+   "stylesheet /assets/css/styles.css raw=67625 tx=15966",
+   "font /assets/fonts/manrope.woff2 raw=24576 tx=24576",
+   "script /assets/js/main.js raw=20697 tx=6829"
+  ],
+  "third": [
+   "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js",
+   "https://js.hcaptcha.com/1/api.js?recaptchacompat=off"
+  ]
+ },
+ "old /work/ 390": {
+  "firstView": {
+   "n": 8,
+   "raw": 451557,
+   "tx": 357237,
+   "by": {
+    "document": {
+     "n": 1,
+     "raw": 36404,
+     "tx": 7611
+    },
+    "font": {
+     "n": 2,
+     "raw": 155888,
+     "tx": 155888
+    },
+    "stylesheet": {
+     "n": 1,
+     "raw": 67625,
+     "tx": 15966
+    },
+    "image": {
+     "n": 3,
+     "raw": 170943,
+     "tx": 170943
+    },
+    "script": {
+     "n": 1,
+     "raw": 20697,
+     "tx": 6829
+    }
+   }
+  },
+  "afterScroll": {
+   "n": 8,
+   "raw": 451557,
+   "tx": 357237
+  },
+  "lazy": [],
+  "list": [
+   "document /work/ raw=36404 tx=7611",
+   "font /assets/fonts/manrope.woff2 raw=24576 tx=24576",
+   "stylesheet /assets/css/styles.css raw=67625 tx=15966",
+   "image /assets/img/work-risenhealthco.jpg raw=51726 tx=51726",
+   "font /assets/fonts/bricolage-grotesque.woff2 raw=131312 tx=131312",
+   "script /assets/js/main.js raw=20697 tx=6829",
+   "image /assets/img/work-corbelbooks.jpg raw=38334 tx=38334",
+   "image /assets/img/work-smilyssoftwash.jpg raw=80883 tx=80883"
+  ],
+  "third": [
+   "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js"
+  ]
+ },
+ "old /work/ 1280": {
+  "firstView": {
+   "n": 8,
+   "raw": 451557,
+   "tx": 357237,
+   "by": {
+    "document": {
+     "n": 1,
+     "raw": 36404,
+     "tx": 7611
+    },
+    "stylesheet": {
+     "n": 1,
+     "raw": 67625,
+     "tx": 15966
+    },
+    "image": {
+     "n": 3,
+     "raw": 170943,
+     "tx": 170943
+    },
+    "font": {
+     "n": 2,
+     "raw": 155888,
+     "tx": 155888
+    },
+    "script": {
+     "n": 1,
+     "raw": 20697,
+     "tx": 6829
+    }
+   }
+  },
+  "afterScroll": {
+   "n": 8,
+   "raw": 451557,
+   "tx": 357237
+  },
+  "lazy": [],
+  "list": [
+   "document /work/ raw=36404 tx=7611",
+   "stylesheet /assets/css/styles.css raw=67625 tx=15966",
+   "image /assets/img/work-risenhealthco.jpg raw=51726 tx=51726",
+   "font /assets/fonts/manrope.woff2 raw=24576 tx=24576",
+   "script /assets/js/main.js raw=20697 tx=6829",
+   "font /assets/fonts/bricolage-grotesque.woff2 raw=131312 tx=131312",
+   "image /assets/img/work-corbelbooks.jpg raw=38334 tx=38334",
+   "image /assets/img/work-smilyssoftwash.jpg raw=80883 tx=80883"
+  ],
+  "third": [
+   "https://plausible.io/js/pa-M8H39gIN2J-TgmR4OOcVA.js"
+  ]
+ }
+}

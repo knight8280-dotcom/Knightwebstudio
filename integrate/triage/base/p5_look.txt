@@ -1,0 +1,37 @@
+mark / 390 {"word":"hours back","onLastLine":false,"z":"auto","anim":"none","bottom":"-4.134px"}
+mark / 1440 {"word":"hours back","onLastLine":false,"z":"auto","anim":"none","bottom":"-7.488px"}
+mark /services/ 390 {"word":"one roof","onLastLine":true,"z":"auto","anim":"none","bottom":"-4.134px"}
+mark /services/ 1440 {"word":"one roof","onLastLine":true,"z":"auto","anim":"none","bottom":"-7.488px"}
+mark /consulting/ 390 {"word":"less busywork","onLastLine":true,"z":"auto","anim":"none","bottom":"-4.134px"}
+mark /consulting/ 1440 {"word":"less busywork","onLastLine":true,"z":"auto","anim":"none","bottom":"-7.488px"}
+mark /process/ 390 {"word":"no surprises","onLastLine":true,"z":"auto","anim":"none","bottom":"-4.134px"}
+mark /process/ 1440 {"word":"no surprises","onLastLine":true,"z":"auto","anim":"none","bottom":"-7.488px"}
+mark /pricing/ 390 {"word":"up front","onLastLine":true,"z":"auto","anim":"none","bottom":"-4.134px"}
+mark /pricing/ 1440 {"word":"up front","onLastLine":true,"z":"auto","anim":"none","bottom":"-7.488px"}
+mark /about/ 390 {"word":"Christian","onLastLine":false,"z":"auto","anim":"none","bottom":"0.4056px"}
+mark /about/ 1440 {"word":"Christian","onLastLine":false,"z":"auto","anim":"none","bottom":"0.7488px"}
+mark /start/ 390 {"word":"customers","onLastLine":true,"z":"auto","anim":"none","bottom":"-3.66686px"}
+mark /start/ 1440 {"word":"customers","onLastLine":true,"z":"auto","anim":"none","bottom":"-7.488px"}
+mark /web-design-baton-rouge/ 390 {"word":"Baton Rouge","onLastLine":false,"z":"-1","anim":"none","bottom":"-12.7273px"}
+mark /web-design-baton-rouge/ 1440 {"word":"Baton Rouge","onLastLine":false,"z":"-1","anim":"none","bottom":"-30.8px"}
+on sand / {"vig":3,"notice":1,"cal":1,"leads":1,"ticket":1,"bizcard":1}
+on sand /services/ {}
+on sand /consulting/ {"phone-frame":1,"cal":1,"leads":1,"notice":3}
+on sand /work/ {"browser":1}
+on sand /process/ {}
+on sand /pricing/ {}
+on sand /faq/ {}
+on sand /contact/ {}
+on sand /about/ {}
+on sand /start/ {"print":3,"ticket":1}
+on sand /web-design-gonzales/ {"print":1}
+chars/line /terms/ .prose > p {"lines":36,"median":71,"p90":77,"max":82,"widthPx":578,"fs":"13px"}
+chars/line /privacy/ .prose > p {"lines":27,"median":74,"p90":77,"max":81,"widthPx":578,"fs":"13px"}
+chars/line /faq/ .faq-body p {"lines":71,"median":67,"p90":71,"max":73,"widthPx":527,"fs":"17px"}
+chars/line /about/ .prose p {"lines":5,"median":74,"p90":77,"max":77,"widthPx":578,"fs":"17px"}
+chars/line /pricing/ .lede null
+chars/line / .section-sub {"lines":2,"median":58,"p90":58,"max":58,"widthPx":552,"fs":"21px"}
+chars/line /pricing/ .cta-copy p null
+chars/line /consulting/ .steps p {"lines":12,"median":72,"p90":76,"max":79,"widthPx":510,"fs":"15px"}
+chars/line /web-design-gonzales/ .prose p {"lines":10,"median":73,"p90":78,"max":78,"widthPx":578,"fs":"17px"}
+phone bar shown while the band's own booking button is on screen: 5 of 58 scroll stops (20px apart) {"btnVisible":true,"shown":true,"bandTop":424,"btnBottom":773}

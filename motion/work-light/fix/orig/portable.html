@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Motion kit on a bare page: no site stylesheet, another brand</title>
+<script>
+  // A client page sets class "js" before first paint (the folder stack lays itself out early from it) and the saved theme.
+  (function () { var d = document.documentElement; d.classList.add('js'); try { var t = localStorage.getItem('bare-theme'); if (t) d.setAttribute('data-theme', t); } catch (e) {} })();
+</script>
+<link rel="stylesheet" href="shader.css">
+<link rel="stylesheet" href="cards.css">
+<style>
+  /* Everything the kit needs from a client site: thirteen variables, and three for the "wash" background. */
+  :root {
+    --kit-bg: #1C1B19; --kit-surface: #272520; --kit-ink: #F2E9D8; --kit-muted: #B9AF99; --kit-line: #45413A;
+    --kit-accent: #E0AC4A; --kit-accent-ink: #1C1B19; --kit-notice: #E0795F; --kit-gilt: #E0AC4A;
+    --kit-radius: 14px; --kit-shadow: 0 1px 0 rgba(0, 0, 0, .5), 0 18px 30px -20px rgba(0, 0, 0, .9);
+    --kit-font-display: Rockwell, "Roboto Slab", Georgia, serif; --kit-font-body: Verdana, "Segoe UI", sans-serif;
+    --kit-shader-1: #5A4320; --kit-shader-2: #3A362E; --kit-shader-3: #4A2B22;
+    color-scheme: dark;
+  }
+  :root[data-theme="light"] {
+    --kit-bg: #F3EEE3; --kit-surface: #FFFDF8; --kit-ink: #24211B; --kit-muted: #5D574B; --kit-line: #D2C9B6;
+    --kit-accent: #7A5310; --kit-accent-ink: #FFFDF8; --kit-notice: #A8452E;
+    --kit-shadow: 0 1px 0 rgba(36, 33, 27, .12), 0 18px 30px -20px rgba(36, 33, 27, .5);
+    --kit-shader-1: #F2DDB0; --kit-shader-2: #FFFDF8; --kit-shader-3: #F1D3C8;
+    color-scheme: light;
+  }
+  /* The page's own few styles (not the kit's) */
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--kit-bg); color: var(--kit-muted); font: 16px/1.6 var(--kit-font-body); }
+  .wrap { width: min(100% - 40px, 1120px); margin-inline: auto; }
+  section { padding: 56px 0; }
+  .top { padding: 72px 0 64px; }
+  h1, h2 { margin: 0 0 12px; color: var(--kit-ink); font: 700 clamp(2rem, 1.2rem + 4vw, 3.6rem)/1.05 var(--kit-font-display); }
+  h2 { font-size: clamp(1.5rem, 1.2rem + 1.6vw, 2.2rem); margin-bottom: 28px; }
+  p { margin: 0; max-width: 36em; }
+  .row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 24px; }
+  .btn { display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border: 0; border-radius: var(--kit-radius); background: var(--kit-accent); color: var(--kit-accent-ink); font: 700 1rem var(--kit-font-body); text-decoration: none; cursor: pointer; }
+  .btn.quiet { background: none; border: 1.5px solid var(--kit-line); color: var(--kit-ink); }
+  .block { padding: clamp(28px, 6vw, 64px); border-radius: var(--kit-radius); background: #6B4A12; --kit-ink: #FFF8E8; --kit-muted: #F0E2C4; --kit-accent: #FFF8E8; --kit-notice: #FFD98A; --kit-line: rgba(255, 248, 232, .35); --kit-surface: #7C5818; color: var(--kit-muted); }
+  .block h2 { margin-bottom: 12px; }
+  :focus-visible { outline: 3px solid var(--kit-accent); outline-offset: 3px; }
+</style>
+</head>
+<body>
+
+<section class="top kws-shader-host">
+  <div class="kws-shader" data-kws="shader" data-shader="wash" aria-hidden="true"></div>
+  <div class="wrap">
+    <p class="kws-label">Example · [your barber shop]</p>
+    <h1>[Your headline, in your own typeface]</h1>
+    <p>[This page loads none of KnightWebstudio's styles: only shader.css, cards.css, the two scripts and the variables in its own style block. Every word here is a placeholder.]</p>
+    <div class="row">
+      <a class="btn" href="#cards">[Your main button]</a>
+      <button class="btn quiet" type="button" id="theme">Switch theme</button>
+      <button class="kws-motion" data-kws="motion" type="button" hidden><svg class="kws-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg><svg class="kws-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<section id="cards">
+  <div class="wrap">
+    <h2>[Three things you offer]</h2>
+    <ul class="kws-marks">
+      <li class="kws-mark kws-link">
+        <p class="kws-label">Example</p>
+        <div class="kws-mark-art"><span class="kws-shader" data-kws="shader" data-shader="ribbon" data-tone="1" aria-hidden="true"></span></div>
+        <h3><a href="#cards">[First service]<svg class="kws-go" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a></h3>
+        <p class="kws-mark-price">[Its fixed price]</p>
+        <p>[One line about it.]</p>
+      </li>
+      <li class="kws-mark kws-link">
+        <p class="kws-label">Example</p>
+        <div class="kws-mark-art"><span class="kws-shader" data-kws="shader" data-shader="ribbon" data-tone="2" aria-hidden="true"></span></div>
+        <h3><a href="#cards">[Second service]<svg class="kws-go" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a></h3>
+        <p class="kws-mark-price">[Its fixed price]</p>
+        <p>[One line about it.]</p>
+      </li>
+      <li class="kws-mark kws-link">
+        <p class="kws-label">Example</p>
+        <div class="kws-mark-art"><span class="kws-shader" data-kws="shader" data-shader="ribbon" data-tone="3" aria-hidden="true"></span></div>
+        <h3><a href="#cards">[Third service]<svg class="kws-go" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a></h3>
+        <p class="kws-mark-price">[Its fixed price]</p>
+        <p>[One line about it.]</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>[How it goes, step by step]</h2>
+    <ol class="kws-folders">
+      <li class="kws-folder kws-link">
+        <p class="kws-folder-tab" aria-hidden="true"><span class="kws-folder-no">01</span></p>
+        <div class="kws-folder-body">
+          <div class="kws-folder-art"><span class="kws-shader" data-kws="shader" data-shader="ribbon" data-tone="1" aria-hidden="true"></span></div>
+          <p class="kws-label">Example</p>
+          <h3><a href="#cards">[First step]<svg class="kws-go" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a></h3>
+          <p>[What happens, in a sentence or two.]</p>
+        </div>
+      </li>
+      <li class="kws-folder">
+        <p class="kws-folder-tab" aria-hidden="true"><span class="kws-folder-no">02</span></p>
+        <div class="kws-folder-body"><p class="kws-label">Example</p><h3>[Second step]</h3><p>[What happens, in a sentence or two.]</p></div>
+      </li>
+      <li class="kws-folder">
+        <p class="kws-folder-tab" aria-hidden="true"><span class="kws-folder-no">03</span></p>
+        <div class="kws-folder-body"><p class="kws-label">Example</p><h3>[Third step]</h3><p>[What happens, in a sentence or two.]</p></div>
+      </li>
+      <li class="kws-folder">
+        <p class="kws-folder-tab" aria-hidden="true"><span class="kws-folder-no">04</span></p>
+        <div class="kws-folder-body"><p class="kws-label">Example</p><h3>[Fourth step]</h3><p>[What happens, in a sentence or two.]</p></div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>[Three plans, as a stack of folders]</h2>
+    <div class="kws-folders kws-folders--stack" data-kws="folders" data-label="Example plans" data-start="2">
+      <article class="kws-folder" id="plan-one">
+        <h3 class="kws-folder-tab">[Plan one] <b>[Price]</b></h3>
+        <div class="kws-folder-body">
+          <p class="kws-folder-price">[Price]</p>
+          <dl>
+            <div><dt class="kws-label">What it is</dt><dd>[A line about the first plan.]</dd></div>
+            <div><dt class="kws-label">Included</dt><dd>[First thing]</dd><dd>[Second thing]</dd></div>
+          </dl>
+          <p class="row"><a class="btn" href="#plan-one">[Choose plan one]</a></p>
+        </div>
+      </article>
+      <article class="kws-folder" id="plan-two">
+        <h3 class="kws-folder-tab">[Plan two] <b>[Price]</b></h3>
+        <div class="kws-folder-body">
+          <p class="kws-folder-price">[Price]</p>
+          <dl>
+            <div><dt class="kws-label">What it is</dt><dd>[A line about the second plan.]</dd></div>
+            <div><dt class="kws-label">Included</dt><dd>[First thing]</dd><dd>[Second thing]</dd><dd>[Third thing]</dd></div>
+          </dl>
+          <p class="row"><a class="btn" href="#plan-two">[Choose plan two]</a></p>
+        </div>
+      </article>
+      <article class="kws-folder" id="plan-three">
+        <h3 class="kws-folder-tab">[Plan three] <b>[Price]</b></h3>
+        <div class="kws-folder-body">
+          <p class="kws-folder-price">[Price]</p>
+          <dl>
+            <div><dt class="kws-label">What it is</dt><dd>[A line about the third plan.]</dd></div>
+            <div><dt class="kws-label">Included</dt><dd>[First thing]</dd><dd>[Second thing]</dd><dd>[Third thing]</dd><dd>[Fourth thing]</dd></div>
+          </dl>
+          <p class="row"><a class="btn" href="#plan-three">[Choose plan three]</a></p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="block kws-shader-host">
+      <div class="kws-shader" data-kws="shader" data-shader="band" aria-hidden="true"></div>
+      <p class="kws-label">Example</p>
+      <h2>[Your closing line.]</h2>
+      <p>[The folds behind these words are tones of this block's own colour; the flecks take the gilt variable and stay clear of the text.]</p>
+      <div class="row"><a class="btn" href="#cards">[Your main button]</a></div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.getElementById('theme').addEventListener('click', function () {
+    var d = document.documentElement, t = d.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    d.setAttribute('data-theme', t);
+    try { localStorage.setItem('bare-theme', t); } catch (e) {}
+  });
+</script>
+<script src="shader.js" defer></script>
+<script src="cards.js" defer></script>
+</body>
+</html>

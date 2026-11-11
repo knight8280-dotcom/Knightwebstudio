@@ -1,0 +1,7 @@
+1440x900 at 1x, CPU throttled 4x, closing band, load 4.9
+all on               frames  468  median 16.7  p95  16.8  worst   50.0  over 50ms 0
+smooth glints (old)  frames  478  median 16.7  p95  16.7  worst   33.3  over 50ms 0
+no glints            frames  480  median 16.7  p95  16.7  worst   16.8  over 50ms 0
+glints only          frames  479  median 16.7  p95  16.7  worst   33.3  over 50ms 0
+paused               frames  482  median 16.7  p95  16.8  worst   16.8  over 50ms 0
+load after 7.0

@@ -1,0 +1,771 @@
+{
+ "board": [
+  {
+   "key": "mainstreet",
+   "total": 239,
+   "scores": {
+    "creative-director": 84,
+    "local-owner": 86,
+    "engineer": 69
+   },
+   "firsts": 2
+  },
+  {
+   "key": "editorial",
+   "total": 237,
+   "scores": {
+    "creative-director": 78,
+    "local-owner": 77,
+    "engineer": 82
+   },
+   "firsts": 1
+  },
+  {
+   "key": "product",
+   "total": 205,
+   "scores": {
+    "creative-director": 69,
+    "local-owner": 72,
+    "engineer": 64
+   },
+   "firsts": 0
+  },
+  {
+   "key": "strategy",
+   "total": 205,
+   "scores": {
+    "creative-director": 73,
+    "local-owner": 60,
+    "engineer": 72
+   },
+   "firsts": 0
+  }
+ ],
+ "designs": [
+  {
+   "key": "editorial",
+   "concept": "The Consultant's Almanac: KnightWebstudio set like the annual report of a serious consultancy, written for a tradesman. Warm paper, deep ink and one confident blue; numbered chapters, hairline rules, a left rail for numbers and margin notes, big Fraunces numerals and dot-leader price lists carry the page, and every automation claim is paired with a small HTML/CSS figure that shows the product doing it. Light by default; a visitor whose device prefers dark (or who uses the toggle) gets a separately finished night edition.",
+   "defaultTheme": "light",
+   "signatureMoments": [
+    "Fig. 1 in the hero: a phone on a square blue plate showing a missed call answered by an automatic text, with numbered markers and a legend, captioned as an illustration with the $750 setup price",
+    "Hero headline set one phrase per line from 1181px up (More customers, / fewer missed calls, / hours back every week in blue italic), verified at 3 lines from 1181 to 1920px",
+    "The example week as a ledger: a real table with single-hue bars, the arithmetic per row, a 140px '200' (hours a year, in this example) in the left rail and the 'not a measurement' note beside it",
+    "Three ruled figure columns (Fig. 2 to 4): lock-screen notifications, a calendar slot filling in, and one list with follow-up chips, each above its three numbered steps",
+    "Dot-leader price lists throughout (name ........ $price), including a contents list with prices at the top of the Pricing page",
+    "Pricing tiers as four ruled columns whose price, plan, facts and buttons line up across columns via subgrid",
+    "The Launch bundle as an itemised receipt ($2,000 + $500 + $750, $3,250 struck through, $3,000) that stays sticky beside the consulting price list",
+    "Payment plan drawn to scale: a $1,000 deposit block and three 'about $333' months",
+    "The phone menu as the almanac's Contents page: numbered serif links on hairlines",
+    "The founder's note: a large first-person quote taken from the About page, signed, standing in for testimonials that do not exist yet"
+   ],
+   "fonts": [
+    "Fraunces (variable, weight + optical size, roman) - fraunces.woff2, 67 KB, preloaded",
+    "Fraunces Italic (variable, weight + optical size) - fraunces-italic.woff2, 81 KB",
+    "Libre Franklin (variable weight) - libre-franklin.woff2, 29 KB, preloaded"
+   ],
+   "checkerFails": 0,
+   "checkerWarns": [
+    "index.html: inline first-paint script differs from baseline. Reason: the default theme is now light, so the snippet switches to dark only when a saved choice or the device preference asks for it (was the reverse). Nothing else in it changed.",
+    "pricing/index.html: same first-paint snippet change, same reason.",
+    "For information: the whole-site run is also 0 FAIL, with the same WARN on 14 more pages because sync_chrome.py brought their heads in step (checkout pages keep their inline scripts byte for byte)."
+   ],
+   "roundsOfVisualReview": 4,
+   "selfScore": 84,
+   "knownGaps": [
+    "Only Home and Pricing are designed. The other pages carry the new header, footer and head settings (swapped mechanically by work/sync_chrome.py so the chrome is identical and the whole-site check passes) but their bodies are unstyled.",
+    "Phone pages are long: Home is 12,451px at 390px wide (17 screenshot stops; the old home was 10,215px) and Pricing 11,630px (16 stops). The screenshot tool's default limit of 14 stops would cut off the end, so the final shots were taken with --max 22.",
+    "Tested in Chromium only (Playwright). No Safari, Firefox, real phone or screen-reader testing; Lighthouse was not run.",
+    "The header and menu phone number is printed from a data attribute with CSS (it is a working tel: link with an aria-label) so the header text stays word for word what legal and checkout pages had; it cannot be selected or found with in-page search there. The number is plain text in the hero, closing band and footer.",
+    "The italic font file (81 KB) is not preloaded, so the blue italic phrase in a headline can swap a moment after the rest. The serif fallback metrics are tuned for headline sizes; small serif text may reflow slightly on a slow first load.",
+    "og-image.png, site.webmanifest colours and the repository README.md still describe the old dark look and fonts; tools/art/render.js was not re-run (the crest palette is unchanged, only its ribbon font).",
+    "The ledger and care-plan tables switch to block/grid layout on phones, which some screen readers stop announcing as tables.",
+    "On the two checkout pages the old first-paint snippet must stay, so a dark-preference visitor may see the light theme for an instant before main.js applies dark.",
+    "Tier column alignment relies on CSS subgrid; older browsers get correct but unaligned columns.",
+    "The hero conversation plays once in about 1.25s and has no replay; the 'Most popular' flag on Business is carried over from the current site unverified.",
+    "Chess pieces and drifting shards are retired from page heads in this direction (the knight stays in the crest and closing band); the Pricing page no longer shows the king piece."
+   ],
+   "filesChanged": [
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/editorial/DESIGN.md",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/editorial/site/assets/css/styles.css",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/editorial/site/assets/js/main.js",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/editorial/site/index.html",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/editorial/site/pricing/index.html",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/editorial/site/assets/fonts/fraunces.woff2",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/editorial/site/assets/fonts/fraunces-italic.woff2",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/editorial/site/assets/fonts/libre-franklin.woff2",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/editorial/site/tools/art/emblems.py",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/editorial/work/build_pages.sh",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/editorial/work/sync_chrome.py",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/editorial/work/home.main.html",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/editorial/work/pricing.main.html",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/editorial/work/chrome-header.html",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/editorial/work/chrome-footer.html",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/editorial/shots/ (final screenshots: 4 modes x 2 pages, plus shots/extra for tablet, 360px, laptop, wide, menu, no-JS, hover and focus checks)",
+    "Removed: site/assets/fonts/bricolage-grotesque.woff2 and manrope.woff2; header, footer and head settings synced on 15 other pages (heads only on /start/ and 404.html)"
+   ],
+   "port": 8711,
+   "title": "The Consultant's Almanac (editorial, typographic)"
+  },
+  {
+   "key": "product",
+   "concept": "Show the machine working: the site demonstrates the service with small working interfaces built in HTML/CSS (a phone that misses a call, texts back, takes the reply, books the job and sends a review request; a booking calendar; a lead list) instead of describing it. Everything around those screens is kept plain and warm (paper background, ink, one blue, a highlighter stroke, ruled price lists) so a contractor reads it as a tidy work order rather than software marketing.",
+   "defaultTheme": "light",
+   "signatureMoments": [
+    "Hero live stage: a phone plays six beats (incoming call, missed, automatic text-back, customer reply, booked on the calendar, review request) with three floating system cards; it rests in the finished picture, then rewinds and replays, with a five-stop rail to jump to any step and a pause button. Works as a static complete picture with no JavaScript or reduced motion.",
+    "Automation bento: four different tiles (notification stack for text-back, booking picker feeding a week calendar, a lead list whose status chips advance, and an inverse-coloured 'example week' ledger showing the 235-minute arithmetic with its 'not a measurement' qualifier), each demo labelled Illustration and carrying its fixed setup price.",
+    "The offer in three ruled lines inside the hero: Websites, Automation and Consulting with their fixed prices visible in the first desktop viewport.",
+    "Price sheet and payment-plan bar: the four website prices as one four-column sheet with a segmented bar drawing '50% down, then three payments'; on the pricing page, tier cards whose rows align across cards, grouped price ledgers, the Launch bundle shown as a receipt that adds up to $3,250 and lands on $3,000, and care plans as one aligned table.",
+    "Pricing page opens with an on-this-page index card listing every price group, so a phone visitor sees all prices in the first screen.",
+    "Closing dark panel with the knight crest, tap-to-call number and booking button; floating phone bar with a call button on small screens."
+   ],
+   "fonts": [
+    "Bricolage Grotesque (display, variable weight-only cut, 41 KB, replaces the old 131 KB file)",
+    "Geist (text and interface, variable, 29 KB)",
+    "Geist Mono (labels and small print, variable, 23 KB)"
+   ],
+   "checkerFails": 0,
+   "checkerWarns": [
+    "index.html: inline first-paint <script> differs from baseline. Reason: the design is light by default, so the theme snippet now switches to dark for a saved choice or a dark system setting (it used to switch to light). Nothing else in the snippet changed.",
+    "pricing/index.html: same first-paint theme snippet change, same reason."
+   ],
+   "roundsOfVisualReview": 4,
+   "selfScore": 84,
+   "knownGaps": [
+    "Only the home and pricing pages are designed. The other 17 pages carry the new header, footer and font preloads (synced by work/sync_chrome.py so the shared chrome is identical and the full-site check shows 0 FAIL) but keep their old page markup and look unstyled.",
+    "Form fields, FAQ accordion, calculator, legal long-form type and checkout wrappers are specified in DESIGN.md but not yet written in CSS.",
+    "The work section is three equal browser frames with a live-site dot: honest, but the least distinctive section.",
+    "The hero story joins three separately priced setups in one scene; the caption says so, but a skimming visitor could read it as one product.",
+    "Demos avoid clock times and phone numbers to keep every figure to ones already on the site, so they read slightly less like a real phone.",
+    "Phone home page is long (about 13,000px at 390px, versus about 10,200px before).",
+    "README.md still documents the old tokens and fonts; og-image, favicon and app icons still show the old dark look and need re-rendering.",
+    "Uses subgrid, :has(), color-mix() and overflow: clip; browsers older than 2023 lose row alignment and some tints but nothing breaks.",
+    "Not run: Lighthouse, screen-reader pass, real-device testing. Contrast was computed for token pairs, not audited element by element.",
+    "Header visible text was kept identical to the old site (legal and checkout pages are checked word for word, header included), so the phone menu's call link is icon-only with an aria-label rather than showing the number."
+   ],
+   "filesChanged": [
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/product/DESIGN.md",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/product/site/assets/css/styles.css",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/product/site/assets/js/main.js",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/product/site/index.html",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/product/site/pricing/index.html",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/product/site/assets/fonts/bricolage-grotesque.woff2",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/product/site/assets/fonts/geist.woff2",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/product/site/assets/fonts/geist-mono.woff2",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/product/site/assets/fonts/manrope.woff2 (removed)",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/product/site/site.webmanifest",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/product/site/tools/art/emblems.py",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/product/site/assets/img/crest.svg",
+    "15 other pages in /tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/product/site/ (shared header, footer, phone bar and font preload only)",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/product/work/make.py",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/product/work/sync_chrome.py",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/product/work/home.main.html",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/product/work/pricing.main.html",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/product/work/_header.html",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/product/work/_footer.html",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/product/work/_head-script.js",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/product/shots/ (final screenshots, four modes, both pages; extra/ holds 360, 820, 1280 and 1920)"
+   ],
+   "port": 8712,
+   "title": "Show the machine working (product-led)"
+  },
+  {
+   "key": "mainstreet",
+   "concept": "\"The well-run shop.\" Everything on the page is an object from a good local business (the painted sign, the price board, the job ticket, the time sheet, the appointment card, the phone on the workbench), drawn on warm paper in ink, sign-painter's blue and Red Stick brick, with gold leaf only on blue. Light first; the dark theme is the same Baton Rouge street after closing, with the shop windows and street lamp lit.",
+   "defaultTheme": "light",
+   "signatureMoments": [
+    "Hero: a hand-drawn SVG brick shop front (striped awning, iron balcony, 'YOUR BUSINESS' sign, work van) inside an arch, with the State Capitol tower and the river bridge on the horizon, a phone showing the missed-call text-back in front of it, and a round 'Fixed prices' seal stamped on. Switching theme cross-fades the street from day to night.",
+    "The story section 'What happens when a customer calls and you can't pick up': a five-stop route following one call, each stop shown rather than described (phone ringing on a workbench, the text thread plus the notification on the owner's phone, a booking dropping into a calendar, the enquiry list with follow-ups, the review request), ending in the example week as a time sheet.",
+    "The price board: the four fixed website prices in large Fraunces numerals on painted blue with a gold pinstripe, and the other prices as a dotted-leader price list. On the pricing page the same language becomes price cards (the 'Most popular' one under a scalloped awning), a payment-split diagram and menu-style ledgers.",
+    "Shop objects that replace generic cards: the four-step process as a job ticket with a 'You own everything' stamp, the three real projects as prints laid on a counter, Christian's business card, and the closing call to action as an appointment card (Cost: Free, Length: 30 minutes, Sales pitch: None).",
+    "The footer rises out of a Baton Rouge skyline silhouette (Capitol, downtown, the cantilever bridge), and the closing band has a scalloped awning edge."
+   ],
+   "fonts": [
+    "Fraunces (variable, wght + SOFT axes, Latin, 62 KB, SIL OFL) for headings, prices and the brand name",
+    "Figtree (variable wght, Latin, 20 KB, SIL OFL) for text and interface"
+   ],
+   "checkerFails": 0,
+   "checkerWarns": [
+    "index.html: inline first-paint <script> differs from the baseline. Intended: the direction is light first, so the snippet now defaults to light, honours a saved choice, and falls back to dark only when the device prefers dark. main.js was changed to match.",
+    "pricing/index.html: the same inline first-paint snippet, for the same reason."
+   ],
+   "roundsOfVisualReview": 5,
+   "selfScore": 86,
+   "knownGaps": [
+    "Only / and /pricing/ are redesigned. Fifteen other pages carry the new header and footer (copied by work/sync-chrome.py so the whole-site check also shows 0 FAIL); /start/ and 404 keep their own. Their page bodies are unstyled under the new stylesheet.",
+    "No form, calculator, FAQ accordion, legal prose or checkout styles exist yet; DESIGN.md describes them but they are not built.",
+    "To keep the legal and checkout pages passing the word-for-word check, the header keeps its old labels ('Start your project', 'Get a quote'). The phone number in the top strip and the 'Call (225) 255-0837' button in the phone menu are drawn by CSS from data attributes, with the full label in aria-label. It works and is accessible, but it is a workaround that the rollout should either keep or replace by updating the check's baseline.",
+    "The home page is long on a phone: about 15,400px at 390px wide, roughly 18 screens, against about 9,000px for the old page. The story section is the longest part.",
+    "Illustrations are simple flat geometry checked by eye in headless Chromium at 360, 390, 820, 1280, 1440 and 1920px. Nothing was tested on real Safari, iOS or Android. The awning uses CSS masks and the header uses color-mix(); both degrade to a plainer look.",
+    "The crest keeps its original palette (teal inner line), and the favicons and link-preview image still show the old dark look; emblems.py PALETTE and render.js were not re-run.",
+    "The story vignettes contain invented example messages ('The kitchen sink is leaking\u2026', enquiry names like 'Fence repair quote'), each marked 'Example'. The owner should approve them.",
+    "The home page adds a first-person 'Who you work with' note quoted from the About page on a site that otherwise says 'we', and reorders the projects to put Smilys Softwash first. Both are choices to confirm.",
+    "Without JavaScript the page is fully readable and the phone menu falls back to in-page links, but the theme stays light even on a device set to dark.",
+    "Font fallback metrics were tuned against Liberation fonts, not real Georgia and Arial, so a small shift on font swap may remain. The old Bricolage and Manrope files are still in assets/fonts because untouched pages preload them.",
+    "README.md still describes the old colours, fonts and chess artwork.",
+    "No Lighthouse or automated accessibility audit was run; contrast was computed by script for the token pairs and touch targets were measured at 390px only."
+   ],
+   "filesChanged": [
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/mainstreet/DESIGN.md",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/mainstreet/site/assets/css/styles.css",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/mainstreet/site/assets/js/main.js",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/mainstreet/site/index.html",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/mainstreet/site/pricing/index.html",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/mainstreet/site/assets/fonts/fraunces-soft.woff2",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/mainstreet/site/assets/fonts/figtree.woff2",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/mainstreet/site/tools/art/build.py",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/mainstreet/work/partials/header.html",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/mainstreet/work/partials/footer.html",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/mainstreet/work/partials/home.main.html",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/mainstreet/work/partials/pricing.main.html",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/mainstreet/work/build.sh",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/mainstreet/work/sync-chrome.py",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/mainstreet/work/head-script.js",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/mainstreet/work/interact.js",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/mainstreet/shots/ (final screenshots: desktop and mobile in both themes for both pages, plus tablet-light, small-dark and x-* behaviour checks)",
+    "15 other pages under /tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/mainstreet/site/ (header and footer blocks only, via sync-chrome.py)"
+   ],
+   "port": 8713,
+   "title": "Main Street premium (warm, human, local)"
+  },
+  {
+   "key": "strategy",
+   "concept": "Your next move: the knight becomes the whole system. An 8-file board is the layout grid, the knight's L-shaped move is the only motion signature, and one signal coral always marks \"the next move to make\" (the square the knight stands on, the primary button, \"Your move.\" in the headline). The offer is stated in plain words first (\"More customers. Fewer missed calls.\" plus \"Websites, automation and consulting for local businesses\"), and the board beside it shows the product working (missed call, text back, booked, review) instead of decorating it. Ink navy chrome, ivory pages, the brand blue, Jost geometric display type.",
+   "defaultTheme": "light (ivory pages with an ink-navy header, hero and footer in both themes; a device that prefers dark gets the dark theme, and the toggle still remembers a choice)",
+   "signatureMoments": [
+    "Hero board: a 4x4 corner of the board (files e-h) where the faceted knight hops in true L-moves from Missed call to Text back to Booked to Review; the coral track fills behind it, visited squares turn brand blue, the current square is coral. Rests on its finished state without JS or with reduced motion, pauses off-screen and on hover, and has a Pause button.",
+    "Services as a score sheet rather than a card grid: three ruled rows (Opening move / Next move / The long game), each with a chess piece on its own square in file a, under an a-h file ruler, with the fixed price in a coral-edged block.",
+    "Automation shown, not described: an L-shaped bento of HTML/CSS illustrations (phone text-back thread using the site's own '[your business]' message, a week calendar with a slot turning Booked, one enquiry list with day-2 / 1-week follow-ups and a review request), each labelled Illustration, plus the consulting page's example week as a real tally table with its 'example, not a measurement' note beside the numbers.",
+    "Process as four alternating ink and ivory squares in a rank (a 2x2 checker on tablet, a column on phone), followed by two plain assurances: you own everything, and one named person in Baton Rouge.",
+    "Typographic pricing: four ruled price columns in 64px Jost that fill ink on hover; on the pricing page, subgrid-aligned tier cards with an ink 'Most popular' card, grouped score-sheet price lists with a sticky heading, and the 50/50 split and Starter payment plan drawn to scale.",
+    "Small L-move details: a knight-move arrow on every 'go on' link that hops up-and-across on hover, pieces that make their move when a row is hovered, status chips that arrive by an L."
+   ],
+   "fonts": [
+    "Jost variable (SIL OFL, self-hosted, 26 KB Latin): display, labels, prices, buttons",
+    "Manrope variable (already on the site, 24 KB): reading text"
+   ],
+   "checkerFails": 0,
+   "checkerWarns": [
+    "index.html: inline first-paint script differs from the baseline. Intended: the default theme is now light, so the snippet switches to dark only for a saved choice or a device that prefers dark.",
+    "pricing/index.html: same first-paint theme snippet change, for the same reason."
+   ],
+   "roundsOfVisualReview": 4,
+   "selfScore": 86,
+   "knownGaps": [
+    "Only / and /pricing/ are designed. Form, FAQ and prose styles exist in the stylesheet under the existing class names but have not been seen on a rebuilt page; the consulting table and calculator are specified in DESIGN.md, not built.",
+    "The other pages carry the new shared header and footer (copied by script so the site-wide check passes at 0 FAIL across all 19 pages) but their bodies are untouched and look broken under the new stylesheet, as expected.",
+    "The header's visible text cannot change: adding a phone link to the menu sheet failed the word-for-word check on the legal and checkout pages, so it was removed. The phone number is in the call-to-action band and footer instead.",
+    "Project images are the site's existing two link-preview cards and one before/after photo; they are matted, not cropped, but real page screenshots would show the work better.",
+    "The chess pieces and crest are the existing drawings recoloured (crest palette, favicon, app icons and link-preview image re-rendered); a heavier redrawn knight would sharpen the hero.",
+    "On phones the board squares show titles only; the one-line notes appear from tablet width up. The four process squares are sparse on desktop for the three shorter steps.",
+    "The board loop is timer-driven (with Pause, off-screen and hover pausing); a scroll-linked version was not explored.",
+    "No Lighthouse run was possible; budgets checked by file size only (CSS 71 KB, main.js 23 KB, two preloaded fonts 50 KB together). Fallback font metrics were measured against Liberation Sans standing in for Arial.",
+    "bricolage-grotesque.woff2 (131 KB) is still in assets/fonts only because the unrebuilt pages' heads preload it; delete at roll-out.",
+    "Subgrid and container-query units are used for card row alignment and board tile sizing; older browsers get an unaligned but usable layout.",
+    "Coral as a fill is 2.7:1 on ivory, so the primary button gets an ink edge on light surfaces and coral text uses the darker coral-700; small decorative coral squares on ivory are below 3:1 and carry no meaning alone.",
+    "main.js desktop-menu breakpoint moved from 981px to 1101px so eight links, the toggle and the button fit; the site README's colour/type section is rewritten but its artwork table still describes the old layout.",
+    "Added true content from /about/ and /consulting/ to the home page (ownership terms, 'you work with Christian Knight', towns served, example-week table); no new figures, but the owner should confirm he wants to be named on the home page and in the call-to-action band."
+   ],
+   "filesChanged": [
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/strategy/DESIGN.md",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/strategy/site/assets/css/styles.css",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/strategy/site/assets/js/main.js",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/strategy/site/index.html",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/strategy/site/pricing/index.html",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/strategy/site/assets/fonts/jost.woff2",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/strategy/site/tools/art/emblems.py",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/strategy/site/tools/art/build.py",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/strategy/site/tools/art/render.js",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/strategy/site/assets/img/og-image.png",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/strategy/site/assets/img/logo.svg",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/strategy/site/assets/img/crest.svg",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/strategy/site/assets/img/apple-touch-icon.png",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/strategy/site/assets/img/icon-192.png",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/strategy/site/assets/img/icon-512.png",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/strategy/site/favicon.ico",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/strategy/site/site.webmanifest",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/strategy/site/README.md",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/strategy/site/ (15 other pages: shared header and footer synced, crest art refilled; bodies untouched)",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/strategy/work/parts/ (header.html, footer.html, cta.html, home-main.html, pricing-main.html, head-script.js)",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/strategy/work/build_pages.py",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/strategy/work/sync_chrome.py",
+    "/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/design/strategy/shots/ (56 final PNGs, four modes, both pages, plus report.json)"
+   ],
+   "port": 8714,
+   "title": "Your next move (the knight as a system)"
+  }
+ ],
+ "verdicts": [
+  {
+   "judge": "creative-director",
+   "ranking": [
+    "mainstreet",
+    "editorial",
+    "strategy",
+    "product"
+   ],
+   "evaluations": [
+    {
+     "key": "mainstreet",
+     "score": 84,
+     "strengths": [
+      "The only direction whose idea comes from the visitor's world rather than the designer's: a storefront signed YOUR BUSINESS with awning, van, street lamp, the Baton Rouge capitol and bridge. It says 'local, real, made with care' before a word is read.",
+      "Best phone first screen of the four at 390 and 360: Baton Rouge and the phone number in a utility bar, headline, lede, both buttons and the four website prices, all before the first scroll.",
+      "Best sticky bar: a labelled Call button beside 'Free 30-min call \u00b7 no pitch', and at 360 it drops 'no pitch' rather than squeezing. It matches the order of actions in the brief.",
+      "Layout rhythm is the richest: icon strip, one wide card plus two, a five-step 'follow one call' timeline with a workbench drawing, a perforated time sheet, a job ticket with checkboxes, a blue price board, a business card, an appointment card, a skyline into the footer. No structure repeats.",
+      "Four or five real signature moments: the hero, the timeline, the price board with gold figures on blue, the appointment card ('Sales pitch \u2026 None'), and the night edition.",
+      "The dark theme is a second design, not an inversion: the same street after closing, with moon, lit windows and lamp.",
+      "Type is warm and confident (heavy soft Fraunces display, Figtree text) and body copy stays at 16 to 18px, the most readable of the four for this audience.",
+      "Colour has a rule and keeps it: blue is pressable, brick is 'notice this', gold only on blue."
+     ],
+     "weaknesses": [
+      "Hero composition on desktop is crowded: the phone covers the lower left of the storefront, the 'EXAMPLE: WHAT YOUR CALLER SEES' pill butts into the shop sign, and the stamp sits on the arch edge. At 1280 the price strip under the buttons falls below the fold.",
+      "Mobile 'Website design & build' card: the phone mock covers the browser mock's title, leaving a stray 'usiness' visible at 390 and 360.",
+      "Longest home page of the four: 13 desktop stops and about 21 phone screens (15,364px). Automation is told twice (timeline, then time sheet) before work and prices appear; the price board is stop 10.",
+      "The pricing page falls back to stacked rounded cards (four tier cards with tick lists, four care-plan cards, an 'every plan includes' card). The price-board idea from the home page is not carried to the tiers, so the pricing page is the least distinctive part.",
+      "Restraint is the weak point: tilted project cards, tilted business card, tilted appointment card, two stamps, a scalloped edge and a skyline. A couple of props too many; it edges toward cute.",
+      "The staggered reveal on the care-plan cards is slow enough that the screenshot at pricing stop 6 caught the last card still faded.",
+      "assets/fonts still holds bricolage-grotesque.woff2 (131 KB) and manrope.woff2, which the stylesheet no longer references."
+     ],
+     "mustFix": [
+      "Re-compose the desktop hero so the phone, the caption pill, the shop sign and the stamp do not collide, and keep the price strip above the fold at 1280.",
+      "Fix the mobile website mock so the phone does not cut through the 'Your Business' title.",
+      "Cut the home page by roughly three stops: fold the time sheet into the timeline or move the price board up, and aim for 15 to 16 phone screens.",
+      "Redesign the pricing-page tiers and care plans away from four stacked cards (see the editorial spec table) and bring the price board onto that page.",
+      "Keep one tilted object and one stamp per page; straighten the rest.",
+      "Shorten the reveal stagger and delete the two unused font files."
+     ],
+     "ideasWorthStealing": [
+      "Sticky bar with a labelled Call button plus the free-call button.",
+      "Utility bar with city and phone number above the header on phone.",
+      "Night edition as 'the same street after closing'.",
+      "Appointment card that states the terms of the free call as a list (Cost: Free, Length: 30 minutes, Sales pitch: None)."
+     ]
+    },
+    {
+     "key": "editorial",
+     "score": 78,
+     "strengths": [
+      "The finest typographic craft of the four: Fraunces display with a blue italic line, Libre Franklin text, numbered chapters in a left rail, hairline rules, dot-leader price lists and a real scale. Type carries the page with almost no decoration.",
+      "Restraint: paper, ink and one blue. It reads expensive and trustworthy.",
+      "The hero shows the product (FIG. 1 phone with numbered markers keyed to four captions) and puts the phone number in the desktop header and under the buttons.",
+      "The big '200' numeral beside the example-week table with bars is a real signature moment.",
+      "The pricing page is the most scannable: tiers as a ruled spec table (LIVE IN / SIZE / DESIGN / AFTER LAUNCH), an 'On this page' contents list with prices, '50/50' numerals for payment, care plans as a table rather than cards.",
+      "Almost no card grids; sections differ in structure.",
+      "Phone layout is designed: step timeline, stacked price rows, sticky bar with label, call icon and Get a quote."
+     ],
+     "weaknesses": [
+      "Pricing on phone is broken on the tier that matters most: the 'Most popular' Business block bleeds to the screen edge with no inner padding, so labels and ticks touch the left edge and '$4,000' is clipped on the right at both 390 and 360.",
+      "At 360 the numbered markers of FIG. 1 sit on top of the phone outline.",
+      "The register is an annual report: 'FIG. 1', chapter numerals, small-caps labels. Credible but cool; a roofer or salon owner may read it as a consultancy or law firm rather than a friendly local person. Baton Rouge appears only in the eyebrow and one trust cell.",
+      "Too much small type for this audience: service-row copy, figure captions and spec labels run about 12 to 14px on desktop, with many 11px small-caps labels.",
+      "The italic headline wraps badly on phone ('calls, hours / back every week').",
+      "Figures 2 to 4 are thin outlined boxes at low contrast; they inform but do not delight. Fewer memorable hooks than mainstreet.",
+      "On phone the hero figure is below the first screen and no price is visible before scrolling.",
+      "The night edition is a competent navy inversion; periwinkle on navy drifts toward ordinary dark mode."
+     ],
+     "mustFix": [
+      "Give the featured Business tier proper padding on phone so nothing touches or clips at the screen edges.",
+      "Fix the FIG. 1 marker collision at 360.",
+      "Raise body, caption and label sizes (nothing a customer must read under 15px; labels at least 12px).",
+      "Control the mobile headline break so the italic phrase stays together.",
+      "Add visible local and human signals beyond the eyebrow."
+     ],
+     "ideasWorthStealing": [
+      "Tiers as a ruled spec table with LIVE IN / SIZE / DESIGN / AFTER LAUNCH rows.",
+      "Care plans as a table on desktop.",
+      "'On this page' contents list that shows each section's prices.",
+      "The giant '200 hours a year' numeral next to the example week, with bars for each line.",
+      "Phone number in the desktop header.",
+      "Numbered markers on the phone figure keyed to short captions."
+     ]
+    },
+    {
+     "key": "strategy",
+     "score": 73,
+     "strengths": [
+      "The strongest brand idea: the knight finally does something. The board is the grid, the L-shaped move links Missed call, Text back, Booked and Review, and coral always marks the next move. Nobody else's site looks like this.",
+      "The plainest statement of the offer: 'More customers. Fewer missed calls.' then 'Websites, automation and consulting for local businesses.' with the four prices in the hero.",
+      "A disciplined system: 2px corners, flat colour, no gradients or glows. Dark, but not generic dark SaaS.",
+      "Good rhythm: ruled service rows with chess pieces, a dark automation bento, the example-week table, an asymmetric work section ('Three live sites. Go and look.'), ruled price columns, a blue checker closing band with the crest large.",
+      "Pricing page emphasis is clear: the Business tier inverted to navy with a coral tab."
+     ],
+     "weaknesses": [
+      "Concept ahead of audience: 'Opening move \u00b7 Get found', 'The long game \u00b7 Keep winning', file letters a to h and rank numbers are a designer's pleasure. A roofer does not think in chess, and the labels are noise.",
+      "Navy, coral and a geometric display face read as a tech agency. Nothing on screen says Baton Rouge or 'one person'. The hero is dark in both themes, so the first impression is a dark site either way.",
+      "The hero board is a diagram of four labelled tiles, not a demonstration; the phone conversation only arrives in the third section.",
+      "Headline leading is too tight: the descender of 'prices,' cuts into 'published' on both pricing headings, and 'packages,' into 'fixed'.",
+      "Hero headline runs over the board's first column at 1440 and stops a few pixels short of the 'Booked' tile at 1280.",
+      "Sticky bar has no call button, only a label and 'Get a quote'.",
+      "The four-step block alternates navy and ivory squares with large coral numerals; loud for what it says."
+     ],
+     "mustFix": [
+      "Open the display line-height so descenders and ascenders never touch.",
+      "Keep the hero headline clear of the board at every width.",
+      "Remove the file and rank letters and the chess-jargon eyebrows, or cut them to one use.",
+      "Add a call button to the sticky bar.",
+      "Give the light theme a light hero, and add a visible local, human signal."
+     ],
+     "ideasWorthStealing": [
+      "The plain second line under the headline: 'Websites, automation and consulting for local businesses.'",
+      "One accent colour reserved for 'the next thing to press'.",
+      "The headline 'Three live sites. Go and look.'",
+      "The crest shown large in the closing band.",
+      "The knight's L-move as the connector between steps (it could link the steps of the mainstreet timeline)."
+     ]
+    },
+    {
+     "key": "product",
+     "score": 69,
+     "strengths": [
+      "The best single demonstration: the hero phone plays the whole sequence (missed call, text back, reply, booked, review request) with a labelled stepper and a pause control, tied to floating missed-call, calendar and review cards.",
+      "'Miss the call. Keep the customer.' is the best headline of the four.",
+      "The hero lists the three offers with their fixed prices on the first desktop screen.",
+      "Each service row gets its own small interface vignette; the booking widget and lead list are convincing.",
+      "The deposit-split bar under each price is a smart small visual.",
+      "Components are consistent and cleanly finished."
+     ],
+     "weaknesses": [
+      "The art direction is the modern SaaS landing page I have seen hundreds of times: Geist with mono uppercase labels, dot-grid background, peach and lavender glow, floating rounded cards, pill badges, 'LIVE' chips, glowing buttons. The dark theme is exactly generic dark SaaS. It fails the first criterion most.",
+      "It makes a one-person Baton Rouge studio look like a software product, to an audience that distrusts tech. Nothing local or human is on screen beyond the eyebrow.",
+      "The headline sells one $750 automation, not the studio; websites, the main line of business, are absent from it.",
+      "Small type: mono labels around 10 to 11px, row copy and price captions around 13px, add-on descriptions on the pricing page about 12 to 13px.",
+      "More repeated card patterns than the others: three equal project cards, four equal steps, four tier cards, bento cards.",
+      "The floating sticky bar lets page content show beneath and below it on phone, and at tablet width it is a narrow pill sitting on top of card text.",
+      "Little is memorable after the hero."
+     ],
+     "mustFix": [
+      "Dock the sticky bar solidly to the bottom so no content shows under it.",
+      "Raise label and caption sizes and stop using mono for anything a customer must read.",
+      "Name websites in the headline or directly beside it.",
+      "Replace the generic dark theme with a designed one.",
+      "Add local, human signals."
+     ],
+     "ideasWorthStealing": [
+      "The full-sequence phone with a labelled stepper and a pause button.",
+      "'Miss the call. Keep the customer.' as the heading of the automation timeline.",
+      "The three-row 'what we do, at fixed, published prices' list in the hero.",
+      "The deposit-split bar under each tier price."
+     ]
+    }
+   ],
+   "rationale": "Mainstreet first, editorial second. Editorial has the finer typography and more restraint, and its pricing page is better built. But the brief's test is a roofer on an iPhone deciding in seconds whether this is a real, local, competent person, and mainstreet answers that on the first screen: Baton Rouge and the phone number, a storefront with his own sign on it, the four prices, a Call button in the sticky bar. Editorial answers a different question (is this a serious consultancy) in an annual-report voice with a lot of 12 to 14px type, and its phone pricing page clips the $4,000 tier at the screen edge. Mainstreet is also the only direction with an idea I have not seen before, and it has the most signature moments and the only dark theme that is a concept rather than an inversion. Its faults are fixable by editing: a crowded hero, a home page about three stops too long, too many props, and a pricing page that should borrow editorial's spec-table tiers. Strategy has the strongest brand system but serves the designer more than the customer; product has the best demo inside the most generic shell. All four pass the integrity checker with 0 FAIL, and none overflows horizontally at 360, 390, 820, 1280 or 1440. Extra screenshots and close-ups are in /tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/judge/creative-director/."
+  },
+  {
+   "judge": "local-owner",
+   "ranking": [
+    "mainstreet",
+    "editorial",
+    "product",
+    "strategy"
+   ],
+   "evaluations": [
+    {
+     "key": "mainstreet",
+     "score": 86,
+     "strengths": [
+      "Passes the five-second test on a phone better than any other: the first screen shows 'Baton Rouge, Louisiana' and a tap-to-call (225) 255-0837 in the top bar, a plain headline, one big 'Book a free 30-minute call' button, and the four website prices ($1,000, $2,000, $4,000, $8,000) with 'Fixed, published prices' right under it.",
+      "Only direction whose sticky bar has a button that literally says 'Call' (91x50px, tel: link) next to a real booking button 'Free 30-min call - no pitch'. I never have to hunt for how to reach him.",
+      "It looks local and human without a single stock photo: the 'YOUR BUSINESS' brick storefront with awning and van, the Baton Rouge bridge/capitol skyline in the footer, town chips that include Denham Springs, and a business card with Christian Knight, Founder, phone, email and city.",
+      "The automation section tells one story in my language ('You can't pick up' -> 'Within a minute, they get a text' -> 'They pick a time' -> 'The quote went quiet? It follows up' -> 'Job done. The review request sends itself'), each step with a small labelled EXAMPLE screen and its fixed price tag.",
+      "The appointment card at the bottom (Cost: Free / Length: 30 minutes / Sales pitch: None / Where: A call, or in person) answers exactly what somebody burned by web people wants to know before booking.",
+      "Pricing page is easy with a thumb: huge serif prices, the payment-plan line under each, deposit buttons that state the dollar amount ('Pay 50% deposit - $2,000'), a 'Questions first? Send an enquiry' escape under every card, and a simple 50/50 bar explaining how you pay.",
+      "Dark theme is its own finished picture (same street at night, lit shop windows and street lamp) rather than inverted colours; all screenshot reports are clean (no overflow, no console errors).",
+      "Warm serif headlines plus a friendly sans read comfortably at arm's length; nothing sounds like software jargon."
+     ],
+     "weaknesses": [
+      "Home page is the longest of the four on a phone (15,364px, about 24 screens). The first two screens do the selling, but the automation timeline and services cards could be tightened.",
+      "There are a lot of props: stamp, awning, scalloped edge, tilted project cards, job ticket, appointment card, business card, 'YOU OWN EVERYTHING' stamp. On the home page it is charming; repeated across 19 pages it could tip into cute.",
+      "Mobile hero illustration (second screen): the 'Fixed prices' stamp crowds/overlaps the right edge of the phone mock-up and the phone covers most of the storefront, so it looks a little cluttered.",
+      "Pricing page on mobile: the jump-link chip row is cut off mid-word ('Consultin') with no cue that it scrolls sideways.",
+      "Pricing 'How you pay' diagram on mobile: the '$333 month 1/2/3' labels are very small.",
+      "Desktop job ticket has empty checkboxes that look tappable but do nothing; tilted project cards slightly soften the screenshot text.",
+      "Leftover unused font files in assets/fonts (bricolage-grotesque.woff2 at 131 KB, manrope.woff2) even though the CSS only references Fraunces Soft and Figtree."
+     ],
+     "mustFix": [
+      "Pricing mobile: make the jump-chip row wrap or give it a visible scroll cue so it is not clipped mid-word.",
+      "Mobile hero illustration: move or shrink the 'Fixed prices' stamp so it does not collide with the phone mock-up.",
+      "Make the job-ticket checkboxes clearly decorative (or remove them) so nobody tries to tap them.",
+      "Delete the two unused font files before shipping.",
+      "Enlarge the payment-plan chip labels on mobile to a readable size.",
+      "When rolling out to all 19 pages, ration the props (one 'object' per section at most; none on FAQ, privacy, terms, checkout) and trim the home page length on phones."
+     ],
+     "ideasWorthStealing": [
+      "Top utility bar with city on the left and tap-to-call number on the right.",
+      "Four prices directly under the hero buttons.",
+      "Sticky bar with a labelled 'Call' button plus the booking button.",
+      "Appointment card (Cost free / 30 minutes / Sales pitch none).",
+      "Founder business card with real contact details and the towns served."
+     ]
+    },
+    {
+     "key": "editorial",
+     "score": 77,
+     "strengths": [
+      "Very easy to read: big calm serif headline, generous body size, strong hairline grid. It feels like a serious, honest professional, not a hype shop.",
+      "Hero figure is the clearest single explanation of missed-call text-back: a phone with steps numbered 1-4 matched to a four-line legend, captioned 'Missed-call text-back, $750 to set up. An illustration, not a real conversation.'",
+      "Phone number is always reachable: in the desktop header, as a text link under the hero buttons ('Or call (225) 255-0837'), and as a 48px call button in the mobile sticky bar.",
+      "There is a real person: a first-person quote from Christian Knight with his name set as a signature and 'from right here in Baton Rouge, LA'. The three projects show their actual web addresses, which makes them checkable.",
+      "Pricing cards use a spec table (Live in / Size / Design / After launch) so the four packages can be compared line by line; this is the best comparison layout of the four.",
+      "Both themes are finished and consistent; reports show no overflow or errors."
+     ],
+     "weaknesses": [
+      "On the phone's first screen there is no website price. The first dollar figure is '$750 to set up' in a caption on screen two; the website prices do not appear until the services list around screen three or four.",
+      "The annual-report conceit ('Fig. 1', chapter numbers 01-04, lettered A/B/C services, SPEED / SYSTEMS / OWNERSHIP labels) reads like a law firm or a magazine. Trustworthy, but cool and bookish; nothing visual says Baton Rouge or small business.",
+      "Pricing page on mobile has a real layout bug: the highlighted 'Business $4,000' card has zero side padding, so the title, price, table labels and button run flush to both screen edges (confirmed at 390px; see /tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/judge/local-owner/ed_pricing_business_390.png).",
+      "The ornamental ampersand in headings ('Website design & build', 'Proposal & design') looks like a registered-trademark symbol at phone size, and the swash italic on 'Book the free call.' reads oddly.",
+      "In the mobile sticky bar the call action is an icon only, and 'Free 30-min call / No pitch' is plain text rather than a button.",
+      "Would I be proud of a site from this studio? It is classy, but I would worry my plumbing site would come out looking like a newspaper."
+     ],
+     "mustFix": [
+      "Fix the mobile padding on the featured Business price card.",
+      "Put the four website prices on the first phone screen.",
+      "Replace the ornamental ampersand with a plain one in headings and tone down the italic swash on 'call.'",
+      "Make the sticky bar's 'Free 30-min call' a real booking button and label the call icon."
+     ],
+     "ideasWorthStealing": [
+      "Numbered 1-4 markers on the hero phone matched to a short legend underneath.",
+      "Spec-table rows on each price card (Live in / Size / Design / After launch).",
+      "Phone number as text in the desktop header.",
+      "First-person quote from Christian with signature, and the live web address shown under each project.",
+      "The honest caption format: price plus 'An illustration, not a real conversation.'"
+     ]
+    },
+    {
+     "key": "product",
+     "score": 72,
+     "strengths": [
+      "Best demonstration of the service: the hero phone plays a whole job ('Sorry we missed your call' -> 'My water heater is leaking' -> 'Booked online for Thursday morning' -> Google review request) with a five-step ticker and a pause button. As a plumber I understood the product instantly.",
+      "Desktop hero includes a tidy price list for all three lines (Websites $1,000-$8,000 listed individually, Automation $750 or $1,500 per setup, Consulting $350 audit) so cost is visible without scrolling on a computer.",
+      "Pricing page is well organised: an 'On this page' index that shows the prices for each section, a deposit/instalment bar on every card, and a Launch bundle receipt that adds up $3,250 and shows $3,000.",
+      "Polished and modern in both themes; the dark theme is particularly well finished. Reports are clean.",
+      "Sticky bar keeps a phone button and 'Get a quote' in reach."
+     ],
+     "weaknesses": [
+      "Christian's name never appears on the home page (zero mentions). It is an anonymous 'we' with one small 'Baton Rouge, LA' label. That is exactly the faceless web company I have been burned by.",
+      "The headline 'Miss the call. Keep the customer.' is clever but does not say websites; on a phone there is no price and no phone number on the first screen (prices arrive on screen three).",
+      "It looks like a software company's landing page: monospaced labels ('FIXED PRICE', 'ILLUSTRATION', 'WHAT WE DO'), a green status dot, graph-paper background with glow gradients, pill chips. Competent, but it reads app start-up rather than local tradesman's partner.",
+      "The floating sticky bar lets page text show underneath and around it (for example 'Websites' and 'Pay the 50% deposit' peeking out below the bar), which looks untidy on a phone.",
+      "The call action in the sticky bar is an unlabelled icon; the home page pricing section uses small text links ('Pay the 50% deposit ->') instead of proper buttons.",
+      "Sameness in the middle of the page: several rounded white cards in a row with the same 'ILLUSTRATION' header."
+     ],
+     "mustFix": [
+      "Add the founder and the local story to the home page (name, Baton Rouge, towns served, meet in person).",
+      "Put prices and a visible phone number on the first phone screen, and state 'websites' in or directly under the headline.",
+      "Give the sticky bar a solid backing so content does not show through, and label the call button.",
+      "Reduce the monospaced labels and software-style decoration."
+     ],
+     "ideasWorthStealing": [
+      "The full-loop hero conversation (missed call -> text back -> reply -> booked -> review) with a step ticker and pause control.",
+      "Realistic trade wording inside the demo ('My water heater is leaking').",
+      "Pricing-page index that lists each section with its prices.",
+      "Deposit/instalment bar on each price card.",
+      "Launch bundle receipt showing the separate prices, $3,250, and the $3,000 bundle price."
+     ]
+    },
+    {
+     "key": "strategy",
+     "score": 60,
+     "strengths": [
+      "The words at the top are plain and in the right order: 'More customers. Fewer missed calls.' then a bold 'Websites, automation and consulting for local businesses.' and a line with the four website prices and 'See every price'.",
+      "Pricing page is bold and clear: large prices, one inverted dark card for the popular package, deposit buttons that state the amount.",
+      "Strong, distinctive identity with one accent colour always marking the main action; a pause button on the hero animation; clean reports in both themes.",
+      "The closing section says 'You'll talk with Christian Knight, the founder, based in Baton Rouge, Louisiana' right under the booking button with 'or call (225) 255-0837' beside it."
+     ],
+     "weaknesses": [
+      "No way to call from a phone until the very bottom of the page: the first tap-to-call link is about 11,200px down, and the sticky bar has only 'Get a quote'. For a contractor audience that is a serious miss.",
+      "The chess idea is everywhere and reads as a gimmick to someone who does not care about chess: board coordinates a-h and 1-4, 'Opening move - Get found', 'The long game - Keep winning', chess pieces as service icons, and 'Your move.' as the third line of the headline, which sounds like a slogan.",
+      "The hero board is an abstract flowchart (four tiles joined by L-shaped lines with a knight on top). It is less clear than a phone showing an actual text, and on mobile it starts below the first screen.",
+      "Navy and coral, square corners and heavy geometric type feel like a big-city tech or finance agency. It is the coldest of the four; even the 'light' theme opens on a navy hero.",
+      "The local, one-person story is a small paragraph tucked inside the process section; there is nothing visual that says Baton Rouge.",
+      "Desktop hero: the headline runs into the left columns of the board. 'Recent projects, newest first' adds a claim that is not on the current site. An unused 131 KB font file is left in assets/fonts."
+     ],
+     "mustFix": [
+      "Add tap-to-call to the mobile sticky bar and the hero.",
+      "Cut the chess vocabulary and coordinates down to a light touch, and replace the abstract board with a concrete demo (phone, calendar, list).",
+      "Bring the founder and Baton Rouge forward.",
+      "Remove 'newest first', fix the headline/board collision on desktop, delete the unused font."
+     ],
+     "ideasWorthStealing": [
+      "Bold one-line plain descriptor directly under the headline: 'Websites, automation and consulting for local businesses.'",
+      "Inverted dark card for the most popular package.",
+      "'You'll talk with Christian Knight, the founder, based in Baton Rouge, Louisiana' under the final booking button, with 'or call' beside it.",
+      "One accent colour reserved for the next action."
+     ]
+    }
+   ],
+   "rationale": "Judged as a non-technical plumber on an iPhone, mostly from the mobile sheets plus a 390px probe of each served site.\n\nMainstreet wins because it is the only direction where the first phone screen answers everything I care about without scrolling: where he is, a number I can tap, what he does in plain words, one obvious booking button, and the four website prices. Its sticky bar has a button that says 'Call' and a real booking button. Further down it looks like a local shop rather than a tech company: a brick storefront with my name on the sign, the Baton Rouge skyline, Denham Springs in the towns list, Christian's business card, and an appointment card that says 'Sales pitch: None'. I believe there is a real local person here, and I would be proud to have a site from whoever made it.\n\nEditorial is second. It is the most readable and the most serious, with a very clear numbered phone figure, a phone number in the header and hero, and a first-person note from Christian. It loses to Mainstreet on three points: there is no website price on the first phone screen, the annual-report styling ('Fig. 1', lettered sections) feels bookish and not local, and the pricing page has a visible mobile bug where the featured Business card runs flush to the screen edges.\n\nProduct has the best demo of the four (the water-heater conversation that ends in a booking and a review request), but it never names the founder on the home page and looks like a software start-up, which is the opposite of the trust I need. Strategy states the offer plainly but wraps it in a chess gimmick, feels like a big-city agency, and gives me no way to call from my phone until the bottom of the page.\n\nRecommendation: roll out Mainstreet. Fix its small issues (clipped chip row on mobile pricing, stamp crowding the hero phone, decorative checkboxes, unused fonts, home page length, restraint with props across 19 pages), and borrow Product's full-loop hero conversation, Editorial's numbered legend and spec-table price rows, and Strategy's bold one-line descriptor.\n\nMy own probe files are in /tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/judge/local-owner/ (nothing in any design folder was changed)."
+  },
+  {
+   "judge": "engineer",
+   "ranking": [
+    "editorial",
+    "strategy",
+    "mainstreet",
+    "product"
+   ],
+   "evaluations": [
+    {
+     "key": "editorial",
+     "score": 82,
+     "strengths": [
+      "Cleanest measured result of the four. My audit found 0 contrast failures across 253-284 text runs per page in both themes at 1440 and 390, no horizontal overflow or viewport-clipped text in a 320-1920 sweep at 20px steps, zero layout shift, and no console errors at 360, 820 and 1920.",
+      "Lowest script risk. main.js has four small edits and is 20.4 KB, smaller than the baseline. All motion is CSS, plays once and never loops, so no pause control is needed; reduced motion leaves nothing running and nothing hidden.",
+      "Proper no-JavaScript handling: 12 html:not(.js) rules make the phone menu wrap under the bar and hide the dead menu and theme buttons. No content is hidden without scripts.",
+      "Real semantics. The hero illustration is a figure whose figcaption is an ordered list tied to numbered markers, so the story is available as text while the mock is hidden from screen readers. The example week and care plans are real tables with captions and scoped headers. Pricing has breadcrumb and on-this-page navigation.",
+      "The system suits the 17 remaining, mostly text pages: a 12-column grid with a left rail, ruled lists, dot-leader price lists (.pricelist, .rate, .leaders), a receipt (.slip) for calculator results and checkout, .field, .timeline and .toc. Few knobs: 3px and 6px radii, two shadows, one accent.",
+      "Colour is 96% tokenised with only 5 dark-only overrides. color-mix() is used only as an enhancement behind @supports with a plain fallback, so older phones still get a solid sticky header.",
+      "Body copy is 17px with a 53-character median measure on desktop. The phone number appears 6 times on the home page, including the header from 1380px and a tap-to-call button in the sticky bar. Every touch target at 390 is at least 44px tall.",
+      "Integrity check: 0 FAIL on both pages and across all 19; the WARNs are the intended first-paint theme snippet."
+     ],
+     "weaknesses": [
+      "Heaviest fonts: 178 KB in three files, 329 KB first view on the home page. The 81 KB italic file exists for one phrase per headline and is not preloaded, so the key phrase in the hero h1 swaps late.",
+      "Hero figure at 360px: the numbered markers 1-4 sit at x = -5px and are cut by the screen edge (3px clear at 375). They are what link the phone mock to the legend. See judge/engineer/x-ed360crop.png.",
+      "Form focus is weak: .field input:focus sets outline: none and shows only a border colour change plus a 1.5px bottom shadow.",
+      "Type and space tokens are not consistently used: 45 of 91 font-size declarations are literals (25 distinct values), only 33% of spacing declarations use the scale, and there are 15 breakpoints including off-by-one pairs (980/981, 1180/1181). The error colour is a hard-coded #b3261e with a separate dark override.",
+      "Not yet written: FAQ details/summary, checkbox rows, heading and list rules for legal prose (.prose only styles links), calculator layout. Eight classes in the HTML have no CSS.",
+      "The header phone number is printed with CSS content: attr(data-tel) to satisfy the wording check. It has an accessible name but cannot be selected or found in page search, and disappears if CSS fails.",
+      "15-17% of home text is 13px or smaller (12px caps labels, 13px notes), which is small for this audience on a phone outdoors.",
+      "On phones the ledger and care tables switch to display block/grid, which can drop table semantics in some screen readers. Home is about 12,450px tall at 390."
+     ],
+     "mustFix": [
+      "Pull the hero figure markers inside the plate below about 400px so they are not clipped at 360.",
+      "Give .field inputs, selects and textareas a real focus ring (2-3px outline, at least 3:1) before the contact form, calculator and checkout are restyled.",
+      "Subset and preload the italic face (target under 30 KB), or set the emphasised phrase in roman blue and drop the file.",
+      "Put the header phone number in the DOM as real text and move the checker baseline for the header with it.",
+      "Add danger and success colour tokens, then write the FAQ, checkbox, legal prose and calculator components before rollout.",
+      "Keep table semantics on phones (explicit table roles or a layout that does not use display: block) and test with a screen reader.",
+      "Collapse the breakpoints to about five and move the literal font sizes onto the scale. Raise the label and note sizes on phones."
+     ],
+     "ideasWorthStealing": [
+      "The figure-plus-legend pattern: numbered markers on the mock tied to an ordered list in the figcaption.",
+      "The html:not(.js) fallback block for the header and menu.",
+      "Enhancements wrapped in @supports with a plain declaration first.",
+      "Dot-leader price lists and the on-this-page contents list that already shows every price.",
+      "One-shot CSS-only motion that needs no pause control.",
+      "Scaling the root font and container up from 1700px so wide screens do not float a narrow column."
+     ]
+    },
+    {
+     "key": "strategy",
+     "score": 72,
+     "strengths": [
+      "Best token architecture of the four: primitive ramps feed semantic tokens (--bg, --text, --brand, --accent, --focus), and tone scopes (.on-ink, .on-blue) re-scope them, so any band can go dark or blue without a component variant.",
+      "Already ships 4.2 KB of form, chip, error, FAQ (details/summary), prose and table styles under the class names the unrebuilt pages use today, so it has the shortest path to forms, legal text and the calculator.",
+      "Lightest build: 216 KB first view on the home page, 51 KB of fonts in two files, 70.6 KB of CSS. No color-mix() or :has(), so nothing depends on 2023 browsers except subgrid alignment.",
+      "Robust across widths: no overflow and no clipped text from 320 to 1920. The headline deliberately overlaps the board by 65-85px but stays at least 55px clear of every tile at each width I measured from 1000 to 1920.",
+      "3px focus ring with the colour scoped per tone (4.8:1 minimum measured). Eight (hover: hover) guards keep hover effects off touch devices.",
+      "The board loop is polite: it rests on the finished state, pauses off screen and under the pointer, has a Pause button, and is fully off under reduced motion. Keyframes animate only transform and opacity.",
+      "Integrity check: 0 FAIL on both pages and across all 19."
+     ],
+     "weaknesses": [
+      "JavaScript off on a phone: the stylesheet has no html:not(.js) rules. The menu stays visibility: hidden and the burger and theme buttons render but do nothing, so the main navigation is unreachable from the header.",
+      "No tap-to-call where the audience needs it: the sticky bar and the phone menu have no tel link. The home page has only two, in the closing band and the footer.",
+      "Audience fit: the chess vocabulary (\"Opening move\", file letters a-h over the services list, \"Your move.\") is abstract for a contractor, and the default light theme is still about half dark navy.",
+      "Coral as a fill is 2.7:1 on ivory, so the primary button depends on a 2px ink edge and the coral marker squares fall below 3:1.",
+      "On phones the board tiles show titles only at 11-12px; the one-line explanations are display: none below tablet width, so the signature piece says less on the device most visitors use.",
+      "Body copy is 16px. Pricing intro lines reach 90 characters at 1440, over the 75 limit.",
+      "13 dark-only one-off overrides, the most of the four, despite the scoping idea. One transition animates width (the nav indicator). The skip link is 40px tall.",
+      "The headline size is tied to the viewport so the longest line clears the board tiles; a longer headline would collide."
+     ],
+     "mustFix": [
+      "Add a no-JavaScript fallback for the phone header: show the nav links and hide the menu and theme buttons.",
+      "Add a tap-to-call control to the sticky bar and the phone menu.",
+      "Show the board step descriptions on phones, or print them as a list beneath it.",
+      "Cap paragraph measure at 75 characters on the pricing page.",
+      "Remove or test the chess jargon (file ruler, move kickers) with real customers before rollout.",
+      "Make sure no meaning rests on coral-on-ivory squares, and keep the ink edge on every coral control including hover and disabled states.",
+      "Raise the skip link to 44px and animate the nav indicator with transform instead of width."
+     ],
+     "ideasWorthStealing": [
+      "Tone scopes that re-scope semantic tokens (.on-ink, .on-blue), including a per-scope --focus colour.",
+      "Writing forms, FAQ and prose against the existing class names so untouched pages improve at once.",
+      "The (hover: hover) guards.",
+      "A two-file, 51 KB font budget.",
+      "The payment bars drawn to scale for 50/50 and the Starter plan."
+     ]
+    },
+    {
+     "key": "mainstreet",
+     "score": 69,
+     "strengths": [
+      "Best phone design and audience fit: 17px body, about 60% of home text at 17px or larger, 50-56px buttons, and a sticky bar with a labelled Call button beside the booking button. No undersized touch targets at 390.",
+      "0 contrast failures in both themes at both widths. 3px focus ring with a dedicated --focus token that turns gold on blue and dark surfaces.",
+      "One SVG scene serves both themes through a --il-* illustration palette, so the night street is a token change and not a second drawing.",
+      "Light loaded fonts: two files, 82.6 KB. Zero layout shift. The example week is a real table with a caption.",
+      "No-JavaScript fallbacks are in place (12 rules): menu links wrap under the bar and nothing is hidden.",
+      "Small careful touches in main.js: the saved theme value is validated, and the top-strip phone link leaves the tab order once it scrolls away.",
+      "Integrity check: 0 FAIL on both pages and across all 19."
+     ],
+     "weaknesses": [
+      "Breaks between the widths the designer checked. From 900 to 1040px the time-sheet table overflows its card by up to 70px; the page gains horizontal overflow and the \"Time a week\" column and total are cut off (judge/engineer/x-mainstreet-sheet-pair.png). This breaks the brief's no-horizontal-scroll rule inside 360-1920.",
+      "From 980 to 1040px (tablet landscape) the hero phone sits on top of the \"See how it works\" button.",
+      "The sticky header and the sticky phone bar set their background with color-mix() and no fallback, so on browsers without it (Safari 16.1 and older) both are transparent over the page.",
+      "Least token-driven stylesheet: 18 of 362 spacing declarations use the scale (5%), 70 literal font sizes with 38 distinct values, 14 uses of !important, 58 media queries, 19 inline style attributes, 48 unused classes and 10 used classes with no CSS.",
+      "Highest upkeep: 36 KB of hand-drawn inline SVG in an 81 KB home document, and the plan calls for more bespoke scenes (city signs, a night 404). With no include system this repeats per page.",
+      "CSS is already 79.7 KB with no forms, FAQ, prose, calculator or checkout styles.",
+      "Typing dots and the ringing phone loop forever with no pause control.",
+      "Longest phone page: about 15,500px at 390, roughly 18 screens. At 320px the page overflows by 24px (outside the required range).",
+      "Two legacy font files (131 KB Bricolage, Manrope) still ship in assets/fonts. The header phone label is CSS-generated text."
+     ],
+     "mustFix": [
+      "Fix the time-sheet table between 900 and 1040px so nothing overflows or is cut.",
+      "Stop the hero phone covering the secondary button between 980 and 1040px.",
+      "Add plain background fallbacks before color-mix() on the sticky header and sticky phone bar.",
+      "Cap the typing-dot and ring animations to a few iterations.",
+      "Move spacing and type sizes onto the token scale and remove the inline styles before building 17 more pages.",
+      "Set an illustration budget (no bespoke scene per page) and trim the home story on phones.",
+      "Delete the legacy font files and write the form, FAQ, prose, calculator and checkout styles."
+     ],
+     "ideasWorthStealing": [
+      "The sticky phone bar with a labelled \"Call\" button next to the booking button.",
+      "17px body and 50-56px primary buttons as the phone baseline.",
+      "A --focus token that changes per surface.",
+      "Illustration palette tokens that re-theme one SVG for day and night.",
+      "The plain top strip with location and phone number.",
+      "The job ticket for the process steps and the appointment card in the closing band."
+     ]
+    },
+    {
+     "key": "product",
+     "score": 64,
+     "strengths": [
+      "Strongest \"show, don't tell\" piece: the hero sequence rests on its finished state without scripts or with reduced motion, loops only while on screen and in a visible tab, has a pause button, and its step rail lets a visitor jump to any step with aria-current=\"step\".",
+      "The sequence engine in main.js is declarative (data-seq, data-at, data-until, data-go) and reusable on other pages.",
+      "Robust across widths: no page overflow from 320 to 1920 and no console errors. Zero layout shift. 94 KB of fonts in three files.",
+      "Status colours are proper tokens (ok, warm, miss, each with solid and tint), ready for form states.",
+      "A .theme-switching guard stops half-faded frames on theme change, and prices use tabular figures.",
+      "Integrity check: 0 FAIL on both pages and across all 19."
+     ],
+     "weaknesses": [
+      "Not yet a system for the rest of the site: no form, table, prose or FAQ styles, and roughly 27 KB of the 78.7 KB stylesheet is mock-interface, hero and bento CSS used only on the home page.",
+      "18 color-mix() declarations with no fallback, including the scrolled sticky header background, so on browsers without it the header is transparent over the page. :has() is used for the open-menu header.",
+      "Focus ring is the brand blue on the dark closing band in the light theme: 2.74:1, below 3:1. One ring in the dark theme measures 2.33:1.",
+      "Small type for this audience: 16px body, 45-64% of text at 14-15px, 3-4% under 12px, and 11-12px uppercase mono labels throughout.",
+      "The eyebrow dot pulses forever by animating box-shadow, which breaks the transform-and-opacity rule and has no pause.",
+      "Under reduced motion four of the five rail captions stay hidden until clicked.",
+      "Heaviest page structure: 1,047 DOM nodes and 61 inline SVGs on the home page. main.js grows to 24.3 KB.",
+      "The example week and care plans are div grids, not tables. The sticky bar call button is an unlabelled icon.",
+      "20 breakpoints and 85 border-radius declarations. The look (bento tiles, mono labels, glow, large radii) reads as software marketing, and the dark theme is close to the generic SaaS dark mode the brief warns against."
+     ],
+     "mustFix": [
+      "Add plain fallbacks before every color-mix() declaration, the sticky header first.",
+      "Use a light focus ring on the closing band and the dark week tile.",
+      "Raise body copy to 17px and labels to at least 13px; remove text under 12px.",
+      "Stop the infinite dot pulse or animate it with transform and opacity only.",
+      "Show all rail captions when reduced motion is on.",
+      "Write the form, table, prose, FAQ, calculator and checkout styles; none exist.",
+      "Use real tables for the example week and care plans, and label the sticky bar call button."
+     ],
+     "ideasWorthStealing": [
+      "The data-seq sequence engine with its pause button and step rail.",
+      "Status colour tokens with solid and tint variants.",
+      "The .theme-switching class that suppresses transitions during a theme change.",
+      "The receipt component for the bundle.",
+      "Payment bars drawn to scale."
+     ]
+    }
+   ],
+   "rationale": "I put editorial first because it is the only direction that passes nearly every check I ran and its system is the one the remaining 17 mostly-text pages need. Judged on code, accessibility and robustness; audience appeal is weighted lightly here.\n\nWhat I ran for each direction: the integrity checker (0 FAIL for all four, on the two pages and site-wide), the extra-width shots at 360, 820 and 1920 (no overflow or errors reported for any), and my own audit covering contrast in both themes, focus rings, target sizes, heading order, reduced motion, JavaScript off, a 320-1920 width sweep, and first-view weight. All four have one h1, no skipped heading levels, a working skip link, and zero layout shift.\n\nWhy editorial over strategy:\n- **Measured defects:** editorial has 0 contrast failures in both themes, no overflow from 320 to 1920, complete no-JavaScript fallbacks and no looping motion. Its real defects are small: hero markers clipped at 360px, a weak form-field focus state, and a heavy italic font.\n- **Strategy's gaps:** with JavaScript off the phone menu cannot be opened, and there is no tap-to-call in the sticky bar or menu. Both are short fixes, but its chess vocabulary and half-dark light theme are a design-direction risk an engineer cannot fix.\n- **Fit for rollout:** editorial's ruled lists, left rail, dot-leader prices, receipt and real tables map directly onto FAQ, legal, process, contact, calculator and checkout. Strategy's tone-scoped tokens are the better architecture and should be ported into editorial.\n- **Weight:** strategy is lighter (216 KB against 329 KB first view on the home page); subsetting or dropping editorial's 81 KB italic closes much of that gap.\n\nWhy the other two rank lower:\n- **Mainstreet** has the best phone design, but it clips its time-sheet table from 900 to 1040px and covers a hero button from 980 to 1040px. Its stylesheet is the least token-driven (5% of spacing on the scale) and its hand-drawn scenes are the most expensive to extend.\n- **Product** has the best working demo, but it has the least system for the remaining pages, the smallest type, and 18 color-mix() declarations with no fallback.\n\nWeight on the home page first view (uncompressed):\n\n| Direction | Total | Fonts | CSS | JS | HTML |\n| --- | --- | --- | --- | --- | --- |\n| editorial | 329 KB | 178 KB | 70.7 KB | 20.4 KB | 59.7 KB |\n| product | 268 KB | 94 KB | 78.7 KB | 24.3 KB | 71.6 KB |\n| mainstreet | 265 KB | 83 KB | 79.7 KB | 21.3 KB | 81.2 KB |\n| strategy | 216 KB | 51 KB | 70.6 KB | 23.2 KB | 70.8 KB |\n\nAll are inside the brief's budgets.\n\nMy contrast scan flagged product's closing band and strategy's active board tile; both are artefacts of gradient and layered backgrounds, not real failures, and I have not counted them. I did not test in Safari or with a screen reader.\n\nEvidence is in /tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/judge/engineer/ (audit-KEY/audit.json per direction, x-mainstreet-sheet-pair.png, x-ed360crop.png, x-mid-heroes.png, sheets/). No file in any design folder was changed."
+  }
+ ]
+}

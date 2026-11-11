@@ -1,0 +1,45 @@
+/* KnightWebstudio motion kit: animated backgrounds. This file is the still picture; shader.js fades a moving canvas in over it. */
+.kws-shader-host { position: relative; isolation: isolate; }
+.kws-shader {
+  position: absolute; inset: 0; z-index: -1; overflow: hidden; border-radius: inherit; pointer-events: none;
+  /* wash: warm pool, light (also the still's), shade. The grain: its colour and strength */
+  --kws-s1: var(--kit-shader-1, var(--kit-accent, var(--L, var(--brick-tint)) var(--D, var(--board))));
+  --kws-s2: var(--kit-shader-2, var(--kit-surface, var(--L, var(--card)) var(--D, var(--paper-3))));
+  --kws-s3: var(--kit-shader-3, var(--kit-surface, var(--paper-3)));
+  --kws-t1: var(--kit-ink, var(--ink)); --kws-ga: .04;
+}
+.kws-shader::before, .kws-shader::after, .kws-shader canvas { content: ""; position: absolute; inset: 0; width: 100%; height: 100%; transform-origin: 100% 100%; transition: opacity var(--t, .28s); }
+.kws-shader::before { background: radial-gradient(58% 60% at 84% 8%, var(--kws-s2), transparent 72%), radial-gradient(46% 48% at 10% 34%, var(--kws-s2), transparent 70%); }
+/* band: a faint light in the text colour, a grain that only darkens */
+.kws-shader[data-shader="band"] { --kws-s2: var(--kws-t1); --kws-ga: .1; }
+.kws-shader[data-shader="band"]::before { opacity: .09; }
+/* ribbon: silk, thread, second ribbon; three colourways */
+.kws-shader[data-shader="ribbon"] { z-index: 0; background: var(--kit-bg, var(--paper)); --kws-s1: var(--kit-accent, var(--blue)); --kws-s2: var(--kit-gilt, var(--gold)); --kws-s3: var(--kit-notice, var(--brick)); --kws-ga: .06; }
+.kws-shader[data-tone="2"] { --kws-s1: var(--kit-notice, var(--brick)); --kws-s2: var(--kit-surface, var(--card)); --kws-s3: var(--kws-t1); }
+.kws-shader[data-tone="3"] { --kws-s1: var(--kws-t1); --kws-s2: var(--kit-notice, var(--brick)); --kws-s3: var(--kit-accent, var(--blue)); }
+.kws-shader[data-shader="ribbon"]::before {
+  background: radial-gradient(150% 150% at 0 150%, transparent 61%, var(--kws-s2) 61.4% 62.4%, transparent 62.8%),
+    radial-gradient(150% 150% at 0 150%, transparent 46%, var(--kws-s1) 46.4% 66%, transparent 66.4%),
+    radial-gradient(140% 160% at 110% -70%, transparent 63%, var(--kws-s3) 63.4% 68%, transparent 68.4%);
+}
+.kws-shader canvas, .kws-shader.is-live::before { opacity: 0; }
+.kws-shader.is-live canvas { opacity: 1; }
+/* fine grain over still and canvas alike (shader.js counts it in when it guards the text) */
+@supports (mask-composite: intersect) {
+  .kws-shader::after {
+    --kws-g: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.8 -.6'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background: var(--kws-t1); opacity: var(--kws-ga); mask: var(--kws-g), linear-gradient(transparent, black 15% 55%, transparent); mask-composite: intersect;
+  }
+  .kws-shader:is([data-shader="band"], [data-shader="ribbon"])::after { mask: var(--kws-g); }
+  .kws-shader[data-shader="band"]::after { filter: invert(1); }
+}
+/* band: the glints shader.js places. On screen and with motion on they twinkle on one shared beat, five steps a second */
+.kws-glints i {
+  position: absolute; left: var(--x); top: var(--y); width: var(--s); height: var(--s); margin: calc(var(--s) / -2); opacity: var(--o);
+  background: var(--kit-gilt, var(--gold)); clip-path: polygon(50% 0, 61% 39%, 100% 50%, 61% 61%, 50% 100%, 39% 61%, 0 50%, 39% 39%);
+}
+@media (prefers-reduced-motion: no-preference) {
+  html:not([data-motion="off"]) .is-seen > .kws-glints i { animation: kws-glint calc(var(--n) * .2s) steps(var(--n)) calc(var(--k) * -.2s) infinite alternate; }
+}
+@keyframes kws-glint { to { opacity: .3; } }
+@media (prefers-reduced-motion: reduce) { .kws-shader::before, .kws-shader canvas { transition: none; } }

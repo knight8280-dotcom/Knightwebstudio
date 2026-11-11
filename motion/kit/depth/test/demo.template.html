@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#F6F0E4">
+<title>Motion kit demo: cylinder slider and carousel ring</title>
+<script>
+<!--HEAD_SCRIPT-->
+  // Motion kit: hold each carousel's space until its script has run, so nothing shifts when it starts.
+  // If a script has not come after four seconds, the plain lists come back.
+  document.documentElement.classList.add('kws-hold'); setTimeout(function () { document.documentElement.classList.remove('kws-hold'); }, 4000);
+</script>
+<link rel="preload" href="/assets/fonts/fraunces-soft.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/figtree.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/styles.css">
+<link rel="stylesheet" href="cylinder.css">
+<link rel="stylesheet" href="ring.css">
+<style>
+/* Demo page only: none of this ships. */
+.demo-bar { position: sticky; top: 0; z-index: var(--z-header); border-bottom: var(--seam); background: var(--paper); }
+.demo-bar-in { display: flex; align-items: center; gap: var(--s-3); min-height: var(--header-h); }
+.demo-bar .brand { margin-right: auto; }
+#demo-motion { white-space: nowrap; }
+html:not(.js) #demo-motion { display: none; }
+@media (max-width: 599.98px) { .demo-bar .brand-name { display: none; } }
+.demo-after { margin-top: var(--s-5); }
+/* Page rules, not kit rules: how this site's mock parts sit inside a story card's picture. They belong in the page's own
+   block of the stylesheet (the placement notes list them). On a phone each picture is cut to its one telling part. */
+.kws-cyl-art .thread { width: 100%; padding: 0; }
+.kws-cyl-art :is(.cal, .leads) { width: 100%; padding: var(--s-3); box-shadow: var(--shadow-1); }
+.kws-cyl-art .cal-day i { height: var(--s-5); min-height: 0; }
+.kws-cyl-art .cal-day .ico { width: var(--s-4); height: var(--s-4); stroke-width: 3; }
+.kws-cyl-art .leads li { padding: var(--s-2) 0; }
+.kws-cyl-art .notice-title .thread-note { font-size: var(--fs-sm); }
+/* The phone rings out: rings drawn behind the notification on the first card, whatever height the picture takes */
+.demo-rings { display: grid; place-items: center; align-self: stretch; justify-self: stretch; margin: calc(var(--s-3) * -1); padding: var(--s-3); overflow: hidden; border-radius: inherit;
+  background: radial-gradient(circle at 50% 50%, transparent 5.4rem, var(--line-2) 0 calc(5.4rem + 1px), transparent 0 7.6rem, var(--line) 0 calc(7.6rem + 1px), transparent 0 9.8rem, var(--line) 0 calc(9.8rem + 1px), transparent 0); }
+@media (max-width: 599.98px) { .kws-cyl-art :is(.thread li:nth-child(n+3), .cal-log, .leads li + li) { display: none; } }
+.demo-after .fig-credit { max-width: var(--measure); }
+/* A client's brand: dark green and cream, a bakery say. These thirteen variables re-skin every kit component. */
+.demo-client {
+  --kit-bg: #12352A; --kit-surface: #1B4536; --kit-ink: #FBF3DC; --kit-muted: #CBD8C5; --kit-line: #426C57;
+  --kit-accent: #F3C55B; --kit-accent-ink: #12352A; --kit-notice: #F6A27A; --kit-gilt: #F3C55B;
+  --kit-radius: 4px; --kit-font-display: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  --kit-font-body: "Trebuchet MS", "Lucida Grande", Verdana, sans-serif; --kit-shadow: 0 2px 0 rgba(0, 0, 0, .35), 0 18px 34px -18px rgba(0, 0, 0, .7);
+  padding-block: var(--sec); background: var(--kit-bg); color: var(--kit-muted); font-family: var(--kit-font-body);
+  /* The drawings inside the story cards are this site's own mock parts, not kit parts. On a client site that slot holds
+     the client's own picture; here the site tokens those mocks read are pointed at the client palette so they match. */
+  --card: var(--kit-surface); --paper: var(--kit-bg); --paper-2: #17402F; --paper-3: #2A5A47; --well: #2A5A47; --ink: var(--kit-ink); --ink-2: var(--kit-muted); --ink-3: #A9BFA6;
+  --line: #2F5F4A; --line-2: var(--kit-line); --brick: var(--kit-notice); --brick-tint: #4A3A2C; --on-blue: var(--kit-bg); --focus: var(--kit-accent);
+  --edge: 1px solid var(--line-2); --dash: 1px dashed var(--line-2); --seam: 1px solid var(--line); --shadow-2: var(--kit-shadow); --shadow-3: var(--kit-shadow);
+}
+.demo-client h2 { color: var(--kit-ink); font-family: var(--kit-font-display); font-variation-settings: normal; letter-spacing: 0; }
+.demo-client .demo-kicker { margin: 0 0 var(--s-3); color: var(--kit-notice); font-size: var(--fs-label); font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.demo-client .demo-sub { max-width: var(--measure); margin: var(--s-4) 0 var(--stack); color: var(--kit-muted); font-size: var(--fs-lede); }
+.demo-client .demo-gap { margin-top: var(--sec); }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="demo-bar">
+  <div class="container demo-bar-in">
+    <a class="brand" href="/" aria-label="KnightWebstudio home"><img class="crest" src="/assets/img/crest.svg" alt="" width="40" height="41"><span class="brand-name">KnightWebstudio</span></a>
+    <button class="btn btn-sm" id="demo-motion" type="button" aria-pressed="false">Pause motion</button>
+    <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to dark theme" title="Toggle theme">
+      <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ===================== 1. THE CYLINDER SLIDER, as it would sit on the Consulting page ===================== -->
+  <section class="page-head">
+    <div class="container">
+      <p class="eyebrow">Consulting &amp; automation</p>
+      <h1><span class="l">More customers,</span> <span class="l"><span class="mark">less busywork</span></span></h1>
+      <p class="lede">A website is one piece. We also set up the systems behind it: Google reviews, missed-call text-back, online booking and automatic follow-up. Fixed prices, and the first check is free.</p>
+    </div>
+  </section>
+
+  <section class="section section-sand" id="how">
+    <div class="container">
+      <header class="section-head section-head-split">
+        <div>
+          <p class="eyebrow">How automation works</p>
+          <h2>What happens when a customer calls and you can't pick up</h2>
+        </div>
+        <p class="section-sub">Follow one call from the missed ring to the review. Each step runs on its own, on accounts in your name.</p>
+      </header>
+    </div>
+
+    <!-- Outside the container on purpose: the drum runs the full width of the page -->
+<!--CYL_SITE-->
+
+    <div class="container demo-after">
+      <p class="fig-credit">Missed-call text-back, $750 to set up. Online booking &amp; reminders, $750 to set up. Lead follow-up system, $1,500 to set up. Each drawing is an illustration, not a real conversation, booking or list.</p>
+      <p><a class="more-link" href="/consulting/#how">How each automation works<!--ARROW--></a></p>
+    </div>
+  </section>
+
+  <!-- ===================== 2. THE CAROUSEL RING, as it would sit on the Home or Start page ===================== -->
+  <section class="section" id="included">
+    <div class="container">
+      <header class="section-head section-head-split">
+        <div>
+          <p class="eyebrow">What's included</p>
+          <h2>Everything a build includes, card by card</h2>
+        </div>
+        <p class="section-sub">Four fixed packages. Every line here is on the price list, filed under the package that includes it.</p>
+      </header>
+
+<!--RING_SITE-->
+
+      <p class="section-more"><a class="more-link" href="/pricing/#packages">Compare the four packages<!--ARROW--></a></p>
+    </div>
+  </section>
+
+  <!-- ===================== 3. THE SAME TWO FILES IN A CLIENT'S COLOURS ===================== -->
+  <section class="demo-client" id="client">
+    <div class="container">
+      <p class="demo-kicker">Client build · same files, thirteen variables</p>
+      <h2>The same two components in another brand</h2>
+      <p class="demo-sub">Nothing below is restyled. The section sets the kit variables (colours, radius, fonts, shadow) and both components follow. The content is this site's, reused to show the skin.</p>
+    </div>
+
+<!--CYL_CLIENT-->
+
+    <div class="container demo-gap">
+<!--RING_CLIENT-->
+    </div>
+  </section>
+
+</main>
+
+<script>
+  // Demo only: stands in for the site-wide pause control. The kit reads html[data-motion="off"] each time it is about to move.
+  document.getElementById('demo-motion').addEventListener('click', function () {
+    var off = document.documentElement.getAttribute('data-motion') !== 'off';
+    if (off) document.documentElement.setAttribute('data-motion', 'off'); else document.documentElement.removeAttribute('data-motion');
+    this.setAttribute('aria-pressed', off); this.textContent = off ? 'Motion paused' : 'Pause motion';
+  });
+</script>
+<script src="/assets/js/main.js" defer></script>
+<script src="cylinder.js" defer></script>
+<script src="ring.js" defer></script>
+</body>
+</html>

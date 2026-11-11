@@ -1,0 +1,23 @@
+/* KWS kit: the town at night that ends a footer. Dusk, the name catching the last light as it rises behind the skyline, lit windows.
+   Decorative, no script. Its glow drifts only on a page that shows the kit's pause button. Markup and theme (--kit-*): NOTES.md */
+.kws-skyline{--_g:var(--kit-bg,var(--footer));--_au:var(--kit-gilt,var(--gold));--_i:var(--kit-ink,var(--ink));--_w:1vw;--_h:clamp(54px,var(--_w)*8.4,180px);display:grid;overflow:hidden;overflow:clip;background:var(--_g)}
+@supports (width:1cqw){.kws-skyline{container-type:inline-size;--_w:1cqw}}
+.kws-skyline>*{grid-area:1/1;position:relative;align-self:end;margin:0}
+.kws-skyline-sky{--_s:var(--_au) 1px,transparent 1.7px;align-self:stretch;min-height:calc(var(--_h) + 36px);background:radial-gradient(circle at 5% 36%,var(--_s)),radial-gradient(circle at 16% 58%,var(--_s)),radial-gradient(circle at 27% 24%,var(--_s)),radial-gradient(circle at 44% 40%,var(--_s)),radial-gradient(circle at 59% 20%,var(--_s)),radial-gradient(circle at 70% 52%,var(--_s)),radial-gradient(circle at 84% 30%,var(--_s)),radial-gradient(circle at 95% 48%,var(--_s)),var(--_g);-webkit-mask:linear-gradient(transparent,black 45%);mask:linear-gradient(transparent,black 45%)}
+.kws-skyline-sky::after{content:"";position:absolute;inset:0 0 0 -8%;background:linear-gradient(0deg,color-mix(in srgb,var(--_au) 66%,transparent),color-mix(in srgb,var(--_au) 26%,transparent) calc(var(--_h)*.3),transparent calc(var(--_h)*.95)),radial-gradient(110% 130% at 50% 100%,var(--kit-shader-1,var(--board)),transparent 70%)}
+.kws-skyline-name{padding:.16em 0 max(var(--_h)*.3,22px);color:var(--_i);font:600 min(var(--_w)*100/var(--kws-fit,8.3),16rem)/.8 var(--kit-font-display,var(--font-display));font-variation-settings:"SOFT" 100;letter-spacing:-.03em;text-align:center;white-space:nowrap;opacity:.68;-webkit-mask:linear-gradient(black 30%,transparent);mask:linear-gradient(black 30%,transparent)}
+@supports (background-clip:text) or (-webkit-background-clip:text){.kws-skyline-name{background:linear-gradient(var(--_au) 20%,var(--_i) 70%);-webkit-background-clip:text;background-clip:text;color:transparent}}
+.kws-skyline-art{justify-self:start;width:max(100%,var(--_h)*12);max-width:none;height:var(--_h);margin-left:max(var(--_h)*-1.33,(var(--_w)*100 - var(--_h)*12)*.28);fill:var(--_g);stroke:var(--_g)}
+.kws-skyline-lit{fill:var(--_au);stroke:none}
+@container (max-width:599.98px){.kws-skyline-far{display:none}.kws-skyline-span{transform:translateX(-190px)}}
+@media (prefers-reduced-motion:no-preference){
+/* The glow drifts, slowly, only where a pause button is showing to stop it */
+:root:has(.kws-motion:not([hidden])) .kws-skyline-sky::after{animation:kws-skyline-glow 16s ease-in-out infinite var(--_ps,running)}
+[data-motion=off] .kws-skyline{--_ps:paused}
+@keyframes kws-skyline-glow{50%{transform:translateX(6%);opacity:.65}}
+/* The name rises as the scene scrolls in: scroll-linked, never by itself. view(0px): the whole screen, not the page's scroll-padding */
+@supports (animation-timeline:view()){
+:root:not([data-motion=off]) .kws-skyline-name{animation:kws-skyline-rise 1ms linear both;animation-timeline:view(0px);animation-range:entry}
+@keyframes kws-skyline-rise{from{transform:translateY(40%)}}
+}}
+@media print{.kws-skyline{display:none}}

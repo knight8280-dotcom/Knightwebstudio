@@ -1,0 +1,20 @@
+PASS  390: screenshots fail to load -> same height as with images (491 vs 491), frames keep 40:21  {"frames":[[295,155,true,0],[248,130,true,0],[248,130,true,0]],"h":491,"cls":0,"sx":0}
+PASS  1280: screenshots fail to load -> same height as with images (586 vs 586), frames keep 40:21  {"frames":[[545,286,true,0],[414,218,true,0],[414,218,true,0]],"h":586,"cls":0,"sx":0}
+PASS  390: fonts arrive 2.5s late -> carousel heights unchanged (400,491,400,491 -> 400,491,400,491); page CLS 0.004  ["0.0040@2528 #text,btn btn-sm"]
+FAIL  1280: fonts arrive 2.5s late -> carousel heights unchanged (448,602,448,586 -> 448,586,448,586); page CLS 0.0096  ["0.0096@2535 #text,#text"]
+PASS  theme toggled mid-move: colours switch (rgb(36, 56, 159) rgb(26, 34, 56) rgb(246, 240, 228) -> rgb(27, 42, 120) rgb(243, 236, 221) rgb(19, 23, 34)) and the move finishes on item 4  {"midMoving":true,"on":3}
+INFO  motion paused mid-move: the spring in flight KEEPS ANIMATING after data-motion=off is set (finishes after ~628ms)  {"movingAfter50ms":true,"pressed":"true"}
+INFO  OS reduced-motion switched on mid-move: the spring in flight keeps animating until it settles  
+PASS  no console errors  
+PASS  200% zoom of a 1280 window (640px): no sideways scroll, no overlap, nothing cut off  {"heights":[437,437,437,490,490,490]}
+PASS  400% zoom / reflow (320px): no sideways scroll, no overlap, nothing cut off  {"heights":[451,451,451,476,476,476]}
+FAIL  WCAG text spacing at 390: no sideways scroll, no overlap, nothing cut off  [{"sx":9,"capToCtl":64,"picToCap":36,"overlapKids":0,"over":0,"labelSpill":-29,"h":517},{"sx":9,"capToCtl":64,"picToCap":36,"overlapKids":0,"over":0,"labelSpill":-50,"h":517},{"sx":9,"capToCtl":39,"picToCap":36,"overlapKids":0,"over":0,"labelSpill":-65,"h":517}]
+FAIL  text-only 200% at 390 (root font 32px): no sideways scroll, no overlap, nothing cut off  [{"sx":152,"capToCtl":77,"picToCap":72,"overlapKids":0,"over":8,"labelSpill":-85,"h":1041},{"sx":152,"capToCtl":75,"picToCap":72,"overlapKids":0,"over":8,"labelSpill":-121,"h":1041},{"sx":152,"capToCtl":77,"picToCap":72,"overlapKids":0,"over":7,"labelSpill":-144,"h":1041}]
+PASS  text-only 200% at 1280: no sideways scroll, no overlap, nothing cut off  {"heights":[874,874,874,984,984,984]}
+PASS  back navigation (page reloaded, not bfcache in this harness): four live carousels, one control row, still works  {"mark":null,"persisted":null,"live":4,"ctl":1,"on":0,"afterNext":1,"errs":[]}
+PASS  unmount removes controls, classes and inline styles  {"restoredNoStyle":true,"authorInlineStyleSurvives":null,"authorIsOnSurvives":false,"afterUnmountVisibleItems":1,"htmlJs":true,"afterUnmount4sVisibleItems":3,"emptyMount":"function","emptyLive":false,"malformed":"THROWS Cannot read properties of null (reading 'offsetWidth')","hiddenThenShown":{"distinctLefts":9,"n":9}}
+FAIL  an inline style the author had before mount is DELETED by unmount (documented: the script owns the style attribute)  
+INFO  after unmount on a page with html.js: 1 of 3 items visible at once, 3 after 4s (the CSS hold re-arms on unmount)  
+FAIL  malformed item (no tile/caption) does not throw  THROWS Cannot read properties of null (reading 'offsetWidth')
+PASS  mounted while display:none, then shown: re-measures and spreads the signs  {"distinctLefts":9,"n":9}
+FAIL  no page errors  Cannot read properties of null (reading 'offsetWidth')

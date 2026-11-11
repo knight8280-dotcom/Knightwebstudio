@@ -1,0 +1,26 @@
+{
+  "web-design-prairieville__mobile-light": {
+    "height": 7522,
+    "overflowX": 0,
+    "stops": 10,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "web-design-prairieville__desktop-light": {
+    "height": 5737,
+    "overflowX": 0,
+    "stops": 8,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "web-design-prairieville__tablet-light": {
+    "height": 6389,
+    "overflowX": 0,
+    "stops": 7,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  }
+}

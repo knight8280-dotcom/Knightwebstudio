@@ -1,0 +1,398 @@
+{
+  "home__390__light": {
+    "heightA": 11942,
+    "heightB": 11912,
+    "differingPixels": 292591,
+    "percent": 6.2823,
+    "bbox": [
+      0,
+      8890,
+      390,
+      11942
+    ]
+  },
+  "services__390__light": {
+    "heightA": 5700,
+    "heightB": 5700,
+    "differingPixels": 1717,
+    "percent": 0.0772,
+    "bbox": [
+      93,
+      4373,
+      297,
+      4390
+    ]
+  },
+  "consulting__390__light": {
+    "heightA": 13936,
+    "heightB": 13936,
+    "differingPixels": 5189,
+    "percent": 0.0955,
+    "bbox": [
+      93,
+      988,
+      349,
+      12625
+    ]
+  },
+  "work__390__light": {
+    "heightA": 4459,
+    "heightB": 4459,
+    "differingPixels": 1717,
+    "percent": 0.0987,
+    "bbox": [
+      93,
+      3131,
+      297,
+      3148
+    ]
+  },
+  "process__390__light": {
+    "heightA": 3315,
+    "heightB": 3315,
+    "differingPixels": 1717,
+    "percent": 0.1328,
+    "bbox": [
+      93,
+      1987,
+      297,
+      2004
+    ]
+  },
+  "pricing__390__light": {
+    "heightA": 10378,
+    "heightB": 10378,
+    "differingPixels": 3957,
+    "percent": 0.0978,
+    "bbox": [
+      93,
+      821,
+      305,
+      9067
+    ]
+  },
+  "faq__390__light": {
+    "heightA": 3663,
+    "heightB": 3663,
+    "differingPixels": 1717,
+    "percent": 0.1202,
+    "bbox": [
+      93,
+      2335,
+      297,
+      2352
+    ]
+  },
+  "contact__390__light": {
+    "heightA": 3702,
+    "heightB": 3702,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "about__390__light": {
+    "heightA": 5158,
+    "heightB": 5158,
+    "differingPixels": 1717,
+    "percent": 0.0854,
+    "bbox": [
+      93,
+      3831,
+      297,
+      3848
+    ]
+  },
+  "start__390__light": {
+    "heightA": 6134,
+    "heightB": 6134,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "web-design-baton-rouge__390__light": {
+    "heightA": 7416,
+    "heightB": 7416,
+    "differingPixels": 2777,
+    "percent": 0.096,
+    "bbox": [
+      93,
+      5100,
+      298,
+      6014
+    ]
+  },
+  "web-design-denham-springs__390__light": {
+    "heightA": 7210,
+    "heightB": 7210,
+    "differingPixels": 2777,
+    "percent": 0.0988,
+    "bbox": [
+      93,
+      4891,
+      298,
+      5808
+    ]
+  },
+  "web-design-gonzales__390__light": {
+    "heightA": 7362,
+    "heightB": 7362,
+    "differingPixels": 2777,
+    "percent": 0.0967,
+    "bbox": [
+      93,
+      5073,
+      298,
+      5960
+    ]
+  },
+  "web-design-prairieville__390__light": {
+    "heightA": 7360,
+    "heightB": 7360,
+    "differingPixels": 2777,
+    "percent": 0.0967,
+    "bbox": [
+      93,
+      5074,
+      298,
+      5958
+    ]
+  },
+  "privacy__390__light": {
+    "heightA": 4971,
+    "heightB": 4971,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "terms__390__light": {
+    "heightA": 5236,
+    "heightB": 5236,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "checkout__390__light": {
+    "heightA": 2149,
+    "heightB": 2149,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "checkout_success__390__light": {
+    "heightA": 2218,
+    "heightB": 2218,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "404.html__390__light": {
+    "heightA": 1239,
+    "heightB": 1239,
+    "differingPixels": 1326,
+    "percent": 0.2744,
+    "bbox": [
+      113,
+      616,
+      277,
+      632
+    ]
+  },
+  "home__1440__light": {
+    "heightA": 9220,
+    "heightB": 9220,
+    "differingPixels": 12246,
+    "percent": 0.0922,
+    "bbox": [
+      189,
+      6919,
+      1280,
+      8477
+    ]
+  },
+  "services__1440__light": {
+    "heightA": 4262,
+    "heightB": 4262,
+    "differingPixels": 7863,
+    "percent": 0.1281,
+    "bbox": [
+      189,
+      3463,
+      575,
+      3519
+    ]
+  },
+  "consulting__1440__light": {
+    "heightA": 10045,
+    "heightB": 10045,
+    "differingPixels": 15340,
+    "percent": 0.1061,
+    "bbox": [
+      189,
+      893,
+      1246,
+      9324
+    ]
+  },
+  "work__1440__light": {
+    "heightA": 3488,
+    "heightB": 3488,
+    "differingPixels": 7863,
+    "percent": 0.1565,
+    "bbox": [
+      189,
+      2689,
+      575,
+      2745
+    ]
+  },
+  "process__1440__light": {
+    "heightA": 2709,
+    "heightB": 2709,
+    "differingPixels": 7863,
+    "percent": 0.2016,
+    "bbox": [
+      189,
+      1910,
+      575,
+      1966
+    ]
+  },
+  "pricing__1440__light": {
+    "heightA": 5988,
+    "heightB": 5988,
+    "differingPixels": 97207,
+    "percent": 1.1273,
+    "bbox": [
+      99,
+      175,
+      1171,
+      5245
+    ]
+  },
+  "faq__1440__light": {
+    "heightA": 3036,
+    "heightB": 3036,
+    "differingPixels": 7863,
+    "percent": 0.1799,
+    "bbox": [
+      189,
+      2221,
+      575,
+      2277
+    ]
+  },
+  "contact__1440__light": {
+    "heightA": 2253,
+    "heightB": 2253,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "about__1440__light": {
+    "heightA": 3836,
+    "heightB": 3836,
+    "differingPixels": 7863,
+    "percent": 0.1423,
+    "bbox": [
+      189,
+      3054,
+      575,
+      3110
+    ]
+  },
+  "start__1440__light": {
+    "heightA": 4663,
+    "heightB": 4663,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "web-design-baton-rouge__1440__light": {
+    "heightA": 5760,
+    "heightB": 5760,
+    "differingPixels": 8923,
+    "percent": 0.1076,
+    "bbox": [
+      189,
+      3855,
+      1038,
+      4969
+    ]
+  },
+  "web-design-denham-springs__1440__light": {
+    "heightA": 5727,
+    "heightB": 5727,
+    "differingPixels": 8923,
+    "percent": 0.1082,
+    "bbox": [
+      189,
+      3778,
+      1038,
+      4936
+    ]
+  },
+  "web-design-gonzales__1440__light": {
+    "heightA": 5580,
+    "heightB": 5580,
+    "differingPixels": 8923,
+    "percent": 0.111,
+    "bbox": [
+      189,
+      3676,
+      1038,
+      4790
+    ]
+  },
+  "web-design-prairieville__1440__light": {
+    "heightA": 5670,
+    "heightB": 5670,
+    "differingPixels": 8923,
+    "percent": 0.1093,
+    "bbox": [
+      189,
+      3792,
+      1038,
+      4876
+    ]
+  },
+  "privacy__1440__light": {
+    "heightA": 3551,
+    "heightB": 3551,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "terms__1440__light": {
+    "heightA": 3840,
+    "heightB": 3840,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "checkout__1440__light": {
+    "heightA": 1493,
+    "heightB": 1493,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "checkout_success__1440__light": {
+    "heightA": 1635,
+    "heightB": 1635,
+    "differingPixels": 0,
+    "percent": 0,
+    "bbox": null
+  },
+  "404.html__1440__light": {
+    "heightA": 1062,
+    "heightB": 1062,
+    "differingPixels": 7320,
+    "percent": 0.4787,
+    "bbox": [
+      730,
+      461,
+      1205,
+      516
+    ]
+  }
+}

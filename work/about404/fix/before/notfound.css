@@ -1,0 +1,24 @@
+/* Not-found page only. The canonical 404 block from DESIGN.md, plus a call link and a short list of pages.
+   Phone: one centred column, the scene small so the buttons are in the first screen. From 760px: scene left, words right. */
+[data-page="notfound"] .nf { --scene: 11.5rem; display: grid; justify-items: center; gap: var(--s-4); padding-block: var(--stack); text-align: center; }
+[data-page="notfound"] .nf > * { margin: 0; }
+[data-page="notfound"] .nf-code { font-size: var(--fs-figure); line-height: .9; letter-spacing: -.04em; color: var(--brick); }
+[data-page="notfound"] .nf p { max-width: var(--measure); }
+[data-page="notfound"] .nf .scene { width: min(100%, var(--scene)); }
+[data-page="notfound"] .nf .btn-row { justify-self: stretch; margin-top: var(--s-2); }
+
+/* Where people were usually heading */
+[data-page="notfound"] .nf-more { justify-self: stretch; padding-top: var(--s-4); border-top: var(--edge); }
+[data-page="notfound"] .nf-more .label { margin: 0; }
+[data-page="notfound"] .nf-more ul { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 0 var(--s-5); }
+[data-page="notfound"] .nf-more a { display: inline-flex; align-items: center; min-height: var(--tap); font-weight: 700; }
+
+@media (min-width: 600px) {
+  [data-page="notfound"] .nf .btn-row { justify-content: center; }
+}
+@media (min-width: 760px) {
+  [data-page="notfound"] .nf { --scene: clamp(15rem, 30vw, 22rem); grid-template-columns: auto minmax(0, 38rem); justify-content: center; justify-items: start; column-gap: var(--gap-lg); padding-bottom: var(--sec); text-align: left; }
+  [data-page="notfound"] .nf .scene { grid-row: 1 / span 5; align-self: center; width: var(--scene); }
+  [data-page="notfound"] .nf-code { margin-left: -.04em; }
+  [data-page="notfound"] .nf .btn-row, [data-page="notfound"] .nf-more ul { justify-content: flex-start; }
+}

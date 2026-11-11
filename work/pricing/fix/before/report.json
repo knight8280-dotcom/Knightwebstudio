@@ -1,0 +1,18 @@
+{
+  "pricing__mobile-light": {
+    "height": 10441,
+    "overflowX": 0,
+    "stops": 14,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "pricing__desktop-light": {
+    "height": 6031,
+    "overflowX": 0,
+    "stops": 8,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  }
+}

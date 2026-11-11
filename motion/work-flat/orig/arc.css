@@ -1,0 +1,30 @@
+/* KWS kit: arc focus carousel. Pairs with arc.js; a plain list without it. Theme (--kit-*) and markup: NOTES.md */
+.kws-arc{--t:5.5rem;--cap:12.5rem;--_i:var(--kit-ink,var(--ink));--_s:var(--kit-surface,var(--card));--_f:var(--kit-font-display,var(--font-display));--_r:var(--kit-radius,var(--r-md));--_b:1.5px solid;color:var(--kit-muted,var(--ink-2));font-family:var(--kit-font-body,var(--font-text))}
+.kws-arc-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,19rem),1fr));gap:1.5rem 2rem;margin:0;padding:0;list-style:none}
+.kws-arc-item{display:grid;grid-template-columns:var(--t) 1fr;gap:1rem}
+.kws-arc-tile{display:grid;place-content:center;justify-items:center;gap:.45em;width:var(--t);height:var(--t);margin:0 auto;border-radius:var(--_r);outline:var(--_b) var(--kit-gilt,var(--gold));outline-offset:-.42em;background:var(--kit-accent,var(--board));box-shadow:var(--kit-shadow,var(--shadow-2));color:var(--kit-accent-ink,var(--cream));font:600 max(.75rem,calc(var(--t)*.135))/1 var(--_f)}
+.kws-arc-tile svg{width:2.9em;height:2.9em;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.kws-arc-name,.kws-arc-price{margin:0;color:var(--_i);font-family:var(--_f);font-weight:600}
+.kws-arc-tile,.kws-arc-price{font-variation-settings:"SOFT" 100}
+.kws-arc-name{font-size:var(--fs-title,1.6rem);line-height:1.1}
+.kws-arc-price,.kws-arc-link{display:inline-block;margin-top:.75rem;padding:.3em 1em .3em .7em;border:var(--_b);border-radius:.4em 9em 9em .4em;background:var(--_s);font-size:1.0625rem;line-height:1.25}
+.kws-arc-line{max-width:30em;margin:.75rem auto 0;font-size:.94rem;line-height:1.5}
+.kws-arc-link{padding:.75rem 1.1em;border-radius:var(--_r);color:var(--_i);font-size:.94rem;font-weight:700;text-decoration:none}
+.kws-arc-sr{position:absolute;clip-path:inset(50%)}
+.js .kws-arc:not(.is-live){padding-bottom:3.75rem}
+.js .kws-arc:not(.is-live) li+li{overflow:hidden;animation:kws-arc-hold 4s step-end}
+@keyframes kws-arc-hold{0%{max-height:0}}
+:is(.js,.is-live) .kws-arc-list{--t:clamp(6.5rem,22vw,9.5rem);grid-template-columns:100%;gap:0}
+:is(.js,.is-live) .kws-arc-item{display:block;text-align:center}
+:is(.js,.is-live) .kws-arc-cap{min-height:var(--cap);margin-top:2.25rem;text-wrap:balance}
+.is-live .kws-arc-list{touch-action:pan-y pinch-zoom;cursor:grab;-webkit-user-select:none}
+.is-live .kws-arc-item{grid-area:1/1;pointer-events:none}
+.is-live .kws-arc-tile,.is-live .is-on .kws-arc-cap{pointer-events:auto}
+.is-moving .kws-arc-tile{will-change:transform,opacity}
+.kws-arc-ctl{display:flex;flex-wrap:wrap;justify-content:center;margin-top:1rem}
+.kws-arc-ctl button{display:grid;place-items:center;width:1.5rem;height:2.75rem;padding:0;border:0;background:none;color:var(--_i);font:1.75rem/1 var(--kit-font-body,var(--font-text));cursor:pointer}
+button.kws-arc-nav{width:2.75rem;margin:0 .125rem;border:var(--_b) var(--kit-line,var(--line-2));border-radius:50%;background:var(--_s)}
+.kws-arc-dot::before{content:"";width:.5rem;height:.5rem;border:var(--_b) var(--kit-muted,var(--ink-3));border-radius:9em}
+.kws-arc-ctl button:active,.kws-arc-link:active{transform:translateY(1px)}
+@media (hover:hover){.kws-arc-nav:hover{border-color:var(--_i)}.kws-arc-dot:hover::before{background:var(--kit-muted,var(--ink-3))}.kws-arc-link:hover{transform:translateY(-2px)}}
+.kws-arc-dot[aria-current=true]::before{width:1.125rem;border-color:var(--kit-accent,var(--blue));background:var(--kit-accent,var(--blue))}

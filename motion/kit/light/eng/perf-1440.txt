@@ -1,0 +1,46 @@
+viewport 1440x900@1x, CPU throttle 4x
+first screen (wash) pass 1
+   page frame interval: n=240 median 16.7 p95 16.7 worst 16.8 >33.4ms:0 >50ms:0
+   kit callback: n=241 median 0.1 p95 1.0 worst 9.4 >33.4ms:0 >50ms:0  draws/s 30.3  long tasks(>50ms): none
+first screen (wash) pass 2
+   page frame interval: n=481 median 16.7 p95 16.8 worst 16.8 >33.4ms:0 >50ms:0
+   kit callback: n=241 median 0.1 p95 1.2 worst 6.3 >33.4ms:0 >50ms:0  draws/s 15.0  long tasks(>50ms): none
+three bookmark cards (3 ribbons) pass 1
+   page frame interval: n=239 median 16.7 p95 16.7 worst 16.8 >33.4ms:0 >50ms:0
+   kit callback: n=240 median 0.2 p95 1.2 worst 10.0 >33.4ms:0 >50ms:0  draws/s 52.5  long tasks(>50ms): none
+three bookmark cards (3 ribbons) pass 2
+   page frame interval: n=240 median 16.7 p95 16.7 worst 16.8 >33.4ms:0 >50ms:0
+   kit callback: n=241 median 0.2 p95 2.7 worst 9.5 >33.4ms:0 >50ms:0  draws/s 52.8  long tasks(>50ms): none
+step folders (1 ribbon) pass 1
+   page frame interval: n=240 median 16.7 p95 16.7 worst 16.8 >33.4ms:0 >50ms:0
+   kit callback: n=241 median 0.2 p95 1.0 worst 3.6 >33.4ms:0 >50ms:0  draws/s 30.0  long tasks(>50ms): none
+step folders (1 ribbon) pass 2
+   page frame interval: n=479 median 16.7 p95 16.7 worst 16.8 >33.4ms:0 >50ms:0
+   kit callback: n=240 median 0.2 p95 1.1 worst 1.8 >33.4ms:0 >50ms:0  draws/s 15.0  long tasks(>50ms): none
+package stack (no canvas) pass 1
+   page frame interval: n=240 median 16.7 p95 16.8 worst 16.8 >33.4ms:0 >50ms:0
+   kit callback: n=0  draws/s 0.0  long tasks(>50ms): none
+package stack (no canvas) pass 2
+   page frame interval: n=481 median 16.7 p95 16.7 worst 16.8 >33.4ms:0 >50ms:0
+   kit callback: n=0  draws/s 0.0  long tasks(>50ms): none
+second brand (wash + ribbons) pass 1
+   page frame interval: n=203 median 16.7 p95 16.8 worst 116.7 >33.4ms:10 >50ms:7
+   kit callback: n=204 median 0.1 p95 5.8 worst 16.0 >33.4ms:0 >50ms:0  draws/s 25.8  long tasks(>50ms): none
+second brand (wash + ribbons) pass 2
+   page frame interval: n=216 median 16.7 p95 16.8 worst 150.0 >33.4ms:7 >50ms:3
+   kit callback: n=217 median 0.2 p95 5.3 worst 148.9 >33.4ms:1 >50ms:1  draws/s 44.8  long tasks(>50ms): 149
+closing band pass 1
+   page frame interval: n=191 median 16.7 p95 33.3 worst 250.1 >33.4ms:8 >50ms:6
+   kit callback: n=192 median 0.1 p95 3.5 worst 17.7 >33.4ms:0 >50ms:0  draws/s 14.3  long tasks(>50ms): none
+closing band pass 2
+   page frame interval: n=238 median 16.7 p95 16.8 worst 33.3 >33.4ms:0 >50ms:0
+   kit callback: n=239 median 0.2 p95 3.1 worst 20.8 >33.4ms:0 >50ms:0  draws/s 29.9  long tasks(>50ms): none
+switching tabs every 350ms (animation .28s)
+   page frame interval: n=258 median 16.7 p95 16.8 worst 33.3 >33.4ms:0 >50ms:0
+   kit callback: n=0  draws/s 0.0  long tasks(>50ms): none
+scrolling top to bottom, 40px per frame
+   page frame interval: n=1372 median 16.7 p95 83.4 worst 366.7 >33.4ms:171 >50ms:128
+   kit callback: n=1026 median 0.1 p95 2.0 worst 19.3 >33.4ms:0 >50ms:0  draws/s 9.0  long tasks(>50ms): 115
+trace cards: FireAnimationFrame n=82 median 0.2 p95 4.2 worst 21.7 >33.4ms:0 >50ms:0 | Layout events total 0, inside rAF 0 | style recalcs total 0, inside rAF 0
+trace band: FireAnimationFrame n=167 median 0.2 p95 6.9 worst 31.1 >33.4ms:0 >50ms:0 | Layout events total 0, inside rAF 0 | style recalcs total 0, inside rAF 0
+trace wash: FireAnimationFrame n=146 median 0.5 p95 14.7 worst 50.0 >33.4ms:4 >50ms:1 | Layout events total 0, inside rAF 0 | style recalcs total 0, inside rAF 0

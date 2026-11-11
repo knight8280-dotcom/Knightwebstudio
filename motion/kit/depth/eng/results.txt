@@ -1,0 +1,368 @@
+READ FIRST. Raw output of the review scripts in this folder (node <name>.js; kit server on :8730). Four groups of FAIL lines below are faults of the
+test scripts, not of the kit, and are superseded: (1) "== t2_motion ==" data-motion=off block: the attribute was set before the document existed and
+did not stick; t2b_paused sets it properly and passes. (2) "== t3_input ==" C: aimed at the wrong card; t3c_tap is the real test. (3) "== t4_a11y =="
+"tab order: 5 links...": compared opacity "1.000" with "1"; t4b_focus is the real test and passes that part. (4) "== t7c_fullchrome ==" background tab:
+Playwright keeps visibilityState "visible"; the figure to read is frames run (6 in 3s against about 180 in front). "CLS ... bare page (no html.js)" is the
+limit NOTES.md already states. Everything else marked FAIL is a finding. In t5_contrast the trailing "widths:" list is the text box width, ignore it.
+
+independent engineering review, run 2026-11-10T20:44Z; load average: 0.70, 0.72, 1.11
+
+== t1_noscript_cls ==
+PASS  script off 360px: all cards and list items visible, no stage, nothing past the edge  [{"cards":10,"cardsVis":10,"lis":60,"lisVis":60,"stage":"none,none","ctl":0,"clipped":0,"cut":0,"sw":0,"cylPadB":"0px","cols":1,"h":2525}]
+PASS  script off 390px: all cards and list items visible, no stage, nothing past the edge  [{"cards":10,"cardsVis":10,"lis":60,"lisVis":60,"stage":"none,none","ctl":0,"clipped":0,"cut":0,"sw":0,"cylPadB":"0px","cols":1,"h":2504}]
+PASS  script off 820px: all cards and list items visible, no stage, nothing past the edge  [{"cards":10,"cardsVis":10,"lis":60,"lisVis":60,"stage":"none,none","ctl":0,"clipped":0,"cut":0,"sw":0,"cylPadB":"0px","cols":2,"h":1550}]
+PASS  script off 1440px: all cards and list items visible, no stage, nothing past the edge  [{"cards":10,"cardsVis":10,"lis":60,"lisVis":60,"stage":"none,none","ctl":0,"clipped":0,"cut":0,"sw":0,"cylPadB":"0px","cols":3,"h":1035}]
+PASS  CLS 390px, scripts 1.5s late  [cls 0.0000; live 4>4; doc height 5520>5520; cyl 670,670>670,670; ring 1108,1108>1108,1108; shifts []]
+PASS  CLS 820px, scripts 1.5s late  [cls 0.0000; live 4>4; doc height 5057>5057; cyl 646,646>646,646; ring 888,888>888,888; shifts []]
+PASS  CLS 1440px, scripts 1.5s late  [cls 0.0000; live 4>4; doc height 5206>5206; cyl 646,646>646,646; ring 737,737>737,737; shifts []]
+PASS  CLS 390px, scripts 1.5s late, prefers-reduced-motion: reduce  [cls 0.0000; live 4>4; doc height 5520>5520; cyl 670,670>670,670; ring 1108,1108>1108,1108; shifts []]
+PASS  CLS 1440px, scripts 1.5s late, prefers-reduced-motion: reduce  [cls 0.0000; live 4>4; doc height 5206>5206; cyl 646,646>646,646; ring 737,737>737,737; shifts []]
+PASS  CLS 390px, scripts 1.5s late, html[data-motion=off] set before paint  [cls 0.0000; live 4>4; doc height 5520>5520; cyl 670,670>670,670; ring 1108,1108>1108,1108; shifts []]
+PASS  CLS 390px, scripts 4.8s late (after the 4s hold has run out)  [cls 0.0000; live 4>4; doc height 5520>5520; cyl 670,670>670,670; ring 1108,1108>1108,1108; shifts []]
+PASS  CLS 1440px, scripts 4.8s late (after the 4s hold has run out)  [cls 0.0000; live 4>4; doc height 5206>5206; cyl 646,646>646,646; ring 737,737>737,737; shifts []]
+FAIL  CLS 390px, bare page (no html.js), scripts 1.5s late  [cls 0.0628; live 2>2; doc height 2105>2105; cyl 598>598; ring 1156>1156; shifts [{"v":0.0628,"t":1527,"src":["wrap 0>53 y0>791"]}]]
+FAIL  CLS 1440px, bare page (no html.js), scripts 1.5s late  [cls 0.1821; live 2>2; doc height 1738>1738; cyl 598>598; ring 757>757; shifts [{"v":0.1821,"t":1529,"src":["kws-cyl-track 710>534 y134>143","wrap 0>32 y0>812"]}]]
+
+== t1b_held ==
+PASS  normal, 390px: space held before the script (viewport 3000px tall so shifts count)  [held {"live":0,"cyl":670,"shown":1,"doc":5520,"cls":0,"anim":"kws-cyl-hold"} > live {"live":4,"cyl":670,"shown":5,"doc":5520,"cls":0,"anim":"none"}]
+PASS  normal, 1440px: space held before the script (viewport 3000px tall so shifts count)  [held {"live":0,"cyl":646,"shown":1,"doc":5206,"cls":0,"anim":"kws-cyl-hold"} > live {"live":4,"cyl":646,"shown":5,"doc":5206,"cls":0,"anim":"none"}]
+FAIL  prefers-reduced-motion, 390px: space held before the script (viewport 3000px tall so shifts count)  [held {"live":0,"cyl":2746,"shown":5,"doc":9670,"cls":0,"anim":"none"} > live {"live":4,"cyl":670,"shown":5,"doc":5520,"cls":0.3435,"anim":"none"}]
+FAIL  prefers-reduced-motion, 1440px: space held before the script (viewport 3000px tall so shifts count)  [held {"live":0,"cyl":2701,"shown":5,"doc":9315,"cls":0,"anim":"none"} > live {"live":4,"cyl":646,"shown":5,"doc":5206,"cls":0.305,"anim":"none"}]
+PASS  data-motion=off before paint, 390px: space held before the script (viewport 3000px tall so shifts count)  [held {"live":0,"cyl":670,"shown":1,"doc":5520,"cls":0,"anim":"kws-cyl-hold"} > live {"live":4,"cyl":670,"shown":5,"doc":5520,"cls":0,"anim":"none"}]
+PASS  data-motion=off before paint, 1440px: space held before the script (viewport 3000px tall so shifts count)  [held {"live":0,"cyl":646,"shown":1,"doc":5206,"cls":0,"anim":"kws-cyl-hold"} > live {"live":4,"cyl":646,"shown":5,"doc":5206,"cls":0,"anim":"none"}]
+PASS  data-motion=off + a site rule that stops animations (as the reduced-motion rule does), 390px: space held before the script (viewport 3000px tall so shifts count)  [held {"live":0,"cyl":670,"shown":1,"doc":5520,"cls":0,"anim":"kws-cyl-hold"} > live {"live":4,"cyl":670,"shown":5,"doc":5520,"cls":0,"anim":"none"}]
+PASS  data-motion=off + a site rule that stops animations (as the reduced-motion rule does), 1440px: space held before the script (viewport 3000px tall so shifts count)  [held {"live":0,"cyl":646,"shown":1,"doc":5206,"cls":0,"anim":"kws-cyl-hold"} > live {"live":4,"cyl":646,"shown":5,"doc":5206,"cls":0,"anim":"none"}]
+
+== t1c_prepaint ==
+PASS  data-motion=off in the markup, 390px: space held  [held {"motion":"off","live":0,"cyl":670,"doc":5520,"cls":0} > live {"motion":"off","live":4,"cyl":670,"doc":5520,"cls":0}]
+FAIL  data-motion=off in the markup + a pause rule that stops CSS animations (as the site reduced-motion rule does), 390px: space held  [held {"motion":"off","live":0,"cyl":2746,"doc":9670,"cls":0} > live {"motion":"off","live":4,"cyl":670,"doc":5520,"cls":0.3435}]
+
+== t2_motion ==
+PASS  reduced motion: both complete at load  [{"live":true,"on":1,"ctl":7,"ring":true,"cards":30,"front":1,"hub":true}]
+PASS  reduced motion: ring unchanged through 720px of scroll and a sideways drag
+PASS  reduced motion: Next lands at once and is announced  [{"on":1,"t":"none","moving":false,"said":"Step 2 of 5: Within a minute, they get a text."}]
+PASS  reduced motion: End, Left, Home work at once  [4,3,0]
+PASS  reduced motion: a dot lands at once
+PASS  reduced motion: a swipe steps one card on release; nothing follows the finger  [now 3]
+PASS  reduced motion: no frames asked for by the kit in the whole run, no CSS animation or transition running  [rAF 0; running: none]
+PASS  data-motion=off: both complete at load  [{"live":true,"on":1,"ctl":7,"ring":true,"cards":30,"front":1,"hub":true}]
+FAIL  data-motion=off: ring unchanged through 720px of scroll and a sideways drag
+FAIL  data-motion=off: Next lands at once and is announced  [{"on":0,"t":"perspective(1541px) translateZ(-1100px) rotateY(16.3deg) translateZ(1100px)","moving":true,"said":"Step 2 of 5: Within a minute, they get a text."}]
+FAIL  data-motion=off: End, Left, Home work at once  [0,0,0]
+FAIL  data-motion=off: a dot lands at once
+FAIL  data-motion=off: a swipe steps one card on release; nothing follows the finger  [now 1]
+FAIL  data-motion=off: no frames asked for by the kit in the whole run, no CSS animation or transition running  [rAF 95; running: none]
+INFO  pause pressed 100ms into a cylinder turn: after 1.5s the card is flat on step 2; is-moving false; pause button true "Motion paused"  (the turn ran to its end (a 0.7s spring finishing is acceptable))
+PASS  pause pressed while the ring coasts: it stops within 120ms and stays put  [rotateY(-120deg) = rotateY(-120deg)]
+PASS  paused: no further frames asked for  [0]
+INFO  paused, scrolled 600px, resumed, then the window was resized: ring angle -120 > -120 (0.0 degrees turned with no scroll or drag)
+PASS  idle with a ring and a cylinder on screen: no frames asked for in 3s  [0]
+PASS  scrolling the top of the page with both rings off screen: no frames asked for; hubs not rendered  [0 frames; hub display: none,none]
+PASS  scrolling the ring through: frames while it moves, none 1.5s after it stops  [65 frames asked during a 1,200px scroll, 0 after]
+INFO  tab in the background (visibilityState "visible"): kit frame callbacks run in 2s: 97 (headless Chromium may keep painting background pages; a real browser stops rAF in hidden tabs, and the kit has no timers)
+INFO  timers in source: cylinder setTimeout x1, setInterval x0; ring setTimeout x0, setInterval x0; wheel listeners: 0; preventDefault calls: cylinder 3, ring 0
+
+== t2b_paused ==
+PASS  data-motion=off: both complete at load  [{"live":true,"on":1,"ctl":7,"ring":true,"cards":30,"front":1,"hub":true}]
+PASS  data-motion=off: ring unchanged through 720px of scroll and a sideways drag
+PASS  data-motion=off: Next lands at once and is announced  [{"on":1,"t":"none","moving":false,"said":"Step 2 of 5: Within a minute, they get a text."}]
+PASS  data-motion=off: End, Left, Home work at once  [4,3,0]
+PASS  data-motion=off: a dot lands at once
+PASS  data-motion=off: a swipe steps one card on release; nothing follows the finger  [now 3]
+PASS  data-motion=off: no frames asked for by the kit in the whole run, no CSS animation or transition running  [rAF 0; running: none]
+
+== t3_input ==
+FAIL  A. mouse: Next, then a plain click on the middle of the drum 120ms later: the drum finishes its turn  [{"on":1,"moving":true,"held":false,"tOn":"perspective(1743px) translateZ(-1245px) rotateY(6.55deg) translateZ(1245px)","opOn":"0.915","wc":"transform, opacity","t":"rotateY(-10.45deg) | rotateY(6.55deg) | rotateY(23.55deg) | rotateY(40.55deg) | rotateY(-27.45deg)","dot":1,"said":"Step 2 of 5: Within a minute, they get a text."}]
+FAIL  B. touch: swipe the drum, then 100ms later scroll the page with a finger on it: the drum finishes its turn  [page scrolled 343px; {"on":1,"moving":true,"held":false,"tOn":"perspective(1541px) translateZ(-1100px) rotateY(3.89deg) translateZ(1100px)","opOn":"0.95","wc":"transform, opacity","t":"rotateY(-13.11deg) | rotateY(3.89deg) | rotateY(20.89deg) | rotateY(37.89deg) | rotateY(-30.11deg)","dot":1,"said":"Step 2 of 5: Within a minute, they get a text."}]
+   after pressing Next once more: {"on":2,"moving":false,"tOn":"none"}
+FAIL  C. touch: a tap on a link on the side card brings it round and does not follow the link  [hit kws-cyl-card at 388,646; step 2 > 2; hash ""]
+PASS  D. 23 quick presses of Next land on the right card, dot agrees  [{"on":3,"dot":3,"tOn":"none","said":"Step 4 of 5: The quote went quiet? It follows up for you."}]
+PASS  D. mixed dots and keys in a burst: settles, dot agrees, will-change released  [{"on":3,"dot":3,"wc":"auto"}]
+PASS  D. a long fast mouse drag (1,700px) settles flat on a card  [{"on":3,"held":false}]
+PASS  D. drag, leave the window, release outside: settles, not left held  [{"on":0,"held":false,"moving":false}]
+PASS  D. a right-button drag does nothing
+PASS  D. wheel over the drum scrolls the page 300px and does not turn it; sideways wheel does not turn it either  [scrolled 300]
+PASS  E. pen drag turns the drum one step  [pointerType seen: pen; step 1]
+FAIL  F. a second finger lands mid-drag, then both lift: the drum settles and is not left held  [{"on":0,"moving":true,"held":true,"tOn":"perspective(1541px) translateZ(-1100px) rotateY(-2.51deg) translateZ(1100px)","t":"rotateY(-2.51deg) | rotateY(14.49deg) | rotateY(31.49deg) | rotateY(-36.51deg) | rotateY(-19.51deg)"}]
+   touch-action: track "pan-y", ring stage "pan-y" (pinch-zoom is NOT allowed when it starts on them)
+PASS  G. resize to 844x390: step kept, centred, right mode, ring radius follows  [{"on":1,"centred":true,"flat":false,"nb":"perspective(1743px) translateZ(-1245px) rotateY(17deg) translateZ(1245px)","sw":0,"ring":"block","R":"380px","stW":760}]
+PASS  G. resize to 360x740: step kept, centred, right mode, ring radius follows  [{"on":1,"centred":true,"flat":true,"nb":"translateX(300.7px)","sw":0,"ring":"none","R":"380px","stW":0}]
+PASS  G. resize to 390x844: step kept, centred, right mode, ring radius follows  [{"on":1,"centred":true,"flat":false,"nb":"perspective(1541px) translateZ(-1100px) rotateY(17deg) translateZ(1100px)","sw":0,"ring":"block","R":"175px","stW":350}]
+PASS  G. resize to 1280x800: step kept, centred, right mode, ring radius follows  [{"on":1,"centred":true,"flat":false,"nb":"perspective(1743px) translateZ(-1245px) rotateY(17deg) translateZ(1245px)","sw":0,"ring":"block","R":"314px","stW":628}]
+PASS  G. resize to 379x700: step kept, centred, right mode, ring radius follows  [{"on":1,"centred":true,"flat":true,"nb":"translateX(316.7px)","sw":0,"ring":"none","R":"314px","stW":0}]
+PASS  G. resize to 381x700: step kept, centred, right mode, ring radius follows  [{"on":1,"centred":true,"flat":false,"nb":"perspective(1505px) translateZ(-1075px) rotateY(17deg) translateZ(1075px)","sw":0,"ring":"block","R":"170.5px","stW":341}]
+FAIL  G. no console errors  [Failed to load resource: the server responded with a status of 404 (File not found)]
+
+== t3c_tap ==
+PASS  mouse 820px: a tap on the side card (hit: card 1) brings it to the middle  [now step 1; events: pointerdown@1444 pointerup@1444 click@1444 timer(0)@1448]
+PASS  mouse 820px: a tap on a link on the side card (hit: A.x-link) brings the card round and does not follow the link  [step 1; hash ""; events: pointerdown@3697 pointerup@3698 click@3698 timer(0)@3700]
+PASS  mouse 390px: a tap on the side card (hit: card 1) brings it to the middle  [now step 1; events: pointerdown@1747 pointerup@1748 click@1748 timer(0)@1751]
+PASS  mouse 390px: a tap on a link on the side card (hit: LI.kws-cyl-card) brings the card round and does not follow the link  [step 1; hash ""; events: pointerdown@3985 pointerup@3985 click@3986 timer(0)@3988]
+FAIL  touch 820px: a tap on the side card (hit: card 1) brings it to the middle  [now step 0; events: pointerdown@1439 pointerup@1492 timer(0)@1493 click@1493]
+FAIL  touch 820px: a tap on a link on the side card (hit: A.x-link) brings the card round and does not follow the link  [step 1; hash "#step-2"; events: pointerdown@3031 pointerup@3085 timer(0)@3085 click@3087]
+FAIL  touch 390px: a tap on the side card (hit: card 1) brings it to the middle  [now step 0; events: pointerdown@1471 pointerup@1524 timer(0)@1525 click@1525]
+FAIL  touch 390px: a tap on a link on the side card (hit: LI.kws-cyl-card) brings the card round and does not follow the link  [step 0; hash ""; events: ]
+failed requests on demo.html: 404 http://localhost:8730/assets/img/crest.svg ; console errors: Failed to load resource: the server responded with a status of 404 (File not found) | Failed to load resource: the server responded with a status of 404 (File not found)
+
+== t3d_stale ==
+FAIL  ring: drag, hold still for 1s, let go: it stays where it was put  [turned a further 40.3 degrees after release (3.4 cards)]
+FAIL  ring: no frames asked for while the pointer is held still  [61 frames asked in 1s of holding still]
+FAIL  cylinder: drag a third of a card quickly, hold still for 1s, let go: it snaps back to the nearest card  [held at rotateY(-4.62deg) (17deg is one card); landed on step 2]
+
+== t3e_sticky ==
+FAIL  sticky ring (1280px): a small window resize with no scrolling leaves the ring where it is  [stage top 84px (stuck at 88); angle -109.98 > -71.74: turned 38.2 degrees by itself (3.2 cards)]
+
+== t4_a11y ==
+AX tree, cylinder (first 22 lines of 68):
+region <carousel> "One missed call, followed through to the review"
+  list ""
+    listitem <slide> "1 of 5"
+      StaticText "MISSED-CALL TEXT-BACK · $750 SETUP"
+      heading "You can't pick up."
+        StaticText "You can't pick up."
+      StaticText "EXAMPLE"
+      paragraph ""
+        StaticText "Missed call"
+      image "Example notification on your phone: a missed call from a customer, and no one picked up"
+      paragraph ""
+        StaticText "You're on a job, up a ladder or with a customer. The phone rings out. Until now, that mean"
+    listitem <slide> "2 of 5"
+      StaticText "MISSED-CALL TEXT-BACK · $750 SETUP"
+      heading "Within a minute, they get a text."
+        StaticText "Within a minute, they get a text."
+      StaticText "EXAMPLE"
+      list ""
+        listitem ""
+          StaticText "Sorry we missed your call, this is [your business]. What can we help with?"
+        listitem ""
+          StaticText "Sent on its own, within a minute"
+...
+        listitem ""
+          StaticText "Sent on its own"
+      paragraph ""
+        StaticText "Finished jobs get a review request with your Google link."
+  button "Previous step" [focusable]
+  button "Step 1 of 5: You can't pick up." [focusable]
+  button "Step 2 of 5: Within a minute, they get a text." [focusable]
+  button "Step 3 of 5: They pick a time. It's on your calendar." [focusable]
+  button "Step 4 of 5: The quote went quiet? It follows up for you." [focusable]
+  button "Step 5 of 5: Job done. The review request sends itself." [focusable]
+  button "Next step" [focusable]
+  paragraph "" live=polite
+AX tree, ring: 80 lines; first 14:
+heading "One-page"
+  StaticText "One-page"
+paragraph ""
+  StaticText "$1,000"
+list ""
+  listitem ""
+    StaticText "1 page"
+  listitem ""
+    StaticText "Custom design"
+  listitem ""
+    StaticText "1 revision round"
+  listitem ""
+    StaticText "Copy editing and polish (you supply the text)"
+  listitem ""
+PASS  ring: stage hidden from the tree (30 cards in the DOM, 0 in the tree); 30 list items exposed  [{"hidden":"true","focusable":0,"cards":30}; listitems 30; headings 4]
+PASS  cylinder: region<carousel> with a name, a list, 5 listitem<slide> "n of 5", 7 buttons  [region <carousel> "One missed call, followed through to the review"]
+Tab order: Read about step 1 (card 1, centred: true, opacity 1) > Read about step 2 (card 2, centred: true, opacity 1) > Read about step 3 (card 3, centred: true, opacity 1) > Read about step 4 (card 4, centred: true, opacity 1) > Read about step 5 (card 5, centred: true, opacity 1) > Previous step > Step 1 of 5: You can't pick up. > Step 2 of 5: Within a minute, they get a text. > Step 3 of 5: They pick a time. It's on your calendar. > Step 4 of 5: The quote went quiet? It follows up for you. > Step 5 of 5: Job done. The review request sends itself. > Next step > A.more-link
+FAIL  tab order: 5 links (each brings its card to the middle, fully opaque, in view, not covered), then 7 controls, then out  [12 stops inside]
+PASS  every stop shows a focus outline of 2px or more  [solid 3px rgb(44, 70, 196)]
+PASS  live region stays silent while focus alone moves the drum
+PASS  Shift+Tab comes back in at Next (no trap)  [Next step]
+INFO  ArrowRight with focus on a link in the centre card: drum moves 5 > 1, focus stays on the link in card 5 (now a side card at opacity 0.78, link at x=159 of 1280)
+FAIL  390px: after two ArrowRight presses from a link in card 1, the focused element is still visible  [{"focus":"Read about step 1","visible":false,"x":-424,"op":"0.56","on":2}]
+PASS  390px: all 7 controls at least 44x44  [44x44 44x44 44x44 44x44 44x44 44x44 44x44]
+PASS  390px: no text under 12px in the cylinder or the lists
+   390px text between 12 and 15px: kws-cyl-tag 13px (uppercase label); kws-cyl-eg 12px (uppercase label); thread-note thread-missed 12px "Missed call"; notice-top 12px (uppercase label); notice-when 12px "now"; thread-note 12px "Sent on its own, within "; SPAN 12px "This week"; new 12px "New"; pill pill-go 12px "Follow-up sent · 2 days"; thread-note thread-done 12px "Job marked done"
+PASS  360px: all 7 controls at least 44x44  [44x44 44x44 44x44 44x44 44x44 44x44 44x44]
+PASS  360px: no text under 12px in the cylinder or the lists
+   360px text between 12 and 15px: kws-cyl-tag 13px (uppercase label); kws-cyl-eg 12px (uppercase label); thread-note thread-missed 12px "Missed call"; notice-top 12px (uppercase label); notice-when 12px "now"; thread-note 12px "Sent on its own, within "; SPAN 12px "This week"; new 12px "New"; pill pill-go 12px "Follow-up sent · 2 days"; thread-note thread-done 12px "Job marked done"
+INFO  390px ring: front card "14 days of suppo" effective text size 15.3px, its tab 10.3px; the other 16 facing cards 9.6 to 11.6px (decoration, aria-hidden; the same words are in the lists at 15px)
+FAIL  6 cards at 360px: every control at least 44x44 and inside the screen  [44x44 41x44 41x44 41x44 41x44 41x44 41x44 44x44; row spans 6 to 354 of 360]
+PASS  6 cards at 390px: every control at least 44x44 and inside the screen  [44x44 44x44 44x44 44x44 44x44 44x44 44x44 44x44; row spans 13 to 377 of 390]
+FAIL  7 cards at 360px: every control at least 44x44 and inside the screen  [44x44 35x44 35x44 35x44 35x44 35x44 35x44 35x44 44x44; row spans 6 to 354 of 360]
+FAIL  7 cards at 390px: every control at least 44x44 and inside the screen  [44x44 40x44 40x44 40x44 40x44 40x44 40x44 40x44 44x44; row spans 6 to 384 of 390]
+PASS  1280 window at 200%: no sideways scroll, centre card and controls inside the screen, nothing cut  [{"sw":0,"bodySw":0,"card":"344x534","cardInView":true,"ctlInView":true,"btn":44,"stage":"block","cols":2,"cut":[],"wide":0,"vh":450}]
+PASS  1280 window at 400% (320px reflow): no sideways scroll, centre card and controls inside the screen, nothing cut  [{"sw":0,"bodySw":0,"card":"250x633","cardInView":true,"ctlInView":true,"btn":42,"stage":"none","cols":2,"cut":[],"wide":0,"vh":256}]
+
+== t4b_focus ==
+PASS  1280px: tabbing through five card links: each card comes to the middle, opaque, link in view and not covered  [[[true,"1",true,true,473,500],[true,"1",true,true,473,500],[true,"1",true,true,473,500],[true,"1",true,true,473,500],[true,"1",true,true,473,500]]]
+FAIL  1280px: ArrowRight x1 with focus on the link in card 1: the focused element stays fully visible on a full-strength card  [{"focus":"Read about step 1","visiblePx":263,"ofPx":263,"x":159,"cardOpacity":"0.78","centre":2}]
+FAIL  1280px: ArrowRight x2 with focus on the link in card 1: the focused element stays fully visible on a full-strength card  [{"focus":"Read about step 1","visiblePx":108,"ofPx":170,"x":-62,"cardOpacity":"0.56","centre":3}]
+PASS  390px: tabbing through five card links: each card comes to the middle, opaque, link in view and not covered  [[[true,"1",true,true,438,466],[true,"1",true,true,438,466],[true,"1",true,true,438,466],[true,"1",true,true,438,466],[true,"1",true,true,438,466]]]
+FAIL  390px: ArrowRight x1 with focus on the link in card 1: the focused element stays fully visible on a full-strength card  [{"focus":"Read about step 1","visiblePx":0,"ofPx":228,"x":-228,"cardOpacity":"0.78","centre":2}]
+FAIL  390px: ArrowRight x2 with focus on the link in card 1: the focused element stays fully visible on a full-strength card  [{"focus":"Read about step 1","visiblePx":0,"ofPx":148,"x":-424,"cardOpacity":"0.56","centre":3}]
+
+== t5_contrast ==
+PASS  day 390px site drum at rest  [strength 1.00: 10 texts, 0 under AA, worst 4.84:1 (thread-note thread-missed "Missed call", 12px)]
+PASS  day 390px client drum at rest  [strength 1.00: 10 texts, 0 under AA, worst 5.36:1 (thread-note thread-missed "Missed call", 12px)]
+FAIL  day 820px site drum at rest  [strength 1.00: 10 texts, 0 under AA, worst 4.84:1 (thread-note thread-missed "Missed call", 12px) | strength 0.78: 14 texts, 2 under AA, worst 3.31:1 (thread-note "Sent on its own, within a ", 12px)]
+FAIL  day 820px client drum at rest  [strength 1.00: 10 texts, 0 under AA, worst 5.36:1 (thread-note thread-missed "Missed call", 12px) | strength 0.78: 14 texts, 1 under AA, worst 4.24:1 (kws-cyl-eg "Example", 12px)]
+FAIL  day 1280px site drum at rest  [strength 1.00: 10 texts, 0 under AA, worst 4.84:1 (thread-note thread-missed "Missed call", 12px) | strength 0.78: 16 texts, 2 under AA, worst 3.31:1 (thread-note "Sent on its own, within a ", 12px) | strength 0.56: 18 texts, 18 under AA, worst 2.39:1 (SPAN "Mon", 12px)]
+FAIL  day 1280px client drum at rest  [strength 1.00: 10 texts, 0 under AA, worst 5.36:1 (thread-note thread-missed "Missed call", 12px) | strength 0.78: 16 texts, 2 under AA, worst 4.24:1 (kws-cyl-eg "Example", 12px) | strength 0.56: 18 texts, 18 under AA, worst 2.83:1 (SPAN "Mon", 12px)]
+FAIL  day 1440px site drum at rest  [strength 1.00: 10 texts, 0 under AA, worst 4.84:1 (thread-note thread-missed "Missed call", 12px) | strength 0.78: 16 texts, 2 under AA, worst 3.31:1 (thread-note "Sent on its own, within a ", 12px) | strength 0.56: 25 texts, 25 under AA, worst 2.39:1 (SPAN "This week", 12px)]
+FAIL  day 1440px client drum at rest  [strength 1.00: 10 texts, 0 under AA, worst 5.36:1 (thread-note thread-missed "Missed call", 12px) | strength 0.78: 16 texts, 2 under AA, worst 4.24:1 (kws-cyl-eg "Example", 12px) | strength 0.56: 25 texts, 25 under AA, worst 2.83:1 (SPAN "This week", 12px)]
+FAIL  day 1920px site drum at rest  [strength 1.00: 10 texts, 0 under AA, worst 4.84:1 (thread-note thread-missed "Missed call", 12px) | strength 0.78: 16 texts, 2 under AA, worst 3.31:1 (thread-note "Sent on its own, within a ", 12px) | strength 0.56: 25 texts, 25 under AA, worst 2.39:1 (SPAN "This week", 12px)]
+FAIL  day 1920px client drum at rest  [strength 1.00: 10 texts, 0 under AA, worst 5.36:1 (thread-note thread-missed "Missed call", 12px) | strength 0.78: 16 texts, 2 under AA, worst 4.24:1 (kws-cyl-eg "Example", 12px) | strength 0.56: 25 texts, 25 under AA, worst 2.83:1 (SPAN "This week", 12px)]
+PASS  night 390px site drum at rest  [strength 1.00: 10 texts, 0 under AA, worst 5.58:1 (notice-top "Your phone", 12px)]
+PASS  night 390px client drum at rest  [strength 1.00: 10 texts, 0 under AA, worst 5.36:1 (thread-note thread-missed "Missed call", 12px)]
+FAIL  night 820px site drum at rest  [strength 1.00: 10 texts, 0 under AA, worst 5.58:1 (notice-top "Your phone", 12px) | strength 0.78: 14 texts, 2 under AA, worst 4.35:1 (thread-note "Sent on its own, within a ", 12px)]
+FAIL  night 820px client drum at rest  [strength 1.00: 10 texts, 0 under AA, worst 5.36:1 (thread-note thread-missed "Missed call", 12px) | strength 0.78: 14 texts, 1 under AA, worst 4.24:1 (kws-cyl-eg "Example", 12px)]
+FAIL  night 1280px site drum at rest  [strength 1.00: 10 texts, 0 under AA, worst 5.58:1 (notice-top "Your phone", 12px) | strength 0.78: 16 texts, 2 under AA, worst 4.35:1 (thread-note "Sent on its own, within a ", 12px) | strength 0.56: 18 texts, 10 under AA, worst 2.65:1 (SPAN "Mon", 12px)]
+FAIL  night 1280px client drum at rest  [strength 1.00: 10 texts, 0 under AA, worst 5.36:1 (thread-note thread-missed "Missed call", 12px) | strength 0.78: 16 texts, 2 under AA, worst 4.24:1 (kws-cyl-eg "Example", 12px) | strength 0.56: 18 texts, 18 under AA, worst 2.83:1 (SPAN "Mon", 12px)]
+FAIL  night 1440px site drum at rest  [strength 1.00: 10 texts, 0 under AA, worst 5.58:1 (notice-top "Your phone", 12px) | strength 0.78: 16 texts, 2 under AA, worst 4.35:1 (thread-note "Sent on its own, within a ", 12px) | strength 0.56: 25 texts, 13 under AA, worst 2.65:1 (SPAN "This week", 12px)]
+FAIL  night 1440px client drum at rest  [strength 1.00: 10 texts, 0 under AA, worst 5.36:1 (thread-note thread-missed "Missed call", 12px) | strength 0.78: 16 texts, 2 under AA, worst 4.24:1 (kws-cyl-eg "Example", 12px) | strength 0.56: 25 texts, 25 under AA, worst 2.83:1 (SPAN "This week", 12px)]
+FAIL  night 1920px site drum at rest  [strength 1.00: 10 texts, 0 under AA, worst 5.58:1 (notice-top "Your phone", 12px) | strength 0.78: 16 texts, 2 under AA, worst 4.35:1 (thread-note "Sent on its own, within a ", 12px) | strength 0.56: 25 texts, 13 under AA, worst 2.65:1 (SPAN "This week", 12px)]
+FAIL  night 1920px client drum at rest  [strength 1.00: 10 texts, 0 under AA, worst 5.36:1 (thread-note thread-missed "Missed call", 12px) | strength 0.78: 16 texts, 2 under AA, worst 4.24:1 (kws-cyl-eg "Example", 12px) | strength 0.56: 25 texts, 25 under AA, worst 2.83:1 (SPAN "This week", 12px)]
+
+Under-AA texts at rest (worst per kind; widths where seen):
+  2.39:1 (needs 4.5)  day site a=0.56 SPAN  "Mon" 12px  widths: 19,15,17,25,29,11
+  2.64:1 (needs 4.5)  day site a=0.56 new  "New" 12px  widths: 14
+  2.65:1 (needs 3)  day site a=0.56 B  "3" 36px  widths: 13,54,12,34
+  2.65:1 (needs 4.5)  night site a=0.56 SPAN  "Mon" 12px  widths: 19,15,17,25,29,11
+  2.69:1 (needs 3)  day client a=0.56 B  "3" 36px  widths: 11,57,10,37
+  2.69:1 (needs 3)  night client a=0.56 B  "3" 36px  widths: 11,57,10,37
+  2.83:1 (needs 4.5)  day client a=0.56 SPAN  "Mon" 12px  widths: 19,15,17,26,31,11
+  2.83:1 (needs 4.5)  night client a=0.56 SPAN  "Mon" 12px  widths: 19,15,17,26,31,11
+  2.87:1 (needs 4.5)  day site a=0.56 kws-cyl-tag  "Online booking & reminders" 13px  widths: 149,135
+  2.87:1 (needs 4.5)  day site a=0.56 kws-cyl-text  "Customers pick a time on y" 15px  widths: 169,154
+  2.98:1 (needs 3)  night site a=0.56 B  "3" 36px  widths: 13,12
+  3.04:1 (needs 4.5)  day client a=0.56 new  "New" 12px  widths: 14
+  3.04:1 (needs 4.5)  night client a=0.56 new  "New" 12px  widths: 14
+  3.11:1 (needs 4.5)  day client a=0.56 kws-cyl-eg  "Example" 12px  widths: 39,35
+  3.11:1 (needs 4.5)  night client a=0.56 kws-cyl-eg  "Example" 12px  widths: 39,35
+  3.25:1 (needs 4.5)  night site a=0.56 new  "New" 12px  widths: 14
+  3.31:1 (needs 4.5)  day site a=0.78 thread-note  "Sent on its own, within a " 12px  widths: 152,73
+  3.31:1 (needs 4.5)  day site a=0.56 kws-cyl-eg  "Example" 12px  widths: 38,34
+  3.31:1 (needs 4.5)  day site a=0.56 pill pill-go  "Follow-up sent · 2 days" 12px  widths: 69,70
+  3.47:1 (needs 4.5)  day client a=0.56 kws-cyl-tag  "Online booking & reminders" 13px  widths: 135,140
+  3.47:1 (needs 4.5)  day client a=0.56 kws-cyl-text  "Customers pick a time on y" 15px  widths: 169,150
+  3.47:1 (needs 4.5)  night client a=0.56 kws-cyl-tag  "Online booking & reminders" 13px  widths: 135,140
+  3.47:1 (needs 4.5)  night client a=0.56 kws-cyl-text  "Customers pick a time on y" 15px  widths: 169,150
+  3.58:1 (needs 4.5)  night site a=0.56 kws-cyl-tag  "Online booking & reminders" 13px  widths: 149,135
+  3.58:1 (needs 4.5)  night site a=0.56 kws-cyl-text  "Customers pick a time on y" 15px  widths: 169,154
+  3.65:1 (needs 4.5)  day client a=0.56 pill pill-go  "Follow-up sent · 2 days" 12px  widths: 73,74
+  3.65:1 (needs 4.5)  night client a=0.56 pill pill-go  "Follow-up sent · 2 days" 12px  widths: 73,74
+  3.94:1 (needs 4.5)  day site a=0.56 kws-cyl-title  "They pick a time. It's on " 23px  widths: 127,132
+  3.94:1 (needs 4.5)  day site a=0.56 LI  "Booked online" 15px  widths: 55
+  3.94:1 (needs 4.5)  day site a=0.56 lead-what  "Fence repair" 15px  widths: 46,43
+  4.24:1 (needs 4.5)  day client a=0.78 kws-cyl-eg  "Example" 12px  widths: 60,56
+  4.24:1 (needs 4.5)  night client a=0.78 kws-cyl-eg  "Example" 12px  widths: 60,56
+  4.32:1 (needs 4.5)  day client a=0.56 kws-cyl-title  "They pick a time. It's on " 23px  widths: 117
+  4.32:1 (needs 4.5)  day client a=0.56 LI  "Booked online" 15px  widths: 59
+  4.32:1 (needs 4.5)  day client a=0.56 lead-what  "Fence repair" 15px  widths: 48,43
+  4.32:1 (needs 4.5)  night client a=0.56 kws-cyl-title  "They pick a time. It's on " 23px  widths: 117
+  4.32:1 (needs 4.5)  night client a=0.56 LI  "Booked online" 15px  widths: 59
+  4.32:1 (needs 4.5)  night client a=0.56 lead-what  "Fence repair" 15px  widths: 48,43
+  4.35:1 (needs 4.5)  night site a=0.78 thread-note  "Sent on its own, within a " 12px  widths: 152,73
+
+day 1440px, one Next turn sampled on 47 frames: worst text on the card in focus 4.06:1 (thread-note thread-missed "Missed call", needs 4.5); worst on any visible card 1.01:1 (card 4 at strength 0.008, kws-cyl-tag); texts under AA per frame: min 23, max 30 of about 51
+
+night 1440px, one Next turn sampled on 47 frames: worst text on the card in focus 4.72:1 (notice-top "Your phone", needs 4.5); worst on any visible card 1.01:1 (card 4 at strength 0.009, kws-cyl-tag); texts under AA per frame: min 14, max 21 of about 51
+
+== t6_perf ==
+1x  cylinder  Next button:        44 frames, median 16.7ms, mean 16.7ms, 95th 16.7ms, worst 16.7ms, over 33ms: 0, over 50ms: 0; kit script per frame: mean 0.07ms, worst 0.20ms
+1x  cylinder  touch drag + settle: 139 frames, median 16.7ms, mean 16.7ms, 95th 16.8ms, worst 16.8ms, over 33ms: 0, over 50ms: 0; kit script per frame: mean 0.06ms, worst 0.20ms
+1x  ring      scroll past (touch): 301 frames, median 16.7ms, mean 16.8ms, 95th 16.8ms, worst 66.7ms, over 33ms: 1, over 50ms: 1; kit script per frame: mean 0.09ms, worst 0.30ms
+1x  ring      touch drag + coast:  150 frames, median 16.7ms, mean 16.7ms, 95th 16.8ms, worst 16.8ms, over 33ms: 0, over 50ms: 0; kit script per frame: mean 0.18ms, worst 1.40ms
+4x run 1  cylinder  Next button:        44 frames, median 16.7ms, mean 16.7ms, 95th 16.8ms, worst 16.8ms, over 33ms: 0, over 50ms: 0; kit script per frame: mean 0.27ms, worst 1.00ms
+4x run 1  cylinder  touch drag + settle: 139 frames, median 16.7ms, mean 16.7ms, 95th 16.7ms, worst 16.8ms, over 33ms: 0, over 50ms: 0; kit script per frame: mean 0.24ms, worst 1.30ms
+4x run 1  ring      scroll past (touch): 286 frames, median 16.7ms, mean 17.8ms, 95th 33.3ms, worst 33.4ms, over 33ms: 6, over 50ms: 0; kit script per frame: mean 0.38ms, worst 4.40ms
+4x run 1  ring      touch drag + coast:  166 frames, median 16.7ms, mean 16.7ms, 95th 16.8ms, worst 16.8ms, over 33ms: 0, over 50ms: 0; kit script per frame: mean 0.55ms, worst 4.30ms
+     layout-reading calls made inside the kit's frame callbacks in this whole run: {"window.scrollY":28,"window.innerHeight":28}
+     listeners the kit added: .kws-cyl-nav click passive x4; .kws-cyl-dot click passive x10; .kws-cyl keydown NOT-passive x2; .kws-cyl-track focusin passive x2; .kws-cyl-track click NOT-passive capture x2; .kws-cyl-track pointerdown passive x2; .kws-cyl-track pointermove passive x2; .kws-cyl-track pointerup passive x2; .kws-cyl-track pointercancel passive x2; .kws-cyl-track dragstart NOT-passive x2; window scroll passive x2; .kws-ring-stage pointerdown passive x2; .kws-ring-stage pointermove passive x2; .kws-ring-stage pointerup passive x2; .kws-ring-stage pointercancel passive x2
+4x run 2  cylinder  Next button:        44 frames, median 16.7ms, mean 16.7ms, 95th 16.8ms, worst 16.8ms, over 33ms: 0, over 50ms: 0; kit script per frame: mean 0.16ms, worst 0.80ms
+4x run 2  cylinder  touch drag + settle: 139 frames, median 16.7ms, mean 16.7ms, 95th 16.7ms, worst 16.8ms, over 33ms: 0, over 50ms: 0; kit script per frame: mean 0.17ms, worst 1.30ms
+4x run 2  ring      scroll past (touch): 286 frames, median 16.7ms, mean 17.7ms, 95th 33.2ms, worst 33.4ms, over 33ms: 2, over 50ms: 0; kit script per frame: mean 0.31ms, worst 2.40ms
+4x run 2  ring      touch drag + coast:  164 frames, median 16.7ms, mean 16.7ms, 95th 16.7ms, worst 16.8ms, over 33ms: 0, over 50ms: 0; kit script per frame: mean 0.57ms, worst 3.40ms
+4x run 3  cylinder  Next button:        44 frames, median 16.7ms, mean 16.7ms, 95th 16.7ms, worst 16.8ms, over 33ms: 0, over 50ms: 0; kit script per frame: mean 0.24ms, worst 1.90ms
+4x run 3  cylinder  touch drag + settle: 139 frames, median 16.7ms, mean 16.7ms, 95th 16.8ms, worst 16.8ms, over 33ms: 0, over 50ms: 0; kit script per frame: mean 0.25ms, worst 1.10ms
+4x run 3  ring      scroll past (touch): 287 frames, median 16.7ms, mean 17.7ms, 95th 33.2ms, worst 33.4ms, over 33ms: 3, over 50ms: 0; kit script per frame: mean 0.38ms, worst 2.60ms
+4x run 3  ring      touch drag + coast:  164 frames, median 16.7ms, mean 16.7ms, 95th 16.8ms, worst 16.8ms, over 33ms: 0, over 50ms: 0; kit script per frame: mean 0.58ms, worst 4.60ms
+
+== t6b_trace ==
+layers ring off screen (top of page): 0 in the tree, 0 that draw; drawn area 0k css px (about 0.0 MB of tiles at 2x density if rastered at layout size)
+layers ring on screen, at rest: 38 in the tree, 34 that draw; drawn area 3567k css px (about 54.4 MB of tiles at 2x density if rastered at layout size)
+   ring card layout box 243x185 css px, 30 cards; will-change: auto
+
+RING scroll past, 4x: 293 animation-frame callbacks, 298 commits
+   layouts 18 (25ms), of which forced from script: 0 (0.0ms); style recalcs 385 (448ms), forced from script: 88 (66.1ms)
+   per commit: style 1.50ms, layout 0.08ms, pre-paint 0.29ms, paint 0.13ms, layerize 1.02ms, commit 1.36ms; main-thread tasks over 16.7ms: 8, over 50ms: 0; longest 21.1ms
+   paint events 90; raster tasks (all threads) 68, 5ms
+
+RING drag + coast, 4x: 153 animation-frame callbacks, 162 commits
+   layouts 34 (34ms), of which forced from script: 0 (0.0ms); style recalcs 186 (229ms), forced from script: 32 (18.6ms)
+   per commit: style 1.42ms, layout 0.21ms, pre-paint 0.25ms, paint 0.20ms, layerize 0.82ms, commit 1.36ms; main-thread tasks over 16.7ms: 0, over 50ms: 0; longest 14.8ms
+   paint events 109; raster tasks (all threads) 85, 6ms
+
+== t6c_attr ==
+bare.html 390px dpr 2: ring card 243x185 css px; 2 card layers that draw (of 36 drawing layers on the page); 90k css px = 1.4 MB at device resolution; why layers: n/a
+one-ring.html 390px dpr 2: ring card 243x185 css px; 0 card layers that draw (of 32 drawing layers on the page); 0k css px = 0.0 MB at device resolution; why layers: n/a
+   style/layout work with a script stack during a scroll past the ring (one-ring page, 4x not applied):
+     88x, 18.5ms  UpdateLayoutTree forced by aim ring.js:65 < scroll ring.js:93
+one-ring.html 390px dpr 3: ring card 243x185 css px; 0 card layers that draw (of 32 drawing layers on the page); 0k css px = 0.0 MB at device resolution; why layers: n/a
+one-ring.html 1440px dpr 1: ring card 352x268 css px; 0 card layers that draw (of 35 drawing layers on the page); 0k css px = 0.0 MB at device resolution; why layers: n/a
+one-ring.html 820px dpr 2: ring card 352x268 css px; 2 card layers that draw (of 32 drawing layers on the page); 189k css px = 2.9 MB at device resolution; why layers: n/a
+
+== t6d_layers ==
+390px dpr 2: drawing layers with the ring 32, without 2 (ring adds 30); ring layers' area 2314k css px => 35.3 MB at device resolution if rastered at layout size; sizes: 320x241 x30, 0x0 x1, 390x3011 x1
+390px dpr 3: drawing layers with the ring 32, without 2 (ring adds 30); ring layers' area 2314k css px => 79.4 MB at device resolution if rastered at layout size; sizes: 320x241 x30, 0x0 x1, 390x3011 x1
+820px dpr 2: drawing layers with the ring 32, without 2 (ring adds 30); ring layers' area 4160k css px => 63.5 MB at device resolution if rastered at layout size; sizes: 428x324 x30, 0x0 x1, 820x2865 x1
+1440px dpr 1: drawing layers with the ring 35, without 5 (ring adds 30); ring layers' area 4160k css px => 15.9 MB at device resolution if rastered at layout size; sizes: 428x324 x30, 0x0 x1, 1440x2828 x1, 580x376 x1, 580x392 x1, 1440x1014 x1
+1440px dpr 2: drawing layers with the ring 35, without 5 (ring adds 30); ring layers' area 4160k css px => 63.5 MB at device resolution if rastered at layout size; sizes: 428x324 x30, 0x0 x1, 1440x2828 x1, 580x376 x1, 580x392 x1, 1440x1014 x1
+
+== t7_robust ==
+PASS  A. demo: no sideways scroll and nothing of the kit past the edge, 320 to 1920 in 20px steps (script on)
+PASS  A. demo: no script errors through 81 resizes  [Failed to load resource: the server responded with a status of 404 (File not found)]
+PASS  A. bare: no sideways scroll and nothing of the kit past the edge, 320 to 1920 in 20px steps (script on)
+PASS  A. bare: no script errors through 81 resizes
+FAIL  B. demo (site stylesheet) 360px: very long words stay inside the story card and the list card; no sideways scroll  [card text past the card edge: kws-cyl-tag +190px; list line past its card: -16px; page +0; ring card text n/a]
+FAIL  B. demo (site stylesheet) 390px: very long words stay inside the story card and the list card; no sideways scroll  [card text past the card edge: kws-cyl-tag +167px; list line past its card: -15px; page +0; ring card text 0x0 in a 0x0 box]
+FAIL  B. demo (site stylesheet) 1280px: very long words stay inside the story card and the list card; no sideways scroll  [card text past the card edge: kws-cyl-tag +127px; list line past its card: -28px; page +0; ring card text 0x0 in a 0x0 box]
+FAIL  B. bare (no site stylesheet) 360px: very long words stay inside the story card and the list card; no sideways scroll  [card text past the card edge: kws-cyl-tag +203px, kws-cyl-title +179px, kws-cyl-text +85px; list line past its card: 12px; page +0; ring card text n/a]
+FAIL  B. bare (no site stylesheet) 390px: very long words stay inside the story card and the list card; no sideways scroll  [card text past the card edge: kws-cyl-tag +180px, kws-cyl-title +155px, kws-cyl-text +61px; list line past its card: -3px; page +0; ring card text 288x373 in a 243x185 box]
+FAIL  B. bare (no site stylesheet) 1280px: very long words stay inside the story card and the list card; no sideways scroll  [card text past the card edge: kws-cyl-tag +140px, kws-cyl-title +115px, kws-cyl-text +21px; list line past its card: -19px; page +0; ring card text 417x540 in a 352x268 box]
+PASS  C. one card: not upgraded, no dead controls  [{"live":false,"ctl":0,"sizes":"","padB":"0px","h":104,"nextDis":0}]
+PASS  C. two cards: a strip with two ends; Next stops at card 2 and is marked disabled; Previous marked disabled at card 1  [{"live":true,"ctl":4,"sizes":"44,44,44,44","padB":"64px","h":216,"prevDis":"true","nextDis":"false"} after next x2: 1,1]
+PASS  C. three cards: loops round  [1,2,0]
+   three cards at rest: 1 flat | 0.78 rotateY(17deg) | 0.78 rotateY(-17deg)
+PASS  C. four cards: loops round  [1,2,3,0 opacities at rest 1,0.78,0,0.78]
+PASS  C. twenty cards: 23 presses of Next land on card 4  [3; control row spans -135 to 525 of 390px, dots 28px wide]
+PASS  C. loop:false, start:4: starts on the last card, Next does nothing there and is marked disabled  [said ""]
+   ring with 0 lines: {"live":false,"cards":0,"stageDisplay":"none","stageH":0,"js":false}
+   ring with 1 lines: {"live":false,"cards":0,"stageDisplay":"none","stageH":0,"js":false}
+   ring with 2 lines: {"live":false,"cards":0,"stageDisplay":"none","stageH":0,"js":false}
+   ring with 3 lines: {"live":true,"cards":3,"stageDisplay":"block","stageH":260,"js":false}
+   ring with 12 lines: {"live":true,"cards":12,"stageDisplay":"block","stageH":260,"js":false}
+   ring with 80 lines: {"live":true,"cards":80,"stageDisplay":"block","stageH":260,"js":false}
+FAIL  C. ring with 2 lines on a page with html.js: no empty stage left holding space  [{"live":false,"cards":0,"stageDisplay":"block","stageH":260,"js":true}]
+PASS  C. no errors through the count tests
+PASS  D. ten mounts and removals leave the markup exactly as after the first removal
+FAIL  D. the remover leaves no inline styles or attributes behind  [{"stageStyleAfterOff":"--R: 175px;","cardAttrs":"class=kws-cyl-card style=","rootAttrs":"class data-kws data-noun aria-label"}]
+PASS  E. theme switched mid-turn: the turn finishes, colours follow  [{"theme":"dark","on":1,"t":"none","bg":"rgb(29, 35, 51)","dot":"rgb(157, 176, 255)"}]
+PASS  E. two cylinders on one page: keys move only the one with focus  [2,0]
+PASS  F. back to the page (reloaded, not from the cache: new document): one set of controls, one hub, both still work  [{"live":4,"on":0,"ctl":1,"hubs":1} next > 1]
+
+== t7c_fullchrome ==
+browser: 153.0.8010.12
+PASS  back-forward cache: left mid-turn, came back: the turn finished, one set of controls, both still work  [{"persisted":true,"sameDoc":true,"live":4,"moving":0,"on":1,"tOn":"none","ctl":1,"hubs":1} next > 2; ring turns: true; errors: none]
+FAIL  tab in the background: no kit frame callbacks run  [visibilityState "visible"; frames run in 3s after a scroll and a Next press: 6]
+PASS  back to the front: the pending turn completes and everything settles  [{"vis":"visible","moving":0,"t":"none","run":285} (71 frames after returning)]
+
+== t7d_mem ==
+PASS  ten mount/remove cycles of both components: nothing accumulates  [before {"heapKB":741,"nodes":430,"jsListeners":0,"windowScroll":0} after {"heapKB":816,"nodes":430,"jsListeners":0,"windowScroll":0}]
+PASS  ten made and simply removed from the page (no remover called): cleaned up after the next scroll  [after {"heapKB":823,"nodes":430,"jsListeners":0,"windowScroll":0}]
+PASS  no errors
+
+== t10_colour ==
+PASS  day: no blue inside a mock, no blue on anything that is not pressable, no gold on paper  [{"inMock":[],"notPressable":[],"gold":[]}]
+PASS  night: no blue inside a mock, no blue on anything that is not pressable, no gold on paper  [{"inMock":[],"notPressable":[],"gold":[]}]
+
+== t8_engines ==
+firefox 155.0
+FAIL  firefox: Next, then a click on the drum 120ms later: the turn finishes  [{"moving":true,"t":"perspective(1743px) translateZ(-1245px) rotateY(6deg) translateZ(1245px)","op":"0.922"}]
+   firefox: after Next + ArrowRight the drum is on step 4; errors: none
+FAIL  firefox: reduced motion, before the script: the drum's space is held  [2746px before, 670px after]
+SKIP  webkit: cannot launch here (browserType.launch: )

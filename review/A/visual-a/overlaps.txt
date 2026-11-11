@@ -1,0 +1,54 @@
+consulting | TEXT-OVERLAP 10 bookings × 8 minutes ~ Done by hand   @ 440[11x15],460[11x15],480[11x15] … 720[11x15],740[11x15] (16 widths)
+consulting | TEXT-OVERLAP 5 calls × 6 minutes ~ Done by hand   @ 360[9x9],380[9x9],400[12x7] … 720[12x7],740[12x7] (20 widths)
+consulting | TEXT-OVERLAP Booking appointments by phone  ~ Done by hand   @ 360[11x13],380[11x13],400[10x10] … 720[10x10],740[10x10] (20 widths)
+consulting | TEXT-OVERLAP Done by hand ~ 10 bookings × 8 minutes   @ 360[12x11],380[12x11],400[11x13],420[11x13]
+consulting | TEXT-OVERLAP Done by hand ~ 5 calls × 6 minutes   @ 360[12x5],380[12x5],400[12x8] … 720[12x8],740[12x8] (20 widths)
+consulting | TEXT-OVERLAP Done by hand ~ Chasing quotes that went quiet   @ 440[11x13],460[11x13],480[11x13] … 720[11x13],740[11x13] (16 widths)
+consulting | TEXT-OVERLAP Done by hand ~ Returning missed calls and voi   @ 360[11x15],380[11x15],400[11x15] … 720[11x15],740[11x15] (20 widths)
+consulting | TEXT-OVERLAP Example ~ 8 quotes × 7 minutes   @ 440[71x10],460[71x10],480[71x10] … 720[71x10],740[71x10] (16 widths)
+consulting | TEXT-OVERLAP Example ~ Chasing quotes that went quiet   @ 400[71x14],420[71x14]
+consulting | TEXT-OVERLAP More customers, ~ less busywork   @ 600[396x14],620[396x14],640[396x14] … 1900[502x17],1920[502x17] (67 widths)
+consulting | TEXT-OVERLAP Time a week ~ Returning missed calls and voi   @ 360[100x15],380[100x15],400[100x15] … 720[100x15],740[100x15] (20 widths)
+home | TEXT-OVERLAP 4 ~ About   @ 540[52x15],560[52x15],580[52x15] … 1900[52x15],1920[52x15] (70 widths)
+home | TEXT-OVERLAP About ~ 4   @ 360[44x11],380[45x12],400[46x12] … 500[52x15],520[52x15] (9 widths)
+home | TEXT-OVERLAP More customers, ~ fewer missed calls,   @ 600[468x14],620[468x14],640[468x14] … 1900[593x17],1920[593x17] (67 widths)
+home | TEXT-OVERLAP fewer missed calls, ~ hours back   @ 600[308x14],620[308x14],640[308x14] … 1900[391x17],1920[391x17] (67 widths)
+home | TEXT-OVERLAP hours back ~ every week   @ 600[308x14],620[308x14],640[308x14] … 1900[391x17],1920[391x17] (67 widths)
+pricing | TEXT-OUT td.spec-price "$1,000"   @ 360,380,400 … 1060,1080 (37 widths)
+pricing | TEXT-OUT td.spec-price "$2,000"   @ 360,380,400 … 1060,1080 (37 widths)
+pricing | TEXT-OUT td.spec-price "$4,000"   @ 360,380,400 … 1060,1080 (37 widths)
+pricing | TEXT-OUT td.spec-price "$8,000"   @ 360,380,400 … 1060,1080 (37 widths)
+pricing | TEXT-OVERLAP $167/mo ~ Included   @ 360[59x15],380[59x15],400[59x15]
+pricing | TEXT-OVERLAP $167/mo ~ Support   @ 800[59x5],820[59x5],840[59x6],860[59x6],880[59x7]
+pricing | TEXT-OVERLAP Basic ~ Plan   @ 360[9x8],380[9x8],400[9x8] … 720[9x9],740[9x9] (20 widths)
+pricing | TEXT-OVERLAP Brochure and marketing sites ~ What you get   @ 440[9x12],460[9x12],480[9x12] … 720[9x15],740[9x15] (16 widths)
+pricing | TEXT-OVERLAP Design ~ Or $500 down, then about   @ 680[56x15],700[56x15],720[56x14] … 1060[56x7],1080[56x7] (21 widths)
+pricing | TEXT-OVERLAP Essential ~ What you get   @ 400[9x7],420[9x7],440[11x15] … 720[9x8],740[9x8] (18 widths)
+pricing | TEXT-OVERLAP Fits ~ Basic   @ 360[33x12],380[33x12],400[33x12] … 720[33x11],740[33x11] (20 widths)
+pricing | TEXT-OVERLAP Fixed prices, ~ published   @ 600[287x14],620[287x14],640[287x14] … 1900[364x17],1920[364x17] (67 widths)
+pricing | TEXT-OVERLAP Fixed prices, ~ up front   @ 600[63x14],620[63x14],640[63x14] … 1900[80x17],1920[80x17] (67 widths)
+pricing | TEXT-OVERLAP Included ~ $167/mo   @ 760[59x11],780[59x10],800[59x10],820[59x9],840[59x9],860[59x9],880[59x8]
+pricing | TEXT-OVERLAP Included ~ One polished page: who you are   @ 420[77x5]
+pricing | TEXT-OVERLAP Included ~ for 3 months   @ 760[18x11],780[18x10],800[18x10],820[18x9],840[18x9],860[18x9],880[18x8]
+pricing | TEXT-OVERLAP Live in ~ One-page   @ 360[55x11],380[55x11],400[55x11] … 740[55x5],760[55x5] (21 widths)
+pricing | TEXT-OVERLAP One polished page: who you are ~ Support   @ 420[69x10],440[69x11],460[69x11] … 720[69x15],740[69x15] (17 widths)
+pricing | TEXT-OVERLAP One-page and Starter sites ~ Plan   @ 360[11x15],380[11x15],400[11x15] … 720[11x15],740[11x15] (20 widths)
+pricing | TEXT-OVERLAP One-page ~ Size   @ 680[33x6],700[33x6],720[33x6] … 1060[33x12],1080[33x12] (21 widths)
+pricing | TEXT-OVERLAP Or $500 down, then about ~ Design   @ 360[56x12],380[56x12],400[56x12] … 640[56x15],660[56x15] (16 widths)
+pricing | TEXT-OVERLAP Or $500 down, then about ~ Included   @ 940[77x5],960[77x5],980[77x6],1000[77x6],1020[77x7],1040[77x7],1060[77x7],1080[77x8]
+pricing | TEXT-OVERLAP Plan ~ 1 small change a month, made w   @ 360[12x11],380[12x11],400[12x11] … 720[12x9],740[12x9] (20 widths)
+pricing | TEXT-OVERLAP Plan ~ Basic   @ 360[10x12],380[10x12],400[10x12] … 720[10x11],740[10x11] (20 widths)
+pricing | TEXT-OVERLAP Price ~ 1 small change a month, made w   @ 360[19x13],380[19x13]
+pricing | TEXT-OVERLAP Price ~ You keep your own domain and h   @ 400[45x9],420[45x9],440[45x9] … 720[45x7],740[45x7] (18 widths)
+pricing | TEXT-OVERLAP Support ~ One polished page: who you are   @ 940[69x13],960[69x13],980[69x12],1000[69x12],1020[69x12],1040[69x11],1060[69x11],1080[69x10]
+pricing | TEXT-OVERLAP What you get ~ 1 small change a month, made w   @ 360[15x13],380[15x13]
+pricing | TEXT-OVERLAP What you get ~ Essential   @ 360[9x10],380[9x10],400[9x13] … 720[11x12],740[11x12] (16 widths)
+pricing | TEXT-OVERLAP What you get ~ You keep your own domain and h   @ 360[11x6],380[11x6],400[15x9] … 720[15x7],740[15x7] (20 widths)
+pricing | TEXT-OVERLAP You keep your own domain and h ~ What you get   @ 360[11x8],380[11x8],400[11x6] … 720[11x8],740[11x8] (20 widths)
+pricing | TEXT-OVERLAP for 3 months ~ Included   @ 360[18x15],380[18x15],400[18x15]
+pricing | TEXT-OVERLAP for 3 months ~ Support   @ 800[10x5],820[10x5],840[10x6],860[10x6],880[10x7]
+services | TEXT-OVERLAP Everything your business ~ needs online, under   @ 600[365x14],620[365x14],640[365x14] … 1900[704x17],1920[704x17] (67 widths)
+services | TEXT-OVERLAP Everything your business ~ one roof   @ 880[150x14],900[150x14],920[150x14] … 1900[190x17],1920[190x17] (53 widths)
+start | TEXT-OVERLAP A website and ~ the systems that   @ 360[218x8],380[231x8],400[243x9] … 1900[491x17],1920[491x17] (79 widths)
+start | TEXT-OVERLAP the systems that ~ bring in   @ 360[129x8],380[137x8],400[144x9] … 1900[291x17],1920[291x17] (79 widths)
+start | TEXT-OVERLAP the systems that ~ customers   @ 360[127x8],380[134x8],400[141x9] … 1900[285x17],1920[285x17] (79 widths)

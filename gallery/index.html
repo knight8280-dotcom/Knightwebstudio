@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Component gallery — KnightWebstudio design system</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#F6F0E4">
+<script>
+  // Set the theme before first paint, so nobody sees a flash of the wrong
+  // one. Light is the default: a saved choice wins, otherwise a device set
+  // to dark gets the night theme. main.js still owns the toggle itself.
+  (function () {
+    var d = document.documentElement; d.classList.add('js');
+    // The header crest builds itself on the first page of a visit only
+    try { if (!sessionStorage.getItem('kws-crest')) { d.classList.add('crest-intro'); sessionStorage.setItem('kws-crest', '1'); } } catch (e) {}
+    try {
+      var t = localStorage.getItem('theme');
+      if (t !== 'dark' && t !== 'light') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      d.setAttribute('data-theme', t);
+    } catch (e) { /* private mode: the stylesheet follows the device instead */ }
+    // Scroll reveals hide blocks until main.js shows them. If that script has
+    // not started after four seconds (or the page has none), show everything.
+    setTimeout(function () { if (!window.kwsReady) d.classList.remove('js'); }, 4000);
+  })();
+</script>
+<link rel="preload" href="/assets/fonts/fraunces-soft.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/figtree.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/styles.css">
+<link rel="stylesheet" href="/assets/css/pages/consulting.css">
+<link rel="stylesheet" href="/assets/css/pages/notfound.css">
+<link rel="stylesheet" href="/gallery.css">
+</head>
+<body data-page="gallery">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ===================== TOP STRIP ===================== -->
+<div class="topbar on-ink">
+  <div class="container topbar-inner">
+    <p class="topbar-place">
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+      <span><span class="topbar-more">Based in </span>Baton Rouge<span class="topbar-state">, Louisiana</span><span class="topbar-long"> · We meet in person anywhere in Greater Baton Rouge</span></span>
+    </p>
+    <a class="topbar-tel" href="tel:+12252550837">
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
+      <span class="sr-only">Call </span>(225) 255-0837
+    </a>
+  </div>
+</div>
+<!-- ===================== HEADER ===================== -->
+<header class="site-header" id="site-header">
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="KnightWebstudio home">
+      <!-- art:crest-header --><svg class="crest" viewBox="0 0 120 120" aria-hidden="true" style="--t1:#DCE3FF;--t2:#B9C7FF;--t3:#8FA5FF;--t4:#5C77EC;--t5:#2C46C4;--ink:#161B2C;--accent:#F0C369;--rim:#2C46C4;--rim2:#B9C7FF;--glow:#8FA5FF;--field1:#24306A;--field2:#161B2C;--ribbon:#1B2C84;--ribbon2:#14205E;--steel1:#FBF5E6;--steel2:#CFC7B4;--steel3:#8E8A80;--letter:#FFFBF2"><defs><linearGradient id="ch-fld" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--field1)"/><stop offset="1" stop-color="var(--field2)"/></linearGradient><radialGradient id="ch-glow" cx=".5" cy=".42" r=".5"><stop offset="0" stop-color="var(--glow)" stop-opacity=".35"/><stop offset="1" stop-color="var(--glow)" stop-opacity="0"/></radialGradient><linearGradient id="ch-gl" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".5"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="ch-in"><path d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z"/></clipPath><clipPath id="ch-out"><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z"/></clipPath></defs><g class="a-rim"><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z" fill="var(--rim)"/><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z" fill="none" stroke="var(--rim2)" stroke-opacity=".55" stroke-width="1.2"/><path class="a-field" d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z" fill="url(#ch-fld)"/></g><g clip-path="url(#ch-in)"><circle class="a-field" cx="60" cy="50" r="42" fill="url(#ch-glow)"/><g transform="translate(22 22) scale(.86)" stroke-linejoin="round"><polygon class="facet" style="--i:0;--dx:-8.0px;--dy:-6.4px" fill="var(--t2)" points="54,4 61,15 46,12"/><polygon class="facet" style="--i:1;--dx:-1.6px;--dy:6.4px" fill="var(--t1)" points="54,4 46,12 50,9"/><polygon class="facet" style="--i:2;--dx:4.8px;--dy:4.8px" fill="var(--t3)" points="37,15 46,12 61,15 63,24 35,29"/><polygon class="facet" style="--i:3;--dx:-6.4px;--dy:3.2px" fill="var(--t1)" points="37,15 24,27 35,29"/><polygon class="facet" style="--i:4;--dx:0.0px;--dy:1.6px" fill="var(--t2)" points="24,27 13,41 24,46 35,29"/><polygon class="facet" style="--i:5;--dx:6.4px;--dy:0.0px" fill="var(--t1)" points="13,41 8,49 12,56 23,58 24,46"/><polygon class="facet" style="--i:6;--dx:-4.8px;--dy:-1.6px" fill="var(--t3)" points="35,29 24,46 50,37"/><polygon class="facet" style="--i:7;--dx:1.6px;--dy:-3.2px" fill="var(--t4)" points="35,29 50,37 63,24"/><polygon class="facet" style="--i:8;--dx:8.0px;--dy:-4.8px" fill="var(--t4)" points="24,46 23,58 42,54 50,37"/><polygon class="facet" style="--i:9;--dx:-3.2px;--dy:-6.4px" fill="var(--t3)" points="50,37 42,54 38,63 63,63 65,43"/><polygon class="facet" style="--i:10;--dx:3.2px;--dy:6.4px" fill="var(--t4)" points="50,37 65,43 63,24"/><polygon class="facet" style="--i:11;--dx:-8.0px;--dy:4.8px" fill="var(--t3)" points="38,63 31,80 26,112 53,112 63,63"/><polygon class="facet" style="--i:12;--dx:-1.6px;--dy:3.2px" fill="var(--t4)" points="63,63 53,112 78,112 72,80"/><polygon class="facet" style="--i:13;--dx:4.8px;--dy:1.6px" fill="var(--t5)" points="61,15 67,16 72,22 69,26 77,32 73,36 79,44 74,48 79,57 73,61 76,70 72,80 63,63 65,43 63,24"/><path class="eye" d="M30 27Q35 24 40 27Q35 30 30 27Z" fill="var(--ink)"/><path d="M12 46L16 45" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round"/></g></g><path class="a-line" pathLength="1" d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z" fill="none" stroke="var(--accent)" stroke-opacity=".9" stroke-width="1"/><circle class="rivet" style="--i:0" cx="24" cy="20" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:1" cx="42" cy="15.5" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:2" cx="60" cy="11" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:3" cx="78" cy="15.5" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:4" cx="96" cy="20" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:5" cx="100" cy="44" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:6" cx="20" cy="44" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:7" cx="94" cy="76" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:8" cx="26" cy="76" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:9" cx="79" cy="97" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:10" cx="41" cy="97" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><g clip-path="url(#ch-out)"><g transform="rotate(20 60 60)"><rect class="a-glint" x="-60" y="-30" width="16" height="180" fill="url(#ch-gl)"/></g></g></svg><!-- /art:crest-header -->
+      <span class="brand-name">KnightWebstudio</span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Main">
+      <div class="nav-inner">
+        <ul class="nav-links">
+          <li><a href="/services/" aria-current="page">Services</a></li>
+          <li><a href="/consulting/">Consulting</a></li>
+          <li><a href="/work/">Work</a></li>
+          <li><a href="/process/">Process</a></li>
+          <li><a href="/pricing/">Pricing</a></li>
+          <li><a href="/faq/">FAQ</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+
+        <!-- Phone menu only: hidden on desktop -->
+        <div class="nav-foot">
+          <a class="btn btn-primary btn-block" href="/contact/">Start your project</a>
+          <a class="btn btn-block" href="tel:+12252550837">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
+            Call (225) 255-0837
+          </a>
+          <a class="nav-mail" href="mailto:knightwebstudio1@gmail.com">knightwebstudio1@gmail.com</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="header-actions">
+      <!-- From 1280px, and only once the top strip (which has the number) has scrolled away -->
+      <a class="header-tel" href="tel:+12252550837">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
+        <span class="sr-only">Call </span>(225) 255-0837
+      </a>
+      <button class="icon-btn" id="theme-toggle" type="button"
+              aria-label="Switch to dark theme" title="Toggle theme">
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>
+      </button>
+      <a class="btn btn-primary btn-sm header-cta" href="/contact/" data-booking>Book a free call</a>
+      <button class="icon-btn nav-toggle" id="nav-toggle" type="button"
+              aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+        <span class="burger" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="page-head">
+  <div class="container">
+    <p class="eyebrow">Design system</p>
+    <h1><span class="l">Every shared component,</span> <span class="l">once</span></h1>
+    <p class="lede">The kitchen sink for the KnightWebstudio system. Each block below is the canonical markup from DESIGN.md, drawn by the repository's own stylesheet. Use the moon button to see it after dark.</p>
+  </div>
+</section>
+<section class="section section-first">
+  <div class="container">
+    <nav class="toc" aria-labelledby="gal-toc">
+      <p class="label" id="gal-toc">On this page</p>
+      <ol>
+        <li><a href="#type"><span class="toc-name">Headings, eyebrow, lede, fine print</span></a></li>
+<li><a href="#page-head"><span class="toc-name">Page head</span></a></li>
+<li><a href="#section-head"><span class="toc-name">Section and section header</span></a></li>
+<li><a href="#buttons"><span class="toc-name">Buttons and links</span></a></li>
+<li><a href="#tones"><span class="toc-name">Tone scopes: on blue, on ink, on paper</span></a></li>
+<li><a href="#on-blue-all"><span class="toc-name">Everything inside .on-blue</span></a></li>
+<li><a href="#small-parts"><span class="toc-name">Ticks, tags, pills, notes</span></a></li>
+<li><a href="#stamp"><span class="toc-name">Stamp and seal</span></a></li>
+<li><a href="#layout"><span class="toc-name">Card, grid, stack, cluster, split</span></a></li>
+<li><a href="#panel"><span class="toc-name">Panel and the bundle</span></a></li>
+<li><a href="#points"><span class="toc-name">Facts shelf</span></a></li>
+<li><a href="#prose"><span class="toc-name">Prose block</span></a></li>
+<li><a href="#toc"><span class="toc-name">"On this page" contents list</span></a></li>
+<li><a href="#board"><span class="toc-name">Price board</span></a></li>
+<li><a href="#pricelist"><span class="toc-name">Dot-leader price list</span></a></li>
+<li><a href="#spec"><span class="toc-name">Tier spec table</span></a></li>
+<li><a href="#table"><span class="toc-name">Data table</span></a></li>
+<li><a href="#ledger"><span class="toc-name">Ledger on a time sheet, with the large figure</span></a></li>
+<li><a href="#receipt"><span class="toc-name">Itemised receipt and checkout summary</span></a></li>
+<li><a href="#payplan"><span class="toc-name">Payment plan drawn to scale</span></a></li>
+<li><a href="#calc"><span class="toc-name">Calculator</span></a></li>
+<li><a href="#ticket"><span class="toc-name">Step list and job ticket</span></a></li>
+<li><a href="#cards"><span class="toc-name">Appointment card, business card, booking box</span></a></li>
+<li><a href="#fig"><span class="toc-name">Figure with a numbered legend: the phone</span></a></li>
+<li><a href="#browser"><span class="toc-name">Browser mock, vignette, and what goes in one</span></a></li>
+<li><a href="#scene"><span class="toc-name">The street scene</span></a></li>
+<li><a href="#work"><span class="toc-name">Project print and case row</span></a></li>
+<li><a href="#faq"><span class="toc-name">FAQ list</span></a></li>
+<li><a href="#forms"><span class="toc-name">Form fields</span></a></li>
+<li><a href="#cta"><span class="toc-name">Closing band</span></a></li>
+<li><a href="#notfound"><span class="toc-name">The 404 block</span></a></li>
+<li><a href="#reference"><span class="toc-name">Reference inner page</span></a></li>
+      </ol>
+    </nav>
+  </div>
+</section>
+<section class="gal" data-comp="type">
+<div class="container"><p class="label gal-id">.type</p><h2 class="h3 gal-title" id="type">Headings, eyebrow, lede, fine print</h2></div>
+<div class="container">
+<p class="eyebrow">Pricing</p>
+<h1><span class="l">Fixed prices,</span> <span class="l"><span class="mark">published</span> up front</span></h1>
+<p class="lede">Every price here is fixed, for websites, consulting and automation alike. What you see is what you pay, confirmed in writing before any work begins.</p>
+<h2>Systems that win customers and save time</h2>
+<p class="title">Launch bundle</p>
+<h3>Missed-call text-back</h3>
+<h4>Growth Audit &amp; action plan</h4>
+<p>Body copy is 17px Figtree with a line height of 1.6. <strong>Strong text</strong> turns ink. <a href="/pricing/">Links are blue and underlined</a>.</p>
+<p class="label">A small label</p>
+<p class="fine">Fine print is 15px, never smaller: an estimate, not a guarantee.</p>
+</div>
+</section>
+<section class="gal" data-comp="page-head">
+<div class="container"><p class="label gal-id">.page-head</p><h2 class="h3 gal-title" id="page-head">Page head</h2></div>
+<!-- 1. Commercial -->
+<section class="page-head">
+  <div class="container">
+    <p class="eyebrow">Consulting &amp; automation</p>
+    <h1><span class="l">More customers,</span> <span class="l">less busywork</span></h1>
+    <p class="lede">A website is one piece. We also set up the systems behind it: Google reviews, missed-call text-back, online booking and automatic follow-up. Fixed prices, like everything else we do.</p>
+    <div class="btn-row">
+      <a class="btn btn-primary btn-lg" href="/contact/?package=audit">Book a Growth Audit, $350</a>
+      <a class="btn btn-lg" href="#calculator">Estimate what it's worth</a>
+    </div>
+    <a class="price-strip" href="#services">
+      <span class="price-strip-label">Setups</span>
+      <span class="price-strip-nums"><b>$500</b><b>$750</b><b>$1,500</b></span>
+      <span class="price-strip-note">Fixed, published prices</span>
+    </a>
+  </div>
+</section>
+
+<!-- 2. Reading -->
+<section class="page-head">
+  <div class="container">
+    <p class="eyebrow">FAQ</p>
+    <h1>Questions we get asked</h1>
+    <p class="lede">The things people ask before they hire us, about websites, consulting and automation.</p>
+  </div>
+</section>
+
+<!-- 3. Split: one object beside the head from 980px -->
+<section class="page-head">
+  <div class="container page-head-split">
+    <div>
+      <p class="eyebrow">Pricing</p>
+      <h1><span class="l">Fixed prices,</span> <span class="l"><span class="mark">published</span> up front</span></h1>
+      <p class="lede">Every price here is fixed, for websites, consulting and automation alike. What you see is what you pay, confirmed in writing before any work begins.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary btn-lg" href="/contact/" data-booking>Book a free 30-minute call</a>
+        <a class="btn btn-lg" href="/contact/">Send an enquiry</a>
+      </div>
+      <a class="price-strip" href="#pricing">
+        <span class="price-strip-label">Websites</span>
+        <span class="price-strip-nums"><b>$1,000</b><b>$2,000</b><b>$4,000</b><b>$8,000</b></span>
+        <span class="price-strip-note">Four fixed packages</span>
+      </a>
+    </div>
+    <div class="page-head-aside wide-only"><!-- art:seal --><svg class="seal" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><defs><path id="sl-arc" d="M60 60m-42 0a42 42 0 1 1 84 0a42 42 0 1 1-84 0"/></defs><circle cx="60" cy="60" r="58" fill="var(--card)"/><circle cx="60" cy="60" r="54.5" fill="none" stroke="var(--brick)" stroke-width="2"/><circle cx="60" cy="60" r="31" fill="none" stroke="var(--brick)" stroke-width="1"/><text font-size="7.6"><textPath href="#sl-arc" textLength="258" lengthAdjust="spacing">PUBLISHED UP FRONT · CONFIRMED IN WRITING ·</textPath></text><text class="seal-big" font-size="15.5" x="60" y="58" text-anchor="middle">Fixed</text><text class="seal-big" font-size="15.5" x="60" y="74" text-anchor="middle">prices</text></svg><!-- /art:seal --></div>
+  </div>
+</section>
+</section>
+<section class="gal" data-comp="section-head">
+<div class="container"><p class="label gal-id">.section-head</p><h2 class="h3 gal-title" id="section-head">Section and section header</h2></div>
+<div class="container">
+<header class="section-head">
+  <p class="eyebrow">How automation works</p>
+  <h2>What happens when a customer calls and you can't pick up</h2>
+  <p class="section-sub">Follow one call from the missed ring to the review. Each step runs on its own, on accounts in your name.</p>
+</header>
+
+<header class="section-head section-head-split">
+  <div>
+    <p class="eyebrow">Selected work</p>
+    <h2>Recent projects</h2>
+  </div>
+  <p class="section-sub">Three live sites. Visit them and judge for yourself.</p>
+</header>
+
+<div class="grid grid-3">
+  <div class="card">One block</div><div class="card">under the header</div><div class="card">needs no class</div>
+</div>
+<div class="card space-above">A second block in the same section takes <code>space-above</code>.</div>
+<p class="section-more"><a class="more-link" href="/services/">All services<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a></p>
+</div>
+</section>
+<section class="gal" data-comp="buttons">
+<div class="container"><p class="label gal-id">.buttons</p><h2 class="h3 gal-title" id="buttons">Buttons and links</h2></div>
+<div class="container">
+<div class="btn-row">
+  <a class="btn btn-primary btn-lg" href="/contact/" data-booking>Book a free 30-minute call</a>
+  <a class="btn btn-lg" href="#how">See how it works</a>
+</div>
+<div class="btn-row">
+  <a class="btn btn-primary" href="/contact/?package=audit">Book a Growth Audit, $350</a>
+  <a class="btn" href="tel:+12252550837"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>Call (225) 255-0837</a>
+  <a class="btn btn-quiet" href="/contact/?package=starter">Questions first? Send an enquiry</a>
+</div>
+<div class="btn-row">
+  <a class="btn btn-primary btn-sm" href="/contact/" data-booking>Book a free call</a>
+  <a class="btn btn-sm" href="/pricing/">Request plan</a>
+  <button class="btn btn-primary" type="button" disabled>Sending…</button>
+</div>
+<p><a class="more-link" href="/consulting/">How each automation works, step by step<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a></p>
+</div>
+</section>
+<section class="gal" data-comp="tones">
+<div class="container"><p class="label gal-id">.tones</p><h2 class="h3 gal-title" id="tones">Tone scopes: on blue, on ink, on paper</h2></div>
+<div class="container">
+<div class="card stack on-blue">
+  <p class="eyebrow">On blue</p>
+  <h3>Still deciding? Book the free call.</h3>
+  <p>Thirty minutes, no pitch. <a href="/pricing/">See the prices</a> first if you like.</p>
+  <div class="btn-row">
+    <a class="btn btn-primary" href="/contact/" data-booking>Book a discovery call</a>
+    <a class="btn" href="/contact/">Send an enquiry</a>
+  </div>
+</div>
+
+<div class="grid grid-2">
+  <div class="card stack on-ink">
+    <p class="eyebrow">On ink</p>
+    <h3>The footer and the top strip</h3>
+    <p>Based in Baton Rouge, Louisiana. <a href="tel:+12252550837">(225) 255-0837</a></p>
+  </div>
+  <div class="card stack on-paper">
+    <p class="eyebrow">On paper</p>
+    <h3>A printed card</h3>
+    <p>Stays cream paper after dark. <a href="/pricing/">Links stay blue</a>.</p>
+  </div>
+</div>
+</div>
+</section>
+<section class="gal" data-comp="on-blue-all">
+<div class="container"><p class="label gal-id">.on-blue-all</p><h2 class="h3 gal-title" id="on-blue-all">Everything inside .on-blue</h2></div>
+<div class="container">
+<div class="panel on-blue stack">
+  <p class="eyebrow">On blue</p>
+  <h3>Every small part, on the painted sign</h3>
+  <p>Body copy, <strong>strong text</strong> and <a href="/pricing/">a link</a>. <span class="flag">Example</span> <span class="popular">Most popular</span> <span class="pill">Quote sent</span> <span class="pill pill-new">New</span> <span class="pill pill-go">Follow-up sent · 2 days</span></p>
+  <p class="tag">$750 or $1,500 per setup</p>
+  <ul class="ticks">
+    <li>Custom design, built for you</li>
+    <li>Built mobile-first</li>
+  </ul>
+  <ul class="pills" aria-label="Towns where we meet in person">
+    <li>Baton Rouge</li><li>Gonzales</li><li>Prairieville</li>
+  </ul>
+  <p class="note"><span class="flag">Example</span>These are example numbers to show the arithmetic, not a measurement of your business.</p>
+  <figure class="payplan" role="img" aria-label="The Launch bundle payment plan: $1,500 down, then $500 a month for 3 months">
+    <p class="label" aria-hidden="true">Payment plan</p>
+    <div class="payplan-bar" aria-hidden="true"><span class="payplan-seg payplan-dep" style="--w:50"><b>$1,500</b>down</span><span class="payplan-seg" style="--w:16.67"><b>$500</b>month 1</span><span class="payplan-seg" style="--w:16.67"><b>$500</b>month 2</span><span class="payplan-seg" style="--w:16.67"><b>$500</b>month 3</span></div>
+  </figure>
+  <div class="fig-art">
+    <ul class="thread" aria-hidden="true">
+      <li class="bubble bubble-biz"><b class="fig-n">1</b>Sorry we missed your call, this is [your business]. What can we help with?</li>
+      <li class="bubble bubble-cust">The kitchen sink is leaking under the cabinet.</li>
+    </ul>
+  </div>
+  <div class="browser">
+    <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>yourbusiness.com</span></div>
+  </div>
+  <div class="vig on-paper">
+    <span class="flag">Example</span>
+    <ul class="thread" aria-hidden="true">
+      <li class="thread-note thread-done"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Job marked done</li>
+      <li class="bubble bubble-biz">Thanks for choosing [your business].</li>
+    </ul>
+  </div>
+  <div class="btn-row">
+    <a class="btn btn-primary" href="/contact/" data-booking>Book a discovery call</a>
+    <a class="btn" href="/contact/">Send an enquiry</a>
+    <a class="btn btn-quiet" href="/pricing/">See the prices</a>
+  </div>
+</div>
+</div>
+</section>
+<section class="gal" data-comp="small-parts">
+<div class="container"><p class="label gal-id">.small-parts</p><h2 class="h3 gal-title" id="small-parts">Ticks, tags, pills, notes</h2></div>
+<div class="container">
+<ul class="ticks">
+  <li>Custom design, built for you</li>
+  <li>Copywriting support on Business and Commerce</li>
+  <li>Built mobile-first</li>
+</ul>
+
+<p class="tag">$750 or $1,500 per setup</p>
+
+<p class="cluster"><span class="pill">Quote sent</span> <span class="pill pill-new">New</span> <span class="pill pill-go">Follow-up sent · 2 days</span> <span class="flag">Example</span> <span class="popular">Most popular</span></p>
+
+<ul class="pills" aria-label="Towns where we meet in person">
+  <li>Baton Rouge</li><li>Gonzales</li><li>Prairieville</li><li>Denham Springs</li><li>Zachary</li><li>Central</li><li>Baker</li>
+</ul>
+
+<p class="note"><span class="flag">Example</span>These are example numbers to show the arithmetic, not a measurement of your business. An estimate, not a guarantee.</p>
+</div>
+</section>
+<section class="gal" data-comp="stamp">
+<div class="container"><p class="label gal-id">.stamp</p><h2 class="h3 gal-title" id="stamp">Stamp and seal</h2></div>
+<div class="container">
+<div class="cluster">
+  <p class="stamp" aria-hidden="true">You own<br>everything</p>
+  <!-- art:seal --><svg class="seal" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><defs><path id="sl-arc" d="M60 60m-42 0a42 42 0 1 1 84 0a42 42 0 1 1-84 0"/></defs><circle cx="60" cy="60" r="58" fill="var(--card)"/><circle cx="60" cy="60" r="54.5" fill="none" stroke="var(--brick)" stroke-width="2"/><circle cx="60" cy="60" r="31" fill="none" stroke="var(--brick)" stroke-width="1"/><text font-size="7.6"><textPath href="#sl-arc" textLength="258" lengthAdjust="spacing">PUBLISHED UP FRONT · CONFIRMED IN WRITING ·</textPath></text><text class="seal-big" font-size="15.5" x="60" y="58" text-anchor="middle">Fixed</text><text class="seal-big" font-size="15.5" x="60" y="74" text-anchor="middle">prices</text></svg><!-- /art:seal -->
+</div>
+</div>
+</section>
+<section class="gal" data-comp="layout">
+<div class="container"><p class="label gal-id">.layout</p><h2 class="h3 gal-title" id="layout">Card, grid, stack, cluster, split</h2></div>
+<div class="container">
+<div class="grid grid-3">
+  <article class="card stack">
+    <h3>Website design &amp; build</h3>
+    <p class="tag">$1,000, $2,000 or $4,000</p>
+    <p>A custom-designed marketing site built from scratch.</p>
+  </article>
+  <article class="card stack">
+    <h3>Automation</h3>
+    <p class="tag">$750 or $1,500 per setup</p>
+    <p>Missed calls get a text back, customers book themselves, quotes follow up on their own.</p>
+  </article>
+  <article class="card stack">
+    <h3>Growth consulting</h3>
+    <p class="tag">$350 audit · $500 or $1,000/mo</p>
+    <p>A clear plan for getting more customers online.</p>
+  </article>
+</div>
+</div>
+</section>
+<section class="gal" data-comp="panel">
+<div class="container"><p class="label gal-id">.panel</p><h2 class="h3 gal-title" id="panel">Panel and the bundle</h2></div>
+<div class="container">
+<aside class="panel on-blue split split-even space-above reveal" aria-labelledby="bundle-title">
+  <div class="stack">
+    <p class="eyebrow">Bundle</p>
+    <h3 class="title" id="bundle-title">Launch bundle</h3>
+    <p>Starter website, Google profile &amp; reviews and missed-call text-back. $3,250 bought separately.</p>
+    <figure class="payplan" role="img" aria-label="The Launch bundle payment plan: $1,500 down, then $500 a month for 3 months">
+      <p class="label" aria-hidden="true">Payment plan</p>
+      <div class="payplan-bar" aria-hidden="true"><span class="payplan-seg payplan-dep" style="--w:50"><b>$1,500</b>down</span><span class="payplan-seg" style="--w:16.67"><b>$500</b>month 1</span><span class="payplan-seg" style="--w:16.67"><b>$500</b>month 2</span><span class="payplan-seg" style="--w:16.67"><b>$500</b>month 3</span></div>
+    </figure>
+    <a class="btn btn-primary" href="/contact/?package=bundle">Ask about the bundle</a>
+  </div>
+  <div class="receipt on-paper">
+    <p class="receipt-head"><span>Launch bundle</span><span>Receipt</span></p>
+    <ul class="receipt-lines">
+      <li><span>Starter website</span><span class="dots" aria-hidden="true"></span><b>$2,000</b></li>
+      <li><span>Google profile &amp; reviews</span><span class="dots" aria-hidden="true"></span><b>$500</b></li>
+      <li><span>Missed-call text-back</span><span class="dots" aria-hidden="true"></span><b>$750</b></li>
+    </ul>
+    <p class="receipt-sum"><span>Bought separately</span><s>$3,250</s></p>
+    <p class="receipt-total"><span>Launch bundle</span><b>$3,000</b></p>
+    <p class="receipt-note">$1,500 down, then $500/mo for 3 months.</p>
+  </div>
+</aside>
+</div>
+</section>
+<section class="gal" data-comp="points">
+<div class="container"><p class="label gal-id">.points</p><h2 class="h3 gal-title" id="points">Facts shelf</h2></div>
+<div class="container">
+<ul class="points">
+  <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg><span>Websites live in as little as <span class="nowrap">7–10 days</span></span></li>
+  <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 0 1 13.7-5.7L20 8.5M20 12a8 8 0 0 1-13.7 5.7L4 15.5"/><path d="M20 4v4.5h-4.5M4 20v-4.5h4.5"/></svg><span>Automations that run while you work</span></li>
+  <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5V5a1.5 1.5 0 0 1 1.5-1.5h7.5L21 12l-8.5 8.5Z"/><circle cx="8" cy="8" r="1.5"/></svg><span>Fixed, published prices</span></li>
+  <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4.5"/><path d="m11.2 11.8 8.3-8.3M16 7l2.5 2.5M13.5 9.5 15 11"/></svg><span>You own everything</span></li>
+  <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Meet in person anywhere in Greater Baton Rouge</span></li>
+</ul>
+</div>
+</section>
+<section class="gal" data-comp="prose">
+<div class="container"><p class="label gal-id">.prose</p><h2 class="h3 gal-title" id="prose">Prose block</h2></div>
+<div class="container">
+<div class="prose">
+  <h2>Payment</h2>
+  <p>Standard is 50% to start and 50% at launch. Payment plans are available on all projects: 50% up front, then the rest in up to 3 equal monthly payments, the first due one month after the deposit.</p>
+  <ul>
+    <li>Pay by card or ACH bank transfer through Stripe.</li>
+    <li>Or by check on request.</li>
+  </ul>
+  <h3>Care plans</h3>
+  <p>No long-term contract or minimum term. Cancel or change with <a href="/terms/">10 days' written notice</a>, no fee.</p>
+</div>
+</div>
+</section>
+<section class="gal" data-comp="toc">
+<div class="container"><p class="label gal-id">.toc</p><h2 class="h3 gal-title" id="toc">"On this page" contents list</h2></div>
+<div class="container">
+<nav class="toc" aria-labelledby="toc-title">
+  <p class="label" id="toc-title">On this page</p>
+  <ol>
+    <li><a href="#packages"><span class="toc-name">Website packages</span><span class="dots" aria-hidden="true"></span><span class="toc-price">$1,000 · $2,000 · $4,000 · $8,000</span></a></li>
+    <li><a href="#payment"><span class="toc-name">How you pay</span><span class="dots" aria-hidden="true"></span><span class="toc-price">50% to start, 50% at launch</span></a></li>
+    <li><a href="#addons"><span class="toc-name">Add-ons</span><span class="dots" aria-hidden="true"></span><span class="toc-price">$750 or $1,500</span></a></li>
+    <li><a href="#consulting"><span class="toc-name">Consulting &amp; automation</span><span class="dots" aria-hidden="true"></span><span class="toc-price">$350 audit · $500 or $1,000 a month</span></a></li>
+    <li><a href="#care"><span class="toc-name">Care plans</span><span class="dots" aria-hidden="true"></span><span class="toc-price">$125, $300, $600 or $1,000 a month</span></a></li>
+  </ol>
+</nav>
+</div>
+</section>
+<section class="gal" data-comp="board">
+<div class="container"><p class="label gal-id">.board</p><h2 class="h3 gal-title" id="board">Price board</h2></div>
+<div class="container">
+<div class="board on-blue">
+  <header class="board-head">
+    <div>
+      <p class="eyebrow">Pricing</p>
+      <h2>Fixed prices, published up front</h2>
+    </div>
+    <p>What you see is what you pay.</p>
+  </header>
+  <ul class="board-tiers">
+    <li><a class="tier" href="/contact/?package=onepage">
+      <span class="tier-name">One-page</span>
+      <span class="tier-amt">$1,000</span>
+      <span class="tier-plan">Or $500 down, then about $167/mo for 3 months</span>
+      <span class="tier-note">One polished page: who you are, what you offer and how to reach you. Live in as little as 7 days.</span>
+    </a></li>
+    <li><a class="tier" href="/checkout/?plan=starter-deposit">
+      <span class="tier-name">Starter</span>
+      <span class="tier-amt">$2,000</span>
+      <span class="tier-plan">Or $1,000 down, then about $333/mo for 3 months</span>
+      <span class="tier-note">An information website: who you are, what you offer and how to reach you. Live in as little as 7–10 days.</span>
+    </a></li>
+    <li><a class="tier" href="/checkout/?plan=business-deposit">
+      <span class="tier-name">Business</span>
+      <span class="tier-amt">$4,000</span>
+      <span class="tier-plan">Or $2,000 down, then about $667/mo for 3 months</span>
+      <span class="tier-note">The full marketing site most growing businesses need. Live in 2–4 weeks.</span>
+    </a></li>
+    <li><a class="tier" href="/checkout/?plan=commerce-deposit">
+      <span class="tier-name">Commerce</span>
+      <span class="tier-amt">$8,000</span>
+      <span class="tier-plan">Or $4,000 down, then about $1,333/mo for 3 months</span>
+      <span class="tier-note">Sell online, with the operations side set up properly. Live in 4–6 weeks.</span>
+    </a></li>
+  </ul>
+  <dl class="board-extras">
+    <div><dt>Care plans, to keep a site running</dt><dd>$125, $300, $600 or $1,000 a month</dd></div>
+    <div><dt>Automation setups</dt><dd>$750 or $1,500</dd></div>
+    <div><dt>A Growth Audit</dt><dd>$350</dd></div>
+  </dl>
+  <p class="board-foot"><a class="btn btn-primary" href="/pricing/">Full pricing, consulting and care plans</a></p>
+</div>
+</div>
+</section>
+<section class="gal" data-comp="pricelist">
+<div class="container"><p class="label gal-id">.pricelist</p><h2 class="h3 gal-title" id="pricelist">Dot-leader price list</h2></div>
+<div class="container">
+<h3 class="pl-group">One-time setups</h3>
+<ul class="pricelist">
+  <li>
+    <div class="pl-row"><h4 class="pl-name">Google profile &amp; reviews</h4><span class="dots" aria-hidden="true"></span><span class="pl-price">$500</span></div>
+    <p>Profile completed, listings made consistent, review link, QR code and reply templates.</p>
+  </li>
+  <li>
+    <div class="pl-row"><h4 class="pl-name">Missed-call text-back</h4><span class="dots" aria-hidden="true"></span><span class="pl-price">$750</span></div>
+    <p>Every missed call gets a text back from your business number within a minute.</p>
+  </li>
+  <li>
+    <div class="pl-row"><h4 class="pl-name">Lead follow-up system</h4><span class="dots" aria-hidden="true"></span><span class="pl-price">$1,500</span></div>
+    <p>Every enquiry in one list, automatic follow-ups on quiet quotes, review requests after each job.</p>
+  </li>
+</ul>
+<h3 class="pl-group">By the month</h3>
+<ul class="pricelist">
+  <li>
+    <div class="pl-row"><h4 class="pl-name">Advisor plan</h4><span class="dots" aria-hidden="true"></span><span class="pl-price">$500/mo</span></div>
+    <p>Monthly strategy call, Google profile managed, review replies and a monthly report.</p>
+  </li>
+</ul>
+
+<ul class="pricelist">
+  <li>
+    <div class="pl-row"><h3 class="pl-name">Automation</h3><span class="dots" aria-hidden="true"></span><span class="pl-price">$750 or $1,500 per setup</span></div>
+    <p>The busywork, handled: missed calls texted back, bookings and reminders, quotes followed up and reviews requested, all on their own. In a typical example that's about 4 hours a week back.</p>
+    <ul class="ticks">
+      <li>Missed-call text-back or online booking, $750</li>
+      <li>Lead follow-up system, $1,500</li>
+      <li>Custom automation workflow, $1,500</li>
+    </ul>
+    <a class="more-link" href="/consulting/">How consulting and automation work<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a>
+  </li>
+</ul>
+</div>
+</section>
+<section class="gal" data-comp="spec">
+<div class="container"><p class="label gal-id">.spec</p><h2 class="h3 gal-title" id="spec">Tier spec table</h2></div>
+<div class="container">
+<table class="spec" role="table" aria-label="Website packages compared" style="--rows:9">
+  <thead role="rowgroup">
+    <tr role="row">
+      <th role="columnheader" scope="col"><span class="sr-only">Package</span></th>
+      <th role="columnheader" scope="col"><span class="sr-only">Price</span></th>
+      <th role="columnheader" scope="col">What it is</th>
+      <th role="columnheader" scope="col">Live in</th>
+      <th role="columnheader" scope="col">Size</th>
+      <th role="columnheader" scope="col">Design</th>
+      <th role="columnheader" scope="col">Included</th>
+      <th role="columnheader" scope="col">After launch</th>
+      <th role="columnheader" scope="col"><span class="sr-only">Start</span></th>
+    </tr>
+  </thead>
+  <tbody role="rowgroup">
+    <tr role="row">
+      <th role="rowheader" scope="row" class="spec-name">One-page</th>
+      <td role="cell" class="spec-price">$1,000 <small>Or $500 down, then about $167/mo for 3 months</small></td>
+      <td role="cell"><span class="cell-label" aria-hidden="true">What it is</span>One polished page: who you are, what you offer and how to reach you.</td>
+      <td role="cell"><span class="cell-label" aria-hidden="true">Live in</span>As little as 7 days</td>
+      <td role="cell"><span class="cell-label" aria-hidden="true">Size</span>1 page</td>
+      <td role="cell"><span class="cell-label" aria-hidden="true">Design</span>Custom design, 1 revision round</td>
+      <td role="cell"><span class="cell-label" aria-hidden="true">Included</span><ul><li>Copy editing and polish (you supply the text)</li><li>Contact form</li><li>Mobile &amp; SEO basics</li></ul></td>
+      <td role="cell"><span class="cell-label" aria-hidden="true">After launch</span>14 days support</td>
+      <td role="cell" class="spec-act"><a class="btn btn-block" href="/contact/?package=onepage">Start a one-page site</a><a class="btn btn-quiet" href="/contact/" data-booking>Or book the free call first</a></td>
+    </tr>
+    <tr role="row">
+      <th role="rowheader" scope="row" class="spec-name">Starter</th>
+      <td role="cell" class="spec-price">$2,000 <small>Or $1,000 down, then about $333/mo for 3 months</small></td>
+      <td role="cell"><span class="cell-label" aria-hidden="true">What it is</span>An information website: who you are, what you offer and how to reach you.</td>
+      <td role="cell"><span class="cell-label" aria-hidden="true">Live in</span>As little as <span class="nowrap">7–10 days</span></td>
+      <td role="cell"><span class="cell-label" aria-hidden="true">Size</span>Up to 5 pages</td>
+      <td role="cell"><span class="cell-label" aria-hidden="true">Design</span>Custom design, 1 revision round</td>
+      <td role="cell"><span class="cell-label" aria-hidden="true">Included</span><ul><li>Copy editing and polish (you supply the text)</li><li>Contact form</li><li>Mobile &amp; SEO basics</li></ul></td>
+      <td role="cell"><span class="cell-label" aria-hidden="true">After launch</span>30 days support</td>
+      <td role="cell" class="spec-act"><a class="btn btn-block" href="/checkout/?plan=starter-deposit">Pay 50% deposit —&nbsp;$1,000</a><a class="btn btn-quiet" href="/contact/?package=starter">Questions first? Send an enquiry</a></td>
+    </tr>
+    <tr role="row" class="is-popular">
+      <th role="rowheader" scope="row" class="spec-name">Business <span class="popular">Most popular</span></th>
+      <td role="cell" class="spec-price">$4,000 <small>Or $2,000 down, then about $667/mo for 3 months</small></td>
+      <td role="cell"><span class="cell-label" aria-hidden="true">What it is</span>The full marketing site most growing businesses need.</td>
+      <td role="cell"><span class="cell-label" aria-hidden="true">Live in</span>2–4 weeks</td>
+      <td role="cell"><span class="cell-label" aria-hidden="true">Size</span>Up to 10 pages</td>
+      <td role="cell"><span class="cell-label" aria-hidden="true">Design</span>Up to 3 design rounds, plus a final tweaks round</td>
+      <td role="cell"><span class="cell-label" aria-hidden="true">Included</span><ul><li>Copywriting: we draft, you edit</li><li>Blog or news section</li><li>Analytics &amp; tracking setup</li><li>Local SEO configuration</li></ul></td>
+      <td role="cell"><span class="cell-label" aria-hidden="true">After launch</span>90 days support</td>
+      <td role="cell" class="spec-act"><a class="btn btn-primary btn-block" href="/checkout/?plan=business-deposit">Pay 50% deposit —&nbsp;$2,000</a><a class="btn btn-quiet" href="/contact/?package=business">Questions first? Send an enquiry</a></td>
+    </tr>
+    <tr role="row">
+      <th role="rowheader" scope="row" class="spec-name">Commerce</th>
+      <td role="cell" class="spec-price">$8,000 <small>Or $4,000 down, then about $1,333/mo for 3 months</small></td>
+      <td role="cell"><span class="cell-label" aria-hidden="true">What it is</span>Sell online, with the operations side set up properly.</td>
+      <td role="cell"><span class="cell-label" aria-hidden="true">Live in</span>4–6 weeks</td>
+      <td role="cell"><span class="cell-label" aria-hidden="true">Size</span>Full store build</td>
+      <td role="cell"><span class="cell-label" aria-hidden="true">Design</span>Up to 3 design rounds, plus a final tweaks round</td>
+      <td role="cell"><span class="cell-label" aria-hidden="true">Included</span><ul><li>Payments, shipping &amp; tax</li><li>Product import</li><li>Email &amp; abandoned cart flows</li><li>Team training session</li></ul></td>
+      <td role="cell"><span class="cell-label" aria-hidden="true">After launch</span>6 months support</td>
+      <td role="cell" class="spec-act"><a class="btn btn-block" href="/checkout/?plan=commerce-deposit">Pay 50% deposit —&nbsp;$4,000</a><a class="btn btn-quiet" href="/contact/?package=commerce">Questions first? Send an enquiry</a></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</section>
+<section class="gal" data-comp="table">
+<div class="container"><p class="label gal-id">.table</p><h2 class="h3 gal-title" id="table">Data table</h2></div>
+<div class="container">
+<table class="table table-stack" role="table">
+  <caption>Care plans, by the month</caption>
+  <thead role="rowgroup">
+    <tr role="row"><th role="columnheader" scope="col">Plan</th><th role="columnheader" scope="col">Fits</th><th role="columnheader" scope="col">What you get</th><th role="columnheader" scope="col" class="num">Price</th><th role="columnheader" scope="col"><span class="sr-only">Start</span></th></tr>
+  </thead>
+  <tbody role="rowgroup">
+    <tr role="row">
+      <th role="rowheader" scope="row">Basic</th>
+      <td role="cell"><span class="cell-label" aria-hidden="true">Fits</span>One-page and Starter sites</td>
+      <td role="cell"><span class="cell-label" aria-hidden="true">What you get</span><ul><li>1 small change a month, made within 5 business days</li><li>You keep your own domain and hosting renewals current</li></ul></td>
+      <td role="cell" class="num">$125<small>/mo</small></td>
+      <td role="cell"><a class="btn btn-sm" href="/contact/?package=care" aria-label="Request the Basic care plan">Request plan</a></td>
+    </tr>
+    <tr role="row">
+      <th role="rowheader" scope="row">Essential</th>
+      <td role="cell"><span class="cell-label" aria-hidden="true">Fits</span>Brochure and marketing sites</td>
+      <td role="cell"><span class="cell-label" aria-hidden="true">What you get</span><ul><li>Changes made within 4 business days, up to 2 requests a month</li><li>You keep your own domain and hosting renewals current</li></ul></td>
+      <td role="cell" class="num">$300<small>/mo</small></td>
+      <td role="cell"><a class="btn btn-sm" href="/checkout/?plan=essential-care" aria-label="Start the Essential care plan">Start plan</a></td>
+    </tr>
+    <tr role="row">
+      <th role="rowheader" scope="row">Growth</th>
+      <td role="cell"><span class="cell-label" aria-hidden="true">Fits</span>Sites with booking or lead flows</td>
+      <td role="cell"><span class="cell-label" aria-hidden="true">What you get</span><ul><li>Changes made within 2 business days, up to 5 requests a month</li><li>Your Netlify hosting, SSL and IONOS domain renewals looked after (domain and hosting costs billed at cost on top)</li></ul></td>
+      <td role="cell" class="num">$600<small>/mo</small></td>
+      <td role="cell"><a class="btn btn-sm" href="/checkout/?plan=growth-care" aria-label="Start the Growth care plan">Start plan</a></td>
+    </tr>
+    <tr role="row">
+      <th role="rowheader" scope="row">Commerce</th>
+      <td role="cell"><span class="cell-label" aria-hidden="true">Fits</span>Stores and integrations</td>
+      <td role="cell"><span class="cell-label" aria-hidden="true">What you get</span><ul><li>Same-day response for urgent issues, unlimited small requests and a direct text line</li><li>Your Netlify hosting, SSL and IONOS domain renewals looked after (domain and hosting costs billed at cost on top)</li></ul></td>
+      <td role="cell" class="num">$1,000<small>/mo</small></td>
+      <td role="cell"><a class="btn btn-sm" href="/checkout/?plan=commerce-care" aria-label="Start the Commerce care plan">Start plan</a></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</section>
+<section class="gal" data-comp="ledger">
+<div class="container"><p class="label gal-id">.ledger</p><h2 class="h3 gal-title" id="ledger">Ledger on a time sheet, with the large figure</h2></div>
+<div class="container">
+<div class="split split-even">
+  <aside class="bigfig">
+    <p class="bigfig-num">About <b>200</b> hours a year, in this example</p>
+    <p class="note"><span class="flag">Example</span>These are example numbers to show the arithmetic, not a measurement of your business. An estimate, not a guarantee.</p>
+  </aside>
+  <div class="sheet">
+    <table class="ledger" role="table">
+      <caption>An example week for a small service business</caption>
+      <thead role="rowgroup">
+        <tr role="row"><th role="columnheader" scope="col">Done by hand</th><th role="columnheader" scope="col">Example</th><th role="columnheader" scope="col"><span class="sr-only">Share of the week</span></th><th role="columnheader" scope="col" class="num">Time a week</th></tr>
+      </thead>
+      <tbody role="rowgroup">
+        <tr role="row"><th role="rowheader" scope="row">Returning missed calls and voicemails</th><td role="cell">5 calls × 6 minutes</td><td role="cell" class="ledger-bar"><span aria-hidden="true" style="--v:.375"></span></td><td role="cell" class="num">30 min</td></tr>
+        <tr role="row"><th role="rowheader" scope="row">Booking appointments by phone and text</th><td role="cell">10 bookings × 8 minutes</td><td role="cell" class="ledger-bar"><span aria-hidden="true" style="--v:1"></span></td><td role="cell" class="num">80 min</td></tr>
+        <tr role="row"><th role="rowheader" scope="row">Chasing quotes that went quiet</th><td role="cell">8 quotes × 7 minutes</td><td role="cell" class="ledger-bar"><span aria-hidden="true" style="--v:.7"></span></td><td role="cell" class="num">56 min</td></tr>
+        <tr role="row"><th role="rowheader" scope="row">Copying enquiries into a list or notebook</th><td role="cell">15 enquiries × 3 minutes</td><td role="cell" class="ledger-bar"><span aria-hidden="true" style="--v:.5625"></span></td><td role="cell" class="num">45 min</td></tr>
+        <tr role="row"><th role="rowheader" scope="row">Asking for reviews</th><td role="cell">6 jobs × 4 minutes</td><td role="cell" class="ledger-bar"><span aria-hidden="true" style="--v:.3"></span></td><td role="cell" class="num">24 min</td></tr>
+      </tbody>
+      <tfoot role="rowgroup">
+        <tr role="row"><th role="rowheader" scope="row">Total</th><td role="cell" colspan="3" class="num">235 min, about 4 hours</td></tr>
+      </tfoot>
+    </table>
+  </div>
+</div>
+</div>
+</section>
+<section class="gal" data-comp="receipt">
+<div class="container"><p class="label gal-id">.receipt</p><h2 class="h3 gal-title" id="receipt">Itemised receipt and checkout summary</h2></div>
+<div class="container">
+<div class="cluster">
+  <div class="receipt">
+    <p class="receipt-head"><span>Launch bundle</span><span>Receipt</span></p>
+    <ul class="receipt-lines">
+      <li><span>Starter website</span><span class="dots" aria-hidden="true"></span><b>$2,000</b></li>
+      <li><span>Google profile &amp; reviews</span><span class="dots" aria-hidden="true"></span><b>$500</b></li>
+      <li><span>Missed-call text-back</span><span class="dots" aria-hidden="true"></span><b>$750</b></li>
+    </ul>
+    <p class="receipt-sum"><span>Bought separately</span><s>$3,250</s></p>
+    <p class="receipt-total"><span>Launch bundle</span><b>$3,000</b></p>
+    <p class="receipt-note">$1,500 down, then $500/mo for 3 months.</p>
+  </div>
+
+  <div class="receipt">
+    <p class="receipt-head"><span>Your order</span><span>KnightWebstudio</span></p>
+    <p class="receipt-total"><span>Starter website — 50% deposit</span><b>$1,000</b></p>
+  </div>
+</div>
+<p class="status" role="status">Loading secure checkout…</p>
+</div>
+</section>
+<section class="gal" data-comp="payplan">
+<div class="container"><p class="label gal-id">.payplan</p><h2 class="h3 gal-title" id="payplan">Payment plan drawn to scale</h2></div>
+<div class="container">
+<figure class="payplan card" role="img" aria-label="Two ways to pay for a Starter site: half to start and half at launch, or $1,000 down and then about $333 a month for 3 months">
+  <p class="label" aria-hidden="true">Standard</p>
+  <div class="payplan-bar" aria-hidden="true">
+    <span class="payplan-seg payplan-dep" style="--w:50"><b>50%</b>to start</span>
+    <span class="payplan-seg" style="--w:50"><b>50%</b>at launch</span>
+  </div>
+  <p class="label" aria-hidden="true">Payment plan, shown on Starter</p>
+  <div class="payplan-bar" aria-hidden="true">
+    <span class="payplan-seg payplan-dep" style="--w:50"><b>$1,000</b>down</span>
+    <span class="payplan-seg" style="--w:16.67"><b>$333</b>month 1</span>
+    <span class="payplan-seg" style="--w:16.67"><b>$333</b>month 2</span>
+    <span class="payplan-seg" style="--w:16.67"><b>$333</b>month 3</span>
+  </div>
+  <p class="fine" aria-hidden="true">Monthly amounts are rounded: about $333 a month.</p>
+</figure>
+</div>
+</section>
+<section class="gal" data-comp="calc">
+<div class="container"><p class="label gal-id">.calc</p><h2 class="h3 gal-title" id="calc">Calculator</h2></div>
+<div data-page="consulting">
+<div class="container">
+<form class="calc panel" id="growth-calc" novalidate onsubmit="return false">
+  <div class="calc-inputs">
+    <fieldset class="calc-group">
+      <legend class="label">Your business</legend>
+      <div class="field">
+        <label for="c-job">Average value of a new job or customer ($)</label>
+        <div class="field-unit"><span aria-hidden="true">$</span><input type="number" id="c-job" inputmode="decimal" min="0" step="1" value="400"></div>
+      </div>
+      <div class="field">
+        <label for="c-rate">What an hour of your time is worth ($)</label>
+        <div class="field-unit"><span aria-hidden="true">$</span><input type="number" id="c-rate" inputmode="decimal" min="0" step="1" value="50"></div>
+      </div>
+    </fieldset>
+    <fieldset class="calc-group">
+      <legend class="label">Missed calls</legend>
+      <div class="field">
+        <label for="c-calls">Calls you miss in a typical week</label>
+        <input type="number" id="c-calls" inputmode="decimal" min="0" step="1" value="5">
+      </div>
+      <div class="field">
+        <label for="c-callwin">Share of those callers an instant text would win back (%)</label>
+        <div class="field-unit"><input type="number" id="c-callwin" inputmode="decimal" min="0" max="100" step="1" value="20"><span aria-hidden="true">%</span></div>
+      </div>
+    </fieldset>
+    <fieldset class="calc-group">
+      <legend class="label">Follow-up</legend>
+      <div class="field">
+        <label for="c-quotes">Quotes or enquiries that go cold each month</label>
+        <input type="number" id="c-quotes" inputmode="decimal" min="0" step="1" value="4">
+      </div>
+      <div class="field">
+        <label for="c-quotewin">Share of those a timely follow-up would win (%)</label>
+        <div class="field-unit"><input type="number" id="c-quotewin" inputmode="decimal" min="0" max="100" step="1" value="25"><span aria-hidden="true">%</span></div>
+      </div>
+    </fieldset>
+    <fieldset class="calc-group">
+      <legend class="label">Your time</legend>
+      <div class="field">
+        <label for="c-hours">Hours a week on callbacks, booking, chasing, email and invoices</label>
+        <input type="number" id="c-hours" inputmode="decimal" min="0" step="0.5" value="5">
+      </div>
+      <div class="field">
+        <label for="c-auto">Share of that time automation takes over (%)</label>
+        <div class="field-unit"><input type="number" id="c-auto" inputmode="decimal" min="0" max="100" step="1" value="50"><span aria-hidden="true">%</span></div>
+      </div>
+    </fieldset>
+  </div>
+
+  <div class="receipt" aria-live="polite">
+    <p class="receipt-head"><span>Your estimate</span><span>Your numbers</span></p>
+    <p class="receipt-total"><span>Estimated extra revenue</span><b><span id="r-month">$2,133</span><small>/month</small></b></p>
+    <p class="note"><span class="flag">Estimate</span>An estimate from the numbers you enter, not a promise or a guarantee of results. Real results depend on your market, your prices and how quickly you answer the leads it brings in. Software and texting fees are paid to the provider and are extra.</p>
+    <p class="receipt-note"><span id="r-year">$25,600</span> a year, from about <span id="r-jobs">5.3</span> extra jobs a month</p>
+    <ul class="receipt-lines">
+      <li><span>From missed calls won back</span><span class="dots" aria-hidden="true"></span><b id="r-calls">$1,733/mo</b></li>
+      <li><span>From quotes followed up</span><span class="dots" aria-hidden="true"></span><b id="r-quotes">$400/mo</b></li>
+      <li><span>Time back</span><span class="dots" aria-hidden="true"></span><b id="r-hours">11 hours/mo</b></li>
+      <li><span>Value of that time</span><span class="dots" aria-hidden="true"></span><b id="r-timeval">$6,500/yr</b></li>
+    </ul>
+    <p class="receipt-note" id="r-payback">At these numbers, the $750 missed-call setup would pay for itself in about 2 weeks.</p>
+    <a class="btn btn-primary btn-block" href="/contact/?package=audit">Check my real numbers in a Growth Audit</a>
+  </div>
+</form>
+</div>
+</div>
+</section>
+<section class="gal" data-comp="ticket">
+<div class="container"><p class="label gal-id">.ticket</p><h2 class="h3 gal-title" id="ticket">Step list and job ticket</h2></div>
+<div class="container">
+<ol class="steps">
+  <li>
+    <span class="steps-no" aria-hidden="true">01</span>
+    <div><h3>Free check</h3>
+    <p>We look at your website, Google profile and reviews, and email you the top three fixes.</p></div>
+  </li>
+  <li>
+    <span class="steps-no" aria-hidden="true">02</span>
+    <div><h3>Growth Audit</h3>
+    <p>A 60-minute session and a written plan, ranked by impact, with a fixed price on each step.</p></div>
+  </li>
+  <li>
+    <span class="steps-no" aria-hidden="true">03</span>
+    <div><h3>Setup</h3>
+    <p>We build what you choose on your own accounts and test it with you. Most setups are live within 2 weeks.</p></div>
+  </li>
+</ol>
+
+<div class="ticket">
+  <p class="ticket-head" aria-hidden="true"><span>Job ticket</span><span>KnightWebstudio</span></p>
+  <ol class="steps">
+    <li>
+      <span class="steps-no" aria-hidden="true">01</span>
+      <div><h3>Discovery call</h3>
+      <p>A free 30-minute call about your business and what the site needs to achieve.</p></div>
+    </li>
+    <li>
+      <span class="steps-no" aria-hidden="true">02</span>
+      <div><h3>Proposal &amp; design</h3>
+      <p>A fixed quote and timeline, then design concepts you sign off before any build starts.</p></div>
+    </li>
+    <li>
+      <span class="steps-no" aria-hidden="true">03</span>
+      <div><h3>Build &amp; review</h3>
+      <p>Built on a private staging link you can check any time, with weekly progress notes.</p></div>
+    </li>
+  </ol>
+  <p class="stamp" aria-hidden="true">You own<br>everything</p>
+</div>
+</div>
+</section>
+<section class="gal" data-comp="cards">
+<div class="container"><p class="label gal-id">.cards</p><h2 class="h3 gal-title" id="cards">Appointment card, business card, booking box</h2></div>
+<div class="container">
+<div class="cluster">
+  <div class="appt on-paper" aria-hidden="true">
+    <p class="appt-head"><span>Appointment card</span><span>No. 01</span></p>
+    <p class="appt-title">Discovery call</p>
+    <dl class="appt-lines">
+      <div><dt>Cost</dt><dd>Free</dd></div>
+      <div><dt>Length</dt><dd>30 minutes</dd></div>
+      <div><dt>Sales pitch</dt><dd>None</dd></div>
+      <div><dt>Where</dt><dd>A call, or in person</dd></div>
+    </dl>
+  </div>
+
+  <div class="bizcard tilt">
+    <div class="bizcard-top">
+      <!-- art:crest-card --><svg class="crest" viewBox="0 0 120 120" aria-hidden="true" style="--t1:#DCE3FF;--t2:#B9C7FF;--t3:#8FA5FF;--t4:#5C77EC;--t5:#2C46C4;--ink:#161B2C;--accent:#F0C369;--rim:#2C46C4;--rim2:#B9C7FF;--glow:#8FA5FF;--field1:#24306A;--field2:#161B2C;--ribbon:#1B2C84;--ribbon2:#14205E;--steel1:#FBF5E6;--steel2:#CFC7B4;--steel3:#8E8A80;--letter:#FFFBF2"><defs><linearGradient id="cc-fld" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--field1)"/><stop offset="1" stop-color="var(--field2)"/></linearGradient><radialGradient id="cc-glow" cx=".5" cy=".42" r=".5"><stop offset="0" stop-color="var(--glow)" stop-opacity=".35"/><stop offset="1" stop-color="var(--glow)" stop-opacity="0"/></radialGradient><linearGradient id="cc-gl" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".5"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="cc-in"><path d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z"/></clipPath><clipPath id="cc-out"><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z"/></clipPath></defs><g class="a-rim"><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z" fill="var(--rim)"/><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z" fill="none" stroke="var(--rim2)" stroke-opacity=".55" stroke-width="1.2"/><path class="a-field" d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z" fill="url(#cc-fld)"/></g><g clip-path="url(#cc-in)"><circle class="a-field" cx="60" cy="50" r="42" fill="url(#cc-glow)"/><g transform="translate(22 22) scale(.86)" stroke-linejoin="round"><polygon class="facet" style="--i:0;--dx:-8.0px;--dy:-6.4px" fill="var(--t2)" points="54,4 61,15 46,12"/><polygon class="facet" style="--i:1;--dx:-1.6px;--dy:6.4px" fill="var(--t1)" points="54,4 46,12 50,9"/><polygon class="facet" style="--i:2;--dx:4.8px;--dy:4.8px" fill="var(--t3)" points="37,15 46,12 61,15 63,24 35,29"/><polygon class="facet" style="--i:3;--dx:-6.4px;--dy:3.2px" fill="var(--t1)" points="37,15 24,27 35,29"/><polygon class="facet" style="--i:4;--dx:0.0px;--dy:1.6px" fill="var(--t2)" points="24,27 13,41 24,46 35,29"/><polygon class="facet" style="--i:5;--dx:6.4px;--dy:0.0px" fill="var(--t1)" points="13,41 8,49 12,56 23,58 24,46"/><polygon class="facet" style="--i:6;--dx:-4.8px;--dy:-1.6px" fill="var(--t3)" points="35,29 24,46 50,37"/><polygon class="facet" style="--i:7;--dx:1.6px;--dy:-3.2px" fill="var(--t4)" points="35,29 50,37 63,24"/><polygon class="facet" style="--i:8;--dx:8.0px;--dy:-4.8px" fill="var(--t4)" points="24,46 23,58 42,54 50,37"/><polygon class="facet" style="--i:9;--dx:-3.2px;--dy:-6.4px" fill="var(--t3)" points="50,37 42,54 38,63 63,63 65,43"/><polygon class="facet" style="--i:10;--dx:3.2px;--dy:6.4px" fill="var(--t4)" points="50,37 65,43 63,24"/><polygon class="facet" style="--i:11;--dx:-8.0px;--dy:4.8px" fill="var(--t3)" points="38,63 31,80 26,112 53,112 63,63"/><polygon class="facet" style="--i:12;--dx:-1.6px;--dy:3.2px" fill="var(--t4)" points="63,63 53,112 78,112 72,80"/><polygon class="facet" style="--i:13;--dx:4.8px;--dy:1.6px" fill="var(--t5)" points="61,15 67,16 72,22 69,26 77,32 73,36 79,44 74,48 79,57 73,61 76,70 72,80 63,63 65,43 63,24"/><path class="eye" d="M30 27Q35 24 40 27Q35 30 30 27Z" fill="var(--ink)"/><path d="M12 46L16 45" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round"/></g></g><path class="a-line" pathLength="1" d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z" fill="none" stroke="var(--accent)" stroke-opacity=".9" stroke-width="1"/><circle class="rivet" style="--i:0" cx="24" cy="20" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:1" cx="42" cy="15.5" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:2" cx="60" cy="11" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:3" cx="78" cy="15.5" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:4" cx="96" cy="20" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:5" cx="100" cy="44" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:6" cx="20" cy="44" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:7" cx="94" cy="76" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:8" cx="26" cy="76" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:9" cx="79" cy="97" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:10" cx="41" cy="97" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><g clip-path="url(#cc-out)"><g transform="rotate(20 60 60)"><rect class="a-glint" x="-60" y="-30" width="16" height="180" fill="url(#cc-gl)"/></g></g></svg><!-- /art:crest-card -->
+      <p><b>KnightWebstudio</b><span>Websites · Automation · Consulting</span></p>
+    </div>
+    <p class="bizcard-name">Christian Knight<span>Founder</span></p>
+    <ul class="bizcard-lines">
+      <li><a href="tel:+12252550837"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>(225) 255-0837</a></li>
+      <li><a href="mailto:knightwebstudio1@gmail.com"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>knightwebstudio1@gmail.com</a></li>
+      <li><span><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Baton Rouge, Louisiana</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="card stack booking-only" hidden>
+  <h2 class="h4">Rather talk it through first?</h2>
+  <p>Skip the form and pick a time.</p>
+  <a class="btn" href="/contact/" data-booking>Book a 30-minute call</a>
+</div>
+</div>
+</section>
+<section class="gal" data-comp="fig">
+<div class="container"><p class="label gal-id">.fig</p><h2 class="h3 gal-title" id="fig">Figure with a numbered legend: the phone</h2></div>
+<div class="container">
+<figure class="fig">
+  <div class="fig-art">
+    <div class="phone">
+      <p class="phone-label">Example: what your caller sees</p>
+      <div class="phone-frame">
+        <div class="phone-bar">
+          <span class="phone-avatar" aria-hidden="true"></span>
+          <span class="phone-who">[your business]<small>Text message</small></span>
+        </div>
+        <ul class="thread">
+          <li class="thread-note thread-missed"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/><path d="m15 4 5 5m0-5-5 5"/></svg>Missed call</li>
+          <li class="bubble bubble-biz"><b class="fig-n">1</b>Sorry we missed your call, this is [your business]. What can we help with?</li>
+          <li class="thread-note">Sent on its own, within a minute</li>
+          <li class="bubble bubble-cust"><b class="fig-n">2</b>The kitchen sink is leaking under the cabinet. Can someone take a look this week?</li>
+          <li class="bubble bubble-cust bubble-typing"><span class="sr-only">The caller is typing</span><i></i><i></i><i></i></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <figcaption>
+    <ol class="fig-legend">
+      <li>The caller gets a text from your business number within a minute.</li>
+      <li>Their reply lands on your phone, so you call back knowing the job.</li>
+    </ol>
+    <p class="fig-credit">Missed-call text-back, $750 to set up. An illustration, not a real conversation.</p>
+  </figcaption>
+</figure>
+
+<figure class="fig">
+  <div class="fig-art">
+    <div class="cal" role="img" aria-label="Example week on a calendar: a new online booking drops into a free slot on Thursday">
+      <p class="cal-head"><b>Your calendar</b><span>This week</span></p>
+      <div class="cal-grid" aria-hidden="true">
+        <div class="cal-day"><span>Mon</span><i class="busy"></i><i class="busy"></i><i></i><i class="busy"></i></div>
+        <div class="cal-day"><span>Tue</span><i class="busy"></i><i></i><i class="busy"></i><i class="busy"></i></div>
+        <div class="cal-day"><span>Wed</span><i></i><i class="busy"></i><i class="busy"></i><i></i></div>
+        <div class="cal-day cal-today"><span>Thu</span><i class="busy"></i><i class="new"><b class="fig-n">1</b>Booked online</i><i></i><i class="busy"></i></div>
+        <div class="cal-day"><span>Fri</span><i class="busy"></i><i class="busy"></i><i></i><i></i></div>
+      </div>
+      <ul class="cal-log" aria-hidden="true">
+        <li><b class="fig-n">2</b>Confirmation sent</li>
+        <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Reminder set for the day before</li>
+      </ul>
+    </div>
+  </div>
+  <figcaption>
+    <ol class="fig-legend">
+      <li>A customer picks a time on your website or Google profile, day or night. It goes straight onto your calendar, with no double bookings.</li>
+      <li>They get a confirmation right away and a reminder the day before.</li>
+    </ol>
+    <p class="fig-credit">Online booking &amp; reminders, $750 to set up. An illustration, not a real booking.</p>
+  </figcaption>
+</figure>
+</div>
+</section>
+<section class="gal" data-comp="browser">
+<div class="container"><p class="label gal-id">.browser</p><h2 class="h3 gal-title" id="browser">Browser mock, vignette, and what goes in one</h2></div>
+<div class="container">
+<div class="grid grid-2">
+  <div class="browser">
+    <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>smilyssoftwash.com</span></div>
+    <img src="/assets/img/work-smilyssoftwash.jpg" alt="Smilys Softwash — before and after of a soft-washed roof and house exterior" width="1200" height="600" loading="lazy" decoding="async">
+  </div>
+  <div class="vig">
+    <span class="flag">Example</span>
+    <ul class="thread">
+      <li class="thread-note thread-done"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Job marked done</li>
+      <li class="bubble bubble-biz">Thanks for choosing [your business]. If you have a minute, a Google review would mean a lot to us.</li>
+      <li class="thread-note">Sent on its own</li>
+    </ul>
+  </div>
+</div>
+
+<div class="grid grid-3">
+  <div class="vig">
+    <span class="flag">Example</span>
+    <div class="notice" role="img" aria-label="Example notification on your phone: a new reply from a missed caller, with their number saved">
+      <p class="notice-top" aria-hidden="true">Your phone<span class="notice-when">now</span></p>
+      <p class="notice-title" aria-hidden="true">New reply from a missed caller</p>
+      <p class="notice-body" aria-hidden="true">“The kitchen sink is leaking under the cabinet…”</p>
+      <p class="notice-meta" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Number saved</p>
+    </div>
+  </div>
+  <div class="vig">
+    <span class="flag">Example</span>
+    <div class="cal" role="img" aria-label="Example week on a calendar: a new online booking drops into a free slot on Thursday">
+      <p class="cal-head"><b>Your calendar</b><span>This week</span></p>
+      <div class="cal-grid" aria-hidden="true">
+        <div class="cal-day"><span>Mon</span><i class="busy"></i><i class="busy"></i><i></i><i class="busy"></i></div>
+        <div class="cal-day"><span>Tue</span><i class="busy"></i><i></i><i class="busy"></i><i class="busy"></i></div>
+        <div class="cal-day"><span>Wed</span><i></i><i class="busy"></i><i class="busy"></i><i></i></div>
+        <div class="cal-day cal-today"><span>Thu</span><i class="busy"></i><i class="new">Booked online</i><i></i><i class="busy"></i></div>
+        <div class="cal-day"><span>Fri</span><i class="busy"></i><i class="busy"></i><i></i><i></i></div>
+      </div>
+      <ul class="cal-log" aria-hidden="true">
+        <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Confirmation sent</li>
+        <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Reminder set for the day before</li>
+      </ul>
+    </div>
+  </div>
+  <div class="vig">
+    <span class="flag">Example</span>
+    <div class="leads" role="img" aria-label="Example list of enquiries from a website form, a missed call and Google, each showing whether a follow-up has gone out">
+      <p class="cal-head"><b>Enquiries</b><span>One list</span></p>
+      <ul aria-hidden="true">
+        <li><span class="lead-src">Website form</span><span class="lead-what">New roof estimate</span><span class="pill pill-new">New</span></li>
+        <li><span class="lead-src">Missed call</span><span class="lead-what">Leaking kitchen sink</span><span class="pill">Quote sent</span></li>
+        <li><span class="lead-src">Google</span><span class="lead-what">Fence repair quote</span><span class="pill pill-go">Follow-up sent · 2 days</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+<section class="gal" data-comp="scene">
+<div class="container"><p class="label gal-id">.scene</p><h2 class="h3 gal-title" id="scene">The street scene</h2></div>
+<div class="container">
+<div class="page-head-aside">
+  <!-- art:scene-street --><svg class="scene scene-street" viewBox="0 0 600 640" role="img" aria-labelledby="st-title" style="--il-sky-1:var(--L,#D5E0F6) var(--D,#101632);--il-sky-2:var(--L,#F5EEDD) var(--D,#27305A);--il-sun:var(--L,#F6D88E) var(--D,#F3ECDD);--il-cloud:var(--L,#FFFDF6) var(--D,#2B355E);--il-star:var(--L,transparent) var(--D,#F3ECDD);--il-far:var(--L,#C5CCE0) var(--D,#2C3768);--il-brick:var(--L,#BC5B3E) var(--D,#7A3F30);--il-brick-2:var(--L,#9C4630) var(--D,#5C2D22);--il-trim:var(--L,#FBF5E6) var(--D,#C9C1AE);--il-shutter:var(--L,#33446F) var(--D,#1F2947);--il-glass:var(--L,#BFD0EC) var(--D,#232D4E);--il-glass-2:var(--L,#D6E1F4) var(--D,#F3C66B);--il-awn-1:var(--L,#2C46C4) var(--D,#4660DA);--il-awn-2:var(--L,#FBF5E6) var(--D,#CFC7B4);--il-sign:var(--L,#2C46C4) var(--D,#24389F);--il-ink:var(--L,#1A2238) var(--D,#080A12);--il-walk:var(--L,#E3D8C2) var(--D,#2B3145);--il-walk-2:var(--L,#CFC2A8) var(--D,#20263A);--il-road:var(--L,#BFB6A4) var(--D,#171B29);--il-hub:var(--L,#D9CFBB) var(--D,#8E8A80);--il-van:var(--L,#FBF5E6) var(--D,#C9C1AE);--il-van-2:var(--L,#E4DAC6) var(--D,#A8A190);--il-leaf:var(--L,#5F8160) var(--D,#33503F);--il-leaf-2:var(--L,#7C9B79) var(--D,#436650);--il-gold:var(--L,#E9B44C) var(--D,#F3C66B);--il-lamp:var(--L,#FBF5E6) var(--D,#F7D98C);--il-night:var(--L,0) var(--D,1)"><title id="st-title">Drawing of a brick shop front with a striped awning on a Baton Rouge street. A work van is parked outside, and the State Capitol tower and the river bridge sit on the horizon.</title><defs><clipPath id="st-arch"><path d="M0 300A300 300 0 0 1 600 300V612A28 28 0 0 1 572 640H28A28 28 0 0 1 0 612Z"/></clipPath><linearGradient id="st-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--il-sky-1)"/><stop offset=".72" stop-color="var(--il-sky-2)"/></linearGradient><pattern id="st-bricks" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M0 .5H28M0 14.5H28M7 .5V14.5M21 14.5V28" fill="none" stroke="var(--il-brick-2)" stroke-width="1"/></pattern><pattern id="st-rail" width="9" height="28" patternUnits="userSpaceOnUse"><path d="M4.5 0V28" stroke="var(--il-ink)" stroke-width="1.6"/></pattern><radialGradient id="st-glow"><stop offset="0" stop-color="#F3C66B" stop-opacity=".5"/><stop offset="1" stop-color="#F3C66B" stop-opacity="0"/></radialGradient><clipPath id="st-awn"><path d="M146 378H454L474 416H126Z"/></clipPath></defs><g clip-path="url(#st-arch)"><rect width="600" height="640" fill="url(#st-sky)"/><g fill="var(--il-star)"><circle cx="150" cy="120" r="2"/><circle cx="236" cy="66" r="1.6"/><circle cx="330" cy="104" r="1.8"/><circle cx="528" cy="226" r="1.6"/><circle cx="88" cy="204" r="1.6"/><circle cx="384" cy="46" r="1.4"/><circle cx="270" cy="150" r="1.3"/></g><circle cx="452" cy="138" r="36" fill="var(--il-sun)"/><g fill="var(--il-cloud)"><path d="M118 158a17 17 0 0 1 2-34 26 26 0 0 1 49-8 20 20 0 0 1 33 10 16 16 0 0 1 2 32Z"/><path transform="translate(306 48) scale(.62)" d="M118 158a17 17 0 0 1 2-34 26 26 0 0 1 49-8 20 20 0 0 1 33 10 16 16 0 0 1 2 32Z"/></g><g fill="var(--il-far)"><path d="M20 508V392h112v116ZM50 394V372h52v22ZM62 374V262h28v112ZM66 264V246h20v18ZM70 248V234h12v14ZM73 236l3-12 3 12Z"/><path d="M478 508V456h42v52ZM540 508V440h60v68ZM440 398h160v5H440ZM536 402h9v106h-9Z"/></g><g fill="none" stroke="var(--il-far)" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"><path d="M440 398L486 372L540 322L594 372L640 398"/><path d="M486 372V398M540 322V398M594 372V398M513 347V398M567 347V398M486 398L540 322L594 398"/></g><rect y="508" width="600" height="26" fill="var(--il-walk)"/><path d="M60 508v24M180 508v24M300 508v24M420 508v24M540 508v24" stroke="var(--il-walk-2)" stroke-width="1.5"/><rect y="532" width="600" height="5" fill="var(--il-walk-2)"/><rect y="537" width="600" height="103" fill="var(--il-road)"/><path d="M40 606h56M150 606h56M260 606h56M370 606h56M480 606h56" stroke="var(--il-awn-2)" stroke-width="4" stroke-linecap="round" opacity=".5"/><circle class="sc-night" cx="566" cy="286" r="74" fill="url(#st-glow)"/><rect x="563.5" y="302" width="5" height="206" fill="var(--il-ink)"/><rect x="559" y="496" width="14" height="12" rx="2" fill="var(--il-ink)"/><path d="M552 274h28l-5-10h-18Z" fill="var(--il-ink)"/><rect x="556" y="274" width="20" height="26" rx="4" fill="var(--il-lamp)" stroke="var(--il-ink)" stroke-width="2.5"/><rect x="562" y="300" width="8" height="5" fill="var(--il-ink)"/><circle cx="566" cy="260" r="3" fill="var(--il-ink)"/><path d="M544 322h20M546 322v38l8-6 8 6v-38" fill="var(--il-awn-1)" stroke="var(--il-ink)" stroke-width="0"/><path d="M543 321h22" stroke="var(--il-ink)" stroke-width="2.5" stroke-linecap="round"/><rect x="130" y="202" width="340" height="306" fill="var(--il-brick)"/><rect x="130" y="202" width="340" height="306" fill="url(#st-bricks)" opacity=".55"/><rect x="122" y="186" width="356" height="16" rx="2" fill="var(--il-trim)"/><rect x="130" y="202" width="340" height="5" fill="var(--il-ink)" opacity=".18"/><g><path d="M154 220h11v92h-11ZM227 220h11v92h-11ZM258 220h11v92h-11ZM331 220h11v92h-11ZM362 220h11v92h-11ZM435 220h11v92h-11Z" fill="var(--il-shutter)"/><path d="M164 216h64v100h-64ZM268 216h64v100h-64ZM372 216h64v100h-64Z" fill="var(--il-trim)"/><rect x="168" y="222" width="56" height="88" fill="var(--il-glass)"/><rect x="272" y="222" width="56" height="88" fill="var(--il-glass-2)"/><rect x="376" y="222" width="56" height="88" fill="var(--il-glass)"/><path d="M196 222v88M168 258h56M300 222v88M272 258h56M404 222v88M376 258h56" stroke="var(--il-trim)" stroke-width="3"/></g><rect x="124" y="294" width="352" height="28" fill="url(#st-rail)"/><rect x="122" y="290" width="356" height="4" rx="2" fill="var(--il-ink)"/><rect x="122" y="306" width="356" height="2" fill="var(--il-ink)"/><rect x="118" y="322" width="364" height="7" rx="1.5" fill="var(--il-ink)"/><path d="M142 329v13l-11-13ZM458 329v13l11-13Z" fill="var(--il-ink)"/><g><path d="M136 329v12M464 329v12" stroke="var(--il-ink)" stroke-width="1.5"/><ellipse cx="136" cy="351" rx="15" ry="10" fill="var(--il-leaf)"/><path d="M124 353q-4 9-1 17M131 358q-1 8 2 14M141 358q2 8-1 14M148 353q5 8 3 17" stroke="var(--il-leaf)" stroke-width="5" stroke-linecap="round" fill="none"/><ellipse cx="464" cy="351" rx="15" ry="10" fill="var(--il-leaf)"/><path d="M452 353q-4 9-1 17M459 358q-1 8 2 14M469 358q2 8-1 14M476 353q5 8 3 17" stroke="var(--il-leaf)" stroke-width="5" stroke-linecap="round" fill="none"/></g><rect x="158" y="339" width="284" height="34" rx="3" fill="var(--il-trim)" stroke="var(--il-ink)" stroke-width="1.5"/><text class="sc-sign" x="300" y="363" text-anchor="middle" font-size="19" fill="var(--il-sign)">YOUR BUSINESS</text><rect x="146" y="416" width="308" height="92" fill="var(--il-shutter)"/><rect x="158" y="430" width="172" height="62" rx="2" fill="var(--il-glass-2)" stroke="var(--il-trim)" stroke-width="3"/><path d="M176 491l40-60h20l-40 60ZM226 491l40-60h8l-40 60Z" fill="#fff" opacity=".2"/><path d="M282 491v-13h22v13Z" fill="var(--il-brick-2)"/><ellipse cx="293" cy="468" rx="12" ry="13" fill="var(--il-leaf)"/><rect x="350" y="424" width="88" height="84" fill="var(--il-trim)"/><rect x="356" y="430" width="76" height="78" fill="var(--il-awn-1)"/><rect x="366" y="440" width="56" height="42" rx="2" fill="var(--il-glass-2)"/><rect x="361" y="486" width="4" height="14" rx="2" fill="var(--il-gold)"/><path d="M386 440l8 11 8-11" fill="none" stroke="var(--il-ink)" stroke-width="1" opacity=".5"/><rect x="377" y="451" width="34" height="15" rx="2" fill="var(--il-trim)"/><text class="sc-open" x="394" y="462.3" text-anchor="middle" font-size="9.5" letter-spacing="1.2" fill="var(--il-brick-2)">OPEN</text><rect x="130" y="416" width="340" height="12" fill="var(--il-ink)" opacity=".2"/><g clip-path="url(#st-awn)"><rect x="126" y="378" width="348" height="38" fill="var(--il-awn-2)"/><path d="M126 378h29v38h-29ZM184 378h29v38h-29ZM242 378h29v38h-29ZM300 378h29v38h-29ZM358 378h29v38h-29ZM416 378h29v38h-29Z" fill="var(--il-awn-1)"/></g><path d="M126 416a14.5 10 0 0 0 29 0ZM184 416a14.5 10 0 0 0 29 0ZM242 416a14.5 10 0 0 0 29 0ZM300 416a14.5 10 0 0 0 29 0ZM358 416a14.5 10 0 0 0 29 0ZM416 416a14.5 10 0 0 0 29 0Z" fill="var(--il-awn-1)"/><path d="M155 416a14.5 10 0 0 0 29 0ZM213 416a14.5 10 0 0 0 29 0ZM271 416a14.5 10 0 0 0 29 0ZM329 416a14.5 10 0 0 0 29 0ZM387 416a14.5 10 0 0 0 29 0ZM445 416a14.5 10 0 0 0 29 0Z" fill="var(--il-awn-2)"/><path d="M146 378H454" stroke="var(--il-ink)" stroke-width="3" stroke-linecap="round"/><path d="M124 508l3-17h22l3 17Z" fill="var(--il-brick-2)"/><ellipse cx="138" cy="478" rx="14" ry="16" fill="var(--il-leaf)"/><ellipse cx="132" cy="474" rx="5" ry="6" fill="var(--il-leaf-2)"/><ellipse cx="516" cy="567" rx="94" ry="6" fill="var(--il-ink)" opacity=".16"/><g transform="translate(606 470) scale(-.84 .84)"><path d="M34 13v6M126 13v6" stroke="var(--il-ink)" stroke-width="3"/><rect x="14" y="1" width="132" height="4" rx="2" fill="var(--il-gold)"/><rect x="14" y="9" width="132" height="4" rx="2" fill="var(--il-gold)"/><path d="M30 2v10M50 2v10M70 2v10M90 2v10M110 2v10M130 2v10" stroke="var(--il-gold)" stroke-width="3"/><path d="M8 18H166Q180 18 187 30L202 56Q214 60 214 72V90Q214 96 208 96H6Q0 96 0 90V26Q0 18 8 18Z" fill="var(--il-van)"/><path d="M0 80h214v10q0 6-6 6H6q-6 0-6-6Z" fill="var(--il-van-2)"/><rect x="0" y="66" width="212" height="7" fill="var(--il-awn-1)"/><path d="M162 27h6q8 0 12 7l10 18h-28Z" fill="var(--il-glass)"/><path d="M152 24V92" stroke="var(--il-ink)" stroke-opacity=".2" stroke-width="1.5"/><rect x="138" y="58" width="9" height="3" rx="1.5" fill="var(--il-ink)" opacity=".45"/><rect x="207" y="76" width="6" height="10" rx="3" fill="var(--il-gold)"/><rect x="204" y="89" width="14" height="6" rx="3" fill="var(--il-ink)"/><path d="M26 96a22 22 0 0 1 44 0ZM144 96a22 22 0 0 1 44 0Z" fill="var(--il-ink)" opacity=".3"/><circle cx="48" cy="97" r="18" fill="var(--il-ink)"/><circle cx="48" cy="97" r="7.5" fill="var(--il-hub)"/><circle cx="166" cy="97" r="18" fill="var(--il-ink)"/><circle cx="166" cy="97" r="7.5" fill="var(--il-hub)"/></g><text class="sc-sign" x="534" y="513" text-anchor="middle" font-size="9" letter-spacing="1.2" fill="var(--il-sign)">YOUR BUSINESS</text></g></svg><!-- /art:scene-street -->
+</div>
+</div>
+</section>
+<section class="gal" data-comp="work">
+<div class="container"><p class="label gal-id">.work</p><h2 class="h3 gal-title" id="work">Project print and case row</h2></div>
+<div class="container">
+<article class="case">
+  <a class="print" href="https://smilyssoftwash.com" target="_blank" rel="noopener">
+    <div class="print-img"><img src="/assets/img/work-smilyssoftwash.jpg" alt="Smilys Softwash — before and after of a soft-washed roof and house exterior" width="1200" height="600" loading="lazy" decoding="async"></div>
+    <div class="print-cap">
+      <div class="print-name"><p class="h3">Smilys Softwash</p><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></div>
+      <p class="print-kind">Exterior cleaning · Local service &amp; SEO</p>
+    </div>
+  </a>
+  <div class="case-copy">
+    <p class="eyebrow">Exterior cleaning · Local service &amp; SEO</p>
+    <h2 class="h3">Smilys Softwash</h2>
+    <p>“Don't replace it. Renew it.” Roof and house soft washing across Greater Baton Rouge — a service page per treatment, a before-and-after gallery, and online quote requests. Card payments are being set up.</p>
+    <dl class="case-facts">
+      <div><dt>Status</dt><dd>Live site · Online quotes</dd></div>
+      <div><dt>Visit</dt><dd><a href="https://smilyssoftwash.com" target="_blank" rel="noopener">smilyssoftwash.com</a></dd></div>
+    </dl>
+  </div>
+</article>
+</div>
+</section>
+<section class="gal" data-comp="faq">
+<div class="container"><p class="label gal-id">.faq</p><h2 class="h3 gal-title" id="faq">FAQ list</h2></div>
+<div class="container">
+<div class="faq">
+  <details class="faq-item" open>
+    <summary>Do I own the website?</summary>
+    <div class="faq-body"><p>Completely. The domain is registered in your name, the code and design are yours on final payment, and you can move to another provider at any time. We don't hold anything hostage.</p></div>
+  </details>
+  <details class="faq-item">
+    <summary>How long does a website take?</summary>
+    <div class="faq-body"><p>A one-page site can be live in as little as 7 days, and an information website in as little as 7–10 days. A full business site runs 2–4 weeks, and stores take 4–6. The biggest variable is how quickly content and photos come back to us — we'll tell you exactly what we need on day one.</p></div>
+  </details>
+</div>
+</div>
+</section>
+<section class="gal" data-comp="forms">
+<div class="container"><p class="label gal-id">.forms</p><h2 class="h3 gal-title" id="forms">Form fields</h2></div>
+<div class="container">
+<form class="card" action="#" method="post" novalidate onsubmit="return false">
+  <div class="field">
+    <label for="g-name">Your name <span aria-hidden="true">*</span></label>
+    <input type="text" id="g-name" name="name" autocomplete="name" required aria-describedby="g-name-error">
+    <p class="error" id="g-name-error" role="alert"></p>
+  </div>
+  <div class="field">
+    <label for="g-email">Email <span aria-hidden="true">*</span></label>
+    <input class="invalid" type="email" id="g-email" name="email" value="sam@" autocomplete="email" required aria-invalid="true" aria-describedby="g-email-error">
+    <p class="error" id="g-email-error" role="alert">Please enter a valid email address.</p>
+  </div>
+  <div class="field-row">
+    <div class="field">
+      <label for="g-company">Business name</label>
+      <input type="text" id="g-company" name="company" autocomplete="organization" aria-describedby="g-company-help">
+      <p class="help" id="g-company-help">Leave it empty if you are just starting out.</p>
+    </div>
+    <div class="field">
+      <label for="g-package">Package</label>
+      <select id="g-package" name="package">
+        <option value="">Not sure yet</option>
+        <option value="starter">Starter information website, $2,000</option>
+        <option value="business">Business website, $4,000</option>
+      </select>
+    </div>
+  </div>
+  <fieldset class="field">
+    <legend>What do you need?</legend>
+    <div class="chips">
+      <label class="chip"><input type="checkbox" name="services" value="New website" checked><span>New website</span></label>
+      <label class="chip"><input type="checkbox" name="services" value="Automation"><span>Automation</span></label>
+      <label class="chip"><input type="checkbox" name="services" value="Google reviews"><span>Google reviews</span></label>
+    </div>
+  </fieldset>
+  <div class="field">
+    <label for="g-message">Project details <span aria-hidden="true">*</span></label>
+    <textarea id="g-message" name="message" rows="5" required placeholder="What does your business do, and what do you want help with?"></textarea>
+  </div>
+  <button class="btn btn-primary btn-block" type="submit">Send enquiry</button>
+  <p class="form-status ok" role="status">Thanks — your enquiry is in. We’ll reply within one business day.</p>
+  <p class="form-status error" role="status">Please fix the highlighted fields.</p>
+  <p class="form-fine">We reply within one business day. Your details are never shared or sold.</p>
+</form>
+</div>
+</section>
+<section class="gal" data-comp="cta">
+<div class="container"><p class="label gal-id">.cta</p><h2 class="h3 gal-title" id="cta">Closing band</h2></div>
+<section class="cta-band on-blue">
+  <div class="container cta-inner">
+    <div class="cta-copy">
+      <h2>Still deciding? Book the free call.</h2>
+      <p>Thirty minutes, no pitch. You'll get a clear view of what your website and your systems need, and what it should cost — even if you do it yourself.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary btn-lg" href="/contact/" data-booking>Book a discovery call</a>
+        <a class="btn btn-lg" href="/contact/">Send an enquiry</a>
+      </div>
+    </div>
+    <div class="appt on-paper" aria-hidden="true">
+      <p class="appt-head"><span>Appointment card</span><span>No. 01</span></p>
+      <p class="appt-title">Discovery call</p>
+      <dl class="appt-lines">
+        <div><dt>Cost</dt><dd>Free</dd></div>
+        <div><dt>Length</dt><dd>30 minutes</dd></div>
+        <div><dt>Sales pitch</dt><dd>None</dd></div>
+        <div><dt>Where</dt><dd>A call, or in person</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+</section>
+<section class="gal" data-comp="notfound">
+<div class="container"><p class="label gal-id">.notfound</p><h2 class="h3 gal-title" id="notfound">The 404 block</h2></div>
+<div data-page="notfound">
+<div class="container">
+<div class="container nf">
+  <!-- art:scene-notfound --><svg class="scene scene-street" viewBox="0 0 600 640" role="img" aria-labelledby="st-title" style="--il-sky-1:var(--L,#D5E0F6) var(--D,#101632);--il-sky-2:var(--L,#F5EEDD) var(--D,#27305A);--il-sun:var(--L,#F6D88E) var(--D,#F3ECDD);--il-cloud:var(--L,#FFFDF6) var(--D,#2B355E);--il-star:var(--L,transparent) var(--D,#F3ECDD);--il-far:var(--L,#C5CCE0) var(--D,#2C3768);--il-brick:var(--L,#BC5B3E) var(--D,#7A3F30);--il-brick-2:var(--L,#9C4630) var(--D,#5C2D22);--il-trim:var(--L,#FBF5E6) var(--D,#C9C1AE);--il-shutter:var(--L,#33446F) var(--D,#1F2947);--il-glass:var(--L,#BFD0EC) var(--D,#232D4E);--il-glass-2:var(--L,#D6E1F4) var(--D,#F3C66B);--il-awn-1:var(--L,#2C46C4) var(--D,#4660DA);--il-awn-2:var(--L,#FBF5E6) var(--D,#CFC7B4);--il-sign:var(--L,#2C46C4) var(--D,#24389F);--il-ink:var(--L,#1A2238) var(--D,#080A12);--il-walk:var(--L,#E3D8C2) var(--D,#2B3145);--il-walk-2:var(--L,#CFC2A8) var(--D,#20263A);--il-road:var(--L,#BFB6A4) var(--D,#171B29);--il-hub:var(--L,#D9CFBB) var(--D,#8E8A80);--il-van:var(--L,#FBF5E6) var(--D,#C9C1AE);--il-van-2:var(--L,#E4DAC6) var(--D,#A8A190);--il-leaf:var(--L,#5F8160) var(--D,#33503F);--il-leaf-2:var(--L,#7C9B79) var(--D,#436650);--il-gold:var(--L,#E9B44C) var(--D,#F3C66B);--il-lamp:var(--L,#FBF5E6) var(--D,#F7D98C);--il-night:var(--L,0) var(--D,1)"><title id="st-title">Drawing of a brick shop front. The painted sign above its striped awning reads: page not found.</title><defs><clipPath id="st-arch"><path d="M0 300A300 300 0 0 1 600 300V612A28 28 0 0 1 572 640H28A28 28 0 0 1 0 612Z"/></clipPath><linearGradient id="st-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--il-sky-1)"/><stop offset=".72" stop-color="var(--il-sky-2)"/></linearGradient><pattern id="st-bricks" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M0 .5H28M0 14.5H28M7 .5V14.5M21 14.5V28" fill="none" stroke="var(--il-brick-2)" stroke-width="1"/></pattern><pattern id="st-rail" width="9" height="28" patternUnits="userSpaceOnUse"><path d="M4.5 0V28" stroke="var(--il-ink)" stroke-width="1.6"/></pattern><radialGradient id="st-glow"><stop offset="0" stop-color="#F3C66B" stop-opacity=".5"/><stop offset="1" stop-color="#F3C66B" stop-opacity="0"/></radialGradient><clipPath id="st-awn"><path d="M146 378H454L474 416H126Z"/></clipPath></defs><g clip-path="url(#st-arch)"><rect width="600" height="640" fill="url(#st-sky)"/><g fill="var(--il-star)"><circle cx="150" cy="120" r="2"/><circle cx="236" cy="66" r="1.6"/><circle cx="330" cy="104" r="1.8"/><circle cx="528" cy="226" r="1.6"/><circle cx="88" cy="204" r="1.6"/><circle cx="384" cy="46" r="1.4"/><circle cx="270" cy="150" r="1.3"/></g><circle cx="452" cy="138" r="36" fill="var(--il-sun)"/><g fill="var(--il-cloud)"><path d="M118 158a17 17 0 0 1 2-34 26 26 0 0 1 49-8 20 20 0 0 1 33 10 16 16 0 0 1 2 32Z"/><path transform="translate(306 48) scale(.62)" d="M118 158a17 17 0 0 1 2-34 26 26 0 0 1 49-8 20 20 0 0 1 33 10 16 16 0 0 1 2 32Z"/></g><g fill="var(--il-far)"><path d="M20 508V392h112v116ZM50 394V372h52v22ZM62 374V262h28v112ZM66 264V246h20v18ZM70 248V234h12v14ZM73 236l3-12 3 12Z"/><path d="M478 508V456h42v52ZM540 508V440h60v68ZM440 398h160v5H440ZM536 402h9v106h-9Z"/></g><g fill="none" stroke="var(--il-far)" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"><path d="M440 398L486 372L540 322L594 372L640 398"/><path d="M486 372V398M540 322V398M594 372V398M513 347V398M567 347V398M486 398L540 322L594 398"/></g><rect y="508" width="600" height="26" fill="var(--il-walk)"/><path d="M60 508v24M180 508v24M300 508v24M420 508v24M540 508v24" stroke="var(--il-walk-2)" stroke-width="1.5"/><rect y="532" width="600" height="5" fill="var(--il-walk-2)"/><rect y="537" width="600" height="103" fill="var(--il-road)"/><path d="M40 606h56M150 606h56M260 606h56M370 606h56M480 606h56" stroke="var(--il-awn-2)" stroke-width="4" stroke-linecap="round" opacity=".5"/><circle class="sc-night" cx="566" cy="286" r="74" fill="url(#st-glow)"/><rect x="563.5" y="302" width="5" height="206" fill="var(--il-ink)"/><rect x="559" y="496" width="14" height="12" rx="2" fill="var(--il-ink)"/><path d="M552 274h28l-5-10h-18Z" fill="var(--il-ink)"/><rect x="556" y="274" width="20" height="26" rx="4" fill="var(--il-lamp)" stroke="var(--il-ink)" stroke-width="2.5"/><rect x="562" y="300" width="8" height="5" fill="var(--il-ink)"/><circle cx="566" cy="260" r="3" fill="var(--il-ink)"/><path d="M544 322h20M546 322v38l8-6 8 6v-38" fill="var(--il-awn-1)" stroke="var(--il-ink)" stroke-width="0"/><path d="M543 321h22" stroke="var(--il-ink)" stroke-width="2.5" stroke-linecap="round"/><rect x="130" y="202" width="340" height="306" fill="var(--il-brick)"/><rect x="130" y="202" width="340" height="306" fill="url(#st-bricks)" opacity=".55"/><rect x="122" y="186" width="356" height="16" rx="2" fill="var(--il-trim)"/><rect x="130" y="202" width="340" height="5" fill="var(--il-ink)" opacity=".18"/><g><path d="M154 220h11v92h-11ZM227 220h11v92h-11ZM258 220h11v92h-11ZM331 220h11v92h-11ZM362 220h11v92h-11ZM435 220h11v92h-11Z" fill="var(--il-shutter)"/><path d="M164 216h64v100h-64ZM268 216h64v100h-64ZM372 216h64v100h-64Z" fill="var(--il-trim)"/><rect x="168" y="222" width="56" height="88" fill="var(--il-glass)"/><rect x="272" y="222" width="56" height="88" fill="var(--il-glass-2)"/><rect x="376" y="222" width="56" height="88" fill="var(--il-glass)"/><path d="M196 222v88M168 258h56M300 222v88M272 258h56M404 222v88M376 258h56" stroke="var(--il-trim)" stroke-width="3"/></g><rect x="124" y="294" width="352" height="28" fill="url(#st-rail)"/><rect x="122" y="290" width="356" height="4" rx="2" fill="var(--il-ink)"/><rect x="122" y="306" width="356" height="2" fill="var(--il-ink)"/><rect x="118" y="322" width="364" height="7" rx="1.5" fill="var(--il-ink)"/><path d="M142 329v13l-11-13ZM458 329v13l11-13Z" fill="var(--il-ink)"/><g><path d="M136 329v12M464 329v12" stroke="var(--il-ink)" stroke-width="1.5"/><ellipse cx="136" cy="351" rx="15" ry="10" fill="var(--il-leaf)"/><path d="M124 353q-4 9-1 17M131 358q-1 8 2 14M141 358q2 8-1 14M148 353q5 8 3 17" stroke="var(--il-leaf)" stroke-width="5" stroke-linecap="round" fill="none"/><ellipse cx="464" cy="351" rx="15" ry="10" fill="var(--il-leaf)"/><path d="M452 353q-4 9-1 17M459 358q-1 8 2 14M469 358q2 8-1 14M476 353q5 8 3 17" stroke="var(--il-leaf)" stroke-width="5" stroke-linecap="round" fill="none"/></g><rect x="158" y="339" width="284" height="34" rx="3" fill="var(--il-trim)" stroke="var(--il-ink)" stroke-width="1.5"/><text class="sc-sign" x="300" y="363" text-anchor="middle" font-size="19" fill="var(--il-sign)">PAGE NOT FOUND</text><rect x="146" y="416" width="308" height="92" fill="var(--il-shutter)"/><rect x="158" y="430" width="172" height="62" rx="2" fill="var(--il-glass-2)" stroke="var(--il-trim)" stroke-width="3"/><path d="M176 491l40-60h20l-40 60ZM226 491l40-60h8l-40 60Z" fill="#fff" opacity=".2"/><path d="M282 491v-13h22v13Z" fill="var(--il-brick-2)"/><ellipse cx="293" cy="468" rx="12" ry="13" fill="var(--il-leaf)"/><rect x="350" y="424" width="88" height="84" fill="var(--il-trim)"/><rect x="356" y="430" width="76" height="78" fill="var(--il-awn-1)"/><rect x="366" y="440" width="56" height="42" rx="2" fill="var(--il-glass-2)"/><rect x="361" y="486" width="4" height="14" rx="2" fill="var(--il-gold)"/><path d="M386 440l8 11 8-11" fill="none" stroke="var(--il-ink)" stroke-width="1" opacity=".5"/><rect x="377" y="451" width="34" height="15" rx="2" fill="var(--il-trim)"/><text class="sc-open" x="394" y="462.3" text-anchor="middle" font-size="9.5" letter-spacing="1.2" fill="var(--il-brick-2)">OPEN</text><rect x="130" y="416" width="340" height="12" fill="var(--il-ink)" opacity=".2"/><g clip-path="url(#st-awn)"><rect x="126" y="378" width="348" height="38" fill="var(--il-awn-2)"/><path d="M126 378h29v38h-29ZM184 378h29v38h-29ZM242 378h29v38h-29ZM300 378h29v38h-29ZM358 378h29v38h-29ZM416 378h29v38h-29Z" fill="var(--il-awn-1)"/></g><path d="M126 416a14.5 10 0 0 0 29 0ZM184 416a14.5 10 0 0 0 29 0ZM242 416a14.5 10 0 0 0 29 0ZM300 416a14.5 10 0 0 0 29 0ZM358 416a14.5 10 0 0 0 29 0ZM416 416a14.5 10 0 0 0 29 0Z" fill="var(--il-awn-1)"/><path d="M155 416a14.5 10 0 0 0 29 0ZM213 416a14.5 10 0 0 0 29 0ZM271 416a14.5 10 0 0 0 29 0ZM329 416a14.5 10 0 0 0 29 0ZM387 416a14.5 10 0 0 0 29 0ZM445 416a14.5 10 0 0 0 29 0Z" fill="var(--il-awn-2)"/><path d="M146 378H454" stroke="var(--il-ink)" stroke-width="3" stroke-linecap="round"/><path d="M124 508l3-17h22l3 17Z" fill="var(--il-brick-2)"/><ellipse cx="138" cy="478" rx="14" ry="16" fill="var(--il-leaf)"/><ellipse cx="132" cy="474" rx="5" ry="6" fill="var(--il-leaf-2)"/><ellipse cx="516" cy="567" rx="94" ry="6" fill="var(--il-ink)" opacity=".16"/><g transform="translate(606 470) scale(-.84 .84)"><path d="M34 13v6M126 13v6" stroke="var(--il-ink)" stroke-width="3"/><rect x="14" y="1" width="132" height="4" rx="2" fill="var(--il-gold)"/><rect x="14" y="9" width="132" height="4" rx="2" fill="var(--il-gold)"/><path d="M30 2v10M50 2v10M70 2v10M90 2v10M110 2v10M130 2v10" stroke="var(--il-gold)" stroke-width="3"/><path d="M8 18H166Q180 18 187 30L202 56Q214 60 214 72V90Q214 96 208 96H6Q0 96 0 90V26Q0 18 8 18Z" fill="var(--il-van)"/><path d="M0 80h214v10q0 6-6 6H6q-6 0-6-6Z" fill="var(--il-van-2)"/><rect x="0" y="66" width="212" height="7" fill="var(--il-awn-1)"/><path d="M162 27h6q8 0 12 7l10 18h-28Z" fill="var(--il-glass)"/><path d="M152 24V92" stroke="var(--il-ink)" stroke-opacity=".2" stroke-width="1.5"/><rect x="138" y="58" width="9" height="3" rx="1.5" fill="var(--il-ink)" opacity=".45"/><rect x="207" y="76" width="6" height="10" rx="3" fill="var(--il-gold)"/><rect x="204" y="89" width="14" height="6" rx="3" fill="var(--il-ink)"/><path d="M26 96a22 22 0 0 1 44 0ZM144 96a22 22 0 0 1 44 0Z" fill="var(--il-ink)" opacity=".3"/><circle cx="48" cy="97" r="18" fill="var(--il-ink)"/><circle cx="48" cy="97" r="7.5" fill="var(--il-hub)"/><circle cx="166" cy="97" r="18" fill="var(--il-ink)"/><circle cx="166" cy="97" r="7.5" fill="var(--il-hub)"/></g><text class="sc-sign" x="534" y="513" text-anchor="middle" font-size="9" letter-spacing="1.2" fill="var(--il-sign)">YOUR BUSINESS</text></g></svg><!-- /art:scene-notfound -->
+  <p class="nf-code display" aria-hidden="true">404</p>
+  <h1 class="h2">This page has moved on</h1>
+  <p>The link is broken or the page no longer exists. Head back to the homepage, or tell us what you were looking for and we'll point you at it.</p>
+  <div class="btn-row">
+    <a class="btn btn-primary" href="/">Back to homepage</a>
+    <a class="btn" href="/contact/">Get in touch</a>
+  </div>
+</div>
+</div>
+</div>
+</section>
+<section class="gal" data-comp="reference">
+<div class="container"><p class="label gal-id">.reference</p><h2 class="h3 gal-title" id="reference">Reference inner page</h2></div>
+<section class="page-head">
+  <div class="container">
+    <p class="eyebrow">Consulting &amp; automation</p>
+    <h1><span class="l">More customers,</span> <span class="l">less busywork</span></h1>
+    <p class="lede">A website is one piece. We also set up the systems behind it: Google reviews, missed-call text-back, online booking and automatic follow-up. Fixed prices, like everything else we do.</p>
+    <div class="btn-row">
+      <a class="btn btn-primary btn-lg" href="/contact/?package=audit">Book a Growth Audit, $350</a>
+      <a class="btn btn-lg" href="/contact/" data-booking>Book a free 30-minute call</a>
+    </div>
+    <a class="price-strip" href="#ref-setups">
+      <span class="price-strip-label">Setups</span>
+      <span class="price-strip-nums"><b>$500</b><b>$750</b><b>$1,500</b></span>
+      <span class="price-strip-note">Fixed, published prices</span>
+    </a>
+  </div>
+</section>
+
+<section class="section section-first">
+  <div class="container">
+    <nav class="toc" aria-labelledby="ref-toc">
+      <p class="label" id="ref-toc">On this page</p>
+      <ol>
+        <li><a href="#ref-setups"><span class="toc-name">One-time setups</span><span class="dots" aria-hidden="true"></span><span class="toc-price">$500, $750 or $1,500</span></a></li>
+        <li><a href="#ref-steps"><span class="toc-name">How we work together</span><span class="dots" aria-hidden="true"></span><span class="toc-price">Four steps</span></a></li>
+      </ol>
+    </nav>
+  </div>
+</section>
+
+<section class="section" id="ref-setups">
+  <div class="container split">
+    <header class="section-head">
+      <p class="eyebrow">What we offer</p>
+      <h2 class="h3">Consulting and setup, at fixed prices</h2>
+      <p class="section-sub">Start with the free check or the Growth Audit, then pick only the pieces your business needs.</p>
+    </header>
+    <ul class="pricelist">
+      <li>
+        <div class="pl-row"><h3 class="pl-name">Google profile &amp; reviews</h3><span class="dots" aria-hidden="true"></span><span class="pl-price">$500</span></div>
+        <p>Profile completed, listings made consistent, review link, QR code and reply templates.</p>
+      </li>
+      <li>
+        <div class="pl-row"><h3 class="pl-name">Missed-call text-back</h3><span class="dots" aria-hidden="true"></span><span class="pl-price">$750</span></div>
+        <p>Every missed call gets a text back from your business number within a minute.</p>
+      </li>
+      <li>
+        <div class="pl-row"><h3 class="pl-name">Lead follow-up system</h3><span class="dots" aria-hidden="true"></span><span class="pl-price">$1,500</span></div>
+        <p>Every enquiry in one list, automatic follow-ups on quiet quotes, review requests after each job.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section-sand" id="ref-steps">
+  <div class="container split">
+    <header class="section-head">
+      <p class="eyebrow">How we work together</p>
+      <h2 class="h3">Four steps, no surprises</h2>
+    </header>
+    <ol class="steps">
+      <li>
+        <span class="steps-no" aria-hidden="true">01</span>
+        <div><h3>Free check</h3>
+        <p>We look at your website, Google profile and reviews, and email you the top three fixes.</p></div>
+      </li>
+      <li>
+        <span class="steps-no" aria-hidden="true">02</span>
+        <div><h3>Growth Audit</h3>
+        <p>A 60-minute session and a written plan, ranked by impact, with a fixed price on each step.</p></div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="cta-band on-blue">
+  <div class="container cta-inner">
+    <div class="cta-copy">
+      <h2>Still deciding? Book the free call.</h2>
+      <p>Thirty minutes, no pitch. You'll get a clear view of what your website and your systems need, and what it should cost — even if you do it yourself.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary btn-lg" href="/contact/" data-booking>Book a discovery call</a>
+        <a class="btn btn-lg" href="/contact/">Send an enquiry</a>
+      </div>
+    </div>
+    <div class="appt on-paper" aria-hidden="true">
+      <p class="appt-head"><span>Appointment card</span><span>No. 01</span></p>
+      <p class="appt-title">Discovery call</p>
+      <dl class="appt-lines">
+        <div><dt>Cost</dt><dd>Free</dd></div>
+        <div><dt>Length</dt><dd>30 minutes</dd></div>
+        <div><dt>Sales pitch</dt><dd>None</dd></div>
+        <div><dt>Where</dt><dd>A call, or in person</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+</section>
+</main>
+
+<!-- Phones and tablets: the header button is hidden there, so this bar keeps
+     a call and a booking one thumb-tap away. main.js shows it after the first
+     screen and hides it over the footer. -->
+<div class="mobile-cta" id="mobile-cta" hidden>
+  <div class="mobile-cta-inner">
+    <a class="btn" href="tel:+12252550837" aria-label="Call (225) 255-0837">
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
+      Call
+    </a>
+    <a class="btn btn-primary" href="/contact/" data-booking>Free 30-min call<span> · no pitch</span></a>
+  </div>
+</div>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer on-ink">
+  <!-- Baton Rouge on the horizon: the Capitol tower, downtown and the river bridge. After dark the windows and bridge lamps are lit (.sky-lit). -->
+  <svg class="footer-skyline" viewBox="0 0 1440 120" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+    <path d="M0 120V102Q26 88 58 99Q92 84 128 100Q150 93 176 104V120Z"/>
+    <path d="M180 120V86h38v34ZM222 120V72h34v48ZM268 120V84h124v36ZM296 86V68h68v18ZM314 70V24h32v46ZM319 26V13h22v13ZM324 15V6h12v9ZM327 7l3-7 3 7Z"/>
+    <path d="M420 120V66h48v54ZM474 120V48h44v72ZM522 120V78h56v42ZM582 120V58h38v62ZM624 120V88h60v32ZM690 120V70h46v50ZM740 120V94h70v26Z"/>
+    <path d="M818 120V108Q836 98 852 107V120Z"/>
+    <g fill="none" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M880 93L960 78L1040 38L1090 72L1140 80L1190 72L1240 38L1320 78L1400 93"/>
+      <path d="M960 78V93M1040 38V93M1090 72V93M1140 80V93M1190 72V93M1240 38V93M1320 78V93"/>
+      <path d="M960 93L1040 38L1090 93L1140 80L1190 93L1240 38L1320 93M1000 58V93M1280 58V93"/>
+    </g>
+    <path d="M856 91h568v5H856ZM1033 94h14v26h-14ZM1233 94h14v26h-14ZM956 94h8v26h-8ZM1316 94h8v26h-8Z"/>
+    <path d="M1396 120V104Q1414 92 1440 100V120Z"/>
+    <path d="M0 114h1440v6H0Z"/>
+    <path class="sky-lit" d="M190 96h4v5h-4ZM230 80h4v5h-4ZM242 94h4v5h-4ZM282 94h4v5h-4ZM306 75h4v5h-4ZM350 75h4v5h-4ZM372 98h4v5h-4ZM326 34h4v5h-4ZM334 34h4v5h-4ZM326 47h4v5h-4ZM334 59h4v5h-4ZM430 76h4v5h-4ZM448 92h4v5h-4ZM484 58h4v5h-4ZM500 58h4v5h-4ZM484 76h4v5h-4ZM500 94h4v5h-4ZM536 88h4v5h-4ZM560 102h4v5h-4ZM592 68h4v5h-4ZM604 86h4v5h-4ZM640 98h4v5h-4ZM664 98h4v5h-4ZM700 80h4v5h-4ZM720 96h4v5h-4ZM760 102h4v5h-4ZM790 102h4v5h-4ZM1038 31h5v5h-5ZM1238 31h5v5h-5ZM959 73h3v3h-3ZM1089 67h3v3h-3ZM1139 75h3v3h-3ZM1189 67h3v3h-3ZM1319 73h3v3h-3Z"/>
+  </svg>
+
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="brand" href="/">
+        <!-- art:crest-footer --><svg class="crest" viewBox="0 0 120 120" aria-hidden="true" style="--t1:#DCE3FF;--t2:#B9C7FF;--t3:#8FA5FF;--t4:#5C77EC;--t5:#2C46C4;--ink:#161B2C;--accent:#F0C369;--rim:#2C46C4;--rim2:#B9C7FF;--glow:#8FA5FF;--field1:#24306A;--field2:#161B2C;--ribbon:#1B2C84;--ribbon2:#14205E;--steel1:#FBF5E6;--steel2:#CFC7B4;--steel3:#8E8A80;--letter:#FFFBF2"><defs><linearGradient id="cf-fld" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--field1)"/><stop offset="1" stop-color="var(--field2)"/></linearGradient><radialGradient id="cf-glow" cx=".5" cy=".42" r=".5"><stop offset="0" stop-color="var(--glow)" stop-opacity=".35"/><stop offset="1" stop-color="var(--glow)" stop-opacity="0"/></radialGradient><linearGradient id="cf-gl" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".5"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="cf-in"><path d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z"/></clipPath><clipPath id="cf-out"><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z"/></clipPath></defs><g class="a-rim"><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z" fill="var(--rim)"/><path d="M60 6C75 12 92 15 104 16V56C104 86 84 104 60 114C36 104 16 86 16 56V16C28 15 45 12 60 6Z" fill="none" stroke="var(--rim2)" stroke-opacity=".55" stroke-width="1.2"/><path class="a-field" d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z" fill="url(#cf-fld)"/></g><g clip-path="url(#cf-in)"><circle class="a-field" cx="60" cy="50" r="42" fill="url(#cf-glow)"/><g transform="translate(22 22) scale(.86)" stroke-linejoin="round"><polygon class="facet" style="--i:0;--dx:-8.0px;--dy:-6.4px" fill="var(--t2)" points="54,4 61,15 46,12"/><polygon class="facet" style="--i:1;--dx:-1.6px;--dy:6.4px" fill="var(--t1)" points="54,4 46,12 50,9"/><polygon class="facet" style="--i:2;--dx:4.8px;--dy:4.8px" fill="var(--t3)" points="37,15 46,12 61,15 63,24 35,29"/><polygon class="facet" style="--i:3;--dx:-6.4px;--dy:3.2px" fill="var(--t1)" points="37,15 24,27 35,29"/><polygon class="facet" style="--i:4;--dx:0.0px;--dy:1.6px" fill="var(--t2)" points="24,27 13,41 24,46 35,29"/><polygon class="facet" style="--i:5;--dx:6.4px;--dy:0.0px" fill="var(--t1)" points="13,41 8,49 12,56 23,58 24,46"/><polygon class="facet" style="--i:6;--dx:-4.8px;--dy:-1.6px" fill="var(--t3)" points="35,29 24,46 50,37"/><polygon class="facet" style="--i:7;--dx:1.6px;--dy:-3.2px" fill="var(--t4)" points="35,29 50,37 63,24"/><polygon class="facet" style="--i:8;--dx:8.0px;--dy:-4.8px" fill="var(--t4)" points="24,46 23,58 42,54 50,37"/><polygon class="facet" style="--i:9;--dx:-3.2px;--dy:-6.4px" fill="var(--t3)" points="50,37 42,54 38,63 63,63 65,43"/><polygon class="facet" style="--i:10;--dx:3.2px;--dy:6.4px" fill="var(--t4)" points="50,37 65,43 63,24"/><polygon class="facet" style="--i:11;--dx:-8.0px;--dy:4.8px" fill="var(--t3)" points="38,63 31,80 26,112 53,112 63,63"/><polygon class="facet" style="--i:12;--dx:-1.6px;--dy:3.2px" fill="var(--t4)" points="63,63 53,112 78,112 72,80"/><polygon class="facet" style="--i:13;--dx:4.8px;--dy:1.6px" fill="var(--t5)" points="61,15 67,16 72,22 69,26 77,32 73,36 79,44 74,48 79,57 73,61 76,70 72,80 63,63 65,43 63,24"/><path class="eye" d="M30 27Q35 24 40 27Q35 30 30 27Z" fill="var(--ink)"/><path d="M12 46L16 45" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round"/></g></g><path class="a-line" pathLength="1" d="M60 14C73 19 88 22 97 23V56C97 81 80 97 60 106C40 97 23 81 23 56V23C32 22 47 19 60 14Z" fill="none" stroke="var(--accent)" stroke-opacity=".9" stroke-width="1"/><circle class="rivet" style="--i:0" cx="24" cy="20" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:1" cx="42" cy="15.5" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:2" cx="60" cy="11" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:3" cx="78" cy="15.5" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:4" cx="96" cy="20" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:5" cx="100" cy="44" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:6" cx="20" cy="44" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:7" cx="94" cy="76" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:8" cx="26" cy="76" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:9" cx="79" cy="97" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><circle class="rivet" style="--i:10" cx="41" cy="97" r="1.6" fill="var(--rim2)" fill-opacity=".85"/><g clip-path="url(#cf-out)"><g transform="rotate(20 60 60)"><rect class="a-glint" x="-60" y="-30" width="16" height="180" fill="url(#cf-gl)"/></g></g></svg><!-- /art:crest-footer -->
+        <span class="brand-name">KnightWebstudio</span>
+      </a>
+      <p>Websites, automation and consulting for local businesses that need to be found, trusted and chosen.</p>
+      <p class="footer-loc">Based in Baton Rouge, Louisiana. Working with clients anywhere.</p>
+    </div>
+
+    <nav class="footer-col" aria-label="Services">
+      <p class="footer-title">Services</p>
+      <a href="/services/">Website design</a>
+      <a href="/consulting/">Consulting &amp; automation</a>
+      <a href="/services/">E-commerce</a>
+      <a href="/services/">SEO</a>
+      <a href="/services/">Care plans</a>
+    </nav>
+
+    <nav class="footer-col" aria-label="Company">
+      <p class="footer-title">Company</p>
+      <a href="/about/">About</a>
+      <a href="/work/">Our work</a>
+      <a href="/process/">Process</a>
+      <a href="/pricing/">Pricing</a>
+      <a href="/faq/">FAQ</a>
+    </nav>
+
+    <nav class="footer-col" aria-label="Areas we serve">
+      <p class="footer-title">Areas we serve</p>
+      <a href="/web-design-baton-rouge/">Baton Rouge</a>
+      <a href="/web-design-gonzales/">Gonzales</a>
+      <a href="/web-design-prairieville/">Prairieville</a>
+      <a href="/web-design-denham-springs/">Denham Springs</a>
+      <span class="footer-place">Zachary</span>
+      <span class="footer-place">Central</span>
+      <span class="footer-place">Baker</span>
+    </nav>
+
+    <nav class="footer-col" aria-label="Contact">
+      <p class="footer-title">Contact</p>
+      <a href="mailto:knightwebstudio1@gmail.com">knightwebstudio1@gmail.com</a>
+      <a href="tel:+12252550837">(225) 255-0837</a>
+      <a href="/contact/">Start a project</a>
+    </nav>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>&copy; <span id="year">2026</span> KnightWebstudio. All rights reserved.</p>
+    <p class="footer-links"><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="#top">Back to top ↑</a></p>
+  </div>
+</footer>
+<script src="/assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+===== main index.html
+   -$1,000$2,000$4,000$8,000
+   +$1,000 $2,000 $4,000 $8,000
+   -Exterior cleaning · Local service & SEO
+   +Exterior cleaning · Local service & SEO (opens in a new tab)
+   -Health & wellness · Online store
+   +Health & wellness · Online store (opens in a new tab)
+   -Fintech SaaS · Product site & app UI
+   +Bookkeeping software · Product site & app screens (opens in a new tab)
+   -$125, $300, $600 or $1,000 a month
+   +$125, $300, $600 or $1,000/mo
+   -Book a discovery call
+   +Book a free 30-minute call
+===== main services/index.html
+   -Book a discovery call
+   +Book a free 30-minute call
+   [attr text]
+   +How missed-call text-back works, step by step
+===== main consulting/index.html
+   -$500$750$1,500
+   +$500 $750 $1,500
+   -Monthly plans and the Launch bundle$500 or $1,000 a month · $3,000
+   +Monthly plans and the Launch bundle$500 or $1,000/mo · $3,000
+   -Estimated extra revenue$2,133/month
+   +Estimated extra revenue$2,133/mo
+   -Book a discovery call
+   +Book a free 30-minute call
+===== main work/index.html
+   -Book a discovery call
+   +Book a free 30-minute call
+===== main process/index.html
+   -Book a discovery call
+   +Book a free 30-minute call
+===== main pricing/index.html
+   -Consulting & automation$350 audit · $500 or $1,000 a month
+   -Care plans$125, $300, $600 or $1,000 a month
+   +Consulting & automation$350 audit · $500 or $1,000/mo
+   +Care plans$125, $300, $600 or $1,000/mo
+   -Ask about the bundle
+   +Start the Launch bundle
+   -Book a discovery call
+   +Book a free 30-minute call
+===== main faq/index.html
+   -Book a discovery call
+   +Book a free 30-minute call
+===== main contact/index.html
+   -Advisor plan, $500/month
+   -Partner plan, $1,000/month
+   +Advisor plan, $500/mo
+   +Partner plan, $1,000/mo
+===== main about/index.html
+   -Book a discovery call
+   +Book a free 30-minute call
+===== main start/index.html
+   -$1,000$2,000$4,000$8,000
+   +$1,000 $2,000 $4,000 $8,000
+   -Fintech SaaS · Product site & app UI (opens in a new tab)
+   +Bookkeeping software · Product site & app screens (opens in a new tab)
+===== main web-design-baton-rouge/index.html
+   -$1,000$2,000$4,000$8,000
+   +$1,000 $2,000 $4,000 $8,000
+   -Exterior cleaning · Local service & SEO
+   +Exterior cleaning · Local service & SEO (opens in a new tab)
+   -smilyssoftwash.com
+   +smilyssoftwash.com (opens in a new tab)
+   -Book a discovery call
+   +Book a free 30-minute call
+===== main web-design-denham-springs/index.html
+   -$1,000$2,000$4,000$8,000
+   +$1,000 $2,000 $4,000 $8,000
+   -Exterior cleaning · Local service & SEO
+   +Exterior cleaning · Local service & SEO (opens in a new tab)
+   -smilyssoftwash.com
+   +smilyssoftwash.com (opens in a new tab)
+   -Book a discovery call
+   +Book a free 30-minute call
+===== main web-design-gonzales/index.html
+   -$1,000$2,000$4,000$8,000
+   +$1,000 $2,000 $4,000 $8,000
+   -Exterior cleaning · Local service & SEO
+   +Exterior cleaning · Local service & SEO (opens in a new tab)
+   -smilyssoftwash.com
+   +smilyssoftwash.com (opens in a new tab)
+   -Book a discovery call
+   +Book a free 30-minute call
+===== main web-design-prairieville/index.html
+   -$1,000$2,000$4,000$8,000
+   +$1,000 $2,000 $4,000 $8,000
+   -Exterior cleaning · Local service & SEO
+   +Exterior cleaning · Local service & SEO (opens in a new tab)
+   -smilyssoftwash.com
+   +smilyssoftwash.com (opens in a new tab)
+   -Book a discovery call
+   +Book a free 30-minute call
+===== main 404.html
+   -Back to homepage
+   +Back to the homepage

@@ -1,0 +1,158 @@
+{
+ "360-dark": {
+  "widgetText": "I am human Privacy - Terms",
+  "after": {
+   "vw": 360,
+   "vh": 740,
+   "overflowX": 0,
+   "challenge": [
+    {
+     "rect": {
+      "l": 21,
+      "t": 171,
+      "w": 320,
+      "h": 400,
+      "r": 341,
+      "b": 571
+     },
+     "vis": "visible",
+     "parent": {
+      "rect": {
+       "l": 20,
+       "t": 170,
+       "w": 322,
+       "h": 402,
+       "r": 342,
+       "b": 572
+      },
+      "z": "2147483647",
+      "pos": "absolute",
+      "vis": "visible",
+      "op": "1",
+      "display": "block"
+     }
+    }
+   ],
+   "header": {
+    "rect": {
+     "l": 0,
+     "t": 0,
+     "w": 360,
+     "h": 64,
+     "r": 360,
+     "b": 64
+    },
+    "z": "60"
+   },
+   "token": "empty",
+   "bodyOverflow": "clip"
+  },
+  "errs": [
+   "Failed to load resource: net::ERR_FAILED"
+  ]
+ },
+ "390-light": {
+  "widgetText": "I am human Privacy - Terms",
+  "after": {
+   "vw": 390,
+   "vh": 844,
+   "overflowX": 0,
+   "challenge": [
+    {
+     "rect": {
+      "l": 36,
+      "t": 223,
+      "w": 320,
+      "h": 400,
+      "r": 356,
+      "b": 623
+     },
+     "vis": "visible",
+     "parent": {
+      "rect": {
+       "l": 35,
+       "t": 222,
+       "w": 322,
+       "h": 402,
+       "r": 357,
+       "b": 624
+      },
+      "z": "2147483647",
+      "pos": "absolute",
+      "vis": "visible",
+      "op": "1",
+      "display": "block"
+     }
+    }
+   ],
+   "header": {
+    "rect": {
+     "l": 0,
+     "t": 0,
+     "w": 390,
+     "h": 64,
+     "r": 390,
+     "b": 64
+    },
+    "z": "60"
+   },
+   "token": "empty",
+   "bodyOverflow": "clip"
+  },
+  "errs": [
+   "Failed to load resource: net::ERR_FAILED"
+  ]
+ },
+ "1280-dark": {
+  "widgetText": "I am human Privacy - Terms",
+  "after": {
+   "vw": 1280,
+   "vh": 800,
+   "overflowX": 0,
+   "challenge": [
+    {
+     "rect": {
+      "l": 138,
+      "t": 151,
+      "w": 520,
+      "h": 570,
+      "r": 658,
+      "b": 721
+     },
+     "vis": "visible",
+     "parent": {
+      "rect": {
+       "l": 137,
+       "t": 150,
+       "w": 522,
+       "h": 572,
+       "r": 659,
+       "b": 722
+      },
+      "z": "2147483647",
+      "pos": "absolute",
+      "vis": "visible",
+      "op": "1",
+      "display": "block"
+     }
+    }
+   ],
+   "header": {
+    "rect": {
+     "l": 0,
+     "t": 0,
+     "w": 1280,
+     "h": 72,
+     "r": 1280,
+     "b": 72
+    },
+    "z": "60"
+   },
+   "token": "empty",
+   "bodyOverflow": "clip"
+  },
+  "errs": [
+   "Failed to load resource: net::ERR_FAILED"
+  ]
+ }
+}

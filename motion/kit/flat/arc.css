@@ -1,0 +1,29 @@
+/* KWS kit: arc focus carousel. Use with arc.js; a plain list without it. Theme and markup: NOTES.md */
+.kws-arc{--t:min(clamp(6.5rem,36vw - 1.6rem,9.5rem),30vw);--glow:var(--kit-gilt,var(--gold));--_i:var(--kit-ink,var(--ink));--_f:var(--kit-font-display,var(--font-display));--_r:var(--kit-radius,var(--r-md));--_b:1.5px solid;color:var(--kit-muted,var(--ink-2));font:var(--fs-sm,.9375rem)/1.5 var(--kit-font-body,var(--font-text));font-variation-settings:"SOFT" 100;text-align:center;text-wrap:balance;overflow-wrap:anywhere}
+.kws-arc-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,19rem),1fr));gap:2rem;margin:0;padding:0 0 60px;list-style:none}
+.kws-arc-item,.kws-arc-cap{display:grid;place-content:start center;justify-items:center;gap:.75rem;min-height:var(--cap,13.5rem)}
+.kws-arc-tile{display:grid;place-content:center;justify-items:center;gap:.45em;width:var(--t);height:var(--t);margin-bottom:1.6em;border-radius:var(--_r);outline:var(--_b) var(--kit-gilt,var(--gold));outline-offset:-.42em;background:var(--kit-accent,var(--board));box-shadow:inset 0 1px color-mix(in srgb,currentColor 45%,transparent),inset 0 -.2em rgb(0 0 0/.25),var(--kit-shadow,var(--shadow-2));color:var(--kit-accent-ink,var(--cream));font:600 max(.75rem,calc(var(--t)*.135))/1 var(--_f)}
+:is(.kws-arc-tile,.kws-arc-nav) svg{width:auto;height:2.9em;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.kws-arc-cap>*{margin:0}
+.kws-arc-name,.kws-arc-price{color:var(--_i);font:600 calc(var(--t)*.21)/1.1 var(--_f)}
+.kws-arc button{all:unset;box-sizing:border-box;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;cursor:pointer}
+.kws-arc-price,.kws-arc-link,button.kws-arc-nav{border:var(--_b);background:var(--kit-surface,var(--card));color:var(--_i)}
+.kws-arc-price{padding:.35em 1em .35em .7em;border-radius:.4em 1.4em 1.4em .4em;font-size:var(--fs-body,1.0625rem)}
+.kws-arc-line{max-width:22em}
+.kws-arc-link{padding:14px 24px;border-radius:var(--_r);box-shadow:inset 0 -2px rgb(0 0 0/.22);font-size:1rem;font-weight:700;text-decoration:none}
+.kws-arc :focus-visible{outline:3px solid var(--kit-ink,var(--focus));outline-offset:3px}
+.kws-hold .kws-arc:not(.is-live) li+li{display:none}
+.is-live .kws-arc-list{touch-action:pan-y pinch-zoom;cursor:grab;-webkit-user-select:none}
+.is-live .kws-arc-list::before{content:"";grid-area:1/1;place-self:start center;width:var(--t);height:var(--t);box-shadow:0 0 4rem 1.5rem var(--glow);opacity:.4;scale:.8;mix-blend-mode:screen}
+.is-live .kws-arc-item{grid-area:1/1;pointer-events:none}
+.is-live .kws-arc-tile,.is-live .is-on .kws-arc-cap{pointer-events:auto}
+.is-live .kws-arc-tile{cursor:pointer}
+.is-on .kws-arc-tile{outline-width:2.5px}
+.is-moving .kws-arc-tile{will-change:transform,opacity}
+.is-moving :is(.kws-arc-list,.kws-arc-tile):active{cursor:grabbing}
+.kws-arc-ctl{display:flex;place-content:center;align-items:center;gap:8px;margin-top:-44px}
+.kws-arc-nav svg{height:1.5rem}
+.kws-arc-n{min-width:5rem;color:var(--_i);font-weight:700}
+button.kws-arc-dot{background:radial-gradient(currentColor .19em,transparent .25em)}
+.kws-arc-dot[aria-current=true]{color:var(--kit-accent,var(--blue));font-size:1.6em}
+:is(.kws-arc-tile,.kws-arc-link,.kws-arc button){@media (hover:hover){&:hover{translate:0 -2px;outline-width:3px}}&:active{translate:0 1px}}

@@ -1,0 +1,8 @@
+#services .kws-arc Tab to next link -> its caption (and so its focus ring) is invisible for 131 ms, half opacity at 198 ms, settled at 598 ms
+   spring for 1 step(s): 612 ms
+   spring for 4 step(s): 713 ms
+   spring for 25 step(s): 863 ms
+#work .kws-spot Tab to next link -> its caption (and so its focus ring) is invisible for 125 ms, half opacity at 192 ms, settled at 592 ms
+   spring for 1 step(s): 613 ms
+   spring for 4 step(s): 713 ms
+   spring for 25 step(s): 863 ms

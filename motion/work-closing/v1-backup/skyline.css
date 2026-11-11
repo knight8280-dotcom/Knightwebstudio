@@ -1,0 +1,20 @@
+/* KWS kit: the town at night. A dusk sky, the name rising behind the skyline as the page arrives, the windows lit. Decorative; it ends a footer.
+   The sky takes the "band" shader when shader.js is there; without it this file is the whole picture. Theme (--kit-*) and markup: NOTES.md */
+.kws-skyline{--_g:var(--kit-bg,var(--footer));--_au:var(--kit-gilt,var(--gold));--_w:1vw;--_h:clamp(54px,var(--_w)*8.4,170px);display:grid;overflow:hidden;overflow:clip;background:var(--_g)}
+/* Sized from its own width where the browser can, so it also fits a column narrower than the screen */
+@supports (width:1cqw){.kws-skyline{container-type:inline-size;--_w:1cqw}}
+.kws-skyline>*{grid-area:1/1;position:relative;align-self:end;margin:0}
+/* A few still stars; the moving sky covers them with its own */
+.kws-skyline-sky{--_s:var(--_au) .9px,transparent 1.5px;align-self:stretch;min-height:calc(var(--_h) + 48px);isolation:isolate;background:radial-gradient(circle at 5% 36%,var(--_s)),radial-gradient(circle at 16% 58%,var(--_s)),radial-gradient(circle at 27% 24%,var(--_s)),radial-gradient(circle at 44% 40%,var(--_s)),radial-gradient(circle at 59% 20%,var(--_s)),radial-gradient(circle at 70% 52%,var(--_s)),radial-gradient(circle at 84% 30%,var(--_s)),radial-gradient(circle at 95% 48%,var(--_s));-webkit-mask:linear-gradient(transparent,black 45%);mask:linear-gradient(transparent,black 45%)}
+/* Dusk: the last warm light on the horizon under the blue hour. It sits over the shader, so both show */
+.kws-skyline-sky::after{content:"";position:absolute;inset:0;background:radial-gradient(70% 50% at 50% 100%,color-mix(in srgb,var(--_au) 40%,transparent),transparent 70%),radial-gradient(110% 130% at 50% 100%,var(--kit-shader-1,var(--board)),transparent 70%)}
+.kws-skyline-name{padding:.34em 0 max(var(--_h)*.42,54px - var(--_w)*6);color:var(--kit-ink,var(--ink));font:600 min(var(--_w)*100/var(--kws-fit,8.3),16rem)/.8 var(--kit-font-display,var(--font-display));font-variation-settings:"SOFT" 100;letter-spacing:-.03em;text-align:center;white-space:nowrap;opacity:.34;-webkit-mask:linear-gradient(black 30%,transparent 92%);mask:linear-gradient(black 30%,transparent 92%)}
+.kws-skyline-art{width:100%;height:var(--_h);fill:var(--_g);stroke:var(--_g)}
+.kws-skyline-lit{fill:var(--_au);stroke:none}
+/* The name rises as the scene scrolls into view: scroll-linked, never by itself; still where unsupported, with reduced motion or motion paused.
+   view(0px): measure against the whole screen, not the page's scroll-padding */
+@supports (animation-timeline:view()){@media (prefers-reduced-motion:no-preference){
+:root:not([data-motion=off]) .kws-skyline-name{animation:kws-skyline-rise linear both;animation-timeline:view(0px);animation-range:entry}
+@keyframes kws-skyline-rise{from{transform:translateY(40%)}}
+}}
+@media print{.kws-skyline{display:none}}

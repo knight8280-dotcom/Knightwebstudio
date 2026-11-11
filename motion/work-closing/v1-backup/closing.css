@@ -1,0 +1,31 @@
+/* KWS kit: closing band. A big line, a sentence, two actions, a number to call, on a colour block. No script.
+   kws-close centred, --strip compact, --card with appt.css. See NOTES.md */
+.kws-close{--_i:var(--kit-ink,var(--ink));--_g:var(--kit-bg,var(--board));--_au:var(--kit-gilt,var(--gold));--_d:color-mix(in oklab,var(--_g),black 28%);--_x:center;--_t:clamp(2.375rem,1.1rem + 5.4vw,4.75rem);position:relative;padding:var(--sec,clamp(64px,9vw,128px)) 0;background:var(--_g);color:var(--kit-muted,var(--ink-2));font-family:var(--kit-font-body,var(--font-text));text-align:var(--_x)}
+.kws-close[class]{background-image:linear-gradient(var(--_g),transparent 22%),linear-gradient(104deg,var(--_d),transparent 28% 54%,color-mix(in oklab,var(--_g),black 13%) 66%,transparent 78%,var(--_d))}
+.kws-close::before{content:"";position:absolute;inset:auto 0 calc(100% - 1px);height:16px;background:radial-gradient(circle at 50% 100%,var(--_g) 15px,transparent 16px) 50% 0/32px 100% repeat-x}
+.kws-close :where(h2,p){margin:0}
+.kws-close-in{display:grid;gap:24px;width:min(100% - 2*var(--gutter,clamp(20px,5vw,48px)),var(--maxw,1240px));margin:0 auto}
+.kws-close-kicker{display:flex;align-items:center;justify-content:var(--_x);gap:12px;margin-bottom:16px;color:var(--_au);font-size:.8125rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.kws-close-kicker::before,.kws-close-kicker::after{content:"";width:24px;height:2px;background:currentColor}
+.kws-close-kicker::after{display:var(--_k,block)}
+.kws-close-title,.kws-close-tel a{color:var(--_i);font:600 var(--fs-h3,1.4rem)/1.04 var(--kit-font-display,var(--font-display));font-variation-settings:"SOFT" 100;letter-spacing:-.02em}
+.kws-close-title{font-size:var(--_t);text-wrap:balance}
+.kws-close-mark{position:relative;white-space:nowrap}
+.kws-close-mark::after{content:"";position:absolute;inset:auto 0 -.16em;height:.3em;border-bottom:.09em solid var(--_au);border-radius:50%}
+.kws-close-text{display:inline-block;max-width:34em;margin-top:20px;font-size:var(--fs-lede,1.2rem);line-height:1.5}
+.kws-close-acts{display:grid;gap:12px}
+.kws-close-btn{display:flex;align-items:center;justify-content:center;min-height:56px;padding:12px 32px;border:1.5px solid;border-radius:var(--kit-radius,var(--r-md,14px));background:var(--kit-surface,var(--card));box-shadow:inset 0 -2px rgb(0 0 0/.22);font-size:1.0625rem;font-weight:700;line-height:1.2;text-decoration:none;transition:transform .16s}
+.kws-close-btn:any-link{color:var(--_i)}
+.kws-close-btn--main{border-color:transparent;background:var(--kit-accent,var(--blue))}
+.kws-close-btn--main:any-link{color:var(--kit-accent-ink,var(--on-blue))}
+.kws-close-btn:active{transform:translateY(1px)}
+.kws-close-tel a{display:inline-flex;align-items:center;min-height:44px;text-decoration:underline .08em var(--_au);text-underline-offset:.2em}
+.kws-close--card,.kws-close--strip{--_x:start;--_k:none;--_t:var(--fs-h2,clamp(1.875rem,1.2rem + 2.9vw,3.125rem))}
+.kws-close--strip{padding-block:clamp(40px,5vw,72px)}
+@media (min-width:600px){.kws-close-acts{display:flex;flex-wrap:wrap;justify-content:var(--_x)}}
+@media (min-width:980px){
+:is(.kws-close--card,.kws-close--strip) .kws-close-in{grid-template:auto auto 1fr/minmax(0,1fr) auto;column-gap:var(--gap-lg,80px)}
+.kws-close--card .kws-appt{grid-area:1/2/4/3;align-self:center;width:21rem}
+.kws-close--strip .kws-close-copy{grid-row:1/4;align-self:center}
+}
+@media (hover:hover){.kws-close-btn:hover{transform:translateY(-2px)}}

@@ -1,0 +1,50 @@
+INFO  arc: touch-action on list = pan-y pinch-zoom; on control row = auto
+PASS  arc: straight up swipe starting on the picture scrolls the page  {"pageMoved":261,"onBefore":0,"onAfter":0}
+PASS  arc: straight down swipe starting on the picture scrolls the page  {"pageMoved":-226,"onBefore":0,"onAfter":0}
+PASS  arc: slanted up-left (22deg) swipe starting on the picture scrolls the page  {"pageMoved":275,"onBefore":0,"onAfter":0}
+PASS  arc: slanted up-right (34deg) swipe starting on the picture scrolls the page  {"pageMoved":272,"onBefore":0,"onAfter":0}
+PASS  arc: straight up swipe starting on the caption scrolls the page  {"pageMoved":261,"onBefore":0,"onAfter":0}
+PASS  arc: straight down swipe starting on the caption scrolls the page  {"pageMoved":-226,"onBefore":0,"onAfter":0}
+PASS  arc: slanted up-left (22deg) swipe starting on the caption scrolls the page  {"pageMoved":253,"onBefore":0,"onAfter":0}
+PASS  arc: slanted up-right (34deg) swipe starting on the caption scrolls the page  {"pageMoved":279,"onBefore":0,"onAfter":0}
+PASS  arc: straight up swipe starting on the link scrolls the page  {"pageMoved":264,"onBefore":0,"onAfter":0}
+PASS  arc: straight down swipe starting on the link scrolls the page  {"pageMoved":-226,"onBefore":0,"onAfter":0}
+PASS  arc: slanted up-left (22deg) swipe starting on the link scrolls the page  {"pageMoved":262,"onBefore":0,"onAfter":0}
+PASS  arc: slanted up-right (34deg) swipe starting on the link scrolls the page  {"pageMoved":266,"onBefore":0,"onAfter":0}
+INFO  arc: 45deg swipe -> page moved 175px, item 0 -> 0, moving false
+INFO  arc: 30deg-from-horizontal swipe -> page moved 0px, item 0 -> 2
+PASS  arc: quick 120px sideways flick turns it; page does not scroll  {"from":2,"to":5,"pageMoved":0,"said":"Care & maintenance, 6 of 9"}
+INFO  arc 390: slow 40px swipe (released after a pause) SNAPS BACK
+INFO  arc 390: slow 70px swipe (released after a pause) advances 1
+PASS  arc: tap on the next item (side) centres it  {"from":6,"to":7,"url":"demo.html"}
+PASS  arc: a second finger landing mid-drag leaves a clean state  {"on":5,"moving":false}
+PASS  arc: touchcancel mid-drag settles  {"on":6,"moving":false}
+PASS  arc: rotate to 844x390 mid-move: re-measured, centred, nothing outside the window  {"sx":0,"list":[42,802],"parts":[[619,754],[679,798],[46,165],[90,225],[192,332],[346,498],[512,652]],"onCentre":0}
+PASS  arc: back to 390x844  {"sx":0,"off":0,"parts":[[41,145],[143,247],[245,349]]}
+PASS  arc: no console errors  
+INFO  spot: touch-action on list = pan-y pinch-zoom; on control row = auto
+PASS  spot: straight up swipe starting on the picture scrolls the page  {"pageMoved":259,"onBefore":0,"onAfter":0}
+PASS  spot: straight down swipe starting on the picture scrolls the page  {"pageMoved":-266,"onBefore":0,"onAfter":0}
+PASS  spot: slanted up-left (22deg) swipe starting on the picture scrolls the page  {"pageMoved":261,"onBefore":0,"onAfter":0}
+PASS  spot: slanted up-right (34deg) swipe starting on the picture scrolls the page  {"pageMoved":251,"onBefore":0,"onAfter":0}
+PASS  spot: straight up swipe starting on the caption scrolls the page  {"pageMoved":258,"onBefore":0,"onAfter":0}
+PASS  spot: straight down swipe starting on the caption scrolls the page  {"pageMoved":-262,"onBefore":0,"onAfter":0}
+PASS  spot: slanted up-left (22deg) swipe starting on the caption scrolls the page  {"pageMoved":249,"onBefore":0,"onAfter":0}
+PASS  spot: slanted up-right (34deg) swipe starting on the caption scrolls the page  {"pageMoved":267,"onBefore":0,"onAfter":0}
+PASS  spot: straight up swipe starting on the link scrolls the page  {"pageMoved":260,"onBefore":0,"onAfter":0}
+PASS  spot: straight down swipe starting on the link scrolls the page  {"pageMoved":-262,"onBefore":0,"onAfter":0}
+PASS  spot: slanted up-left (22deg) swipe starting on the link scrolls the page  {"pageMoved":262,"onBefore":0,"onAfter":0}
+PASS  spot: slanted up-right (34deg) swipe starting on the link scrolls the page  {"pageMoved":269,"onBefore":0,"onAfter":0}
+INFO  spot: 45deg swipe -> page moved 179px, item 0 -> 0, moving false
+INFO  spot: 30deg-from-horizontal swipe -> page moved 0px, item 0 -> 1
+PASS  spot: quick 120px sideways flick turns it; page does not scroll  {"from":1,"to":2,"pageMoved":0,"said":"Corbel Books, 3 of 3"}
+INFO  spot 390: slow 40px swipe (released after a pause) SNAPS BACK
+INFO  spot 390: slow 70px swipe (released after a pause) SNAPS BACK
+INFO  spot 390: slow 100px swipe (released after a pause) SNAPS BACK
+INFO  spot 390: slow 130px swipe (released after a pause) advances 7
+PASS  spot: tap on the next item (side) centres it  {"from":0,"to":1,"url":"demo.html"}
+PASS  spot: a second finger landing mid-drag leaves a clean state  {"on":0,"moving":false}
+PASS  spot: touchcancel mid-drag settles  {"on":1,"moving":false}
+PASS  spot: rotate to 844x390 mid-move: re-measured, centred, nothing outside the window  {"sx":0,"list":[42,802],"parts":[[483,802],[42,361],[212,632]],"onCentre":0}
+PASS  spot: back to 390x844  {"sx":0,"off":0,"parts":[[121,370],[20,269],[47,344]]}
+PASS  spot: no console errors  

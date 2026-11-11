@@ -1,0 +1,18 @@
+{
+  "home__mobile-light": {
+    "height": 15815,
+    "overflowX": 0,
+    "stops": 21,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "home__laptop-light": {
+    "height": 10546,
+    "overflowX": 0,
+    "stops": 15,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  }
+}

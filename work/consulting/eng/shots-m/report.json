@@ -1,0 +1,26 @@
+{
+  "consulting__mobile-light": {
+    "height": 13985,
+    "overflowX": 0,
+    "stops": 19,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "consulting__mobile-dark": {
+    "height": 13985,
+    "overflowX": 0,
+    "stops": 19,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "consulting__small-light": {
+    "height": 14579,
+    "overflowX": 0,
+    "stops": 22,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  }
+}

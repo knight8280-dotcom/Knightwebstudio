@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Kit on a bare page: no site stylesheet, no site script</title>
+<script>
+  // The one line a client page needs for the held space: a class for four seconds.
+  (function (d) { d.classList.add('kws-hold'); setTimeout(function () { d.classList.remove('kws-hold'); }, 4000); })(document.documentElement);
+</script>
+<link rel="stylesheet" href="../arc.css">
+<link rel="stylesheet" href="../spotlight.css">
+<style>
+/* Everything a client site would supply: a small reset (as a utility framework's base layer does), fonts, and the kit variables. */
+*, *::before, *::after { box-sizing: border-box; }
+h1, h2, h3, p { margin: 0; font-size: inherit; font-weight: inherit; }
+body { margin: 0; background: #FBF4E9; color: #4B3B33; font: 16px/1.6 "Avenir Next", "Segoe UI", system-ui, sans-serif; }
+:root {
+  --kit-bg: #FBF4E9; --kit-surface: #FFFFFF; --kit-ink: #2B1D17; --kit-muted: #5E4B42; --kit-line: #D9C7B3;
+  --kit-accent: #7A2E1D; --kit-accent-ink: #FFF6E6; --kit-notice: #A2542A; --kit-gilt: #E9B872;
+  --kit-radius: 999px; --kit-font-display: "Rockwell", "Roboto Slab", "Georgia", serif; --kit-font-body: "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --kit-shadow: 0 1px 0 rgba(43, 29, 23, .25), 0 14px 26px -16px rgba(43, 29, 23, .55);
+}
+main { max-width: 1100px; margin: 0 auto; padding: 48px 20px 96px; }
+h1 { margin-bottom: 40px; color: var(--kit-ink); font: 700 clamp(2rem, 6vw, 3.25rem)/1.05 var(--kit-font-display); }
+h2 { margin: 72px 0 32px; color: var(--kit-ink); font: 700 clamp(1.6rem, 4vw, 2.25rem)/1.1 var(--kit-font-display); }
+</style>
+</head>
+<body>
+<main>
+  <h1>The kit on a bare page</h1>
+{{ARC}}
+  <h2>Recent projects</h2>
+{{SPOT}}
+</main>
+<script src="../arc.js" defer></script>
+<script src="../spotlight.js" defer></script>
+</body>
+</html>

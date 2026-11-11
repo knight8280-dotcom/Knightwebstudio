@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#F6F0E4">
+<title>Motion kit demo: the closing band and the footer</title>
+<script>
+{{HEAD_SCRIPT}}
+</script>
+<link rel="preload" href="/assets/fonts/fraunces-soft.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/figtree.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/styles.css">
+<link rel="stylesheet" href="../light/shader.css">
+<link rel="stylesheet" href="closing.css">
+<link rel="stylesheet" href="appt.css">
+<link rel="stylesheet" href="footer.css">
+<link rel="stylesheet" href="skyline.css">
+<style>
+/* Demo page only: none of this ships. */
+/* The two shared rules the new footer retires (see NOTES.md, "Shared rules this replaces") */
+main { padding-bottom: 0; }
+.demo-bar { position: sticky; top: 0; z-index: var(--z-header); border-bottom: var(--seam); background: var(--paper); }
+.demo-bar-in { display: flex; align-items: center; gap: var(--s-3); min-height: var(--header-h); }
+.demo-bar .brand { margin-right: auto; }
+@media (max-width: 599.98px) { .demo-bar .brand-name { display: none; } }
+.demo-tag { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--s-2) var(--s-4); margin: 0 0 var(--s-6); padding-bottom: var(--s-3); border-bottom: var(--dash); color: var(--ink-3); font-size: var(--fs-sm); }
+.demo-tag b { font: 800 var(--fs-label)/1.4 var(--font-text); letter-spacing: .12em; text-transform: uppercase; color: var(--brick); }
+.demo-frame { margin-top: var(--s-5); border-radius: var(--r-lg); overflow: hidden; overflow: clip; box-shadow: var(--shadow-2); }
+.demo-frame + .demo-tag { margin-top: var(--stack); }
+/* A client's brand: dark green and cream, a bakery say. These variables re-skin both components; nothing else changes. */
+.demo-client {
+  --kit-font-display: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  --kit-font-body: "Trebuchet MS", "Lucida Grande", Verdana, sans-serif; --kit-radius: 4px;
+}
+.demo-client .kws-close { --kit-bg: #1E3A2B; --kit-ink: #FFFDF6; --kit-muted: #D8E0CF; --kit-accent: #FFFDF6; --kit-accent-ink: #1E3A2B; --kit-gilt: #E8B84A; --kit-line: rgba(255, 253, 246, .3); --kit-surface: rgba(255, 253, 246, .08); }
+.demo-client .kws-appt { --kit-surface: #FBF3DC; --kit-ink: #1E3A2B; --kit-muted: #4C5F52; --kit-accent: #1E3A2B; --kit-accent-ink: #FBF3DC; --kit-notice: #B4532A; --kit-line: #CDBF99; --kit-shadow: 0 2px 0 rgba(0, 0, 0, .35), 0 18px 34px -18px rgba(0, 0, 0, .7); }
+.demo-client .kws-foot { --kit-bg: #11261B; --kit-ink: #FFFDF6; --kit-muted: #B9C7B4; --kit-accent: #E8B84A; --kit-gilt: #E8B84A; --kit-line: rgba(255, 253, 246, .16); --kit-shader-1: #2F6B4A; --kws-fit: 7.4; }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="demo-bar">
+  <div class="container demo-bar-in">
+    <a class="brand" href="/" aria-label="KnightWebstudio home"><img class="crest" src="/assets/img/crest.svg" alt="" width="40" height="41"><span class="brand-name">KnightWebstudio</span></a>
+    <button class="kws-motion" data-kws="motion" type="button" hidden>
+      <svg class="kws-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg>
+      <svg class="kws-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+    </button>
+    <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to dark theme" title="Toggle theme">
+      <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-head">
+    <div class="container">
+      <p class="eyebrow">Motion kit · the end of every page</p>
+      <h1><span class="l">The closing band</span> <span class="l">and the footer</span></h1>
+      <p class="lede">Three closing bands, so pages do not all end alike, and one footer. Each band sits under a piece of a real page, the way it would on the site. Scroll to the very end for the footer.</p>
+    </div>
+  </section>
+
+  <!-- ===================== 1. THE STRIP, as it would close the FAQ page ===================== -->
+  <section class="section section-first">
+    <div class="container container-text">
+      <p class="demo-tag"><b>Band 1 of 3 · the strip</b> For short pages: FAQ, About, a city page. Below, the end of the FAQ page.</p>
+      <h2 class="title">After launch</h2>
+      <div class="faq">
+        <details class="faq-item" open>
+          <summary>Do I own the website?</summary>
+          <div class="faq-body"><p>Completely. The domain is registered in your name, the code and design are yours on final payment, and you can move to another provider at any time. We don't hold anything hostage.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>How does payment work?</summary>
+          <div class="faq-body"><p>The standard option is 50% to book the project and start design, 50% on launch. Payment plans are available too: 50% up front, then the rest in up to 3 equal monthly payments, the first due one month after the deposit. On Starter, that's $1,000 down, then about $333 a month. You can pay by card or ACH bank transfer through Stripe, or by check on request, and invoices are due within 7 days. Everything is fixed-price from the proposal — no hourly surprises.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="kws-close kws-close--strip on-blue kws-shader-host" aria-labelledby="close-strip">
+    <div class="kws-shader" data-kws="shader" data-shader="band" aria-hidden="true"></div>
+    <div class="kws-close-in">
+      <div class="kws-close-copy">
+        <h2 class="kws-close-title" id="close-strip">Still deciding? Book the free call.</h2>
+        <p class="kws-close-text">Thirty minutes, no pitch. You'll get a clear view of what your site needs and what it should cost — even if you build it yourself.</p>
+      </div>
+      <div class="kws-close-acts">
+        <a class="kws-close-btn kws-close-btn--main" href="/contact/" data-booking>Book a free 30-minute call</a>
+        <a class="kws-close-btn" href="/contact/">Send an enquiry</a>
+      </div>
+      <p class="kws-close-tel">Or call <a href="tel:+12252550837">(225) 255-0837</a></p>
+    </div>
+  </section>
+
+  <!-- ===================== 2. THE APPOINTMENT CARD, as it would close the Pricing page ===================== -->
+  <section class="section section-sand">
+    <div class="container">
+      <p class="demo-tag"><b>Band 2 of 3 · the appointment card</b> For the pages that sell: Pricing, Services, Consulting, Start. Below, the end of the Pricing page.</p>
+      <div class="card stack">
+        <h2 class="label">Every plan includes</h2>
+        <ul class="ticks">
+          <li>Daily off-site backups, restored on request</li>
+          <li>24/7 uptime monitoring with alerts</li>
+          <li>Security patches and platform updates</li>
+          <li>Error monitoring, with fixes when something breaks</li>
+          <li>Changes you request, made for you</li>
+          <li>No long-term contract or minimum term. Cancel or change with <a href="/terms/">10 days' written notice</a>, no fee.</li>
+        </ul>
+        <div class="btn-row">
+          <a class="btn" href="/contact/">Ask about care plans</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="kws-close kws-close--card on-blue kws-shader-host" aria-labelledby="close-card">
+    <div class="kws-shader" data-kws="shader" data-shader="band" aria-hidden="true"></div>
+    <div class="kws-close-in">
+      <div class="kws-close-copy">
+        <p class="kws-close-kicker">The discovery call</p>
+        <h2 class="kws-close-title" id="close-card">Tell us about your business.</h2>
+        <p class="kws-close-text">You leave with a plan for your website and your systems, and the fixed price for it, whether or not you hire us.</p>
+      </div>
+      <div class="kws-appt on-paper">
+        <p class="kws-appt-head"><span>Appointment card</span><span>No. 01</span></p>
+        <p class="kws-appt-title">Discovery call</p>
+        <dl>
+          <div><dt>Cost</dt><dd>Free</dd></div>
+          <div><dt>Length</dt><dd>30 minutes</dd></div>
+          <div><dt>Sales pitch</dt><dd>None</dd></div>
+          <div><dt>Where</dt><dd>A call, or in person</dd></div>
+        </dl>
+        <a class="kws-appt-btn" href="/contact/" data-booking>Book a free 30-minute call</a>
+      </div>
+      <div class="kws-close-acts">
+        <a class="kws-close-btn" href="/contact/">Send an enquiry</a>
+      </div>
+      <p class="kws-close-tel">Or call <a href="tel:+12252550837">(225) 255-0837</a></p>
+    </div>
+  </section>
+
+  <!-- ===================== 2b. THE CARD BY ITSELF ===================== -->
+  <section class="section">
+    <div class="container split split-even">
+      <div class="stack">
+        <p class="demo-tag"><b>The appointment card by itself</b> It is its own small file, so it can sit on paper too: beside the contact form, say.</p>
+        <h2>Rather talk it through first?</h2>
+        <p class="lede">Skip the form and pick a time, or call <a href="tel:+12252550837">(225) 255-0837</a>. Mon–Fri, 9am–6pm Central Time.</p>
+      </div>
+      <div class="kws-appt on-paper">
+        <p class="kws-appt-head"><span>Appointment card</span><span>No. 01</span></p>
+        <p class="kws-appt-title">Discovery call</p>
+        <dl>
+          <div><dt>Cost</dt><dd>Free</dd></div>
+          <div><dt>Length</dt><dd>30 minutes</dd></div>
+          <div><dt>Sales pitch</dt><dd>None</dd></div>
+          <div><dt>Where</dt><dd>A call, or in person</dd></div>
+        </dl>
+        <a class="kws-appt-btn" href="/contact/" data-booking>Book a free 30-minute call</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 3. THE SLIM FOOTERS ===================== -->
+  <section class="section section-sand">
+    <div class="container">
+      <p class="demo-tag"><b>The slim footer</b> For the landing page, which has no menu on purpose.</p>
+      <div class="demo-frame">
+{{FOOTER_START}}
+      </div>
+      <p class="demo-tag"><b>The slim footer, no script</b> For the not-found page: no year to fill in, and the sky stays still.</p>
+      <div class="demo-frame">
+{{FOOTER_BARE}}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 4. ANOTHER BRAND ===================== -->
+  <section class="section">
+    <div class="container">
+      <p class="demo-tag"><b>For client builds</b> The same two files and the same markup. Only the kit variables are set: a dark green and cream brand with other typefaces, the way a client build would.</p>
+      <div class="demo-frame demo-client">
+        <section class="kws-close kws-shader-host" aria-labelledby="close-client">
+          <div class="kws-shader" data-kws="shader" data-shader="band" aria-hidden="true"></div>
+          <div class="kws-close-in">
+            <div class="kws-close-copy">
+              <p class="kws-close-kicker">Free · 30 minutes · No pitch</p>
+              <h2 class="kws-close-title" id="close-client">Still deciding? Book the <span class="kws-close-mark">free call</span>.</h2>
+              <p class="kws-close-text">You'll get a clear view of what your website and your systems need, and what it should cost — even if you do it yourself.</p>
+            </div>
+            <div class="kws-close-acts">
+              <a class="kws-close-btn kws-close-btn--main" href="/contact/" data-booking>Book a free 30-minute call</a>
+              <a class="kws-close-btn" href="/contact/">Send an enquiry</a>
+            </div>
+            <p class="kws-close-tel">Or call <a href="tel:+12252550837">(225) 255-0837</a></p>
+          </div>
+        </section>
+{{FOOTER_SAMPLE}}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 5. THE STATEMENT, as it would close the home page, then the footer itself ===================== -->
+  <section class="section section-sand">
+    <div class="container container-text">
+      <p class="demo-tag"><b>Band 3 of 3 · the statement</b> For the home page and Work: the page's last word, centred. Then the footer.</p>
+      <h2 class="title">The build</h2>
+      <div class="faq">
+        <details class="faq-item" open>
+          <summary>How long does a website take?</summary>
+          <div class="faq-body"><p>A one-page site can be live in as little as 7 days, and an information website in as little as 7–10 days. A full business site runs 2–4 weeks, and stores take 4–6. The biggest variable is how quickly content and photos come back to us — we'll tell you exactly what we need on day one.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="kws-close on-blue kws-shader-host" aria-labelledby="close-sign">
+    <div class="kws-shader" data-kws="shader" data-shader="band" aria-hidden="true"></div>
+    <div class="kws-close-in">
+      <div class="kws-close-copy">
+        <p class="kws-close-kicker">Free · 30 minutes · No pitch</p>
+        <h2 class="kws-close-title" id="close-sign">Still deciding? Book the <span class="kws-close-mark">free call</span>.</h2>
+        <p class="kws-close-text">You'll get a clear view of what your website and your systems need, and what it should cost — even if you do it yourself.</p>
+      </div>
+      <div class="kws-close-acts">
+        <a class="kws-close-btn kws-close-btn--main" href="/contact/" data-booking>Book a free 30-minute call</a>
+        <a class="kws-close-btn" href="/contact/">Send an enquiry</a>
+      </div>
+      <p class="kws-close-tel">Or call <a href="tel:+12252550837">(225) 255-0837</a></p>
+    </div>
+  </section>
+
+</main>
+
+{{FOOTER}}
+<script src="/assets/js/main.js" defer></script>
+<script src="../light/shader.js" defer></script>
+</body>
+</html>

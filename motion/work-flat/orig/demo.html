@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#F6F0E4">
+<title>Motion kit demo: arc focus carousel and spotlight carousel</title>
+<script>
+  // Set the theme before first paint, so nobody sees a flash of the wrong
+  // one. Light is the default: a saved choice wins, otherwise a device set
+  // to dark gets the night theme. main.js still owns the toggle itself.
+  (function () {
+    var d = document.documentElement; d.classList.add('js');
+    // The header crest builds itself on the first page of a visit only
+    try { if (!sessionStorage.getItem('kws-crest')) { d.classList.add('crest-intro'); sessionStorage.setItem('kws-crest', '1'); } } catch (e) {}
+    try {
+      var t = localStorage.getItem('theme');
+      if (t !== 'dark' && t !== 'light') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      d.setAttribute('data-theme', t);
+    } catch (e) { /* private mode: the stylesheet follows the device instead */ }
+    // Scroll reveals hide blocks until main.js shows them. If that script has
+    // not started after four seconds (or the page has none), show everything.
+    setTimeout(function () { if (!window.kwsReady) d.classList.remove('js'); }, 4000);
+  })();
+</script>
+<link rel="preload" href="/assets/fonts/fraunces-soft.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/figtree.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/styles.css">
+<link rel="stylesheet" href="arc.css">
+<link rel="stylesheet" href="spotlight.css">
+<style>
+/* Demo page only: none of this ships. */
+.demo-bar { position: sticky; top: 0; z-index: var(--z-header); border-bottom: var(--seam); background: var(--paper); }
+.demo-bar-in { display: flex; align-items: center; gap: var(--s-3); min-height: var(--header-h); }
+.demo-bar .brand { margin-right: auto; }
+#demo-motion { white-space: nowrap; }
+html:not(.js) #demo-motion { display: none; }
+@media (max-width: 599.98px) { .demo-bar .brand-name { display: none; } }
+/* A client's brand: dark green and cream, a bakery say. These variables re-skin every kit component. */
+.demo-client {
+  --kit-bg: #12352A; --kit-surface: #1B4536; --kit-ink: #FBF3DC; --kit-muted: #CBD8C5; --kit-line: #4B7A62;
+  --kit-accent: #F3C55B; --kit-accent-ink: #12352A; --kit-notice: #F6A27A; --kit-gilt: #12352A;
+  --kit-radius: 4px; --kit-font-display: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  --kit-font-body: "Trebuchet MS", "Lucida Grande", Verdana, sans-serif; --kit-shadow: 0 2px 0 rgba(0, 0, 0, .35), 0 18px 34px -18px rgba(0, 0, 0, .7);
+  padding-block: var(--sec); background: var(--kit-bg); color: var(--kit-muted); font-family: var(--kit-font-body);
+}
+.demo-client h2, .demo-client h3:not([class]) { color: var(--kit-ink); font-family: var(--kit-font-display); font-variation-settings: normal; letter-spacing: 0; }
+.demo-client .demo-kicker { margin: 0 0 var(--s-3); color: var(--kit-notice); font-size: var(--fs-label); font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.demo-client .demo-sub { max-width: var(--measure); margin: var(--s-4) 0 var(--stack); color: var(--kit-muted); font-size: var(--fs-lede); }
+.demo-client .demo-gap { margin-top: var(--sec); }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="demo-bar">
+  <div class="container demo-bar-in">
+    <a class="brand" href="/" aria-label="KnightWebstudio home"><img class="crest" src="/assets/img/crest.svg" alt="" width="40" height="41"><span class="brand-name">KnightWebstudio</span></a>
+    <button class="btn btn-sm" id="demo-motion" type="button" aria-pressed="false">Pause motion</button>
+    <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to dark theme" title="Toggle theme">
+      <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ===================== 1. THE SERVICE WHEEL, as it would open the Services page ===================== -->
+  <section class="page-head">
+    <div class="container">
+      <p class="eyebrow">What we do</p>
+      <h1><span class="l">Everything your business</span> <span class="l">needs online, <span class="mark">under one roof</span></span></h1>
+      <p class="lede">Pick a single service or hand us the whole thing. Prices included.</p>
+    </div>
+  </section>
+
+  <section class="section section-first" id="services">
+    <div class="container">
+      <section class="kws-arc" data-kws="arc" data-noun="service" aria-label="Our services and their prices">
+        <ul class="kws-arc-list">
+          <li class="kws-arc-item">
+            <div class="kws-arc-tile" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="15" rx="2"/><path d="M3 9h18M6.5 13h6M6.5 16h4"/></svg>Websites</div>
+            <div class="kws-arc-cap">
+              <h2 class="kws-arc-name">Website design &amp; build</h2>
+              <p class="kws-arc-price">$1,000, $2,000 or $4,000</p>
+              <p class="kws-arc-line">A custom-designed marketing site, built from scratch and mobile-first.</p>
+              <a class="kws-arc-link" href="/services/#website-design" aria-label="See what's included in Website design &amp; build">See what's included</a>
+            </div>
+          </li>
+          <li class="kws-arc-item">
+            <div class="kws-arc-tile" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5.5 8.5h13l-1 11h-11l-1-11Z"/><path d="M9 11.5v-4a3 3 0 0 1 6 0v4"/></svg>Stores</div>
+            <div class="kws-arc-cap">
+              <h2 class="kws-arc-name">E-commerce stores</h2>
+              <p class="kws-arc-price">$8,000</p>
+              <p class="kws-arc-line">Sell online with a checkout people trust: Shopify, or a custom store.</p>
+              <a class="kws-arc-link" href="/services/#ecommerce" aria-label="See what's included in E-commerce stores">See what's included</a>
+            </div>
+          </li>
+          <li class="kws-arc-item">
+            <div class="kws-arc-tile" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 13.7-5.7L20 8.5M20 12a8 8 0 0 1-13.7 5.7L4 15.5"/><path d="M20 4v4.5h-4.5M4 20v-4.5h4.5"/></svg>Rescues</div>
+            <div class="kws-arc-cap">
+              <h2 class="kws-arc-name">Redesigns &amp; rescues</h2>
+              <p class="kws-arc-price">priced as a new site</p>
+              <p class="kws-arc-line">Dated, slow or abandoned sites rebuilt without losing your search rankings.</p>
+              <a class="kws-arc-link" href="/services/#redesigns" aria-label="See what's included in Redesigns &amp; rescues">See what's included</a>
+            </div>
+          </li>
+          <li class="kws-arc-item">
+            <div class="kws-arc-tile" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m4 20 1.2-4.8L16.5 4 20 7.5 8.8 18.8 4 20Z"/><path d="m14 6.5 3.5 3.5"/></svg>Brand</div>
+            <div class="kws-arc-cap">
+              <h2 class="kws-arc-name">Brand &amp; identity</h2>
+              <p class="kws-arc-price">$1,500</p>
+              <p class="kws-arc-line">Logo, colours and type, so everything you publish looks like one company.</p>
+              <a class="kws-arc-link" href="/services/#brand" aria-label="See what's included in Brand &amp; identity">See what's included</a>
+            </div>
+          </li>
+          <li class="kws-arc-item">
+            <div class="kws-arc-tile" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6"/><path d="m15 15 5.5 5.5"/></svg>SEO</div>
+            <div class="kws-arc-cap">
+              <h2 class="kws-arc-name">SEO &amp; performance</h2>
+              <p class="kws-arc-price">in every build</p>
+              <p class="kws-arc-line">Get found and stay fast, with analytics you can actually read.</p>
+              <a class="kws-arc-link" href="/services/#seo" aria-label="See what's included in SEO &amp; performance">See what's included</a>
+            </div>
+          </li>
+          <li class="kws-arc-item">
+            <div class="kws-arc-tile" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3.5 5 6v5.5c0 4.2 2.9 7.4 7 9 4.1-1.6 7-4.8 7-9V6l-7-2.5Z"/><path d="m9 12 2.2 2.2L15.2 10"/></svg>Care</div>
+            <div class="kws-arc-cap">
+              <h2 class="kws-arc-name">Care &amp; maintenance</h2>
+              <p class="kws-arc-price">$125, $300, $600 or $1,000/mo</p>
+              <p class="kws-arc-line">Updates, backups, uptime monitoring and security patches.</p>
+              <a class="kws-arc-link" href="/services/#care" aria-label="See what's included in Care &amp; maintenance">See what's included</a>
+            </div>
+          </li>
+          <li class="kws-arc-item">
+            <div class="kws-arc-tile" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4.5 5.5h15v10h-9l-4 3.5v-3.5h-2v-10Z"/><path d="M8.5 9.5h7M8.5 12.5h4"/></svg>Automation</div>
+            <div class="kws-arc-cap">
+              <h2 class="kws-arc-name">Automation</h2>
+              <p class="kws-arc-price">$750 or $1,500 per setup</p>
+              <p class="kws-arc-line">Missed calls texted back, bookings and reminders, quotes followed up.</p>
+              <a class="kws-arc-link" href="/services/#automation" aria-label="See what's included in Automation">See what's included</a>
+            </div>
+          </li>
+          <li class="kws-arc-item">
+            <div class="kws-arc-tile" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Google</div>
+            <div class="kws-arc-cap">
+              <h2 class="kws-arc-name">Google profile &amp; reviews</h2>
+              <p class="kws-arc-price">$500</p>
+              <p class="kws-arc-line">Your Google profile filled out properly, and a simple way to ask for reviews.</p>
+              <a class="kws-arc-link" href="/services/#google-reviews" aria-label="See what's included in Google profile &amp; reviews">See what's included</a>
+            </div>
+          </li>
+          <li class="kws-arc-item">
+            <div class="kws-arc-tile" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="m15.5 8.5-2 5-5 2 2-5 5-2Z"/></svg>Growth</div>
+            <div class="kws-arc-cap">
+              <h2 class="kws-arc-name">Growth consulting</h2>
+              <p class="kws-arc-price">$350 audit · $500 or $1,000/mo</p>
+              <p class="kws-arc-line">A clear plan for getting more customers, starting with a free online check.</p>
+              <a class="kws-arc-link" href="/services/#growth-consulting" aria-label="See what's included in Growth consulting">See what's included</a>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </section>
+
+  <!-- ===================== 2. THE PROJECT SPOTLIGHT, as it would sit on the home page or above the case rows on Work ===================== -->
+  <section class="section section-sand" id="work">
+    <div class="container">
+      <header class="section-head section-head-split">
+        <div>
+          <p class="eyebrow">Selected work</p>
+          <h2 id="spot-title">Recent projects</h2>
+        </div>
+        <p class="section-sub">Three live sites. Visit them and judge for yourself.</p>
+      </header>
+      <section class="kws-spot" data-kws="spotlight" data-noun="project" aria-labelledby="spot-title">
+        <ul class="kws-spot-list">
+          <li class="kws-spot-item">
+            <div class="kws-spot-frame">
+              <div class="kws-spot-bar" aria-hidden="true"><i></i><i></i><i></i><span>smilyssoftwash.com</span></div>
+              <img src="/assets/img/work-smilyssoftwash.jpg" alt="Smilys Softwash — before and after of a soft-washed roof and house exterior" width="1200" height="600" loading="lazy" decoding="async">
+            </div>
+            <div class="kws-spot-cap">
+              <p class="kws-spot-kind">Exterior cleaning · Local service &amp; SEO</p>
+              <h3 class="kws-spot-name">Smilys Softwash</h3>
+              <p class="kws-spot-text">Roof and house soft washing across Greater Baton Rouge: a service page per treatment, a before-and-after gallery and online quote requests.</p>
+              <a class="kws-spot-link" href="/work/" aria-label="See the project: Smilys Softwash">See the project</a>
+            </div>
+          </li>
+          <li class="kws-spot-item">
+            <div class="kws-spot-frame">
+              <div class="kws-spot-bar" aria-hidden="true"><i></i><i></i><i></i><span>risenhealthco.com</span></div>
+              <img src="/assets/img/work-risenhealthco.jpg" alt="Risen Health — a vial of BPC-157 beside the tagline &quot;Rise into divine health&quot;" width="1200" height="630" loading="lazy" decoding="async">
+            </div>
+            <div class="kws-spot-cap">
+              <p class="kws-spot-kind">Health &amp; wellness · Online store</p>
+              <h3 class="kws-spot-name">Risen Health</h3>
+              <p class="kws-spot-text">An online store for a family-owned peptide supplier: a 36-product catalog across eight categories, with a page for every product.</p>
+              <a class="kws-spot-link" href="/work/" aria-label="See the project: Risen Health">See the project</a>
+            </div>
+          </li>
+          <li class="kws-spot-item">
+            <div class="kws-spot-frame">
+              <div class="kws-spot-bar" aria-hidden="true"><i></i><i></i><i></i><span>corbelbooks.com</span></div>
+              <img src="/assets/img/work-corbelbooks.jpg" alt="Corbel Books homepage — bookkeeping and invoicing for small businesses" width="1200" height="630" loading="lazy" decoding="async">
+            </div>
+            <div class="kws-spot-cap">
+              <p class="kws-spot-kind">Fintech SaaS · Product site &amp; app UI</p>
+              <h3 class="kws-spot-name">Corbel Books</h3>
+              <p class="kws-spot-text">A full product site and dashboard for an invoicing and cash-flow tool, with Stripe card payments and Plaid bank sync.</p>
+              <a class="kws-spot-link" href="/work/" aria-label="See the project: Corbel Books">See the project</a>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <p class="section-more"><a class="more-link" href="/work/">See the work in detail<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a></p>
+    </div>
+  </section>
+
+  <!-- ===================== 3. THE SAME TWO COMPONENTS ON A CLIENT'S PALETTE ===================== -->
+  <section class="demo-client" id="client">
+    <div class="container">
+      <p class="demo-kicker">Portability check</p>
+      <h2>The same wheel in a client’s colours</h2>
+      <p class="demo-sub">Nothing in the component files changed. This band sets the kit variables to a dark green and cream brand with other typefaces, the way a client build would.</p>
+      <section class="kws-arc" data-kws="arc" data-noun="service" aria-label="The same services, on a client palette">
+        <ul class="kws-arc-list">
+          <li class="kws-arc-item">
+            <div class="kws-arc-tile" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="15" rx="2"/><path d="M3 9h18M6.5 13h6M6.5 16h4"/></svg>Websites</div>
+            <div class="kws-arc-cap">
+              <h3 class="kws-arc-name">Website design &amp; build</h3>
+              <p class="kws-arc-price">$1,000, $2,000 or $4,000</p>
+              <p class="kws-arc-line">A custom-designed marketing site, built from scratch and mobile-first.</p>
+              <a class="kws-arc-link" href="/services/#website-design" aria-label="See what's included in Website design &amp; build">See what's included</a>
+            </div>
+          </li>
+          <li class="kws-arc-item">
+            <div class="kws-arc-tile" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5.5 8.5h13l-1 11h-11l-1-11Z"/><path d="M9 11.5v-4a3 3 0 0 1 6 0v4"/></svg>Stores</div>
+            <div class="kws-arc-cap">
+              <h3 class="kws-arc-name">E-commerce stores</h3>
+              <p class="kws-arc-price">$8,000</p>
+              <p class="kws-arc-line">Sell online with a checkout people trust: Shopify, or a custom store.</p>
+              <a class="kws-arc-link" href="/services/#ecommerce" aria-label="See what's included in E-commerce stores">See what's included</a>
+            </div>
+          </li>
+          <li class="kws-arc-item">
+            <div class="kws-arc-tile" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 13.7-5.7L20 8.5M20 12a8 8 0 0 1-13.7 5.7L4 15.5"/><path d="M20 4v4.5h-4.5M4 20v-4.5h4.5"/></svg>Rescues</div>
+            <div class="kws-arc-cap">
+              <h3 class="kws-arc-name">Redesigns &amp; rescues</h3>
+              <p class="kws-arc-price">priced as a new site</p>
+              <p class="kws-arc-line">Dated, slow or abandoned sites rebuilt without losing your search rankings.</p>
+              <a class="kws-arc-link" href="/services/#redesigns" aria-label="See what's included in Redesigns &amp; rescues">See what's included</a>
+            </div>
+          </li>
+          <li class="kws-arc-item">
+            <div class="kws-arc-tile" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m4 20 1.2-4.8L16.5 4 20 7.5 8.8 18.8 4 20Z"/><path d="m14 6.5 3.5 3.5"/></svg>Brand</div>
+            <div class="kws-arc-cap">
+              <h3 class="kws-arc-name">Brand &amp; identity</h3>
+              <p class="kws-arc-price">$1,500</p>
+              <p class="kws-arc-line">Logo, colours and type, so everything you publish looks like one company.</p>
+              <a class="kws-arc-link" href="/services/#brand" aria-label="See what's included in Brand &amp; identity">See what's included</a>
+            </div>
+          </li>
+          <li class="kws-arc-item">
+            <div class="kws-arc-tile" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6"/><path d="m15 15 5.5 5.5"/></svg>SEO</div>
+            <div class="kws-arc-cap">
+              <h3 class="kws-arc-name">SEO &amp; performance</h3>
+              <p class="kws-arc-price">in every build</p>
+              <p class="kws-arc-line">Get found and stay fast, with analytics you can actually read.</p>
+              <a class="kws-arc-link" href="/services/#seo" aria-label="See what's included in SEO &amp; performance">See what's included</a>
+            </div>
+          </li>
+          <li class="kws-arc-item">
+            <div class="kws-arc-tile" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3.5 5 6v5.5c0 4.2 2.9 7.4 7 9 4.1-1.6 7-4.8 7-9V6l-7-2.5Z"/><path d="m9 12 2.2 2.2L15.2 10"/></svg>Care</div>
+            <div class="kws-arc-cap">
+              <h3 class="kws-arc-name">Care &amp; maintenance</h3>
+              <p class="kws-arc-price">$125, $300, $600 or $1,000/mo</p>
+              <p class="kws-arc-line">Updates, backups, uptime monitoring and security patches.</p>
+              <a class="kws-arc-link" href="/services/#care" aria-label="See what's included in Care &amp; maintenance">See what's included</a>
+            </div>
+          </li>
+          <li class="kws-arc-item">
+            <div class="kws-arc-tile" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4.5 5.5h15v10h-9l-4 3.5v-3.5h-2v-10Z"/><path d="M8.5 9.5h7M8.5 12.5h4"/></svg>Automation</div>
+            <div class="kws-arc-cap">
+              <h3 class="kws-arc-name">Automation</h3>
+              <p class="kws-arc-price">$750 or $1,500 per setup</p>
+              <p class="kws-arc-line">Missed calls texted back, bookings and reminders, quotes followed up.</p>
+              <a class="kws-arc-link" href="/services/#automation" aria-label="See what's included in Automation">See what's included</a>
+            </div>
+          </li>
+          <li class="kws-arc-item">
+            <div class="kws-arc-tile" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Google</div>
+            <div class="kws-arc-cap">
+              <h3 class="kws-arc-name">Google profile &amp; reviews</h3>
+              <p class="kws-arc-price">$500</p>
+              <p class="kws-arc-line">Your Google profile filled out properly, and a simple way to ask for reviews.</p>
+              <a class="kws-arc-link" href="/services/#google-reviews" aria-label="See what's included in Google profile &amp; reviews">See what's included</a>
+            </div>
+          </li>
+          <li class="kws-arc-item">
+            <div class="kws-arc-tile" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="m15.5 8.5-2 5-5 2 2-5 5-2Z"/></svg>Growth</div>
+            <div class="kws-arc-cap">
+              <h3 class="kws-arc-name">Growth consulting</h3>
+              <p class="kws-arc-price">$350 audit · $500 or $1,000/mo</p>
+              <p class="kws-arc-line">A clear plan for getting more customers, starting with a free online check.</p>
+              <a class="kws-arc-link" href="/services/#growth-consulting" aria-label="See what's included in Growth consulting">See what's included</a>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <h2 class="demo-gap">And the same spotlight</h2>
+      <p class="demo-sub">The same three real projects, shown here only to prove the theme contract.</p>
+      <section class="kws-spot" data-kws="spotlight" data-noun="project" aria-label="The same projects, on a client palette">
+        <ul class="kws-spot-list">
+          <li class="kws-spot-item">
+            <div class="kws-spot-frame">
+              <div class="kws-spot-bar" aria-hidden="true"><i></i><i></i><i></i><span>smilyssoftwash.com</span></div>
+              <img src="/assets/img/work-smilyssoftwash.jpg" alt="Smilys Softwash — before and after of a soft-washed roof and house exterior" width="1200" height="600" loading="lazy" decoding="async">
+            </div>
+            <div class="kws-spot-cap">
+              <p class="kws-spot-kind">Exterior cleaning · Local service &amp; SEO</p>
+              <h3 class="kws-spot-name">Smilys Softwash</h3>
+              <p class="kws-spot-text">Roof and house soft washing across Greater Baton Rouge: a service page per treatment, a before-and-after gallery and online quote requests.</p>
+              <a class="kws-spot-link" href="/work/" aria-label="See the project: Smilys Softwash">See the project</a>
+            </div>
+          </li>
+          <li class="kws-spot-item">
+            <div class="kws-spot-frame">
+              <div class="kws-spot-bar" aria-hidden="true"><i></i><i></i><i></i><span>risenhealthco.com</span></div>
+              <img src="/assets/img/work-risenhealthco.jpg" alt="Risen Health — a vial of BPC-157 beside the tagline &quot;Rise into divine health&quot;" width="1200" height="630" loading="lazy" decoding="async">
+            </div>
+            <div class="kws-spot-cap">
+              <p class="kws-spot-kind">Health &amp; wellness · Online store</p>
+              <h3 class="kws-spot-name">Risen Health</h3>
+              <p class="kws-spot-text">An online store for a family-owned peptide supplier: a 36-product catalog across eight categories, with a page for every product.</p>
+              <a class="kws-spot-link" href="/work/" aria-label="See the project: Risen Health">See the project</a>
+            </div>
+          </li>
+          <li class="kws-spot-item">
+            <div class="kws-spot-frame">
+              <div class="kws-spot-bar" aria-hidden="true"><i></i><i></i><i></i><span>corbelbooks.com</span></div>
+              <img src="/assets/img/work-corbelbooks.jpg" alt="Corbel Books homepage — bookkeeping and invoicing for small businesses" width="1200" height="630" loading="lazy" decoding="async">
+            </div>
+            <div class="kws-spot-cap">
+              <p class="kws-spot-kind">Fintech SaaS · Product site &amp; app UI</p>
+              <h3 class="kws-spot-name">Corbel Books</h3>
+              <p class="kws-spot-text">A full product site and dashboard for an invoicing and cash-flow tool, with Stripe card payments and Plaid bank sync.</p>
+              <a class="kws-spot-link" href="/work/" aria-label="See the project: Corbel Books">See the project</a>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </section>
+
+</main>
+
+<script>
+  // Demo only: stands in for the site-wide pause control. The kit reads html[data-motion="off"] each time it is about to move.
+  document.getElementById('demo-motion').addEventListener('click', function () {
+    var off = document.documentElement.getAttribute('data-motion') !== 'off';
+    if (off) document.documentElement.setAttribute('data-motion', 'off'); else document.documentElement.removeAttribute('data-motion');
+    this.setAttribute('aria-pressed', off); this.textContent = off ? 'Motion paused' : 'Pause motion';
+  });
+</script>
+<script src="/assets/js/main.js" defer></script>
+<script src="arc.js" defer></script>
+<script src="spotlight.js" defer></script>
+</body>
+</html>

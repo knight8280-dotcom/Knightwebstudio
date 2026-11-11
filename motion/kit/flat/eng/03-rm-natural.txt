@@ -1,0 +1,24 @@
+net=none rm=reduce at=(top): fcp 120 live 84 preFrames 0 preMaxH 0 finalH 3315 CLS 0 [] scrollY 0 #workTop 890
+      fcp 112 live 81 preFrames 0 preMaxH 0 finalH 3315 CLS 0 [] scrollY 0 #workTop 890
+      fcp 124 live 119 preFrames 1 preMaxH 10477 finalH 3315 CLS 0 [] scrollY 0 #workTop 890
+net=none rm=reduce at=#work: fcp 108 live 74 preFrames 0 preMaxH 0 finalH 3315 CLS 0 [] scrollY 802 #workTop 88
+      fcp 96 live 94 preFrames 1 preMaxH 10477 finalH 3315 CLS 0 [] scrollY 802 #workTop 88
+      fcp 124 live 92 preFrames 0 preMaxH 0 finalH 3315 CLS 0 [] scrollY 802 #workTop 88
+net=none rm=no-preference at=(top): fcp 124 live 94 preFrames 0 preMaxH 0 finalH 3315 CLS 0 [] scrollY 0 #workTop 890
+      fcp 140 live 113 preFrames 0 preMaxH 0 finalH 3315 CLS 0 [] scrollY 0 #workTop 890
+      fcp 124 live 85 preFrames 0 preMaxH 0 finalH 3315 CLS 0 [] scrollY 0 #workTop 890
+net=none rm=no-preference at=#work: fcp 124 live 92 preFrames 0 preMaxH 0 finalH 3315 CLS 0 [] scrollY 802 #workTop 88
+      fcp 124 live 92 preFrames 0 preMaxH 0 finalH 3315 CLS 0 [] scrollY 802 #workTop 88
+      fcp 128 live 130 preFrames 1 preMaxH 3315 finalH 3315 CLS 0 [] scrollY 802 #workTop 88
+net=slow4g rm=reduce at=(top): fcp 1764 live 1759 preFrames 1 preMaxH 10477 finalH 3315 CLS 0 [] scrollY 0 #workTop 890
+      fcp 1732 live 1718 preFrames 2 preMaxH 10477 finalH 3315 CLS 0 [] scrollY 0 #workTop 890
+      fcp 1732 live 1724 preFrames 2 preMaxH 10477 finalH 3315 CLS 0 [] scrollY 0 #workTop 890
+net=slow4g rm=reduce at=#work: fcp 1768 live 1773 preFrames 2 preMaxH 10477 finalH 3315 CLS 0 [] scrollY 802 #workTop 88
+      fcp 1748 live 1713 preFrames 0 preMaxH 0 finalH 3315 CLS 0 [] scrollY 802 #workTop 88
+      fcp 1736 live 1732 preFrames 1 preMaxH 10477 finalH 3315 CLS 0 [] scrollY 802 #workTop 88
+net=slow4g rm=no-preference at=(top): fcp 1720 live 1711 preFrames 1 preMaxH 3315 finalH 3315 CLS 0 [] scrollY 0 #workTop 890
+      fcp 1736 live 1726 preFrames 2 preMaxH 3315 finalH 3315 CLS 0 [] scrollY 0 #workTop 890
+      fcp 1732 live 1727 preFrames 2 preMaxH 3315 finalH 3315 CLS 0 [] scrollY 0 #workTop 890
+net=slow4g rm=no-preference at=#work: fcp 1740 live 1737 preFrames 2 preMaxH 3315 finalH 3315 CLS 0 [] scrollY 802 #workTop 88
+      fcp 1736 live 1726 preFrames 2 preMaxH 3315 finalH 3315 CLS 0 [] scrollY 802 #workTop 88
+      fcp 1724 live 1719 preFrames 2 preMaxH 3315 finalH 3315 CLS 0 [] scrollY 802 #workTop 88

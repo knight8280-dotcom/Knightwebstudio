@@ -1,0 +1,30 @@
+/* KWS kit: spotlight carousel. Pairs with spotlight.js; plain cards without it. Theme (--kit-*) and markup: NOTES.md */
+.kws-spot{--w:100%;--cap:14.75rem;--_i:var(--kit-ink,var(--ink));--_s:var(--kit-surface,var(--card));--_m:var(--kit-muted,var(--ink-3));--_r:var(--kit-radius,var(--r-md));--_b:1.5px solid;color:var(--kit-muted,var(--ink-2));font-family:var(--kit-font-body,var(--font-text))}
+.kws-spot-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,13.5rem),1fr));gap:2rem 1.5rem;margin:0;padding:0;list-style:none}
+.kws-spot-frame{position:relative;width:var(--w);margin:0 auto;border:var(--_b) var(--_i);border-radius:min(var(--_r),1.25rem);background:var(--_s);box-shadow:var(--kit-shadow,var(--shadow-2));overflow:hidden}
+.kws-spot-bar{display:flex;align-items:center;gap:.4rem;padding:.55rem .8rem;border-bottom:var(--_b) var(--_i);color:var(--_m);font-size:.75rem;font-weight:600}
+.kws-spot-bar i{width:.5rem;height:.5rem;border-radius:50%;background:var(--kit-line,var(--line-2))}
+.kws-spot-frame img{display:block;width:100%;height:auto;aspect-ratio:40/21;object-fit:cover}
+.kws-spot-cap{padding-top:1rem;text-wrap:balance}
+.kws-spot-kind{margin:0 0 .5rem;color:var(--kit-notice,var(--brick));font-size:.8rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.kws-spot-name{margin:0;color:var(--_i);font-family:var(--kit-font-display,var(--font-display));font-size:var(--fs-title,1.6rem);font-weight:600;line-height:1.1}
+.kws-spot-text{max-width:34em;margin:.75rem auto 0;font-size:.94rem;line-height:1.5}
+.kws-spot-link{display:inline-block;margin-top:.75rem;padding:.75rem 1.1em;border:var(--_b);border-radius:var(--_r);background:var(--_s);color:var(--_i);font-size:.94rem;font-weight:700;line-height:1.25;text-decoration:none}
+.kws-spot-sr{position:absolute;clip-path:inset(50%)}
+.js .kws-spot:not(.is-live){padding-bottom:3.75rem}
+.js .kws-spot:not(.is-live) li+li{overflow:hidden;animation:kws-spot-hold 4s step-end}
+@keyframes kws-spot-hold{0%{max-height:0}}
+:is(.js,.is-live) .kws-spot-list{--w:min(86%,12rem + 30%);grid-template-columns:100%;gap:0}
+:is(.js,.is-live) .kws-spot-cap{min-height:var(--cap);text-align:center}
+.is-live .kws-spot-list{background:radial-gradient(closest-side at 50% 42%,var(--_s),transparent);touch-action:pan-y pinch-zoom;cursor:grab;-webkit-user-select:none}
+.is-live .kws-spot-item{grid-area:1/1;pointer-events:none}
+.is-live .kws-spot-frame,.is-live .is-on .kws-spot-cap{pointer-events:auto}
+.is-moving .kws-spot-frame{will-change:transform,opacity}
+.kws-spot-ctl{display:flex;flex-wrap:wrap;justify-content:center;margin-top:1rem}
+.kws-spot-ctl button{display:grid;place-items:center;width:1.5rem;height:2.75rem;padding:0;border:0;background:none;color:var(--_i);font:1.75rem/1 var(--kit-font-body,var(--font-text));cursor:pointer}
+button.kws-spot-nav{width:2.75rem;margin:0 .125rem;border:var(--_b) var(--kit-line,var(--line-2));border-radius:50%;background:var(--_s)}
+.kws-spot-dot::before{content:"";width:.5rem;height:.5rem;border:var(--_b) var(--_m);border-radius:9em}
+.kws-spot-ctl button:active,.kws-spot-link:active{transform:translateY(1px)}
+@media (hover:hover){.kws-spot-nav:hover{border-color:var(--_i)}.kws-spot-dot:hover::before{background:var(--_m)}.kws-spot-link:hover{transform:translateY(-2px)}}
+.kws-spot-dot[aria-current=true]::before{width:1.125rem;border-color:var(--kit-accent,var(--blue));background:var(--kit-accent,var(--blue))}
+@media (min-width:600px){.kws-spot{--cap:12.5rem}}

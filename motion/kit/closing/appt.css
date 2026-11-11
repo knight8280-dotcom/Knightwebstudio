@@ -1,0 +1,14 @@
+/* KWS kit: appointment card. What the free call is, printed as a card from the pad on the counter, with the booking button (btn.css) on it.
+   A paper object: on a colour block give it the paper palette (on this site, class on-paper). Theme (--kit-*) and markup: NOTES.md */
+.kws-appt{--_i:var(--kit-ink,var(--ink));--_s:var(--kit-surface,var(--card));--_e:2px dotted var(--kit-line,var(--line-2));box-sizing:border-box;max-width:23rem;padding:24px;border:1px solid transparent;border-radius:var(--kit-radius,var(--r-md,14px));background:var(--_s);box-shadow:var(--kit-shadow,var(--shadow-3));color:var(--kit-muted,var(--ink-2));font-family:var(--kit-font-body,var(--font-text));text-align:start;overflow-wrap:anywhere}
+/* The next two cards of the pad show under it */
+@supports (color:color-mix(in srgb,red,red)){.kws-appt{box-shadow:0 5px 0 -2px color-mix(in srgb,var(--_s) 72%,transparent),0 10px 0 -4px color-mix(in srgb,var(--_s) 44%,transparent),var(--kit-shadow,var(--shadow-3))}}
+.kws-appt :where(p,dl,dd){margin:0}
+.kws-appt-head{display:flex;justify-content:space-between;gap:12px;padding-bottom:12px;border-bottom:var(--_e);font-size:.75rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.kws-appt-title{padding:16px 0 8px;color:var(--_i);font:600 var(--fs-title,1.75rem)/1.05 var(--kit-font-display,var(--font-display));font-variation-settings:"SOFT" 100;letter-spacing:-.015em}
+.kws-appt dl div{display:flex;align-items:baseline;gap:8px;padding:6px 0;font-size:.9375rem}
+.kws-appt dl div::after{content:"";flex:1;order:1;min-width:16px;border-bottom:var(--_e);translate:0 -.3em}
+.kws-appt dt{flex:none;font-weight:600}
+.kws-appt dd{order:2;color:var(--_i);font-weight:700}
+.kws-appt div:first-child dd{color:var(--kit-notice,var(--brick))}
+.kws-appt .kws-btn{display:flex;margin-top:16px;padding-inline:16px}

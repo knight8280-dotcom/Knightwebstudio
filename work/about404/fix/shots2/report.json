@@ -1,0 +1,130 @@
+{
+  "about__mobile-light": {
+    "height": 5158,
+    "overflowX": 0,
+    "stops": 7,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "404.html__mobile-light": {
+    "height": 1239,
+    "overflowX": 0,
+    "stops": 2,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "about__mobile-dark": {
+    "height": 5158,
+    "overflowX": 0,
+    "stops": 7,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "404.html__mobile-dark": {
+    "height": 1239,
+    "overflowX": 0,
+    "stops": 2,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "about__small-light": {
+    "height": 5401,
+    "overflowX": 0,
+    "stops": 9,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "404.html__small-light": {
+    "height": 1363,
+    "overflowX": 0,
+    "stops": 2,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "about__tablet-light": {
+    "height": 4562,
+    "overflowX": 0,
+    "stops": 5,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "404.html__tablet-light": {
+    "height": 1105,
+    "overflowX": 0,
+    "stops": 2,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "about__laptop-light": {
+    "height": 3667,
+    "overflowX": 0,
+    "stops": 6,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "404.html__laptop-light": {
+    "height": 1036,
+    "overflowX": 0,
+    "stops": 2,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "about__desktop-light": {
+    "height": 3755,
+    "overflowX": 0,
+    "stops": 5,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "404.html__desktop-light": {
+    "height": 1062,
+    "overflowX": 0,
+    "stops": 2,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "about__desktop-dark": {
+    "height": 3755,
+    "overflowX": 0,
+    "stops": 5,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "404.html__desktop-dark": {
+    "height": 1062,
+    "overflowX": 0,
+    "stops": 2,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "about__wide-light": {
+    "height": 3758,
+    "overflowX": 0,
+    "stops": 4,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "404.html__wide-light": {
+    "height": 1080,
+    "overflowX": 0,
+    "stops": 2,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  }
+}

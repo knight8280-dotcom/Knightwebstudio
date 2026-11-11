@@ -1,0 +1,48 @@
+/* KnightWebstudio motion kit: animated backgrounds (their still state) and the motion pause button. Markup: NOTES.md.
+   This file alone is the look with no script, no WebGL or Save-Data; shader.js fades a moving canvas in over it. */
+.kws-shader-host { position: relative; isolation: isolate; }
+.kws-shader {
+  position: absolute; inset: 0; z-index: -1; overflow: hidden; border-radius: inherit; pointer-events: none;
+  /* wash: three lights; the text colours to stay readable under; the still's light */
+  --kws-s1: var(--kit-shader-1, var(--kit-accent, var(--L, var(--brick-tint)) var(--D, var(--board))));
+  --kws-s2: var(--kit-shader-2, var(--kit-gilt, var(--L, var(--card)) var(--D, var(--paper-3))));
+  --kws-s3: var(--kit-shader-3, var(--kit-surface, var(--paper-3)));
+  --kws-t1: var(--kit-ink, var(--ink)); --kws-t2: var(--kit-muted, var(--ink-3)); --kws-t3: var(--kit-accent, var(--blue)); --kws-t4: var(--kit-notice, var(--brick));
+  --kws-lit: var(--kit-surface, var(--card));
+}
+.kws-shader::before, .kws-shader::after, .kws-shader canvas { content: ""; position: absolute; inset: 0; width: 100%; height: 100%; transform-origin: 100% 100%; transition: opacity .6s; }
+.kws-shader::before { background: radial-gradient(58% 60% at 84% 8%, var(--kws-lit), transparent 72%), radial-gradient(46% 48% at 10% 34%, var(--kws-lit), transparent 70%); }
+/* band: folds from the ground itself, flecks in gilt */
+[data-shader="band"] { --kws-s2: var(--kit-gilt, var(--gold)); --kws-lit: var(--kit-accent, var(--blue)); }
+[data-shader="band"]::before { opacity: .09; }
+/* ribbon: silk, thread, second ribbon; three colourways */
+[data-shader="ribbon"] { z-index: 0; background: var(--kit-bg, var(--paper)); --kws-s1: var(--kit-accent, var(--blue)); --kws-s2: var(--kit-gilt, var(--gold)); --kws-s3: var(--kit-notice, var(--brick)); }
+[data-shader][data-tone="2"] { --kws-s1: var(--kit-notice, var(--brick)); --kws-s2: var(--kit-surface, var(--card)); --kws-s3: var(--kit-ink, var(--ink)); }
+[data-shader][data-tone="3"] { --kws-s1: var(--kit-ink, var(--ink)); --kws-s2: var(--kit-notice, var(--brick)); --kws-s3: var(--kit-accent, var(--blue)); }
+[data-shader="ribbon"]::before {
+  background: radial-gradient(150% 150% at 0 150%, transparent 61%, var(--kws-s2) 61.4% 62.4%, transparent 62.8%),
+    radial-gradient(150% 150% at 0 150%, transparent 46%, var(--kws-s1) 46.4% 66%, transparent 66.4%),
+    radial-gradient(140% 160% at 110% -70%, transparent 63%, var(--kws-s3) 63.4% 68%, transparent 68.4%);
+}
+.kws-shader canvas, .kws-shader.is-live::before { opacity: 0; }
+.kws-shader.is-live canvas { opacity: 1; }
+/* Fine grain in the ink colour, over still and moving alike */
+@supports (mask-composite: intersect) {
+  .kws-shader::after {
+    --kws-g: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.8 -.6'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background: var(--kws-t1); opacity: .06; mask: var(--kws-g), linear-gradient(transparent, black 15% 55%, transparent); mask-composite: intersect;
+  }
+  :is([data-shader="band"], [data-shader="ribbon"])::after { mask: var(--kws-g); }
+}
+
+/* The pause button. Its two icons swap with html[data-motion] */
+.kws-motion {
+  display: inline-grid; place-items: center; width: 44px; height: 44px; padding: 0; cursor: pointer;
+  border: 1.5px solid var(--kit-line, var(--line-2)); border-radius: 50%; background: var(--kit-surface, var(--card)); color: var(--kit-ink, var(--ink));
+}
+.kws-motion svg { width: 18px; height: 18px; fill: currentColor; stroke: none; }
+.kws-motion[hidden], .kws-motion .kws-play, [data-motion="off"] .kws-motion .kws-pause { display: none; }
+[data-motion="off"] .kws-motion .kws-play { display: block; }
+.kws-motion:active { transform: translateY(1px); }
+@media (hover: hover) { .kws-motion:hover { border-color: var(--kit-muted, var(--ink-3)); } }
+@media (prefers-reduced-motion: reduce) { .kws-shader * , .kws-shader::before { transition: none; } }

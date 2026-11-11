@@ -1,0 +1,4040 @@
+{
+ "/@390": {
+  "clsLoad": 0.0379,
+  "clsScroll": 0,
+  "heightBeforeFonts": 11912,
+  "heightAfterFonts": 11912,
+  "fontsBefore": {
+   "h1": "Georgia:44",
+   "p": ""
+  },
+  "loadShifts": [
+   {
+    "v": 0.037635686202391376,
+    "t": 1667,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "div.hero-copy > h1",
+      "txt": "",
+      "from": [
+       18,
+       184,
+       352,
+       51
+      ],
+      "to": [
+       20,
+       262,
+       350,
+       51
+      ]
+     },
+     {
+      "n": "h1 > span.l",
+      "txt": "every week",
+      "from": [
+       18,
+       262,
+       352,
+       51
+      ],
+      "to": [
+       20,
+       303,
+       350,
+       51
+      ]
+     },
+     {
+      "n": "span.l > span.mark",
+      "txt": "hours back",
+      "from": [
+       18,
+       262,
+       352,
+       51
+      ],
+      "to": [
+       20,
+       262,
+       350,
+       51
+      ]
+     },
+     {
+      "n": "span.mark > ::after",
+      "txt": "",
+      "from": [
+       126,
+       306,
+       87,
+       10
+      ],
+      "to": [
+       126,
+       306,
+       212,
+       11
+      ]
+     },
+     {
+      "n": "span.price-strip-nums > b",
+      "txt": "$4,000",
+      "from": [
+       171,
+       593,
+       81,
+       24
+      ],
+      "to": [
+       177,
+       593,
+       84,
+       24
+      ]
+     }
+    ]
+   },
+   {
+    "v": 0.0002928737551250663,
+    "t": 1704,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "div.hero-copy > p.lede",
+      "txt": ".",
+      "from": [
+       20,
+       431,
+       350,
+       22
+      ],
+      "to": [
+       20,
+       431,
+       350,
+       22
+      ]
+     },
+     {
+      "n": "div.container > a.topbar-tel",
+      "txt": "Call (225) 255-0837",
+      "from": [
+       241,
+       0,
+       129,
+       44
+      ],
+      "to": [
+       236,
+       0,
+       134,
+       44
+      ]
+     }
+    ]
+   }
+  ],
+  "scrollShifts": []
+ },
+ "/services/@390": {
+  "clsLoad": 0.0008,
+  "clsScroll": 0,
+  "heightBeforeFonts": 5686,
+  "heightAfterFonts": 5700,
+  "fontsBefore": {
+   "h1": "Georgia:42",
+   "p": "Arial:10"
+  },
+  "loadShifts": [
+   {
+    "v": 0.0007217505309544213,
+    "t": 1543,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "span.l > span.mark",
+      "txt": "one roof",
+      "from": [
+       19,
+       293,
+       351,
+       51
+      ],
+      "to": [
+       20,
+       293,
+       350,
+       51
+      ]
+     },
+     {
+      "n": "span.price-strip-nums > b",
+      "txt": "$4,000",
+      "from": [
+       171,
+       555,
+       81,
+       24
+      ],
+      "to": [
+       177,
+       555,
+       84,
+       24
+      ]
+     },
+     {
+      "n": "span.price-strip-nums > b",
+      "txt": "$8,000",
+      "from": [
+       253,
+       555,
+       74,
+       24
+      ],
+      "to": [
+       261,
+       555,
+       77,
+       24
+      ]
+     },
+     {
+      "n": "span.mark > ::after",
+      "txt": "",
+      "from": [
+       143,
+       338,
+       137,
+       10
+      ],
+      "to": [
+       143,
+       338,
+       160,
+       11
+      ]
+     }
+    ]
+   },
+   {
+    "v": 0.00011440555062174636,
+    "t": 1566,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "div.container > a.topbar-tel",
+      "txt": "Call (225) 255-0837",
+      "from": [
+       241,
+       0,
+       129,
+       44
+      ],
+      "to": [
+       236,
+       0,
+       134,
+       44
+      ]
+     }
+    ]
+   }
+  ],
+  "scrollShifts": []
+ },
+ "/consulting/@390": {
+  "clsLoad": 0.0002,
+  "clsScroll": 0,
+  "heightBeforeFonts": 13859,
+  "heightAfterFonts": 13936,
+  "fontsBefore": {
+   "h1": "Georgia:15",
+   "p": "Arial:23"
+  },
+  "loadShifts": [
+   {
+    "v": 0.00020335314968044464,
+    "t": 1551,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "div.container > a.topbar-tel",
+      "txt": "Call (225) 255-0837",
+      "from": [
+       241,
+       0,
+       129,
+       44
+      ],
+      "to": [
+       236,
+       0,
+       134,
+       44
+      ]
+     },
+     {
+      "n": "a.price-strip > span.price-strip-nums",
+      "txt": "$500 $750 $1,500",
+      "from": [
+       98,
+       597,
+       184,
+       24
+      ],
+      "to": [
+       94,
+       597,
+       191,
+       24
+      ]
+     }
+    ]
+   }
+  ],
+  "scrollShifts": []
+ },
+ "/work/@390": {
+  "clsLoad": 0.0001,
+  "clsScroll": 0,
+  "heightBeforeFonts": 4459,
+  "heightAfterFonts": 4459,
+  "fontsBefore": {
+   "h1": "Georgia:20",
+   "p": "Arial:8"
+  },
+  "loadShifts": [
+   {
+    "v": 0.00011440555062174636,
+    "t": 1589,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "div.container > a.topbar-tel",
+      "txt": "Call (225) 255-0837",
+      "from": [
+       241,
+       0,
+       129,
+       44
+      ],
+      "to": [
+       236,
+       0,
+       134,
+       44
+      ]
+     }
+    ]
+   }
+  ],
+  "scrollShifts": []
+ },
+ "/process/@390": {
+  "clsLoad": 0.0001,
+  "clsScroll": 0,
+  "heightBeforeFonts": 3315,
+  "heightAfterFonts": 3315,
+  "fontsBefore": {
+   "h1": "Georgia:11",
+   "p": "Arial:12"
+  },
+  "loadShifts": [
+   {
+    "v": 0.00011440555062174636,
+    "t": 1640,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "div.container > a.topbar-tel",
+      "txt": "Call (225) 255-0837",
+      "from": [
+       241,
+       0,
+       129,
+       44
+      ],
+      "to": [
+       236,
+       0,
+       134,
+       44
+      ]
+     }
+    ]
+   }
+  ],
+  "scrollShifts": []
+ },
+ "/pricing/@390": {
+  "clsLoad": 0.1588,
+  "clsScroll": 0,
+  "heightBeforeFonts": 10326,
+  "heightAfterFonts": 10378,
+  "fontsBefore": {
+   "h1": "Georgia:23",
+   "p": "Arial:7"
+  },
+  "loadShifts": [
+   {
+    "v": 0.15882781635945786,
+    "t": 1616,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "div.container > div.page-head-aside",
+      "txt": "On this page Website packages$1,000 · $2",
+      "from": [
+       5,
+       475,
+       380,
+       369
+      ],
+      "to": [
+       5,
+       516,
+       380,
+       328
+      ]
+     },
+     {
+      "n": "div > div.btn-row",
+      "txt": "Book a free 30-minute call",
+      "from": [
+       5,
+       387,
+       380,
+       86
+      ],
+      "to": [
+       5,
+       428,
+       380,
+       86
+      ]
+     },
+     {
+      "n": "div > p.lede",
+      "txt": "Websites, consulting and automation: wha",
+      "from": [
+       19,
+       281,
+       351,
+       83
+      ],
+      "to": [
+       20,
+       322,
+       350,
+       83
+      ]
+     },
+     {
+      "n": "span.l > span.mark",
+      "txt": "up front",
+      "from": [
+       20,
+       211,
+       350,
+       51
+      ],
+      "to": [
+       20,
+       252,
+       350,
+       51
+      ]
+     },
+     {
+      "n": "div.container > a.topbar-tel",
+      "txt": "Call (225) 255-0837",
+      "from": [
+       241,
+       0,
+       129,
+       44
+      ],
+      "to": [
+       236,
+       0,
+       134,
+       44
+      ]
+     }
+    ]
+   }
+  ],
+  "scrollShifts": []
+ },
+ "/faq/@390": {
+  "clsLoad": 0.0005,
+  "clsScroll": 0,
+  "heightBeforeFonts": 3613,
+  "heightAfterFonts": 3663,
+  "fontsBefore": {
+   "h1": "Georgia:21",
+   "p": "Arial:3"
+  },
+  "loadShifts": [
+   {
+    "v": 0.00045420711142364964,
+    "t": 1538,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "ol > li",
+      "txt": "Consulting & automation",
+      "from": [
+       128,
+       438,
+       187,
+       44
+      ],
+      "to": [
+       133,
+       438,
+       194,
+       44
+      ]
+     },
+     {
+      "n": "ol > li",
+      "txt": "Prices and payment",
+      "from": [
+       128,
+       394,
+       187,
+       44
+      ],
+      "to": [
+       133,
+       394,
+       194,
+       44
+      ]
+     },
+     {
+      "n": "div.container > a.topbar-tel",
+      "txt": "Call (225) 255-0837",
+      "from": [
+       241,
+       0,
+       129,
+       44
+      ],
+      "to": [
+       236,
+       0,
+       134,
+       44
+      ]
+     }
+    ]
+   }
+  ],
+  "scrollShifts": []
+ },
+ "/contact/@390": {
+  "clsLoad": 0.0001,
+  "clsScroll": 0,
+  "heightBeforeFonts": 3702,
+  "heightAfterFonts": 3702,
+  "fontsBefore": {
+   "h1": "Georgia:25",
+   "p": "Arial:12"
+  },
+  "loadShifts": [
+   {
+    "v": 0.00014409355816097155,
+    "t": 1651,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "div.container > a.topbar-tel",
+      "txt": "Call (225) 255-0837",
+      "from": [
+       241,
+       0,
+       129,
+       44
+      ],
+      "to": [
+       236,
+       0,
+       134,
+       44
+      ]
+     },
+     {
+      "n": "p.ticket-head > span",
+      "txt": "* Required",
+      "from": [
+       259,
+       613,
+       90,
+       17
+      ],
+      "to": [
+       264,
+       613,
+       85,
+       17
+      ]
+     }
+    ]
+   }
+  ],
+  "scrollShifts": []
+ },
+ "/about/@390": {
+  "clsLoad": 0.0016,
+  "clsScroll": 0,
+  "heightBeforeFonts": 5133,
+  "heightAfterFonts": 5158,
+  "fontsBefore": {
+   "h1": "Georgia:41",
+   "p": "Arial:5"
+  },
+  "loadShifts": [
+   {
+    "v": 0.0015895678587863175,
+    "t": 1597,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "h1 > span.l",
+      "txt": ",",
+      "from": [
+       20,
+       169,
+       350,
+       50
+      ],
+      "to": [
+       20,
+       169,
+       350,
+       50
+      ]
+     },
+     {
+      "n": "div.container > a.topbar-tel",
+      "txt": "Call (225) 255-0837",
+      "from": [
+       241,
+       0,
+       129,
+       44
+      ],
+      "to": [
+       236,
+       0,
+       134,
+       44
+      ]
+     }
+    ]
+   }
+  ],
+  "scrollShifts": []
+ },
+ "/start/@390": {
+  "clsLoad": 0.0011,
+  "clsScroll": 0,
+  "heightBeforeFonts": 6102,
+  "heightAfterFonts": 6134,
+  "fontsBefore": {
+   "h1": "Georgia:38",
+   "p": "Arial:29"
+  },
+  "loadShifts": [
+   {
+    "v": 0.00114932465651833,
+    "t": 1550,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "span.l > span.mark",
+      "txt": "customers",
+      "from": [
+       19,
+       243,
+       351,
+       45
+      ],
+      "to": [
+       20,
+       243,
+       350,
+       45
+      ]
+     },
+     {
+      "n": "p.lede > span.l",
+      "txt": ".",
+      "from": [
+       20,
+       310,
+       350,
+       22
+      ],
+      "to": [
+       20,
+       310,
+       350,
+       22
+      ]
+     },
+     {
+      "n": "div.container > a.topbar-tel",
+      "txt": "Call (225) 255-0837",
+      "from": [
+       241,
+       0,
+       129,
+       44
+      ],
+      "to": [
+       236,
+       0,
+       134,
+       44
+      ]
+     },
+     {
+      "n": "span.price-strip-nums > b",
+      "txt": "$4,000",
+      "from": [
+       171,
+       568,
+       81,
+       24
+      ],
+      "to": [
+       177,
+       568,
+       84,
+       24
+      ]
+     },
+     {
+      "n": "span.price-strip-nums > b",
+      "txt": "$8,000",
+      "from": [
+       253,
+       568,
+       74,
+       24
+      ],
+      "to": [
+       261,
+       568,
+       77,
+       24
+      ]
+     }
+    ]
+   }
+  ],
+  "scrollShifts": []
+ },
+ "/web-design-baton-rouge/@390": {
+  "clsLoad": 0.0004,
+  "clsScroll": 0,
+  "heightBeforeFonts": 7416,
+  "heightAfterFonts": 7416,
+  "fontsBefore": {
+   "h1": "Georgia:28",
+   "p": "Arial:1"
+  },
+  "loadShifts": [
+   {
+    "v": 0.0004402506826222601,
+    "t": 1581,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "div.container > a.topbar-tel",
+      "txt": "Call (225) 255-0837",
+      "from": [
+       241,
+       0,
+       129,
+       44
+      ],
+      "to": [
+       236,
+       0,
+       134,
+       44
+      ]
+     },
+     {
+      "n": "span > span.nowrap",
+      "txt": "· Baton Rouge, LA",
+      "from": [
+       55,
+       141,
+       299,
+       15
+      ],
+      "to": [
+       56,
+       141,
+       286,
+       15
+      ]
+     },
+     {
+      "n": "span.price-strip-nums > b",
+      "txt": "$4,000",
+      "from": [
+       171,
+       576,
+       81,
+       24
+      ],
+      "to": [
+       177,
+       576,
+       84,
+       24
+      ]
+     },
+     {
+      "n": "span.price-strip-nums > b",
+      "txt": "$8,000",
+      "from": [
+       253,
+       576,
+       74,
+       24
+      ],
+      "to": [
+       261,
+       576,
+       77,
+       24
+      ]
+     }
+    ]
+   }
+  ],
+  "scrollShifts": []
+ },
+ "/web-design-denham-springs/@390": {
+  "clsLoad": 0.0011,
+  "clsScroll": 0,
+  "heightBeforeFonts": 7186,
+  "heightAfterFonts": 7210,
+  "fontsBefore": {
+   "h1": "Georgia:24",
+   "p": ""
+  },
+  "loadShifts": [
+   {
+    "v": 0.001097735352777917,
+    "t": 1582,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "div.prose > p",
+      "txt": ". Your website needs to make that whole ",
+      "from": [
+       19,
+       721,
+       351,
+       74
+      ],
+      "to": [
+       20,
+       721,
+       350,
+       74
+      ]
+     },
+     {
+      "n": "div.container > a.topbar-tel",
+      "txt": "Call (225) 255-0837",
+      "from": [
+       241,
+       0,
+       129,
+       44
+      ],
+      "to": [
+       236,
+       0,
+       134,
+       44
+      ]
+     },
+     {
+      "n": "span.price-strip-nums > b",
+      "txt": "$4,000",
+      "from": [
+       171,
+       550,
+       81,
+       24
+      ],
+      "to": [
+       177,
+       550,
+       84,
+       24
+      ]
+     },
+     {
+      "n": "span.price-strip-nums > b",
+      "txt": "$8,000",
+      "from": [
+       253,
+       550,
+       74,
+       24
+      ],
+      "to": [
+       261,
+       550,
+       77,
+       24
+      ]
+     }
+    ]
+   }
+  ],
+  "scrollShifts": []
+ },
+ "/web-design-gonzales/@390": {
+  "clsLoad": 0.0019,
+  "clsScroll": 0,
+  "heightBeforeFonts": 7337,
+  "heightAfterFonts": 7362,
+  "fontsBefore": {
+   "h1": "Georgia:24",
+   "p": "Arial:1"
+  },
+  "loadShifts": [
+   {
+    "v": 0.0017543303669645383,
+    "t": 1578,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "div.prose > p",
+      "txt": "between Baton Rouge and New Orleans, so ",
+      "from": [
+       19,
+       695,
+       352,
+       149
+      ],
+      "to": [
+       20,
+       695,
+       350,
+       149
+      ]
+     },
+     {
+      "n": "div.container > p.lede",
+      "txt": ", from a studio just up",
+      "from": [
+       20,
+       416,
+       350,
+       22
+      ],
+      "to": [
+       20,
+       416,
+       350,
+       22
+      ]
+     },
+     {
+      "n": "div.container > a.topbar-tel",
+      "txt": "Call (225) 255-0837",
+      "from": [
+       241,
+       0,
+       129,
+       44
+      ],
+      "to": [
+       236,
+       0,
+       134,
+       44
+      ]
+     },
+     {
+      "n": "span > span.nowrap",
+      "txt": "· Gonzales, LA",
+      "from": [
+       55,
+       141,
+       270,
+       15
+      ],
+      "to": [
+       56,
+       141,
+       259,
+       15
+      ]
+     }
+    ]
+   },
+   {
+    "v": 0.0001226301157794161,
+    "t": 1609,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "span.price-strip-nums > b",
+      "txt": "$4,000",
+      "from": [
+       171,
+       605,
+       81,
+       24
+      ],
+      "to": [
+       177,
+       605,
+       84,
+       24
+      ]
+     },
+     {
+      "n": "span.price-strip-nums > b",
+      "txt": "$8,000",
+      "from": [
+       253,
+       605,
+       74,
+       24
+      ],
+      "to": [
+       261,
+       605,
+       77,
+       24
+      ]
+     }
+    ]
+   }
+  ],
+  "scrollShifts": []
+ },
+ "/web-design-prairieville/@390": {
+  "clsLoad": 0.0006,
+  "clsScroll": 0,
+  "heightBeforeFonts": 7309,
+  "heightAfterFonts": 7360,
+  "fontsBefore": {
+   "h1": "Georgia:22",
+   "p": "Arial:1"
+  },
+  "loadShifts": [
+   {
+    "v": 0.00043326408797504955,
+    "t": 1549,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "p > strong",
+      "txt": "are",
+      "from": [
+       19,
+       813,
+       351,
+       20
+      ],
+      "to": [
+       20,
+       813,
+       350,
+       20
+      ]
+     },
+     {
+      "n": "div.container > a.topbar-tel",
+      "txt": "Call (225) 255-0837",
+      "from": [
+       241,
+       0,
+       129,
+       44
+      ],
+      "to": [
+       236,
+       0,
+       134,
+       44
+      ]
+     },
+     {
+      "n": "span > span.nowrap",
+      "txt": "· Prairieville, LA",
+      "from": [
+       55,
+       141,
+       293,
+       15
+      ],
+      "to": [
+       56,
+       141,
+       280,
+       15
+      ]
+     }
+    ]
+   },
+   {
+    "v": 0.0001226301157794161,
+    "t": 1556,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "span.price-strip-nums > b",
+      "txt": "$4,000",
+      "from": [
+       171,
+       587,
+       81,
+       24
+      ],
+      "to": [
+       177,
+       587,
+       84,
+       24
+      ]
+     },
+     {
+      "n": "span.price-strip-nums > b",
+      "txt": "$8,000",
+      "from": [
+       253,
+       587,
+       74,
+       24
+      ],
+      "to": [
+       261,
+       587,
+       77,
+       24
+      ]
+     }
+    ]
+   }
+  ],
+  "scrollShifts": []
+ },
+ "/privacy/@390": {
+  "clsLoad": 0.0001,
+  "clsScroll": 0,
+  "heightBeforeFonts": 4971,
+  "heightAfterFonts": 4971,
+  "fontsBefore": {
+   "h1": "Georgia:37",
+   "p": "Arial:7"
+  },
+  "loadShifts": [
+   {
+    "v": 0.00011440555062174636,
+    "t": 1533,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "div.container > a.topbar-tel",
+      "txt": "Call (225) 255-0837",
+      "from": [
+       241,
+       0,
+       129,
+       44
+      ],
+      "to": [
+       236,
+       0,
+       134,
+       44
+      ]
+     }
+    ]
+   }
+  ],
+  "scrollShifts": []
+ },
+ "/terms/@390": {
+  "clsLoad": 0.0001,
+  "clsScroll": 0,
+  "heightBeforeFonts": 5263,
+  "heightAfterFonts": 5236,
+  "fontsBefore": {
+   "h1": "Georgia:28",
+   "p": "Arial:5"
+  },
+  "loadShifts": [
+   {
+    "v": 0.00011440555062174636,
+    "t": 1572,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "div.container > a.topbar-tel",
+      "txt": "Call (225) 255-0837",
+      "from": [
+       241,
+       0,
+       129,
+       44
+      ],
+      "to": [
+       236,
+       0,
+       134,
+       44
+      ]
+     }
+    ]
+   }
+  ],
+  "scrollShifts": []
+ },
+ "/checkout/@390": {
+  "clsLoad": 0.0001,
+  "clsScroll": 0,
+  "heightBeforeFonts": 2149,
+  "heightAfterFonts": 2149,
+  "fontsBefore": {
+   "h1": "Georgia:15",
+   "p": "Arial:8"
+  },
+  "loadShifts": [
+   {
+    "v": 0.00011440555062174636,
+    "t": 1545,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "div.container > a.topbar-tel",
+      "txt": "Call (225) 255-0837",
+      "from": [
+       241,
+       0,
+       129,
+       44
+      ],
+      "to": [
+       236,
+       0,
+       134,
+       44
+      ]
+     }
+    ]
+   }
+  ],
+  "scrollShifts": []
+ },
+ "/checkout/success/@390": {
+  "clsLoad": 0.0001,
+  "clsScroll": 0,
+  "heightBeforeFonts": 2218,
+  "heightAfterFonts": 2218,
+  "fontsBefore": {
+   "h1": "Georgia:9",
+   "p": "Arial:8"
+  },
+  "loadShifts": [
+   {
+    "v": 0.00011440555062174636,
+    "t": 1549,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "div.container > a.topbar-tel",
+      "txt": "Call (225) 255-0837",
+      "from": [
+       241,
+       0,
+       129,
+       44
+      ],
+      "to": [
+       236,
+       0,
+       134,
+       44
+      ]
+     }
+    ]
+   }
+  ],
+  "scrollShifts": []
+ },
+ "/404.html@390": {
+  "clsLoad": 0.0138,
+  "clsScroll": 0,
+  "heightBeforeFonts": 1290,
+  "heightAfterFonts": 1239,
+  "fontsBefore": {
+   "h1": "Georgia:22",
+   "p": "Georgia:3"
+  },
+  "loadShifts": [
+   {
+    "v": 0.0012788610515622417,
+    "t": 1532,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "div.container > p.nf-code.display",
+      "txt": "404",
+      "from": [
+       126,
+       338,
+       140,
+       102
+      ],
+      "to": [
+       120,
+       338,
+       151,
+       102
+      ]
+     },
+     {
+      "n": "div.container > h1.h2",
+      "txt": "This page has moved on",
+      "from": [
+       38,
+       440,
+       315,
+       38
+      ],
+      "to": [
+       26,
+       440,
+       339,
+       38
+      ]
+     }
+    ]
+   },
+   {
+    "v": 0.012490877792329635,
+    "t": 1548,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "div.container > div.btn-row",
+      "txt": "Back to the homepage Get in touch Call (",
+      "from": [
+       5,
+       615,
+       380,
+       181
+      ],
+      "to": [
+       5,
+       588,
+       380,
+       181
+      ]
+     },
+     {
+      "n": "div.container > p",
+      "txt": "The link is broken or the page no longer",
+      "from": [
+       20,
+       494,
+       350,
+       74
+      ],
+      "to": [
+       20,
+       494,
+       350,
+       74
+      ]
+     },
+     {
+      "n": "div.container > nav.nf-more",
+      "txt": "Or go straight to Services Pricing Our w",
+      "from": [
+       20,
+       812,
+       350,
+       32
+      ],
+      "to": [
+       20,
+       785,
+       350,
+       59
+      ]
+     },
+     {
+      "n": "div.container > a.topbar-tel",
+      "txt": "Call (225) 255-0837",
+      "from": [
+       241,
+       0,
+       129,
+       44
+      ],
+      "to": [
+       236,
+       0,
+       134,
+       44
+      ]
+     },
+     {
+      "n": "ul > li",
+      "txt": "Our work",
+      "from": [
+       0,
+       0,
+       0,
+       0
+      ],
+      "to": [
+       209,
+       820,
+       74,
+       24
+      ]
+     }
+    ]
+   }
+  ],
+  "scrollShifts": []
+ },
+ "/@1280": {
+  "clsLoad": 0.0024,
+  "clsScroll": 0,
+  "heightBeforeFonts": 8939,
+  "heightAfterFonts": 9045,
+  "fontsBefore": {
+   "h1": "Georgia:44",
+   "p": "Arial:23"
+  },
+  "loadShifts": [
+   {
+    "v": 0.0023576494216918944,
+    "t": 1540,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "div.container > div.header-actions",
+      "txt": "Call (225) 255-0837 Book a free call",
+      "from": [
+       889,
+       49,
+       358,
+       74
+      ],
+      "to": [
+       883,
+       49,
+       364,
+       74
+      ]
+     },
+     {
+      "n": "div.container > nav#nav.nav",
+      "txt": "Services Consulting Work Process Pricing",
+      "from": [
+       281,
+       58,
+       516,
+       44
+      ],
+      "to": [
+       300,
+       58,
+       526,
+       44
+      ]
+     },
+     {
+      "n": "div.btn-row > a.btn.btn-lg",
+      "txt": "See how it works",
+      "from": [
+       310,
+       559,
+       226,
+       86
+      ],
+      "to": [
+       316,
+       559,
+       229,
+       86
+      ]
+     },
+     {
+      "n": "div.hero-copy > p.lede",
+      "txt": ".",
+      "from": [
+       48,
+       507,
+       646,
+       25
+      ],
+      "to": [
+       48,
+       507,
+       646,
+       25
+      ]
+     },
+     {
+      "n": "span > span.topbar-long",
+      "txt": "· We meet in person anywhere in Greater ",
+      "from": [
+       73,
+       13,
+       600,
+       18
+      ],
+      "to": [
+       73,
+       13,
+       592,
+       18
+      ]
+     }
+    ]
+   }
+  ],
+  "scrollShifts": []
+ },
+ "/services/@1280": {
+  "clsLoad": 0.0061,
+  "clsScroll": 0,
+  "heightBeforeFonts": 4180,
+  "heightAfterFonts": 4157,
+  "fontsBefore": {
+   "h1": "Georgia:44",
+   "p": "Arial:10"
+  },
+  "loadShifts": [
+   {
+    "v": 0.006082615852355956,
+    "t": 1532,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "span.l > span.mark",
+      "txt": "one roof",
+      "from": [
+       48,
+       265,
+       932,
+       82
+      ],
+      "to": [
+       48,
+       265,
+       932,
+       82
+      ]
+     },
+     {
+      "n": "div.container > div.header-actions",
+      "txt": "Call (225) 255-0837 Book a free call",
+      "from": [
+       889,
+       49,
+       358,
+       74
+      ],
+      "to": [
+       883,
+       49,
+       364,
+       74
+      ]
+     },
+     {
+      "n": "div.container > nav#nav.nav",
+      "txt": "Services Consulting Work Process Pricing",
+      "from": [
+       281,
+       58,
+       516,
+       44
+      ],
+      "to": [
+       300,
+       58,
+       526,
+       44
+      ]
+     },
+     {
+      "n": "header.board-head > p.wide-only",
+      "txt": "What you see is what you pay.",
+      "from": [
+       839,
+       650,
+       335,
+       33
+      ],
+      "to": [
+       819,
+       650,
+       354,
+       33
+      ]
+     },
+     {
+      "n": "span > span.topbar-long",
+      "txt": "· We meet in person anywhere in Greater ",
+      "from": [
+       73,
+       13,
+       600,
+       18
+      ],
+      "to": [
+       73,
+       13,
+       592,
+       18
+      ]
+     }
+    ]
+   }
+  ],
+  "scrollShifts": []
+ },
+ "/consulting/@1280": {
+  "clsLoad": 0.0012,
+  "clsScroll": 0,
+  "heightBeforeFonts": 9925,
+  "heightAfterFonts": 9925,
+  "fontsBefore": {
+   "h1": "Georgia:15",
+   "p": "Arial:23"
+  },
+  "loadShifts": [
+   {
+    "v": 0.0006550320148468018,
+    "t": 1548,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "div.container > div.header-actions",
+      "txt": "Call (225) 255-0837 Book a free call",
+      "from": [
+       889,
+       49,
+       358,
+       74
+      ],
+      "to": [
+       883,
+       49,
+       364,
+       74
+      ]
+     },
+     {
+      "n": "div.btn-row > a.btn.btn-lg",
+      "txt": "Estimate what it's worth",
+      "from": [
+       315,
+       482,
+       276,
+       86
+      ],
+      "to": [
+       322,
+       482,
+       287,
+       86
+      ]
+     },
+     {
+      "n": "span > span.topbar-long",
+      "txt": "· We meet in person anywhere in Greater ",
+      "from": [
+       73,
+       13,
+       600,
+       18
+      ],
+      "to": [
+       73,
+       13,
+       592,
+       18
+      ]
+     },
+     {
+      "n": "div.container > a.topbar-tel",
+      "txt": "Call (225) 255-0837",
+      "from": [
+       1103,
+       0,
+       129,
+       44
+      ],
+      "to": [
+       1098,
+       0,
+       134,
+       44
+      ]
+     },
+     {
+      "n": "a.price-strip > span.price-strip-nums",
+      "txt": "$500 $750 $1,500",
+      "from": [
+       126,
+       581,
+       200,
+       24
+      ],
+      "to": [
+       122,
+       581,
+       200,
+       24
+      ]
+     }
+    ]
+   },
+   {
+    "v": 0.0005889284372329712,
+    "t": 1568,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "div.container > nav#nav.nav",
+      "txt": "Services Consulting Work Process Pricing",
+      "from": [
+       281,
+       58,
+       526,
+       44
+      ],
+      "to": [
+       300,
+       58,
+       526,
+       44
+      ]
+     },
+     {
+      "n": "a > span.toc-price",
+      "txt": "Your numbers, an estimate",
+      "from": [
+       590,
+       767,
+       194,
+       26
+      ],
+      "to": [
+       576,
+       767,
+       208,
+       26
+      ]
+     },
+     {
+      "n": "a > span.toc-price",
+      "txt": "$750 or $1,500 per setup",
+      "from": [
+       603,
+       715,
+       181,
+       26
+      ],
+      "to": [
+       593,
+       715,
+       191,
+       26
+      ]
+     },
+     {
+      "n": "a.price-strip > span.price-strip-note",
+      "txt": "Fixed, published prices",
+      "from": [
+       337,
+       581,
+       172,
+       24
+      ],
+      "to": [
+       345,
+       581,
+       172,
+       24
+      ]
+     },
+     {
+      "n": "span.price-strip-nums > b",
+      "txt": "$1,500",
+      "from": [
+       249,
+       581,
+       73,
+       24
+      ],
+      "to": [
+       253,
+       581,
+       76,
+       24
+      ]
+     }
+    ]
+   }
+  ],
+  "scrollShifts": []
+ },
+ "/work/@1280": {
+  "clsLoad": 0.0006,
+  "clsScroll": 0,
+  "heightBeforeFonts": 3402,
+  "heightAfterFonts": 3384,
+  "fontsBefore": {
+   "h1": "Georgia:21",
+   "p": "Arial:8"
+  },
+  "loadShifts": [
+   {
+    "v": 0.00034151291847229,
+    "t": 1528,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "div.container > nav#nav.nav",
+      "txt": "Services Consulting Work Process Pricing",
+      "from": [
+       281,
+       58,
+       516,
+       44
+      ],
+      "to": [
+       300,
+       58,
+       516,
+       44
+      ]
+     }
+    ]
+   },
+   {
+    "v": 0.0002657049655914307,
+    "t": 1541,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "div.container > div.header-actions",
+      "txt": "Call (225) 255-0837 Book a free call",
+      "from": [
+       889,
+       49,
+       358,
+       74
+      ],
+      "to": [
+       883,
+       49,
+       364,
+       74
+      ]
+     },
+     {
+      "n": "span > span.topbar-long",
+      "txt": "· We meet in person anywhere in Greater ",
+      "from": [
+       73,
+       13,
+       600,
+       18
+      ],
+      "to": [
+       73,
+       13,
+       592,
+       18
+      ]
+     },
+     {
+      "n": "div.container > a.topbar-tel",
+      "txt": "Call (225) 255-0837",
+      "from": [
+       1103,
+       0,
+       129,
+       44
+      ],
+      "to": [
+       1098,
+       0,
+       134,
+       44
+      ]
+     },
+     {
+      "n": "li > a",
+      "txt": "Contact",
+      "from": [
+       748,
+       58,
+       68,
+       44
+      ],
+      "to": [
+       754,
+       58,
+       72,
+       44
+      ]
+     },
+     {
+      "n": "li > a",
+      "txt": "Process",
+      "from": [
+       513,
+       58,
+       71,
+       44
+      ],
+      "to": [
+       516,
+       58,
+       69,
+       44
+      ]
+     }
+    ]
+   }
+  ],
+  "scrollShifts": []
+ },
+ "/process/@1280": {
+  "clsLoad": 0.0007,
+  "clsScroll": 0,
+  "heightBeforeFonts": 2675,
+  "heightAfterFonts": 2675,
+  "fontsBefore": {
+   "h1": "Georgia:11",
+   "p": "Arial:12"
+  },
+  "loadShifts": [
+   {
+    "v": 0.0003446683049201966,
+    "t": 1536,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "div.container > div.header-actions",
+      "txt": "Call (225) 255-0837 Book a free call",
+      "from": [
+       889,
+       49,
+       358,
+       74
+      ],
+      "to": [
+       883,
+       49,
+       364,
+       74
+      ]
+     },
+     {
+      "n": "p.lede > a",
+      "txt": "what it costs",
+      "from": [
+       48,
+       366,
+       651,
+       25
+      ],
+      "to": [
+       48,
+       366,
+       651,
+       25
+      ]
+     },
+     {
+      "n": "span > span.topbar-long",
+      "txt": "· We meet in person anywhere in Greater ",
+      "from": [
+       73,
+       13,
+       600,
+       18
+      ],
+      "to": [
+       73,
+       13,
+       592,
+       18
+      ]
+     },
+     {
+      "n": "div.container > a.topbar-tel",
+      "txt": "Call (225) 255-0837",
+      "from": [
+       1103,
+       0,
+       129,
+       44
+      ],
+      "to": [
+       1098,
+       0,
+       134,
+       44
+      ]
+     },
+     {
+      "n": "li > a",
+      "txt": "Contact",
+      "from": [
+       729,
+       58,
+       68,
+       44
+      ],
+      "to": [
+       735,
+       58,
+       72,
+       44
+      ]
+     }
+    ]
+   },
+   {
+    "v": 0.00034789633750915527,
+    "t": 1554,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "div.container > nav#nav.nav",
+      "txt": "Services Consulting Work Process Pricing",
+      "from": [
+       281,
+       58,
+       526,
+       44
+      ],
+      "to": [
+       300,
+       58,
+       526,
+       44
+      ]
+     }
+    ]
+   }
+  ],
+  "scrollShifts": []
+ },
+ "/pricing/@1280": {
+  "clsLoad": 0.002,
+  "clsScroll": 0,
+  "heightBeforeFonts": 5946,
+  "heightAfterFonts": 5946,
+  "fontsBefore": {
+   "h1": "Georgia:23",
+   "p": "Arial:7"
+  },
+  "loadShifts": [
+   {
+    "v": 0.001721434235572815,
+    "t": 1607,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "span.l > span.mark",
+      "txt": "up front",
+      "from": [
+       48,
+       265,
+       646,
+       82
+      ],
+      "to": [
+       48,
+       265,
+       646,
+       82
+      ]
+     },
+     {
+      "n": "div.container > nav#nav.nav",
+      "txt": "Services Consulting Work Process Pricing",
+      "from": [
+       281,
+       58,
+       516,
+       44
+      ],
+      "to": [
+       300,
+       58,
+       516,
+       44
+      ]
+     },
+     {
+      "n": "span.toc-price > span.nowrap",
+      "txt": "$1,000/mo",
+      "from": [
+       804,
+       510,
+       395,
+       20
+      ],
+      "to": [
+       804,
+       510,
+       395,
+       20
+      ]
+     },
+     {
+      "n": "span.toc-price > span.nowrap",
+      "txt": "$1,000/mo",
+      "from": [
+       804,
+       588,
+       395,
+       20
+      ],
+      "to": [
+       804,
+       588,
+       395,
+       20
+      ]
+     },
+     {
+      "n": "span.mark > ::after",
+      "txt": "",
+      "from": [
+       367,
+       336,
+       206,
+       17
+      ],
+      "to": [
+       367,
+       336,
+       253,
+       17
+      ]
+     }
+    ]
+   },
+   {
+    "v": 0.0002657049655914307,
+    "t": 1635,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "div.container > div.header-actions",
+      "txt": "Call (225) 255-0837 Book a free call",
+      "from": [
+       889,
+       49,
+       358,
+       74
+      ],
+      "to": [
+       883,
+       49,
+       364,
+       74
+      ]
+     },
+     {
+      "n": "span > span.topbar-long",
+      "txt": "· We meet in person anywhere in Greater ",
+      "from": [
+       73,
+       13,
+       600,
+       18
+      ],
+      "to": [
+       73,
+       13,
+       592,
+       18
+      ]
+     },
+     {
+      "n": "div.container > a.topbar-tel",
+      "txt": "Call (225) 255-0837",
+      "from": [
+       1103,
+       0,
+       129,
+       44
+      ],
+      "to": [
+       1098,
+       0,
+       134,
+       44
+      ]
+     },
+     {
+      "n": "li > a",
+      "txt": "Contact",
+      "from": [
+       748,
+       58,
+       68,
+       44
+      ],
+      "to": [
+       754,
+       58,
+       72,
+       44
+      ]
+     },
+     {
+      "n": "li > a",
+      "txt": "Process",
+      "from": [
+       513,
+       58,
+       71,
+       44
+      ],
+      "to": [
+       516,
+       58,
+       69,
+       44
+      ]
+     }
+    ]
+   }
+  ],
+  "scrollShifts": []
+ },
+ "/faq/@1280": {
+  "clsLoad": 0.0006,
+  "clsScroll": 0,
+  "heightBeforeFonts": 2984,
+  "heightAfterFonts": 2984,
+  "fontsBefore": {
+   "h1": "Georgia:22",
+   "p": "Arial:3"
+  },
+  "loadShifts": [
+   {
+    "v": 0.00034151291847229,
+    "t": 1543,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "div.container > nav#nav.nav",
+      "txt": "Services Consulting Work Process Pricing",
+      "from": [
+       281,
+       58,
+       516,
+       44
+      ],
+      "to": [
+       300,
+       58,
+       516,
+       44
+      ]
+     }
+    ]
+   },
+   {
+    "v": 0.0002657049655914307,
+    "t": 1561,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "div.container > div.header-actions",
+      "txt": "Call (225) 255-0837 Book a free call",
+      "from": [
+       889,
+       49,
+       358,
+       74
+      ],
+      "to": [
+       883,
+       49,
+       364,
+       74
+      ]
+     },
+     {
+      "n": "span > span.topbar-long",
+      "txt": "· We meet in person anywhere in Greater ",
+      "from": [
+       73,
+       13,
+       600,
+       18
+      ],
+      "to": [
+       73,
+       13,
+       592,
+       18
+      ]
+     },
+     {
+      "n": "div.container > a.topbar-tel",
+      "txt": "Call (225) 255-0837",
+      "from": [
+       1103,
+       0,
+       129,
+       44
+      ],
+      "to": [
+       1098,
+       0,
+       134,
+       44
+      ]
+     },
+     {
+      "n": "li > a",
+      "txt": "Contact",
+      "from": [
+       748,
+       58,
+       68,
+       44
+      ],
+      "to": [
+       754,
+       58,
+       72,
+       44
+      ]
+     },
+     {
+      "n": "li > a",
+      "txt": "Process",
+      "from": [
+       513,
+       58,
+       71,
+       44
+      ],
+      "to": [
+       516,
+       58,
+       69,
+       44
+      ]
+     }
+    ]
+   }
+  ],
+  "scrollShifts": []
+ },
+ "/contact/@1280": {
+  "clsLoad": 0.0008,
+  "clsScroll": 0,
+  "heightBeforeFonts": 2211,
+  "heightAfterFonts": 2211,
+  "fontsBefore": {
+   "h1": "Georgia:25",
+   "p": "Arial:12"
+  },
+  "loadShifts": [
+   {
+    "v": 0.0004982099056243897,
+    "t": 1574,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "div.container > div.header-actions",
+      "txt": "Call (225) 255-0837 Book a free call",
+      "from": [
+       889,
+       49,
+       358,
+       74
+      ],
+      "to": [
+       883,
+       49,
+       364,
+       74
+      ]
+     },
+     {
+      "n": "li > p",
+      "txt": "A real person reads your enquiry. There ",
+      "from": [
+       834,
+       552,
+       398,
+       47
+      ],
+      "to": [
+       835,
+       552,
+       397,
+       47
+      ]
+     },
+     {
+      "n": "li > p",
+      "txt": "Even if the answer is \"you don't need us",
+      "from": [
+       834,
+       647,
+       398,
+       47
+      ],
+      "to": [
+       835,
+       647,
+       397,
+       47
+      ]
+     },
+     {
+      "n": "span > span.topbar-long",
+      "txt": "· We meet in person anywhere in Greater ",
+      "from": [
+       73,
+       13,
+       600,
+       18
+      ],
+      "to": [
+       73,
+       13,
+       592,
+       18
+      ]
+     },
+     {
+      "n": "div.container > a.topbar-tel",
+      "txt": "Call (225) 255-0837",
+      "from": [
+       1103,
+       0,
+       129,
+       44
+      ],
+      "to": [
+       1098,
+       0,
+       134,
+       44
+      ]
+     }
+    ]
+   },
+   {
+    "v": 0.00034789633750915527,
+    "t": 1587,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "div.container > nav#nav.nav",
+      "txt": "Services Consulting Work Process Pricing",
+      "from": [
+       281,
+       58,
+       526,
+       44
+      ],
+      "to": [
+       300,
+       58,
+       526,
+       44
+      ]
+     }
+    ]
+   }
+  ],
+  "scrollShifts": []
+ },
+ "/about/@1280": {
+  "clsLoad": 0.0021,
+  "clsScroll": 0,
+  "heightBeforeFonts": 3749,
+  "heightAfterFonts": 3749,
+  "fontsBefore": {
+   "h1": "Georgia:41",
+   "p": "Arial:5"
+  },
+  "loadShifts": [
+   {
+    "v": 0.0002657049655914307,
+    "t": 1558,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "div.container > div.header-actions",
+      "txt": "Call (225) 255-0837 Book a free call",
+      "from": [
+       889,
+       49,
+       358,
+       74
+      ],
+      "to": [
+       883,
+       49,
+       364,
+       74
+      ]
+     },
+     {
+      "n": "span > span.topbar-long",
+      "txt": "· We meet in person anywhere in Greater ",
+      "from": [
+       73,
+       13,
+       600,
+       18
+      ],
+      "to": [
+       73,
+       13,
+       592,
+       18
+      ]
+     },
+     {
+      "n": "div.container > a.topbar-tel",
+      "txt": "Call (225) 255-0837",
+      "from": [
+       1103,
+       0,
+       129,
+       44
+      ],
+      "to": [
+       1098,
+       0,
+       134,
+       44
+      ]
+     },
+     {
+      "n": "li > a",
+      "txt": "Contact",
+      "from": [
+       729,
+       58,
+       68,
+       44
+      ],
+      "to": [
+       735,
+       58,
+       72,
+       44
+      ]
+     },
+     {
+      "n": "li > a",
+      "txt": "Process",
+      "from": [
+       494,
+       58,
+       71,
+       44
+      ],
+      "to": [
+       497,
+       58,
+       69,
+       44
+      ]
+     }
+    ]
+   },
+   {
+    "v": 0.0018163318634033202,
+    "t": 1574,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "h1 > span.l",
+      "txt": ",",
+      "from": [
+       48,
+       198,
+       646,
+       82
+      ],
+      "to": [
+       48,
+       198,
+       646,
+       82
+      ]
+     },
+     {
+      "n": "div.container > nav#nav.nav",
+      "txt": "Services Consulting Work Process Pricing",
+      "from": [
+       281,
+       58,
+       526,
+       44
+      ],
+      "to": [
+       300,
+       58,
+       526,
+       44
+      ]
+     }
+    ]
+   }
+  ],
+  "scrollShifts": []
+ },
+ "/start/@1280": {
+  "clsLoad": 0.0013,
+  "clsScroll": 0,
+  "heightBeforeFonts": 4549,
+  "heightAfterFonts": 4625,
+  "fontsBefore": {
+   "h1": "Georgia:38",
+   "p": "Arial:29"
+  },
+  "loadShifts": [
+   {
+    "v": 0.00043179059028625486,
+    "t": 1531,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "div.btn-row > a.btn.btn-lg",
+      "txt": "Call (225) 255-0837",
+      "from": [
+       294,
+       517,
+       259,
+       86
+      ],
+      "to": [
+       300,
+       517,
+       265,
+       86
+      ]
+     },
+     {
+      "n": "p.lede > span.l",
+      "txt": ".",
+      "from": [
+       48,
+       433,
+       651,
+       25
+      ],
+      "to": [
+       48,
+       433,
+       651,
+       25
+      ]
+     },
+     {
+      "n": "span > span.topbar-long",
+      "txt": "· We meet in person anywhere in Greater ",
+      "from": [
+       73,
+       13,
+       600,
+       18
+      ],
+      "to": [
+       73,
+       13,
+       592,
+       18
+      ]
+     },
+     {
+      "n": "a.price-strip > span.price-strip-nums",
+      "txt": "$1,000 $2,000 $4,000 $8,000",
+      "from": [
+       144,
+       615,
+       331,
+       24
+      ],
+      "to": [
+       140,
+       615,
+       331,
+       24
+      ]
+     },
+     {
+      "n": "div.container > a.topbar-tel",
+      "txt": "Call (225) 255-0837",
+      "from": [
+       1103,
+       0,
+       129,
+       44
+      ],
+      "to": [
+       1098,
+       0,
+       134,
+       44
+      ]
+     }
+    ]
+   },
+   {
+    "v": 0.0008719322204589844,
+    "t": 1551,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "span.l > span.mark",
+      "txt": "customers",
+      "from": [
+       47,
+       331,
+       692,
+       82
+      ],
+      "to": [
+       48,
+       331,
+       691,
+       82
+      ]
+     },
+     {
+      "n": "span.mark > ::after",
+      "txt": "",
+      "from": [
+       302,
+       403,
+       276,
+       17
+      ],
+      "to": [
+       302,
+       403,
+       325,
+       17
+      ]
+     },
+     {
+      "n": "a.price-strip > span.price-strip-note",
+      "txt": "Four fixed packages",
+      "from": [
+       487,
+       616,
+       153,
+       24
+      ],
+      "to": [
+       497,
+       616,
+       153,
+       24
+      ]
+     },
+     {
+      "n": "span.price-strip-nums > b",
+      "txt": "$4,000",
+      "from": [
+       303,
+       615,
+       89,
+       24
+      ],
+      "to": [
+       309,
+       615,
+       92,
+       24
+      ]
+     },
+     {
+      "n": "span.price-strip-nums > b",
+      "txt": "$8,000",
+      "from": [
+       393,
+       615,
+       78,
+       24
+      ],
+      "to": [
+       401,
+       615,
+       81,
+       24
+      ]
+     }
+    ]
+   }
+  ],
+  "scrollShifts": []
+ },
+ "/web-design-baton-rouge/@1280": {
+  "clsLoad": 0.0009,
+  "clsScroll": 0,
+  "heightBeforeFonts": 5626,
+  "heightAfterFonts": 5626,
+  "fontsBefore": {
+   "h1": "Georgia:28",
+   "p": "Arial:1"
+  },
+  "loadShifts": [
+   {
+    "v": 0.00040383830070495606,
+    "t": 1529,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "div.container > nav#nav.nav",
+      "txt": "Services Consulting Work Process Pricing",
+      "from": [
+       281,
+       58,
+       516,
+       44
+      ],
+      "to": [
+       300,
+       58,
+       516,
+       44
+      ]
+     },
+     {
+      "n": "span.price-strip-nums > b",
+      "txt": "$4,000",
+      "from": [
+       938,
+       559,
+       89,
+       24
+      ],
+      "to": [
+       943,
+       559,
+       92,
+       24
+      ]
+     },
+     {
+      "n": "span.price-strip-nums > b",
+      "txt": "$8,000",
+      "from": [
+       1027,
+       559,
+       78,
+       24
+      ],
+      "to": [
+       1036,
+       559,
+       81,
+       24
+      ]
+     }
+    ]
+   },
+   {
+    "v": 0.0004625001549720764,
+    "t": 1544,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "div.container > div.header-actions",
+      "txt": "Call (225) 255-0837 Book a free call",
+      "from": [
+       889,
+       49,
+       358,
+       74
+      ],
+      "to": [
+       883,
+       49,
+       364,
+       74
+      ]
+     },
+     {
+      "n": "div.btn-row > a.btn.btn-lg",
+      "txt": "Send an enquiry",
+      "from": [
+       941,
+       472,
+       221,
+       86
+      ],
+      "to": [
+       947,
+       472,
+       222,
+       86
+      ]
+     },
+     {
+      "n": "span > span.topbar-long",
+      "txt": "· We meet in person anywhere in Greater ",
+      "from": [
+       73,
+       13,
+       600,
+       18
+      ],
+      "to": [
+       73,
+       13,
+       592,
+       18
+      ]
+     },
+     {
+      "n": "a.price-strip > span.price-strip-nums",
+      "txt": "$1,000 $2,000 $4,000 $8,000",
+      "from": [
+       775,
+       559,
+       342,
+       24
+      ],
+      "to": [
+       770,
+       559,
+       342,
+       24
+      ]
+     },
+     {
+      "n": "div.container > a.topbar-tel",
+      "txt": "Call (225) 255-0837",
+      "from": [
+       1103,
+       0,
+       129,
+       44
+      ],
+      "to": [
+       1098,
+       0,
+       134,
+       44
+      ]
+     }
+    ]
+   }
+  ],
+  "scrollShifts": []
+ },
+ "/web-design-denham-springs/@1280": {
+  "clsLoad": 0.0042,
+  "clsScroll": 0,
+  "heightBeforeFonts": 5598,
+  "heightAfterFonts": 5571,
+  "fontsBefore": {
+   "h1": "Georgia:24",
+   "p": "Arial:1"
+  },
+  "loadShifts": [
+   {
+    "v": 0.00040383830070495606,
+    "t": 1541,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "div.container > nav#nav.nav",
+      "txt": "Services Consulting Work Process Pricing",
+      "from": [
+       281,
+       58,
+       516,
+       44
+      ],
+      "to": [
+       300,
+       58,
+       516,
+       44
+      ]
+     },
+     {
+      "n": "span.price-strip-nums > b",
+      "txt": "$4,000",
+      "from": [
+       938,
+       559,
+       89,
+       24
+      ],
+      "to": [
+       943,
+       559,
+       92,
+       24
+      ]
+     },
+     {
+      "n": "span.price-strip-nums > b",
+      "txt": "$8,000",
+      "from": [
+       1027,
+       559,
+       78,
+       24
+      ],
+      "to": [
+       1036,
+       559,
+       81,
+       24
+      ]
+     }
+    ]
+   },
+   {
+    "v": 0.0037497753858566287,
+    "t": 1578,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "div.container > div.header-actions",
+      "txt": "Call (225) 255-0837 Book a free call",
+      "from": [
+       889,
+       49,
+       358,
+       74
+      ],
+      "to": [
+       883,
+       49,
+       364,
+       74
+      ]
+     },
+     {
+      "n": "div.prose > p",
+      "txt": ". Your website needs to make that whole ",
+      "from": [
+       47,
+       727,
+       528,
+       47
+      ],
+      "to": [
+       48,
+       727,
+       527,
+       47
+      ]
+     },
+     {
+      "n": "div.btn-row > a.btn.btn-lg",
+      "txt": "Send an enquiry",
+      "from": [
+       941,
+       472,
+       221,
+       86
+      ],
+      "to": [
+       947,
+       472,
+       222,
+       86
+      ]
+     },
+     {
+      "n": "span > span.topbar-long",
+      "txt": "· We meet in person anywhere in Greater ",
+      "from": [
+       73,
+       13,
+       600,
+       18
+      ],
+      "to": [
+       73,
+       13,
+       592,
+       18
+      ]
+     },
+     {
+      "n": "a.price-strip > span.price-strip-nums",
+      "txt": "$1,000 $2,000 $4,000 $8,000",
+      "from": [
+       775,
+       559,
+       342,
+       24
+      ],
+      "to": [
+       770,
+       559,
+       342,
+       24
+      ]
+     }
+    ]
+   }
+  ],
+  "scrollShifts": []
+ },
+ "/web-design-gonzales/@1280": {
+  "clsLoad": 0.0059,
+  "clsScroll": 0,
+  "heightBeforeFonts": 5501,
+  "heightAfterFonts": 5501,
+  "fontsBefore": {
+   "h1": "Georgia:24",
+   "p": "Arial:1"
+  },
+  "loadShifts": [
+   {
+    "v": 0.005919263398647309,
+    "t": 1545,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "div.prose > p",
+      "txt": "between Baton Rouge and New Orleans, so ",
+      "from": [
+       47,
+       672,
+       528,
+       128
+      ],
+      "to": [
+       48,
+       672,
+       527,
+       128
+      ]
+     },
+     {
+      "n": "div.container > p.lede",
+      "txt": ", from a studio just up",
+      "from": [
+       47,
+       515,
+       555,
+       57
+      ],
+      "to": [
+       48,
+       515,
+       554,
+       57
+      ]
+     },
+     {
+      "n": "div.container > div.header-actions",
+      "txt": "Call (225) 255-0837 Book a free call",
+      "from": [
+       889,
+       49,
+       358,
+       74
+      ],
+      "to": [
+       883,
+       49,
+       364,
+       74
+      ]
+     },
+     {
+      "n": "div.container > nav#nav.nav",
+      "txt": "Services Consulting Work Process Pricing",
+      "from": [
+       281,
+       58,
+       516,
+       44
+      ],
+      "to": [
+       300,
+       58,
+       526,
+       44
+      ]
+     },
+     {
+      "n": "div.btn-row > a.btn.btn-lg",
+      "txt": "Send an enquiry",
+      "from": [
+       941,
+       472,
+       221,
+       86
+      ],
+      "to": [
+       947,
+       472,
+       222,
+       86
+      ]
+     }
+    ]
+   }
+  ],
+  "scrollShifts": []
+ },
+ "/web-design-prairieville/@1280": {
+  "clsLoad": 0.0335,
+  "clsScroll": 0,
+  "heightBeforeFonts": 5536,
+  "heightAfterFonts": 5582,
+  "fontsBefore": {
+   "h1": "Georgia:22",
+   "p": "Arial:1"
+  },
+  "loadShifts": [
+   {
+    "v": 0.00040383830070495606,
+    "t": 1559,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "div.container > nav#nav.nav",
+      "txt": "Services Consulting Work Process Pricing",
+      "from": [
+       281,
+       58,
+       516,
+       44
+      ],
+      "to": [
+       300,
+       58,
+       516,
+       44
+      ]
+     },
+     {
+      "n": "span.price-strip-nums > b",
+      "txt": "$4,000",
+      "from": [
+       938,
+       559,
+       89,
+       24
+      ],
+      "to": [
+       943,
+       559,
+       92,
+       24
+      ]
+     },
+     {
+      "n": "span.price-strip-nums > b",
+      "txt": "$8,000",
+      "from": [
+       1027,
+       559,
+       78,
+       24
+      ],
+      "to": [
+       1036,
+       559,
+       81,
+       24
+      ]
+     }
+    ]
+   },
+   {
+    "v": 0.03304918518066406,
+    "t": 1591,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "div.container > div.header-actions",
+      "txt": "Call (225) 255-0837 Book a free call",
+      "from": [
+       889,
+       49,
+       358,
+       74
+      ],
+      "to": [
+       883,
+       49,
+       364,
+       74
+      ]
+     },
+     {
+      "n": "div.prose > p",
+      "txt": "the storefront.",
+      "from": [
+       48,
+       781,
+       527,
+       19
+      ],
+      "to": [
+       48,
+       754,
+       527,
+       20
+      ]
+     },
+     {
+      "n": "div.btn-row > a.btn.btn-lg",
+      "txt": "Send an enquiry",
+      "from": [
+       941,
+       472,
+       221,
+       86
+      ],
+      "to": [
+       947,
+       472,
+       222,
+       86
+      ]
+     },
+     {
+      "n": "span > span.topbar-long",
+      "txt": "· We meet in person anywhere in Greater ",
+      "from": [
+       73,
+       13,
+       600,
+       18
+      ],
+      "to": [
+       73,
+       13,
+       592,
+       18
+      ]
+     },
+     {
+      "n": "p > strong",
+      "txt": "are",
+      "from": [
+       48,
+       754,
+       527,
+       20
+      ],
+      "to": [
+       48,
+       754,
+       527,
+       20
+      ]
+     }
+    ]
+   }
+  ],
+  "scrollShifts": []
+ },
+ "/privacy/@1280": {
+  "clsLoad": 0.0009,
+  "clsScroll": 0,
+  "heightBeforeFonts": 3509,
+  "heightAfterFonts": 3509,
+  "fontsBefore": {
+   "h1": "Georgia:38",
+   "p": "Arial:7"
+  },
+  "loadShifts": [
+   {
+    "v": 0.00034151291847229,
+    "t": 1538,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "div.container > nav#nav.nav",
+      "txt": "Services Consulting Work Process Pricing",
+      "from": [
+       281,
+       58,
+       516,
+       44
+      ],
+      "to": [
+       300,
+       58,
+       516,
+       44
+      ]
+     }
+    ]
+   },
+   {
+    "v": 0.0005239526867866517,
+    "t": 1547,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "div.prose > p",
+      "txt": ", we receive what you entered: your name",
+      "from": [
+       527,
+       624,
+       527,
+       102
+      ],
+      "to": [
+       527,
+       624,
+       527,
+       102
+      ]
+     },
+     {
+      "n": "div.container > div.header-actions",
+      "txt": "Call (225) 255-0837 Book a free call",
+      "from": [
+       889,
+       49,
+       358,
+       74
+      ],
+      "to": [
+       883,
+       49,
+       364,
+       74
+      ]
+     },
+     {
+      "n": "span > span.topbar-long",
+      "txt": "· We meet in person anywhere in Greater ",
+      "from": [
+       73,
+       13,
+       600,
+       18
+      ],
+      "to": [
+       73,
+       13,
+       592,
+       18
+      ]
+     },
+     {
+      "n": "div.container > a.topbar-tel",
+      "txt": "Call (225) 255-0837",
+      "from": [
+       1103,
+       0,
+       129,
+       44
+      ],
+      "to": [
+       1098,
+       0,
+       134,
+       44
+      ]
+     },
+     {
+      "n": "li > a",
+      "txt": "Contact",
+      "from": [
+       748,
+       58,
+       68,
+       44
+      ],
+      "to": [
+       754,
+       58,
+       72,
+       44
+      ]
+     }
+    ]
+   }
+  ],
+  "scrollShifts": []
+ },
+ "/terms/@1280": {
+  "clsLoad": 0.0315,
+  "clsScroll": 0,
+  "heightBeforeFonts": 3732,
+  "heightAfterFonts": 3798,
+  "fontsBefore": {
+   "h1": "Georgia:29",
+   "p": "Arial:5"
+  },
+  "loadShifts": [
+   {
+    "v": 0.031110422372817997,
+    "t": 1804,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "main > section#terms.section.section-first",
+      "txt": "On this page Standard payment terms Paym",
+      "from": [
+       0,
+       382,
+       1280,
+       418
+      ],
+      "to": [
+       0,
+       448,
+       1280,
+       352
+      ]
+     },
+     {
+      "n": "div.container > p.lede",
+      "txt": "Short version: fixed prices, 50% to star",
+      "from": [
+       48,
+       297,
+       651,
+       64
+      ],
+      "to": [
+       48,
+       363,
+       651,
+       64
+      ]
+     },
+     {
+      "n": "div.container > nav#nav.nav",
+      "txt": "Services Consulting Work Process Pricing",
+      "from": [
+       281,
+       58,
+       516,
+       44
+      ],
+      "to": [
+       300,
+       58,
+       516,
+       44
+      ]
+     }
+    ]
+   },
+   {
+    "v": 0.00035024304389953616,
+    "t": 1824,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "div.container > div.header-actions",
+      "txt": "Call (225) 255-0837 Book a free call",
+      "from": [
+       889,
+       49,
+       358,
+       74
+      ],
+      "to": [
+       883,
+       49,
+       364,
+       74
+      ]
+     },
+     {
+      "n": "div.prose > p",
+      "txt": "deposit to book your project and start w",
+      "from": [
+       526,
+       768,
+       528,
+       32
+      ],
+      "to": [
+       527,
+       768,
+       527,
+       32
+      ]
+     },
+     {
+      "n": "p > b.display",
+      "txt": "50%",
+      "from": [
+       526,
+       767,
+       528,
+       21
+      ],
+      "to": [
+       527,
+       767,
+       527,
+       21
+      ]
+     },
+     {
+      "n": "span > span.topbar-long",
+      "txt": "· We meet in person anywhere in Greater ",
+      "from": [
+       73,
+       13,
+       600,
+       18
+      ],
+      "to": [
+       73,
+       13,
+       592,
+       18
+      ]
+     },
+     {
+      "n": "div.container > a.topbar-tel",
+      "txt": "Call (225) 255-0837",
+      "from": [
+       1103,
+       0,
+       129,
+       44
+      ],
+      "to": [
+       1098,
+       0,
+       134,
+       44
+      ]
+     }
+    ]
+   }
+  ],
+  "scrollShifts": []
+ },
+ "/checkout/@1280": {
+  "clsLoad": 0.0147,
+  "clsScroll": 0,
+  "heightBeforeFonts": 1491,
+  "heightAfterFonts": 1460,
+  "fontsBefore": {
+   "h1": "Georgia:15",
+   "p": "Arial:8"
+  },
+  "loadShifts": [
+   {
+    "v": 0.00034151291847229,
+    "t": 1582,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "div.container > nav#nav.nav",
+      "txt": "Services Consulting Work Process Pricing",
+      "from": [
+       281,
+       58,
+       516,
+       44
+      ],
+      "to": [
+       300,
+       58,
+       516,
+       44
+      ]
+     }
+    ]
+   },
+   {
+    "v": 0.014357325649261473,
+    "t": 1616,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "main > section#checkout.section.section-first",
+      "txt": "Your orderKnightWebstudio Payment detail",
+      "from": [
+       0,
+       413,
+       1280,
+       387
+      ],
+      "to": [
+       0,
+       382,
+       1280,
+       418
+      ]
+     },
+     {
+      "n": "div.container > div.header-actions",
+      "txt": "Call (225) 255-0837 Book a free call",
+      "from": [
+       889,
+       49,
+       358,
+       74
+      ],
+      "to": [
+       883,
+       49,
+       364,
+       74
+      ]
+     },
+     {
+      "n": "span > span.topbar-long",
+      "txt": "· We meet in person anywhere in Greater ",
+      "from": [
+       73,
+       13,
+       600,
+       18
+      ],
+      "to": [
+       73,
+       13,
+       592,
+       18
+      ]
+     },
+     {
+      "n": "div.container > a.topbar-tel",
+      "txt": "Call (225) 255-0837",
+      "from": [
+       1103,
+       0,
+       129,
+       44
+      ],
+      "to": [
+       1098,
+       0,
+       134,
+       44
+      ]
+     },
+     {
+      "n": "li > a",
+      "txt": "Contact",
+      "from": [
+       748,
+       58,
+       68,
+       44
+      ],
+      "to": [
+       754,
+       58,
+       72,
+       44
+      ]
+     }
+    ]
+   }
+  ],
+  "scrollShifts": []
+ },
+ "/checkout/success/@1280": {
+  "clsLoad": 0.0016,
+  "clsScroll": 0,
+  "heightBeforeFonts": 1602,
+  "heightAfterFonts": 1602,
+  "fontsBefore": {
+   "h1": "Georgia:9",
+   "p": "Arial:8"
+  },
+  "loadShifts": [
+   {
+    "v": 0.0016175323486328126,
+    "t": 1547,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "div.container > div.header-actions",
+      "txt": "Call (225) 255-0837 Book a free call",
+      "from": [
+       889,
+       49,
+       358,
+       74
+      ],
+      "to": [
+       883,
+       49,
+       364,
+       74
+      ]
+     },
+     {
+      "n": "div.container > nav#nav.nav",
+      "txt": "Services Consulting Work Process Pricing",
+      "from": [
+       281,
+       58,
+       516,
+       44
+      ],
+      "to": [
+       300,
+       58,
+       526,
+       44
+      ]
+     },
+     {
+      "n": "span > span.topbar-long",
+      "txt": "· We meet in person anywhere in Greater ",
+      "from": [
+       73,
+       13,
+       600,
+       18
+      ],
+      "to": [
+       73,
+       13,
+       592,
+       18
+      ]
+     },
+     {
+      "n": "p > a.nowrap",
+      "txt": "(225) 255-0837",
+      "from": [
+       771,
+       480,
+       461,
+       20
+      ],
+      "to": [
+       771,
+       480,
+       461,
+       20
+      ]
+     },
+     {
+      "n": "div.btn-row > a.btn.btn-lg",
+      "txt": "Back to the homepage",
+      "from": [
+       304,
+       776,
+       268,
+       24
+      ],
+      "to": [
+       312,
+       776,
+       271,
+       24
+      ]
+     }
+    ]
+   }
+  ],
+  "scrollShifts": []
+ },
+ "/404.html@1280": {
+  "clsLoad": 0.0002,
+  "clsScroll": 0,
+  "heightBeforeFonts": 1036,
+  "heightAfterFonts": 1036,
+  "fontsBefore": {
+   "h1": "Georgia:22",
+   "p": "Georgia:3"
+  },
+  "loadShifts": [
+   {
+    "v": 0.0002299095153808594,
+    "t": 1776,
+    "input": false,
+    "sy": 0,
+    "src": [
+     {
+      "n": "div.btn-row > a.btn",
+      "txt": "Get in touch",
+      "from": [
+       758,
+       452,
+       151,
+       82
+      ],
+      "to": [
+       761,
+       452,
+       155,
+       82
+      ]
+     },
+     {
+      "n": "span > span.topbar-long",
+      "txt": "· We meet in person anywhere in Greater ",
+      "from": [
+       73,
+       13,
+       600,
+       18
+      ],
+      "to": [
+       73,
+       13,
+       592,
+       18
+      ]
+     },
+     {
+      "n": "div.btn-row > a.btn.btn-quiet",
+      "txt": "Call (225) 255-0837",
+      "from": [
+       906,
+       461,
+       179,
+       52
+      ],
+      "to": [
+       913,
+       461,
+       183,
+       52
+      ]
+     },
+     {
+      "n": "div.container > a.topbar-tel",
+      "txt": "Call (225) 255-0837",
+      "from": [
+       1103,
+       0,
+       129,
+       44
+      ],
+      "to": [
+       1098,
+       0,
+       134,
+       44
+      ]
+     },
+     {
+      "n": "ul > li",
+      "txt": "Our work",
+      "from": [
+       732,
+       565,
+       72,
+       44
+      ],
+      "to": [
+       735,
+       565,
+       74,
+       44
+      ]
+     }
+    ]
+   }
+  ],
+  "scrollShifts": []
+ }
+}

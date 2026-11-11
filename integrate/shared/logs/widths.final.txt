@@ -1,0 +1,20 @@
+http://localhost:8720/ no horizontal overflow from 360 to 1920
+http://localhost:8720/services/ no horizontal overflow from 360 to 1920
+http://localhost:8720/consulting/ no horizontal overflow from 360 to 1920
+http://localhost:8720/work/ no horizontal overflow from 360 to 1920
+http://localhost:8720/process/ no horizontal overflow from 360 to 1920
+http://localhost:8720/pricing/ no horizontal overflow from 360 to 1920
+http://localhost:8720/faq/ no horizontal overflow from 360 to 1920
+http://localhost:8720/contact/ no horizontal overflow from 360 to 1920
+http://localhost:8720/about/ no horizontal overflow from 360 to 1920
+http://localhost:8720/start/ no horizontal overflow from 360 to 1920
+http://localhost:8720/web-design-baton-rouge/ no horizontal overflow from 360 to 1920
+http://localhost:8720/web-design-denham-springs/ no horizontal overflow from 360 to 1920
+http://localhost:8720/web-design-gonzales/ no horizontal overflow from 360 to 1920
+http://localhost:8720/web-design-prairieville/ no horizontal overflow from 360 to 1920
+http://localhost:8720/privacy/ no horizontal overflow from 360 to 1920
+http://localhost:8720/terms/ no horizontal overflow from 360 to 1920
+http://localhost:8720/checkout/ no horizontal overflow from 360 to 1920
+http://localhost:8720/checkout/success/ no horizontal overflow from 360 to 1920
+http://localhost:8720/404.html no horizontal overflow from 360 to 1920
+exit 0

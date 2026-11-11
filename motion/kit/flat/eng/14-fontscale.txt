@@ -1,0 +1,7 @@
+text spacing 390: page sideways scroll 9px (with the kit hidden: 9px)  offenders: l[20..399 op1.0] mark[20..399 op1.0]
+root 20px @360: page sideways scroll 7px (with the kit hidden: 0px)  offenders: kws-arc-tile[233..367 op1.0]
+root 20px @390: page sideways scroll 0px (with the kit hidden: 0px)  offenders: 
+root 24px @360: page sideways scroll 52px (with the kit hidden: 52px)  offenders: l[20..412 op1.0] mark[20..412 op1.0] kws-arc-tile[244..405 op1.0] [object[298..361 op1.0]
+root 24px @390: page sideways scroll 30px (with the kit hidden: 22px)  offenders: l[20..412 op1.0] mark[20..412 op1.0] kws-arc-tile[259..420 op1.0]
+root 24px @430: page sideways scroll 10px (with the kit hidden: 0px)  offenders: kws-arc-tile[279..440 op1.0]
+root 32px @390: page sideways scroll 152px (with the kit hidden: 152px)  offenders: l[20..413 op1.0] l[20..542 op1.0] mark[20..542 op1.0] kws-arc-tile[281..494 op1.0] [object[353..437 op1.0] [object[371..414 op1.0] [object[389..411 op1.0]

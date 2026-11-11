@@ -1,0 +1,9 @@
+390 #services rm=no-preference: never=0 late=0 (fcp 116 live 740) natural=0 (fcp 104 live 93)
+390 #services rm=reduce: never=0 late=0 (fcp 108 live 735) natural=0 (fcp 124 live 74)
+390 #work rm=no-preference: never=0 late=0 (fcp 112 live 737) natural=0 (fcp 116 live 84)
+390 #work rm=reduce: never=0 late=0 (fcp 104 live 736) natural=0 (fcp 124 live 94)
+1440 #services rm=no-preference: never=0 late=0 (fcp 112 live 732) natural=0 (fcp 124 live 70)
+1440 #services rm=reduce: never=0 late=0 (fcp 100 live 735) natural=0.1911 (fcp 108 live 99)
+     natural shifts: 0.1911@106 section section-sand
+1440 #work rm=no-preference: never=0 late=0 (fcp 124 live 741) natural=0 (fcp 148 live 106)
+1440 #work rm=reduce: never=0 late=0 (fcp 88 live 736) natural=0 (fcp 132 live 74)

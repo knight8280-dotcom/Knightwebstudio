@@ -1,0 +1,5 @@
+settled: 243 checks from 320 to 1920; problems: 0
+mid-drag: 164 checks; problems: 3
+   [320,"#services .kws-arc",0.45,4,[]]
+   [320,"#work .kws-spot",-0.33,4,[]]
+   [320,"#work .kws-spot",0.45,4,[]]

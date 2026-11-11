@@ -1,0 +1,30 @@
+<!-- TESTIMONIALS — EDIT ME
+       Ready for real client quotes. Never invent one: an unverifiable quote
+       costs more trust than an empty section. To switch it on, delete the
+       two lines TESTIMONIALS-START and TESTIMONIALS-END below, then
+       replace each quote, name and role. Delete any unused <figure>.
+       Use the client's own words, and ask their permission first. -->
+  <!-- TESTIMONIALS-START
+  <section class="section" id="testimonials">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="eyebrow">From our clients</p>
+        <h2>In their words</h2>
+      </header>
+      <div class="quote-grid">
+        <figure class="quote reveal">
+          <blockquote><p>CLIENT QUOTE — one or two sentences, in their words.</p></blockquote>
+          <figcaption><strong>Client name</strong><span>Role, <a href="https://smilyssoftwash.com" target="_blank" rel="noopener">Smilys Softwash</a></span></figcaption>
+        </figure>
+        <figure class="quote reveal">
+          <blockquote><p>CLIENT QUOTE — one or two sentences, in their words.</p></blockquote>
+          <figcaption><strong>Client name</strong><span>Role, <a href="https://corbelbooks.com" target="_blank" rel="noopener">Corbel Books</a></span></figcaption>
+        </figure>
+        <figure class="quote reveal">
+          <blockquote><p>CLIENT QUOTE — one or two sentences, in their words.</p></blockquote>
+          <figcaption><strong>Client name</strong><span>Role, <a href="https://risenhealthco.com" target="_blank" rel="noopener">Risen Health</a></span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+  TESTIMONIALS-END -->

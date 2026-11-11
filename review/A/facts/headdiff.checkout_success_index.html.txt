@@ -1,0 +1,61 @@
+2c2
+< <html lang="en" data-theme="dark">
+---
+> <html lang="en" data-theme="auto">
+10c10
+< <meta name="theme-color" content="#080b14">
+---
+> <meta name="theme-color" content="#F6F0E4">
+18,19c18,20
+<   // Restore the saved theme before first paint, so a light-theme visitor
+<   // never sees a dark flash. main.js still owns the toggle itself.
+---
+>   // Set the theme before first paint, so nobody sees a flash of the wrong
+>   // one. Light is the default: a saved choice wins, otherwise a device set
+>   // to dark gets the night theme. main.js still owns the toggle itself.
+26,28c27,32
+<       if (!t && matchMedia('(prefers-color-scheme: light)').matches) t = 'light';
+<       if (t) d.setAttribute('data-theme', t);
+<     } catch (e) { /* private mode */ }
+---
+>       if (t !== 'dark' && t !== 'light') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+>       d.setAttribute('data-theme', t);
+>     } catch (e) { /* private mode: the stylesheet follows the device instead */ }
+>     // Scroll reveals hide blocks until main.js shows them. If that script has
+>     // not started after four seconds (or the page has none), show everything.
+>     setTimeout(function () { if (!window.kwsReady) d.classList.remove('js'); }, 4000);
+31,32c35,36
+< <link rel="preload" href="/assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+< <link rel="preload" href="/assets/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
+---
+> <link rel="preload" href="/assets/fonts/fraunces-soft.woff2" as="font" type="font/woff2" crossorigin>
+> <link rel="preload" href="/assets/fonts/figtree.woff2" as="font" type="font/woff2" crossorigin>
+35,62d38
+< <style>
+<   /* Success-page-only styles */
+<   .success-panel {
+<     max-width: 680px; margin: 0 auto; padding: clamp(24px, 4vw, 40px);
+<     border: 1px solid color-mix(in srgb, var(--accent) 40%, var(--border));
+<     border-radius: var(--radius-lg); background: var(--surface);
+<     text-align: center;
+<   }
+<   .success-plan {
+<     display: flex; align-items: baseline; justify-content: center;
+<     gap: .4rem 1rem; flex-wrap: wrap;
+<     margin: 0 0 1.1rem; padding: 12px 16px;
+<     border: 1px solid var(--border); border-radius: var(--radius);
+<     background: var(--bg-alt);
+<   }
+<   .success-plan-name { margin: 0; font-weight: 700; }
+<   .success-plan-price { margin: 0; font-size: 1.1rem; font-weight: 800; letter-spacing: -.02em; color: var(--accent); white-space: nowrap; }
+<   .success-panel p { color: var(--muted); }
+<   .success-panel .success-status { margin: 0 0 1rem; font-weight: 600; color: var(--text); }
+<   .success-next-title { margin: 0 0 .7rem; font-size: 1.05rem; }
+<   .success-steps { display: grid; gap: .6rem; max-width: 500px; margin: 0 auto; padding-left: 1.3rem; text-align: left; color: var(--muted); }
+<   .success-steps strong { color: var(--text); }
+<   /* The script shows one set of steps and buttons; keep the rest hidden even
+<      where a display rule above (grid, flex, .btn) would override [hidden]. */
+<   .success-panel [hidden] { display: none !important; }
+<   .success-actions { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 1.5rem; }
+<   .checkout-fine { max-width: 680px; margin: 1.4rem auto 0; text-align: center; font-size: .82rem; color: var(--muted); }
+< </style>

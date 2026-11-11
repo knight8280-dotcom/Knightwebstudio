@@ -1,0 +1,6 @@
+.nf { display: grid; justify-items: center; gap: var(--s-4); padding-block: var(--sec); text-align: center; }
+.nf > * { margin: 0; }
+.nf-code { font-size: var(--fs-figure); line-height: .9; letter-spacing: -.04em; color: var(--brick); }
+.nf p { max-width: var(--measure); }
+.nf .scene { width: min(100%, 20rem); }
+

@@ -1,0 +1,26 @@
+PASS  arc: mouse drag left moves forward and settles on one item  {"midMoving":true,"on":1,"said":"E-commerce stores, 2 of 9"}
+PASS  arc: drag released far outside the stage still settles  {"before":1,"on":1}
+PASS  arc: a mostly vertical mouse drag does not turn it  {"b3":1,"on":1}
+PASS  arc: after press at the list edge + release just outside, hovering sideways with no button does NOT drag the carousel  {"movingWhileHover":false,"changed":false,"stillMoving600ms":false,"onBefore":1,"onNow":1}
+PASS  arc: 25 rapid Next clicks land on the right item  {"start":1,"on":8,"want":8,"said":"Growth consulting, 9 of 9"}
+PASS  arc: 25 rapid ArrowLeft return to start  {"on":1,"want":1}
+INFO  arc: Shift+ArrowRight moves the carousel (shift not excluded)  {"from":1,"to":2}
+PASS  arc: vertical wheel scrolls page 200px, horizontal wheel does not turn it  {"on":2}
+PASS  arc: pen drag turns it  {"from":2,"on":3}
+PASS  arc: drag out and back, released on the link it started on, does not navigate  http://localhost:8730/kit/flat/demo.html
+INFO  arc: a 10px wobble while clicking the link is swallowed as a drag (no navigation)  http://localhost:8730/kit/flat/demo.html
+PASS  arc: no console errors during the above  
+FAIL  spot: mouse drag left moves forward and settles on one item  {"midMoving":true,"on":0,"said":"Smilys Softwash, 1 of 3"}
+PASS  spot: drag released far outside the stage still settles  {"before":0,"on":0}
+node:internal/process/promises:394
+    triggerUncaughtException(err, true /* fromPromise */);
+    ^
+
+page.evaluate: Execution context was destroyed, most likely because of a navigation.
+    at settle (/tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/motion/kit/flat/eng/lib.js:7:115)
+    at /tmp/claude-0/-home-user/aaaceb94-f42a-5d99-810c-a390cdbb75d0/scratchpad/refresh/motion/kit/flat/eng/05-input.js:19:205 {
+  log: [],
+  name: 'Error'
+}
+
+Node.js v22.23.4

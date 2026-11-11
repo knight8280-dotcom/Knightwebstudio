@@ -1,0 +1,130 @@
+{
+  "contact__mobile-light": {
+    "height": 3720,
+    "overflowX": 0,
+    "stops": 5,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "faq__mobile-light": {
+    "height": 3663,
+    "overflowX": 0,
+    "stops": 5,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "contact__mobile-dark": {
+    "height": 3720,
+    "overflowX": 0,
+    "stops": 5,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "faq__mobile-dark": {
+    "height": 3663,
+    "overflowX": 0,
+    "stops": 5,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "contact__small-light": {
+    "height": 3816,
+    "overflowX": 0,
+    "stops": 6,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "faq__small-light": {
+    "height": 3707,
+    "overflowX": 0,
+    "stops": 6,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "contact__tablet-light": {
+    "height": 3094,
+    "overflowX": 0,
+    "stops": 4,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "faq__tablet-light": {
+    "height": 2988,
+    "overflowX": 0,
+    "stops": 3,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "contact__laptop-light": {
+    "height": 2211,
+    "overflowX": 0,
+    "stops": 4,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "faq__laptop-light": {
+    "height": 2984,
+    "overflowX": 0,
+    "stops": 5,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "contact__desktop-light": {
+    "height": 2253,
+    "overflowX": 0,
+    "stops": 3,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "faq__desktop-light": {
+    "height": 3036,
+    "overflowX": 0,
+    "stops": 4,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "contact__desktop-dark": {
+    "height": 2253,
+    "overflowX": 0,
+    "stops": 3,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "faq__desktop-dark": {
+    "height": 3036,
+    "overflowX": 0,
+    "stops": 4,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "contact__wide-light": {
+    "height": 2255,
+    "overflowX": 0,
+    "stops": 3,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "faq__wide-light": {
+    "height": 3038,
+    "overflowX": 0,
+    "stops": 4,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  }
+}

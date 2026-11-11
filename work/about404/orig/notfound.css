@@ -1,0 +1,7 @@
+/* Not-found page only. Every rule is scoped with [data-page="notfound"].
+   The block below is the canonical one from DESIGN.md ("The 404 block"). */
+[data-page="notfound"] .nf { display: grid; justify-items: center; gap: var(--s-4); padding-block: var(--stack) var(--sec); text-align: center; }
+[data-page="notfound"] .nf > * { margin: 0; }
+[data-page="notfound"] .nf-code { font-size: var(--fs-figure); line-height: .9; letter-spacing: -.04em; color: var(--brick); }
+[data-page="notfound"] .nf p { max-width: var(--measure); }
+[data-page="notfound"] .nf .scene { width: min(100%, 20rem); }

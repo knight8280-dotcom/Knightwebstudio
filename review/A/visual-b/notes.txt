@@ -1,0 +1,77 @@
+NOTES (visual-b reviewer) — running log
+== viewed: mobile-light all (31 sheets), small-light all (33), mobile-dark: work, process1, contact1, faq1, about, 404, BR 1-3, DS 1, checkout, success, privacy1, terms1
+- C1 city eyebrow at 360 (BR, DS) and 390 (DS): wraps to 2 lines, 2nd line starts with "· BATON ROUGE, LA" (dangling separator dot at line start). shots small-light/web-design-baton-rouge__small-light__sheet1.png, mobile-dark/web-design-denham-springs__mobile-dark__sheet1.png
+- contact form: empty gap ~115px between textarea and Send button (captcha slot reserve) at 360/390 -> measure
+- checkout: with Stripe blocked the order summary never fills (script returns early) -> need stub to see summary
+- work mobile dark: eyebrow "EXTERIOR CLEANING · / LOCAL SERVICE & SEO" wraps with trailing dot at line end (ok-ish); "BOOKKEEPING SOFTWARE · / PRODUCT SITE & APP SCREENS"
+- all else looked clean on phones: header, phone bar, footers, FAQ accordions, job ticket, city price board, 404.
+== viewed rest of mobile-dark (DS, Gonzales, Prairieville; footers): clean. City eyebrow presence differs by page but follows a rule (no eyebrow when h2 repeats it) -> not a defect.
+== viewed desktop-light 1440: work, process, contact, faq, about, 404, BR (all stops)
+- work: lede link "see the / fixed prices" splits across lines (minor, not reporting unless pattern)
+- contact: 118px blank between textarea and Send (captcha slot reserve) - measure; aside is bottom aligned to lede
+- about: towns list: left col last row (Denham Springs) has no rule under it while right col last (Baker) has -> measure
+- BR price board: first cell content inset 4px from heading/rule start (x=164 vs 160) -> measure
+- BR local work: right column ends ~160px above card bottom (hole) acceptable
+- 404 fine. closing band appt card fine at 1440.
+== audit.js (16 widths, 14 pages): no clipped text, no offscreen text, no real text overlap, no btn-row misalignment, no overflow.
+- F-EYEBROW: city eyebrow wraps with leading "·": BR <=362px, DS <=390px, Gonzales <=334, Prairieville <=356 (measure.js). Evidence shots small-light BR sheet1, mobile-dark DS sheet1.
+- F-WORK-EYEBROW: work page case eyebrows end a line with "·" at 360/390/430 and 760-1100 ("Bookkeeping software · / Product site & app screens")
+- orphan: Prairieville local-work intro ends "gallery." alone at 390 and 599/600
+- em dash starts a line: FAQ band at 430, Gonzales band at 360 (minor, copy frozen on city)
+- consistency (measure.js): page-head tokens identical on all pages; h1 41.34px at 390 except about 40.56 and checkout/success 35.14 (!) ; ticket radius 14, city card radius 22 (different components)
+- anchors OK (faq/privacy/terms toc; BR #pricing)
+- contact form states OK (focus ring, error, sending 0.6 opacity, success banner) both themes; captcha slot reserves 78px (gap 118px textarea->button) by design
+- about towns list: all rows have rules (false alarm). BR board 4px inset = hover padding (by design)
+== checkout states (states/sheet_checkout_*.png, sheet_success_*.png), Stripe stubbed: order slip fills, receipt price wraps under name for "$1,000/month" (ok). loading text sits directly above form (ok). All 5 success states + plan-only look finished in both themes at 390 and 1440.
+- F-SUCCESS-H1: paid state headline at 340..590px wraps "Payment confirmed / — thank you" (dash starts line 2) (h1wrap.js). Script text frozen -> CSS only fix.
+- checkout slip says "$1,000/month" while site convention is "/mo" -> frozen inline script, not reportable.
+TODO still to view: desktop-light DS/Gonz/Prair/privacy/terms/checkout/success; desktop-dark all; laptop all; tablet all; wide all; in-between widths 600,760,980,1100.
+== desktop-light 1440 all viewed (city x4, privacy, terms, checkout, success): clean.
+- F-HYPHEN: Prairieville h2 "The kind of site a home- / service business needs" breaks at the hyphen at 1440 and 390 (desktop-light prairieville m3; mobile-dark prairieville m1). Same page protects "service-area" with .nowrap.
+- DS intro para line starts with "— Walker, Watson" at 1440 (frozen copy; not reporting separately)
+NEXT: desktop-dark (m/desktop-dark), laptop, tablet, wide, in-between widths.
+== desktop-dark 1440 viewed: work, process, contact, faq, about m1, BR m1-2, 404, checkout plan: all finished, nothing unfinished at night. Payment card stays paper by design.
+REMAINING desktop-dark: about m2, checkout, growth-care, success, privacy, terms, DS, Gonz, Prair. Then laptop, tablet, wide, in-between widths.
+== desktop-dark viewed also: DS m1, Prairieville m2, privacy m1: finished, no defects.
+== desktop-dark ALL viewed (cs/dark1-3.png for the rest): night theme finished on every page; nothing unfinished.
+NEXT: laptop (m/laptop-light, 25 files), tablet (m/tablet-light, 29), wide (m/wide-light, 20), in-between widths 600/760/980/1100.
+== laptop-light 1280 viewed: work m1, process m1, contact m1: clean (contact captcha reserve gap visible when captcha blocked, by design).
+== laptop 1280 viewed: about (cs/lap_about.png), BR (cs/lap_br.png), faq: clean. BR first screen at 1280x800 shows h1+lede+buttons+price strip.
+== laptop-light 1280 ALL viewed (cs/lap_*.png): clean. No new defects.
+NEXT: tablet (m/tablet-light 29 files, 3 shots each), wide (m/wide-light 20), in-between widths 600/760/980/1100.
+== tablet 820 viewed: work (cs/tab_work.png), contact (cs/tab_contact.png): clean apart from work eyebrow trailing dot wrap (already noted, visible at 820: "EXTERIOR CLEANING · / LOCAL SERVICE & SEO").
+== tablet 820 viewed: about (cs/tab_about.png), process+faq (cs/tab_proc_faq.png), BR (cs/tab_br.png): clean. FAQ toc becomes one inline row at 820 (fine). BR board 2x2 at 820 (fine).
+REMAINING tablet: DS, Gonz, Prair, privacy, terms, checkout x3, success, 404. Then wide, in-between widths.
+== tablet 820 ALL viewed (cs/tab_*.png): clean. Prairieville h2 "home- / service" hyphen break also at 820 (cs/tab_city_gp.png). No new defects.
+NEXT: wide 1920 (m/wide-light, 20 files), then in-between widths 600/760/980/1100.
+== wide 1920 viewed: work, process, contact, faq, about, 404, BR (cs/wide1.png, cs/wide2.png): content capped ~1240 and centred, clean.
+== wide 1920 ALL viewed (cs/wide1-5.png): clean. No new defects.
+NEXT: in-between widths 600/760/980/1100 via between.js (own shots in between/).
+== 600px viewed: work, process, contact, about (bw/600_a.png, bw/600_b.png): clean.
+== 600px viewed also: BR full, faq, DS top, 404, checkout (bw/600_c.png, bw/600_d.png): clean.
+== 760px viewed: work, process, contact, about, BR, faq, DS top, 404, checkout, success, privacy (bw/760_a-c.png): clean except
+- F-WORK-760: work page at 760: case copy is 2 narrow cols; h2 "Smilys / Softwash" wraps to two one-word lines (bw/760_a.png); at 820 it fits. measure range.
+- work h2 "Smilys / Softwash" wrap exists only at 760..767px (work760.js) -> too narrow a window; mention at most as a footnote.
+== 980px viewed: work, process, contact, about, BR (bw/980_a.png, bw/980_b.png): clean except
+- F-BR-H2: BR "What we build" h2 at 980 wraps "What a / Baton Rouge / site needs to do" (first line two stub words) (bw/980_b.png). measure range.
+- F-BR-H2 CONFIRMED (h2wrap2.js): "What a / Baton Rouge / site needs to do" at 980-1110px (col 413-469px, font 47.6-50px) and at 320. Elsewhere 2 lines. "What a Baton Rouge" is ~9.5em wide.
+- F-HYPHEN CONFIRMED (h2wrap2.js): Prairieville h2 breaks "home-" / "service business needs" at EVERY width 380..1920. Same page line 559 protects "service-area" with span.nowrap; line 599 h2 does not.
+== 980px viewed also: faq, DS top, 404, checkout, success, privacy, terms (bw/980_c1.png, bw/980_c2.png): clean (success buttons stack as a grid 980-1100 by rule).
+== 1100px viewed: work, process, contact, about, BR (bw/1100_a.png, bw/1100_b.png): clean; BR "What a / Baton Rouge / site needs to do" visible at 1100 too (bw/1100_b.png).
+TODO: view bw/1100_c.png; test real-size captcha widget (303x78) at 360/320 (tool blocks hcaptcha so overflow checks never saw it); phone menu open; focus ring spot check; crops for evidence.
+== 1100px viewed also: faq, DS, 404, checkout, success (bw/1100_c.png): clean.
+== misc.js/menu.js/menu2.js: phone menu sheet fits 390x844; on short screens .nav-inner scrolls and reaches last link (OK). Real-size captcha stub 303x78 fits card at 390 (41..344 within inner 350) and at 360 (scaled .9: 41..314 within 320). Focus rings 3px solid, offset 3px, blue by day / gold by night, on links, buttons, summary (OK).
+== FINAL candidate findings (evidence in evidence/*.png, scripts h2wrap2.js, measure.js, h1wrap.js, em.js, fixtest.js, audit.json)
+1 PV-H2-HYPHEN minor: Prairieville h2 breaks "home-/service" at 380-1920 (evidence/prairieville-h2-390/1024/1440.png)
+2 EYEBROW-SEP minor: city eyebrow leading dot (DS <=390, BR <=362, PV <=356, GZ <=334) (evidence/eyebrow-*.png); work eyebrow trailing dot (cs/tab_work.png, audit.json)
+3 SUCCESS-H1 minor: "Payment confirmed / — thank you" 340-590 (evidence/success-paid-headline-390.png); verified fix fixtest.js
+4 BR-H2 minor: "What a / Baton Rouge / site needs to do" 980-1110 (evidence/baton-rouge-h2-1024.png, -1100.png; -1280.png is the good state)
+Not reported: captcha reserve gap (by design, real-size widget verified), /month in frozen checkout script, em dash line starts in frozen copy, Smilys/Softwash wrap 760-767 only, menu sheet (scrolls OK).
+== fixes tried in the browser only (fixtest.js, fixtest2.js, fixtest3.js): 
+- PV h2: 'The kind of site a <span class="nowrap">home-service</span> <span class="nowrap">business needs</span>' -> 3 clean lines 320-510, 2 lines 520-1920. (plain nowrap on home-service alone leaves "needs" alone at 360-510)
+- BR h2: font-size calc(var(--fs-h2)*.9) at 980-1279.98 -> 2 lines 960-1300
+- city eyebrow: .sep span + hide under 600 -> "Areas we serve / <Town>, LA" on all four, one line with dot from 600
+- work eyebrow: same under 1280 -> two lines no dot; one line with dot from 1280
+- success h1: font .76 + pretty under 600 -> "Payment confirmed — / thank you" 340-600
+== till.js: filled order slip on /checkout/ and /checkout/success/ holds at 360..1920 (till/sheet.png)
+DONE. 4 minor findings, no blocker/major.

@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Closing band and footer on a bare page: no site stylesheet, another brand</title>
+<link rel="stylesheet" href="btn.css">
+<link rel="stylesheet" href="closing.css">
+<link rel="stylesheet" href="appt.css">
+<link rel="stylesheet" href="footer.css">
+<link rel="stylesheet" href="skyline.css">
+<style>
+  /* Everything a client site would supply: a small reset (as a utility framework's base layer does) and its own page styles. */
+  *, *::before, *::after { box-sizing: border-box; }
+  h1, h2, p, ul, dl, dd { margin: 0; }
+  body { margin: 0; background: #F7EFE2; color: #5A4636; font: 17px/1.6 "Avenir Next", "Segoe UI", system-ui, sans-serif; }
+  .page { max-width: 44rem; margin: 0 auto; padding: 56px 20px 88px; }
+  .page h1 { margin-bottom: 16px; color: #33231A; font: 700 clamp(2rem, 6vw, 3rem)/1.05 Rockwell, "Roboto Slab", Georgia, serif; }
+  .page p + p { margin-top: 12px; }
+  .tag { display: inline-block; margin-bottom: 12px; padding: 2px 10px; border-radius: 99px; background: #E9DCC6; color: #5A4636; font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+
+  /* The kit's variables, set where each block needs them. A colour block and a paper object on it are two palettes. */
+  :root {
+    --kit-font-display: Rockwell, "Roboto Slab", Georgia, serif; --kit-font-body: "Avenir Next", "Segoe UI", system-ui, sans-serif; --kit-radius: 999px;
+  }
+  .kws-close { --kit-bg: #7A2E1D; --kit-ink: #FFF6E6; --kit-muted: #F3DCCB; --kit-accent: #FFF6E6; --kit-accent-ink: #5B1F12; --kit-gilt: #F2C879; --kit-surface: rgba(255, 246, 230, .1); }
+  .kws-appt { --kit-surface: #FFFAF0; --kit-ink: #33231A; --kit-muted: #5A4636; --kit-line: #D9C7B3; --kit-accent: #7A2E1D; --kit-accent-ink: #FFF6E6; --kit-notice: #A2542A; --kit-radius: 18px; --kit-shadow: 0 2px 4px rgba(43, 29, 23, .3), 0 24px 40px -22px rgba(43, 29, 23, .8); }
+  .kws-foot { --kit-bg: #2B1D17; --kit-ink: #FFF6E6; --kit-muted: #D4C2B2; --kit-line: rgba(255, 246, 230, .18); --kit-accent: #F2C879; --kit-gilt: #F2C879; --kit-shader-1: #7A2E1D; --kws-fit: 6.9; }
+  .kws-appt .kws-btn { border-radius: 999px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="page">
+    <p class="tag">Example</p>
+    <h1>[A client's page]</h1>
+    <p>This page loads no stylesheet and no script from knightwebstudio.com: only the five kit files and the few rules above. The brand is a brick red and cream bakery, say, with slab type and round buttons.</p>
+    <p>Everything in square brackets is a place for the client's own words. Nothing here is a real business.</p>
+  </div>
+
+  <section class="kws-close kws-close--card" aria-labelledby="close-h">
+    <div class="kws-close-in">
+      <div class="kws-close-copy">
+        <h2 class="kws-close-title" id="close-h">[Your closing line.]</h2>
+        <p class="kws-close-text">[One honest sentence: what happens when they get in touch, and what it costs.]</p>
+      </div>
+      <div class="kws-appt">
+        <p class="kws-appt-head"><span>[Card]</span><span>Example</span></p>
+        <p class="kws-appt-title">[What they book]</p>
+        <dl>
+          <div><dt>[Cost]</dt><dd>[Free]</dd></div>
+          <div><dt>[Length]</dt><dd>[How long]</dd></div>
+          <div><dt>[Where]</dt><dd>[Where]</dd></div>
+        </dl>
+        <a class="kws-btn kws-btn--main" href="#close-h">[Main action]</a>
+      </div>
+      <div class="kws-close-acts">
+        <a class="kws-btn" href="#close-h">[Second action]</a>
+      </div>
+      <p class="kws-close-tel">Or call <a href="#close-h">[your number]</a></p>
+    </div>
+  </section>
+
+  <section class="kws-close kws-close--strip" aria-labelledby="close-s">
+    <div class="kws-close-in">
+      <div class="kws-close-copy">
+        <h2 class="kws-close-title" id="close-s">[The compact strip.]</h2>
+        <p class="kws-close-text">[One honest sentence.]</p>
+      </div>
+      <div class="kws-close-acts">
+        <a class="kws-btn kws-btn--main" href="#close-s">[Main action]</a>
+        <a class="kws-btn" href="#close-s">[Second action]</a>
+      </div>
+      <p class="kws-close-tel">Or call <a href="#close-s">[your number]</a></p>
+    </div>
+  </section>
+
+  <section class="kws-close" aria-labelledby="close-c">
+    <div class="kws-close-in">
+      <div class="kws-close-copy">
+        <p class="kws-close-kicker">[A short promise]</p>
+        <h2 class="kws-close-title" id="close-c">[Your closing line, with <span class="kws-close-mark"><span>two words</span></span> underlined.]</h2>
+        <p class="kws-close-text">[One honest sentence: what happens when they get in touch, and what it costs.]</p>
+      </div>
+      <div class="kws-close-acts">
+        <a class="kws-btn kws-btn--main" href="#close-c">[Main action]</a>
+        <a class="kws-btn" href="#close-c">[Second action]</a>
+      </div>
+      <p class="kws-close-tel">Or call <a href="#close-c">[your number]</a></p>
+    </div>
+  </section>
+</main>
+
+<footer class="kws-foot">
+  <div class="kws-foot-in">
+    <div class="kws-foot-grid">
+      <div class="kws-foot-who">
+        <a class="kws-foot-logo" href="#close-h" aria-label="Your Business home">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#F2C879"/><path d="M14 30h20M17 30c0-9 3-14 7-14s7 5 7 14" fill="none" stroke="#2B1D17" stroke-width="3" stroke-linecap="round"/></svg>
+        </a>
+        <p class="kws-foot-bye">[Where it is based.]</p>
+        <p class="kws-foot-what">[One sentence about what the business does and for whom.]</p>
+      </div>
+      <nav class="kws-foot-call" aria-label="Contact">
+        <p class="kws-foot-title">Contact</p>
+        <ul>
+          <li><a class="kws-foot-tel" href="#close-h">[your number]</a></li>
+          <li>[Opening hours]</li>
+          <li><a class="kws-foot-mail" href="#close-h">[your email]</a></li>
+          <li><a class="kws-btn" href="#close-h">[Main action] <span aria-hidden="true">→</span></a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Menu">
+        <p class="kws-foot-title">[Group one]</p>
+        <ul>
+          <li><a href="#close-h">[A page]</a></li>
+          <li><a href="#close-h">[A page]</a></li>
+          <li><a href="#close-h">[A page]</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="About">
+        <p class="kws-foot-title">[Group two]</p>
+        <ul>
+          <li><a href="#close-h">[A page]</a></li>
+          <li><a href="#close-h">[A page]</a></li>
+          <li><a href="#close-h">[A page]</a></li>
+        </ul>
+      </nav>
+      <nav class="kws-foot-wide" aria-label="Areas">
+        <p class="kws-foot-title">[Group three: places]</p>
+        <ul class="kws-foot-places">
+          <li><a href="#close-h">[A town with a page]</a></li>
+          <li><a href="#close-h">[A town with a page]</a></li>
+          <li><span>[A town without one]</span></li>
+          <li><span>[A town without one]</span></li>
+        </ul>
+      </nav>
+      <p class="kws-foot-bye">[A last line that sounds like the shop.]</p>
+    </div>
+    <div class="kws-foot-end">
+      <p>Example page. Not a real business.</p>
+      <p class="kws-foot-links"><a href="#close-h">[Privacy]</a><a href="#close-h">[Terms]</a><a href="#top">Back to top ↑</a></p>
+    </div>
+  </div>
+  <div class="kws-skyline" aria-hidden="true">
+    <div class="kws-skyline-sky"></div>
+    <p class="kws-skyline-name">Your Business</p>
+{{SKYLINE}}
+  </div>
+</footer>
+</body>
+</html>

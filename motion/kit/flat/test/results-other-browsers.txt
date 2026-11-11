@@ -1,0 +1,299 @@
+The checks that do not need the DevTools protocol, run in Playwright's WebKit and Firefox builds:
+  PLAYWRIGHT_BROWSERS_PATH=<folder holding them> BROWSER=webkit node test/contract.js   (and input, still, robust, held, edge, theme)
+
+== webkit: smoke test ==
+PASS  webkit 26.6 at 390px: 4 mounted; arc: hover lifts (0px -2px / 2 inset edges), next ok, drag ok, focus-to-centre ok, 3 showing, past edge -25px, caption under picture true, controls under caption true, page wider by 0px, height 428 | spotlight: hover lifts (0px -2px / 0 inset edges), next ok, drag ok, focus-to-centre ok, 3 showing, past edge -20px, caption under picture true, controls under caption true, page wider by 0px, height 514
+PASS  webkit 26.6 at 1280px: 4 mounted; arc: hover lifts (0px -2px / 2 inset edges), next ok, drag ok, focus-to-centre ok, 9 showing, past edge -167px, caption under picture true, controls under caption true, page wider by 0px, height 473 | spotlight: hover lifts (0px -2px / 0 inset edges), next ok, drag ok, focus-to-centre ok, 3 showing, past edge -48px, caption under picture true, controls under caption true, page wider by 0px, height 616
+
+== webkit: test/contract.js ==
+PASS  no console errors on load
+PASS  two wheels and two spotlights mounted on one page; KWS.arc.mount and KWS.spotlight.mount exposed  (2,2,true)
+PASS  only one global (window.KWS)  (kwsReady,KWS)
+PASS  arc: next arrow moves to item 2 and says so  ({"on":1,"moving":false,"live":true,"said":"Redesigns & rescues, 2 of 9"})
+PASS  arc: previous arrow twice wraps to the last item  ({"on":8,"moving":false,"live":true,"said":"Google profile & reviews, 9 of 9"})
+PASS  arc: second dot goes to item 2  ({"on":1,"moving":false,"live":true,"said":"Redesigns & rescues, 2 of 9"})
+PASS  arc: ArrowRight with focus inside moves on  ({"on":2,"moving":false,"live":true,"said":"E-commerce stores, 3 of 9"})
+PASS  arc: ArrowLeft twice moves back two  ({"on":0,"moving":false,"live":true,"said":"Website design & build, 1 of 9"})
+PASS  arc: arrows and dots are real buttons, at least 44px each way, named  ([[44,44,"Previous service","button"],[44,44,"Website design & build, 1 of 9","button"],[44,44,"Redesigns & rescues, 2 of 9","button"]])
+PASS  arc: labelled region with a list, carousel and slide roledescriptions, "n of N" labels, a status region (output) for announcements  ({"rd":"carousel","label":true,"tag":"SECTION","list":true,"slides":["slide:1 of 9","slide:2 of 9","slide:3 of 9","slide:4 of 9","slide:5 of 9","slide:6 of 9","slide:7 of 9","slide:8 of 9","slide:9 of 9"],"live":"polite",)
+PASS  arc: no console errors during use
+PASS  spotlight: next arrow moves to item 2 and says so  ({"on":1,"moving":false,"live":true,"said":"Risen Health, 2 of 3"})
+PASS  spotlight: previous arrow twice wraps to the last item  ({"on":2,"moving":false,"live":true,"said":"Corbel Books, 3 of 3"})
+PASS  spotlight: second dot goes to item 2  ({"on":1,"moving":false,"live":true,"said":"Risen Health, 2 of 3"})
+PASS  spotlight: ArrowRight with focus inside moves on  ({"on":2,"moving":false,"live":true,"said":"Corbel Books, 3 of 3"})
+PASS  spotlight: ArrowLeft twice moves back two  ({"on":0,"moving":false,"live":true,"said":"Smilys Softwash, 1 of 3"})
+PASS  spotlight: arrows and dots are real buttons, at least 44px each way, named  ([[44,44,"Previous project","button"],[44,44,"Smilys Softwash, 1 of 3","button"],[44,44,"Risen Health, 2 of 3","button"]])
+PASS  spotlight: labelled region with a list, carousel and slide roledescriptions, "n of N" labels, a status region (output) for announcements  ({"rd":"carousel","label":true,"tag":"SECTION","list":true,"slides":["slide:1 of 3","slide:2 of 3","slide:3 of 3"],"live":"polite","group":"Choose a project"})
+PASS  spotlight: no console errors during use
+PASS  arc: Tab reaches all 9 links, each one centred and fully visible when focused  ([[0,0,1],[1,1,1],[2,2,1],[3,3,1],[4,4,1],[5,5,1],[6,6,1],[7,7,1],[8,8,1]])
+PASS  arc: then previous, the dots as one stop, next (3 buttons), then focus leaves: no trap  (stops: 12)
+PASS  arc: focus ring visible on links and buttons  (solid 3px)
+PASS  arc: an arrow key moves focus with the item, so focus is never on a hidden link  (1,1)
+PASS  arc: arrow keys on the dots move the wheel and keep focus on the current dot  (true,0,3,Brand & identity, 4 of 9)
+PASS  spotlight: Tab reaches all 3 links, each one centred and fully visible when focused  ([[0,0,1],[1,1,1],[2,2,1]])
+PASS  spotlight: then previous, the dots as one stop, next (3 buttons), then focus leaves: no trap  (stops: 6)
+PASS  spotlight: focus ring visible on links and buttons  (solid 3px)
+PASS  spotlight: an arrow key moves focus with the item, so focus is never on a hidden link  (1,1)
+PASS  spotlight: arrow keys on the dots move the wheel and keep focus on the current dot  (true,0,3,Smilys Softwash, 1 of 3)
+PASS  script off: nine services and three projects all visible as a plain list, each in its own place, no dead controls  ([{"n":9,"allVisible":true,"distinctTops":9,"clipped":"visible","ctl":0},{"n":3,"allVisible":true,"distinctTops":3,"clipped":"visible","ctl":0}])
+PASS  script off: nine fixed prices as the site words them, in the order of /services/  ($1,000, $2,000 or $4,000|priced as a new site|$8,000|$1,500|in every build|$125, $300, $600 or $1,000/mo|$750 or $1,500 per setup|$350 audit · $500 or $1,000/mo|$500)
+PASS  reduced motion, arc: next is instant (same task), no animation frame requested  ({"on":1,"moving":false,"frames":0,"t":"translate(0px) rotate(0deg) scale(1)","cap":"1"})
+PASS  reduced motion, arc: a drag does not animate; it steps once on release  ([1,2])
+PASS  reduced motion, spotlight: next is instant (same task), no animation frame requested  ({"on":1,"moving":false,"frames":0,"t":"translate(0px) scale(1)","cap":"1"})
+PASS  reduced motion, spotlight: a drag does not animate; it steps once on release  ([1,2])
+PASS  paused motion, arc: next is instant (same task), no animation frame requested  ({"on":1,"moving":false,"frames":0,"t":"translate(0px) rotate(0deg) scale(1)","cap":"1"})
+PASS  paused motion, arc: a drag does not animate; it steps once on release  ([1,2])
+PASS  paused motion, spotlight: next is instant (same task), no animation frame requested  ({"on":1,"moving":false,"frames":0,"t":"translate(0px) scale(1)","cap":"1"})
+PASS  paused motion, spotlight: a drag does not animate; it steps once on release  ([1,2])
+PASS  arc: wheel over it scrolls the page (240px) and never turns it  ({"on":0,"moving":false,"live":true,"said":""})
+PASS  spotlight: wheel over it scrolls the page (240px) and never turns it  ({"on":0,"moving":false,"live":true,"said":""})
+PASS  left alone for 6.5 seconds, nothing moves (no auto-advance)
+PASS  arc: releasing a drag over the link does not follow it; a plain click on the same link does  (http://localhost:8730/services/#website-design)
+PASS  spotlight: releasing a drag over the link does not follow it; a plain click on the same link does  (http://localhost:8730/work/#smilys-softwash)
+PASS  arc: a click on the side one centres it (no navigation); a click on the centred one opens its link  (http://localhost:8730/services/#redesigns)
+PASS  spotlight: a click on the side one centres it (no navigation); a click on the centred one opens its link  (http://localhost:8730/work/#risen-health)
+PASS  arc: mounts after load; mount() twice returns the same remover; remover restores the markup byte for byte, even mid-animation; remounts  ({"live":true,"again":true,"restored":true,"original":true,"remount":true})
+PASS  spotlight: mounts after load; mount() twice returns the same remover; remover restores the markup byte for byte, even mid-animation; remounts  ({"live":true,"again":true,"restored":true,"original":true,"remount":true})
+
+all passed
+
+== webkit: test/input.js ==
+PASS  wheel: after a press released outside the stage, moving the mouse over it turns nothing, and Next still works  (item 1, after hovering 1, after Next 2)
+PASS  wheel: a press whose release never arrives does not leave it following the mouse  (item 1)
+PASS  wheel: no console errors
+PASS  wheel: a click on the link with 10px of wobble still follows it  (/services/#website-design)
+PASS  wheel: Ctrl+click on the centred one opens a new tab and never moves this page  (new tab on try 1 of 5; this page left 0 times; the caption link itself opened a tab in 1 of 1 tries)
+PASS  wheel: the cursor is a pointer on a sign or card, link and arrows, a grab hand on the rest of the stage, and a closed hand while dragging  ({"c":{"part":"pointer","stage":"grab","link":"auto","arrow":"pointer"},"dragging":{"part":"grabbing","stage":"grabbing"},"after":"pointer"})
+PASS  wheel: a sign or card lifts on hover and sinks when pressed  (hover 0px -2px; pressed 0px 1px)
+PASS  wheel: arrows and the caption link do the same  (arrow hover 0px -2px, pressed 0px 1px; link hover 0px -2px)
+PASS  spotlight: after a press released outside the stage, moving the mouse over it turns nothing, and Next still works  (item 1, after hovering 1, after Next 2)
+PASS  spotlight: a press whose release never arrives does not leave it following the mouse  (item 1)
+PASS  spotlight: no console errors
+PASS  spotlight: a click on the link with 10px of wobble still follows it  (/work/#smilys-softwash)
+PASS  spotlight: Ctrl+click on the centred one opens a new tab and never moves this page  (new tab on try 1 of 5; this page left 0 times; the caption link itself opened a tab in 1 of 1 tries)
+PASS  spotlight: the cursor is a pointer on a sign or card, link and arrows, a grab hand on the rest of the stage, and a closed hand while dragging  ({"c":{"part":"pointer","stage":"grab","link":"auto","arrow":"pointer"},"dragging":{"part":"grabbing","stage":"grabbing"},"after":"pointer"})
+PASS  spotlight: a sign or card lifts on hover and sinks when pressed  (hover 0px -2px; pressed 0px 1px)
+PASS  spotlight: arrows and the caption link do the same  (arrow hover 0px -2px, pressed 0px 1px; link hover 0px -2px)
+
+== webkit: test/still.js ==
+PASS  wheel: no animation frame is asked for while it is idle  (0 in 1.5s)
+PASS  wheel: pausing motion in the middle of a move ends it on the next frame, on the item it was heading for  ({"mid":true,"movingAfter":false,"frames":0,"on":1})
+PASS  wheel: so does the device's reduced-motion setting  (item 3)
+PASS  wheel: scrolled off screen in mid-move, it stops asking for frames  (0 frames in the next 0.6s)
+PASS  wheel: a move made while off screen is applied at once, with no frames  ({"frames":0,"moving":false})
+PASS  wheel: will-change is off when nothing is moving  (auto)
+PASS  spotlight: no animation frame is asked for while it is idle  (0 in 1.5s)
+PASS  spotlight: pausing motion in the middle of a move ends it on the next frame, on the item it was heading for  ({"mid":true,"movingAfter":false,"frames":0,"on":1})
+PASS  spotlight: so does the device's reduced-motion setting  (item 3)
+PASS  spotlight: scrolled off screen in mid-move, it stops asking for frames  (0 frames in the next 0.6s)
+PASS  spotlight: a move made while off screen is applied at once, with no frames  ({"frames":0,"moving":false})
+PASS  spotlight: will-change is off when nothing is moving  (auto)
+
+== webkit: test/robust.js ==
+PASS  360px: 50 to 80 letter words and an 80 letter address cause no sideways scroll; the browser dots keep their size; the address stays inside its frame  (page wider than window by 0px; dots 8,8,8px; address ends 14px inside the frame)
+PASS  390px: 50 to 80 letter words and an 80 letter address cause no sideways scroll; the browser dots keep their size; the address stays inside its frame  (page wider than window by 0px; dots 8,8,8px; address ends 14px inside the frame)
+PASS  1280px: 50 to 80 letter words and an 80 letter address cause no sideways scroll; the browser dots keep their size; the address stays inside its frame  (page wider than window by 0px; dots 8,8,8px; address ends 14px inside the frame)
+PASS  default font 20px at 360px wide: no sign past the window edge, no sideways scroll, controls on one row  (3 signs showing, nearest edge 17px inside, control row 44px tall)
+PASS  default font 24px at 390px wide: no sign past the window edge, no sideways scroll, controls on one row  (3 signs showing, nearest edge 24px inside, control row 44px tall)
+PASS  default font 24px at 430px wide: no sign past the window edge, no sideways scroll, controls on one row  (3 signs showing, nearest edge 27px inside, control row 44px tall)
+PASS  default font 32px at 390px wide: no sign past the window edge, no sideways scroll, controls on one row  (3 signs showing, nearest edge 24px inside, control row 45px tall)
+PASS  360px arc with 12 items: controls on one 44px row that fits, a count ("1 of 12"); height held before the script equals height after  (row 184px of 320px; held 414px, live 414px)
+PASS  360px arc with 30 items: controls on one 44px row that fits, a count ("1 of 30"); height held before the script equals height after  (row 184px of 320px; held 414px, live 414px)
+PASS  360px spotlight with 5 items: controls on one 44px row that fits, a count ("1 of 5"); height held before the script equals height after  (row 140px of 360px; held 512px, live 512px)
+PASS  360px spotlight with 12 items: controls on one 44px row that fits, a count ("1 of 12"); height held before the script equals height after  (row 146px of 360px; held 512px, live 512px)
+PASS  390px arc with 12 items: controls on one 44px row that fits, a count ("1 of 12"); height held before the script equals height after  (row 184px of 350px; held 428px, live 428px)
+PASS  390px arc with 30 items: controls on one 44px row that fits, a count ("1 of 30"); height held before the script equals height after  (row 184px of 350px; held 428px, live 428px)
+PASS  390px spotlight with 5 items: controls on one 44px row that fits, a count ("1 of 5"); height held before the script equals height after  (row 140px of 390px; held 514px, live 514px)
+PASS  390px spotlight with 12 items: controls on one 44px row that fits, a count ("1 of 12"); height held before the script equals height after  (row 146px of 390px; held 514px, live 514px)
+PASS  1280px arc with 12 items: controls on one 44px row that fits, 12 dots; height held before the script equals height after  (row 720px of 1184px; held 473px, live 473px)
+PASS  1280px arc with 30 items: controls on one 44px row that fits, a count ("1 of 30"); height held before the script equals height after  (row 184px of 1184px; held 473px, live 473px)
+PASS  1280px spotlight with 5 items: controls on one 44px row that fits, 5 dots; height held before the script equals height after  (row 356px of 1280px; held 616px, live 616px)
+PASS  1280px spotlight with 12 items: controls on one 44px row that fits, 12 dots; height held before the script equals height after  (row 720px of 1280px; held 616px, live 616px)
+PASS  arc without one .kws-arc-tile: mount does nothing and throws nothing
+PASS  arc without one .kws-arc-cap: mount does nothing and throws nothing
+PASS  spotlight without one .kws-spot-frame: mount does nothing and throws nothing
+PASS  spotlight without one .kws-spot-cap: mount does nothing and throws nothing
+PASS  no console errors
+
+== webkit: test/held.js ==
+PASS  390px: one item held at first; after 4s all nine and all three are back, 1 across as with script off  (held 428px and 514px; list 3624px, 1 across and 1487px, 1 across)
+PASS  390px, reduced motion: one item held at first; after 4s all nine and all three are back, 1 across as with script off  (held 428px and 514px; list 3624px, 1 across and 1487px, 1 across)
+PASS  1440px: one item held at first; after 4s all nine and all three are back, 3 across as with script off  (held 473px and 625px; list 1362px, 3 across and 507px, 3 across)
+PASS  1440px, reduced motion: one item held at first; after 4s all nine and all three are back, 3 across as with script off  (held 473px and 625px; list 1362px, 3 across and 507px, 3 across)
+PASS  the remover, called once the hold has ended, gives the whole plain list back at once  (9 and 3 items showing)
+
+== webkit: test/edge.js ==
+PASS  390px spotlight x1 {}: start 0, after 2 nexts at 0, after prev at 0, 1 showing, past the window edge by 0px
+PASS  390px spotlight x2 {}: start 0, after 3 nexts at 1, after prev at 0, 2 showing, past the window edge by 0px
+PASS  390px spotlight x4 {}: start 0, after 5 nexts at 1, after prev at 0, 3 showing, past the window edge by 0px
+PASS  390px spotlight x6 {"data-start":"2"}: start 2, after 7 nexts at 3, after prev at 2, 3 showing, past the window edge by 0px
+PASS  390px spotlight x3 {"data-loop":"false"}: start 0, after 4 nexts at 1, after prev at 0, 2 showing, past the window edge by 0px
+PASS  390px arc x1 {}: start 0, after 2 nexts at 0, after prev at 0, 1 showing, past the window edge by -20px
+PASS  390px arc x2 {}: start 0, after 3 nexts at 1, after prev at 0, 2 showing, past the window edge by 0px
+PASS  390px arc x4 {}: start 0, after 5 nexts at 1, after prev at 0, 3 showing, past the window edge by 0px
+PASS  390px arc x14 {}: start 0, after 15 nexts at 1, after prev at 0, 3 showing, past the window edge by 0px
+PASS  390px arc x9 {"data-loop":"false","data-start":"8"}: start 8, after 10 nexts at 0, after prev at 8, 2 showing, past the window edge by 0px
+PASS  1280px spotlight x1 {}: start 0, after 2 nexts at 0, after prev at 0, 1 showing, past the window edge by 0px
+PASS  1280px spotlight x2 {}: start 0, after 3 nexts at 1, after prev at 0, 2 showing, past the window edge by 0px
+PASS  1280px spotlight x4 {}: start 0, after 5 nexts at 1, after prev at 0, 3 showing, past the window edge by 0px
+PASS  1280px spotlight x6 {"data-start":"2"}: start 2, after 7 nexts at 3, after prev at 2, 3 showing, past the window edge by 0px
+PASS  1280px spotlight x3 {"data-loop":"false"}: start 0, after 4 nexts at 1, after prev at 0, 2 showing, past the window edge by 0px
+PASS  1280px arc x1 {}: start 0, after 2 nexts at 0, after prev at 0, 1 showing, past the window edge by -48px
+PASS  1280px arc x2 {}: start 0, after 3 nexts at 1, after prev at 0, 2 showing, past the window edge by -48px
+PASS  1280px arc x4 {}: start 0, after 5 nexts at 1, after prev at 0, 3 showing, past the window edge by -48px
+PASS  1280px arc x14 {}: start 0, after 15 nexts at 1, after prev at 0, 9 showing, past the window edge by -48px
+PASS  1280px arc x9 {"data-loop":"false","data-start":"8"}: start 8, after 10 nexts at 0, after prev at 8, 5 showing, past the window edge by -48px
+
+== webkit: test/theme.js ==
+PASS  theme button flips the theme and every kit colour follows {"theme":"light","tile":"rgb(36, 56, 159)","name":"rgb(26, 34, 56)","frame":"rgb(255, 252, 245)","dot":"rgb(44, 70, 196)"} {"theme":"dark","tile":"rgb(27, 42, 120)","name":"rgb(243, 236, 221)","frame":"rgb(29, 35, 51)","dot":"rgb(157, 176, 255)"}
+PASS  pause button sets data-motion="off" and the next move is instant off,false,1
+PASS  no console errors
+
+== firefox: smoke test ==
+PASS  firefox 155.0 at 390px: 4 mounted; arc: hover lifts (0px -2px / 2 inset edges), next ok, drag ok, focus-to-centre ok, 3 showing, past edge -25px, caption under picture true, controls under caption true, page wider by 0px, height 428 | spotlight: hover lifts (0px -2px / 0 inset edges), next ok, drag ok, focus-to-centre ok, 3 showing, past edge -20px, caption under picture true, controls under caption true, page wider by 0px, height 514
+PASS  firefox 155.0 at 1280px: 4 mounted; arc: hover lifts (0px -2px / 2 inset edges), next ok, drag ok, focus-to-centre ok, 9 showing, past edge -167px, caption under picture true, controls under caption true, page wider by 0px, height 473 | spotlight: hover lifts (0px -2px / 0 inset edges), next ok, drag ok, focus-to-centre ok, 3 showing, past edge -48px, caption under picture true, controls under caption true, page wider by 0px, height 616
+
+== firefox: test/contract.js ==
+PASS  no console errors on load
+PASS  two wheels and two spotlights mounted on one page; KWS.arc.mount and KWS.spotlight.mount exposed  (2,2,true)
+PASS  only one global (window.KWS)  (kwsReady,KWS)
+PASS  arc: next arrow moves to item 2 and says so  ({"on":1,"moving":false,"live":true,"said":"Redesigns & rescues, 2 of 9"})
+PASS  arc: previous arrow twice wraps to the last item  ({"on":8,"moving":false,"live":true,"said":"Google profile & reviews, 9 of 9"})
+PASS  arc: second dot goes to item 2  ({"on":1,"moving":false,"live":true,"said":"Redesigns & rescues, 2 of 9"})
+PASS  arc: ArrowRight with focus inside moves on  ({"on":2,"moving":false,"live":true,"said":"E-commerce stores, 3 of 9"})
+PASS  arc: ArrowLeft twice moves back two  ({"on":0,"moving":false,"live":true,"said":"Website design & build, 1 of 9"})
+PASS  arc: arrows and dots are real buttons, at least 44px each way, named  ([[44,44,"Previous service","button"],[44,44,"Website design & build, 1 of 9","button"],[44,44,"Redesigns & rescues, 2 of 9","button"]])
+PASS  arc: labelled region with a list, carousel and slide roledescriptions, "n of N" labels, a status region (output) for announcements  ({"rd":"carousel","label":true,"tag":"SECTION","list":true,"slides":["slide:1 of 9","slide:2 of 9","slide:3 of 9","slide:4 of 9","slide:5 of 9","slide:6 of 9","slide:7 of 9","slide:8 of 9","slide:9 of 9"],"live":"polite",)
+PASS  arc: no console errors during use
+PASS  spotlight: next arrow moves to item 2 and says so  ({"on":1,"moving":false,"live":true,"said":"Risen Health, 2 of 3"})
+PASS  spotlight: previous arrow twice wraps to the last item  ({"on":2,"moving":false,"live":true,"said":"Corbel Books, 3 of 3"})
+PASS  spotlight: second dot goes to item 2  ({"on":1,"moving":false,"live":true,"said":"Risen Health, 2 of 3"})
+PASS  spotlight: ArrowRight with focus inside moves on  ({"on":2,"moving":false,"live":true,"said":"Corbel Books, 3 of 3"})
+PASS  spotlight: ArrowLeft twice moves back two  ({"on":0,"moving":false,"live":true,"said":"Smilys Softwash, 1 of 3"})
+PASS  spotlight: arrows and dots are real buttons, at least 44px each way, named  ([[44,44,"Previous project","button"],[44,44,"Smilys Softwash, 1 of 3","button"],[44,44,"Risen Health, 2 of 3","button"]])
+PASS  spotlight: labelled region with a list, carousel and slide roledescriptions, "n of N" labels, a status region (output) for announcements  ({"rd":"carousel","label":true,"tag":"SECTION","list":true,"slides":["slide:1 of 3","slide:2 of 3","slide:3 of 3"],"live":"polite","group":"Choose a project"})
+PASS  spotlight: no console errors during use
+PASS  arc: Tab reaches all 9 links, each one centred and fully visible when focused  ([[0,0,1],[1,1,1],[2,2,1],[3,3,1],[4,4,1],[5,5,1],[6,6,1],[7,7,1],[8,8,1]])
+PASS  arc: then previous, the dots as one stop, next (3 buttons), then focus leaves: no trap  (stops: 12)
+PASS  arc: focus ring visible on links and buttons  (solid 3px)
+PASS  arc: an arrow key moves focus with the item, so focus is never on a hidden link  (1,1)
+PASS  arc: arrow keys on the dots move the wheel and keep focus on the current dot  (true,0,3,Brand & identity, 4 of 9)
+PASS  spotlight: Tab reaches all 3 links, each one centred and fully visible when focused  ([[0,0,1],[1,1,1],[2,2,1]])
+PASS  spotlight: then previous, the dots as one stop, next (3 buttons), then focus leaves: no trap  (stops: 6)
+PASS  spotlight: focus ring visible on links and buttons  (solid 3px)
+PASS  spotlight: an arrow key moves focus with the item, so focus is never on a hidden link  (1,1)
+PASS  spotlight: arrow keys on the dots move the wheel and keep focus on the current dot  (true,0,3,Smilys Softwash, 1 of 3)
+PASS  script off: nine services and three projects all visible as a plain list, each in its own place, no dead controls  ([{"n":9,"allVisible":true,"distinctTops":9,"clipped":"visible","ctl":0},{"n":3,"allVisible":true,"distinctTops":3,"clipped":"visible","ctl":0}])
+PASS  script off: nine fixed prices as the site words them, in the order of /services/  ($1,000, $2,000 or $4,000|priced as a new site|$8,000|$1,500|in every build|$125, $300, $600 or $1,000/mo|$750 or $1,500 per setup|$350 audit · $500 or $1,000/mo|$500)
+PASS  reduced motion, arc: next is instant (same task), no animation frame requested  ({"on":1,"moving":false,"frames":0,"t":"translate(0px) rotate(0deg) scale(1)","cap":"1"})
+PASS  reduced motion, arc: a drag does not animate; it steps once on release  ([1,2])
+PASS  reduced motion, spotlight: next is instant (same task), no animation frame requested  ({"on":1,"moving":false,"frames":0,"t":"translate(0px) scale(1)","cap":"1"})
+PASS  reduced motion, spotlight: a drag does not animate; it steps once on release  ([1,2])
+PASS  paused motion, arc: next is instant (same task), no animation frame requested  ({"on":1,"moving":false,"frames":0,"t":"translate(0px) rotate(0deg) scale(1)","cap":"1"})
+PASS  paused motion, arc: a drag does not animate; it steps once on release  ([1,2])
+PASS  paused motion, spotlight: next is instant (same task), no animation frame requested  ({"on":1,"moving":false,"frames":0,"t":"translate(0px) scale(1)","cap":"1"})
+PASS  paused motion, spotlight: a drag does not animate; it steps once on release  ([1,2])
+PASS  arc: wheel over it scrolls the page (240px) and never turns it  ({"on":0,"moving":false,"live":true,"said":""})
+PASS  spotlight: wheel over it scrolls the page (240px) and never turns it  ({"on":0,"moving":false,"live":true,"said":""})
+PASS  left alone for 6.5 seconds, nothing moves (no auto-advance)
+PASS  arc: releasing a drag over the link does not follow it; a plain click on the same link does  (http://localhost:8730/services/#website-design)
+PASS  spotlight: releasing a drag over the link does not follow it; a plain click on the same link does  (http://localhost:8730/work/#smilys-softwash)
+PASS  arc: a click on the side one centres it (no navigation); a click on the centred one opens its link  (http://localhost:8730/services/#redesigns)
+PASS  spotlight: a click on the side one centres it (no navigation); a click on the centred one opens its link  (http://localhost:8730/work/#risen-health)
+PASS  arc: mounts after load; mount() twice returns the same remover; remover restores the markup byte for byte, even mid-animation; remounts  ({"live":true,"again":true,"restored":true,"original":true,"remount":true})
+PASS  spotlight: mounts after load; mount() twice returns the same remover; remover restores the markup byte for byte, even mid-animation; remounts  ({"live":true,"again":true,"restored":true,"original":true,"remount":true})
+
+all passed
+
+== firefox: test/input.js ==
+PASS  wheel: after a press released outside the stage, moving the mouse over it turns nothing, and Next still works  (item 1, after hovering 1, after Next 2)
+PASS  wheel: a press whose release never arrives does not leave it following the mouse  (item 1)
+PASS  wheel: no console errors
+PASS  wheel: a click on the link with 10px of wobble still follows it  (/services/#website-design)
+PASS  wheel: Ctrl+click on the centred one opens a new tab and never moves this page  (new tab on try 1 of 5; this page left 0 times; the caption link itself opened a tab in 1 of 1 tries)
+PASS  wheel: the cursor is a pointer on a sign or card, link and arrows, a grab hand on the rest of the stage, and a closed hand while dragging  ({"c":{"part":"pointer","stage":"grab","link":"pointer","arrow":"pointer"},"dragging":{"part":"grabbing","stage":"grabbing"},"after":"pointer"})
+PASS  wheel: a sign or card lifts on hover and sinks when pressed  (hover 0px -2px; pressed 0px 1px)
+PASS  wheel: arrows and the caption link do the same  (arrow hover 0px -2px, pressed 0px 1px; link hover 0px -2px)
+PASS  spotlight: after a press released outside the stage, moving the mouse over it turns nothing, and Next still works  (item 1, after hovering 1, after Next 2)
+PASS  spotlight: a press whose release never arrives does not leave it following the mouse  (item 1)
+PASS  spotlight: no console errors
+PASS  spotlight: a click on the link with 10px of wobble still follows it  (/work/#smilys-softwash)
+PASS  spotlight: Ctrl+click on the centred one opens a new tab and never moves this page  (new tab on try 1 of 5; this page left 0 times; the caption link itself opened a tab in 1 of 1 tries)
+PASS  spotlight: the cursor is a pointer on a sign or card, link and arrows, a grab hand on the rest of the stage, and a closed hand while dragging  ({"c":{"part":"pointer","stage":"grab","link":"pointer","arrow":"pointer"},"dragging":{"part":"grabbing","stage":"grabbing"},"after":"pointer"})
+PASS  spotlight: a sign or card lifts on hover and sinks when pressed  (hover 0px -2px; pressed 0px 1px)
+PASS  spotlight: arrows and the caption link do the same  (arrow hover 0px -2px, pressed 0px 1px; link hover 0px -2px)
+
+== firefox: test/still.js ==
+PASS  wheel: no animation frame is asked for while it is idle  (0 in 1.5s)
+PASS  wheel: pausing motion in the middle of a move ends it on the next frame, on the item it was heading for  ({"mid":true,"movingAfter":false,"frames":0,"on":1})
+PASS  wheel: so does the device's reduced-motion setting  (item 3)
+PASS  wheel: scrolled off screen in mid-move, it stops asking for frames  (0 frames in the next 0.6s)
+PASS  wheel: a move made while off screen is applied at once, with no frames  ({"frames":0,"moving":false})
+PASS  wheel: will-change is off when nothing is moving  (auto)
+PASS  spotlight: no animation frame is asked for while it is idle  (0 in 1.5s)
+PASS  spotlight: pausing motion in the middle of a move ends it on the next frame, on the item it was heading for  ({"mid":true,"movingAfter":false,"frames":0,"on":1})
+PASS  spotlight: so does the device's reduced-motion setting  (item 3)
+PASS  spotlight: scrolled off screen in mid-move, it stops asking for frames  (0 frames in the next 0.6s)
+PASS  spotlight: a move made while off screen is applied at once, with no frames  ({"frames":0,"moving":false})
+PASS  spotlight: will-change is off when nothing is moving  (auto)
+
+== firefox: test/robust.js ==
+PASS  360px: 50 to 80 letter words and an 80 letter address cause no sideways scroll; the browser dots keep their size; the address stays inside its frame  (page wider than window by 0px; dots 8,8,8px; address ends 14px inside the frame)
+PASS  390px: 50 to 80 letter words and an 80 letter address cause no sideways scroll; the browser dots keep their size; the address stays inside its frame  (page wider than window by 0px; dots 8,8,8px; address ends 14px inside the frame)
+PASS  1280px: 50 to 80 letter words and an 80 letter address cause no sideways scroll; the browser dots keep their size; the address stays inside its frame  (page wider than window by 0px; dots 8,8,8px; address ends 14px inside the frame)
+PASS  default font 20px at 360px wide: no sign past the window edge, no sideways scroll, controls on one row  (3 signs showing, nearest edge 17px inside, control row 44px tall)
+PASS  default font 24px at 390px wide: no sign past the window edge, no sideways scroll, controls on one row  (3 signs showing, nearest edge 24px inside, control row 44px tall)
+PASS  default font 24px at 430px wide: no sign past the window edge, no sideways scroll, controls on one row  (3 signs showing, nearest edge 27px inside, control row 44px tall)
+PASS  default font 32px at 390px wide: no sign past the window edge, no sideways scroll, controls on one row  (3 signs showing, nearest edge 24px inside, control row 45px tall)
+PASS  360px arc with 12 items: controls on one 44px row that fits, a count ("1 of 12"); height held before the script equals height after  (row 184px of 320px; held 414px, live 414px)
+PASS  360px arc with 30 items: controls on one 44px row that fits, a count ("1 of 30"); height held before the script equals height after  (row 184px of 320px; held 414px, live 414px)
+PASS  360px spotlight with 5 items: controls on one 44px row that fits, a count ("1 of 5"); height held before the script equals height after  (row 140px of 360px; held 512px, live 512px)
+PASS  360px spotlight with 12 items: controls on one 44px row that fits, a count ("1 of 12"); height held before the script equals height after  (row 146px of 360px; held 512px, live 512px)
+PASS  390px arc with 12 items: controls on one 44px row that fits, a count ("1 of 12"); height held before the script equals height after  (row 184px of 350px; held 428px, live 428px)
+PASS  390px arc with 30 items: controls on one 44px row that fits, a count ("1 of 30"); height held before the script equals height after  (row 184px of 350px; held 428px, live 428px)
+PASS  390px spotlight with 5 items: controls on one 44px row that fits, a count ("1 of 5"); height held before the script equals height after  (row 140px of 390px; held 514px, live 514px)
+PASS  390px spotlight with 12 items: controls on one 44px row that fits, a count ("1 of 12"); height held before the script equals height after  (row 146px of 390px; held 514px, live 514px)
+PASS  1280px arc with 12 items: controls on one 44px row that fits, 12 dots; height held before the script equals height after  (row 720px of 1184px; held 473px, live 473px)
+PASS  1280px arc with 30 items: controls on one 44px row that fits, a count ("1 of 30"); height held before the script equals height after  (row 184px of 1184px; held 473px, live 473px)
+PASS  1280px spotlight with 5 items: controls on one 44px row that fits, 5 dots; height held before the script equals height after  (row 356px of 1280px; held 616px, live 616px)
+PASS  1280px spotlight with 12 items: controls on one 44px row that fits, 12 dots; height held before the script equals height after  (row 720px of 1280px; held 616px, live 616px)
+PASS  arc without one .kws-arc-tile: mount does nothing and throws nothing
+PASS  arc without one .kws-arc-cap: mount does nothing and throws nothing
+PASS  spotlight without one .kws-spot-frame: mount does nothing and throws nothing
+PASS  spotlight without one .kws-spot-cap: mount does nothing and throws nothing
+PASS  no console errors
+
+== firefox: test/held.js ==
+PASS  390px: one item held at first; after 4s all nine and all three are back, 1 across as with script off  (held 428px and 514px; list 3624px, 1 across and 1485px, 1 across)
+PASS  390px, reduced motion: one item held at first; after 4s all nine and all three are back, 1 across as with script off  (held 428px and 514px; list 3624px, 1 across and 1485px, 1 across)
+PASS  1440px: one item held at first; after 4s all nine and all three are back, 3 across as with script off  (held 473px and 625px; list 1363px, 3 across and 507px, 3 across)
+PASS  1440px, reduced motion: one item held at first; after 4s all nine and all three are back, 3 across as with script off  (held 473px and 625px; list 1363px, 3 across and 507px, 3 across)
+PASS  the remover, called once the hold has ended, gives the whole plain list back at once  (9 and 3 items showing)
+
+== firefox: test/edge.js ==
+PASS  390px spotlight x1 {}: start 0, after 2 nexts at 0, after prev at 0, 1 showing, past the window edge by 0px
+PASS  390px spotlight x2 {}: start 0, after 3 nexts at 1, after prev at 0, 2 showing, past the window edge by 0px
+PASS  390px spotlight x4 {}: start 0, after 5 nexts at 1, after prev at 0, 3 showing, past the window edge by 0px
+PASS  390px spotlight x6 {"data-start":"2"}: start 2, after 7 nexts at 3, after prev at 2, 3 showing, past the window edge by 0px
+PASS  390px spotlight x3 {"data-loop":"false"}: start 0, after 4 nexts at 1, after prev at 0, 2 showing, past the window edge by 0px
+PASS  390px arc x1 {}: start 0, after 2 nexts at 0, after prev at 0, 1 showing, past the window edge by -20px
+PASS  390px arc x2 {}: start 0, after 3 nexts at 1, after prev at 0, 2 showing, past the window edge by 0px
+PASS  390px arc x4 {}: start 0, after 5 nexts at 1, after prev at 0, 3 showing, past the window edge by 0px
+PASS  390px arc x14 {}: start 0, after 15 nexts at 1, after prev at 0, 3 showing, past the window edge by 0px
+PASS  390px arc x9 {"data-loop":"false","data-start":"8"}: start 8, after 10 nexts at 0, after prev at 8, 2 showing, past the window edge by 0px
+PASS  1280px spotlight x1 {}: start 0, after 2 nexts at 0, after prev at 0, 1 showing, past the window edge by 0px
+PASS  1280px spotlight x2 {}: start 0, after 3 nexts at 1, after prev at 0, 2 showing, past the window edge by 0px
+PASS  1280px spotlight x4 {}: start 0, after 5 nexts at 1, after prev at 0, 3 showing, past the window edge by 0px
+PASS  1280px spotlight x6 {"data-start":"2"}: start 2, after 7 nexts at 3, after prev at 2, 3 showing, past the window edge by 0px
+PASS  1280px spotlight x3 {"data-loop":"false"}: start 0, after 4 nexts at 1, after prev at 0, 2 showing, past the window edge by 0px
+PASS  1280px arc x1 {}: start 0, after 2 nexts at 0, after prev at 0, 1 showing, past the window edge by -48px
+PASS  1280px arc x2 {}: start 0, after 3 nexts at 1, after prev at 0, 2 showing, past the window edge by -48px
+PASS  1280px arc x4 {}: start 0, after 5 nexts at 1, after prev at 0, 3 showing, past the window edge by -48px
+PASS  1280px arc x14 {}: start 0, after 15 nexts at 1, after prev at 0, 9 showing, past the window edge by -48px
+PASS  1280px arc x9 {"data-loop":"false","data-start":"8"}: start 8, after 10 nexts at 0, after prev at 8, 5 showing, past the window edge by -48px
+
+== firefox: test/theme.js ==
+PASS  theme button flips the theme and every kit colour follows {"theme":"light","tile":"rgb(36, 56, 159)","name":"rgb(26, 34, 56)","frame":"rgb(255, 252, 245)","dot":"rgb(44, 70, 196)"} {"theme":"dark","tile":"rgb(27, 42, 120)","name":"rgb(243, 236, 221)","frame":"rgb(29, 35, 51)","dot":"rgb(157, 176, 255)"}
+PASS  pause button sets data-motion="off" and the next move is instant off,false,1
+PASS  no console errors
+

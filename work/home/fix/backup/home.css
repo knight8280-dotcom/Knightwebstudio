@@ -1,0 +1,141 @@
+/* Home page only. Every rule is scoped with [data-page="home"]. */
+
+/* Hero: the shop front with the caller's phone standing in front of it.
+   The phone is pulled up by a share of the art's width, so at every size its top sits just under the awning
+   and never touches the painted sign. Its caption stands in the clear space beside it, under the street. */
+[data-page="home"] .hero { padding-bottom: var(--s-4); }
+[data-page="home"] .hero-grid { grid-template-columns: minmax(0, 1fr); align-items: start; }
+[data-page="home"] .hero-art {
+  --art-w: 32.5rem; --phone-w: min(13rem, 60%); --tuck: 36.3%; --hang: 0rem;
+  display: grid; grid-template-columns: var(--phone-w) minmax(0, 1fr); width: min(100%, var(--art-w)); margin-inline: auto;
+}
+[data-page="home"] .hero-scene { grid-column: 1 / -1; }
+[data-page="home"] .hero-phone { grid-area: 2 / 1 / auto / -1; margin: calc(-1 * var(--tuck)) 0 0 calc(-1 * var(--hang)); }
+[data-page="home"] .hero-cap { grid-area: 2 / 2; display: grid; align-content: start; justify-items: start; gap: var(--s-2); margin: var(--s-4) 0 0 calc(var(--s-4) - var(--hang)); }
+[data-page="home"] .hero-cap .phone-label { margin: 0; }
+[data-page="home"] .hero-phone .thread-note { text-align: center; text-wrap: balance; }
+[data-page="home"] .points { margin-top: var(--stack); }
+@media (min-width: 600px) { [data-page="home"] .hero-art { --hang: var(--s-5); } }
+@media (min-width: 980px) {
+  [data-page="home"] .hero { padding-top: var(--s-6); }
+  [data-page="home"] .hero-grid { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); }
+  [data-page="home"] .hero-art { --hang: calc(var(--gap-lg) / 2); }
+}
+@media (min-width: 1100px) {
+  [data-page="home"] .hero-grid { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); }
+  [data-page="home"] .hero-art { --phone-w: 15rem; }
+}
+
+/* Services: the name, its price under it, what it is, what you get. Read across as a ruled table from 980px.
+   SHARED-CANDIDATE: a .pricelist row whose price is too long for the name's line (the leader is left dangling) */
+[data-page="home"] .offer { max-width: none; }
+[data-page="home"] .offer .pl-row { display: grid; gap: var(--s-1); }
+[data-page="home"] .offer .pl-name { font-size: var(--fs-title); }
+[data-page="home"] .offer .pl-price { margin: 0; font-size: var(--fs-h4); }
+[data-page="home"] .offer .dots { display: none; }
+@media (min-width: 760px) {
+  [data-page="home"] .offer > li { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 0 var(--gap-lg); padding-block: var(--s-6); }
+  [data-page="home"] .offer .ticks { grid-area: 1 / 2 / span 2; margin-top: var(--s-2); }
+}
+@media (min-width: 980px) {
+  [data-page="home"] .offer > li { grid-template-columns: minmax(0, 5fr) minmax(0, 5fr) minmax(0, 4fr); align-items: baseline; }
+  [data-page="home"] .offer .ticks { grid-area: auto; }
+  [data-page="home"] .offer :is(p, .ticks) { margin-top: 0; }
+  [data-page="home"] .offer p { font-size: var(--fs-body); line-height: 1.55; }
+}
+
+/* The story: one missed call, followed through three stops to the total.
+   Each stop reads headline, picture, explanation on a phone; from 980px the picture stands beside the words. */
+[data-page="home"] .route { --pin: var(--s-6); list-style: none; display: grid; gap: var(--s-6); }
+[data-page="home"] .stop { position: relative; display: grid; grid-template-columns: var(--pin) minmax(0, 1fr); gap: var(--s-4) var(--s-3); }
+[data-page="home"] .stop > * { grid-column: 1 / -1; }
+[data-page="home"] .stop-pin { grid-area: 1 / 1; z-index: var(--z-raised); display: grid; place-items: center; width: var(--pin); height: var(--pin); border: var(--bold) solid var(--ink); border-radius: 50%; background: var(--card); box-shadow: 0 0 0 var(--s-2) var(--paper-2); font-size: var(--fs-md); line-height: 1; }
+[data-page="home"] .stop-head { grid-row: 1; }
+[data-page="home"] .stop-tag { display: flex; align-items: center; min-height: var(--pin); margin: 0 0 var(--s-3); padding-left: calc(var(--pin) + var(--s-3)); color: var(--ink); font-size: var(--fs-sm); font-weight: 700; line-height: 1.3; }
+[data-page="home"] .stop h3 { font-size: var(--fs-title); }
+[data-page="home"] .stop-body { max-width: var(--measure); margin: 0; text-wrap: pretty; }
+[data-page="home"] .stop-sum .stop-pin { background: var(--ink); color: var(--paper-2); }
+[data-page="home"] .stop-sum .bigfig-num { font-size: var(--fs-title); line-height: 1.1; }
+[data-page="home"] .stop-sum .bigfig-num span:first-child { display: block; }
+[data-page="home"] .stop-sum .bigfig-num b { display: inline-block; margin-right: var(--s-2); }
+[data-page="home"] .stop-links { display: grid; justify-items: start; }
+
+/* The text that goes out, then the reply on the owner's phone: side by side when there is room, else stacked */
+[data-page="home"] .stop-reply { --thread: 14rem; --notice: 15.5rem; display: flex; flex-wrap: wrap; align-items: flex-end; gap: var(--s-2) var(--s-5); }
+[data-page="home"] .stop-reply .thread { flex: 1 1 var(--thread); padding: 0; }
+[data-page="home"] .stop-reply .notice { flex: 0 1 var(--notice); margin-left: auto; }
+@media (max-width: 599.98px) { [data-page="home"] .stop-art { padding: var(--s-7) var(--s-3) var(--s-3); } }
+@media (max-width: 979.98px) {
+  /* On a phone the stops stack; a short dashed tie joins each one to the next */
+  [data-page="home"] .stop + .stop::before { content: ""; position: absolute; left: calc(var(--pin) / 2 - var(--hair)); bottom: calc(100% + var(--s-2)); height: var(--s-4); border-left: var(--bold) dashed var(--line-2); }
+  [data-page="home"] .stop-sum .stop-pin { display: none; }
+}
+@media (min-width: 760px) {
+  /* Tablet: the headline runs across, the picture has its explanation beside it */
+  [data-page="home"] .stop { grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); column-gap: var(--gap-lg); }
+  [data-page="home"] .stop-art { grid-column: 1; }
+  [data-page="home"] .stop-body { grid-column: 2; align-self: center; }
+}
+@media (min-width: 980px) {
+  [data-page="home"] .route { --pin: var(--s-7); gap: 0; }
+  [data-page="home"] .stop { grid-template-columns: var(--pin) minmax(0, 5fr) minmax(0, 6fr); gap: var(--s-3) var(--s-7); padding-block: var(--s-6); }
+  [data-page="home"] .stop::before { content: ""; position: absolute; left: calc(var(--pin) / 2 - var(--hair)); top: 0; bottom: 0; border-left: var(--bold) dashed var(--line-2); }
+  [data-page="home"] .stop:first-child::before { top: 50%; }
+  [data-page="home"] .stop-sum::before { bottom: 50%; }
+  [data-page="home"] .stop-pin { grid-area: 1 / 1 / span 2; align-self: center; font-size: var(--fs-h4); }
+  [data-page="home"] .stop-head { grid-area: 1 / 2; align-self: end; }
+  [data-page="home"] .stop-body { grid-area: 2 / 2; align-self: start; }
+  [data-page="home"] .stop-art { grid-area: 1 / 3 / span 2; align-self: center; }
+  [data-page="home"] .stop-tag { min-height: 0; padding-left: 0; }
+  [data-page="home"] .stop-sum .stop-pin { grid-row: 1; }
+  [data-page="home"] .stop-sum .bigfig { grid-area: 1 / 2 / auto / -1; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); column-gap: var(--s-7); align-items: center; }
+  [data-page="home"] .stop-sum .bigfig > * { grid-column: 2; }
+  [data-page="home"] .stop-sum .bigfig-num { grid-area: 1 / 1 / span 3; }
+}
+
+/* Work: the local project leads; on a phone the other two are short rows under it, picture left, name right */
+[data-page="home"] .prints { display: grid; gap: var(--s-4); }
+@media (max-width: 759.98px) {
+  [data-page="home"] .print + .print { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); align-items: center; gap: var(--s-2); padding-bottom: var(--s-3); }
+  [data-page="home"] .print + .print .print-cap { padding-block: 0; }
+}
+@media (max-width: 979.98px) { [data-page="home"] .print h3 { font-size: var(--fs-h4); } }
+@media (min-width: 760px) { [data-page="home"] .prints { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap); } }
+
+/* SHARED-CANDIDATE: the price board leaves a one-word last line on a phone ("months", "month", "plans") */
+[data-page="home"] .board :is(.tier-plan, dd, .btn) { text-wrap: balance; }
+
+/* Who you work with: the note and the business card */
+[data-page="home"] .who { display: grid; gap: var(--gap-lg); align-items: center; }
+[data-page="home"] .who-note { max-width: var(--measure); padding-left: var(--s-5); border-left: var(--focus-w) solid var(--brick); color: var(--ink); font-size: var(--fs-lede); line-height: 1.52; }
+[data-page="home"] .who-note p:last-child { margin: 0; }
+[data-page="home"] .who .pills { --towns: 30rem; max-width: var(--towns); }   /* seven towns break four and three, not six and one */
+[data-page="home"] .bizcard { justify-self: center; }
+@media (min-width: 980px) {
+  [data-page="home"] .who { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); }
+  [data-page="home"] .who .stack { --stack-gap: var(--s-5); }
+}
+
+/* The testimonials block is commented out in the page until there are real quotes; this is its layout */
+[data-page="home"] .quote-grid { display: grid; gap: var(--gap); }
+[data-page="home"] .quote { display: grid; align-content: space-between; gap: var(--s-5); padding: var(--pad); border: var(--edge); border-radius: var(--r-lg); background: var(--card); box-shadow: var(--shadow-1); }
+[data-page="home"] .quote blockquote { color: var(--ink); font-size: var(--fs-lede); line-height: 1.52; }
+[data-page="home"] .quote p { margin: 0; }
+[data-page="home"] .quote figcaption { display: grid; font-size: var(--fs-sm); }
+@media (min-width: 760px) { [data-page="home"] .quote-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+/* Motion, once: the phone rises into place, then the missed call and the text that answers it arrive in order */
+.js [data-page="home"] .hero-phone { animation: home-rise var(--t-slow) var(--ease) var(--t-step) both; }
+.js [data-page="home"] .hero-phone .thread > li { animation: home-rise var(--t-slow) var(--ease) calc(var(--t-slow) * (.4 + var(--n) * .5)) both; }
+@keyframes home-rise { from { opacity: 0; transform: translateY(var(--s-3)); } }
+
+/* SHARED-CANDIDATE: the header's "Book a free call" button breaks onto two lines from 1100 to about 1145px and from
+   1280 to 1299px (where the phone number joins the header), because the menu cannot give way. Here the menu keeps
+   its width when there is room and closes up when there is not, and the button stays on one line. */
+@media (min-width: 1100px) {
+  [data-page="home"] .nav { --menu: 37rem; flex: 0 1 var(--menu); min-width: 0; }
+  [data-page="home"] .nav-links { justify-content: space-between; }
+  [data-page="home"] .nav-links a { padding-inline: var(--s-2); }
+  [data-page="home"] .nav-links a::after { inset-inline: var(--s-2); }
+  [data-page="home"] .header-cta { white-space: nowrap; }
+}

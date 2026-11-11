@@ -1,0 +1,452 @@
+{
+ "/no/such/deep/path/|phone": {
+  "status": 404,
+  "m": {
+   "title": "Page not found — KnightWebstudio",
+   "h1": "This page has moved on",
+   "theme": "light",
+   "robots": "noindex",
+   "canonical": null,
+   "base": null,
+   "links": 15,
+   "imgs": [],
+   "fonts": [
+    "Fraunces",
+    "Figtree"
+   ],
+   "css": [
+    "http://localhost:8731/assets/css/styles.css"
+   ],
+   "overflowX": 0,
+   "scripts": [
+    "inline"
+   ],
+   "bodyFont": "Figtree, \"Figtree Fallback\", s"
+  },
+  "badLinks": [
+   "not root-absolute: #main"
+  ],
+  "reqs": [
+   "404 /no/such/deep/path/",
+   "200 /assets/css/styles.css",
+   "200 /assets/fonts/fraunces-soft.woff2",
+   "200 /assets/fonts/figtree.woff2"
+  ],
+  "log": [
+   {
+    "t": "local-error",
+    "status": 404,
+    "url": "http://localhost:8731/no/such/deep/path/"
+   },
+   {
+    "t": "console.error",
+    "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+   }
+  ]
+ },
+ "/no/such/deep/path/|desktop": {
+  "status": 404,
+  "m": {
+   "title": "Page not found — KnightWebstudio",
+   "h1": "This page has moved on",
+   "theme": "dark",
+   "robots": "noindex",
+   "canonical": null,
+   "base": null,
+   "links": 15,
+   "imgs": [],
+   "fonts": [
+    "Fraunces",
+    "Figtree"
+   ],
+   "css": [
+    "http://localhost:8731/assets/css/styles.css"
+   ],
+   "overflowX": 0,
+   "scripts": [
+    "inline"
+   ],
+   "bodyFont": "Figtree, \"Figtree Fallback\", s"
+  },
+  "badLinks": [
+   "not root-absolute: #main"
+  ],
+  "reqs": [
+   "404 /no/such/deep/path/",
+   "200 /assets/css/styles.css",
+   "200 /assets/fonts/figtree.woff2",
+   "200 /assets/fonts/fraunces-soft.woff2"
+  ],
+  "log": [
+   {
+    "t": "local-error",
+    "status": 404,
+    "url": "http://localhost:8731/no/such/deep/path/"
+   },
+   {
+    "t": "console.error",
+    "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+   }
+  ]
+ },
+ "/services/typo|phone": {
+  "status": 404,
+  "m": {
+   "title": "Page not found — KnightWebstudio",
+   "h1": "This page has moved on",
+   "theme": "light",
+   "robots": "noindex",
+   "canonical": null,
+   "base": null,
+   "links": 15,
+   "imgs": [],
+   "fonts": [
+    "Fraunces",
+    "Figtree"
+   ],
+   "css": [
+    "http://localhost:8731/assets/css/styles.css"
+   ],
+   "overflowX": 0,
+   "scripts": [
+    "inline"
+   ],
+   "bodyFont": "Figtree, \"Figtree Fallback\", s"
+  },
+  "badLinks": [
+   "not root-absolute: #main"
+  ],
+  "reqs": [
+   "404 /services/typo",
+   "200 /assets/css/styles.css",
+   "200 /assets/fonts/fraunces-soft.woff2",
+   "200 /assets/fonts/figtree.woff2"
+  ],
+  "log": [
+   {
+    "t": "local-error",
+    "status": 404,
+    "url": "http://localhost:8731/services/typo"
+   },
+   {
+    "t": "console.error",
+    "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+   }
+  ]
+ },
+ "/services/typo|desktop": {
+  "status": 404,
+  "m": {
+   "title": "Page not found — KnightWebstudio",
+   "h1": "This page has moved on",
+   "theme": "dark",
+   "robots": "noindex",
+   "canonical": null,
+   "base": null,
+   "links": 15,
+   "imgs": [],
+   "fonts": [
+    "Fraunces",
+    "Figtree"
+   ],
+   "css": [
+    "http://localhost:8731/assets/css/styles.css"
+   ],
+   "overflowX": 0,
+   "scripts": [
+    "inline"
+   ],
+   "bodyFont": "Figtree, \"Figtree Fallback\", s"
+  },
+  "badLinks": [
+   "not root-absolute: #main"
+  ],
+  "reqs": [
+   "404 /services/typo",
+   "200 /assets/fonts/fraunces-soft.woff2",
+   "200 /assets/fonts/figtree.woff2",
+   "200 /assets/css/styles.css"
+  ],
+  "log": [
+   {
+    "t": "local-error",
+    "status": 404,
+    "url": "http://localhost:8731/services/typo"
+   },
+   {
+    "t": "console.error",
+    "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+   }
+  ]
+ },
+ "/web-design-baton-rouge/a/b/c.html|phone": {
+  "status": 404,
+  "m": {
+   "title": "Page not found — KnightWebstudio",
+   "h1": "This page has moved on",
+   "theme": "light",
+   "robots": "noindex",
+   "canonical": null,
+   "base": null,
+   "links": 15,
+   "imgs": [],
+   "fonts": [
+    "Fraunces",
+    "Figtree"
+   ],
+   "css": [
+    "http://localhost:8731/assets/css/styles.css"
+   ],
+   "overflowX": 0,
+   "scripts": [
+    "inline"
+   ],
+   "bodyFont": "Figtree, \"Figtree Fallback\", s"
+  },
+  "badLinks": [
+   "not root-absolute: #main"
+  ],
+  "reqs": [
+   "404 /web-design-baton-rouge/a/b/c.html",
+   "200 /assets/css/styles.css",
+   "200 /assets/fonts/fraunces-soft.woff2",
+   "200 /assets/fonts/figtree.woff2"
+  ],
+  "log": [
+   {
+    "t": "local-error",
+    "status": 404,
+    "url": "http://localhost:8731/web-design-baton-rouge/a/b/c.html"
+   },
+   {
+    "t": "console.error",
+    "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+   }
+  ]
+ },
+ "/web-design-baton-rouge/a/b/c.html|desktop": {
+  "status": 404,
+  "m": {
+   "title": "Page not found — KnightWebstudio",
+   "h1": "This page has moved on",
+   "theme": "dark",
+   "robots": "noindex",
+   "canonical": null,
+   "base": null,
+   "links": 15,
+   "imgs": [],
+   "fonts": [
+    "Fraunces",
+    "Figtree"
+   ],
+   "css": [
+    "http://localhost:8731/assets/css/styles.css"
+   ],
+   "overflowX": 0,
+   "scripts": [
+    "inline"
+   ],
+   "bodyFont": "Figtree, \"Figtree Fallback\", s"
+  },
+  "badLinks": [
+   "not root-absolute: #main"
+  ],
+  "reqs": [
+   "404 /web-design-baton-rouge/a/b/c.html",
+   "200 /assets/css/styles.css",
+   "200 /assets/fonts/fraunces-soft.woff2",
+   "200 /assets/fonts/figtree.woff2"
+  ],
+  "log": [
+   {
+    "t": "local-error",
+    "status": 404,
+    "url": "http://localhost:8731/web-design-baton-rouge/a/b/c.html"
+   },
+   {
+    "t": "console.error",
+    "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+   }
+  ]
+ },
+ "/checkout/sucess/?plan=starter-deposit|phone": {
+  "status": 404,
+  "m": {
+   "title": "Page not found — KnightWebstudio",
+   "h1": "This page has moved on",
+   "theme": "light",
+   "robots": "noindex",
+   "canonical": null,
+   "base": null,
+   "links": 15,
+   "imgs": [],
+   "fonts": [
+    "Fraunces",
+    "Figtree"
+   ],
+   "css": [
+    "http://localhost:8731/assets/css/styles.css"
+   ],
+   "overflowX": 0,
+   "scripts": [
+    "inline"
+   ],
+   "bodyFont": "Figtree, \"Figtree Fallback\", s"
+  },
+  "badLinks": [
+   "not root-absolute: #main"
+  ],
+  "reqs": [
+   "404 /checkout/sucess/?plan=starter-deposit",
+   "200 /assets/fonts/figtree.woff2",
+   "200 /assets/css/styles.css",
+   "200 /assets/fonts/fraunces-soft.woff2"
+  ],
+  "log": [
+   {
+    "t": "local-error",
+    "status": 404,
+    "url": "http://localhost:8731/checkout/sucess/?plan=starter-deposit"
+   },
+   {
+    "t": "console.error",
+    "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+   }
+  ]
+ },
+ "/checkout/sucess/?plan=starter-deposit|desktop": {
+  "status": 404,
+  "m": {
+   "title": "Page not found — KnightWebstudio",
+   "h1": "This page has moved on",
+   "theme": "dark",
+   "robots": "noindex",
+   "canonical": null,
+   "base": null,
+   "links": 15,
+   "imgs": [],
+   "fonts": [
+    "Fraunces",
+    "Figtree"
+   ],
+   "css": [
+    "http://localhost:8731/assets/css/styles.css"
+   ],
+   "overflowX": 0,
+   "scripts": [
+    "inline"
+   ],
+   "bodyFont": "Figtree, \"Figtree Fallback\", s"
+  },
+  "badLinks": [
+   "not root-absolute: #main"
+  ],
+  "reqs": [
+   "404 /checkout/sucess/?plan=starter-deposit",
+   "200 /assets/css/styles.css",
+   "200 /assets/fonts/fraunces-soft.woff2",
+   "200 /assets/fonts/figtree.woff2"
+  ],
+  "log": [
+   {
+    "t": "local-error",
+    "status": 404,
+    "url": "http://localhost:8731/checkout/sucess/?plan=starter-deposit"
+   },
+   {
+    "t": "console.error",
+    "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+   }
+  ]
+ },
+ "/Pricing/|phone": {
+  "status": 404,
+  "m": {
+   "title": "Page not found — KnightWebstudio",
+   "h1": "This page has moved on",
+   "theme": "light",
+   "robots": "noindex",
+   "canonical": null,
+   "base": null,
+   "links": 15,
+   "imgs": [],
+   "fonts": [
+    "Fraunces",
+    "Figtree"
+   ],
+   "css": [
+    "http://localhost:8731/assets/css/styles.css"
+   ],
+   "overflowX": 0,
+   "scripts": [
+    "inline"
+   ],
+   "bodyFont": "Figtree, \"Figtree Fallback\", s"
+  },
+  "badLinks": [
+   "not root-absolute: #main"
+  ],
+  "reqs": [
+   "404 /Pricing/",
+   "200 /assets/fonts/fraunces-soft.woff2",
+   "200 /assets/css/styles.css",
+   "200 /assets/fonts/figtree.woff2"
+  ],
+  "log": [
+   {
+    "t": "local-error",
+    "status": 404,
+    "url": "http://localhost:8731/Pricing/"
+   },
+   {
+    "t": "console.error",
+    "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+   }
+  ]
+ },
+ "/Pricing/|desktop": {
+  "status": 404,
+  "m": {
+   "title": "Page not found — KnightWebstudio",
+   "h1": "This page has moved on",
+   "theme": "dark",
+   "robots": "noindex",
+   "canonical": null,
+   "base": null,
+   "links": 15,
+   "imgs": [],
+   "fonts": [
+    "Fraunces",
+    "Figtree"
+   ],
+   "css": [
+    "http://localhost:8731/assets/css/styles.css"
+   ],
+   "overflowX": 0,
+   "scripts": [
+    "inline"
+   ],
+   "bodyFont": "Figtree, \"Figtree Fallback\", s"
+  },
+  "badLinks": [
+   "not root-absolute: #main"
+  ],
+  "reqs": [
+   "404 /Pricing/",
+   "200 /assets/fonts/fraunces-soft.woff2",
+   "200 /assets/fonts/figtree.woff2",
+   "200 /assets/css/styles.css"
+  ],
+  "log": [
+   {
+    "t": "local-error",
+    "status": 404,
+    "url": "http://localhost:8731/Pricing/"
+   },
+   {
+    "t": "console.error",
+    "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+   }
+  ]
+ }
+}

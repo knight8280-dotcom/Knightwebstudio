@@ -1,0 +1,2 @@
+demo-client {"linkOutline":"solid 3px rgb(44, 70, 196) offset 3px","sectionBg":"rgb(18, 53, 42)","linkBg":"rgb(27, 69, 54)","hasSiteCss":true,"sx":0,"live":4} errors: none
+bare {"linkOutline":"auto 1px rgb(16, 16, 16) offset 1px","sectionBg":"rgb(251, 244, 233)","linkBg":"rgb(255, 255, 255)","hasSiteCss":false,"sx":0,"live":2} errors: none

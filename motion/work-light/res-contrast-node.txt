@@ -1,0 +1,16 @@
+light 390 hero live: true 21 text boxes
+light 390 band live: true 8 text boxes
+light 390 brand-head live: true 7 text boxes
+light 390 brand-band live: true 6 text boxes
+light 1440 hero live: true 17 text boxes
+light 1440 band live: true 5 text boxes
+light 1440 brand-head live: true 4 text boxes
+light 1440 brand-band live: true 5 text boxes
+dark 390 hero live: true 21 text boxes
+dark 390 band live: true 8 text boxes
+dark 390 brand-head live: true 7 text boxes
+dark 390 brand-band live: true 6 text boxes
+dark 1440 hero live: true 17 text boxes
+dark 1440 band live: true 5 text boxes
+dark 1440 brand-head live: true 4 text boxes
+dark 1440 brand-band live: true 5 text boxes

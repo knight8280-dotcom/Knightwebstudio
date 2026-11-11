@@ -1,0 +1,4 @@
+firefox 155.0
+firefox /services/#seo: row open = true | target top = 184 | scrollY 1908.6666259765625
+firefox menu tap #brand: row open = true | scrollY 1851
+firefox header button height: 1100:54 1120:54 1140:54 1160:44 1180:44 1200:44 1220:44 1240:44 1260:44 1280:54 1300:44 1320:44

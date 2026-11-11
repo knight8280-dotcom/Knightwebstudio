@@ -1,0 +1,19 @@
+1 .btn rest/hover/active transform: none | matrix(1, 0, 0, 1, 0, -2) | matrix(1, 0, 0, 1, 0, -2)
+2 / a.print class=[print reveal visible] transform rest/hover: none | none | shadow changed: 123
+2 /start/ a.print class=[print reveal visible] transform rest/hover: none | none | shadow changed: 123
+2 /web-design-gonzales/ a.print class=[print reveal visible] transform rest/hover: none | none | shadow changed: 123
+3 #nav opacity/visibility after resizing 1440 -> 1000: 0ms:1.00/visible  60ms:0.41/visible  90ms:0.21/visible  150ms:0.06/visible  300ms:0.00/hidden
+4 404 at 390 [html.js, header position, page height] at 0.3s / 4.6s: [true,"sticky",1239] [false,"static",1239]
+7 hCaptcha script requested before any scroll or focus at 390x844: yes, 49ms after navigation (load event at 51ms) | slot y = 1542 | slot attrs <div class="h-captcha" id="hcaptcha-slot" data-sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"></div>
+5 after empty submit: ["Please fix the highlighted fields.","form-status error",3,["This field is required.","This field is required.","This field is required.","Please fix the highlighted fields."]]
+5 after correcting all fields: ["Please fix the highlighted fields.","form-status error",0,"block"]
+6 /terms/ 1440x900: tab stops whose box ends within 6px of the window bottom (ring 3px + offset 3px is cut): 20 of 89 ["Consulting and automatio@900","Your project agreement@900","Questions@900","KnightWebstudio@899","Website design@900"]
+6 /privacy/ 1440x900: tab stops whose box ends within 6px of the window bottom (ring 3px + offset 3px is cut): 15 of 89 ["Links to other sites@900","Questions@900","hCaptcha@900","checkout page@900","Render@900"]
+6 /about/ 1440x900: tab stops whose box ends within 6px of the window bottom (ring 3px + offset 3px is cut): 11 of 89 ["Risen Health\n           @900","Corbel Books\n           @900","E-commerce@900","SEO@900","Care plans@900"]
+6 /services/ 1440x900: tab stops whose box ends within 6px of the window bottom (ring 3px + offset 3px is cut): 2 of 89 ["Google profile & reviews@900","Consulting & automation@900"]
+8 chromium /services/#seo: row open = true | target top = 184
+8 chromium menu tap #brand: row open = true
+9 /pricing/ 390: closing band button centred; phone bar shown = false | bar text = Call Free 30-min call · no pitch | band button = Book a discovery call | distance bar top - band primary bottom = 399
+10 paper under the footer at 1440x1300 (px, >0 = footer floats): /404.html 0 | /checkout/ -193 | /checkout/success/ -335 | /contact/ -953 | /faq/ -1736 | /privacy/ -2170
+10 paper under the footer at 820x1180 (px, >0 = footer floats): /404.html 0 | /checkout/ -462 | /checkout/success/ -575 | /contact/ -1908 | /faq/ -1808 | /privacy/ -2600
+10 paper under the footer at 1920x1200 (px, >0 = footer floats): /404.html 0 | /checkout/ -294 | /checkout/success/ -437 | /contact/ -1055 | /faq/ -1838 | /privacy/ -2272

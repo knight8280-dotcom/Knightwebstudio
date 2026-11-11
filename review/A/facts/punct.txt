@@ -1,0 +1,49 @@
+NEW / (0)
+NEW /services/ (0)
+NEW /consulting/ (0)
+NEW /work/ (0)
+NEW /process/ (0)
+NEW /pricing/ (1)
+     \ba (?=[aeiou] → SEO basics⏎14 days⏎Start a one-page site⏎Or book the fr
+NEW /faq/ (1)
+     \ba (?=[aeiou] → ng does a website take?⏎⏎A one-page site can be live in
+NEW /contact/ (1)
+     [“"][^”"\n]{0, → ou don't need us for this".⏎⏎03⏎⏎Then a free 30-minu
+NEW /about/ (1)
+     \ba (?=[aeiou] → Fixed, published prices⏎⏎A one-page site is $1,000, Sta
+NEW /start/ (0)
+NEW /web-design-baton-rouge/ (0)
+NEW /web-design-denham-springs/ (0)
+NEW /web-design-gonzales/ (0)
+NEW /web-design-prairieville/ (1)
+     \ba (?=[aeiou] →  questions, answered⏎I'm a one-person business. Is Star
+NEW /privacy/ (0)
+NEW /terms/ (0)
+NEW /checkout/ (0)
+NEW /checkout/success/ (0)
+NEW /404.html (0)
+BASE / (0)
+BASE /services/ (0)
+BASE /consulting/ (1)
+     [“"][^”"\n]{0, → ]. What can we help with?"⏎They reply by text, and 
+BASE /work/ (0)
+BASE /process/ (0)
+BASE /pricing/ (1)
+     \ba (?=[aeiou] → cs⏎14 days support⏎Start a one-page site⏎Starter⏎⏎$2,00
+BASE /faq/ (1)
+     \ba (?=[aeiou] → ng does a website take?⏎⏎A one-page site can be live in
+BASE /contact/ (1)
+     [“"][^”"\n]{0, → ou don't need us for this".⏎Then a free 30-minute ca
+BASE /about/ (1)
+     \ba (?=[aeiou] → Fixed, published prices. A one-page site is $1,000, Sta
+BASE /start/ (0)
+BASE /web-design-baton-rouge/ (0)
+BASE /web-design-denham-springs/ (0)
+BASE /web-design-gonzales/ (0)
+BASE /web-design-prairieville/ (1)
+     \ba (?=[aeiou] →  questions, answered⏎I'm a one-person business. Is Star
+BASE /privacy/ (0)
+BASE /terms/ (0)
+BASE /checkout/ (0)
+BASE /checkout/success/ (0)
+BASE /404.html (0)

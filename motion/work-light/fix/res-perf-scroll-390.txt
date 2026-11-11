@@ -1,0 +1,32 @@
+viewport 390x844@3, throttle 4x, load 3.0
+top
+   on  n=  47 med 16.7 p95  16.8 worst   16.8 >50ms:  0
+   off n=  47 med 16.7 p95  16.7 worst   16.8 >50ms:  0
+   on  n=  47 med 16.7 p95  16.8 worst   16.8 >50ms:  0
+   off n=  47 med 16.7 p95  16.7 worst   16.8 >50ms:  0
+services
+   on  n= 175 med 16.7 p95  16.7 worst   16.8 >50ms:  0
+   off n= 175 med 16.7 p95  16.7 worst   16.8 >50ms:  0
+   on  n= 175 med 16.7 p95  50.0 worst   83.3 >50ms:  4
+   off n= 175 med 16.7 p95  16.8 worst  100.0 >50ms:  1
+process
+   on  n= 162 med 16.7 p95  16.8 worst   16.8 >50ms:  0
+   off n= 162 med 16.7 p95  16.7 worst   16.8 >50ms:  0
+   on  n= 162 med 16.7 p95  16.8 worst   16.8 >50ms:  0
+   off n= 162 med 16.7 p95  16.8 worst   16.8 >50ms:  0
+pricing
+   on  n= 160 med 16.7 p95  16.8 worst   16.8 >50ms:  0
+   off n= 160 med 16.7 p95  16.7 worst   16.8 >50ms:  0
+   on  n= 160 med 16.7 p95  16.8 worst   50.0 >50ms:  0
+   off n= 160 med 16.7 p95  16.8 worst   16.8 >50ms:  0
+other-brand
+   on  n= 284 med 16.7 p95  33.3 worst  133.3 >50ms:  8
+   off n= 284 med 16.7 p95  16.8 worst   33.3 >50ms:  0
+   on  n= 284 med 16.7 p95  16.7 worst   83.4 >50ms:  1
+   off n= 284 med 16.7 p95  16.7 worst   16.8 >50ms:  0
+cta-band
+   on  n= 115 med 16.7 p95  49.9 worst  283.4 >50ms:  5
+   off n= 115 med 16.7 p95  33.3 worst  116.7 >50ms:  1
+   on  n= 115 med 16.7 p95  16.7 worst   16.8 >50ms:  0
+   off n= 115 med 16.7 p95  16.7 worst   16.8 >50ms:  0
+load after 5.0

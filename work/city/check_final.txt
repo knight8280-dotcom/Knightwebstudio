@@ -1,0 +1,52 @@
+WARN  web-design-baton-rouge/index.html: an inline <script> differs from the baseline (fine only for the theme/first-paint snippet; say why)
+WARN  web-design-baton-rouge/index.html: extra stylesheet linked: /assets/css/pages/city.css (allowed only while pages are being built; the finished site has one stylesheet)
+WARN  web-design-denham-springs/index.html: an inline <script> differs from the baseline (fine only for the theme/first-paint snippet; say why)
+WARN  web-design-denham-springs/index.html: extra stylesheet linked: /assets/css/pages/city.css (allowed only while pages are being built; the finished site has one stylesheet)
+WARN  web-design-gonzales/index.html: an inline <script> differs from the baseline (fine only for the theme/first-paint snippet; say why)
+WARN  web-design-gonzales/index.html: extra stylesheet linked: /assets/css/pages/city.css (allowed only while pages are being built; the finished site has one stylesheet)
+WARN  web-design-prairieville/index.html: an inline <script> differs from the baseline (fine only for the theme/first-paint snippet; say why)
+WARN  web-design-prairieville/index.html: extra stylesheet linked: /assets/css/pages/city.css (allowed only while pages are being built; the finished site has one stylesheet)
+INFO  web-design-baton-rouge/index.html: 9 of 42 baseline sentences are reworded or removed
+        - Skip to content KnightWebstudio Services Consulting Work Process Pricing FAQ About Contact Start your project knightwebstudio1@gmail.com Get a quote Areas we serve · Baton Rouge, LA Website design for Baton Rouge busines
+        - What we build What a Baton Rouge site needs to do Win the "near me" search Google Business Profile setup, local SEO configuration and fast, clean pages, so you compete across the whole city, not just your own neighborhoo
+        - Google Business Profile setup Local SEO configuration Core Web Vitals tuning Turn visits into enquiries Clear services, obvious contact buttons and a form that lands in your inbox.
+        - Custom design, built for you Copywriting support on Business and Commerce Built mobile-first Keep running after launch Care plans cover backups, security updates, monitoring and the changes you ask for, with someone in t
+        - Live Exterior cleaning · Local service & SEO Smilys Softwash "Don't replace it.
+        - Live site · Online quotes Visit smilyssoftwash.com See the work in detail Pricing Fixed prices, published up front The same prices for a Baton Rouge shop as for anyone else: what you see is what you pay.
+        - Full pricing, consulting and care plans Questions Baton Rouge questions, answered Do you only work with Baton Rouge businesses?
+        - Send an enquiry Book a free 30-minute call Baton Rouge business?
+        - Book a discovery call Free 30-min call · no pitch Get a quote KnightWebstudio Websites, automation and consulting for local businesses that need to be found, trusted and chosen.
+INFO  web-design-denham-springs/index.html: 10 of 45 baseline sentences are reworded or removed
+        - Skip to content KnightWebstudio Services Consulting Work Process Pricing FAQ About Contact Start your project knightwebstudio1@gmail.com Get a quote Areas we serve · Denham Springs, LA Web design for Denham Springs busin
+        - What we build What we build for Denham Springs businesses Cover the whole parish Local SEO configuration and location-aware copy, so you show up for searches in Denham Springs, Walker, Watson and across Livingston Parish
+        - Local SEO configuration Google Business Profile setup Tell your story properly A longtime local business deserves more than a template.
+        - Custom design, built for you Copywriting support on Business and Commerce Sell beyond the parish Retail shop with products people want to buy online?
+        - $8,000, fixed 6 months support Local work Local work from across Greater Baton Rouge Smilys Softwash cleans roofs and houses across Greater Baton Rouge, and takes quote requests through its site.
+        - Live Exterior cleaning · Local service & SEO Smilys Softwash "Don't replace it.
+        - Live site · Online quotes Visit smilyssoftwash.com See the work in detail Pricing Fixed prices, published up front Published prices, the same for every client.
+        - Full pricing, consulting and care plans Questions Denham Springs questions, answered Do you work with Livingston Parish businesses outside Denham Springs?
+        - Send an enquiry Book a free 30-minute call Denham Springs business?
+        - Book a discovery call Free 30-min call · no pitch Get a quote KnightWebstudio Websites, automation and consulting for local businesses that need to be found, trusted and chosen.
+INFO  web-design-gonzales/index.html: 10 of 37 baseline sentences are reworded or removed
+        - Skip to content KnightWebstudio Services Consulting Work Process Pricing FAQ About Contact Start your project knightwebstudio1@gmail.com Get a quote Areas we serve · Gonzales, LA Web design for Gonzales businesses Custom
+        - What we build What we build for Gonzales businesses Reach customers in every direction Local SEO and clear service-area wording, so you show up for customers in Gonzales, Sorrento and Prairieville, and up toward Baton Ro
+        - Local SEO configuration Google Business Profile setup Look as established as you are If your reputation offline is stronger than your website, a custom design built around your real photos and services closes that gap.
+        - Custom design, built for you Copywriting support on Business and Commerce Take bookings or sell online Commerce builds include payments, shipping and tax, and branded booking with automatic reminders is a $750 add-on to 
+        - Commerce site: $8,000 Booking setup: $750 add-on Local work Local work, just up the road Smilys Softwash, a soft-washing company working across Greater Baton Rouge, takes quote requests through the site we built.
+        - Live Exterior cleaning · Local service & SEO Smilys Softwash "Don't replace it.
+        - Live site · Online quotes Visit smilyssoftwash.com See the work in detail Pricing Fixed prices, published up front No quotes that change halfway through: every price is fixed and confirmed in writing before work begins.
+        - Full pricing, consulting and care plans Questions Gonzales questions, answered Will you really come to Gonzales to meet?
+        - Send an enquiry Book a free 30-minute call Running a business in Gonzales?
+        - Book a discovery call Free 30-min call · no pitch Get a quote KnightWebstudio Websites, automation and consulting for local businesses that need to be found, trusted and chosen.
+INFO  web-design-prairieville/index.html: 9 of 45 baseline sentences are reworded or removed
+        - Skip to content KnightWebstudio Services Consulting Work Process Pricing FAQ About Contact Start your project knightwebstudio1@gmail.com Get a quote Areas we serve · Prairieville, LA Websites for Prairieville businesses 
+        - What we build What we build for Prairieville businesses Set up as a service-area business No shop front?
+        - Google Business Profile setup Service areas, not a street address Start lean with Starter An information website of up to 5 pages: who you are, what you offer and how to reach you.
+        - $2,000, fixed Live in as little as 7-10 days 30 days support Show your work before they call Project photos, before-and-after galleries and clear service pages, like the ones we built for Smilys Softwash, so homeowners c
+        - Live Exterior cleaning · Local service & SEO Smilys Softwash "Don't replace it.
+        - Live site · Online quotes Visit smilyssoftwash.com See the work in detail Pricing Fixed prices, published up front Many service businesses start on Starter and grow into Business.
+        - Full pricing, consulting and care plans Questions Prairieville questions, answered I'm a one-person business.
+        - Send an enquiry Book a free 30-minute call Grow your Prairieville business online Thirty minutes, no pitch.
+        - Book a discovery call Free 30-min call · no pitch Get a quote KnightWebstudio Websites, automation and consulting for local businesses that need to be found, trusted and chosen.
+
+0 FAIL, 8 WARN, 4 INFO across 4 pages

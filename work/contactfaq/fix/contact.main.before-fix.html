@@ -1,0 +1,153 @@
+<main id="main">
+
+  <section class="page-head">
+    <div class="container page-head-split">
+      <div>
+        <p class="eyebrow">Get in touch</p>
+        <h1><span class="l">Tell us about</span> <span class="l">your project</span></h1>
+        <p class="lede">We'll come back within one business day with honest advice and a fixed price. No obligation, no sales sequence.</p>
+      </div>
+      <!-- Calling is as welcome as writing. The booking button shows only once a
+           booking URL is set in assets/js/main.js (SITE_CONFIG.bookingUrl). -->
+      <div class="page-head-aside talk">
+        <p class="label">Rather talk it through first?</p>
+        <a class="talk-tel display" href="tel:+12252550837"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg><span class="sr-only">Call </span>(225) 255-0837</a>
+        <p class="fine">Mon–Fri, 9am–6pm Central Time</p>
+        <a class="btn booking-only" href="/contact/" data-booking hidden>Book a free 30-minute call</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-first" id="contact">
+    <div class="container split">
+
+      <!--
+        Posts to Web3Forms, which relays to knightwebstudio1@gmail.com.
+        The access key is public by design — that is how a static site
+        receives mail without a server. See README.md to change it.
+      -->
+      <form class="ticket" id="contact-form" aria-label="Enquiry form"
+            action="https://api.web3forms.com/submit" method="POST" novalidate>
+        <input type="hidden" name="access_key" value="37657289-4131-45f2-8b25-94377be507be">
+        <input type="hidden" name="subject" value="New enquiry from knightwebstudio.com">
+        <input type="hidden" name="from_name" value="KnightWebstudio website">
+        <!-- The ticket's printed head doubles as the key to the asterisk. Screen readers hear "required" on each field instead. -->
+        <p class="ticket-head" aria-hidden="true"><span>Enquiry form</span><span><span class="req">*</span> Needed to reply</span></p>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="name">Your name <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="name" name="name" autocomplete="name" autocapitalize="words" spellcheck="false" required
+                   aria-describedby="name-error">
+            <p class="error" id="name-error" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" autocomplete="email" inputmode="email" autocapitalize="none" autocorrect="off" spellcheck="false" required
+                   aria-describedby="email-error">
+            <p class="error" id="email-error" role="alert"></p>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="company">Business name <span class="opt">Optional</span></label>
+          <input type="text" id="company" name="company" autocomplete="organization" autocapitalize="words">
+        </div>
+
+        <div class="field">
+          <label for="package">Package <span class="opt">Optional</span></label>
+          <select id="package" name="package">
+            <option value="">Not sure yet</option>
+            <option value="onepage">One-page website, $1,000</option>
+            <option value="starter">Starter website, $2,000</option>
+            <option value="business">Business website, $4,000</option>
+            <option value="commerce">Commerce website, $8,000</option>
+            <option value="brand">Brand identity, $1,500</option>
+            <option value="care">Care plan only</option>
+            <option value="check">Free online check</option>
+            <option value="audit">Growth Audit, $350</option>
+            <option value="strategy">Strategy session, $150</option>
+            <option value="gbp">Google profile &amp; reviews, $500</option>
+            <option value="textback">Missed-call text-back, $750</option>
+            <option value="booking">Booking &amp; reminders, $750</option>
+            <option value="followup">Lead follow-up system, $1,500</option>
+            <option value="automation">Custom automation, $1,500</option>
+            <option value="advisor">Advisor plan, $500/month</option>
+            <option value="partner">Partner plan, $1,000/month</option>
+            <option value="bundle">Launch bundle, $3,000</option>
+          </select>
+        </div>
+
+        <fieldset class="field">
+          <legend>What do you need? <span class="opt">Optional, pick any</span></legend>
+          <div class="chips">
+            <label class="chip"><input type="checkbox" name="services" value="New website"><span>New website</span></label>
+            <label class="chip"><input type="checkbox" name="services" value="Redesign"><span>Redesign</span></label>
+            <label class="chip"><input type="checkbox" name="services" value="E-commerce"><span>E-commerce</span></label>
+            <label class="chip"><input type="checkbox" name="services" value="SEO"><span>SEO</span></label>
+            <label class="chip"><input type="checkbox" name="services" value="Branding"><span>Branding</span></label>
+            <label class="chip"><input type="checkbox" name="services" value="Maintenance"><span>Maintenance</span></label>
+            <label class="chip"><input type="checkbox" name="services" value="Consulting"><span>Consulting</span></label>
+            <label class="chip"><input type="checkbox" name="services" value="Automation"><span>Automation</span></label>
+            <label class="chip"><input type="checkbox" name="services" value="Google reviews"><span>Google reviews</span></label>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label for="message">Project details <span class="req" aria-hidden="true">*</span> <span class="opt">A few lines is plenty</span></label>
+          <textarea id="message" name="message" rows="4" required
+                    placeholder="What does your business do, and what do you want help with: a website, more reviews, fewer missed calls, less admin?"
+                    aria-describedby="message-error"></textarea>
+          <p class="error" id="message-error" role="alert"></p>
+        </div>
+
+        <!-- Honeypot: bots tick this, humans never see it. Web3Forms
+             rejects any submission where `botcheck` is set. -->
+        <div class="hp" aria-hidden="true">
+          <label for="botcheck">Leave this empty</label>
+          <input type="checkbox" id="botcheck" name="botcheck" tabindex="-1" autocomplete="off">
+        </div>
+
+        <!-- hCaptcha via Web3Forms' shared zero-config sitekey. Must also be
+             switched on in the Web3Forms dashboard to be enforced server-side. -->
+        <div class="captcha-wrap">
+          <div class="h-captcha" id="hcaptcha-slot" data-sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"></div>
+          <p class="error" id="captcha-error" role="alert"></p>
+        </div>
+
+        <button class="btn btn-primary btn-lg btn-block" type="submit" id="submit-btn">Send enquiry</button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        <p class="form-fine">We reply within one business day. Your details are never shared or sold.</p>
+        <!-- Decorative: the lede says the same. It lands once, when the foot of the ticket scrolls into view. -->
+        <p class="stamp reveal" aria-hidden="true">No<br>obligation</p>
+      </form>
+
+      <div class="contact-side">
+        <h2 class="h3">What happens next</h2>
+        <ol class="steps">
+          <li>
+            <span class="steps-no" aria-hidden="true">01</span>
+            <p><strong>We read it properly.</strong> A real person reads your enquiry. There is no auto-responder and no sales sequence.</p>
+          </li>
+          <li>
+            <span class="steps-no" aria-hidden="true">02</span>
+            <p><strong>You get a reply within one business day.</strong> Honest advice and a fixed price, even if the answer is "you don't need us for this".</p>
+          </li>
+          <li>
+            <span class="steps-no" aria-hidden="true">03</span>
+            <p><strong>Then a free 30-minute call, if you want one.</strong> No pitch. You leave with a plan whether or not you hire us.</p>
+          </li>
+        </ol>
+
+        <h2 class="sr-only">Contact details</h2>
+        <dl class="case-facts">
+          <div><dt>Email</dt><dd><a href="mailto:knightwebstudio1@gmail.com">knightwebstudio1@gmail.com</a></dd></div>
+          <div><dt>Where</dt><dd>Based in Baton Rouge, Louisiana. Meet in person anywhere in Greater Baton Rouge, or work with us from anywhere.</dd></div>
+        </dl>
+      </div>
+
+    </div>
+  </section>
+
+</main>

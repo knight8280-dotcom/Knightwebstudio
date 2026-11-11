@@ -1,0 +1,30 @@
+1x  arc       next button: 33 frames, mean 19.2ms, median 16.7ms, 95th 33.3ms, worst 83.4ms, over 33ms: 1
+1x  arc       drag + settle: 124 frames, mean 17.3ms, median 16.7ms, 95th 16.8ms, worst 33.4ms, over 33ms: 1
+1x  arc       animation frames requested while idle: 0 before, 0 after use; will-change set while idle: auto
+1x  spotlight next button: 35 frames, mean 17.1ms, median 16.7ms, 95th 16.8ms, worst 33.3ms, over 33ms: 0
+1x  spotlight drag + settle: 115 frames, mean 16.7ms, median 16.7ms, 95th 16.7ms, worst 16.8ms, over 33ms: 0
+1x  spotlight animation frames requested while idle: 0 before, 0 after use; will-change set while idle: auto
+4x  arc       next button: 36 frames, mean 16.7ms, median 16.7ms, 95th 16.8ms, worst 16.8ms, over 33ms: 0
+4x  arc       drag + settle: 119 frames, mean 17.8ms, median 16.7ms, 95th 16.7ms, worst 116.6ms, over 33ms: 1
+4x  arc       animation frames requested while idle: 0 before, 0 after use; will-change set while idle: auto
+4x  spotlight next button: 34 frames, mean 19.6ms, median 16.7ms, 95th 33.4ms, worst 50.1ms, over 33ms: 1
+4x  spotlight drag + settle: 118 frames, mean 17.8ms, median 16.7ms, 95th 16.8ms, worst 66.6ms, over 33ms: 2
+4x  spotlight animation frames requested while idle: 0 before, 0 after use; will-change set while idle: auto
+4x  arc       next button: 36 frames, mean 17.1ms, median 16.7ms, 95th 16.8ms, worst 33.3ms, over 33ms: 0
+4x  arc       drag + settle: 128 frames, mean 16.8ms, median 16.7ms, 95th 16.8ms, worst 33.3ms, over 33ms: 0
+4x  arc       animation frames requested while idle: 0 before, 0 after use; will-change set while idle: auto
+4x  spotlight next button: 36 frames, mean 16.7ms, median 16.7ms, 95th 16.7ms, worst 16.7ms, over 33ms: 0
+4x  spotlight drag + settle: 129 frames, mean 18.2ms, median 16.7ms, 95th 16.8ms, worst 83.4ms, over 33ms: 3
+4x  spotlight animation frames requested while idle: 0 before, 0 after use; will-change set while idle: auto
+4x  arc       next button: 32 frames, mean 20.3ms, median 16.7ms, 95th 33.4ms, worst 50.0ms, over 33ms: 2
+4x  arc       drag + settle: 124 frames, mean 16.8ms, median 16.7ms, 95th 16.7ms, worst 33.4ms, over 33ms: 0
+4x  arc       animation frames requested while idle: 0 before, 0 after use; will-change set while idle: auto
+4x  spotlight next button: 36 frames, mean 16.7ms, median 16.7ms, 95th 16.8ms, worst 16.8ms, over 33ms: 0
+4x  spotlight drag + settle: 126 frames, mean 17.2ms, median 16.7ms, 95th 16.8ms, worst 50.0ms, over 33ms: 1
+4x  spotlight animation frames requested while idle: 0 before, 0 after use; will-change set while idle: auto
+4x  arc       next button: 35 frames, mean 17.1ms, median 16.7ms, 95th 16.7ms, worst 33.4ms, over 33ms: 1
+4x  arc       drag + settle: 124 frames, mean 17.2ms, median 16.7ms, 95th 16.7ms, worst 66.6ms, over 33ms: 1
+4x  arc       animation frames requested while idle: 0 before, 0 after use; will-change set while idle: auto
+4x  spotlight next button: 35 frames, mean 19.0ms, median 16.7ms, 95th 33.4ms, worst 66.5ms, over 33ms: 1
+4x  spotlight drag + settle: 128 frames, mean 16.9ms, median 16.7ms, 95th 16.7ms, worst 33.4ms, over 33ms: 0
+4x  spotlight animation frames requested while idle: 0 before, 0 after use; will-change set while idle: auto

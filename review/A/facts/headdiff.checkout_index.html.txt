@@ -1,0 +1,57 @@
+2c2
+< <html lang="en" data-theme="dark">
+---
+> <html lang="en" data-theme="auto">
+10c10
+< <meta name="theme-color" content="#080b14">
+---
+> <meta name="theme-color" content="#F6F0E4">
+18,19c18,20
+<   // Restore the saved theme before first paint, so a light-theme visitor
+<   // never sees a dark flash. main.js still owns the toggle itself.
+---
+>   // Set the theme before first paint, so nobody sees a flash of the wrong
+>   // one. Light is the default: a saved choice wins, otherwise a device set
+>   // to dark gets the night theme. main.js still owns the toggle itself.
+26,28c27,32
+<       if (!t && matchMedia('(prefers-color-scheme: light)').matches) t = 'light';
+<       if (t) d.setAttribute('data-theme', t);
+<     } catch (e) { /* private mode */ }
+---
+>       if (t !== 'dark' && t !== 'light') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+>       d.setAttribute('data-theme', t);
+>     } catch (e) { /* private mode: the stylesheet follows the device instead */ }
+>     // Scroll reveals hide blocks until main.js shows them. If that script has
+>     // not started after four seconds (or the page has none), show everything.
+>     setTimeout(function () { if (!window.kwsReady) d.classList.remove('js'); }, 4000);
+31,32c35,36
+< <link rel="preload" href="/assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+< <link rel="preload" href="/assets/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
+---
+> <link rel="preload" href="/assets/fonts/fraunces-soft.woff2" as="font" type="font/woff2" crossorigin>
+> <link rel="preload" href="/assets/fonts/figtree.woff2" as="font" type="font/woff2" crossorigin>
+39,62d42
+< <style>
+<   /* Checkout-page-only styles. The Stripe form renders on a white background
+<      (its appearance is fixed in Checkout Studio), so the panel stays white in
+<      both site themes. */
+<   .checkout-panel {
+<     max-width: 680px; margin: 0 auto; padding: clamp(20px, 3.5vw, 32px);
+<     background: #ffffff; border: 1px solid var(--border);
+<     border-radius: var(--radius-lg);
+<   }
+<   /* Order summary above the form: which plan the visitor is paying for */
+<   .checkout-plan {
+<     max-width: 680px; margin: 0 auto 14px; padding: 14px 18px;
+<     border: 1px solid var(--border); border-radius: var(--radius);
+<     background: var(--surface);
+<     display: flex; align-items: baseline; justify-content: space-between;
+<     gap: .4rem 1rem; flex-wrap: wrap;
+<   }
+<   .checkout-plan[hidden] { display: none; }
+<   .checkout-plan-name { margin: 0; font-weight: 700; }
+<   .checkout-plan-price { margin: 0; font-size: 1.15rem; font-weight: 800; letter-spacing: -.02em; color: var(--accent); white-space: nowrap; }
+<   .checkout-status { max-width: 680px; margin: 1rem auto 0; text-align: center; font-size: .92rem; color: var(--muted); }
+<   .checkout-status.error { color: var(--danger); }
+<   .checkout-fine { max-width: 680px; margin: 1.4rem auto 0; text-align: center; font-size: .82rem; color: var(--muted); }
+< </style>

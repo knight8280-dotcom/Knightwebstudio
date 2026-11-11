@@ -1,0 +1,18 @@
+viewport 390x844@3, throttle 4x, load 3.8
+  [motion on] scroll top→bottom 40px/frame: n=3794 median 16.7 p95 16.8 p99 16.8 worst 166.7 >33.4:15 >50:4 draws 1859
+  [motion on] second brand 4s: n=239 median 16.7 p95 16.8 p99 16.8 worst 16.8 >33.4:0 >50:0 draws 273
+  [motion on] closing band 4s: n=240 median 16.7 p95 16.8 p99 16.8 worst 16.8 >33.4:0 >50:0 draws 61
+  [motion on] cards 4s: n=240 median 16.7 p95 16.8 p99 16.8 worst 16.8 >33.4:0 >50:0 draws 242
+  [motion off] scroll top→bottom 40px/frame: n=3886 median 16.7 p95 16.8 p99 16.8 worst 33.4 >33.4:0 >50:0 draws 0
+  [motion off] second brand 4s: n=240 median 16.7 p95 16.8 p99 16.8 worst 16.8 >33.4:0 >50:0 draws 0
+  [motion off] closing band 4s: n=240 median 16.7 p95 16.8 p99 16.8 worst 16.8 >33.4:0 >50:0 draws 0
+  [motion off] cards 4s: n=240 median 16.7 p95 16.7 p99 16.8 worst 16.8 >33.4:0 >50:0 draws 0
+  [motion on] scroll top→bottom 40px/frame: n=3812 median 16.7 p95 16.7 p99 16.8 worst 33.4 >33.4:0 >50:0 draws 1988
+  [motion on] second brand 4s: n=240 median 16.7 p95 16.8 p99 16.8 worst 16.8 >33.4:0 >50:0 draws 276
+  [motion on] closing band 4s: n=240 median 16.7 p95 16.7 p99 16.8 worst 16.8 >33.4:0 >50:0 draws 60
+  [motion on] cards 4s: n=239 median 16.7 p95 16.7 p99 16.8 worst 16.8 >33.4:0 >50:0 draws 240
+  [motion off] scroll top→bottom 40px/frame: n=3964 median 16.7 p95 16.8 p99 16.8 worst 50.0 >33.4:5 >50:0 draws 0
+  [motion off] second brand 4s: n=240 median 16.7 p95 16.7 p99 16.8 worst 16.8 >33.4:0 >50:0 draws 0
+  [motion off] closing band 4s: n=240 median 16.7 p95 16.7 p99 16.8 worst 16.8 >33.4:0 >50:0 draws 0
+  [motion off] cards 4s: n=240 median 16.7 p95 16.8 p99 16.8 worst 16.8 >33.4:0 >50:0 draws 0
+load after 3.0

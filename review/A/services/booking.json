@@ -1,0 +1,2997 @@
+{
+ "new": {
+  "/|desktop": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "site-header scrolled",
+     "h": 44
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "MAIN",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "cta-band on-blue",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Free 30-min call · no pitch",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "inline-flex",
+     "shown": false,
+     "where": "mobile-cta show",
+     "h": 0
+    }
+   ],
+   "srcHrefs": [
+    "/contact/",
+    "/contact/",
+    "/contact/",
+    "/contact/"
+   ]
+  },
+  "/services/|desktop": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "site-header scrolled",
+     "h": 44
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "MAIN",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "cta-band on-blue",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Free 30-min call · no pitch",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "inline-flex",
+     "shown": false,
+     "where": "mobile-cta show",
+     "h": 0
+    }
+   ],
+   "srcHrefs": [
+    "/contact/",
+    "/contact/",
+    "/contact/",
+    "/contact/"
+   ]
+  },
+  "/consulting/|desktop": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "site-header scrolled",
+     "h": 44
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "cta-band on-blue",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Free 30-min call · no pitch",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "inline-flex",
+     "shown": false,
+     "where": "mobile-cta show",
+     "h": 0
+    }
+   ],
+   "srcHrefs": [
+    "/contact/",
+    "/contact/",
+    "/contact/"
+   ]
+  },
+  "/work/|desktop": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "site-header scrolled",
+     "h": 44
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "MAIN",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "cta-band on-blue",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Free 30-min call · no pitch",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "inline-flex",
+     "shown": false,
+     "where": "mobile-cta show",
+     "h": 0
+    }
+   ],
+   "srcHrefs": [
+    "/contact/",
+    "/contact/",
+    "/contact/",
+    "/contact/"
+   ]
+  },
+  "/process/|desktop": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "site-header scrolled",
+     "h": 44
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "MAIN",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "cta-band on-blue",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Free 30-min call · no pitch",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "inline-flex",
+     "shown": false,
+     "where": "mobile-cta",
+     "h": 0
+    }
+   ],
+   "srcHrefs": [
+    "/contact/",
+    "/contact/",
+    "/contact/",
+    "/contact/"
+   ]
+  },
+  "/pricing/|desktop": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "site-header scrolled",
+     "h": 44
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "MAIN",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Or book the free call first",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "MAIN",
+     "h": 44
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "cta-band on-blue",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Free 30-min call · no pitch",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "inline-flex",
+     "shown": false,
+     "where": "mobile-cta show",
+     "h": 0
+    }
+   ],
+   "srcHrefs": [
+    "/contact/",
+    "/contact/",
+    "/contact/",
+    "/contact/",
+    "/contact/"
+   ]
+  },
+  "/faq/|desktop": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "site-header scrolled",
+     "h": 44
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "cta-band on-blue",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Free 30-min call · no pitch",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "inline-flex",
+     "shown": false,
+     "where": "mobile-cta show",
+     "h": 0
+    }
+   ],
+   "srcHrefs": [
+    "/contact/",
+    "/contact/",
+    "/contact/"
+   ]
+  },
+  "/contact/|desktop": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "site-header scrolled",
+     "h": 44
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": true,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "MAIN",
+     "h": 52
+    }
+   ],
+   "srcHrefs": [
+    "/contact/",
+    "/contact/"
+   ]
+  },
+  "/about/|desktop": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "site-header scrolled",
+     "h": 44
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "MAIN",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "cta-band on-blue",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Free 30-min call · no pitch",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "inline-flex",
+     "shown": false,
+     "where": "mobile-cta show",
+     "h": 0
+    }
+   ],
+   "srcHrefs": [
+    "/contact/",
+    "/contact/",
+    "/contact/",
+    "/contact/"
+   ]
+  },
+  "/start/|desktop": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "site-header scrolled",
+     "h": 44
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "MAIN",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "cta-band on-blue",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Free 30-min call · no pitch",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "inline-flex",
+     "shown": false,
+     "where": "mobile-cta show",
+     "h": 0
+    }
+   ],
+   "srcHrefs": [
+    "/contact/",
+    "/contact/",
+    "/contact/",
+    "/contact/"
+   ]
+  },
+  "/web-design-baton-rouge/|desktop": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "site-header scrolled",
+     "h": 44
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "MAIN",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "cta-band on-blue",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Free 30-min call · no pitch",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "inline-flex",
+     "shown": false,
+     "where": "mobile-cta show",
+     "h": 0
+    }
+   ],
+   "srcHrefs": [
+    "/contact/",
+    "/contact/",
+    "/contact/",
+    "/contact/"
+   ]
+  },
+  "/web-design-denham-springs/|desktop": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "site-header scrolled",
+     "h": 44
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "MAIN",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "cta-band on-blue",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Free 30-min call · no pitch",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "inline-flex",
+     "shown": false,
+     "where": "mobile-cta show",
+     "h": 0
+    }
+   ],
+   "srcHrefs": [
+    "/contact/",
+    "/contact/",
+    "/contact/",
+    "/contact/"
+   ]
+  },
+  "/web-design-gonzales/|desktop": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "site-header scrolled",
+     "h": 44
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "MAIN",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "cta-band on-blue",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Free 30-min call · no pitch",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "inline-flex",
+     "shown": false,
+     "where": "mobile-cta show",
+     "h": 0
+    }
+   ],
+   "srcHrefs": [
+    "/contact/",
+    "/contact/",
+    "/contact/",
+    "/contact/"
+   ]
+  },
+  "/web-design-prairieville/|desktop": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "site-header scrolled",
+     "h": 44
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "MAIN",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "cta-band on-blue",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Free 30-min call · no pitch",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "inline-flex",
+     "shown": false,
+     "where": "mobile-cta show",
+     "h": 0
+    }
+   ],
+   "srcHrefs": [
+    "/contact/",
+    "/contact/",
+    "/contact/",
+    "/contact/"
+   ]
+  },
+  "/privacy/|desktop": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "site-header scrolled",
+     "h": 44
+    }
+   ],
+   "srcHrefs": [
+    "/contact/"
+   ]
+  },
+  "/terms/|desktop": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "site-header scrolled",
+     "h": 44
+    }
+   ],
+   "srcHrefs": [
+    "/contact/"
+   ]
+  },
+  "/checkout/|desktop": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "site-header scrolled",
+     "h": 44
+    }
+   ],
+   "srcHrefs": [
+    "/contact/"
+   ]
+  },
+  "/checkout/success/|desktop": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "site-header scrolled",
+     "h": 44
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Schedule your kickoff call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "MAIN",
+     "h": 56
+    }
+   ],
+   "srcHrefs": [
+    "/contact/",
+    "https://calendly.com/knightwebstudio1"
+   ]
+  },
+  "/404.html|desktop": {
+   "els": [],
+   "srcHrefs": []
+  },
+  "/|phone": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "none",
+     "shown": false,
+     "where": "site-header scrolled",
+     "h": 0
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "MAIN",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "cta-band on-blue",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Free 30-min call · no pitch",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "mobile-cta show",
+     "h": 52
+    }
+   ],
+   "srcHrefs": [
+    "/contact/",
+    "/contact/",
+    "/contact/",
+    "/contact/"
+   ]
+  },
+  "/services/|phone": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "none",
+     "shown": false,
+     "where": "site-header scrolled",
+     "h": 0
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "MAIN",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "cta-band on-blue",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Free 30-min call · no pitch",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "mobile-cta show",
+     "h": 52
+    }
+   ],
+   "srcHrefs": [
+    "/contact/",
+    "/contact/",
+    "/contact/",
+    "/contact/"
+   ]
+  },
+  "/consulting/|phone": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "none",
+     "shown": false,
+     "where": "site-header scrolled",
+     "h": 0
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "cta-band on-blue",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Free 30-min call · no pitch",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "mobile-cta show",
+     "h": 52
+    }
+   ],
+   "srcHrefs": [
+    "/contact/",
+    "/contact/",
+    "/contact/"
+   ]
+  },
+  "/work/|phone": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "none",
+     "shown": false,
+     "where": "site-header scrolled",
+     "h": 0
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "MAIN",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "cta-band on-blue",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Free 30-min call · no pitch",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "mobile-cta show",
+     "h": 52
+    }
+   ],
+   "srcHrefs": [
+    "/contact/",
+    "/contact/",
+    "/contact/",
+    "/contact/"
+   ]
+  },
+  "/process/|phone": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "none",
+     "shown": false,
+     "where": "site-header scrolled",
+     "h": 0
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "MAIN",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "cta-band on-blue",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Free 30-min call · no pitch",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "mobile-cta",
+     "h": 52
+    }
+   ],
+   "srcHrefs": [
+    "/contact/",
+    "/contact/",
+    "/contact/",
+    "/contact/"
+   ]
+  },
+  "/pricing/|phone": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "none",
+     "shown": false,
+     "where": "site-header scrolled",
+     "h": 0
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "MAIN",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Or book the free call first",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "MAIN",
+     "h": 44
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "cta-band on-blue",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Free 30-min call · no pitch",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "mobile-cta show",
+     "h": 52
+    }
+   ],
+   "srcHrefs": [
+    "/contact/",
+    "/contact/",
+    "/contact/",
+    "/contact/",
+    "/contact/"
+   ]
+  },
+  "/faq/|phone": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "none",
+     "shown": false,
+     "where": "site-header scrolled",
+     "h": 0
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "cta-band on-blue",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Free 30-min call · no pitch",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "mobile-cta show",
+     "h": 52
+    }
+   ],
+   "srcHrefs": [
+    "/contact/",
+    "/contact/",
+    "/contact/"
+   ]
+  },
+  "/contact/|phone": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "none",
+     "shown": false,
+     "where": "site-header scrolled",
+     "h": 0
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": true,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "MAIN",
+     "h": 52
+    }
+   ],
+   "srcHrefs": [
+    "/contact/",
+    "/contact/"
+   ]
+  },
+  "/about/|phone": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "none",
+     "shown": false,
+     "where": "site-header scrolled",
+     "h": 0
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "MAIN",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "cta-band on-blue",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Free 30-min call · no pitch",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "mobile-cta show",
+     "h": 52
+    }
+   ],
+   "srcHrefs": [
+    "/contact/",
+    "/contact/",
+    "/contact/",
+    "/contact/"
+   ]
+  },
+  "/start/|phone": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "none",
+     "shown": false,
+     "where": "site-header scrolled",
+     "h": 0
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "MAIN",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "cta-band on-blue",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Free 30-min call · no pitch",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "mobile-cta show",
+     "h": 52
+    }
+   ],
+   "srcHrefs": [
+    "/contact/",
+    "/contact/",
+    "/contact/",
+    "/contact/"
+   ]
+  },
+  "/web-design-baton-rouge/|phone": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "none",
+     "shown": false,
+     "where": "site-header scrolled",
+     "h": 0
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "MAIN",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "cta-band on-blue",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Free 30-min call · no pitch",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "mobile-cta show",
+     "h": 52
+    }
+   ],
+   "srcHrefs": [
+    "/contact/",
+    "/contact/",
+    "/contact/",
+    "/contact/"
+   ]
+  },
+  "/web-design-denham-springs/|phone": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "none",
+     "shown": false,
+     "where": "site-header scrolled",
+     "h": 0
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "MAIN",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "cta-band on-blue",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Free 30-min call · no pitch",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "mobile-cta show",
+     "h": 52
+    }
+   ],
+   "srcHrefs": [
+    "/contact/",
+    "/contact/",
+    "/contact/",
+    "/contact/"
+   ]
+  },
+  "/web-design-gonzales/|phone": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "none",
+     "shown": false,
+     "where": "site-header scrolled",
+     "h": 0
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "MAIN",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "cta-band on-blue",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Free 30-min call · no pitch",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "mobile-cta show",
+     "h": 52
+    }
+   ],
+   "srcHrefs": [
+    "/contact/",
+    "/contact/",
+    "/contact/",
+    "/contact/"
+   ]
+  },
+  "/web-design-prairieville/|phone": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "none",
+     "shown": false,
+     "where": "site-header scrolled",
+     "h": 0
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "MAIN",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "cta-band on-blue",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Free 30-min call · no pitch",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "mobile-cta show",
+     "h": 52
+    }
+   ],
+   "srcHrefs": [
+    "/contact/",
+    "/contact/",
+    "/contact/",
+    "/contact/"
+   ]
+  },
+  "/privacy/|phone": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "none",
+     "shown": false,
+     "where": "site-header scrolled",
+     "h": 0
+    }
+   ],
+   "srcHrefs": [
+    "/contact/"
+   ]
+  },
+  "/terms/|phone": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "none",
+     "shown": false,
+     "where": "site-header scrolled",
+     "h": 0
+    }
+   ],
+   "srcHrefs": [
+    "/contact/"
+   ]
+  },
+  "/checkout/|phone": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "none",
+     "shown": false,
+     "where": "site-header scrolled",
+     "h": 0
+    }
+   ],
+   "srcHrefs": [
+    "/contact/"
+   ]
+  },
+  "/checkout/success/|phone": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "none",
+     "shown": false,
+     "where": "site-header scrolled",
+     "h": 0
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Schedule your kickoff call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "MAIN",
+     "h": 56
+    }
+   ],
+   "srcHrefs": [
+    "/contact/",
+    "https://calendly.com/knightwebstudio1"
+   ]
+  },
+  "/404.html|phone": {
+   "els": [],
+   "srcHrefs": []
+  }
+ },
+ "baseline": {
+  "/|desktop": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a discovery call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "inline-flex",
+     "shown": true,
+     "where": "cta-band",
+     "h": 56
+    }
+   ],
+   "srcHrefs": [
+    "/contact/"
+   ]
+  },
+  "/services/|desktop": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a discovery call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "inline-flex",
+     "shown": true,
+     "where": "cta-band",
+     "h": 56
+    }
+   ],
+   "srcHrefs": [
+    "/contact/"
+   ]
+  },
+  "/consulting/|desktop": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a discovery call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "inline-flex",
+     "shown": true,
+     "where": "cta-band",
+     "h": 56
+    }
+   ],
+   "srcHrefs": [
+    "/contact/"
+   ]
+  },
+  "/work/|desktop": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a discovery call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "inline-flex",
+     "shown": true,
+     "where": "cta-band",
+     "h": 56
+    }
+   ],
+   "srcHrefs": [
+    "/contact/"
+   ]
+  },
+  "/process/|desktop": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a discovery call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "inline-flex",
+     "shown": true,
+     "where": "cta-band",
+     "h": 56
+    }
+   ],
+   "srcHrefs": [
+    "/contact/"
+   ]
+  },
+  "/pricing/|desktop": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a discovery call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "inline-flex",
+     "shown": true,
+     "where": "cta-band",
+     "h": 56
+    }
+   ],
+   "srcHrefs": [
+    "/contact/"
+   ]
+  },
+  "/faq/|desktop": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a discovery call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "inline-flex",
+     "shown": true,
+     "where": "cta-band",
+     "h": 56
+    }
+   ],
+   "srcHrefs": [
+    "/contact/"
+   ]
+  },
+  "/contact/|desktop": {
+   "els": [
+    {
+     "tag": "DIV",
+     "booking": false,
+     "only": true,
+     "text": "Rather talk it through first? Skip the form and pi",
+     "href": null,
+     "target": null,
+     "rel": null,
+     "hidden": false,
+     "display": "block",
+     "shown": true,
+     "where": "MAIN",
+     "h": 131
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "inline-flex",
+     "shown": true,
+     "where": "MAIN",
+     "h": 56
+    }
+   ],
+   "srcHrefs": [
+    "/contact/"
+   ]
+  },
+  "/about/|desktop": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "MAIN",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a discovery call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "inline-flex",
+     "shown": true,
+     "where": "cta-band",
+     "h": 56
+    }
+   ],
+   "srcHrefs": [
+    "/contact/",
+    "/contact/"
+   ]
+  },
+  "/start/|desktop": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "site-header lp-header scrolled",
+     "h": 44
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "MAIN",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "cta-band",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "inline-flex",
+     "shown": false,
+     "where": "mobile-cta show",
+     "h": 0
+    }
+   ],
+   "srcHrefs": [
+    "/contact/",
+    "/contact/",
+    "/contact/",
+    "/contact/"
+   ]
+  },
+  "/web-design-baton-rouge/|desktop": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "MAIN",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a discovery call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "inline-flex",
+     "shown": true,
+     "where": "cta-band",
+     "h": 56
+    }
+   ],
+   "srcHrefs": [
+    "/contact/",
+    "/contact/"
+   ]
+  },
+  "/web-design-denham-springs/|desktop": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "MAIN",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a discovery call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "inline-flex",
+     "shown": true,
+     "where": "cta-band",
+     "h": 56
+    }
+   ],
+   "srcHrefs": [
+    "/contact/",
+    "/contact/"
+   ]
+  },
+  "/web-design-gonzales/|desktop": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "MAIN",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a discovery call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "inline-flex",
+     "shown": true,
+     "where": "cta-band",
+     "h": 56
+    }
+   ],
+   "srcHrefs": [
+    "/contact/",
+    "/contact/"
+   ]
+  },
+  "/web-design-prairieville/|desktop": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "MAIN",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a discovery call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "inline-flex",
+     "shown": true,
+     "where": "cta-band",
+     "h": 56
+    }
+   ],
+   "srcHrefs": [
+    "/contact/",
+    "/contact/"
+   ]
+  },
+  "/privacy/|desktop": {
+   "els": [],
+   "srcHrefs": []
+  },
+  "/terms/|desktop": {
+   "els": [],
+   "srcHrefs": []
+  },
+  "/checkout/|desktop": {
+   "els": [],
+   "srcHrefs": []
+  },
+  "/checkout/success/|desktop": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Schedule your kickoff call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "MAIN",
+     "h": 56
+    }
+   ],
+   "srcHrefs": [
+    "https://calendly.com/knightwebstudio1"
+   ]
+  },
+  "/404.html|desktop": {
+   "els": [],
+   "srcHrefs": []
+  },
+  "/|phone": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a discovery call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "inline-flex",
+     "shown": true,
+     "where": "cta-band",
+     "h": 56
+    }
+   ],
+   "srcHrefs": [
+    "/contact/"
+   ]
+  },
+  "/services/|phone": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a discovery call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "inline-flex",
+     "shown": true,
+     "where": "cta-band",
+     "h": 56
+    }
+   ],
+   "srcHrefs": [
+    "/contact/"
+   ]
+  },
+  "/consulting/|phone": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a discovery call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "inline-flex",
+     "shown": true,
+     "where": "cta-band",
+     "h": 56
+    }
+   ],
+   "srcHrefs": [
+    "/contact/"
+   ]
+  },
+  "/work/|phone": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a discovery call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "inline-flex",
+     "shown": true,
+     "where": "cta-band",
+     "h": 56
+    }
+   ],
+   "srcHrefs": [
+    "/contact/"
+   ]
+  },
+  "/process/|phone": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a discovery call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "inline-flex",
+     "shown": true,
+     "where": "cta-band",
+     "h": 56
+    }
+   ],
+   "srcHrefs": [
+    "/contact/"
+   ]
+  },
+  "/pricing/|phone": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a discovery call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "inline-flex",
+     "shown": true,
+     "where": "cta-band",
+     "h": 56
+    }
+   ],
+   "srcHrefs": [
+    "/contact/"
+   ]
+  },
+  "/faq/|phone": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a discovery call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "inline-flex",
+     "shown": true,
+     "where": "cta-band",
+     "h": 56
+    }
+   ],
+   "srcHrefs": [
+    "/contact/"
+   ]
+  },
+  "/contact/|phone": {
+   "els": [
+    {
+     "tag": "DIV",
+     "booking": false,
+     "only": true,
+     "text": "Rather talk it through first? Skip the form and pi",
+     "href": null,
+     "target": null,
+     "rel": null,
+     "hidden": false,
+     "display": "block",
+     "shown": true,
+     "where": "MAIN",
+     "h": 155
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "inline-flex",
+     "shown": true,
+     "where": "MAIN",
+     "h": 56
+    }
+   ],
+   "srcHrefs": [
+    "/contact/"
+   ]
+  },
+  "/about/|phone": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "MAIN",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a discovery call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "inline-flex",
+     "shown": true,
+     "where": "cta-band",
+     "h": 56
+    }
+   ],
+   "srcHrefs": [
+    "/contact/",
+    "/contact/"
+   ]
+  },
+  "/start/|phone": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "site-header lp-header scrolled",
+     "h": 44
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "MAIN",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "cta-band",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "mobile-cta show",
+     "h": 44
+    }
+   ],
+   "srcHrefs": [
+    "/contact/",
+    "/contact/",
+    "/contact/",
+    "/contact/"
+   ]
+  },
+  "/web-design-baton-rouge/|phone": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "MAIN",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a discovery call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "inline-flex",
+     "shown": true,
+     "where": "cta-band",
+     "h": 56
+    }
+   ],
+   "srcHrefs": [
+    "/contact/",
+    "/contact/"
+   ]
+  },
+  "/web-design-denham-springs/|phone": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "MAIN",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a discovery call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "inline-flex",
+     "shown": true,
+     "where": "cta-band",
+     "h": 56
+    }
+   ],
+   "srcHrefs": [
+    "/contact/",
+    "/contact/"
+   ]
+  },
+  "/web-design-gonzales/|phone": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "MAIN",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a discovery call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "inline-flex",
+     "shown": true,
+     "where": "cta-band",
+     "h": 56
+    }
+   ],
+   "srcHrefs": [
+    "/contact/",
+    "/contact/"
+   ]
+  },
+  "/web-design-prairieville/|phone": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a free 30-minute call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "MAIN",
+     "h": 56
+    },
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Book a discovery call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "inline-flex",
+     "shown": true,
+     "where": "cta-band",
+     "h": 56
+    }
+   ],
+   "srcHrefs": [
+    "/contact/",
+    "/contact/"
+   ]
+  },
+  "/privacy/|phone": {
+   "els": [],
+   "srcHrefs": []
+  },
+  "/terms/|phone": {
+   "els": [],
+   "srcHrefs": []
+  },
+  "/checkout/|phone": {
+   "els": [],
+   "srcHrefs": []
+  },
+  "/checkout/success/|phone": {
+   "els": [
+    {
+     "tag": "A",
+     "booking": true,
+     "only": false,
+     "text": "Schedule your kickoff call",
+     "href": "https://calendly.com/knightwebstudio1/30min",
+     "target": "_blank",
+     "rel": "noopener",
+     "hidden": false,
+     "display": "flex",
+     "shown": true,
+     "where": "MAIN",
+     "h": 56
+    }
+   ],
+   "srcHrefs": [
+    "https://calendly.com/knightwebstudio1"
+   ]
+  },
+  "/404.html|phone": {
+   "els": [],
+   "srcHrefs": []
+  }
+ },
+ "clicks": [
+  {
+   "mode": "desktop",
+   "path": "/",
+   "sel": ".header-cta[data-booking]",
+   "count": 1,
+   "popup": {
+    "url": "https://calendly.com/knightwebstudio1/30min?month=2026-11",
+    "status": null,
+    "title": "Select a Date & Time - Calendly",
+    "opener": "null (noopener works)",
+    "text": "POWERED BY Calendly Christian Knight 30 Minute Meeting 30 min Phone call Cookie settings Privacy Policy Select a Date & Time November 2026 November is now displayed Sun Mon Tue Wed Thu Fri Sat 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 2"
+   },
+   "originalStillAt": "http://localhost:8720/",
+   "events": [
+    [
+     "Book call"
+    ]
+   ]
+  },
+  {
+   "mode": "phone",
+   "path": "/pricing/",
+   "sel": "#mobile-cta [data-booking]",
+   "count": 1,
+   "popup": {
+    "url": "https://calendly.com/knightwebstudio1/30min?month=2026-11",
+    "status": null,
+    "title": "Select a Date & Time - Calendly",
+    "opener": "null (noopener works)",
+    "text": "POWERED BY Calendly Christian Knight 30 Minute Meeting 30 min Phone call Select a Day November 2026 November is now displayed Sun Mon Tue Wed Thu Fri Sat 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 Time zone UTC Time (10:34"
+   },
+   "originalStillAt": "http://localhost:8720/pricing/",
+   "events": [
+    [
+     "Book call"
+    ]
+   ]
+  },
+  {
+   "mode": "phone",
+   "path": "/contact/",
+   "sel": "main .booking-only",
+   "count": 1,
+   "popup": {
+    "url": "https://calendly.com/knightwebstudio1/30min?month=2026-11",
+    "status": null,
+    "title": "Select a Date & Time - Calendly",
+    "opener": "null (noopener works)",
+    "text": "POWERED BY Calendly Christian Knight 30 Minute Meeting 30 min Phone call Select a Day November 2026 November is now displayed Sun Mon Tue Wed Thu Fri Sat 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 Time zone UTC Time (10:35"
+   },
+   "originalStillAt": "http://localhost:8720/contact/",
+   "events": [
+    [
+     "Book call"
+    ]
+   ]
+  },
+  {
+   "mode": "desktop",
+   "path": "/checkout/success/?plan=starter-deposit",
+   "sel": "#success-book",
+   "count": 1,
+   "popup": {
+    "url": "https://calendly.com/knightwebstudio1/30min?month=2026-11",
+    "status": null,
+    "title": "Select a Date & Time - Calendly",
+    "opener": "null (noopener works)",
+    "text": "POWERED BY Calendly Christian Knight 30 Minute Meeting 30 min Phone call Cookie settings Privacy Policy Select a Date & Time November 2026 November is now displayed Sun Mon Tue Wed Thu Fri Sat 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 2"
+   },
+   "originalStillAt": "http://localhost:8720/checkout/success/?plan=starter-deposit",
+   "events": [
+    [
+     "Book call"
+    ]
+   ]
+  },
+  {
+   "mode": "phone",
+   "path": "/start/",
+   "sel": "main [data-booking]",
+   "count": 2,
+   "popup": {
+    "url": "https://calendly.com/knightwebstudio1/30min?month=2026-11",
+    "status": null,
+    "title": "Select a Date & Time - Calendly",
+    "opener": "null (noopener works)",
+    "text": "POWERED BY Calendly Christian Knight 30 Minute Meeting 30 min Phone call Select a Day November 2026 November is now displayed Sun Mon Tue Wed Thu Fri Sat 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 Time zone UTC Time (10:36"
+   },
+   "originalStillAt": "http://localhost:8720/start/",
+   "events": [
+    [
+     "Book call"
+    ]
+   ]
+  }
+ ]
+}

@@ -1,0 +1,55 @@
+Frame times: what was measured, and how far to trust it
+========================================================
+
+node test/perf.js : 390x844 at 2x pixels, headless Chromium with software rendering, a fresh page for each run
+(so the first move of each run is the first move after load). One run unthrottled, then four with the CPU
+throttled 4x through the DevTools protocol. Each line is one move: the arrow spring (about 36 frames) or a
+touch drag across and back with its settle (about 115 frames).
+
+This machine was shared with other jobs. Its load decided the numbers far more than the code did, so three
+sets are recorded.
+
+0. The last run, on the finished files (it is the one in results.txt; the machine was fairly calm)
+
+     throttled 4x, four fresh pages
+     wheel      next button : worst frame 16.8, 16.8, 16.8, 16.8 ms
+     wheel      drag+settle : worst frame 66.6, 66.7, 16.8, 16.8 ms   (one late frame in each of the first two)
+     spotlight  next button : worst frame 16.8, 16.8, 16.7, 16.7 ms
+     spotlight  drag+settle : worst frame 16.8, 16.8, 66.6, 33.3 ms   (one late frame in the third)
+   Every run: mean 16.7 to 17.4 ms, median 16.7 ms, 95th centile 16.7 to 16.8 ms.
+   Unthrottled: one late frame (50.0 ms) in the wheel's first arrow spring; none elsewhere.
+
+1. A quiet spell (two full runs, earlier in the fix pass; the script was the same apart from the lines
+   that make the spotlight's layers early, which came later)
+
+   run A, throttled 4x, four fresh pages
+     wheel      next button : worst frame 16.8, 16.8, 16.8, 16.8 ms
+     wheel      drag+settle : worst frame 16.8, 16.8, 16.8, 33.4 ms
+     spotlight  next button : worst frame 16.8, 16.8, 16.8, 16.7 ms
+     spotlight  drag+settle : worst frame 16.8, 16.8, 16.8, 50.0 ms
+   run B, throttled 4x, four fresh pages
+     wheel      next button : worst frame 16.8, 16.8, 16.8, 16.8 ms
+     wheel      drag+settle : worst frame 16.8, 16.8, 16.8, 33.3 ms
+     spotlight  next button : worst frame 16.8, 16.8, 16.8, 16.8 ms
+     spotlight  drag+settle : worst frame 16.8, 16.8, 16.8, 16.8 ms
+   Every run: mean 16.7 to 17.1 ms, median 16.7 ms, 95th centile 16.7 to 16.8 ms.
+   Unthrottled, the first arrow spring had a late frame in some runs (wheel 66.7 ms once; spotlight 33.3 ms twice).
+   So: 3 late frames in about 2,400 throttled frames, and none in the first move after load.
+
+2. A busy spell (load average 7 to 22 on 4 cores from other jobs; the run in results.txt is one of these)
+
+   Median still 16.7 ms in every run and the 95th centile 16.7 to 50 ms, but with scattered late frames in
+   both carousels, throttled or not: typically 0 to 3 in a move, mostly 33 to 117 ms, a few of 150 to 480 ms.
+   They come and go with the machine's load and are as common unthrottled as throttled.
+
+3. The spotlight with and without its early layers, compared under the same load (alternating fresh pages,
+   throttled 4x, a 144px touch drag and its settle, eight drags each, two rounds)
+
+     round 1 : with 9 late frames, without 10
+     round 2 : with 27 late frames, without 33
+   No difference that this machine can show. The early layers are what review asked for and cost nothing in
+   the stylesheet; they are kept, but this is not proof that they help.
+
+What this does and does not show: on a quiet machine both carousels hold 60 frames a second with the CPU
+throttled 4x, in software rendering. It is not a real phone. Time both on a mid-range Android phone and an
+iPhone before they go live.

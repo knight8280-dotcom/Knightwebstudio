@@ -1,0 +1,26 @@
+{
+  "about__mobile-light": {
+    "height": 5171,
+    "overflowX": 0,
+    "stops": 7,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "about__desktop-light": {
+    "height": 3744,
+    "overflowX": 0,
+    "stops": 5,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "about__desktop-dark": {
+    "height": 3744,
+    "overflowX": 0,
+    "stops": 5,
+    "truncated": false,
+    "consoleErrors": [],
+    "failedRequests": []
+  }
+}

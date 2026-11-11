@@ -1,0 +1,45 @@
+A1 two-line header button at: 1100,1100s,1110,1110s,1120,1120s,1130,1130s,1140,1140s,1280,1280s,1290,1290s | sticks out by 0 | header taller than 72 at: never
+A2 text-spacing 320:+23 icon-btn nav-toggle(h64)  360:ok(h64)  390:ok(h64)  820:ok(h64)  1100:+64 btn btn-primary btn-sm(h108)  1280:+66 btn btn-primary btn-sm(h108)  1400:ok(h108)
+A2 125% 320:+35 icon-btn nav-toggle(h64)  360:ok(h64)  390:+9 icon-btn nav-toggle(h64)  820:ok(h64)  1100:+86 btn btn-primary btn-sm(h108)  1280:+91 btn btn-primary btn-sm(h108)  1400:+3 btn btn-primary btn-sm(h108)
+A2 150% 320:+79 icon-btn nav-toggle(h64)  360:+39 icon-btn nav-toggle(h64)  390:+60 icon-btn nav-toggle(h64)  820:ok(h64)  1100:+245 btn btn-primary btn-sm(h126)  1280:+282 btn btn-primary btn-sm(h126)  1400:+194 btn btn-primary btn-sm(h126)
+E1 price strip:
+  /@360+sp over9 rows1 linkW320
+  /@380 over13 rows1 linkW340
+  /@380+sp over68 rows1 linkW340
+  /@390 over3 rows1 linkW350 "Websites $1,000$2,000$4,000$8,000 Four fixed packages"
+  /@390+sp over58 rows1 linkW350
+  /@430+sp over21 rows1 linkW387
+  /@1280 over-201 rows1 linkW646
+  /services/@360+sp over9 rows1 linkW320
+  /services/@380 over13 rows1 linkW340
+  /services/@380+sp over68 rows1 linkW340
+  /services/@390 over3 rows1 linkW350 "Websites $1,000 $2,000 $4,000 $8,000 All nine services, pric"
+  /services/@390+sp over58 rows1 linkW350
+  /services/@430+sp over21 rows1 linkW387
+  /services/@1280 over-739 rows1 linkW1184
+  /start/@360+sp over9 rows1 linkW320
+  /start/@380 over13 rows1 linkW340
+  /start/@380+sp over68 rows1 linkW340
+  /start/@390 over3 rows1 linkW350 "Websites $1,000$2,000$4,000$8,000 Four fixed packages"
+  /start/@390+sp over58 rows1 linkW350
+  /start/@430+sp over21 rows1 linkW387
+  /start/@1280 over-246 rows1 linkW691
+  /consulting/@390 over-57 rows1 linkW350 "Setups $500$750$1,500 Fixed, published prices"
+  /consulting/@1280 over-891 rows1 linkW1184
+  /web-design-baton-rouge/@360+sp over9 rows1 linkW320
+  /web-design-baton-rouge/@380 over13 rows1 linkW340
+  /web-design-baton-rouge/@380+sp over68 rows1 linkW340
+  /web-design-baton-rouge/@390 over3 rows1 linkW350 "Websites $1,000$2,000$4,000$8,000 Fixed, published prices"
+  /web-design-baton-rouge/@390+sp over58 rows1 linkW350
+  /web-design-baton-rouge/@430+sp over21 rows1 linkW387
+  /web-design-baton-rouge/@1280 over-108 rows1 linkW554
+D1 errors: ["This field is required.","This field is required.","This field is required.","Please fix the highlighted fields."] | status after empty submit: "Please fix the highlighted fields." | invalid left: 0 | status after fixing: "Please fix the highlighted fields."
+D2 hcaptcha requested at 63ms (load event at 65ms); by 5s: 63ms | slot data-theme: null
+C1 hovered button pressed: matrix(1, 0, 0, 1, 0, -2) | C2 print hover: transform none translate none
+A3 #nav opacity after 1440 -> 1000: 1/visible  0.576809/visible  0.0803298/visible  0/hidden
+A4 404 header position: sticky -> static
+B7 title-to-intro gap at 390: / 32,32 | /consulting/ 32,32,32 | /pricing/ 32,32 | /start/ 16
+F1 band appointment card width at 1280: 259 | F2 footer email link height: 760:48 820:48 900:48 960:48 980:44 1100:44
+P-1 consulting@360 rows with a dangling leader: ["Online booking & reminders$750"] | P-5 deposit share: consulting 47.2%(--w 50) pricing 49.6% 49.6% | P-12 home card tagline lines 360:2 375:2 390:2
+D6 bar shown while the band button is on screen: 4 of 40 stops
+B5 tab stops ending within 6px of the window bottom (of 90): /terms/ 20 | /privacy/ 15 | /about/ 11 | /services/ 2

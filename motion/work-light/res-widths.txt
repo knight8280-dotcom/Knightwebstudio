@@ -1,0 +1,2 @@
+http://localhost:8730/kit/light/demo.html no horizontal overflow from 360 to 1920
+http://localhost:8730/kit/light/portable.html no horizontal overflow from 360 to 1920

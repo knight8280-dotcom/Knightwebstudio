@@ -1,0 +1,36 @@
+/* Services page only. Every rule is scoped with [data-page="services"].
+   The page is shared parts plus one thing of its own: the service menu. */
+
+/* The service menu: the page's one blue panel. Nine rows, each a link to its entry below. */
+[data-page="services"] .menu .board-head { margin-bottom: var(--s-5); }
+[data-page="services"] .menu-cols { display: grid; gap: var(--s-5) var(--gap-lg); }
+[data-page="services"] .menu ul { list-style: none; border-top: var(--rule) solid var(--line-2); }
+[data-page="services"] .menu .eyebrow { margin-bottom: var(--s-2); }
+[data-page="services"] .menu ul + .eyebrow { margin-top: var(--s-5); }
+[data-page="services"] .menu li { border-bottom: var(--seam); }
+[data-page="services"] .menu a { display: flex; flex-wrap: wrap; align-items: baseline; align-content: center; gap: 0 var(--s-3); min-height: var(--tap); padding: var(--s-2) var(--s-1); border-radius: var(--r-sm); color: var(--ink); line-height: 1.25; text-decoration: none; }
+[data-page="services"] .menu-name { font-weight: 700; text-decoration: underline var(--line-2); text-underline-offset: .25em; }
+[data-page="services"] .menu-price { margin-left: auto; color: var(--brick); font-size: var(--fs-h4); text-align: right; }
+@media (max-width: 379.98px) { [data-page="services"] .menu-price { font-size: var(--fs-body); } }
+@media (min-width: 760px) { [data-page="services"] .menu-cols { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+[data-page="services"] .menu a:active { background: var(--card); }
+@media (hover: hover) { [data-page="services"] .menu a:hover { background: var(--card); color: var(--ink); } }
+
+/* A lead service keeps to the reading measure */
+[data-page="services"] .lead { --stack-gap: var(--s-3); max-width: var(--measure); }
+@media (min-width: 760px) { [data-page="services"] .lead { --stack-gap: var(--s-4); } }
+@media (max-width: 979.98px) { [data-page="services"] #care { gap: var(--gap); } }
+
+/* SHARED-CANDIDATE: a tight service row. What is included runs on as one ticked line, and the link closes the row. */
+[data-page="services"] .pricelist > li { padding-bottom: var(--s-1); }
+[data-page="services"] .pricelist .ticks { display: block; position: relative; margin-top: var(--s-2); padding-left: calc(var(--tick) + var(--s-2)); line-height: 1.5; }
+[data-page="services"] .pricelist .ticks li { display: inline; padding: 0; line-height: inherit; }
+[data-page="services"] .pricelist .ticks li::before { position: static; display: inline; width: auto; height: auto; background: none; }
+[data-page="services"] .pricelist .ticks li + li::before { content: " · "; color: var(--ink-3); }
+[data-page="services"] .pricelist .ticks li::after { content: none; }
+[data-page="services"] .pricelist .ticks::before { content: ""; position: absolute; left: 0; top: .1em; width: var(--tick); height: var(--tick); border-radius: 50%; background: var(--blue-tint); }
+[data-page="services"] .pricelist .ticks::after { content: ""; position: absolute; left: calc(var(--tick) * .36); top: calc(.1em + var(--tick) * .2); width: calc(var(--tick) * .28); height: calc(var(--tick) * .5); border: solid var(--blue); border-width: 0 var(--bold) var(--bold) 0; transform: rotate(40deg); }
+
+/* The one illustration stands in its own column: the phone above its caption */
+[data-page="services"] .fig { --phone-w: 17rem; grid-template-columns: minmax(0, 1fr); gap: var(--s-5); justify-items: center; }
+[data-page="services"] .fig-credit { margin: 0; text-align: center; text-wrap: balance; }
