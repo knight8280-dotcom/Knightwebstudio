@@ -92,6 +92,7 @@ assets/img/             Project images (work-*.jpg), logo.svg, PNG app icons, th
 tools/chrome/           The one true copy of the header, footer, phone bar and first-paint snippet (*.inc)
 tools/sync_chrome.py    Copies that chrome into every page; --check reports drift
 tools/check_pricing.py  Checks that /pricing/'s package table and its phone folders say the same
+tools/check_rules.py    Checks the rules that protect the business (prices, banned words, facts, FAQ data); run before you publish
 tools/art/              The crest, the seal and the street scene, as code
 server/                 The small Stripe checkout server (hosted on Render, not on GitHub Pages)
 STRIPE_INTEGRATION_TODO.md  How payments are set up, and what is done by hand
@@ -885,7 +886,9 @@ Change a price there and change it here too.
 ## The rules that protect the business
 
 These matter more than any design detail. A change that breaks one of them
-should not be published.
+should not be published. `python3 tools/check_rules.py` checks most of them
+mechanically (and runs `sync_chrome.py --check` and `check_pricing.py`); run it
+before every commit.
 
 1. **Fixed prices, written in full.** Never a range, "from", "starting at",
    "as low as" or "ballpark". Every price on the site is in the table under
